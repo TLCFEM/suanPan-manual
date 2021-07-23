@@ -68,7 +68,7 @@ $$
 \mathbf{\sigma}=\mathbf{\sigma}_n+\Delta\mathbf{\sigma}=\mathbf{\sigma}_n+2G\left(\Delta{}\mathbf{e}-\Delta{}\mathbf{e}^{p}\right)+K\left(\Delta\varepsilon_v-\Delta\varepsilon_v^p\right)\mathbf{I}.
 $$
 
-In derivatoric and spherical components,
+In deviatoric and spherical components,
 
 $$
 \mathbf{\sigma}=\mathbf{s}+p\mathbf{I},\\
