@@ -280,6 +280,7 @@
       * [ParabolicCC](Library/Material/Material3D/Clay/CamClay/ParabolicCC.md)
     * Concrete
       * [CDP](Library/Material/Material3D/Concrete/CDP.md)
+      * [CDPM2](Library/Material/Material3D/Concrete/CDPM2.md)
       * [Rebar3D](Library/Material/Material3D/Concrete/Rebar3D.md)
       * [TableCDP](Library/Material/Material3D/Concrete/TableCDP.md)
     * Damage
