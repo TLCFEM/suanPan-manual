@@ -1,8 +1,6 @@
 # Introduction
 
-This repository provides user manual for [suanPan](https://tlcfem.github.io/suanPan/).
-
-If your are browsing the GitHub repository, please visit the following sites for a better presentation. [https://tlcfem.gitbook.io/suanpan-manual/](https://tlcfem.gitbook.io/suanpan-manual/) and [http://suanpan-manual.rtfd.io/](http://suanpan-manual.rtfd.io/)
+This repository provides user manual for [suanPan](https://tlcfem.github.io/suanPan/). If your are browsing the GitHub repository, please visit the following sites for a better presentation. [https://tlcfem.gitbook.io/suanpan-manual/](https://tlcfem.gitbook.io/suanpan-manual/) and [http://suanpan-manual.rtfd.io/](http://suanpan-manual.rtfd.io/)
 
 I'm still working on this site from time to time. Hence it is unlikely to get a complete reference by solely checking this site. For any potential doubts, please feel free to contact me.
 
