@@ -323,6 +323,7 @@
     * [Laminated](Library/Material/Wrapper/Laminated.md)
     * [Parallel](Library/Material/Wrapper/Parallel.md)
     * [PlaneStrain](Library/Material/Wrapper/PlaneStrain.md)
+    * [PlaneSymmetric](Library/Material/Wrapper/PlaneSymmetric.md)
     * [PlaneStress](Library/Material/Wrapper/PlaneStress.md)
     * [Rotation2D](Library/Material/Wrapper/Rotation2D.md)
     * [Rotation3D](Library/Material/Wrapper/Rotation3D.md)
