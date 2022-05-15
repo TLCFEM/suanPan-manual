@@ -1,0 +1,30 @@
+node 1 -1 2
+
+mass 1 1 1 1 2
+
+amplitude Constant 1
+
+acceleration 1 1 -1 2 1
+
+initial acceleration -1 2 1
+
+rigidwall 1 0 0 0 1 1 0 5E3
+rigidwall 2 0 0 0 -1 1 0 5E3
+
+hdf5recorder 1 Node U 1
+hdf5recorder 2 Node V 1
+hdf5recorder 3 Node A 1
+
+step dynamic 1 40
+set ini_step_size 5E-3
+set fixed_step_size 1
+
+converger RelIncreDisp 1 1E-8 7 1
+
+analyze
+
+save recorder 1 2 3
+
+peek node 1
+
+exit
