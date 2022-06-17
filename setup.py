@@ -1,8 +1,7 @@
 import os
-import platform
 import re
-import urllib.request
 import shutil
+import urllib.request
 import zipfile
 
 from setuptools import setup

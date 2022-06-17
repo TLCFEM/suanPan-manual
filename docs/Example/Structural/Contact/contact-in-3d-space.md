@@ -1,4 +1,4 @@
-# Contact In 3D Space
+# [★★★★☆] Contact In 3D Space
 
 The simplest case in 3D space would be node to triangular facet contact.
 
@@ -16,12 +16,12 @@ cube/tetrahedron surfaces, or even three nodes only.
 Here we define a square flat shell with one edge clamped.
 
 ```
-node	1	0	0	0
-node	2	5	0	0
-node	3	10	0	0
-node	4	0	5	0
-node	5	5	5	0
-node	6	10	5	0
+node 1 0 0 0
+node 2 5 0 0
+node 3 10 0 0
+node 4 0 5 0
+node 5 5 5 0
+node 6 10 5 0
 
 element dkts3 1 1 2 5 1 1
 element dkts3 2 5 4 1 1 1

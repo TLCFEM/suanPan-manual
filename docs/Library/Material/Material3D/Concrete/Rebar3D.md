@@ -4,7 +4,7 @@ Orthotropic Material
 
 ## Syntax
 
-```
+```text
 material Rebar3D (1) (2) (3) (4) (5) (6) (7)
 # (1) int, unique material tag
 # (2) int, x direction steel material tag

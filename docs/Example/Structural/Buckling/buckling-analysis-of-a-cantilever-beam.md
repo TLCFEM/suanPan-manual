@@ -1,4 +1,4 @@
-# Buckling Analysis of A Cantilever Beam
+# [★★☆☆☆] Buckling Analysis of A Cantilever Beam
 
 We present a buckling analysis of a cantilever beam with validations.
 

@@ -1,4 +1,4 @@
-# Lee's Frame
+# [★★★☆☆] Lee's Frame
 
 The Lee's frame is shown as follows.
 

@@ -1,4 +1,4 @@
-# Contact Between Beam And Block
+# [★★★☆☆] Contact Between Beam And Block
 
 In this example, we showcase the simulation of a 2D node-line contact problem. The model can be
 downloaded. [contact-between-beam-and-block.zip](contact-between-beam-and-block.zip)

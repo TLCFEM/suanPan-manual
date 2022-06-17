@@ -8,6 +8,8 @@ uniform size.
 ```
 ParticleCollision2D (1) (2) (3)
 ParticleCollision3D (1) (2) (3)
+constraint ParticleCollision2D (1) (2) (3)
+constraint ParticleCollision3D (1) (2) (3)
 # (1) int, unique constraint tag
 # (2) double, space
 # (3) double, penalty number

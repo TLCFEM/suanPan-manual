@@ -1,4 +1,4 @@
-# Uniform Tension of A Rubber Specimen
+# [★★☆☆☆] Uniform Tension of A Rubber Specimen
 
 In this page, a rubber specimen is modelled using solid elements and Mooney-Rivlin material.
 

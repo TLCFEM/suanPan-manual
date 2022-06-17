@@ -2,5 +2,7 @@
 
 Please refer to specific constraint types provided for details.
 
-It shall be noted all constraints are processed in sequence (not in parallel). To improve performance, analysts shall
-use as fewer constraints as possible.
+All constraints are processed in **parallel**.
+
+Most constraints are implemented in both the penalty function and Lagrange multiplier methods. A brief discussion on 
+the difference can be found in the [Constraint](../../Library/Constraint/Constraint.md) page.

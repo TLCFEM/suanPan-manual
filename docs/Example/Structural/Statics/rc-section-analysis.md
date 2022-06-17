@@ -1,7 +1,8 @@
-# Reinforced Concrete Section Analysis
+# [★★★☆☆] Reinforced Concrete Section Analysis
 
 In this page, the analysis of a rectangular reinforced concrete section of a 2D beam is performed to compute the full
-plastic moment.
+plastic moment. This is achieved by using the [`SingleSection2D`](../../../Library/Element/Special/SingleSection.md)
+element. There is no need to create a larger model.
 
 The model can be downloaded. [rc-section-analysis.supan](rc-section-analysis.supan)
 
@@ -20,7 +21,9 @@ define an arbitrary node.
 node 1 0 0
 ```
 
-For material models, we use a simple concrete model that adopts Tsai's backbone and the MPF steel model.
+For material models, we use a simple concrete model that adopts Tsai's
+backbone [`ConcreteTsai`](../../../Library/Material/Material1D/Concrete/ConcreteTsai.md) and
+the [`MPF`](../../../Library/Material/Material1D/Hysteresis/MPF.md) steel model.
 
 ```
 material ConcreteTsai 1 30. 3. 2. 2. 2. 2. .2 2E-3 1E-4
@@ -47,8 +50,10 @@ section Bar2D 4 900. 2 -220.
 section Bar2D 5 600. 2 0.
 ```
 
-To combine those independent sections into a whole, we use the `Fibre2D` section. It is a wrapper that wraps all valid
-sections into one piece. Accordingly, a `SingleSection2D` element can be defined.
+To combine those independent sections into a whole, we use
+the [`Fibre2D`](../../../Library/Section/Section2D/Fibre2D.md) section. It is a wrapper that wraps all valid sections
+into one piece. Accordingly, a [`SingleSection2D`](../../../Library/Element/Special/SingleSection.md) element can be
+defined.
 
 ```
 section Fibre2D 1 2 3 4 5

@@ -1,4 +1,4 @@
-# Linear Analysis of A Single Element
+# [★★★★★] Linear Analysis of A Single Element
 
 In this example, we show a very basic analysis using isogeometric analysis and compare the result with the traditional
 finite element analysis.
@@ -48,8 +48,8 @@ element CP4 1 1 2 3 4 1 1
 In IGA, a different strategy is used. Each patch that consists of a number of elements is considered as a giant element,
 hence the number of control nodes is not known in advance. Meanwhile, the knot vectors may have various lengths.
 In `suanPan`, a key-value style definition is used. Please refer to the corresponding page for more details
-of `PatchQuad` element. In this example, the following command is used. Please note the order of control nodes is
-different from that in FEA.
+of [`PatchQuad`](../../../Library/Element/Patch/PatchQuad.md) element. In this example, the following command is used.
+Please note the order of control nodes is different from that in FEA.
 
 ```
 element PatchQuad 1 -node 1 2 4 3 -material 1 -thickness 1 -knotx 0 0 1 1 -knoty 0 0 1 1

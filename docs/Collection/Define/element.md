@@ -11,6 +11,26 @@ In general, the syntax uses the following pattern:
 element <name> <tag> <connected_nodes> <associated_material> <other_specific_parameters>
 ```
 
+## Output Types
+
+Most elements do not support additional quantities to be recorded. There are some exceptions, however. The
+additional ones will be documented in the specific element documentation.
+
+The recording command will be directly forwarded to the attached material models. Take
+the [`CP4`](../../Library/Element/Membrane/Plane/CP4.md) element for instance, it uses a second order Gaussian
+quadrature, that is four integration points per element, each one is assigned with a copy of material model. If one
+records the stress using a command similar to `plainrecorder 1 Element S 1`, the request will be forwarded to the
+material models of all four integration points. Each point returns a vector of size 3,
+$$\begin{bmatrix}\sigma_{11}&\sigma_{22}&\sigma_{12}\end{bmatrix}$$, four of those vectors will be concatenated so 
+that the final record in the file will be a row of size 12.
+
+| time | IP1             | IP1             | IP1             | IP2             | IP2             | IP2             | IP3             | IP3             | IP3             | IP4             | IP4             | IP4             |
+|------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|
+| time | $$\sigma_{11}$$ | $$\sigma_{22}$$ | $$\sigma_{12}$$ | $$\sigma_{11}$$ | $$\sigma_{22}$$ | $$\sigma_{12}$$ | $$\sigma_{11}$$ | $$\sigma_{22}$$ | $$\sigma_{12}$$ | $$\sigma_{11}$$ | $$\sigma_{22}$$ | $$\sigma_{12}$$ |
+
+The detailed quadrature schemes for elements are not well documented for the moment. The most used ones are Gauss 
+and Lobatto with various orders.
+
 ## Implementation Details
 
 ### Creation

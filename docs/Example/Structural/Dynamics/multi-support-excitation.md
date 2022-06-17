@@ -1,4 +1,4 @@
-# Multi-Support Excitation
+# [★★☆☆☆] Multi-Support Excitation
 
 In this example, we illustrate how to perform response history analysis with multiple support excitations.
 

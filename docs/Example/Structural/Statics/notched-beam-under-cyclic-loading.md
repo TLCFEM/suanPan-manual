@@ -1,4 +1,4 @@
-# Notched Beam Under Cyclic Loading
+# [★★★☆☆] Notched Beam Under Cyclic Loading
 
 The model scripts can be downloaded from [here](notched-beam-under-cyclic-loading.zip).
 

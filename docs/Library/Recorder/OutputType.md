@@ -2,6 +2,16 @@
 
 Currently, the available types of output variables are listed as follows.
 
+Please note, in principle, it is possible to define any types on any recorders, but if the target recorder does not 
+support the type, trivial/empty values will be returns. If saving recorder does not create any files on the disk, 
+meaning that the output type is not available for the target object. For example, recording strain/stress `E`/`S` 
+values of any nodes is not possible and will lead to no output.
+
+The complete support list is still under development. In principle, basic types such as 
+displacement/velocity/acceleration are available for nodes. For elemental response, generally stress/strain and 
+their components are available. Some output types are only supported by certain elements. Please feel free to open 
+an issue if you need more information.
+
 | variable label | physical meaning                                                        |
 |----------------|-------------------------------------------------------------------------|
 | A              | all acceleration components                                             |
@@ -56,6 +66,13 @@ Currently, the available types of output variables are listed as follows.
 | M              | mass matrix                                                             |
 | MISES          | von Mises stress                                                        |
 | MOMENT         | section moment                                                          |
+| MOMENTUM       | system momentum vector                                                  |
+| MOMENTUMX      | nodal/global momentum component 1                                       |
+| MOMENTUMY      | nodal/global momentum component 2                                       |
+| MOMENTUMZ      | nodal/global momentum component 3                                       |
+| MOMENTUMRX     | nodal/global momentum component 4                                       |
+| MOMENTUMRY     | nodal/global momentum component 5                                       |
+| MOMENTUMRZ     | nodal/global momentum component 6                                       |
 | NL             |                                                                         |
 | NMISES         | averaged von Mises stress on element level                              |
 | PE             | all plastic strain components                                           |

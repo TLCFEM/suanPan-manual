@@ -21,7 +21,7 @@ CDPM2 model for concrete model.
 
 ## Syntax
 
-```
+```text
 material CDPM2 (1) [2-16]
 material CDPM2NO (1) [2-16]
 material CDPM2ISO (1) [2-16]

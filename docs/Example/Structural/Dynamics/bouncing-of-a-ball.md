@@ -1,7 +1,8 @@
-# Bouncing of A Ball
+# [★★★☆☆] Bouncing of A Ball
 
-In this example we show the application of the `RigidWall` constraint. It is also possible to define a rigid wall with
-finite dimension. The model script can be [downloaded](bouncing-of-a-ball.supan).
+In this example we show the application of the [`RigidWall`](../../../Library/Constraint/RigidWall.md) and 
+[`RestitutionWall`](../../../Library/Constraint/RestitutionWall.md) constraints. It is also possible to define a 
+rigid wall with finite dimension. The model script can be [downloaded](bouncing-of-a-ball.supan).
 
 A mass point is used to idealize the ball. As this is a dynamics problem of rigid body, there is no need to define any
 material models to provide stiffness matrix. For this reason, it is possible to just define a point mass at the target
@@ -79,11 +80,14 @@ $$
 ## Rigid Wall Constraint
 
 We define two infinite rigid wall constraints inclined $$\pi/4$$ and $$3\pi/4$$ to form a right angle. The ball can
-bounce between two walls.
+bounce between two walls. Two walls are both anchored at the origin and have infinite dimension, the outer normals are
+$$(1,1)$$ and $$(-1,1)$$, respectively. The penalty factor is chosen to be $$0.1$$ in this particular example. 
+Accounting for the time step defined below ($$0.005$$), the actual penalty factor applied to the effective stiffness is
+$$0.1/0005/0.005=4000$$.
 
 ```
-rigidwall 1 0 0 0 1 1 0 1E-1
-rigidwall 2 0 0 0 -1 1 0 1E-1
+rigidwall 1 0 0 1 1 1E-1
+rigidwall 2 0 0 -1 1 1E-1
 ```
 
 The penalty factor can be altered to achieve different levels of satisfactions of the constraint. But higher values also
@@ -112,3 +116,32 @@ analyze
 The results are shown as follows.
 
 ![bouncing of a ball between two rigid walls](bouncing-of-a-ball.svg)
+
+The energy of the system is **not** conserved. To alleviate this problem, one can use the 
+[`RestitutionWall`](../../../Library/Constraint/RestitutionWall.md) constraint.
+
+## Restitution Wall Constraint
+
+### Elastic Collision
+
+The constraints can be replaced by
+
+```
+restitutionwall 1 0 0 1 1 1. 1E4
+restitutionwall 2 0 0 -1 1 1. 1E4
+```
+
+Here the coefficient of restitution is set to 1.
+
+![animation](bouncing-of-a-ball-unity.gif)
+
+### Plastic Collision
+
+One can define a plastic collision by using a coefficient of restitution smaller than unity.
+
+```
+restitutionwall 1 0 0 1 1 .9 1E4
+restitutionwall 2 0 0 -1 1 .9 1E4
+```
+
+![animation](bouncing-of-a-ball-plastic.gif)

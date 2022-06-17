@@ -1,4 +1,4 @@
-# Evolutionary Structural Optimization of A Cantilever Beam
+# [★★★★★] Evolutionary Structural Optimization of A Cantilever Beam
 
 In this example, the optimization of a loaded panel is performed by using the BESO method. The model can be
 downloaded [here](evolutionary-structural-optimization.zip).
@@ -24,15 +24,16 @@ groupmultiplierbc 1 P 1
 
 ## The Optimization Step
 
-To perform structural optimization, a `Optimization` step needs to be defined.
+To perform structural optimization, a [`Optimization`](../../../Library/Step/Optimization.md) step needs to be defined.
 
 ```
 step Optimization 1
 ```
 
-To define a proper rule to update the model by adding/deleting elements, one can use the `StrainEnergyEvolution`
-criterion. The following command defines a strain energy based evolution rule with an increment step of $$2\%$$ to reach
-the final design level $$50\%$$, that is to remove $$50\%$$ elements.
+To define a proper rule to update the model by adding/deleting elements, one can use
+the [`StrainEnergyEvolution`](../../../Library/Criterion/StrainEnergyEvolution.md) criterion. The following command
+defines a strain energy based evolution rule with an increment step of $$2\%$$ to reach the final design level $$50\%$$,
+that is to remove $$50\%$$ elements.
 
 ```
 criterion StrainEnergyEvolution 1 2 50 1 1 40

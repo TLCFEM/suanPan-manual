@@ -1,4 +1,4 @@
-# Simulation of Particle Collision
+# [★★★★☆] Simulation of Particle Collision
 
 In this example, we illustrate the contact problem by simulating a 2D particle collision problem. The model can be
 downloaded [here](particle-collision.zip).
@@ -38,10 +38,10 @@ in which $$s=2$$ and $$\alpha$$ is defaulted to be unity.
 The four edges of the container can be assigned by using the rigid wall constraint. For example,
 
 ```
-rigidwall 2 5 0 0 -1 0 0
-rigidwall 3 0 5 0 0 -1 0
-rigidwall 4 -5 0 0 1 0 0
-rigidwall 5 0 -5 0 0 1 0
+rigidwall 2 5 0 -1 0
+rigidwall 3 0 5 0 -1
+rigidwall 4 -5 0 1 0
+rigidwall 5 0 -5 0 1
 ```
 
 ## Other Caveats

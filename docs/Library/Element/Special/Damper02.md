@@ -1,21 +1,36 @@
-# Damper02
+# Damper02/Damper04
 
 Maxwell Model
 
-The `Damper02` is a Maxwell model that uses **displacement** and **velocity** as inputs, that is, element length is not
-used to compute strain or strain rate.
-
-* Number of Nodes: 2
-* Number of DoFs: 2 (Translation, Translation)
+The `Damper02` and `Damper04` are Maxwell models that use **displacement** and **velocity** as inputs, that is, 
+element length is not used to compute strain or strain rate.
 
 ## Reference
 
+The Maxwell model allows combinations of nonlinear springs and dampers. The algorithm implemented is documented in the
+following paper.
+
 1. [10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795)
+
+## Damper02
+
+The `Damper02` is the 2D version.
+
+* Number of Nodes: 2
+* Number of DoFs: 2 (Translation: UX, Translation: UY)
+
+## Damper04
+
+The `Damper04` is the 3D version.
+
+* Number of Nodes: 2
+* Number of DoFs: 3 (Translation: UX, Translation: UY, Translation: UZ)
 
 ## Syntax
 
 ```
 element Damper02 (1) (2) (3) (4) (5) [6] [7] [8]
+element Damper04 (1) (2) (3) (4) (5) [6] [7] [8]
 # (1) int, unique tag
 # (2) int, node i
 # (3) int, node j

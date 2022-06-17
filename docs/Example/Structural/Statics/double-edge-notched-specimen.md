@@ -1,4 +1,4 @@
-# Double Edge Notched Specimen
+# [★★★☆☆] Double Edge Notched Specimen
 
 The double edge notched specimen was investigated
 by [Nooru-Mohamed (1992)](http://resolver.tudelft.nl/uuid:a6a773f1-dacd-4598-aa6a-960dddf71117).

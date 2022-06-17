@@ -13,6 +13,8 @@ It shall not be used with global damping models in dynamic analysis.
 ```
 fixedlength2d (1) (2) (3)
 fixedlength3d (1) (2) (3)
+constraint fixedlength2d (1) (2) (3)
+constraint fixedlength3d (1) (2) (3)
 # (1) int, unique constraint tag
 # (2) int, node tag
 # (3) int, node tag

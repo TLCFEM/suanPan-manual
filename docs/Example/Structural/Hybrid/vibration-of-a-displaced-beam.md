@@ -1,4 +1,4 @@
-# Vibration of A Displaced Beam
+# [★★★☆☆] Vibration of A Displaced Beam
 
 We consider an analysis that combines both static and dynamic steps. A simple cantilever beam with point mass is
 displaced in the static step and released in the dynamic step.

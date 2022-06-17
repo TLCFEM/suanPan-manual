@@ -1,4 +1,4 @@
-# Bifurcation of A Cantilever Beam
+# [★★★☆☆] Bifurcation of A Cantilever Beam
 
 Here we run a full nonlinear geometry analysis of the cantilever beam shown in another
 page. [Buckling Analysis of A Cantilever Beam](../Buckling/buckling-analysis-of-a-cantilever-beam.md)

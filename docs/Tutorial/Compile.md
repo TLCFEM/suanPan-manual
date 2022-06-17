@@ -1,5 +1,16 @@
 # Compile
 
+## Dockerfile
+
+For Linux users, if there is no access to `sudo` but can build containers with Docker, it is possible to compile the 
+project with 
+Docker. Check the provided [Dockerfiles](https://github.com/TLCFEM/suanPan/tree/dev/Script) for more information.
+
+Once the container is built, the `.tar.gz` and `.deb` or `.rpm` packages will be placed under `/`. Simply copy them 
+out and install/unpack the archive.
+
+The following is a general guide that covers three main operating systems.
+
 ## Prerequisites
 
 1. To configure the source code, [CMake](https://cmake.org/download/) shall be available. Please download and install it
@@ -58,8 +69,7 @@ To compile `Release` version, please
 2. Make sure CUDA is installed. The environment variable `$(CUDA_PATH)` is used to locate headers.
 
 3. Make sure VTK is available. Then define two system environment variables `$(VTK_INC)` and `$(VTK_LIB)`, which point
-   to
-   include and library folders. On my machine, they are
+   to include and library folders. On my machine, they are
 
    ```powershell
    VTK_INC=C:\Program Files\VTK\include\vtk-9.1
@@ -75,8 +85,7 @@ Alternatively, `CMake` can be used to generate solution files if some external p
 ### Ubuntu
 
 The following instructions are based on Ubuntu 20.04. [CMake](https://cmake.org/) is used to manage builds. It is
-recommended
-to use **CMake** GUI if appropriate.
+recommended to use **CMake** GUI if appropriate.
 
 1. Install necessary tools.
 
@@ -91,7 +100,8 @@ to use **CMake** GUI if appropriate.
    ```
 
 3. Create build folder and configure via CMake. The default configuration disables parallelism `-DBUILD_MULTITHREAD=OFF`
-   and enables HDF5 via bundled library `-DUSE_HDF5=ON`. Please check [`Option.cmake`](https://github.com/TLCFEM/suanPan/blob/dev/Option.cmake) file or use GUI for available
+   and enables HDF5 via bundled library `-DUSE_HDF5=ON`. Please
+   check [`Option.cmake`](https://github.com/TLCFEM/suanPan/blob/dev/Option.cmake) file or use GUI for available
    options.
 
    ```bash
@@ -168,8 +178,8 @@ for details.
    ```
 
 3. Now compile `suanPan` by enabling MKL via option `-DUSE_MKL=ON`. The corresponding `MKLROOT` shall be assigned, for
-   example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The
-   configuration used for snap is the following one.
+   example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used for
+   snap is the following one.
 
    ```bash
    -DCMAKE_BUILD_TYPE=Release \
@@ -278,13 +288,13 @@ If CMake GUI is used to configure the project, the following options are availab
 1. `BUILD_DLL_EXAMPLE`: If enabled, example element/material/section implemented as external libraries will be built.
 2. `BUILD_MULTITHREAD`: If enabled, `TBB` will be used for multithreading so that element update, global matrix
    assembly, etc., can be parallelized. `OpenMP` is not controlled by this option given that `OpenMP` support is
-   available in major platforms. It will be used for low level parallelization such as linear algebra operations (
-   controlled by `Armadillo`), matrix solving (controlled by various solvers).
+   available in major platforms. It will be used for low level parallelization such as linear algebra operations (which
+   is controlled by `Armadillo`), matrix solving (which is controlled by various solvers).
 3. `BUILD_SHARED`: If enabled, all libraries will be built as shared libraries.
 4. `USE_SUPERLUMT`: If enabled, `SuperLU-MT` will be used, otherwise `SuperLU` will be used.
 5. `USE_HDF5`: If enabled, `HDF5` will be used to provide support for [`hdf5recorder`](../Library/Recorder/Recorder.md).
 6. `USE_EXTERNAL_VTK`: If enabled, `VTK` will be used to provide support for visualization. It will be useful to
-   generate `.vtk` files that can be used in `Paraview` for post-processing. If enabled, `VTK_DIR` needs to be set to 
+   generate `.vtk` files that can be used in `Paraview` for post-processing. If enabled, `VTK_DIR` needs to be set to
    the path of `VTK` installation. For example, `VTK_DIR=/usr/local/opt/vtk/lib/cmake/vtk-9.1`.
 7. `USE_EXTERNAL_CUDA`: `CUDA` needs to be installed manually by the user. If enabled, `CUDA` based solvers will be
    available. However, for dense matrix storage, only full matrix storage scheme is supported by `CUDA`. Note full
@@ -298,9 +308,8 @@ If CMake GUI is used to configure the project, the following options are availab
     However, For the moment, the global matrix is still centralized in such a way that element updating will happen on a
     single node. The linear algebra operations may be offloaded to other nodes. If `USE_MKL` is enabled, the following
     additional options are available.
-
-12. `LINK_DYNAMIC_MKL`: If enabled, dynamically linked `MKL` libraries will be used. Otherwise, statically
-    linked `MKL` libraries will be used, leading to larger binary size but faster execution and fewer dependencies.
+12. `LINK_DYNAMIC_MKL`: If enabled, dynamically linked `MKL` libraries will be used. Otherwise, statically linked `MKL`
+    libraries will be used, leading to larger binary size but faster execution and fewer dependencies.
 13. `MKLROOT`: Set this path to the root directory of `MKL` installation. For
     example, `C:/Program Files (x86)/Intel/oneAPI/mkl/latest` or `/opt/intel/oneapi/mkl/latest`.
 14. `USE_INTEL_OPENMP`: If enabled, Intel OpenMP library will be used. Otherwise, Default ones (such as GNU OpenMP

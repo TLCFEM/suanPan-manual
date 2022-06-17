@@ -1,4 +1,4 @@
-# Dynamic Analysis of A Portal Frame
+# [★★☆☆☆] Dynamic Analysis of A Portal Frame
 
 A portal frame is analyzed using viscous damper as energy dissipater.
 

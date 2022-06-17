@@ -2,29 +2,35 @@
 
 ## Precompiled Binaries
 
-The program is published in
+The binaries are published on
 GitHub. [https://github.com/TLCFEM/suanPan/releases](https://github.com/TLCFEM/suanPan/releases)
 
-The `dev` branch is built for every valid commit. Binaries on Windows, Ubuntu and macOS are compiled and deployed
-automatically on the `master` branch. The precompiled binaries are compiled on the following OS versions.
+Binaries on Windows, Ubuntu and macOS are compiled and deployed automatically on the `master` branch. The 
+precompiled binaries are compiled on the following OS versions.
 
 | Platform | Version             |
 |----------|---------------------|
 | Windows  | Windows Server 2019 |
-| Ubuntu   | Ubuntu 22.04        |
-| macOS    | macOS Big Sur (11)  |
+| Ubuntu   | Ubuntu 20.04        |
+| Fedora   | Fedora 35           |
+| macOS    | Big Sur 11          |
 
-In order to enable `VTK`, `CUDA` and `MKL`, the program shall be compiled locally with preinstalled external libraries.
-See this page [Compile](Compile.md). Some flavours are also
-provided [https://github.com/TLCFEM/suanPan/releases](https://github.com/TLCFEM/suanPan/releases).
+The `.deb` and `.rpm` packages are tested on the same platforms. They do not include `updater`, which checks for new 
+versions on startup. For older versions or other flavors of Linux, successful execution is not guaranteed. Please 
+consider compiling the binaries manually.
+
+In order to enable `CUDA` backed solvers, the program shall be compiled locally with preinstalled external libraries.
+See this page [Compile](Compile.md).
 
 Currently, the following package managers can be used to install the program.
 
-| Platform | Package Manager                                                 | Command                 |
-|----------|-----------------------------------------------------------------|-------------------------|
-| Windows  | [Chocolatey](https://community.chocolatey.org/packages/suanpan) | `choco install suanpan` |
-| Windows  | [scoop](https://scoop.sh/)                                      | `scoop install suanpan` |
-| Ubuntu   | [snap](https://snapcraft.io/suanpan)                            | `snap install suanpan`  |
+| Platform | Package Manager                                                 | Command                                         |
+|----------|-----------------------------------------------------------------|-------------------------------------------------|
+| Windows  | [Chocolatey](https://community.chocolatey.org/packages/suanpan) | `choco install suanpan`                         |
+| Windows  | [scoop](https://scoop.sh/)                                      | `scoop install suanpan`                         |
+| Linux    | [snap](https://snapcraft.io/suanpan)                            | `snap install suanpan`                          |
+| Ubuntu   | `apt` (not available in official repo)                          | `sudo apt install ./suanPan-x.x.x-1.x86_64.deb` |
+| Fedora   | `dnf` (not available in official repo)                          | `sudo dnf install ./suanPan-x.x.x-1.x86_64.rpm` |
 
 ### Chocolatey
 
@@ -41,6 +47,9 @@ application **cannot** be successfully executed. Users can either compile the pr
 specific version by filing an issue. Processors that do not support `AVX` may be too slow to perform HPC based
 simulations.
 
+The name of the executable is `suanPan`, however, snap/chocolatey/scoop will create shim executable named as 
+`suanpan`. Depending on how the application is installed, one may use `suanpan` or `suanPan` to invoke the application.
+
 The parallelization is enabled mostly by the `TBB` library and `<execution>` header (C++17). If the program is compiled
 with **SUANPAN_MT** macro, parallelization is used by default. The **OpenMP** is enabled in several parts of the
 program, users can set environment variable **OMP_NUM_THREADS** to customize some **OpenMP** based parallelization. To
@@ -51,7 +60,7 @@ set OMP_NUM_THREADS=6
 ```
 
 On Linux, the dynamic loading path need to be set so that dynamic libraries such as `libtbb.so` can be successfully
-found. If the software is installed via snap, it is automatically done.
+found. If the application is installed via snap/apt/dnf, it is automatically done.
 
 ```bash
 # current path contains suanPan
@@ -63,9 +72,9 @@ Alternatively, users can execute the program via the provided `suanPan.sh` scrip
 
 ```bash
 # create links to the executables
-# the script assumes ~/.local/bin is in the path
+# the script assumes ~/.local/bin is in the path and creates a symbolic link to the executable
 ./suanPan.sh --create-link
-# cd to anywhere and execute the program
+# cd to other folders and execute the program
 cd ~
 suanpan
 ```
@@ -226,7 +235,7 @@ use/modify it. It may be necessary to manually search for the file if the applic
 All keywords used are stored in the JSON file `suanPan.sublime-completions`. Place the file in
 folder `~/.config/sublime-text-3/Packages/User/` (Linux) or `%appdata%\Sublime Text 3\Packages\User` (Windows) and you
 are good to go with the previous syntax file. The new path has been changed to `~/.config/sublime-text/Packages/User/` (
-Linux) and `%appdata%\Sublime Text\Packages\User` (Windows) for `Sublime Text 4`.
+Linux) and `%appdata%\Sublime Text\Packages\User` (Windows) in `Sublime Text 4`.
 
 ### Build System
 
