@@ -13,52 +13,75 @@ Please note the formulation is similar but different from the one shown in the a
 
 Apart from the provided sections, other interaction surfaces can be defined.
 
-One can define a derived class based on either `SectionNM2D` or `SectionNM3D` and implement three methods.
+One can define a derived class based on `NonlinearNM` and implement methods.
 
 ```cpp
-[[nodiscard]] double compute_f(const vec&) const override;
-[[nodiscard]] vec compute_df(const vec&) const override;
-[[nodiscard]] mat compute_ddf(const vec&) const override;
+[[nodiscard]] virtual double compute_f(const vec&, double) const = 0;
+[[nodiscard]] virtual double compute_dh(const vec&, double) const = 0;
+[[nodiscard]] virtual vec compute_df(const vec&, double) const = 0;
+[[nodiscard]] virtual mat compute_ddf(const vec&, double) const = 0;
 ```
 
-All three methods takes the shifted resistance $$\mathbf{s}=\mathbf{q}-\mathbf{\beta}$$ as input where $$\mathbf{q}$$ is
-the nodal resistance and $$\mathbf{\beta}$$ is the back resistance which is similar to the concept of back stress.
+All methods take the normalised shifted resistance $$\mathbf{s}=\mathbf{q}-\mathbf{\beta}$$ and equivalent plastic 
+strain $$\alpha$$ as input where $$\mathbf{q}$$ is the normalised nodal resistance and $$\mathbf{\beta}$$ is the back 
+resistance which is similar to the concept of back stress.
 
-The three methods return $$N$$-$$M$$ interaction surface and its derivatives with regard to $$\mathbf{s}$$.
-
-For example, the [`NM2D2`](NM2D2.md) section implements the above three methods as follows.
+For example, the [`NM2D2`](NM2D2.md) section implements the above methods as follows.
 
 ```cpp
-double NM2D2::compute_f(const vec& s) const {
-	const auto p = s(0) / yield_force(0);
-	const auto my = s(1) / yield_force(1);
+double NM2D2::compute_f(const vec& s, const double alpha) const {
+    const auto iso_factor = std::max(datum::eps, 1. + h * alpha);
 
-	return 1.15 * pow(p, 2.) + pow(my, 2.) + 3.67 * pow(p * my, 2.) - c;
+    const auto p = s(0) / iso_factor;
+    const auto ms = s(1) / iso_factor;
+
+    auto f = -c;
+    for(auto I = 0llu; I < para_set.n_rows; ++I) f += evaluate(p, ms, para_set.row(I));
+
+    return f;
 }
 
-vec NM2D2::compute_df(const vec& s) const {
-	const auto p = s(0) / yield_force(0);
-	const auto my = s(1) / yield_force(1);
+double NM2D2::compute_dh(const vec& s, const double alpha) const {
+    const auto iso_factor = std::max(datum::eps, 1. + h * alpha);
 
-	vec df(2, fill::none);
+    const auto p = s(0) / iso_factor;
+    const auto ms = s(1) / iso_factor;
 
-	df(0) = p * (2.3 + 7.34 * pow(my, 2.));
-	df(1) = my * (2. + 7.34 * pow(p, 2.));
+    vec df(2, fill::zeros);
 
-	return df / yield_force;
+    for(auto I = 0llu; I < para_set.n_rows; ++I) for(auto J = 0llu; J < df.n_elem; ++J) df(J) += evaluate(p, ms, differentiate(para_set.row(I), J, 1));
+
+    return -h * pow(iso_factor, -2.) * dot(df, s);
 }
 
-mat NM2D2::compute_ddf(const vec& s) const {
-	const auto p = s(0) / yield_force(0);
-	const auto my = s(1) / yield_force(1);
+vec NM2D2::compute_df(const vec& s, const double alpha) const {
+    const auto iso_factor = std::max(datum::eps, 1. + h * alpha);
 
-	mat ddf(2, 2, fill::none);
+    const auto p = s(0) / iso_factor;
+    const auto ms = s(1) / iso_factor;
 
-	ddf(0, 0) = 2.3 + 7.34 * pow(my, 2.);
-	ddf(1, 1) = 2. + 7.34 * pow(p, 2.);
-	ddf(1, 0) = ddf(0, 1) = 14.68 * p * my;
+    vec df(2, fill::zeros);
 
-	return ddf / (yield_force * yield_force.t());
+    for(auto I = 0llu; I < para_set.n_rows; ++I) for(auto J = 0llu; J < df.n_elem; ++J) df(J) += evaluate(p, ms, differentiate(para_set.row(I), J, 1));
+
+    return df / iso_factor;
+}
+
+mat NM2D2::compute_ddf(const vec& s, const double alpha) const {
+    const auto iso_factor = std::max(datum::eps, 1. + h * alpha);
+
+    const auto p = s(0) / iso_factor;
+    const auto ms = s(1) / iso_factor;
+
+    mat ddf(2, 2, fill::zeros);
+
+    for(auto I = 0llu; I < para_set.n_rows; ++I)
+        for(auto J = 0llu; J < ddf.n_rows; ++J) {
+            const auto dfj = differentiate(para_set.row(I), J, 1);
+            for(auto K = 0llu; K < ddf.n_cols; ++K) ddf(J, K) += evaluate(p, ms, differentiate(dfj, K, 1));
+        }
+
+    return ddf * pow(iso_factor, -2.);
 }
 ```
 
