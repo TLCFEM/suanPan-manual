@@ -28,17 +28,19 @@ markdown_extensions:
       generic: true
   - pymdownx.highlight:
       linenums: true
+      anchor_linenums: true
+      use_pygments: true
+      auto_title: true
   - pymdownx.betterem
   - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.superfences
   - pymdownx.critic
   - pymdownx.details
-  - smarty
-  - toc:
-      permalink: true
-  - mdx_truly_sane_lists
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tilde
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
