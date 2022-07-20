@@ -49,8 +49,8 @@ subroutine fails. **Before enabling the symmetric banded storage, the analyst mu
 
 #### Full Storage
 
-If the problem scale is small, it does not hurt if a full storage scheme is used. For some particular problems such as
-particle collision problems, the full storage scheme is the only option.
+If the problem scale is small, it does not hurt if a full storage scheme is used. For some particular issues such as
+particle collision issues, the full storage scheme is the only option.
 
 #### Full Packed Storage
 
@@ -62,7 +62,7 @@ no better. The `_spsv()` subroutine is used for matrix solving. It is not recomm
 
 The sparse matrix is also supported. Several sparse solvers are implemented.
 
-### System Solver
+#### Direct System Solver
 
 Different solvers are implemented for different storage schemes. It is possible to switch from one to another by using
 the following command. Details are covered in the summary table.
@@ -117,6 +117,24 @@ Some empirical guidance can be concluded as follows.
 6. The `PARDISO` direct solver and `FGMRES` iterative solver are provided by `MKL`.
 7. The `MUMPS` solver supports both symmetric and asymmetric algorithms. One can use `set symm_mat true`
    or `set symm_mat false`.
+
+### Iterative System Solver
+
+[available from v2.5]
+
+It is possible to use iterative solvers to solve the linear system of equations. Currently, two solvers are available 
+by using the following command.
+
+```text
+set system_solver BiCGSTAB
+set system_solver GMRES
+```
+
+As the iterative solvers are relatively independent of the matrix storage scheme, thus, all different storage 
+schemes can be used along with different iterative solvers. One should beware that different storage schemes may 
+affect the performance of iterative solvers as they largely depend on matrix--vector multiplication.
+
+Mixed precision solving is not supported by the iterative solvers.
 
 ## Parallel Matrix Assembling
 
