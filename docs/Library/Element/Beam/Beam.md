@@ -55,9 +55,9 @@ allowed at ends with a fixed length while the interior remains elastic.
 
 ### Force Based
 
-The force based beam elements appear to be superior in all cases. This category includes [`F21`](F21.md) and [`F31`]
-(F31.md) elements. The moment distribution along beam chord is always linear in absence of distributed load. It is 
-shown that force based elements result in less error with the same number of integration points, and converges 
+The force based beam elements appear to be superior in all cases. This category includes [`F21`](F21.md) and 
+[`F31`](F31.md) elements. The moment distribution along beam chord is always linear in absence of distributed load. It 
+is shown that force based elements result in less error with the same number of integration points, and converges 
 faster with increasing number of integration points, see [`this paper`](https://doi.org/10.1061/(ASCE)0733-9445(1997)123:7(958)).
 
 Typically, five to seven integration points would be sufficient for each element. Mesh refinement is often not 
