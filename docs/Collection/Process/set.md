@@ -82,6 +82,35 @@ set precision (1)
 # (1) string, "single" ("mixed") or "double" ("full")
 ```
 
+#### Iterative Refinement
+
+The maximum number of refinements can be bounded by
+
+```text
+set iterative_refinement (1)
+# (1) integer, maximum number of refinements
+```
+
+#### Iterative Refinement Tolerance
+
+If the mixed precision algorithm is used, it is possible to use the following command to control the tolerance.
+
+```text
+set tolerance (1)
+# (1) double, tolerance of the iterative solver
+```
+
+Typically, each refinement reduces the error by a factor of $$10^{-7}$$. Thus two or three refinements should be 
+sufficient to achieve the working precision.
+
+Thus, the following command set makes sense.
+
+```text
+set precision mixed
+set iterative_refinement 3
+set tolerance 1e-15
+```
+
 ### Summary
 
 All available settings are summarised in the following table.
@@ -136,6 +165,33 @@ affect the performance of iterative solvers as they largely depend on matrix--ve
 
 Mixed precision solving is not supported by the iterative solvers.
 
+#### Preconditioner
+
+Three preconditioners are available for the iterative solvers.
+
+```text
+set preconditioner None
+set preconditioner Jacobi
+set preconditioner ILU
+```
+
+The `None` preconditioner uses identify matrix as the preconditioner.
+
+The `Jacobi` preconditioner uses the diagonal of the matrix as the preconditioner. This is the default one but may 
+not perform well for certain problems.
+
+The `ILU` preconditioner uses the incomplete LU factorization of the matrix as the preconditioner. This `ILU` preconditioner
+is provided by the `SuperLU` library.
+
+If the iterative solver is used, then it is possible to set the tolerance of the iterative solver. In this case, 
+tolerance assigned will not be used by mixed precision algorithm as it is not activated due to an iterative solver 
+is defined.
+
+```text
+set tolerance (1)
+# (1) double, tolerance of the iterative solver
+```
+
 ## Parallel Matrix Assembling
 
 For dense matrix storage schemes, the global matrix is stored in a consecutive chunk of memory. Assembling global matrix
@@ -174,9 +230,9 @@ set load_multiplier (1)
 This command does not overwrite user defined penalty number if the specific constraint or load takes the penalty number
 than input arguments.
 
-## Iterative Tolerance
+## FGMRES Iterative Tolerance
 
-For `FGMRES` iterative solver, one can use the following command to control the tolerance of the algorithm.
+For `FGMRES` iterative solver, one can use the following dedicated command to control the tolerance of the algorithm.
 
 ```
 set fgmres_tolerance (1)
