@@ -205,10 +205,19 @@ By default, the coloring algorithm is enabled. To disable it, users can use the 
 
 ```
 set color_model false
+set color_model none
 ```
 
 As a NP hard problem, there is no optimal algorithm to find the minimum chromatic number. The Welsh-Powell algorithm is
-implemented in `suanPan`.
+implemented in `suanPan`. The maximum independent set algorithm is also available, it may outperform the 
+Welsh-Powell algorithm on large models. To switch, users can use the following command.
+
+```
+# default to WP algorithm
+set color_algorithm WP
+# switch to MIS algorithm
+set color_algorithm MIS
+```
 
 Also, depending on the problem setup, such a coloring may or may not help to improve the performance. If there are not a
 large number of matrix assembling, the time saved may not be significant. Thus, for problems of small sizes, users may
