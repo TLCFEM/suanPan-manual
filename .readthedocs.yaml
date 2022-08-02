@@ -18,10 +18,7 @@ build:
     - libxcursor1
   jobs:
     post_system_dependencies:
-      - wget -q https://github.com/TLCFEM/prebuilds/releases/download/latest/suanPan-linux-mkl-vtk.tar.gz
-      - tar xf suanPan-linux-mkl-vtk.tar.gz
-      - cd suanPan-linux-mkl-vtk/bin && ./suanPan.sh --create-link
-      - export PATH=$PATH:$HOME/.local/bin
+      - wget -q https://github.com/TLCFEM/prebuilds/releases/download/latest/suanPan-2.5.0-1.x86_64.deb
 python:
   install:
     - method: pip
