@@ -150,6 +150,7 @@
     * [F21H](Library/Element/Beam/F21H.md)
     * [F31](Library/Element/Beam/F31.md)
     * [NMB21](Library/Element/Beam/NMB21.md)
+    * [NMB21E](Library/Element/Beam/NMB21E.md)
     * [NMB31](Library/Element/Beam/NMB31.md)
     * [MVLEM](Library/Element/Beam/MVLEM.md)
     * [Orientation](Library/Element/Beam/Orientation.md)
