@@ -75,3 +75,13 @@ section NM3D2 (1) (2...11) 1.15 2. 0. 0. 1. 0. 2. 0. 3.67 2. 2. 0. 3. 6. 0. 2. 4
 
 The only validation implemented is the number of triplets. The command takes $$4n$$ parameters and interprets them
 accordingly. Please make sure the definition is correct.
+
+## Remarks
+
+The true hardening ratio is defined as
+
+$$
+\dfrac{H+K}{1+H+K},
+$$
+
+given that $$H$$ and $$K$$ are hardening ratios based on plastic strain.

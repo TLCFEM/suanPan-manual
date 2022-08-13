@@ -150,6 +150,7 @@
     * [F21H](Library/Element/Beam/F21H.md)
     * [F31](Library/Element/Beam/F31.md)
     * [NMB21](Library/Element/Beam/NMB21.md)
+    * [NMB21E](Library/Element/Beam/NMB21E.md)
     * [NMB31](Library/Element/Beam/NMB31.md)
     * [MVLEM](Library/Element/Beam/MVLEM.md)
     * [Orientation](Library/Element/Beam/Orientation.md)
@@ -162,6 +163,7 @@
     * [DC3D4](Library/Element/Cube/DC3D4.md)
     * [DC3D8](Library/Element/Cube/DC3D8.md)
   * Membrane
+    * [Couple Stress](Library/Element/Membrane/CS.md)
     * Phase Field
       * [DCP3](Library/Element/Membrane/DCP3.md)
       * [DCP4](Library/Element/Membrane/DCP4.md)
@@ -285,7 +287,7 @@
       * [NonlinearGurson1D](Library/Material/Material1D/vonMises/NonlinearGurson1D.md)
       * [VAFCRP1D](Library/Material/Material1D/vonMises/VAFCRP1D.md)
   * Material2D
-    * [AxisymmetricELastic](Library/Material/Material2D/AxisymmetricELastic.md)
+    * [AxisymmetricElastic](Library/Material/Material2D/AxisymmetricELastic.md)
     * [Bilinear2D](Library/Material/Material2D/Bilinear2D.md)
     * [Concrete21](Library/Material/Material2D/Concrete21.md)
     * [Concrete22](Library/Material/Material2D/Concrete22.md)

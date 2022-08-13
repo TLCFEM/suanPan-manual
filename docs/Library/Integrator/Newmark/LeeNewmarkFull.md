@@ -73,14 +73,14 @@ integrator LeeNewmarkFullTrial (1) (2) (3) ((4) (5) (6) [7...]...)
 
 6. The following type identifiers are available:
 
-1. `-type0` --- zeroth order model, need no additional parameter, viz., `[7]` can be empty
-2. `-type1` --- type 1 model, need one integer parameter, viz., `[7]` ($$n_p$$) is a non-negative integer
-3. `-type2` --- type 2 model, need two integer parameters, viz., `[7]` ($$n_{pr}$$) and `[8]` ($$n_{pl}$$) are
-   non-negative integers (**zero allowed**)
-4. `-type3` --- type 3 model, need a double parameter, viz., [7] ($$\gamma$$) is a float number that is greater than
-   $$\gamma>-1$$
-5. `-type4` --- type 4 model, need five parameters, [7...10] are four non-negative integers ($$n_{pr}$$, $$n_{pl}$$,
-   $$n_{pk}$$, $$n_{pm}$$), [11] is a double parameter greater than $$\gamma>-1$$
+   1. `-type0` --- zeroth order model, need no additional parameter, viz., `[7]` can be empty
+   2. `-type1` --- type 1 model, need one integer parameter, viz., `[7]` ($$n_p$$) is a non-negative integer
+   3. `-type2` --- type 2 model, need two integer parameters, viz., `[7]` ($$n_{pr}$$) and `[8]` ($$n_{pl}$$) are
+      non-negative integers (**zero allowed**)
+   4. `-type3` --- type 3 model, need a double parameter, viz., `[7]` ($$\gamma$$) is a double number that is greater 
+      than $$\gamma>-1$$
+   5. `-type4` --- type 4 model, need five parameters, `[7...10]` are four non-negative integers ($$n_{pr}$$,
+      $$n_{pl}$$, $$n_{pk}$$, $$n_{pm}$$), `[11]` is a double parameter greater than $$\gamma>-1$$
 
 7. Multiple types can be mixed in any preferred orders. See examples below.
 

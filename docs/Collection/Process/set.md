@@ -49,8 +49,8 @@ subroutine fails. **Before enabling the symmetric banded storage, the analyst mu
 
 #### Full Storage
 
-If the problem scale is small, it does not hurt if a full storage scheme is used. For some particular problems such as
-particle collision problems, the full storage scheme is the only option.
+If the problem scale is small, it does not hurt if a full storage scheme is used. For some particular issues such as
+particle collision issues, the full storage scheme is the only option.
 
 #### Full Packed Storage
 
@@ -62,7 +62,7 @@ no better. The `_spsv()` subroutine is used for matrix solving. It is not recomm
 
 The sparse matrix is also supported. Several sparse solvers are implemented.
 
-### System Solver
+#### Direct System Solver
 
 Different solvers are implemented for different storage schemes. It is possible to switch from one to another by using
 the following command. Details are covered in the summary table.
@@ -80,6 +80,35 @@ target matrix storage scheme has no mixed precision implementation.
 ```
 set precision (1)
 # (1) string, "single" ("mixed") or "double" ("full")
+```
+
+#### Iterative Refinement
+
+The maximum number of refinements can be bounded by
+
+```text
+set iterative_refinement (1)
+# (1) integer, maximum number of refinements
+```
+
+#### Iterative Refinement Tolerance
+
+If the mixed precision algorithm is used, it is possible to use the following command to control the tolerance.
+
+```text
+set tolerance (1)
+# (1) double, tolerance of the iterative solver
+```
+
+Typically, each refinement reduces the error by a factor of $$10^{-7}$$. Thus two or three refinements should be 
+sufficient to achieve the working precision.
+
+Thus, the following command set makes sense.
+
+```text
+set precision mixed
+set iterative_refinement 3
+set tolerance 1e-15
 ```
 
 ### Summary
@@ -118,6 +147,51 @@ Some empirical guidance can be concluded as follows.
 7. The `MUMPS` solver supports both symmetric and asymmetric algorithms. One can use `set symm_mat true`
    or `set symm_mat false`.
 
+### Iterative System Solver
+
+[available from v2.5]
+
+It is possible to use iterative solvers to solve the linear system of equations. Currently, two solvers are available 
+by using the following command.
+
+```text
+set system_solver BiCGSTAB
+set system_solver GMRES
+```
+
+As the iterative solvers are relatively independent of the matrix storage scheme, thus, all different storage 
+schemes can be used along with different iterative solvers. One should beware that different storage schemes may 
+affect the performance of iterative solvers as they largely depend on matrix--vector multiplication.
+
+Mixed precision solving is not supported by the iterative solvers.
+
+#### Preconditioner
+
+Three preconditioners are available for the iterative solvers.
+
+```text
+set preconditioner None
+set preconditioner Jacobi
+set preconditioner ILU
+```
+
+The `None` preconditioner uses identify matrix as the preconditioner.
+
+The `Jacobi` preconditioner uses the diagonal of the matrix as the preconditioner. This is the default one but may 
+not perform well for certain problems.
+
+The `ILU` preconditioner uses the incomplete LU factorization of the matrix as the preconditioner. This `ILU` preconditioner
+is provided by the `SuperLU` library.
+
+If the iterative solver is used, then it is possible to set the tolerance of the iterative solver. In this case, 
+tolerance assigned will not be used by mixed precision algorithm as it is not activated due to an iterative solver 
+is defined.
+
+```text
+set tolerance (1)
+# (1) double, tolerance of the iterative solver
+```
+
 ## Parallel Matrix Assembling
 
 For dense matrix storage schemes, the global matrix is stored in a consecutive chunk of memory. Assembling global matrix
@@ -131,10 +205,19 @@ By default, the coloring algorithm is enabled. To disable it, users can use the 
 
 ```
 set color_model false
+set color_model none
 ```
 
 As a NP hard problem, there is no optimal algorithm to find the minimum chromatic number. The Welsh-Powell algorithm is
-implemented in `suanPan`.
+implemented in `suanPan`. The maximum independent set algorithm is also available, it may outperform the 
+Welsh-Powell algorithm on large models. To switch, users can use the following command.
+
+```
+# default to WP algorithm
+set color_algorithm WP
+# switch to MIS algorithm
+set color_algorithm MIS
+```
 
 Also, depending on the problem setup, such a coloring may or may not help to improve the performance. If there are not a
 large number of matrix assembling, the time saved may not be significant. Thus, for problems of small sizes, users may
@@ -156,9 +239,9 @@ set load_multiplier (1)
 This command does not overwrite user defined penalty number if the specific constraint or load takes the penalty number
 than input arguments.
 
-## Iterative Tolerance
+## FGMRES Iterative Tolerance
 
-For `FGMRES` iterative solver, one can use the following command to control the tolerance of the algorithm.
+For `FGMRES` iterative solver, one can use the following dedicated command to control the tolerance of the algorithm.
 
 ```
 set fgmres_tolerance (1)

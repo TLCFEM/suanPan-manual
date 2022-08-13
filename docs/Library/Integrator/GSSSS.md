@@ -26,9 +26,18 @@ Both U0 and V0 families are available.
 integrator GSSSSU0 (1) (2) (3) (4)
 integrator GSSSSV0 (1) (2) (3) (4)
 # (1) int, unique integrator tag
+# (2) double, spectral radius (order does not matter)
+# (3) double, spectral radius (order does not matter)
+# (4) double, spectral radius (order does not matter)
+```
+
+The optimal scheme (see table below) only requires one spectral radius, one can use the following command to use the 
+optimal scheme.
+
+```text
+integrator GSSSSOptimal (1) (2)
+# (1) int, unique integrator tag
 # (2) double, spectral radius
-# (3) double, spectral radius
-# (4) double, spectral radius
 ```
 
 ## Remarks

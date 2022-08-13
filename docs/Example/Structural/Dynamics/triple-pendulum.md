@@ -113,7 +113,25 @@ The animation is presented as follows.
 
 Everything seems to be working fine, which appears to be good. So what's next? If the results are carefully examined,
 one would notice some unexpected behaviour. For ones who have a good background of dynamics, it must be noticed that 
-he Newmark method has no algorithm damping. It is also not ideal in terms of energy/momentum conservation.
+he Newmark method has no algorithmic damping. It is also not ideal in terms of energy/momentum conservation.
 
-Try the extra two models using [`BatheTwoStep`](../../../Library/Integrator/BatheTwoStep.md) and [`GSSSS`](../../..
-/Library/Integrator/GSSSS.md) methods in the archive.
+If one plots the acceleration history, one can notice that the acceleration is not physically meaningful.
+
+![newmark acceleration](triple-pendulum-newmark.svg)
+
+Given that the Newmark method has no algorithmic damping, the high frequency noise cannot be suppressed. Try the extra 
+two models using [`BatheTwoStep`](../../../Library/Integrator/BatheTwoStep.md) and
+[`GSSSS`](../../../Library/Integrator/GSSSS.md) methods in the archive.
+
+If one instead uses the [`GSSSS`](../../../Library/Integrator/GSSSS.md) method with identical spectral radii, which is 
+equivalent to the [`generalised alpha`](../../../Library/Integrator/GeneralizedAlpha.md) method, the acceleration 
+history can be plotted as follows.
+
+![generalised alpha acceleration](triple-pendulum-gssss.svg)
+
+All in all, as long as the system may result in high frequency response, the use of the Newmark method is discouraged.
+
+The high frequency response may stem from either very large stiffness or very small mass. The former case may happen 
+when parts of the system are very rigid. The application of penalty method often results in large stiffness 
+components. The latter case may happen when the mass is under integrated or even lumped. Both are somehow inevitable 
+in practical simulations. One shall consider other time integration methods to obtain more reliable results.
