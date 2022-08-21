@@ -13,6 +13,18 @@ element <name> <tag> <connected_nodes> <associated_material> <other_specific_par
 
 ## Output Types
 
+All elements support record elemental stiffness and mass by tokens `K` and `M`. One can use the following to record 
+them. The detailed syntax can be seen in [Record](../../Library/Recorder/Recorder.md) page.
+
+```text
+hdf5recorder (1) Element K (2...)
+hdf5recorder (1) Element M (2...)
+# (1) int, unique recorder tag
+# (2...) int, element tags that K or M needs to be recorded
+```
+
+The matrices are vectorised.
+
 Most elements do not support additional quantities to be recorded. There are some exceptions, however. The
 additional ones will be documented in the specific element documentation.
 
