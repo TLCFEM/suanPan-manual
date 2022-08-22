@@ -103,6 +103,7 @@
     * [Linear](Library/Amplitude/Universal/Linear.md)
     * [Modulated](Library/Amplitude/Universal/Modulated.md)
     * [Tabular](Library/Amplitude/Universal/Tabular.md)
+    * [TabularSpline](Library/Amplitude/Universal/TabularSpline.md)
     * [Trig](Library/Amplitude/Universal/Trig.md)
 * [Constraint](Library/Constraint/Constraint.md)
   * [MPC](Library/Constraint/MPC.md)
