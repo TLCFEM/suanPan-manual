@@ -78,3 +78,27 @@ accordingly. The new nodal displacement will be dispatched to all active element
 
 From the element's perspective, it is in charge of returning elemental nodal force vector based on given nodal
 displacement vector.
+
+### Interaction
+
+The problem domain holds all necessary information for elements to update themselves. Elements do not directly 
+interacts with global data storage. Rather, them only communicates with the associated nodes and sections/materials.
+
+A complete interaction graph can be seen as follows. For elements themselves, apart from the connected nodes, they 
+do not share information with any other objects by any means. Some elements may do not even need sections and/or 
+materials.
+
+``` mermaid
+graph LR
+  A[Domain] -->|update_trial_status| B[Element];
+  A -->|updaye_trial_status| J[Node];
+  J -->|get_trial_displacement| B;
+  B -->|update_trial_status| D[Section];
+  D -->|update_trial_status| F[Material];
+  F -->|get_trial_stress| D;
+  F -->|get_trial_stiffness| D;
+  D -->|get_trial_resistance| B;
+  D -->|get_trial_stiffness| B;
+  B -->|get_trial_resistance| A;
+  B -->|get_trial_stiffness| A;
+```
