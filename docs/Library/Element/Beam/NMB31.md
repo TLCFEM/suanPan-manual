@@ -25,3 +25,16 @@ element NMB31 (1) (2) (3) (4) (5)
    of six) components. But for compatibility with general purpose beam transformation, at element, six components as
    usual are computed and stored, the first five are sent to section for computation of response, the torsion response
    is assumed to be elastic.
+
+## Output Type
+
+The `NMB31` element additional support recording element deformation and resistance via the `BEAME` and `BEAMS` tokens.
+
+For example,
+
+```text
+hdf5recorder (1) Element BEAME (2...)
+hdf5recorder (1) Element BEAMS (2...)
+# (1) int, unique recorder tag
+# (2...) int, tags of elements to record
+```
