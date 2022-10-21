@@ -43,8 +43,8 @@ element SGCMQG (1) (2...5) (6) [7] [8]
 ## Remarks
 
 * Three integration schemes are available: "I", "L" and "G".
-  * "I": Five-Point Irons Scheme
-  * "L": 3rd Order Lobatto Scheme
-  * "G": 3rd Order Gauss Scheme
+  - "I": Five-Point Irons Scheme
+  - "L": 3rd Order Lobatto Scheme
+  - "G": 3rd Order Gauss Scheme
 * `GCMQ` is the full version described in [1] with enhanced strain, `SGCMQ` is a `PS` like element with no enhanced
   strain, the direct result of which is less computation is required (less than `CP8R`).

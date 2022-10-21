@@ -6,7 +6,7 @@ There should be exactly two columns in the external file. The first column is ti
 the amplitude.
 
 The **cubic spline interpolation** is used. The first derivatives of two ends (of the interpolated curve) are set to 
-zero.
+zero. See [this page](https://en.wikiversity.org/wiki/Cubic_Spline_Interpolation) for more details.
 
 ## Syntax
 
