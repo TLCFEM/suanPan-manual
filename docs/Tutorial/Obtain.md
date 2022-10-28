@@ -11,7 +11,7 @@ precompiled binaries are compiled on the following OS versions.
 | Platform | Version             |
 |----------|---------------------|
 | Windows  | Windows Server 2019 |
-| Ubuntu   | Ubuntu 20.04        |
+| Ubuntu   | Ubuntu 22.04        |
 | Fedora   | Fedora 35           |
 | macOS    | Big Sur 11          |
 
