@@ -214,9 +214,9 @@ Welsh-Powell algorithm on large models. To switch, users can use the following c
 
 ```
 # default to WP algorithm
-set color_algorithm WP
+set color_model WP
 # switch to MIS algorithm
-set color_algorithm MIS
+set color_model MIS
 ```
 
 Also, depending on the problem setup, such a coloring may or may not help to improve the performance. If there are not a
