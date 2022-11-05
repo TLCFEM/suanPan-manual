@@ -16,9 +16,7 @@ build:
     - libstdc++6
     - libx11-6
     - libxcursor1
-  jobs:
-    post_system_dependencies:
-      - wget -q https://github.com/TLCFEM/prebuilds/releases/download/latest/suanPan-2.5.0-1.x86_64.deb
+    - graphviz
 python:
   install:
     - method: pip

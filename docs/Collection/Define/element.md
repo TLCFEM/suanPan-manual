@@ -13,6 +13,18 @@ element <name> <tag> <connected_nodes> <associated_material> <other_specific_par
 
 ## Output Types
 
+All elements support record elemental stiffness and mass by tokens `K` and `M`. One can use the following to record 
+them. The detailed syntax can be seen in [Record](../../Library/Recorder/Recorder.md) page.
+
+```text
+hdf5recorder (1) Element K (2...)
+hdf5recorder (1) Element M (2...)
+# (1) int, unique recorder tag
+# (2...) int, element tags that K or M needs to be recorded
+```
+
+The matrices are vectorised.
+
 Most elements do not support additional quantities to be recorded. There are some exceptions, however. The
 additional ones will be documented in the specific element documentation.
 
@@ -66,3 +78,27 @@ accordingly. The new nodal displacement will be dispatched to all active element
 
 From the element's perspective, it is in charge of returning elemental nodal force vector based on given nodal
 displacement vector.
+
+### Interaction
+
+The problem domain holds all necessary information for elements to update themselves. Elements do not directly 
+interacts with global data storage. Rather, them only communicates with the associated nodes and sections/materials.
+
+A complete interaction graph can be seen as follows. For elements themselves, apart from the connected nodes, they 
+do not share information with any other objects by any means. Some elements may do not even need sections and/or 
+materials.
+
+``` mermaid
+graph LR
+  A[Domain] -->|update_trial_status| B[Element];
+  A -->|updaye_trial_status| J[Node];
+  J -->|get_trial_displacement| B;
+  B -->|update_trial_status| D[Section];
+  D -->|update_trial_status| F[Material];
+  F -->|get_trial_stress| D;
+  F -->|get_trial_stiffness| D;
+  D -->|get_trial_resistance| B;
+  D -->|get_trial_stiffness| B;
+  B -->|get_trial_resistance| A;
+  B -->|get_trial_stiffness| A;
+```

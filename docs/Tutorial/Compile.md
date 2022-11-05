@@ -1,13 +1,13 @@
 # Compile
 
-## Dockerfile
+## Docker Images
 
 For Linux users, if there is no access to `sudo` but can build containers with Docker, it is possible to compile the 
 project with 
 Docker. Check the provided [Dockerfiles](https://github.com/TLCFEM/suanPan/tree/dev/Script) for more information.
 
-Once the container is built, the `.tar.gz` and `.deb` or `.rpm` packages will be placed under `/`. Simply copy them 
-out and install/unpack the archive.
+Once the container is built, the `.tar.gz` will be placed under `/`. Simply copy them out and install/unpack the 
+archive. The `.deb` or `.rpm` packages are installed in the images, so they can be used directly. 
 
 The following is a general guide that covers three main operating systems.
 
@@ -28,12 +28,12 @@ The following is a general guide that covers three main operating systems.
 A number of new features from new standards are utilized. To compile the binary, a compiler that supports **C++20** is
 required.
 
-GCC 10, Clang 13, MSVC 14.3 and Intel compilers are tested with the source code.
+GCC 11, Clang 13, MSVC 14.3, Intel compilers and later version of those compilers are tested with the source code.
 
 On Windows, Visual Studio 2022 with Intel oneAPI toolkit is recommended. Alternatively, [WinLibs](http://winlibs.com/)
 can be used if GCC compilers are preferred.
 
-On other platforms (Linux and macOS), simply use GCC (at least version 10.3.0) which comes with a valid Fortran
+On other platforms (Linux and macOS), simply use GCC (at least version 10) which comes with a valid Fortran
 compiler. Clang can also be used for C/CPP code, but since Clang and GCC have different supports for C++20, successful
 compilation is not guaranteed with Clang.
 
@@ -54,7 +54,7 @@ A solution file is provided under `MSVC/suanPan` folder. There are two configura
 1. `Debug`: Assume no available Fortran compiler, all Fortran related libraries are provided as precompiled DLLs. Use
    OpenBLAS for linear algebra. Multithreading disabled. Visualisation disabled. HDF5 support disabled.
 2. `Release`: Fortran libraries are configured with Intel compilers. Use MKL for linear algebra. Multithreading enabled.
-   Visualisation enabled with VTK version 9.1. HDF5 support enabled. CUDA enabled.
+   Visualisation enabled with VTK version 9.2. HDF5 support enabled. CUDA enabled.
 
 This [repository](https://github.com/TLCFEM/prebuilds) contains some precompiled libraries used.
 
@@ -63,8 +63,10 @@ open the solution and switch to Debug configuration, ignore all potential warnin
 
 To compile `Release` version, please
 
-1. Make sure oneAPI both base and HPC toolkits, as well as VS 2022 integration, are installed. The MKL is enabled via
-   integrated option `<UseInteloneMKL>Parallel</UseInteloneMKL>`.
+1. Make sure oneAPI both base and HPC toolkits, as well as VS integration, are installed. Be aware of this issue 
+   if you are using VS 2022: [Microsoft Visual Studio 2022 Version 17.2 and Newer Fails to Integrate with the Intel 
+   Fortran Compiler](https://www.intel.com/content/www/us/en/developer/articles/troubleshooting/vs2022-version-17-2-and-intel-fortran-integration.html).
+   The MKL is enabled via integrated option `<UseInteloneMKL>Parallel</UseInteloneMKL>`.
 
 2. Make sure CUDA is installed. The environment variable `$(CUDA_PATH)` is used to locate headers.
 
@@ -72,11 +74,11 @@ To compile `Release` version, please
    to include and library folders. On my machine, they are
 
    ```powershell
-   VTK_INC=C:\Program Files\VTK\include\vtk-9.1
+   VTK_INC=C:\Program Files\VTK\include\vtk-9.2
    VTK_LIB=C:\Program Files\VTK\lib
    ```
 
-   For versions other than 9.1, names of the linked libraries shall be manually changed as they contain version numbers.
+   For versions other than 9.2, names of the linked libraries shall be manually changed as they contain version numbers.
    Thus, it is not a good idea to switch to a different version. Precompiled VTK library is also available in
    this [repository](https://github.com/TLCFEM/prebuilds)
 
@@ -178,19 +180,20 @@ for details.
    ```
 
 3. Now compile `suanPan` by enabling MKL via option `-DUSE_MKL=ON`. The corresponding `MKLROOT` shall be assigned, for
-   example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used for
-   snap is the following one.
+   example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used 
+   for snap is the following one.
 
    ```bash
-   -DCMAKE_BUILD_TYPE=Release \
-   -DBUILD_MULTITHREAD=ON \
-   -DUSE_HDF5=ON \
-   -DUSE_EXTERNAL_VTK=ON \
-   -DVTK_DIR=$SNAPCRAFT_PART_BUILD/lib/cmake/vtk-9.1/ \
-   -DUSE_MKL=ON \
-   -DMKLROOT=/opt/intel/oneapi/mkl/latest \
-   -DUSE_INTEL_OPENMP=OFF \
-   -DLINK_DYNAMIC_MKL=OFF
+      -DCMAKE_INSTALL_PREFIX=
+      -DCMAKE_BUILD_TYPE=Release
+      -DBUILD_MULTITHREAD=ON
+      -DUSE_HDF5=ON
+      -DUSE_EXTERNAL_VTK=ON
+      -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/
+      -DUSE_MKL=ON
+      -DMKLROOT=/opt/intel/oneapi/mkl/latest
+      -DUSE_INTEL_OPENMP=OFF
+      -DLINK_DYNAMIC_MKL=OFF
    ```
 
 ### Fedora
@@ -328,12 +331,9 @@ cmake -DCMAKE_INSTALL_PREFIX= \
       -DBUILD_MULTITHREAD=ON \
       -DUSE_HDF5=ON \
       -DUSE_EXTERNAL_VTK=ON \
-      -DVTK_DIR=$SNAPCRAFT_PART_BUILD/lib/cmake/vtk-9.1/ \
+      -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/ \
       -DUSE_MKL=ON \
       -DMKLROOT=/opt/intel/oneapi/mkl/latest \
       -DUSE_INTEL_OPENMP=OFF \
-      -DLINK_DYNAMIC_MKL=OFF \
-      -DCMAKE_C_COMPILER=gcc-10 \
-      -DCMAKE_CXX_COMPILER=g++-10 \
-      -DCMAKE_Fortran_COMPILER=gfortran-10 ..
+      -DLINK_DYNAMIC_MKL=OFF
 ```

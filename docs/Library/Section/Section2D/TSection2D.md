@@ -16,8 +16,8 @@ section TSection2D (1) (2...5) (6) [7] [8]
 ## Remarks
 
 1. Section dimensions are:
-  * `(2)` top flange height
-  * `(3)` top flange thickness
-  * `(4)` web width
-  * `(5)` web thickness
+   * `(2)` top flange height
+   * `(3)` top flange thickness
+   * `(4)` web width
+   * `(5)` web thickness
 2. By default, the flange is at top.

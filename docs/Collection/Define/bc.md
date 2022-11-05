@@ -41,9 +41,9 @@ grouppenaltybc (1) (2) (3...)
 5. The DoF identifier `(2)` takes the following string input: `1`, `2`, `3`, `4`, `5`, `6`, `pinned`, `encastre`
    , `xsymm`, `ysymm`, `zsymm` and the corresponding initials `p`, `e`, `x`, `y`, `z`. The names do not actually reflect
    their meaning, instead, following DoFs would be restrained when string input is given.
-  1. `pinned`: 1 2 3
-  2. `encastre`: 1 2 3 4 5 6
-  3. `xsymm`: 1 5 6
-  4. `ysymm`: 2 4 6
-  5. `zsymm`: 3 4 5
+   1. `pinned`: 1 2 3
+   2. `encastre`: 1 2 3 4 5 6
+   3. `xsymm`: 1 5 6
+   4. `ysymm`: 2 4 6
+   5. `zsymm`: 3 4 5
 6. The nontrivial Dirichlet boundary condition is treated as displacement load.

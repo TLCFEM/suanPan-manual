@@ -20,3 +20,16 @@ element NMB21 (1) (2) (3) (4) [5]
 
 Only `NM2D*` sections are supported. There is no validation of section attached, analysts shall make sure proper
 sections are used.
+
+## Output Type
+
+The `NMB21` element additional support recording element deformation and resistance via the `BEAME` and `BEAMS` tokens.
+
+For example,
+
+```text
+hdf5recorder (1) Element BEAME (2...)
+hdf5recorder (1) Element BEAMS (2...)
+# (1) int, unique recorder tag
+# (2...) int, tags of elements to record
+```
