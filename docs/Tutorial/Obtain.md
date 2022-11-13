@@ -1,5 +1,40 @@
 # Obtain
 
+## Docker Image
+
+A docker image is available at [Docker Hub](https://hub.docker.com/repository/docker/tlcfem/suanpan). To use it, 
+docker needs to be installed first. See [this page](https://docs.docker.com/get-docker/) for details.
+
+Once docker is installed, it is possible to pull the image via:
+
+```bash
+docker pull tlcfem/suanpan
+```
+
+Then it is possible to run the container in an interactive manner via:
+
+```bash
+docker run -it --rm tlcfem/suanpan
+```
+
+Within the container, the `suanPan` executable is available. To run, type:
+
+```bash
+suanPan
+```
+
+One can also attach volume to the container to access the files in the host machine. And then run the file inside 
+the container.
+
+```bash
+docker run -it --rm -v /path/to/host/folder:/path/to/container/folder tlcfem/suanpan
+cd /path/to/container/folder
+suanPan -f example.model.sp
+```
+
+Docker image is convenient on machines with older kernels or limited by other factors that does not allow 
+execution of precompiled binaries.
+
 ## Precompiled Binaries
 
 The binaries are published on
@@ -10,7 +45,7 @@ precompiled binaries are compiled on the following OS versions.
 
 | Platform | Version             |
 |----------|---------------------|
-| Windows  | Windows Server 2019 |
+| Windows  | Windows Server 2022 |
 | Ubuntu   | Ubuntu 22.04        |
 | Fedora   | Fedora 35           |
 | macOS    | Big Sur 11          |
