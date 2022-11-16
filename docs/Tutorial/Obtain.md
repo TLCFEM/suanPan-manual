@@ -67,6 +67,11 @@ Currently, the following package managers can be used to install the program.
 | Ubuntu   | `apt` (not available in official repo)                          | `sudo apt install ./suanPan-x.x.x-1.x86_64.deb` |
 | Fedora   | `dnf` (not available in official repo)                          | `sudo dnf install ./suanPan-x.x.x-1.x86_64.rpm` |
 
+The binaries are tested in standard environments: fresh new
+[Win10/11](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/) images,
+docker images [Ubuntu](https://hub.docker.com/_/ubuntu) and [Fedora](https://hub.docker.com/_/fedora),
+and [macOS](https://github.com/actions/runner-images/blob/main/images/macos/macos-11-Readme.md) GitHub image.
+
 ### Chocolatey
 
 [![asciicast](https://asciinema.org/a/491350.svg)](https://asciinema.org/a/491350)
