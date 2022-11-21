@@ -1,20 +1,30 @@
 # BatheTwoStep
 
-In the original paper ([10.1016/j.compstruc.2006.09.004](https://doi.org/10.1016/j.compstruc.2006.09.004)), a single
-time step is divided into two sub-steps. This creates complexity in terms of implementation. Instead, a leap-frog style
-algorithm is implemented: odd steps perform trapezoidal rule and even steps perform backward Euler rule. Thus, the real
-time increment chosen should be half to the desired one.
+Starting from version 2.7, customisation of spectral radius ($$\rho_\infty$$) is supported.
+
+The customisation of sub-step size $$\gamma$$ is not supported. The sub-step size is always $$\gamma=0.5$$.
 
 The algorithm is known to be able to conserve energy and momentum.
+
+References:
+
+1. [10.1016/j.compstruc.2006.09.004](https://doi.org/10.1016/j.compstruc.2006.09.004)
+2. [10.1016/j.compstruc.2018.11.001](https://doi.org/10.1016/j.compstruc.2018.11.001)
+
+The implementation treats each sub-step as individual time steps, thus to match the time step in the original literature, one shall use the half of it.
 
 ## Syntax
 
 ```
-integrator BatheTwoStep (1)
+integrator BatheTwoStep (1) [2]
 # (1) int, unique integrator tag
+# [2] double, spectral radius, default: 0
 ```
 
-## Trapezoidal Rule
+Using `integrator BatheTwoStep (1)` with two optional parameters omitted gives the same results as in versions prior 
+to 2.7.
+
+## The First Sub-step
 
 For trapezoidal rule,
 
@@ -29,8 +39,7 @@ $$
 Then,
 
 $$
-u_{n+1}=u_n+\dfrac{\Delta{}t}{2}\left(v_n+v_n+\dfrac{\Delta{}t}{2}\left(a_n+a_{n+1}\right)\right)
-,
+u_{n+1}=u_n+\dfrac{\Delta{}t}{2}\left(v_n+v_n+\dfrac{\Delta{}t}{2}\left(a_n+a_{n+1}\right)\right),
 $$
 
 $$
@@ -45,7 +54,8 @@ a_{n+1}=\dfrac{4}{\Delta{}t^2}\Delta{}u-\dfrac{4}{\Delta{}t}v_n-a_n,\qquad
 $$
 
 $$
-v_{n+1}=\dfrac{2}{\Delta{}t}\Delta{}u-v_n,\qquad \Delta{}v=\dfrac{2}{\Delta{}t}\Delta{}u-2v_n.
+v_{n+1}=\dfrac{2}{\Delta{}t}\Delta{}u-v_n,\qquad
+\Delta{}v=\dfrac{2}{\Delta{}t}\Delta{}u-2v_n.
 $$
 
 The effective stiffness is then
@@ -54,30 +64,37 @@ $$
 \bar{K}=K+\dfrac{2}{\Delta{}t}C+\dfrac{4}{\Delta{}t^2}M.
 $$
 
-## Euler Rule
+## The Second Sub-step
 
-The second step is computed by using the backward Euler method. Thus
-
-$$
-v_{n+2}=\dfrac{1}{2\Delta{}t}u_n-\dfrac{2}{\Delta{}t}u_{n+1}+\dfrac{3}{2\Delta{}t}u_{n+2},
-$$
+The second step is computed by
 
 $$
-a_{n+2}=\dfrac{1}{2\Delta{}t}v_n-\dfrac{2}{\Delta{}t}v_{n+1}+\dfrac{3}{2\Delta{}t}v_{n+2}.
+v_{n+2}=v_n+\Delta{}t\left(q_0a_n+q_1a_{n+1}+q_2a_{n+2}\right),
+$$
+
+$$
+u_{n+2}=u_n+\Delta{}t\left(q_0v_n+q_1v_{n+1}+q_2v_{n+2}\right).
+$$
+
+The parameters satisfy $$q_0+q_1+q_2=1$$, and
+
+$$
+q_1=\dfrac{\rho_\infty+1}{\rho_\infty+3},\qquad
+q_2=0.5-0.5q_1.
 $$
 
 Hence,
 
 $$
-v_{n+2}=\dfrac{1}{2\Delta{}t}u_n-\dfrac{1}{2\Delta{}t}u_{n+1}+\dfrac{3}{2\Delta{}t}\Delta{}u,
+a_{n+2}=\dfrac{v_{n+2}-v_n}{2\Delta{}tq_2}-\dfrac{q_0}{q_2}a_n-\dfrac{q_1}{q_2}a_{n+1},
 $$
 
 $$
-a_{n+2}=\dfrac{1}{2\Delta{}t}v_n-\dfrac{2}{\Delta{}t}v_{n+1}+\dfrac{3}{2\Delta{}t}v_{n+2}.
+v_{n+2}=\dfrac{u_{n+2}-u_n}{2\Delta{}tq_2}-\dfrac{q_0}{q_2}v_n-\dfrac{q_1}{q_2}v_{n+1}.
 $$
 
 The effective stiffness is then
 
 $$
-\bar{K}=K+\dfrac{3}{2\Delta{}t}C+\dfrac{9}{4\Delta{}t^2}M.
+\bar{K}=K+\dfrac{1}{2q_2\Delta{}t}C+\dfrac{1}{4q_2^2\Delta{}t^2}M.
 $$
