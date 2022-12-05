@@ -2,6 +2,19 @@
 
 The `set` command is used to set some properties of the analysis.
 
+## Linear Elastic Simplification
+
+In a general non-linear context, each substep requires at least two system solving, one for initial guess, one for convergence test.
+There is no general way to detect linear system automatically, with which we know the initial guess leads to convergence so that
+the further system solving is not necessary. To speed up simulation, one can use the following command to indicate the system is
+linear.
+
+```
+set linear_system true
+```
+
+With this enabled, only one system solving will be performed in each substep.
+
 ## Substepping Control
 
 To use a fixed substep size, users can define
@@ -36,7 +49,7 @@ set min_step_size (1)
 
 By default, an **asymmetric banded** matrix storage scheme is used. For 1D analysis, the global stiffness matrix is
 always symmetric. However, when it comes to 2D and 3D analyses, the global stiffness may be structurally symmetric in
-terms of its layout, but there may not have the same value on the symmetric entries. In math language, if $$K(i,j)
+terms of its layout, but there may not have the same value on the symmetric entries. In maths language, if $$K(i,j)
 \neq0$$ then $$K(j,i)\neq0$$, but $$K(i,j)\neq{}K(j,i)$$. Hence, an asymmetric banded storage is the safest.
 The `_gbsv()` LAPACK subroutine is used for matrix solving.
 

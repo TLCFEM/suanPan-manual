@@ -19,8 +19,11 @@ integrator Tchamwa (1) [2]
 The integration relationship is given by the following.
 
 $$
-u_{n+1}=u_n+\Delta{}tv_n+\phi\Delta{}t^2a_n,\\
-v_{n+1}=v_n+\Delta{}ta_n,\\
+u_{n+1}=u_n+\Delta{}tv_n+\phi\Delta{}t^2a_n,
+$$
+
+$$
+v_{n+1}=v_n+\Delta{}ta_n,
 $$
 
 where
@@ -36,7 +39,7 @@ The Tchamwa scheme has a first order accuracy and controllable numerical dissipa
 If the model is linear elastic, it is possible to indicate using
 
 ```text
-set pure_elastic
+set linear_system true
 ```
 
-to speed uop the computation.
+to speed up the computation.
