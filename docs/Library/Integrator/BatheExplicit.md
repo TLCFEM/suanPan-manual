@@ -24,4 +24,4 @@ If the model is linear elastic, it is possible to indicate using
 set pure_elastic
 ```
 
-to speed uop the computation.
+to speed up the computation.

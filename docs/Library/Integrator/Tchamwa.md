@@ -19,7 +19,7 @@ integrator Tchamwa (1) [2]
 The integration relationship is given by the following.
 
 $$
-u_{n+1}=u_n+\Delta{}tv_n+\phi\Deltat^2a_n,\\
+u_{n+1}=u_n+\Delta{}tv_n+\phi\Delta{}t^2a_n,\\
 v_{n+1}=v_n+\Delta{}ta_n,\\
 $$
 
