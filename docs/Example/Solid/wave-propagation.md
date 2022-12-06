@@ -78,3 +78,44 @@ set linear_system 1
 ```
 
 ## Results
+
+For a not-so-rigorous comparison, different spectral radii are used for different methods, mainly for the purpose of
+showcasing different methods.
+
+### Implicit
+
+The [Bathe](../../Library/Integrator/BatheTwoStep.md) two-step method appears to have the best numerical dispersion
+performance among implicit methods.
+
+The [GSSSS](../../Library/Integrator/GSSSS.md) optimal scheme is also fine if the spectral radius is chosen properly.
+
+The second-order, unconditionally stable [Newmark](../../Library/Integrator/Newmark/Newmark.md) method has significant
+high-frequency noise.
+This explains why it is mainly used for structural dynamics in which the low-frequency response is of interest.
+
+The chosen time step size is 0.01 s for all three cases.
+
+- Bathe Implicit: 0.9
+- GSSSS Optimal: 0.8
+- Newmark: 1.0
+
+![implicit methods](wave-implicit.gif)
+
+### Explicit
+
+The explicit methods show better numerical dispersion.
+
+The [Tchamwa](../../Library/Integrator/Tchamwa.md) method is first-order accurate, and does not require corrector.
+
+The [Noh-Bathe](../../Library/Integrator/BatheExplicit.md) two-step explicit method, as discussed in the original
+reference, shows superior performance.
+However, it requires a corrector step, which requires an additional element-wise computation for each substep.
+This increases the computational cost.
+
+The chosen time step size is 0.001 s.
+
+- Tchamwa: 0.9
+- Tchamwa: 0.6
+- Bathe Explicit: 0.9
+
+![explicit methods](wave-explicit.gif)
