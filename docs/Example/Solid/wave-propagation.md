@@ -8,6 +8,8 @@ dispersion.
 
 The model script can be downloaded [here](wave-propagation.supan).
 
+**This model contains 16641 nodes and 16384 elements. The memory usage is about 2 GB.**
+
 **Due to small step size and need to export visualization data, the full analysis takes around 20 minutes to complete on
 an average PC platform.**
 
@@ -32,3 +34,47 @@ The boundaries can be extracted by [generating](../../Collection/Define/generate
 ### Time Integration
 
 We use both implicit and explicit time integration methods.
+
+#### Implicit
+
+The implicit time integration methods are the default.
+If no integrator is defined, a default [Newmark](../../Library/Integrator/Newmark/Newmark.md) integrator will be used.
+
+An implicit integrator shall be used with an implicit step.
+
+```text
+step ImplicitDynamic 1 4
+# or just
+# step Dynamic 1 4
+```
+
+#### Explicit
+
+Most explicit methods use acceleration as the primary variable, the equations of motion are often expressed as a
+function of acceleration.
+This differs from implicit methods that often use displacement as the primary variable.
+In order to adopt such a difference, one needs to define an `ExplicitDynamic` step, similar to the setting in ABAQUS.
+
+```text
+step ExplicitDynamic 1 4
+```
+
+Please be aware that most displacement-based constraints **cannot** be used in explicit analysis.
+
+#### Other Settings
+
+Since we are using a linear elastic material with the CP4 elements.
+The elemental stiffness is symmetric.
+As there are no other non-linear constraints defined in the model, the global stiffness/mass matrix is also symmetric.
+It is possible to then turn on symmetric banded storage to save memory space.
+
+Also, since the system is linear, the global stiffness/mass matrix does not change once assembled.
+It is possible to indicate the solver to skip iterations.
+
+```text
+set symm_mat 1
+set band_mat 1
+set linear_system
+```
+
+## Results
