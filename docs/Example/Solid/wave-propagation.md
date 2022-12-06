@@ -6,7 +6,7 @@ Essentially, it is a 2D dynamics problem. The [CP4](../../Library/Element/Membra
 model the solid.
 Various time integration methods will be used to compare their performance regarding numerical energy dispersion.
 
-The model script can be downloaded [here](wave-propagation.supan).
+The model script can be downloaded [here](wave-propagation.zip).
 
 **This model contains 16641 nodes and 16384 elements. The memory usage is about 1.2 GB.**
 
@@ -20,16 +20,49 @@ available. It is not difficult to generate an array of squares using scripting l
 Here, [Gmsh](https://gmsh.info/) is used.
 
 The left and right boundary are constrained along the horizontal direction. The bottom boundary is constrained along the
-vertical direction. A concentrated vertical load is applied at the centre of the top boundary.
+vertical direction. An initial velocity is assigned to the node at the centre of the top boundary.
 
 ### Material
 
 Whether plane stress or plane strain assumption is adopted is not the focus of this example, we simply use a plane
 stress element with a unit thickness.
 
-### BC
+```text
+material Elastic2D 1 1E7 .2 1 1
+```
+
+### Visualisation
+
+For visualisation, we define a [`Visualisation`](../../Library/Recorder/Recorder.md) recorder.
+We record von Mises stress to represent the propagation of stress field.
+
+```text
+hdf5recorder 1 Visualisation MISES width 5
+```
+
+### IBC
 
 The boundaries can be extracted by [generating](../../Collection/Define/generate.md) node groups.
+
+```text
+generatebyrule nodegroup 1 1 1. 0. # left
+generatebyrule nodegroup 2 1 1. 3200. # right
+generatebyrule nodegroup 3 2 1. 0. # bottom
+```
+
+Then BCs can be applied via [`groupmultiplierbc`](../../Collection/Define/bc.md).
+
+```text
+groupmultiplierbc 1 1 1 2
+groupmultiplierbc 2 2 3
+```
+
+The initial condition can be applied using [`initial`](../../Collection/Define/initial.md) command.
+
+```text
+# node 322 is the centre of the top boundary (1600,3200)
+initial velocity -1 2 322
+```
 
 ### Time Integration
 
@@ -93,7 +126,7 @@ The second-order, unconditionally stable [Newmark](../../Library/Integrator/Newm
 high-frequency noise.
 This explains why it is mainly used for structural dynamics in which the low-frequency response is of interest.
 
-The chosen time step size is 0.01 s for all three cases.
+The chosen time step size is 0.01 s for all three cases. The following radii are used:
 
 - Bathe Implicit: 0.9
 - GSSSS Optimal: 0.8
@@ -112,7 +145,7 @@ reference, shows superior performance.
 However, it requires a corrector step, which requires an additional element-wise computation for each substep.
 This increases the computational cost.
 
-The chosen time step size is 0.001 s.
+The chosen time step size is 0.001 s. The following radii are used:
 
 - Tchamwa: 0.9
 - Tchamwa: 0.6
