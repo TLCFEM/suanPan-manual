@@ -16,13 +16,15 @@
 * Developer
     * [element template](Example/Developer/element-template.md)
     * [material template](Example/Developer/material-template.md)
+* Solid
+    * [wave-propagation](Example/Solid/wave-propagation.md)
 * Geotechnical
     * [triaxial compression of sand](Example/Geotechnical/triaxial-compression-of-sand.md)
 * Structural
     * Statics
         * [bending of a cantilever beam](Example/Structural/Statics/bending-of-a-cantilever-beam.md)
         * [bifurcation of a cantilever beam](Example/Structural/Statics/bifurcation-of-a-cantilever-beam.md)
-        * [double edge notched specimen](Example/Structural/Statics/double-edge-notched-specimen.md)
+        * [double-edge notched specimen](Example/Structural/Statics/double-edge-notched-specimen.md)
         * [lees frame](Example/Structural/Statics/lees-frame.md)
         * [notched beam under cyclic loading](Example/Structural/Statics/notched-beam-under-cyclic-loading.md)
         * [rc section analysis](Example/Structural/Statics/rc-section-analysis.md)
