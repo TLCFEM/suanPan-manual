@@ -3,15 +3,15 @@
 In this example, we demonstrate an example of wave propagation in a 2D solid.
 
 Essentially, it is a 2D dynamics problem. The [CP4](../../Library/Element/Membrane/Plane/CP4.md) element is used to
-model the solid. Various time integration methods will be used to compare their performance regarding numerical energy
-dispersion.
+model the solid.
+Various time integration methods will be used to compare their performance regarding numerical energy dispersion.
 
 The model script can be downloaded [here](wave-propagation.supan).
 
-**This model contains 16641 nodes and 16384 elements. The memory usage is about 2 GB.**
+**This model contains 16641 nodes and 16384 elements. The memory usage is about 1.2 GB.**
 
 **Due to small step size and need to export visualization data, the full analysis takes around 20 minutes to complete on
-an average PC platform.**
+an average PC platform (6 physical cores @ 3 GHz).**
 
 ## Model
 
@@ -24,7 +24,7 @@ vertical direction. A concentrated vertical load is applied at the centre of the
 
 ### Material
 
-Whether plane stress or plane strain assumption is adopted is not the focus of this example, thus, we simply use a plane
+Whether plane stress or plane strain assumption is adopted is not the focus of this example, we simply use a plane
 stress element with a unit thickness.
 
 ### BC
@@ -74,7 +74,7 @@ It is possible to indicate the solver to skip iterations.
 ```text
 set symm_mat 1
 set band_mat 1
-set linear_system
+set linear_system 1
 ```
 
 ## Results
