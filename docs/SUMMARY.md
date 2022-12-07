@@ -248,6 +248,7 @@
     * [Linear](Library/Integrator/Linear.md)
     * [BatheTwoStep](Library/Integrator/BatheTwoStep.md)
     * [GeneralizedAlpha](Library/Integrator/GeneralizedAlpha.md)
+    * [OALTS](Library/Integrator/OALTS.md)
     * [GSSSS](Library/Integrator/GSSSS.md)
     * Newmark
         * [LeeNewmark](Library/Integrator/Newmark/LeeNewmark.md)
