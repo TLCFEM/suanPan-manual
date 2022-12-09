@@ -17,7 +17,8 @@ integrator OALTS (1) (2)
 
 ## Remarks
 
-This method is closely related to the [Generalised-Alpha](GeneralizedAlpha.md) method. See the second reference for more details.
+This method is closely related to the [Generalised-Alpha](GeneralizedAlpha.md) method (on first order ODEs).
+See the second reference for more details, also see [10.1016/j.compstruc.2017.08.013](https://doi.org/10.1016/j.compstruc.2017.08.013).
 
 This method requires a fixed time step.
 The initial time step is used for time marching.

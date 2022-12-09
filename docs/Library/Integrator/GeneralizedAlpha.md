@@ -36,14 +36,14 @@ $$
 The equation of motion is expressed at somewhere between $$t_n$$ and $$t_{n+1}$$.
 
 $$
-Ma_{n+1-\alpha_m}+Cv_{n+1-\alpha_f}+Kd_{n+1-\alpha_f}=F,
+Ma_{n+1-\alpha_m}+Cv_{n+1-\alpha_f}+Kd_{n+1-\alpha_f}=F_{n+1-\alpha_f},
 $$
 
 which can also be explicitly shown as
 
 $$
 M\left(\left(1-\alpha_m\right)a_{n+1}+\alpha_ma_n\right)+C\left(\left(1-\alpha_f\right)v_{n+1}+\alpha_fv_n\right)
-+K\left(\left(1-\alpha_f\right)d_{n+1}+\alpha_fd_n\right)=F,
++K\left(\left(1-\alpha_f\right)d_{n+1}+\alpha_fd_n\right)=\left(1-\alpha_f\right)F_{n+1}+\alpha_fF_n,
 $$
 
 where $$\alpha_m$$ and $$\alpha_f$$ are two additional parameters.
@@ -68,7 +68,7 @@ $$
 So that the resulting algorithm is unconditionally stable and has a second order accuracy. The target numerical damping
 for high frequencies is achieved while that of low frequencies is minimized.
 
-Recommended values of spectral radius range from $$0.5$$ to $$0.8$$.
+The recommended values of the spectral radius $$\rho_\infty$$ range from $$0.5$$ to $$0.8$$.
 
 Some special parameters can be chosen.
 

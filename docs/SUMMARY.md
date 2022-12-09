@@ -259,6 +259,7 @@
 * Explicit
     * [Tchamwa](Library/Integrator/Tchamwa.md)
     * [BatheExplicit](Library/Integrator/BatheExplicit.md)
+    * [GeneralizedAlphaExplicit](Library/Integrator/GeneralizedAlphaExplicit.md)
 
 ### Material
 

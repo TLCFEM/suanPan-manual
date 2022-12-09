@@ -21,7 +21,7 @@ integrator BatheTwoStep (1) [2] [3]
 ```
 
 Using `integrator BatheTwoStep (1)` with two optional parameters omitted gives the same results as in versions prior 
-to 2.7.
+to version 2.7.
 
 The spectral radius $$\rho_\infty$$ ranges from 0 to 1, both ends **inclusive**.
 
