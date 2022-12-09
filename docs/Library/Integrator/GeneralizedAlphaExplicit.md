@@ -9,10 +9,10 @@ References:
 ## Syntax
 
 ```text
-integrator GeneralizedAlpha (1) (2)
-integrator GeneralisedAlpha (1) (2)
+integrator GeneralizedAlpha (1) [2]
+integrator GeneralisedAlpha (1) [2]
 # (1) int, unique integrator tag
-# (2) double, spectral radius, \rho_\infty
+# [2] double, spectral radius, \rho_\infty, default: 0.5
 ```
 
 ## Remarks
