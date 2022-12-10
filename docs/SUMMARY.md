@@ -17,7 +17,7 @@
     * [element template](Example/Developer/element-template.md)
     * [material template](Example/Developer/material-template.md)
 * Solid
-    * [wave-propagation](Example/Solid/wave-propagation.md)
+    * [wave propagation](Example/Solid/wave-propagation.md)
 * Geotechnical
     * [triaxial compression of sand](Example/Geotechnical/triaxial-compression-of-sand.md)
 * Structural
