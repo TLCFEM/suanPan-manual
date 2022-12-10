@@ -115,6 +115,9 @@ set linear_system 1
 For a not-so-rigorous comparison, different spectral radii are used for different methods, mainly for the purpose of
 showcasing different methods.
 
+Also, the chosen model parameters are quite arbitrary.
+Sufficently accurate results often require an accurate estimation of the highest frequency of the model, which governs the time step size.
+
 ### Implicit
 
 The [Bathe](../../Library/Integrator/BatheTwoStep.md) two-step method appears to have the best numerical dispersion
