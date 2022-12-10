@@ -132,6 +132,7 @@
     * [AbsDisp](Library/Converger/Absolute/AbsDisp.md)
     * [AbsError](Library/Converger/Absolute/AbsError.md)
     * [AbsIncreDisp](Library/Converger/Absolute/AbsIncreDisp.md)
+    * [AbsIncreAcc](Library/Converger/Absolute/AbsIncreAcc.md)
     * [AbsIncreEnergy](Library/Converger/Absolute/AbsIncreEnergy.md)
     * [AbsResidual](Library/Converger/Absolute/AbsResidual.md)
 * Other
@@ -141,6 +142,7 @@
     * [RelDisp](Library/Converger/Relative/RelDisp.md)
     * [RelError](Library/Converger/Relative/RelError.md)
     * [RelIncreDisp](Library/Converger/Relative/RelIncreDisp.md)
+    * [RelIncreAcc](Library/Converger/Relative/RelIncreAcc.md)
     * [RelIncreEnergy](Library/Converger/Relative/RelIncreEnergy.md)
     * [RelResidual](Library/Converger/Relative/RelResidual.md)
 
