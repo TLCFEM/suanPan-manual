@@ -32,6 +32,7 @@
         * [uniform tension of a rubber specimen](Example/Structural/Statics/uniform-tension-of-a-rubber-specimen.md)
     * Dynamics
         * [bouncing of a ball](Example/Structural/Dynamics/bouncing-of-a-ball.md)
+        * [mass-spring-dashpot system](Example/Structural/Dynamics/mass-spring-dashpot-system.md)
         * [dynamic analysis of a portal frame](Example/Structural/Dynamics/dynamic-analysis-of-a-portal-frame.md)
         * [particle collision](Example/Structural/Dynamics/particle-collision.md)
         * [response history analysis of an elastic coupled wall](Example/Structural/Dynamics/response-history-analysis-of-an-elastic-coupled-wall.md)
@@ -281,6 +282,8 @@
         * [MultilinearElastic1D](Library/Material/Material1D/Elastic/MultilinearElastic1D.md)
         * [PolyElastic1D](Library/Material/Material1D/Elastic/PolyElastic1D.md)
         * [NLE1D01](Library/Material/Material1D/Elastic/NLE1D01.md)
+        * [Sinh1D](Library/Material/Material1D/Elastic/Sinh1D.md)
+        * [Tanh1D](Library/Material/Material1D/Elastic/Tanh1D.md)
     * Hysteresis
         * [AFC](Library/Material/Material1D/Hysteresis/AFC.md)
         * [AFCN](Library/Material/Material1D/Hysteresis/AFCN.md)
