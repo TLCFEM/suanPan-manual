@@ -1,5 +1,40 @@
 # Obtain
 
+## Docker Image
+
+A docker image is available at [Docker Hub](https://hub.docker.com/repository/docker/tlcfem/suanpan). To use it, 
+docker needs to be installed first. See [this page](https://docs.docker.com/get-docker/) for details.
+
+Once docker is installed, it is possible to pull the image via:
+
+```bash
+docker pull tlcfem/suanpan
+```
+
+Then it is possible to run the container in an interactive manner via:
+
+```bash
+docker run -it --rm tlcfem/suanpan
+```
+
+Within the container, the `suanPan` executable is available. To run, type:
+
+```bash
+suanPan
+```
+
+One can also attach volume to the container to access the files in the host machine. And then run the file inside 
+the container.
+
+```bash
+docker run -it --rm -v /path/to/host/folder:/path/to/container/folder tlcfem/suanpan
+cd /path/to/container/folder
+suanPan -f example.model.sp
+```
+
+Docker image is convenient on machines with older kernels or limited by other factors that does not allow 
+execution of precompiled binaries.
+
 ## Precompiled Binaries
 
 The binaries are published on
@@ -9,14 +44,14 @@ Binaries on Windows, Ubuntu and macOS are compiled and deployed automatically on
 precompiled binaries are compiled on the following OS versions.
 
 | Platform | Version             |
-|----------|---------------------|
-| Windows  | Windows Server 2019 |
+| -------- | ------------------- |
+| Windows  | Windows Server 2022 |
 | Ubuntu   | Ubuntu 22.04        |
 | Fedora   | Fedora 35           |
 | macOS    | Big Sur 11          |
 
 The `.deb` and `.rpm` packages are tested on the same platforms. They do not include `updater`, which checks for new 
-versions on startup. For older versions or other flavors of Linux, successful execution is not guaranteed. Please 
+versions on startup. For older versions or other flavours of Linux, successful execution is not guaranteed. Please 
 consider compiling the binaries manually.
 
 In order to enable `CUDA` backed solvers, the program shall be compiled locally with preinstalled external libraries.
@@ -24,13 +59,19 @@ See this page [Compile](Compile.md).
 
 Currently, the following package managers can be used to install the program.
 
-| Platform | Package Manager                                                 | Command                                         |
-|----------|-----------------------------------------------------------------|-------------------------------------------------|
-| Windows  | [Chocolatey](https://community.chocolatey.org/packages/suanpan) | `choco install suanpan`                         |
-| Windows  | [scoop](https://scoop.sh/)                                      | `scoop install suanpan`                         |
-| Linux    | [snap](https://snapcraft.io/suanpan)                            | `snap install suanpan`                          |
-| Ubuntu   | `apt` (not available in official repo)                          | `sudo apt install ./suanPan-x.x.x-1.x86_64.deb` |
-| Fedora   | `dnf` (not available in official repo)                          | `sudo dnf install ./suanPan-x.x.x-1.x86_64.rpm` |
+| Platform | Package Manager                                                      | Command                                            |
+| -------- | -------------------------------------------------------------------- | -------------------------------------------------- |
+| Windows  | [Chocolatey](https://community.chocolatey.org/packages/suanpan)      | `choco install suanpan`                            |
+| Windows  | [scoop](https://scoop.sh/)                                           | `scoop install suanpan`                            |
+| Linux    | [snap](https://snapcraft.io/suanpan)                                 | `snap install suanpan`                             |
+| Linux    | [flatpak](https://flathub.org/apps/details/io.github.tlcfem.suanPan) | `flatpak install flathub io.github.tlcfem.suanPan` |
+| Ubuntu   | `apt` (not available in official repo)                               | `sudo apt install ./suanPan-x.x.x-1.x86_64.deb`    |
+| Fedora   | `dnf` (not available in official repo)                               | `sudo dnf install ./suanPan-x.x.x-1.x86_64.rpm`    |
+
+The binaries are tested in standard environments: fresh new
+[Win10/11](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/) images,
+docker images [Ubuntu](https://hub.docker.com/_/ubuntu) and [Fedora](https://hub.docker.com/_/fedora),
+and [macOS](https://github.com/actions/runner-images/blob/main/images/macos/macos-11-Readme.md) GitHub image.
 
 ### Chocolatey
 
@@ -39,6 +80,22 @@ Currently, the following package managers can be used to install the program.
 ### snap
 
 [![asciicast](https://asciinema.org/a/lWRm5eV4gQtQ8rPX7NOdPZCyr.svg)](https://asciinema.org/a/lWRm5eV4gQtQ8rPX7NOdPZCyr)
+
+### flatpak
+
+To run the application, one shall use the following command in terminal.
+
+```bash
+flatpak run io.github.tlcfem.suanPan
+```
+
+Since no shim is created, it would be convenient to create alias such that
+
+```bash
+echo "alias suanpan=\"flatpak run io.github.tlcfem.suanPan\"" >> ~/.bashrc
+```
+
+Then it is possible to use `suanpan` to invoke the application.
 
 ## Execute Program
 

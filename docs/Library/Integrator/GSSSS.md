@@ -35,9 +35,9 @@ The optimal scheme (see table below) only requires one spectral radius, one can 
 optimal scheme.
 
 ```text
-integrator GSSSSOptimal (1) (2)
+integrator GSSSSOptimal (1) [2]
 # (1) int, unique integrator tag
-# (2) double, spectral radius
+# [2] double, spectral radius, default: 0.5
 ```
 
 ## Remarks
