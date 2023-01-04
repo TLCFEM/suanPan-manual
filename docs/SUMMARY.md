@@ -5,6 +5,7 @@
 ## Tutorial
 
 * [Obtain](Tutorial/Obtain.md)
+* [Config](Tutorial/Config.md)
 * [Analyze](Tutorial/Analyze.md)
 * [Syntax](Tutorial/Syntax.md)
 * [Structure](Tutorial/Structure.md)
