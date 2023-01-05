@@ -36,7 +36,7 @@ def install():
     shutil.copytree('Resource', f'{target_path}/Resource/')
     shutil.copy('../docs/favicon.ico', f'{target_path}/favicon.ico')
 
-    with open('Toolbox/argumentParser.cpp') as f:
+    with open('Toolbox/argument.cpp') as f:
         version_file = f.read()
 
     major = re.search(r'constexpr auto SUANPAN_MAJOR = (\d);', version_file).group(1)
