@@ -20,8 +20,8 @@ this site. For any potential doubts, please feel free to contact me.
 I know it is not easy to pick up a new finite element analysis tool, but it is not impossible. The logic of input file
 resembles that of ABAQUS. If you have some experience with ABAQUS, it shall be easy to create a simple model by hand.
 
-After a simple demo presented in [Analyze](Tutorial/Analyze.md), you are recommended to check
-out [Syntax](Tutorial/Syntax.md) and [Structure](Tutorial/Structure.md) to gain an overall picture of how an input file
+After a simple demo presented in [Analyze](Basic/Analyze.md), you are recommended to check
+out [Syntax](Basic/Syntax.md) and [Structure](Basic/Structure.md) to gain an overall picture of how an input file
 would look like.
 
 The `Example` section includes a number of examples with various degrees of complexity, check the ones you are familiar
@@ -55,7 +55,7 @@ To contribute, please create pull requests. Besides, if you find any typos, plea
 All third party libraries must provide a single markdown file to explain how to use the library and if possible with
 some theories.
 
-It may be convenient to build the manual locally, please check [Build](Tutorial/Build.md) for more details.
+It may be convenient to build the manual locally, please check [Build](Basic/Build.md) for more details.
 
 ## Citation
 

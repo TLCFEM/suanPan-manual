@@ -50,6 +50,7 @@ python -m pip install -e .
 ```
 
 Note `doxygen` and `git` are required to be available.
+This also installs a custom mkdocs plugin to overwrite inline math expressions to properly render them.
 
 ### Build and Run
 

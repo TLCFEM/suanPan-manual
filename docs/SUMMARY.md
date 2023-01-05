@@ -2,15 +2,16 @@
 
 * [Introduction](README.md)
 
-## Tutorial
+## Basic
 
-* [Obtain](Tutorial/Obtain.md)
-* [Config](Tutorial/Config.md)
-* [Analyze](Tutorial/Analyze.md)
-* [Syntax](Tutorial/Syntax.md)
-* [Structure](Tutorial/Structure.md)
-* [Compile](Tutorial/Compile.md)
-* [Build](Tutorial/Build.md)
+* [Obtain Application](Basic/Obtain.md)
+* [Configure Application](Basic/Config.md)
+* [Perform Analysis](Basic/Analyze.md)
+* [Model Syntax](Basic/Syntax.md)
+* [Model Structure](Basic/Structure.md)
+* [Tweak Performance](Basic/Performance.md)
+* [Compile Application](Basic/Compile.md)
+* [Build Documentation](Basic/Build.md)
 
 ## Example
 
@@ -54,7 +55,7 @@
 * Miscellaneous
     * [batch execution for automation](Example/Miscellaneous/batch-execution.md)
 
-## Collection
+## Command Collection
 
 * Define
     * [amplitude](Collection/Define/amplitude.md)
@@ -98,7 +99,7 @@
     * [sdof_response](Collection/Process/sdof_response.md)
     * [response_spectrum](Collection/Process/response_spectrum.md)
 
-## Library
+## Model Library
 
 ### Amplitude
 

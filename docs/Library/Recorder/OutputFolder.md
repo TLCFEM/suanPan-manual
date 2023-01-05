@@ -107,7 +107,7 @@ exit
 Now when it is executed, two folders are created under the current working directory. For brevity, the `np` flag is used
 to suppress the output to screen.
 
-```bash
+```text
 $ tree
 .
 └── B21.sp

@@ -20,8 +20,8 @@ material ConcreteCM (1) (2) (3) (4) (5) (6) [7] [8] [9] [10]
 
 ## Remarks
 
-1. The Chang-Mander concrete model use Tsai's equation as backbone curves for both tension and compression.
-2. Parameters `NC` and `NT` control the shapes of backbone curves. Detailed explanation is presented later.
+1. The Chang-Mander concrete model uses Tsai's equation as backbone curves for both tension and compression.
+2. Parameters `NC` and `NT` control the shapes of backbone curves. A detailed explanation is presented later.
 3. In the original model, the transition between compression and tension could sometimes have larger stiffness than
    initial stiffness. This is unlikely to be true in reality.
 4. A linear behaviour of part of hysteresis behaviour can be applied by turning on the linear transition switch. ***It

@@ -24,7 +24,7 @@ last converged time step. The trial state stores updated variables based on tria
 state may or may not be the converged state, thus may or may not be kept in an incremental setup.
 
 | value | operation                                                                  |
-| ----- | -------------------------------------------------------------------------- |
+|-------|----------------------------------------------------------------------------|
 | 0     | allocate memory, initialise variables based on parameters defined by users |
 | 1     | deallocate memory that is previously allocated in operation `*info=0`      |
 | 2     | update material state based on new trial strain only                       |
