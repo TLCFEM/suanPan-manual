@@ -44,7 +44,7 @@ Binaries on Windows, Ubuntu and macOS are compiled and deployed automatically on
 precompiled binaries are compiled on the following OS versions.
 
 | Platform | Version             |
-| -------- | ------------------- |
+|----------|---------------------|
 | Windows  | Windows Server 2022 |
 | Ubuntu   | Ubuntu 22.04        |
 | Fedora   | Fedora 35           |
@@ -60,7 +60,7 @@ See this page [Compile](Compile.md).
 Currently, the following package managers can be used to install the program.
 
 | Platform | Package Manager                                                      | Command                                            |
-| -------- | -------------------------------------------------------------------- | -------------------------------------------------- |
+|----------|----------------------------------------------------------------------|----------------------------------------------------|
 | Windows  | [Chocolatey](https://community.chocolatey.org/packages/suanpan)      | `choco install suanpan`                            |
 | Windows  | [scoop](https://scoop.sh/)                                           | `scoop install suanpan`                            |
 | Linux    | [snap](https://snapcraft.io/suanpan)                                 | `snap install suanpan`                             |
