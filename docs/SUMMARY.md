@@ -62,6 +62,7 @@
     * [bc](Collection/Define/bc.md)
     * [domain](Collection/Define/domain.md)
     * [element](Collection/Define/element.md)
+    * [expression](Collection/Define/expression.md)
     * [file](Collection/Define/file.md)
     * [generate](Collection/Define/generate.md)
     * [group](Collection/Define/group.md)
@@ -286,6 +287,7 @@
         * [NLE1D01](Library/Material/Material1D/Elastic/NLE1D01.md)
         * [Sinh1D](Library/Material/Material1D/Elastic/Sinh1D.md)
         * [Tanh1D](Library/Material/Material1D/Elastic/Tanh1D.md)
+        * [CustomElastic1D](Library/Material/Material1D/Elastic/CustomElastic1D.md)
     * Hysteresis
         * [AFC](Library/Material/Material1D/Hysteresis/AFC.md)
         * [AFCN](Library/Material/Material1D/Hysteresis/AFCN.md)
