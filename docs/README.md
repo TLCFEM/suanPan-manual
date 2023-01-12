@@ -1,8 +1,13 @@
 # Introduction
 
 This repository provides the user manual for [suanPan](https://tlcfem.github.io/suanPan/).
-If you are browsing the GitHub repository, please visit [this page](https://tlcfem.github.io/suanPan-manual/latest/)
+If you are browsing the GitHub repository,
+please visit [https://tlcfem.github.io/suanPan-manual/latest/](https://tlcfem.github.io/suanPan-manual/latest/)
 for a better presentation.
+
+The manual is also hosted on [https://tlcfem.gitbook.io/suanpan-manual/](https://tlcfem.gitbook.io/suanpan-manual/),
+which always contains the latest version of the manual.
+This serves as an alternative if the mkdocs theme is not preferred.
 
 I'm still working on this site from time to time. Hence, it is unlikely to get a complete reference by solely checking
 this site. For any potential doubts, please feel free to contact me.
