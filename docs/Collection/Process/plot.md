@@ -30,3 +30,15 @@ Available keywords and corresponding parameters are listed as follows.
    Example: `material 1`
 8. `size` controls the size of plot window. Two double values are required. Examples: `size 300 400`
 9. `save` indicates the file name. A string value with suffix of `.vtk` is required. Example: `save S11.vtk`
+
+## Remarks
+
+Invoking this command with proper parameters spawn an interactive rendering window using VTK.
+It offers a quick view of the model.
+The spawned window can be closed by pressing `q` key.
+The spawned window does not block the application so it is possible to plot multiple quantities at the same time.
+However, new analysis won't be performed until all the windows are closed.
+
+## Example
+
+![plot](https://raw.githubusercontent.com/flathub/io.github.tlcfem.suanPan/screenshot/plot.png)
