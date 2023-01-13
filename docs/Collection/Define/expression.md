@@ -14,7 +14,7 @@ But a customisable expression allows for more flexibility and it is easier to ex
 ## Syntax
 
 ```text
-expression (1) (2) (3)
+expression SimpleScalar (1) (2) (3)
 # (1) int, unique expression tag
 # (2) string, variable list
 # (3) string, expression string or name of file containing expression
@@ -44,7 +44,7 @@ $$
 Then the expression can be defined as
 
 ```text
-expression 1 x x^3+x
+expression SimpleScalar 1 x x^3+x
 ```
 
 Here, we use `x` as the free variable and the corresponding expression is `x^3+x`.
@@ -61,7 +61,7 @@ x^3+x
 Then the expression can be defined as
 
 ```text
-expression 1 x cubic.txt
+expression SimpleScalar 1 x cubic.txt
 ```
 
 For complex expressions, it is convenient to use the file format.
