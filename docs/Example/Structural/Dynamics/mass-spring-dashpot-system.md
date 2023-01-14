@@ -64,7 +64,7 @@ material Viscosity01 4 1 5
 ### Elements
 
 The springs can be modelled by using either [T2D2](../../../Library/Element/Truss/T2D2.md), which uses strain and strain
-rate as the basic quantities, or [Spring01](../../../Library/Element/Special/Spring01.md), which users displacement and
+rate as the basic quantities, or [Spring01](../../../Library/Element/Special/Spring01.md), which uses displacement and
 velocity as the basic quantities.
 
 ```text
