@@ -318,6 +318,7 @@
         * [ExpGurson1D](Library/Material/Material1D/vonMises/ExpGurson1D.md)
         * [ExpMises1D](Library/Material/Material1D/vonMises/ExpMises1D.md)
         * [Mises1D](Library/Material/Material1D/vonMises/Mises1D.md)
+        * [CustomMises1D](Library/Material/Material1D/vonMises/CustomMises1D.md)
         * [Multilinear1D](Library/Material/Material1D/vonMises/Multilinear1D.md)
         * [NonlinearGurson1D](Library/Material/Material1D/vonMises/NonlinearGurson1D.md)
         * [VAFCRP1D](Library/Material/Material1D/vonMises/VAFCRP1D.md)
