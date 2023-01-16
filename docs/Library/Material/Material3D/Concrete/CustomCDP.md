@@ -161,6 +161,6 @@ $$
 \kappa=\dfrac{1}{g}\int_0^{\varepsilon_p^*}\sigma{}d\varepsilon_p
 $$
 
-The $$\kappa$$-$$\simga$$ curve can be processed as
+The $$\kappa$$-$$\sigma$$ curve can be processed as
 
 ![kappa-stress curve](CustomCDP.EX3.svg)
