@@ -28,6 +28,9 @@ For example, `"x_1|2|x_2"` represents two variables: 1) $$x_1$$ is a vector of s
 The function value is returned as a result.
 The expression should be in the form of, for example, $$x_1^2+x_2^2$$.
 
+This form ***supports*** automatic computation of derivatives.
+Thus, it can be used in models that require automatic computation of derivatives.
+
 ### Simple Vector-valued Expression
 
 ```text
@@ -43,6 +46,9 @@ An assignment must be used to explicitly assign
 values to the output variables.
 The input arguments can be either scalars or vectors.
 The output argument should be a vector, the size shall be given such that $$y|3$$ represents a vector of size 3.
+
+This form ***does support*** automatic computation of derivatives.
+Thus, it ***cannot*** be used in models that require automatic computation of derivatives.
 
 ## Remarks
 
