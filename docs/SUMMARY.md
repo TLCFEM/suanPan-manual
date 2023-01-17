@@ -340,6 +340,7 @@
         * [CDPM2](Library/Material/Material3D/Concrete/CDPM2.md)
         * [Rebar3D](Library/Material/Material3D/Concrete/Rebar3D.md)
         * [TableCDP](Library/Material/Material3D/Concrete/TableCDP.md)
+        * [CustomCDP](Library/Material/Material3D/Concrete/CustomCDP.md)
     * Damage
         * [IsotropicDamage](Library/Material/Material3D/Damage/IsotropicDamage.md)
         * [LinearDamage](Library/Material/Material3D/Damage/LinearDamage.md)
@@ -369,6 +370,7 @@
         * [BilinearPeric](Library/Material/Material3D/vonMises/BilinearPeric.md)
         * [ExpGurson](Library/Material/Material3D/vonMises/ExpGurson.md)
         * [ExpJ2](Library/Material/Material3D/vonMises/ExpJ2.md)
+        * [CustomJ2](Library/Material/Material3D/vonMises/CustomJ2.md)
         * [MultilinearJ2](Library/Material/Material3D/vonMises/MultilinearJ2.md)
         * [NonlinearGurson](Library/Material/Material3D/vonMises/NonlinearGurson.md)
         * [NonlinearJ2](Library/Material/Material3D/vonMises/NonlinearJ2.md)
