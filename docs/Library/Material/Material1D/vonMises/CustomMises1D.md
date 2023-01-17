@@ -26,6 +26,7 @@ Both hardening functions shall be defined in terms of the equivalent plastic str
 
 The isotropic hardening function evaluates to the yield stress for trivial equivalent plastic strain.
 
+***The expressions shall be able to compute derivatives.***
 
 ## Example
 

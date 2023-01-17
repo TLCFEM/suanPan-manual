@@ -347,6 +347,7 @@
     * DruckerPrager
         * [BilinearDP](Library/Material/Material3D/DruckerPrager/BilinearDP.md)
         * [ExpDP](Library/Material/Material3D/DruckerPrager/ExpDP.md)
+        * [CustomDP](Library/Material/Material3D/DruckerPrager/CustomDP.md)
         * [NonlinearDruckerPrager](Library/Material/Material3D/DruckerPrager/NonlinearDruckerPrager.md)
     * Elastic
         * [BlatzKo](Library/Material/Material3D/Elastic/BlatzKo.md)
@@ -359,6 +360,7 @@
     * Hoffman
         * [BilinearHoffman](Library/Material/Material3D/Hoffman/BilinearHoffman.md)
         * [ExpHoffman](Library/Material/Material3D/Hoffman/ExpHoffman.md)
+        * [CustomHoffman](Library/Material/Material3D/Hoffman/CustomHoffman.md)
         * [NonlinearHill](Library/Material/Material3D/Hoffman/NonlinearHill.md)
         * [NonlinearHoffman](Library/Material/Material3D/Hoffman/NonlinearHoffman.md)
     * Sand

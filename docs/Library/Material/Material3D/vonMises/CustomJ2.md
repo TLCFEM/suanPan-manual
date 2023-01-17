@@ -27,3 +27,5 @@ The isotropic hardening function evaluates to the yield stress for trivial equiv
 The kinematic hardening function evaluates to zero for trivial equivalent plastic strain.
 
 The usage is similar to that of [`CustomMises1D`](../../Material1D/vonMises/CustomMises1D.md).
+
+***The expressions shall be able to compute derivatives.***
