@@ -51,7 +51,7 @@ with [`T2D2`](../../../Library/Element/Truss/T2D2.md). Alternatively, the truss 
 basic shapes, see the [`T2D2S`](../../../Library/Element/Truss/T2D2S.md) element for details.
 
 You may have noticed that the material model used is not defined. Do not worry, for model definitions, the order is not
-important, see [Structure](../../../Tutorial/Structure.md) for explanation.
+important, see [Structure](../../../Basic/Structure.md) for explanation.
 
 ### Load and BC
 

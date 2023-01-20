@@ -1,7 +1,7 @@
 # Analyze
 
 This page aims to show an overview of how a model looks like by establishing a simple model, which is a simple elastic
-cantilever beam subjected to end load.
+cantilever beam subjected to an end load.
 
 A native CPP parser is used by `suanPan`. The default syntax resembles the one of `OpenSees`. Model files are written in
 plain text. Although there is no restriction, the suffix `.supan` is reserved by default.

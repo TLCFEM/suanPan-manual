@@ -3,7 +3,7 @@
 ## Enable/Disable/Remove Objects
 
 In `suanPan`, defining some objects does not necessarily mean those will be considered in analysis. Instead, each object
-has an `active' flag, only active objects will be considered. Thus, it is possible to define a set of candidate
+has an 'active' flag, only active objects will be considered. Thus, it is possible to define a set of candidate
 objects (for example, a number of loads), and test different cases with different objects.
 
 Furthermore, it is possible to remove some wrongly defined objects before performing the analysis.
@@ -17,7 +17,7 @@ remove (1) [2...]
 ```
 
 For object types, possible values are: `domain`, `step`, `converger`, `constraint`, `load`, `element`, `node`
-, `recorder`, `modifier`.
+, `recorder`, `modifier`, `expression`.
 
 ## Enable/Disable Print Output
 

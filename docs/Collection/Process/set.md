@@ -149,13 +149,10 @@ Some empirical guidance can be concluded as follows.
 2. The best performance is obtained by using symmetric banded storage, if the (effective) stiffness matrix is guaranteed
    to be positive definite, users shall use it as a priority.
 3. The mixed precision algorithm often gives the most significant performance boost for full storage with `CUDA` solver.
-   But mixed precision algorithm does not show advantages in FEM in general.
+   It outperforms the full precision algorithm when the size of system exceeds several thousands.
 4. The `SPIKE` solver is slightly slower than the conventional `LAPACK` implementations.
 5. The `SuperLU` solver is slower than the `MUMPS` solver. The multithreaded `SuperLU` performs LU factorization in
-   parallel but forward/back substitution in sequence. For large scale problems, personally I prefer `MUMPS`
-   and `PARDISO` solvers. The `SuperLU` solver also does not handle memory leak internally. `SuperLU` and `PARDISO` may
-   impose additional requirements to the sparse matrices that zero diagonal entries need to be explicitly defined and
-   stored. This is not implemented in the sparse matrix storage.
+   parallel but forward/back substitution in sequence.
 6. The `PARDISO` direct solver and `FGMRES` iterative solver are provided by `MKL`.
 7. The `MUMPS` solver supports both symmetric and asymmetric algorithms. One can use `set symm_mat true`
    or `set symm_mat false`.

@@ -2,14 +2,16 @@
 
 * [Introduction](README.md)
 
-## Tutorial
+## Basic
 
-* [Obtain](Tutorial/Obtain.md)
-* [Analyze](Tutorial/Analyze.md)
-* [Syntax](Tutorial/Syntax.md)
-* [Structure](Tutorial/Structure.md)
-* [Compile](Tutorial/Compile.md)
-* [Build](Tutorial/Build.md)
+* [Obtain Application](Basic/Obtain.md)
+* [Configure Application](Basic/Config.md)
+* [Perform Analysis](Basic/Analyze.md)
+* [Model Syntax](Basic/Syntax.md)
+* [Model Structure](Basic/Structure.md)
+* [Tweak Performance](Basic/Performance.md)
+* [Compile Application](Basic/Compile.md)
+* [Build Documentation](Basic/Build.md)
 
 ## Example
 
@@ -53,13 +55,14 @@
 * Miscellaneous
     * [batch execution for automation](Example/Miscellaneous/batch-execution.md)
 
-## Collection
+## Command Collection
 
 * Define
     * [amplitude](Collection/Define/amplitude.md)
     * [bc](Collection/Define/bc.md)
     * [domain](Collection/Define/domain.md)
     * [element](Collection/Define/element.md)
+    * [expression](Collection/Define/expression.md)
     * [file](Collection/Define/file.md)
     * [generate](Collection/Define/generate.md)
     * [group](Collection/Define/group.md)
@@ -97,7 +100,7 @@
     * [sdof_response](Collection/Process/sdof_response.md)
     * [response_spectrum](Collection/Process/response_spectrum.md)
 
-## Library
+## Model Library
 
 ### Amplitude
 
@@ -284,6 +287,7 @@
         * [NLE1D01](Library/Material/Material1D/Elastic/NLE1D01.md)
         * [Sinh1D](Library/Material/Material1D/Elastic/Sinh1D.md)
         * [Tanh1D](Library/Material/Material1D/Elastic/Tanh1D.md)
+        * [CustomElastic1D](Library/Material/Material1D/Elastic/CustomElastic1D.md)
     * Hysteresis
         * [AFC](Library/Material/Material1D/Hysteresis/AFC.md)
         * [AFCN](Library/Material/Material1D/Hysteresis/AFCN.md)
@@ -314,6 +318,7 @@
         * [ExpGurson1D](Library/Material/Material1D/vonMises/ExpGurson1D.md)
         * [ExpMises1D](Library/Material/Material1D/vonMises/ExpMises1D.md)
         * [Mises1D](Library/Material/Material1D/vonMises/Mises1D.md)
+        * [CustomMises1D](Library/Material/Material1D/vonMises/CustomMises1D.md)
         * [Multilinear1D](Library/Material/Material1D/vonMises/Multilinear1D.md)
         * [NonlinearGurson1D](Library/Material/Material1D/vonMises/NonlinearGurson1D.md)
         * [VAFCRP1D](Library/Material/Material1D/vonMises/VAFCRP1D.md)
@@ -335,12 +340,14 @@
         * [CDPM2](Library/Material/Material3D/Concrete/CDPM2.md)
         * [Rebar3D](Library/Material/Material3D/Concrete/Rebar3D.md)
         * [TableCDP](Library/Material/Material3D/Concrete/TableCDP.md)
+        * [CustomCDP](Library/Material/Material3D/Concrete/CustomCDP.md)
     * Damage
         * [IsotropicDamage](Library/Material/Material3D/Damage/IsotropicDamage.md)
         * [LinearDamage](Library/Material/Material3D/Damage/LinearDamage.md)
     * DruckerPrager
         * [BilinearDP](Library/Material/Material3D/DruckerPrager/BilinearDP.md)
         * [ExpDP](Library/Material/Material3D/DruckerPrager/ExpDP.md)
+        * [CustomDP](Library/Material/Material3D/DruckerPrager/CustomDP.md)
         * [NonlinearDruckerPrager](Library/Material/Material3D/DruckerPrager/NonlinearDruckerPrager.md)
     * Elastic
         * [BlatzKo](Library/Material/Material3D/Elastic/BlatzKo.md)
@@ -353,6 +360,7 @@
     * Hoffman
         * [BilinearHoffman](Library/Material/Material3D/Hoffman/BilinearHoffman.md)
         * [ExpHoffman](Library/Material/Material3D/Hoffman/ExpHoffman.md)
+        * [CustomHoffman](Library/Material/Material3D/Hoffman/CustomHoffman.md)
         * [NonlinearHill](Library/Material/Material3D/Hoffman/NonlinearHill.md)
         * [NonlinearHoffman](Library/Material/Material3D/Hoffman/NonlinearHoffman.md)
     * Sand
@@ -364,6 +372,7 @@
         * [BilinearPeric](Library/Material/Material3D/vonMises/BilinearPeric.md)
         * [ExpGurson](Library/Material/Material3D/vonMises/ExpGurson.md)
         * [ExpJ2](Library/Material/Material3D/vonMises/ExpJ2.md)
+        * [CustomJ2](Library/Material/Material3D/vonMises/CustomJ2.md)
         * [MultilinearJ2](Library/Material/Material3D/vonMises/MultilinearJ2.md)
         * [NonlinearGurson](Library/Material/Material3D/vonMises/NonlinearGurson.md)
         * [NonlinearJ2](Library/Material/Material3D/vonMises/NonlinearJ2.md)

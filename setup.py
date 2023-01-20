@@ -18,15 +18,6 @@ def install():
 
     doxygen_bin = 'doxygen'
 
-    # if platform.system() == 'Linux':
-    #     doxygen_tar = 'doxygen-1.9.4.linux.bin.tar.gz'
-    #     url = f'https://www.doxygen.nl/files/{doxygen_tar}'
-    #     with urllib.request.urlopen(url) as response, open(doxygen_tar, 'wb') as archive:
-    #         shutil.copyfileobj(response, archive)
-    #     shutil.unpack_archive(doxygen_tar, 'doxygen')
-    #     os.remove(doxygen_tar)
-    #     doxygen_bin = '../doxygen/doxygen-1.9.4/bin/doxygen'
-
     archive_name = 'suanPan-dev'
 
     url = 'https://github.com/TLCFEM/suanPan/archive/refs/heads/dev.zip'
@@ -45,7 +36,7 @@ def install():
     shutil.copytree('Resource', f'{target_path}/Resource/')
     shutil.copy('../docs/favicon.ico', f'{target_path}/favicon.ico')
 
-    with open('Toolbox/argumentParser.cpp') as f:
+    with open('Toolbox/argument.cpp') as f:
         version_file = f.read()
 
     major = re.search(r'constexpr auto SUANPAN_MAJOR = (\d);', version_file).group(1)
@@ -66,7 +57,13 @@ def install():
         description='suanPan-manual',
         author='Theodore Chang',
         author_email='tlcfem@gmail.com',
-        install_requires=required)
+        install_requires=required,
+        entry_points={
+            'mkdocs.plugins': [
+                'overwrite_math = overwrite.overwrite:OverwriteMath',
+            ]
+        }
+    )
 
 
 if __name__ == '__main__':

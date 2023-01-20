@@ -184,8 +184,6 @@ We have gained some confidence in the reliability of the result. The `response_s
 spectrum.
 
 ```text
-
-```text
 # spectrum.sp
 
 response_spectrum EZ period 0.02

@@ -26,7 +26,7 @@ material AFCN (1) (2) (3) (4) (5) (6) (7) (8) [9] [10]
 ## History Variable Layout
 
 | location             | value          |
-| -------------------- | -------------- |
+|----------------------|----------------|
 | `initial_history(0)` | load_sign      |
 | `initial_history(1)` | max_strain     |
 | `initial_history(2)` | reverse_strain |
