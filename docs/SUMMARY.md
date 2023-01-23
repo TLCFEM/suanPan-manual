@@ -308,6 +308,8 @@
         * [Kelvin](Library/Material/Material1D/Viscosity/Kelvin.md)
         * [Maxwell](Library/Material/Material1D/Viscosity/Maxwell.md)
         * [NonlinearViscosity](Library/Material/Material1D/Viscosity/NonlinearViscosity.md)
+        * [BilinearViscosity](Library/Material/Material1D/Viscosity/BilinearViscosity.md)
+        * [CustomViscosity](Library/Material/Material1D/Viscosity/CustomViscosity.md)
         * [Viscosity01](Library/Material/Material1D/Viscosity/Viscosity01.md)
         * [Viscosity02](Library/Material/Material1D/Viscosity/Viscosity02.md)
         * [CoulombFriction](Library/Material/Material1D/Viscosity/CoulombFriction.md)
