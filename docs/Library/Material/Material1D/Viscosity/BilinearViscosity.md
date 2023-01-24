@@ -3,6 +3,7 @@
 Viscous Material Using Bilinear Model
 
 Reference:
+
 1. [10.1016/j.soildyn.2018.06.021](https://doi.org/10.1016/j.soildyn.2018.06.021)
 
 ## Syntax
