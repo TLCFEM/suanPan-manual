@@ -17,8 +17,8 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: wget -q https://github.com/TLCFEM/suanPan/releases/download/suanPan-v2.8/suanPan-2.8.0-1.x86_64.deb
-      - run: sudo apt-get install ./suanPan-2.8.0-1.x86_64.deb
+#      - run: wget -q https://github.com/TLCFEM/suanPan/releases/download/suanPan-v2.8/suanPan-2.8.0-1.x86_64.deb
+#      - run: sudo apt-get install ./suanPan-2.8.0-1.x86_64.deb
       - run: sudo apt-get install doxygen
       - run: git fetch origin
       - run: pip install -e .
