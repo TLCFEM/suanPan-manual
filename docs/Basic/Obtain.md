@@ -47,7 +47,7 @@ precompiled binaries are compiled on the following OS versions.
 |----------|---------------------|
 | Windows  | Windows Server 2022 |
 | Ubuntu   | Ubuntu 22.04        |
-| Fedora   | Fedora 35           |
+| Fedora   | Fedora 36           |
 | macOS    | Big Sur 11          |
 
 The `.deb` and `.rpm` packages are tested on the same platforms. They do not include `updater`, which checks for new 
@@ -110,7 +110,7 @@ The name of the executable is `suanPan`, however, snap/chocolatey/scoop will cre
 The parallelization is enabled mostly by the `TBB` library and `<execution>` header (C++17). If the program is compiled
 with **SUANPAN_MT** macro, parallelization is used by default. The **OpenMP** is enabled in several parts of the
 program, users can set environment variable **OMP_NUM_THREADS** to customize some **OpenMP** based parallelization. To
-do so, users can, for example in Windows, use the following command.
+do so, users can, for example, in Windows, use the following command.
 
 ```powershell
 set OMP_NUM_THREADS=6
@@ -121,7 +121,7 @@ found. If the application is installed via snap/apt/dnf, it is automatically don
 
 ```bash
 # current path contains suanPan
-export LD_LIBRARY_PATH:$LD_LIBRARY_PATH:$(pwd)/../LIB
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/../lib
 ./suanPan
 ```
 
@@ -319,6 +319,12 @@ as `suanPan.sublime-build`. You may need to replace command `suanpan` with the f
 ```
 
 Now models can be run in Sublime Text via the shortcut `Ctrl+B`.
+
+To disable colored output, use `-nc` option such as
+
+```bash
+suanpan -nc -f model_file.supan
+```
 
 ## Automation
 
