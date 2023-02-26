@@ -17,12 +17,10 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-#      - run: wget -q https://github.com/TLCFEM/suanPan/releases/download/suanPan-v2.8/suanPan-2.8.0-1.x86_64.deb
-#      - run: sudo apt-get install ./suanPan-2.8.0-1.x86_64.deb
       - run: sudo apt-get install doxygen graphviz
       - run: git fetch origin
       - run: pip install -e .
       - run: git config --global user.name "Theodore Chang"
       - run: git config --global user.email "tlcfem@gmail.com"
-      - run: mike deploy 2.9
+      - run: mike deploy 3.0
       - run: git push origin gh-pages
