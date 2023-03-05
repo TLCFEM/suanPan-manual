@@ -2,7 +2,9 @@
 
 The `generate` command is used to generate node/element groups according to predefined rules.
 
-## form one: generate based on fixed interval
+For custom rules, please refer to [`CustomNodeGroup`](../../Library/Group/CustomNodeGroup.md).
+
+## form one: generate based on a fixed interval
 
 ```
 # to hold one node/element only
@@ -29,7 +31,7 @@ generate elementgroup (1) (2) (3) (4)
 
 It shall be noted that the starting tag does not have to be smaller than the ending tag.
 
-## form two: generate node group based on polynomial
+## form two: generate a node group based on polynomial
 
 ```
 generatebyrule nodegroup (1) (2) [(3)...]
@@ -52,7 +54,7 @@ For example, if one wants to select all nodes on the line $$y=200$$, then the fo
 generatebyrule nodegroup 1 2 1. -200.
 ```
 
-## form three: generate node group based on the line segment
+## form three: generate a node group based on the line segment
 
 It is sometimes useful to select all nodes lie in a straight line segment. The following command can be used.
 
@@ -69,7 +71,7 @@ select all points lie on the line segment between points $$(3,~4)$$ and $$(8,~7)
 generatebypoint nodegroup 1 3. 4. 8. 7.
 ```
 
-## form four: generate node group based on plane
+## form four: generate a node group based on plane
 
 ```
 generatebyplane nodegroup (1) [(2)...]
