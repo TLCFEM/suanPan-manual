@@ -243,11 +243,16 @@
     * [Spring01](Library/Element/Special/Spring01.md)
     * [Spring02](Library/Element/Special/Spring02.md)
     * [Tie](Library/Element/Special/Tie.md)
+    * [TranslationConnector](Library/Element/Special/TranslationConnector.md)
 * Truss
     * [T2D2](Library/Element/Truss/T2D2.md)
     * [T2D2S](Library/Element/Truss/T2D2S.md)
     * [T3D2](Library/Element/Truss/T3D2.md)
     * [T3D2S](Library/Element/Truss/T3D2S.md)
+
+### Group
+
+* [CustomNodeGroup](Library/Group/CustomNodeGroup.md)
 
 ### Integrator
 
