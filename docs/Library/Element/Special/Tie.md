@@ -33,3 +33,8 @@ element Tie 1 9. 1E8 2 1 5. 4 2 6.
 ```
 
 In the above command, a large number `1E8` is used as penalty.
+
+The `Tie` element does not care about the geometric implication.
+The tied DoFs can be of different types.
+
+To tie a node to a line, consider the [`TranslationConnector`](TranslationConnector.md) element.
