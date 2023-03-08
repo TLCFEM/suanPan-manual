@@ -22,5 +22,6 @@ jobs:
       - run: pip install -e .
       - run: git config --global user.name "Theodore Chang"
       - run: git config --global user.email "tlcfem@gmail.com"
+      - run: git pull
       - run: mike deploy 3.0
       - run: git push origin gh-pages
