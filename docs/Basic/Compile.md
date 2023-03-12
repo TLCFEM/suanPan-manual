@@ -80,7 +80,7 @@ To compile `Release` version, please
 
    For versions other than 9.2, names of the linked libraries shall be manually changed as they contain version numbers.
    Thus, it is not a good idea to switch to a different version. Precompiled VTK library is also available in
-   this [repository](https://github.com/TLCFEM/prebuilds)
+   this [repository](https://github.com/TLCFEM/prebuilds).
 
 Alternatively, `CMake` can be used to generate solution files if some external packages are not available.
 
