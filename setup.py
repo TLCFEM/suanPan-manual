@@ -16,8 +16,6 @@ def install():
     # root directory
     remove('docs/Doxygen')
 
-    doxygen_bin = 'doxygen'
-
     archive_name = 'suanPan-dev'
 
     url = 'https://github.com/TLCFEM/suanPan/archive/refs/heads/dev.zip'
@@ -29,12 +27,14 @@ def install():
 
     os.chdir(archive_name)
 
-    os.system(doxygen_bin)
+    doxygen_bin = 'doxygen'
+    if shutil.which(doxygen_bin) is not None:
+        os.system(doxygen_bin)
 
-    target_path = '../docs/Doxygen'
-    shutil.copytree('Document/html', target_path)
-    shutil.copytree('Resource', f'{target_path}/Resource/')
-    shutil.copy('../docs/favicon.ico', f'{target_path}/favicon.ico')
+        target_path = '../docs/Doxygen'
+        shutil.copytree('Document/html', target_path)
+        shutil.copytree('Resource', f'{target_path}/Resource/')
+        shutil.copy('../docs/favicon.ico', f'{target_path}/favicon.ico')
 
     with open('Toolbox/argument.cpp') as f:
         version_file = f.read()
@@ -46,7 +46,6 @@ def install():
     os.chdir('..')
 
     remove(archive_name)
-    remove('doxygen')
 
     with open('requirements.txt') as f:
         required = f.read().splitlines()

@@ -268,6 +268,7 @@
         * [Newmark](Library/Integrator/Newmark/Newmark.md)
         * [RayleighNewmark](Library/Integrator/Newmark/RayleighNewmark.md)
         * [WilsonPenzienNewmark](Library/Integrator/Newmark/WilsonPenzienNewmark.md)
+        * [NonviscousNewmark](Library/Integrator/Newmark/NonviscousNewmark.md)
 * Explicit
     * [Tchamwa](Library/Integrator/Tchamwa.md)
     * [BatheExplicit](Library/Integrator/BatheExplicit.md)
@@ -319,6 +320,7 @@
         * [Viscosity01](Library/Material/Material1D/Viscosity/Viscosity01.md)
         * [Viscosity02](Library/Material/Material1D/Viscosity/Viscosity02.md)
         * [CoulombFriction](Library/Material/Material1D/Viscosity/CoulombFriction.md)
+        * [Nonviscous01](Library/Material/Material1D/Viscosity/Nonviscous01.md)
     * vonMises
         * [ArmstrongFrederick1D](Library/Material/Material1D/vonMises/ArmstrongFrederick1D.md)
         * [Bilinear1D](Library/Material/Material1D/vonMises/Bilinear1D.md)

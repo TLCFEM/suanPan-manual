@@ -1,13 +1,13 @@
 # Damper01/Damper03
 
-Viscous Damper
+Viscous/Nonviscous Damper
 
-This damper uses **displacement** and **velocity** as inputs, not strain and strain rate, which means, element length is
+This damper uses **displacement** and **velocity** as inputs, not strain and strain rate, which means element length is
 not used to compute strain or strain rate.
 
 ## Damper01
 
-This `Damper01` is a simple 2D viscous damper.
+This `Damper01` is a simple 2D viscous/nonviscous damper.
 
 See this [example](../../../Example/Structural/Dynamics/dynamic-analysis-of-a-portal-frame.md).
 
@@ -16,7 +16,7 @@ See this [example](../../../Example/Structural/Dynamics/dynamic-analysis-of-a-po
 
 ## Damper03
 
-This `Damper03` is a simple 3D viscous damper.
+This `Damper03` is a simple 3D viscous/nonviscous damper.
 
 * Number of Nodes: 2
 * Number of DoFs: 3 (Translation: UX, Translation: UY, Translation: UZ)
@@ -29,5 +29,9 @@ element Damper03 (1) (2) (3) (4)
 # (1) int, unique tag
 # (2) int, node i
 # (3) int, node j
-# (4) int, material tag of associated viscosity material
+# (4) int, material tag of associated (non)viscosity material
 ```
+
+## Remarks
+
+Both viscous and nonviscous material can be used for this element, see [Viscosity](../../Material/Material1D/Viscosity).
