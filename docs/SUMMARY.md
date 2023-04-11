@@ -289,6 +289,7 @@
     * Elastic
         * [BilinearElastic1D](Library/Material/Material1D/Elastic/BilinearElastic1D.md)
         * [Elastic1D](Library/Material/Material1D/Elastic/Elastic1D.md)
+        * [AsymmElastic1D](Library/Material/Material1D/Elastic/AsymmElastic1D.md)
         * [MultilinearElastic1D](Library/Material/Material1D/Elastic/MultilinearElastic1D.md)
         * [PolyElastic1D](Library/Material/Material1D/Elastic/PolyElastic1D.md)
         * [NLE1D01](Library/Material/Material1D/Elastic/NLE1D01.md)
