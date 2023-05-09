@@ -7,7 +7,7 @@ compiled with `-DUSE_EXTERNAL_CUDA=ON` and `-DUSE_MAGMA=ON` options.
 ## Compiling MAGMA
 
 Please check MAGMA documentation for the compilation instructions. On Windows, the following options are used, tailored
-for the my specific platform only:
+for my specific platform only:
 
 ```json
 {
@@ -26,7 +26,7 @@ for the my specific platform only:
 }
 ```
 
-## Compiling suanPan
+## Compiling `suanPan`
 
 Once MAGMA is compiled, the application should be compiled with `-DUSE_EXTERNAL_CUDA=ON` and `-DUSE_MAGMA=ON` options.
 An additional path shall be set to the MAGMA installation directory.
@@ -82,3 +82,5 @@ The following key-value options are available to customise the solver:
 | `--ppattern`  | positive integer                                                                            |
 | `--psweeps`   | positive integer                                                                            |
 | `--plevels`   | positive integer                                                                            |
+
+One shall note that depending on the different systems, not all iterative solvers are stable and applicable.

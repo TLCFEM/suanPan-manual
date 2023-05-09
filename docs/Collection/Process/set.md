@@ -6,11 +6,9 @@ The `set` command is used to set some properties of the analysis.
 
 In a general non-linear context, each substep requires at least two system solving, one for initial guess, one for
 convergence test.
-There is no general way to detect linear system automatically, with which we know the initial guess leads to convergence
-so that
-the further system solving is not necessary. To speed up simulation, one can use the following command to indicate the
-system is
-linear.
+There is no general way to detect a linear system automatically,
+with which we know the initial guess leads to convergence so that further system solving is not necessary.
+To speed up simulation, one can use the following command to indicate the system is linear.
 
 ```
 set linear_system true
