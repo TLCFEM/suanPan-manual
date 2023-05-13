@@ -243,11 +243,16 @@
     * [Spring01](Library/Element/Special/Spring01.md)
     * [Spring02](Library/Element/Special/Spring02.md)
     * [Tie](Library/Element/Special/Tie.md)
+    * [TranslationConnector](Library/Element/Special/TranslationConnector.md)
 * Truss
     * [T2D2](Library/Element/Truss/T2D2.md)
     * [T2D2S](Library/Element/Truss/T2D2S.md)
     * [T3D2](Library/Element/Truss/T3D2.md)
     * [T3D2S](Library/Element/Truss/T3D2S.md)
+
+### Group
+
+* [CustomNodeGroup](Library/Group/CustomNodeGroup.md)
 
 ### Integrator
 
@@ -263,6 +268,7 @@
         * [Newmark](Library/Integrator/Newmark/Newmark.md)
         * [RayleighNewmark](Library/Integrator/Newmark/RayleighNewmark.md)
         * [WilsonPenzienNewmark](Library/Integrator/Newmark/WilsonPenzienNewmark.md)
+        * [NonviscousNewmark](Library/Integrator/Newmark/NonviscousNewmark.md)
 * Explicit
     * [Tchamwa](Library/Integrator/Tchamwa.md)
     * [BatheExplicit](Library/Integrator/BatheExplicit.md)
@@ -283,6 +289,7 @@
     * Elastic
         * [BilinearElastic1D](Library/Material/Material1D/Elastic/BilinearElastic1D.md)
         * [Elastic1D](Library/Material/Material1D/Elastic/Elastic1D.md)
+        * [AsymmElastic1D](Library/Material/Material1D/Elastic/AsymmElastic1D.md)
         * [MultilinearElastic1D](Library/Material/Material1D/Elastic/MultilinearElastic1D.md)
         * [PolyElastic1D](Library/Material/Material1D/Elastic/PolyElastic1D.md)
         * [NLE1D01](Library/Material/Material1D/Elastic/NLE1D01.md)
@@ -314,6 +321,7 @@
         * [Viscosity01](Library/Material/Material1D/Viscosity/Viscosity01.md)
         * [Viscosity02](Library/Material/Material1D/Viscosity/Viscosity02.md)
         * [CoulombFriction](Library/Material/Material1D/Viscosity/CoulombFriction.md)
+        * [Nonviscous01](Library/Material/Material1D/Viscosity/Nonviscous01.md)
     * vonMises
         * [ArmstrongFrederick1D](Library/Material/Material1D/vonMises/ArmstrongFrederick1D.md)
         * [Bilinear1D](Library/Material/Material1D/vonMises/Bilinear1D.md)

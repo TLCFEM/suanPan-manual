@@ -19,8 +19,9 @@ A square solid of size $$3200\times3200$$ is used. The structured mesh can be ge
 available. It is not difficult to generate an array of squares using scripting languages such as Python or Matlab.
 Here, [Gmsh](https://gmsh.info/) is used.
 
-The left and right boundary are constrained along the horizontal direction. The bottom boundary is constrained along the
-vertical direction. An initial velocity is assigned to the node at the centre of the top boundary.
+The left boundary is constrained along the horizontal direction. The bottom boundary is constrained along the vertical
+direction. The top and right boundaries are free. An initial velocity is assigned to the node at the centre of the top
+boundary.
 
 ### Material
 
@@ -46,15 +47,13 @@ The boundaries can be extracted by [generating](../../Collection/Define/generate
 
 ```text
 generatebyrule nodegroup 1 1 1. 0. # left
-generatebyrule nodegroup 2 1 1. 3200. # right
-generatebyrule nodegroup 3 2 1. 0. # bottom
+generatebyrule nodegroup 2 2 1. 0. # bottom
 ```
 
 Then BCs can be applied via [`groupmultiplierbc`](../../Collection/Define/bc.md).
 
 ```text
 groupmultiplierbc 1 1 1 2
-groupmultiplierbc 2 2 3
 ```
 
 The initial condition can be applied using [`initial`](../../Collection/Define/initial.md) command.

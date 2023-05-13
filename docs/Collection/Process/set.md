@@ -4,10 +4,11 @@ The `set` command is used to set some properties of the analysis.
 
 ## Linear Elastic Simplification
 
-In a general non-linear context, each substep requires at least two system solving, one for initial guess, one for convergence test.
-There is no general way to detect linear system automatically, with which we know the initial guess leads to convergence so that
-the further system solving is not necessary. To speed up simulation, one can use the following command to indicate the system is
-linear.
+In a general non-linear context, each substep requires at least two system solving, one for initial guess, one for
+convergence test.
+There is no general way to detect a linear system automatically,
+with which we know the initial guess leads to convergence so that further system solving is not necessary.
+To speed up simulation, one can use the following command to indicate the system is linear.
 
 ```
 set linear_system true
@@ -113,7 +114,7 @@ set tolerance (1)
 # (1) double, tolerance of the iterative solver
 ```
 
-Typically, each refinement reduces the error by a factor of $$10^{-7}$$. Thus two or three refinements should be 
+Typically, each refinement reduces the error by a factor of $$10^{-7}$$. Thus two or three refinements should be
 sufficient to achieve the working precision.
 
 Thus, the following command set makes sense.
@@ -161,7 +162,7 @@ Some empirical guidance can be concluded as follows.
 
 [available from v2.5]
 
-It is possible to use iterative solvers to solve the linear system of equations. Currently, two solvers are available 
+It is possible to use iterative solvers to solve the linear system of equations. Currently, two solvers are available
 by using the following command.
 
 ```text
@@ -169,11 +170,17 @@ set system_solver BiCGSTAB
 set system_solver GMRES
 ```
 
-As the iterative solvers are relatively independent of the matrix storage scheme, thus, all different storage 
-schemes can be used along with different iterative solvers. One should beware that different storage schemes may 
+As the iterative solvers are relatively independent of the matrix storage scheme, thus, all different storage
+schemes can be used along with different iterative solvers. One should beware that different storage schemes may
 affect the performance of iterative solvers as they largely depend on matrix--vector multiplication.
 
 Mixed precision solving is not supported by the iterative solvers.
+
+[available from v3.0]
+
+It is also possible to use GPU-based iterative solver powered by the [MAGMA](https://icl.utk.edu/magma/) library. The
+binaries shipped officially are not compiled with GPU support. Users can compile the library with GPU support by
+themselves. See [here](magma.md) for more details.
 
 #### Preconditioner
 
@@ -187,14 +194,15 @@ set preconditioner ILU
 
 The `None` preconditioner uses identify matrix as the preconditioner.
 
-The `Jacobi` preconditioner uses the diagonal of the matrix as the preconditioner. This is the default one but may 
+The `Jacobi` preconditioner uses the diagonal of the matrix as the preconditioner. This is the default one but may
 not perform well for certain problems.
 
-The `ILU` preconditioner uses the incomplete LU factorization of the matrix as the preconditioner. This `ILU` preconditioner
+The `ILU` preconditioner uses the incomplete LU factorization of the matrix as the preconditioner. This `ILU`
+preconditioner
 is provided by the `SuperLU` library.
 
-If the iterative solver is used, then it is possible to set the tolerance of the iterative solver. In this case, 
-tolerance assigned will not be used by mixed precision algorithm as it is not activated due to an iterative solver 
+If the iterative solver is used, then it is possible to set the tolerance of the iterative solver. In this case,
+tolerance assigned will not be used by mixed precision algorithm as it is not activated due to an iterative solver
 is defined.
 
 ```text
@@ -219,7 +227,7 @@ set color_model none
 ```
 
 As a NP hard problem, there is no optimal algorithm to find the minimum chromatic number. The Welsh-Powell algorithm is
-implemented in `suanPan`. The maximum independent set algorithm is also available, it may outperform the 
+implemented in `suanPan`. The maximum independent set algorithm is also available, it may outperform the
 Welsh-Powell algorithm on large models. To switch, users can use the following command.
 
 ```
