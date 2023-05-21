@@ -90,6 +90,7 @@
     * [exit](Collection/Process/exit.md)
     * [materialtest](Collection/Process/materialtest.md)
     * [materialtestbyload](Collection/Process/materialtestbyload.md)
+    * [sectiontest](Collection/Process/sectiontest.md)
     * [peek](Collection/Process/peek.md)
     * [plot](Collection/Process/plot.md)
     * [protect](Collection/Process/protect.md)
