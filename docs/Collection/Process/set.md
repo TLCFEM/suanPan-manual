@@ -210,6 +210,9 @@ set tolerance (1)
 # (1) double, tolerance of the iterative solver
 ```
 
+Alternatively, there is a dedicated matrix storage which employs the [`Lis`](https://www.ssisc.org/lis/) library.
+See [here](lis.md) for more details.
+
 ## Parallel Matrix Assembling
 
 For dense matrix storage schemes, the global matrix is stored in a consecutive chunk of memory. Assembling global matrix
