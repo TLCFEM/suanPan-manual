@@ -5,6 +5,10 @@
 * Number of Nodes: 2
 * Number of DoFs: 3 (Translation, Translation, Rotation)
 
+## Reference
+
+1. [10.1061/JSENDH/STENG-12176](http://dx.doi.org/10.1061/JSENDH/STENG-12176)
+
 ## Syntax
 
 ```

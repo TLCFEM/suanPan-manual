@@ -4,8 +4,7 @@ $$N$$-$$M$$ Interaction Inelastic Section
 
 ## Reference
 
-1. [10.1007/978-94-007-6573-3_3](http://dx.doi.org/10.1007/978-94-007-6573-3_3)
-2. [10.1002/nme.1620371506](https://doi.org/10.1002/nme.1620371506)
+1. [10.1061/JSENDH/STENG-12176](http://dx.doi.org/10.1061/JSENDH/STENG-12176)
 
 ## Syntax
 
