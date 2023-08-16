@@ -2,6 +2,8 @@
 
 Parallel Wrapper For 3D Material Models
 
+Combines multiple 3D material models into a single one.
+
 ## Syntax
 
 ```
