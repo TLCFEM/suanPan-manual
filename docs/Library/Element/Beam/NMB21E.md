@@ -31,6 +31,8 @@ The `NMB21EL` element releases the moment at low node `i` and the `NMB21EH` elem
 
 A non-iterative algorithm is used.
 
+See [SectionNM](../../Section/SectionNM/SectionNM.md) for more information about the section.
+
 ## Output Type
 
 The `NMB21E` element additional support recording element deformation and resistance via the `BEAME` and `BEAMS` tokens.
@@ -43,3 +45,5 @@ hdf5recorder (1) Element BEAMS (2...)
 # (1) int, unique recorder tag
 # (2...) int, tags of elements to record
 ```
+
+Those are local deformation and resistance (with respect to the local coordinate system) of the element.
