@@ -19,6 +19,9 @@ CDPM2 model for concrete model.
 7. If damage is activated, both tension and compression use exponential damage model, the degradation is controlled by
    parameters [14] and [15]. The characteristic length can be accounted for by modifying [14].
 
+Details of implementation can be seen in the corresponding section
+in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
+
 ## Syntax
 
 ```text
