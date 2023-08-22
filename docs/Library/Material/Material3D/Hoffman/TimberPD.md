@@ -35,7 +35,7 @@ The damage evolutions are identical to the original formulation but with differe
 ### Tension Damage Evolution
 
 $$
-\omega_t=1-\dfrac{r_t^0}{r_t}\left(1-n_t+n_t\exp{b_t\left(r_t^0-r_t\right)}\right)
+\omega_t=1-\dfrac{r_t^0}{r_t}\left(1-n_t+n_t\exp\left(b_t\left(r_t^0-r_t\right)\right)\right)
 $$
 
 ### Compression Damage Evolution
