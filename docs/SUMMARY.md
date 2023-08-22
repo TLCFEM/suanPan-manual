@@ -376,6 +376,7 @@
         * [CustomHoffman](Library/Material/Material3D/Hoffman/CustomHoffman.md)
         * [NonlinearHill](Library/Material/Material3D/Hoffman/NonlinearHill.md)
         * [NonlinearHoffman](Library/Material/Material3D/Hoffman/NonlinearHoffman.md)
+        * [TimberPD](Library/Material/Material3D/Hoffman/TimberPD.md)
     * Sand
         * [SimpleSand](Library/Material/Material3D/Sand/SimpleSand.md)
         * [DafalisaManzari](Library/Material/Material3D/Sand/DafaliasManzari.md)
