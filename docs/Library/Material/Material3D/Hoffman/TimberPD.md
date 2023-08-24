@@ -16,11 +16,11 @@ material TimberPD (1) (2...7) (8...10) (11...19) (20) (21) (22) (23) (24) (25) (
 # (11...19) double, nine yield stress
 # (20) double, h
 # (21) double, r_t^0
-# (22) double, n_t
-# (23) double, b_t
+# (22) double, b_t
+# (23) double, m_t
 # (24) double, r_c^0
-# (25) double, m_c
-# (26) double, b_c
+# (25) double, b_c
+# (26) double, m_c
 # [27] double, density, default: 0.0
 ```
 
@@ -35,7 +35,7 @@ The damage evolutions are identical to the original formulation but with differe
 ### Tension Damage Evolution
 
 $$
-\omega_t=1-\dfrac{r_t^0}{r_t}\left(1-n_t+n_t\exp\left(b_t\left(r_t^0-r_t\right)\right)\right)
+\omega_t=1-\dfrac{r_t^0}{r_t}\left(1-b_t+b_t\exp\left(m_t\left(r_t^0-r_t\right)\right)\right)
 $$
 
 ### Compression Damage Evolution
@@ -43,3 +43,7 @@ $$
 $$
 \omega_c=b_c\left(1-\dfrac{r_c^0}{r_c}\right)^{m_c}
 $$
+
+View and edit parameters to see how they affect the damage evolution.
+
+<p style="text-align:center"><iframe src="https://www.desmos.com/calculator/alzq72imkb?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe></p>
