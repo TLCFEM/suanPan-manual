@@ -16,11 +16,11 @@ CDPM2 model for concrete model.
    Reference [1](https://doi.org/10.1016/j.ijsolstr.2013.07.008).
 5. The default `CDPM2` uses isotropic damage.
 6. The token `CDPM2ANISO` uses anisotropic damage.
-7. If damage is activated, both tension and compression use exponential damage model, the degradation is controlled by
-   parameters [14] and [15]. The characteristic length can be accounted for by modifying [14].
+7. If damage is activated, both tension and compression use the exponential damage model, the degradation is controlled
+   by parameters [14] and [15]. The characteristic length can be accounted for by modifying [14].
 
 Details of implementation can be seen in the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
+in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 
 ## Syntax
 

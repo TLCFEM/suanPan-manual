@@ -30,7 +30,15 @@ material TimberPD (1) (2...7) (8...10) (11...19) (20) (21) (22) (23) (24) (25) (
     $$\sigma_{22}^c$$, $$\sigma_{33}^t$$, $$\sigma_{33}^c$$, $$\sigma_{12}^0$$, $$\sigma_{23}^0$$, $$\sigma_{13}^0$$.
 2. The original paper documents a comprehensive procedure to determine hardening parameter $$h$$.
 
+## Damage
+
 The damage evolutions are identical to the original formulation but with different notations.
+
+The final stress $$\sigma$$ is calculated as
+
+$$
+\sigma=\left(1-\omega_t\right)\bar{\sigma}_t+\left(1-\omega_c\right)\bar{\sigma}_c
+$$
 
 ### Tension Damage Evolution
 
@@ -46,4 +54,4 @@ $$
 
 View and edit parameters to see how they affect the damage evolution.
 
-<p style="text-align:center"><iframe src="https://www.desmos.com/calculator/alzq72imkb?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe></p>
+<p style="text-align:center"><iframe src="https://www.desmos.com/calculator/erkilecav8?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe></p>

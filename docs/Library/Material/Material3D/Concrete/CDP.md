@@ -13,8 +13,7 @@ Concrete Damage Plasticity Model
 
 The CDP model supports stiffness degradation. The backbone envelops are defined as exponential functions in terms of
 plastic strain [4]. Apart from the listed references, readers can also refer to the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
-.
+in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 
 ## Syntax
 
