@@ -22,3 +22,6 @@ orientation (1) (2) (3) (4) (5)
    formulation) available.
 2. The `B3DC` formulation is based on Crisfield's work with modifications. See de Souza's
    [thesis](https://books.google.co.nz/books/about/Force_based_Finite_Element_for_Large_Dis.html?id=YZ5NAQAAMAAJ).
+3. For brevity, the mass distribution does not follow the corotational formulation, implying that the mass matrix is
+   always a constant matrix. This is often sufficient for applications in earthquake engineering. However, it is not
+   recommended for other applications. An energy-reserving corotational formulation is required, see Crisfield's work.
