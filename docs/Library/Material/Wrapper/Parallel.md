@@ -2,6 +2,8 @@
 
 Container of Material Models In Parallel
 
+Combines multiple 1D material models into a single one.
+
 ## Syntax
 
 ```

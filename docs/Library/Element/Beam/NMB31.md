@@ -5,6 +5,10 @@
 * Number of Nodes: 2
 * Number of DoFs: 6 (Translation, Translation, Translation, Rotation, Rotation, Rotation)
 
+## Reference
+
+1. [10.1061/JSENDH/STENG-12176](http://dx.doi.org/10.1061/JSENDH/STENG-12176)
+
 ## Syntax
 
 ```
@@ -26,6 +30,8 @@ element NMB31 (1) (2) (3) (4) (5)
    usual are computed and stored, the first five are sent to section for computation of response, the torsion response
    is assumed to be elastic.
 
+See [SectionNM](../../Section/SectionNM/SectionNM.md) for more information about the section.
+
 ## Output Type
 
 The `NMB31` element additional support recording element deformation and resistance via the `BEAME` and `BEAMS` tokens.
@@ -38,3 +44,5 @@ hdf5recorder (1) Element BEAMS (2...)
 # (1) int, unique recorder tag
 # (2...) int, tags of elements to record
 ```
+
+Those are local deformation and resistance (with respect to the local coordinate system) of the element.

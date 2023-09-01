@@ -2,6 +2,8 @@
 
 Plane Strain Wrapper
 
+Wraps a 3D host material model into a 2D plane strain model that can be used with 2D membrane elements.
+
 ## Syntax
 
 ```

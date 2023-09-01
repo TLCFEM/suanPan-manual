@@ -2,6 +2,8 @@
 
 2D Rotation Wrapper
 
+Alters the inclination of the 2D host material model, it is typically used with anisotropic material models.
+
 ## Syntax
 
 ```

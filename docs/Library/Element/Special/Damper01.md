@@ -34,4 +34,5 @@ element Damper03 (1) (2) (3) (4)
 
 ## Remarks
 
-Both viscous and nonviscous material can be used for this element, see [Viscosity](../../Material/Material1D/Viscosity).
+Both viscous and nonviscous material can be used for this element,
+see [Viscosity](../../Material/Material1D/Viscosity/NonlinearViscosity.md).
