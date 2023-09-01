@@ -2,6 +2,12 @@
 
 Orthotropic Hoffman Material
 
+## Reference
+
+1. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
+
+## Theory
+
 The `NonlinearHoffman` defines an orthotropic material using Hoffman yield criterion and associative plasticity.
 
 The yield surface is defined as
@@ -45,6 +51,7 @@ virtual double compute_dk(double) const = 0;
 
 ## History Layout
 
-| location             | parameter                  |
-|----------------------|----------------------------|
-| `initial_history(0)` | accumulated plastic strain |
+| location               | parameter                 |
+|------------------------|---------------------------|
+| `initial_history(0)`   | equivalent plastic strain |
+| `initial_history(1:7)` | plastic strain            |
