@@ -1,0 +1,45 @@
+# LEES FRAME
+
+node 1 0 0
+node 2 0 1
+node 3 0 2
+node 4 0 3
+node 5 0 4
+node 6 0 5
+node 7 1 5
+node 8 2 5
+node 9 3 5
+node 10 4 5
+node 11 5 5
+
+element EB21 1 1 2 500. 1. 1 1
+element EB21 2 2 3 500. 1. 1 1
+element EB21 3 3 4 500. 1. 1 1
+element EB21 4 4 5 500. 1. 1 1
+element EB21 5 5 6 500. 1. 1 1
+element EB21 6 6 7 500. 1. 1 1
+element EB21 7 7 8 500. 1. 1 1
+element EB21 8 8 9 500. 1. 1 1
+element EB21 9 9 10 500. 1. 1 1
+element EB21 10 10 11 500. 1. 1 1
+
+material Elastic1D 1 10
+
+fix 1 1 1 11
+fix 2 2 1 11
+
+recorder 1 hdf5 Node U 7
+
+step arclength 1 7 2 -1
+solver Ramm 1 .05 true
+set max_iteration 1000
+
+criterion MinDisplacement 1 7 2 -3.8
+
+converger AbsIncreDisp 1 1E-7 5 1
+
+analyze
+
+save recorder 1
+
+exit
