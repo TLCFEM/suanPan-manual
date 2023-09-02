@@ -289,6 +289,7 @@
         * [Degradation](Library/Material/Material1D/Degradation/Degradation.md)
         * [CustomStrainDegradation](Library/Material/Material1D/Degradation/CustomStrainDegradation.md)
         * [CustomStressDegradation](Library/Material/Material1D/Degradation/CustomStressDegradation.md)
+        * [Dhakal](Library/Material/Material1D/Degradation/Dhakal.md)
     * Elastic
         * [BilinearElastic1D](Library/Material/Material1D/Elastic/BilinearElastic1D.md)
         * [Elastic1D](Library/Material/Material1D/Elastic/Elastic1D.md)
