@@ -42,8 +42,7 @@ expression SimpleVector (1) (2) (3) (4)
 ```
 
 This evaluates a vector-valued function $$y:=f(x_1,x_2,\cdots,x_n)$$.
-An assignment must be used to explicitly assign
-values to the output variables.
+An assignment must be used to explicitly assign values to the output variables.
 The input arguments can be either scalars or vectors.
 The output argument should be a vector, the size shall be given such that $$y|3$$ represents a vector of size 3.
 

@@ -8,21 +8,46 @@ only depends on the input strain history or the output stress and stiffness.
 The general expression of a degradation model can be expressed as
 
 $$
-\sigma=D\bar{\sigma}=(1-d)\bar{\sigma}
+\sigma=D\bar{\sigma}=(1-d)\bar{\sigma},
 $$
 
-where $$D$$ and $$d$$ are degradation factors, $$\bar\sigma$$ is the stress of the intact material model. Whether to use
-$$D$$ or $$(1-d)$$ relies on the specific definition of degradation. Here we focus on the first expression.
+where $$D$$ and $$d$$ are degradation factors, $$\bar\sigma$$ is the stress of the intact material model.
+It is often called the effective stress.
+Whether to use $$D$$ or $$(1-d)$$ relies on the specific definition of degradation.
+Here we focus on the first expression.
 
 ## Stiffness
 
 The stiffness can be expressed by applying the chain rule.
 
+### Strain Dependent Degradation
+
+Assuming the degradation factor depends on the strain history, namely, $$D=D(\varepsilon_{max})$$.
+In which $$\varepsilon_{max}$$ is the maximum strain of the whole loading history.
+
+Where damage evolution is activated, the stiffness can be expressed as
+
 $$
 K=\dfrac{\mathrm{d}\sigma}{\mathrm{d}\varepsilon}=\dfrac{\partial{}D}{\partial\varepsilon}\bar\sigma+D\dfrac{\partial\bar\sigma}{\partial\varepsilon}=\dfrac{\partial{}D}{\partial\varepsilon}\bar\sigma+D\bar{K}
 $$
 
-where $$\bar{K}$$ is the stiffness from the intact material model.
+where $$\bar{K}$$ is the effective stiffness of the intact material model.
+
+### Stress Depedent Degradation
+
+Assuming the degradation factor depends on the strain history, namely, $$D=D(\bar{\sigma}_{max})$$.
+In which $$\bar{\sigma}_{max}$$ is the maximum effective stress of the whole loading history.
+
+Where damage evolution is activated, the stiffness can be expressed as
+
+$$
+K
+=\dfrac{\mathrm{d}\sigma}{\mathrm{d}\varepsilon}
+=\dfrac{\partial{}D}{\partial\bar{\sigma}}\dfrac{\partial\bar\sigma}{\partial\varepsilon}\bar{\sigma}+D\dfrac{\partial\bar\sigma}{\partial\varepsilon}
+=\left(\dfrac{\partial{}D}{\partial\bar{\sigma}}\bar{\sigma}+D\right)\bar{K}
+$$
+
+where $$\bar{K}$$ is the effective stiffness of the intact material model.
 
 ## Computation Procedure
 
