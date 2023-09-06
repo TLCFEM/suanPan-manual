@@ -6,6 +6,8 @@ The `ConcreteTsai` model is a simple concrete model using Tsai's equation.
 
 ## Syntax
 
+Depending on the number of parameters provided (8 to 11), the model can be defined in two ways.
+
 ```
 material ConcreteTsai (1) (2) (3) (4) (5) (6) (7) [8] [9] [10] [11]
 # (1) int, unique material tag
@@ -15,9 +17,9 @@ material ConcreteTsai (1) (2) (3) (4) (5) (6) (7) [8] [9] [10] [11]
 # (5) double, NC
 # (6) double, MT
 # (7) double, NT
-# [8] double, strain at compression strength, default: -2E-3
-# [9] double, strain at tension strength, default: 1E-4
-# [10] double, middle point, default: 0.2
+# (8) double, middle point, typical: 0.2
+# (9) double, strain at compression strength, typical: -2E-3
+# (10) double, strain at tension strength, typical: 1E-4
 # [11] double, density, default: 0.0
 ```
 
@@ -28,9 +30,9 @@ material ConcreteTsai (1) (2) (3) (4) (5) [6] [7] [8] [9]
 # (3) double, tension strength, should be positive but sign insensitive
 # (4) double, M
 # (5) double, N
-# [6] double, strain at compression strength sign insensitive, default: -2E-3
-# [7] double, strain at tension strength sign insensitive, default: 1E-4
-# [8] double, middle point, default: 0.2
+# (6) double, middle point, typical: 0.2
+# (7) double, strain at compression strength sign insensitive, typical: -2E-3
+# (8) double, strain at tension strength sign insensitive, typical: 1E-4
 # [9] double, density, default: 0.0
 ```
 
