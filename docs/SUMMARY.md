@@ -285,6 +285,7 @@
         * [ConcreteCM](Library/Material/Material1D/Concrete/ConcreteCM.md)
         * [ConcreteExp](Library/Material/Material1D/Concrete/ConcreteExp.md)
         * [ConcreteTsai](Library/Material/Material1D/Concrete/ConcreteTsai.md)
+        * [ConcreteK4](Library/Material/Material1D/Concrete/ConcreteK4.md)
     * Degradation
         * [Degradation](Library/Material/Material1D/Degradation/Degradation.md)
         * [CustomStrainDegradation](Library/Material/Material1D/Degradation/CustomStrainDegradation.md)
