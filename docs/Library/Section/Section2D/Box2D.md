@@ -14,3 +14,9 @@ section Box2D (1) (2) (3) (4) (5) [6] [7]
 # [6] int, number of integration points, default: 6
 # [7] double, eccentricity, default: 0.0
 ```
+
+## Remarks
+
+The eccentricity is measured from the centre of the section.
+
+The width and height are measured from midline to midline.

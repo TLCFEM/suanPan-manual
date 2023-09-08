@@ -24,3 +24,5 @@ section ISection3D (1) (2) (3) (4) (5) (6) (7) (8) [9] [10] [11]
 1. The flange/web is assumed to be slender. Thus, only one integration point is assigned across the thickness. The web,
    top flange and bottom flange share the same number of integration points over the height/width no matter how
    wide/tall the section is.
+
+See [Eccentricity](../Eccentricity.md) for more details.

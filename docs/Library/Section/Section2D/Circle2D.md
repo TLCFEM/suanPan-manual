@@ -12,3 +12,7 @@ section Circle2D (1) (2) (3) [4] [5]
 # [4] int, number of integration points, default: 6
 # [5] double, eccentricity, default: 0.0
 ```
+
+## Remarks
+
+The eccentricity is measured from the centre of the section.
