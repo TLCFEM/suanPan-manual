@@ -98,4 +98,3 @@ exit
 ```
 
 From the [AISC](https://www.aisc.org/globalassets/aisc/manual/v15.0-shapes-database/aisc-shapes-database-v15.0.xlsx) table, the moment of inertia is $$I=131$$, then $$3EI=393\approx393.82$$.
-
