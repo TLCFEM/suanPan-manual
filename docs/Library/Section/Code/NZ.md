@@ -33,9 +33,9 @@ section NZ3D (1) (2) (3) [4] [5] [6] [7]
 
 1. By default, millimeter is used as length unit, if users want to switch to another unit, set `scale` to corresponding
    values. For example, to use meter, `scale=0.001`, to use inch, `scale=1/25.4=0.03937007874`.
-2. For 2D sections, the number of integration points is set to 2 using Gauss quadrature for flanges in I-sections.
+2. For 2D sections, the number of integration points is set to two using Gauss quadrature for flanges in I-sections.
 3. For 3D sections, along web/flange thickness, one integration point is used. along flange width and web height, the
-   same amount of integration points are used as defined by user.
+   same number of integration points is used as defined by user.
 
 ## Supported Designations
 

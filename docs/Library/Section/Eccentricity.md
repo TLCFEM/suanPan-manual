@@ -105,3 +105,11 @@ exit
 ```
 
 From the [AISC](https://www.aisc.org/globalassets/aisc/manual/v15.0-shapes-database/aisc-shapes-database-v15.0.xlsx) table, the moment of inertia is $$I=131$$, then $$3EI=393\approx393.82$$.
+
+This manual adjustment of eccentricity exists since it is beneficial when it comes to creating complex sections of basic shapes.
+
+But when analysing simple sections alone, it is desired to place the section at its barycenter.
+This is not a problem for symmetric sections, but for asymmetric sections, the default eccentricity would cause unwanted results.
+
+There are `US2DC` and `US3DC` available,
+which automatically adjust the eccentricity so that all forces are applied at the barycenter.

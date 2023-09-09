@@ -27,6 +27,20 @@ section US3D (1) (2) (3) [4] [5] [6] [7]
 # [7] double, eccentricity of z axis, default: 0.0
 ```
 
+[available from v3.2]
+
+Some T-sections are placed at the centre of the web, which is not always desired. Use `US2DC` and `US3DC` to automatically recenter the section to its barycenter.
+
+```
+section US2DC (1) (2) (3) [4] [5]
+section US3DC (1) (2) (3) [4] [5]
+# (1) string, designation
+# (2) int, unique tag
+# (3) int, material model tag
+# [4] double, scale, default: 1.0
+# [5] int, number of integration points along web height (and flange width for 3D), default: 6
+```
+
 ## Remarks
 
 1. By default, inch is used as length unit, if users want to switch to another unit, set `scale` to corresponding
