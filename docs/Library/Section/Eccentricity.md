@@ -20,7 +20,14 @@ $$
 The eccentricity is then the difference between the centroid and the first moment of area.
 
 $$
-e=8.3958-11.31/2=2.7408
+e=8.3958-11.31/2=2.7408.
+$$
+
+Or simply,
+
+$$
+e=\dfrac{7.04\times0.59\times(11.31/2+0.59/2)}{11.31\times0.43+7.04\times0.59}\\
+=2.7408.
 $$
 
 If the default trivial eccentricity is used, then axial loading will lead to transverse displacement. See the following example.
