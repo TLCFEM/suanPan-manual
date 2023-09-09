@@ -39,17 +39,33 @@ orientation (1) (2) (3) (4) (5)
 
 One can use the following model to check how the orientation works.
 
+The following model defines a number of beam elements with the `WT12X125` section that is placed at the centre of web.
+
+The elements are subject to axial forces, but since loads are applied at the centre of web, the elements are also subject to bending.
+
+Different orientations of local reference frame are defined. The nodal forces are different for different orientations.
+
 ```text
 node 1 0 0 0
 node 2 1 0 0
+node 3 1 0 0
+node 4 1 0 0
+node 5 1 0 0
 orientation B3DL 1 0. 0. 1.
+orientation B3DL 2 0. 1. 0.
 material Elastic1D 1 1
-section US3D W10X100 1 1
+section US3D WT12X125 1 1
 element B31 1 1 2 1 1
+element B31 2 1 3 1 2
+element B31 3 4 1 1 1
+element B31 4 5 1 1 2
 fix2 1 E 1
 displacement 1 0 1 1 2
+displacement 2 0 1 1 3
+displacement 3 0 1 1 4
+displacement 4 0 1 1 5
 step static 1
 analyze
-peek node 2
+peek node 2 3 4 5
 exit
 ```
