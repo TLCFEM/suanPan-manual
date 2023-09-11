@@ -170,6 +170,7 @@
     * [B21H](Library/Element/Beam/B21H.md)
     * [B31](Library/Element/Beam/B31.md)
     * [EB21](Library/Element/Beam/EB21.md)
+    * [EB31OS](Library/Element/Beam/EB31OS.md)
     * [F21](Library/Element/Beam/F21.md)
     * [F21H](Library/Element/Beam/F21H.md)
     * [F31](Library/Element/Beam/F31.md)

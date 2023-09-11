@@ -29,13 +29,19 @@ orientation (1) (2) (3) (4) (5)
 
 ## Remarks
 
-1. For type `(2)`, currently only `B3DL` (stands for linear 3D beam transformation) and `B3DC` (corotational
-   formulation) available.
-2. The `B3DC` formulation is based on Crisfield's work with modifications. See de Souza's
-   [thesis](https://books.google.co.nz/books/about/Force_based_Finite_Element_for_Large_Dis.html?id=YZ5NAQAAMAAJ).
+1. For type `(2)`, the following options are available.
+   1. `B3DL` (stands for linear 3D beam transformation) and `B3DC` (corotational formulation).
+      The nodal size is 6 and the local quantity size is 6.
+   2. `B3DOSL` (linear for beams of open sections such as `EB31OS`) and `B3DOSC` (corotational).
+      The nodal size is 7 (including an extra warping DoF) and the local quantity size is 9.
+2. The `B3DC`/`B3DOSC` formulation is based on Crisfield's work with modifications.
+   See de Souza's [thesis](https://books.google.co.nz/books/about/Force_based_Finite_Element_for_Large_Dis.html?id=YZ5NAQAAMAAJ).
 3. For brevity, the mass distribution does not follow the corotational formulation, implying that the mass matrix is
    always a constant matrix. This is often sufficient for applications in earthquake engineering. However, it is not
    recommended for other applications. An energy-reserving corotational formulation is required, see Crisfield's work.
+
+Correct orientations are required for different element types.
+For example, `B31`/`F31` require `B3DL` or `B3DC`. `EB31OS` requires `B3DOSL` or `B3DOSC`.
 
 One can use the following model to check how the orientation works.
 
