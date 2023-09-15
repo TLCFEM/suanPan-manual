@@ -169,6 +169,7 @@
     * [B21E](Library/Element/Beam/B21E.md)
     * [B21H](Library/Element/Beam/B21H.md)
     * [B31](Library/Element/Beam/B31.md)
+    * [B31OS](Library/Element/Beam/B31OS.md)
     * [EB21](Library/Element/Beam/EB21.md)
     * [EB31OS](Library/Element/Beam/EB31OS.md)
     * [F21](Library/Element/Beam/F21.md)
@@ -399,6 +400,8 @@
         * [NonlinearPeric](Library/Material/Material3D/vonMises/NonlinearPeric.md)
         * [PolyJ2](Library/Material/Material3D/vonMises/PolyJ2.md)
         * [VAFCRP](Library/Material/Material3D/vonMises/VAFCRP.md)
+* MaterialOS
+    * [ElasticOS](Library/Material/MaterialOS/ElasticOS.md)
 * Wrapper
     * [Axisymmetric](Library/Material/Wrapper/Axisymmetric.md)
     * [Laminated](Library/Material/Wrapper/Laminated.md)
@@ -447,6 +450,9 @@
     * [ISection3D](Library/Section/Section3D/ISection3D.md)
     * [Rectangle3D](Library/Section/Section3D/Rectangle3D.md)
     * [TSection3D](Library/Section/Section3D/TSection3D.md)
+* SectionOS
+    * [Cell3DOS](Library/Section/SectionOS/Cell3DOS.md)
+    * [Fibre3DOS](Library/Section/SectionOS/Fibre3DOS.md)
 * SectionNM
     * [SectionNM](Library/Section/SectionNM/SectionNM.md)
     * [NM2D1](Library/Section/SectionNM/NM2D1.md)

@@ -55,12 +55,13 @@ exit
 ```
 
 Manually set the eccentricity removes the extra bending.
+To place the section at the centroid, it needs to be moved down by $$2.7408$$ so that the centroid is at the origin.
 
 ```text
 node 1 0 0
 node 2 1 0
 material Elastic1D 1 1
-section US2D WT12X31 1 1 1 10 2.740844414
+section US2D WT12X31 1 1 1 10 -2.740844414
 element B21 1 1 2 1
 fix2 1 E 1
 displacement 1 0 1 1 2
@@ -86,7 +87,7 @@ The flexural rigidity can be obtained by applying a transverse loading.
 node 1 0 0
 node 2 1 0
 material Elastic1D 1 1
-section US2D WT12X31 1 1 1 10 2.740844414
+section US2D WT12X31 1 1 1 10 -2.740844414
 element B21 1 1 2 1
 fix2 1 E 1
 displacement 1 0 1 2 2
