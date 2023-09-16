@@ -7,7 +7,7 @@ It is `WT12X31` section in the [AISC](https://www.aisc.org/globalassets/aisc/man
 
 ![eccentricity](Eccentricity.svg)
 
-The first moment of area can be computed as
+The barycentre can be computed as
 
 $$
 \begin{split}
@@ -17,7 +17,7 @@ y=&\dfrac{b_wt_w(b_w/2)+b_ft_f(b_w+t_f/2)}{b_wt_w+b_ft_f}\\
 \end{split}
 $$
 
-The eccentricity is then the difference between the centroid and the first moment of area.
+The eccentricity is then the difference between the default origin (centroid of web) and the barycentre.
 
 $$
 e=8.3958-11.31/2=2.7408.
@@ -39,7 +39,7 @@ material Elastic1D 1 1
 section US2D WT12X31 1 1 1 10 0
 element B21 1 1 2 1
 fix2 1 E 1
-displacement 1 0 1 1 2
+displacement 1 0 1 1 2 ! apply axial load
 step static 1
 set ini_step_size 1
 analyze
@@ -47,7 +47,7 @@ analyze
 # Coordinate:
 #   1.0000e+00  0.0000e+00
 # Displacement:
-#   1.0000e+00 -6.2092e-02 -1.2418e-01
+#   1.0000e+00 -6.2092e-02 -1.2418e-01 <--- transverse displacement and rotation
 # Resistance:
 #   5.9478e+00 -1.3410e-14 -1.7171e-14
 peek node 2
@@ -55,13 +55,13 @@ exit
 ```
 
 Manually set the eccentricity removes the extra bending.
-To place the section at the centroid, it needs to be moved down by $$2.7408$$ so that the centroid is at the origin.
+It needs to be moved down by $$2.7408$$ so that the barycentre is at the origin.
 
 ```text
 node 1 0 0
 node 2 1 0
 material Elastic1D 1 1
-section US2D WT12X31 1 1 1 10 -2.740844414
+section US2D WT12X31 1 1 1 10 -2.740844414 ! manually set eccentricity
 element B21 1 1 2 1
 fix2 1 E 1
 displacement 1 0 1 1 2
@@ -72,7 +72,7 @@ analyze
 # Coordinate:
 #   1.0000e+00  0.0000e+00
 # Displacement:
-#   1.0000e+00 -1.2963e-11 -2.5926e-11
+#   1.0000e+00 -1.2963e-11 -2.5926e-11 <--- no more transverse displacement and rotation
 # Resistance:
 #   9.0169e+00 -1.9722e-31  8.8818e-16
 peek node 2
@@ -90,7 +90,7 @@ material Elastic1D 1 1
 section US2D WT12X31 1 1 1 10 -2.740844414
 element B21 1 1 2 1
 fix2 1 E 1
-displacement 1 0 1 2 2
+displacement 1 0 1 2 2 ! apply unit transverse load
 step static 1
 set ini_step_size 1
 analyze
@@ -106,6 +106,37 @@ exit
 ```
 
 From the [AISC](https://www.aisc.org/globalassets/aisc/manual/v15.0-shapes-database/aisc-shapes-database-v15.0.xlsx) table, the moment of inertia is $$I=131$$, then $$3EI=393\approx393.82$$.
+
+By the parallel axis theorem, the moment of inertia when the section is placed at the centre of the web is
+
+$$
+I=I_z+Ad^2=131+9.0169\times2.7408^2=199.
+$$
+
+It can be further verified by applying a moment while restraining the axial displacement.
+
+```text
+node 1 0 0
+node 2 1 0
+material Elastic1D 1 1
+section US2D WT12X31 1 1 1 10 0
+element B21 1 1 2 1
+fix2 1 E 1
+fix2 2 1 2 ! fix axial displacement
+displacement 1 0 1 3 2 ! apply unit moment
+step static 1
+set ini_step_size 1
+analyze
+# Node 2:
+# Coordinate:
+#   1.0000e+00  0.0000e+00
+# Displacement:
+#   0.0000e+00  5.0000e-01  1.0000e+00
+# Resistance:
+#   2.4714e+01  3.1264e-13  1.9901e+02 <--- moment of inertia
+peek node 2
+exit
+```
 
 This manual adjustment of eccentricity exists since it is beneficial when it comes to creating complex sections of basic shapes.
 
