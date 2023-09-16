@@ -28,8 +28,9 @@ element B31OS (1) (2) (3) (4) (5) [6] [7]
 2. Please check [`orientation`](Orientation.md) for its definition.
 3. To use the corotational formulation for nonlinearity, please attach a corotational
    transformation [`B3DOSC`](Orientation.md).
-4. The reference also introduced a circumvention of membrane locking. It is NOT implemented in this element. The Hermite
-   shape function is used for the interpolation of $$\phi$$.
+4. The reference also introduced a circumvention of membrane locking.
+   It _**is**_ implemented in this element.
+   The Hermite shape function is used for the interpolation of $$\phi$$.
 5. A 3D OS section is required for this element.
 
 The Alemdar's thesis contains a few typos. The following expressions are confirmed to be correct and used in the
