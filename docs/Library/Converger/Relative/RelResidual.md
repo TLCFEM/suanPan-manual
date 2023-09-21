@@ -5,11 +5,11 @@ Relative Residual
 In the governing equation,
 
 $$
-\mathbf{K\Delta{}U=R},
+\mathbf{K\cdot\Delta{}U=R},
 $$
 
-this converger tests the norm of residual,
+this converger tests the norm of the residual,
 
 $$
-\left|\mathbf{R}\right|\leqslant{}tol.
+\left|\mathbf{R}\right|_\infty\leqslant{}tol.
 $$

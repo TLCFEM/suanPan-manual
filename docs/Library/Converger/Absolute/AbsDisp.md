@@ -5,7 +5,7 @@ Absolute Displacement
 This converger tests the following norm,
 
 $$
-\left|\mathbf{U}\right|\leqslant{}tol.
+\left|\mathbf{U}\right|_\infty\leqslant{}tol.
 $$
 
 where $$\mathbf{U}$$ denotes the total displacement of the system (with all trial displacement increments accounted).

@@ -414,6 +414,7 @@
     * [Sequential](Library/Material/Wrapper/Sequential.md)
     * [Stacked](Library/Material/Wrapper/Stacked.md)
     * [Uniaxial](Library/Material/Wrapper/Uniaxial.md)
+    * [OS14](Library/Material/Wrapper/OS14.md)
 
 ### Recorder
 
