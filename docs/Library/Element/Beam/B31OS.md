@@ -39,3 +39,15 @@ implementation.
 1. Eq. 7.12
 2. Eq. 7.41
 3. Eq. 7.58
+
+Use `BEAMS` to record section forces.
+Each section contains six components, namely axial force, bending moment about major axis, bending moment about minor
+axis, Wagner stress resultant, bi-moment and St. Venant torsion.
+
+$$
+\begin{bmatrix}
+P&M_z&M_y&W&B&T_{sv}
+\end{bmatrix}
+$$
+
+If five integration points are used, the output file contains $$6\times5=30$$ columns.
