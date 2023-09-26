@@ -9,18 +9,22 @@ Basic Building Block for 3D OS Section
 ## Syntax
 
 ```
-section Cell3DOS (1) (2) (3) (4) (5) [6] [7]
+section Cell3DOS (1) (2) (3) (4) (5) (6) [7] [8]
 # (1) int, unique section tag
 # (2) double, area
 # (3) double, sectional coordiante
-# (4) double, n
-# (5) int, material tag
-# [6] double, eccentricity/location along y axis, default: 0.0
-# [7] double, eccentricity/location along z axis, default: 0.0
+# (4) double, py
+# (5) double, pz
+# (6) int, material tag
+# [7] double, eccentricity/location along y axis, default: 0.0
+# [8] double, eccentricity/location along z axis, default: 0.0
 ```
 
 ## Remarks
 
-The parameters `(3)` and `(4)` are $$\bar\omega$$ and $$n$$ in Eq. 7.37 and Eq. 7.39. They are used in the calculation of torsion related deformation.
+The parameter `(3)` is the warping function $$\omega$$.
 
-The attached material needs to be an OS material.
+The parameters `(4)` and `(5)` are partial derivatives of the warping function $$\omega$$, namely,
+$$\frac{\partial \omega}{\partial y}$$ and $$\frac{\partial \omega}{\partial z}$$.
+
+The attached material needs to be an OS material. Use a [wrapper](../../Material/Wrapper/OS146.md).
