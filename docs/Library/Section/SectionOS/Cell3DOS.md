@@ -28,3 +28,7 @@ The parameters `(4)` and `(5)` are partial derivatives of the warping function $
 $$\frac{\partial \omega}{\partial y}$$ and $$\frac{\partial \omega}{\partial z}$$.
 
 The attached material needs to be an OS material. Use a [wrapper](../../Material/Wrapper/OS146.md).
+
+## Example
+
+See [this](../../../Example/Structural/Statics/thin-walled-section.md) example.

@@ -36,13 +36,13 @@ element B31OS (1) (2) (3) (4) (5) [6] [7]
 The Alemdar's thesis contains a few typos. The following expressions are confirmed to be correct and used in the
 implementation.
 
-1. Eq. 7.12
+1. Eq. 7.12 (Eq. 7.63)
 2. Eq. 7.41
-3. Eq. 7.58
+3. Eq. 7.69
 
 Use `BEAMS` to record section forces.
-Each section contains six components, namely axial force, bending moment about major axis, bending moment about minor
-axis, Wagner stress resultant, bi-moment and St. Venant torsion.
+Each section contains six force components, namely axial force, bending moment about major axis, bending moment about
+minor axis, Wagner stress resultant, bi-moment and St. Venant torsion.
 
 $$
 \begin{bmatrix}
@@ -51,3 +51,30 @@ P&M_z&M_y&W&B&T_{sv}
 $$
 
 If five integration points are used, the output file contains $$6\times5=30$$ columns.
+
+At element level, the implementation transforms global nodal quantities to local elemental quantities, namely,
+
+1. uniform axial
+2. strong axis bending near node
+3. strong axis bending far node
+4. weak axis bending near node
+5. weak axis bending far node
+6. torsion near node
+7. torsion far node
+8. warping near node
+9. warping far node
+
+Those quantities are further interpolated to sectional quantities, namely,
+
+$$
+\begin{bmatrix}
+u'&v'&w'&v''&w''&\phi&\phi'&\phi''&\theta_{z,i}&\theta_{z,j}&\theta_{y,i}&\theta_{y,j}
+\end{bmatrix}
+$$
+
+Not all quantities would be used by section state determination.
+See [Fibre3DOS](../../Section/SectionOS/Fibre3DOS.md) for further explanation.
+
+## Example
+
+See [this](../../../Example/Structural/Statics/thin-walled-section.md) example.
