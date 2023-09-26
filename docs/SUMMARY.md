@@ -32,6 +32,7 @@
         * [rc section analysis](Example/Structural/Statics/rc-section-analysis.md)
         * [truss roof](Example/Structural/Statics/truss-roof.md)
         * [uniform tension of a rubber specimen](Example/Structural/Statics/uniform-tension-of-a-rubber-specimen.md)
+        * [thin-walled section analysis for frame structures](Example/Structural/Statics/thin-walled-section.md)
     * Dynamics
         * [bouncing of a ball](Example/Structural/Dynamics/bouncing-of-a-ball.md)
         * [mass-spring-dashpot system](Example/Structural/Dynamics/mass-spring-dashpot-system.md)
