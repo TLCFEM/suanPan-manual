@@ -416,6 +416,7 @@
     * [Stacked](Library/Material/Wrapper/Stacked.md)
     * [Uniaxial](Library/Material/Wrapper/Uniaxial.md)
     * [OS146](Library/Material/Wrapper/OS146.md)
+    * [OS146S](Library/Material/Wrapper/OS146S.md)
 
 ### Recorder
 

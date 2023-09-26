@@ -27,7 +27,9 @@ The parameter `(3)` is the warping function $$\omega$$.
 The parameters `(4)` and `(5)` are partial derivatives of the warping function $$\omega$$, namely,
 $$\frac{\partial \omega}{\partial y}$$ and $$\frac{\partial \omega}{\partial z}$$.
 
-The attached material needs to be an OS material. Use a [wrapper](../../Material/Wrapper/OS146.md).
+The attached material needs to be an OS material.
+Use a wrapper, for example, [OS146](../../Material/Wrapper/OS146.md) (for 3D host material)
+and [OS146S](../../Material/Wrapper/OS146S.md) (for 1D host material with linear elastic shear response).
 
 ## Example
 
