@@ -85,6 +85,12 @@ section.plot_mesh(title="Circular Section Mesh")
 
 
 
+    
+![png](thin-walled-section_files/thin-walled-section_3_1.png)
+    
+
+
+
 
 
     <Axes: title={'center': 'Circular Section Mesh'}>
@@ -484,8 +490,92 @@ We shall see the initial stiffness is $$74.93$$, which is close to the torsional
 Due to the existence of bi-moments, the torque is not linearly proportional to the rotation.
 If one records the `BEAMS` output, the St. Venant torsion would be $$GJ\phi'$$.
 
+## Flat Bar Example
+
+We show another example with analytical solution.
+This example is taken from this [paper](https://doi.org/10.1061/(ASCE)0733-9445(2005)131:7(1135)).
+
+
+```python
+b = 200
+d = 10
+
+points = [
+    [-b / 2, -d / 2],
+    [b / 2, -d / 2],
+    [b / 2, d / 2],
+    [-b / 2, d / 2],
+]
+
+facets = [
+    [0, 1],
+    [1, 2],
+    [2, 3],
+    [3, 0]
+]
+
+holes = []
+control_points = [[0, 0]]
+geometry = Geometry.from_points(points, facets, control_points)
+geometry.create_mesh(mesh_sizes=[2])
+geometry.plot_geometry()
+to_file(to_cell3dos(geometry), "flat.sp")
+```
+
+
+    
+![png](thin-walled-section_files/thin-walled-section_25_0.png)
+    
+
+
+Use the following model to apply an end twist.
+
+```text
+# flat bar
+node 1 0 0 0
+node 2 1000 0 0
+material ElasticOS 1 200 .25
+file flat.sp
+orientation B3DOSL 1 0. 0. 1.
+element B31OS 1 1 2 1574 1 6
+fix2 1 E 1
+displacement 1 0 1.4 4 2
+hdf5recorder 1 Node RF4 2
+step static 1
+set ini_step_size 1E-2
+set fixed_step_size true
+converger RelIncreDisp 1 1E-10 5 1
+analyze
+save recorder 1
+exit
+```
+
+Use the following script to plot the results.
+
+
+```python
+with h5py.File('R1-RF4.h5', 'r') as f:
+    data = f['/R1-RF4/R1-RF42']
+    x = data[:, 0] * 1.4
+    plt.plot(x, data[:, 1] / 1000, label='B31OS')
+    ref = [z * .080 * 66.667 + .100 * 17.778 * z ** 3 for z in x]
+    plt.plot(x, ref, label='theoretical')
+    plt.legend()
+    plt.xlabel('rotation (rad)')
+    plt.ylabel('torque (kNm)')
+    plt.tight_layout(pad=.2)
+    plt.show()
+```
+
+
+    
+![png](thin-walled-section_files/thin-walled-section_27_0.png)
+    
+
+
+The discretisation introduces some errors. With mesh refinement, the numerical result approaches the analytical solution.
+
 ## Closing Remarks
 
 1. `Cell3DOS` is the basic building block. `Fibre3DOS` collects all cells and defines the section. `B31OS` is the corresponding element.
 2. Sectional integration is always about the origin of the local coordinate system. Shifting of axis can be accounted for by directly defining the section in the shifted position.
-
