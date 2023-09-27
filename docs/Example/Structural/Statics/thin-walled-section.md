@@ -85,12 +85,6 @@ section.plot_mesh(title="Circular Section Mesh")
 
 
 
-    
-![png](thin-walled-section_files/thin-walled-section_3_1.png)
-    
-
-
-
 
 
     <Axes: title={'center': 'Circular Section Mesh'}>
