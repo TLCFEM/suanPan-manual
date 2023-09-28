@@ -6,6 +6,8 @@ Bilinear Incompatible Quadrilateral
 * Number of DoFs: 2 (Translation, Translation)
 * Constant Consistent Mass Matrix With Same Order Integration
 
+![encoding](CP4.svg)
+
 ## Syntax
 
 ```

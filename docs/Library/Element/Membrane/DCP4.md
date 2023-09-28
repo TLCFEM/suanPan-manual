@@ -6,6 +6,8 @@ Bilinear Quadrilateral With Crack Phase
 * Number of DoFs: 3 (Translation, Translation, Damage)
 * Zero Mass Entries On Damage DoFs
 
+![encoding](Plane/CP4.svg)
+
 ## Syntax
 
 ```

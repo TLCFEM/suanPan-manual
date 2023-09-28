@@ -7,6 +7,8 @@ Second Order Quadrilateral
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 
+![encoding](CP8.svg)
+
 ## Syntax
 
 ```

@@ -7,6 +7,8 @@ Seven-Point Quadrilateral
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 
+![encoding](CP7.svg)
+
 ## Syntax
 
 ```

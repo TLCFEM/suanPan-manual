@@ -7,6 +7,8 @@ Bilinear Quadrilateral
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 
+![encoding](CP4.svg)
+
 ## Syntax
 
 ```
