@@ -4,8 +4,11 @@ Quadratic Triangle
 
 * Number of Nodes: 6
 * Number of DoFs: 2 (Translation, Translation)
+* Integration Scheme: 3-Point Mid-edge
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
+
+![encoding](../../PIC/T6.svg)
 
 ## Syntax
 

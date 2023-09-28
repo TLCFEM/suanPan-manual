@@ -7,6 +7,8 @@ Generalised Conforming Mixed Quadrilateral With Drilling DoFs
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 
+![encoding](../../PIC/Q4.svg)
+
 ## References
 
 1. [10.1002/nme.6066](https://doi.org/10.1002/nme.6066)

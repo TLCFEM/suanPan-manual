@@ -5,6 +5,8 @@ Mindlin Plate Element
 * Number of Nodes: 4
 * Number of DoFs: 3 (Translation, Translation, Rotation)
 
+![encoding](../PIC/Q4.svg)
+
 ## Syntax
 
 ```

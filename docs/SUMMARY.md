@@ -192,8 +192,8 @@
 * Membrane
     * [Couple Stress](Library/Element/Membrane/CS.md)
     * Phase Field
-        * [DCP3](Library/Element/Membrane/DCP3.md)
-        * [DCP4](Library/Element/Membrane/DCP4.md)
+        * [DCP3](Library/Element/Membrane/PFM/DCP3.md)
+        * [DCP4](Library/Element/Membrane/PFM/DCP4.md)
     * Axisymmetric
         * [CAX3](Library/Element/Membrane/Axisymmetric/CAX3.md)
         * [CAX4](Library/Element/Membrane/Axisymmetric/CAX4.md)
@@ -216,7 +216,7 @@
     * Infinite
         * [CINP4](Library/Element/Membrane/Plane/CINP4.md)
     * Geotechnical
-        * [PCPE4DC](Library/Element/Membrane/PCPE4DC.md)
+        * [PCPE4DC](Library/Element/Membrane/Porous/PCPE4DC.md)
     * [Membrane](Library/Element/Membrane/Membrane.md)
 * Modifier
     * [Modifier](Library/Element/Modifier/Modifier.md)

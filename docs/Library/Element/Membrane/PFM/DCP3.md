@@ -4,7 +4,10 @@ Constant Strain Triangle With Crack Phase
 
 * Number of Nodes: 3
 * Number of DoFs: 3 (Translation, Translation, Damage)
+* Integration Scheme: Single Point Centre
 * Zero Mass Entries On Damage DoFs
+
+![encoding](../../PIC/T3.svg)
 
 ## Reference
 

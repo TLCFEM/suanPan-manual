@@ -4,10 +4,11 @@ Seven-Point Quadrilateral
 
 * Number of Nodes: 7
 * Number of DoFs: 2 (Translation, Translation)
+* Integration Scheme: 2nd Order Irons
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 
-![encoding](CP7.svg)
+![encoding](../../PIC/Q7.svg)
 
 ## Syntax
 

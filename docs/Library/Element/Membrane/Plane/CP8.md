@@ -4,10 +4,11 @@ Second Order Quadrilateral
 
 * Number of Nodes: 8
 * Number of DoFs: 2 (Translation, Translation)
+* Integration Scheme: 2nd Order Irons (Full) or 2nd Order Gauss (Reduced)
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 
-![encoding](CP8.svg)
+![encoding](../../PIC/Q8.svg)
 
 ## Syntax
 

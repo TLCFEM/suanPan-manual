@@ -6,6 +6,8 @@ DKT Quadrilateral Plate
 * Number of DoFs: 3 (Translation, Translation, Rotation)
 * Integration Scheme: 2nd Order Gauss
 
+![encoding](../PIC/Q4.svg)
+
 ## Syntax
 
 ```

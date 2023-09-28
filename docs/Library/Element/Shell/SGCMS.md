@@ -9,6 +9,8 @@ A planar shell element uses SGCMQ for membrane action and DKT4 element for plate
 * Integration Membrane: Five-Point Irons Scheme
 * Integration Plate: 3rd Gauss Scheme
 
+![encoding](../PIC/Q4.svg)
+
 ## Syntax
 
 ```

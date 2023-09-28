@@ -4,9 +4,10 @@ Bilinear Incompatible Quadrilateral
 
 * Number of Nodes: 4
 * Number of DoFs: 2 (Translation, Translation)
+* Integration Scheme: 2nd Order Gauss
 * Constant Consistent Mass Matrix With Same Order Integration
 
-![encoding](CP4.svg)
+![encoding](../../PIC/Q4.svg)
 
 ## Syntax
 

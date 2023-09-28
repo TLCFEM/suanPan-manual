@@ -5,6 +5,8 @@ DKT Triangle Shell
 * Number of Nodes: 3
 * Number of DoFs: 6 (Translation, Translation, Translation, Rotation, Rotation, Rotation)
 
+![encoding](../PIC/T3.svg)
+
 ## Syntax
 
 ```

@@ -4,10 +4,11 @@ Five-Point Quadrilateral
 
 * Number of Nodes: 5
 * Number of DoFs: 2 (Translation, Translation)
+* Integration Scheme: 2nd Order Irons
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 
-![encoding](CP5.svg)
+![encoding](../../PIC/Q5.svg)
 
 ## Syntax
 

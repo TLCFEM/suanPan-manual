@@ -5,6 +5,8 @@ DKT Quadrilateral Shell
 * Number of Nodes: 4
 * Number of DoFs: 6 (Translation, Translation, Translation, Rotation, Rotation, Rotation)
 
+![encoding](../PIC/Q4.svg)
+
 ## Syntax
 
 ```

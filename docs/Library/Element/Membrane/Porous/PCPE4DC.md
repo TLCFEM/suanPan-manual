@@ -7,6 +7,8 @@ Bilinear Quadrilateral With Pore Pressure
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 
+![encoding](../../PIC/Q4.svg)
+
 ## Syntax
 
 ```

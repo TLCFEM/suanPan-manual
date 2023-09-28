@@ -14,6 +14,8 @@ Depending on the different literature and textbooks, different conventions may b
 Thus, the term local $$z$$-axis may not be the same axis you may expect.
 Please validate the orientation first before using it.
 
+![global and local coordinate systems](../PIC/Transform.svg)
+
 For 2D beam elements, the local $$z$$-axis is defined to be the global $$z$$-axis.
 
 ## Syntax

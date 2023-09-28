@@ -4,9 +4,10 @@ Bilinear Quadrilateral With Crack Phase
 
 * Number of Nodes: 4
 * Number of DoFs: 3 (Translation, Translation, Damage)
+* Integration Scheme: 2nd Order Gauss
 * Zero Mass Entries On Damage DoFs
 
-![encoding](Plane/CP4.svg)
+![encoding](../../PIC/Q4.svg)
 
 ## Syntax
 
