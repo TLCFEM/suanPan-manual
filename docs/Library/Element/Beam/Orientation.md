@@ -7,8 +7,10 @@ Similar configurations are also required in other FEM software, see,
 for example, Section 26.3.4 `Beam element cross-section orientation` of the Abaqus Analysis User's Manual.
 
 The local $$x$$-axis is along the cord of the beam element.
-The local $$z$$-axis is often the strong axis of the section if there is one.
+The local $$z$$-axis is temporarily taken as the vector assigned by user.
 The local $$y$$-axis is defined to be the cross product of the local $$z$$-axis and the local $$x$$-axis.
+After obtaining the local $$y$$-axis, the local $$z$$-axis is redefined to be the cross product of the local $$x$$-axis
+and the local $$y$$-axis.
 
 Depending on the different literature and textbooks, different conventions may be used.
 Thus, the term local $$z$$-axis may not be the same axis you may expect.

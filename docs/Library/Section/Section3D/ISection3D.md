@@ -2,6 +2,8 @@
 
 3D I-Section
 
+![arrangement](PIC/ISection.svg)
+
 ## Syntax
 
 ```
@@ -14,7 +16,7 @@ section ISection3D (1) (2) (3) (4) (5) (6) (7) (8) [9] [10] [11]
 # (6) double, web height
 # (7) double, web thickness
 # (8) int, material tag
-# [9] int, number of integration points, default: 3
+# [9] int, number of integration points, default: 6
 # [10] double, eccentricity along y axis, default: 0.0
 # [11] double, eccentricity along z axis, default: 0.0
 ```

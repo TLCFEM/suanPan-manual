@@ -1,13 +1,13 @@
-# Bar2D
+# Cell2D
 
-2D Reinforcing Bar Section
+2D Cell Section
 
 ![arrangement](PIC/Cell.svg)
 
 ## Syntax
 
 ```
-section Bar2D (1) (2) (3) [4]
+section Cell2D (1) (2) (3) [4]
 # (1) int, unique section tag
 # (2) double, area
 # (3) int, material tag

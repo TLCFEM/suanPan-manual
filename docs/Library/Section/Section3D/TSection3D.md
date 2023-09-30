@@ -2,6 +2,8 @@
 
 3D T-Section
 
+![arrangement](PIC/TSection.svg)
+
 ## Syntax
 
 ```
@@ -12,7 +14,7 @@ section TSection3D (1) (2) (3) (4) (5) (6) [7] [8] [9]
 # (4) double, web height
 # (5) double, web thickness
 # (6) int, material tag
-# [7] int, number of integration points, default: 3
+# [7] int, number of integration points, default: 6
 # [8] double, eccentricity along y axis, default: 0.0
 # [9] double, eccentricity along z axis, default: 0.0
 ```

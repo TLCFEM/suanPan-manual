@@ -2,6 +2,8 @@
 
 2D H-Section
 
+![arrangement](PIC/HSection.svg)
+
 ## Syntax
 
 ```
@@ -9,8 +11,8 @@ section HSection2D (1) (2...7) (8) [9] [10]
 # (1) int, unique tag
 # (2...7) double, section dimensions
 # (8) int, material tag
-# [9] int, number of integration points, default: 6
-# [10] double, eccentricity measured from the centre, default: 0.0
+# [9] int, number of integration points for flanges, default: 6
+# [10] double, eccentricity/location, default: 0.0
 ```
 
 ## Remarks
@@ -23,7 +25,10 @@ section HSection2D (1) (2...7) (8) [9] [10]
    * `(6)` web width
    * `(7)` web thickness
 
-The eccentricity is measured from the centre of the web.
+Two integration points are used for web.
+The user assigned number of integration points is used for flanges.
+
+The eccentricity is measured from the centre of the web/flanges.
 If the left and right flanges have different sizes, the default trivial eccentricity will lead to extra bending moments
 when the section is subjected to axial force.
 Eccentricity can be manually adjusted.
