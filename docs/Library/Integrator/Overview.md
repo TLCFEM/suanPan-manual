@@ -1,4 +1,4 @@
-# Integrator Overview
+# Overview
 
 The `Integrator` is some middleware between `Solver` (in charge of solving the system) and `Domain` (in charge of
 managing the state of the system). It is mainly responsible for time integration in which the proper equation of motion

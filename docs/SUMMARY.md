@@ -343,7 +343,7 @@
         * [NonlinearGurson1D](Library/Material/Material1D/vonMises/NonlinearGurson1D.md)
         * [VAFCRP1D](Library/Material/Material1D/vonMises/VAFCRP1D.md)
 * Material2D
-    * [AxisymmetricElastic](Library/Material/Material2D/AxisymmetricELastic.md)
+    * [AxisymmetricElastic](Library/Material/Material2D/AxisymmetricElastic.md)
     * [Bilinear2D](Library/Material/Material2D/Bilinear2D.md)
     * [Concrete21](Library/Material/Material2D/Concrete21.md)
     * [Concrete22](Library/Material/Material2D/Concrete22.md)
