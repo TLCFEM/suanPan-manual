@@ -106,7 +106,7 @@ print(ele)
      [-2.05329056 -2.27511995 -1.92020289 -2.16420526 -2.09766142 -1.98674672]]
     node_ids: [ 71  72  65 634 635 636]
     material: Material(name='default', elastic_modulus=1, poissons_ratio=0, yield_strength=1, density=1, color='w')
-    
+
 
 ### Area
 
@@ -119,8 +119,8 @@ print(ele.geometric_properties())
 ```
 
     (area, qx, qy, ixx, iyy, ixy, e, g, rho)
-    (0.04964864399827342, -0.10341172739100991, -0.20629803759365845, 0.21565931750893194, 0.8574163726167644, 0.4296612130739319, 1, 0.5, 1)
-    
+    (0.04964864399827368, -0.10341172739101043, -0.2062980375936595, 0.21565931750893302, 0.8574163726167687, 0.4296612130739341, 1, 0.5, 1)
+
 
 Alternatively, the area can also be computed as the determinant of the Jacobian matrix of the isoparametric mapping.
 
@@ -136,7 +136,7 @@ print(centroid)
 ```
 
     [-4.15515956 -2.08287113]
-    
+
 
 ### Warping Function
 
@@ -152,10 +152,10 @@ print(omega)
 print(f"sum(omega) = {omega.sum()}")
 ```
 
-    [ 2.17485500e-15 -2.55444013e-13 -4.06777826e-13 ...  2.37653039e-14
-     -2.52889890e-14  3.33772685e-14]
-    sum(omega) = 1.857925203976527e-26
-    
+    [ 4.71528948e-15 -2.57142549e-13 -4.07401342e-13 ...  2.29752507e-14
+     -2.35454358e-14  3.65875926e-14]
+    sum(omega) = 1.6155871338926322e-27
+
 
 As we are using a circular section as the example, the warping function is zero everywhere.
 The above method computes the warping in the local coordinate system.
@@ -170,16 +170,16 @@ To obtain $$\dfrac{\partial\omega}{\partial{}y}$$ and $$\dfrac{\partial\omega}{\
 from sectionproperties.analysis.fea import shape_function
 
 # use centroid
-N, B, _ = shape_function(ele.coords, [0, 1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0])
+N, B, _, _, _ = shape_function(ele.coords, [0, 1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0])
 centre_omega = omega[ele.node_ids].dot(N)
 centre_partial = B @ omega[ele.node_ids]
 print(f"warping function = {centre_omega}")
 print(f"derivatives = {centre_partial}")
 ```
 
-    warping function = 1.179276004951435e-12
-    derivatives = [-2.12767974e-12 -1.19115699e-12]
-    
+    warping function = 1.1776217629584232e-12
+    derivatives = [-2.11447839e-12 -1.18613467e-12]
+
 
 Since for circular sections, there is no warping, the corresponding derivatives are trivial.
 
@@ -209,7 +209,7 @@ class Cell3DOS:
         If `omega` is None, no warping is considered.
         """
 
-        N, B, self.area = shape_function(ele.coords, array([0, 1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0]))
+        N, B, self.area, _, _ = shape_function(ele.coords, array([0, 1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0]))
         self.tag = ele.el_id + 1  # el_id is zero-based
         self.y, self.z = ele.coords[:, :3].mean(axis=1)
         self.omega = omega.dot(N) if omega is not None else 0
@@ -261,6 +261,9 @@ Now it is possible to pass in a geometry, and call the export function to genera
 ```python
 to_file(to_cell3dos(geometry), "circular.sp")
 ```
+
+!!! Note
+    The above functionality has been added to the latest `sectionproperties` library, see [this](https://sectionproperties.readthedocs.io/en/latest/gen/sectionproperties.post.fibre.to_fibre_section.html) page.
 
 ### Validation
 
@@ -373,8 +376,8 @@ print(f'torsional constant = {sum(f.area * ((f.pz + f.y) * f.y - (f.py - f.z) * 
     
 
 
-    torsional constant = 76.38036877558419
-    
+    torsional constant = 76.38036877511132
+
 
 ### Validation
 
@@ -472,7 +475,7 @@ with h5py.File("R1-RF.h5", "r") as f:
      [0.8        1.44073171]
      [0.9        1.87621132]
      [1.         2.40182793]]
-    
+
 
 
     
