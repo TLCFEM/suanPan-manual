@@ -220,6 +220,7 @@
     * [Membrane](Library/Element/Membrane/Membrane.md)
 * Modifier
     * [Modifier](Library/Element/Modifier/Modifier.md)
+    * [ElementalLee](Library/Element/Modifier/ElementalLee.md)
 * Patch
     * [Patch](Library/Element/Patch/Patch.md)
     * [PatchCube](Library/Element/Patch/PatchCube.md)
@@ -268,6 +269,7 @@
     * [GSSSS](Library/Integrator/GSSSS.md)
     * Newmark
         * [LeeNewmark](Library/Integrator/Newmark/LeeNewmark.md)
+        * [LeeElementalNewmark](Library/Integrator/Newmark/LeeElementalNewmark.md)
         * [LeeNewmarkFull](Library/Integrator/Newmark/LeeNewmarkFull.md)
         * [Newmark](Library/Integrator/Newmark/Newmark.md)
         * [RayleighNewmark](Library/Integrator/Newmark/RayleighNewmark.md)
