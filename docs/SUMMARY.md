@@ -37,6 +37,7 @@
         * [bouncing of a ball](Example/Structural/Dynamics/bouncing-of-a-ball.md)
         * [mass-spring-dashpot system](Example/Structural/Dynamics/mass-spring-dashpot-system.md)
         * [dynamic analysis of a portal frame](Example/Structural/Dynamics/dynamic-analysis-of-a-portal-frame.md)
+        * [elemental damping](Example/Structural/Dynamics/elemental-damping.md)
         * [particle collision](Example/Structural/Dynamics/particle-collision.md)
         * [response history analysis of an elastic coupled wall](Example/Structural/Dynamics/response-history-analysis-of-an-elastic-coupled-wall.md)
         * [multi-support excitation](Example/Structural/Dynamics/multi-support-excitation.md)
