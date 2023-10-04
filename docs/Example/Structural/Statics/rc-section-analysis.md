@@ -16,7 +16,7 @@ The section configuration is shown as follows.
 
 The [`SingleSection2D`](../../../Library/Element/Special/SingleSection.md) element is **NOT** a connector element.
 Only one node is required to define the element.
-First we define an arbitrary node.
+First, we define an arbitrary node.
 
 ```
 node 1 0 0
