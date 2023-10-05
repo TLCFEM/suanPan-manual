@@ -1,7 +1,7 @@
 # [★★☆☆☆] Elemental Damping
 
 In this example, we demonstrate how to apply elemental damping to the system.
-The model can be [downloaded](elemental-damping.sp)
+The model can be [downloaded](elemental-damping.sp).
 
 ## Reference
 
@@ -11,7 +11,7 @@ Some other damping models, such as the Rayleigh damping model, can be expressed 
 stiffness matrices.
 The corresponding damping matrix can be either formulated at global level by operating on global stiffness and mass
 matrices, or at element level by operating on elemental stiffness and mass matrices.
-For the later case, the global damping matrix can be assembled by the elemental damping matrices.
+In the later case, the global damping matrix can be assembled by the elemental damping matrices.
 
 The Lee's damping model [10.1016/j.jsv.2020.115312](https://doi.org/10.1016/j.jsv.2020.115312) is used as the
 fundamental model.
@@ -122,10 +122,10 @@ As $$u_0=0.2$$, for $$\eta=0.05$$, $$u_1=0.146$$, for $$\eta=0.2$$, $$u_1=0.055$
 
 ![displacement history](elemental-damping-ex.svg)
 
-Because those two elements are not connected/coupled with each other. They respond independently and follow the assigned
+Because those two elements are not connected/coupled with each other, they respond independently and follow the assigned
 damping ratios.
 This is not practically useful but demonstrates the idea of elemental damping.
-In actual applications, a reference damping ratio curve can be defined to control the overall damping behavior of the
+In actual applications, a reference damping ratio curve can be defined to control the overall damping behaviour of the
 system.
 Then different damping ratios can be assigned to different elements.
 
