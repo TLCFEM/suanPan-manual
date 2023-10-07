@@ -27,6 +27,8 @@ $$p-p_t+a\ge0$$ and $$b=\beta$$ when $$p-p_t+a<0$$. This $$\beta$$ parameter cha
 this ellipse on the compressive side of the hydrostatic axis. The constant $$M$$ modifies the radius of the ellipse
 along the $$q$$ axis.
 
+![yield surface](MCC.svg)
+
 The same function is used for plasticity potential so that $$G=F$$ and
 
 $$
