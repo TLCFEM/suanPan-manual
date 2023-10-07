@@ -10,7 +10,9 @@ are some minor errors in the derivation of consistent stiffness.
 This model resembles the one in ABAQUS but the third stress invariant does not enter yield surface. As a result, the
 yield surface on the $$\pi$$-plane is a circle.
 
-The implementation is documented in a [separated file](NonlinearCamClay.pdf).
+Interested readers can also refer to the corresponding section
+in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
+for more details.
 
 The following function is chosen as the yield surface.
 
