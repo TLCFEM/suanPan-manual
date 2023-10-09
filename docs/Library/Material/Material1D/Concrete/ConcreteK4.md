@@ -96,8 +96,8 @@ The reference strain $$e_{r,t}$$ and $$e_{r,c}$$ are used to control the damage 
 They can be expressed as
 
 $$
-e_{r,t}=\zeta_t\dfrac{f_t}{h_t},\qquad
-e_{r,c}=\zeta_c\dfrac{f_c}{h_d},
+e_{r,t}=\dfrac{f_t}{\zeta_tE},\qquad
+e_{r,c}=\dfrac{f_c}{\zeta_cE},
 $$
 
 in which $$\zeta_t$$ and $$\zeta_c$$ are `(10)` and `(11)` respectively.
@@ -118,7 +118,7 @@ The crack closing stiffness ratio `(3)` controls the slope of the segment where 
 Basic model:
 
 ```text
-material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-2 3E-2
+material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1. 1.
 ```
 
 ![tensile reference strain](K4.EX3.svg)
@@ -128,7 +128,7 @@ material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-2 3E-2
 Basic model:
 
 ```text
-material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-2 3E-2
+material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1. 1.
 ```
 
 ![compressive reference strain](K4.EX4.svg)
@@ -136,7 +136,7 @@ material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-2 3E-2
 ### A Cyclic Example
 
 ```text
-material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 5E-2 15E-2
+material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 5. 5.
 
 materialTest1D 1 -1E-5 300 90 150 90 150 90 150 90 150 90 150 90 150 90 150
 ```
