@@ -20,8 +20,8 @@ material ConcreteK4 (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) [12]
 # (7) double, crush (compressive) strength (+), typical: 40 (in MPa)
 # (8) double, crush (compressive) strain (+), typical: 0.002
 # (9) double, yield (compressive) strength ratio (<1), typical: ~0.7
-# (10) double, reference tensile strain
-# (11) double, reference compressive strain
+# (10) double, reference tensile zeta
+# (11) double, reference compressive zeta
 # [12] double, density, default: 0.0
 ```
 
@@ -92,7 +92,15 @@ d_t=1-\exp\left(-\dfrac{k_t}{e_{r,t}}\right),\qquad
 d_c=1-\exp\left(-\dfrac{k_c}{e_{r,c}}\right).
 $$
 
-The reference strain $$e_{r,t}$$ `(10)` and $$e_{r,c}$$ `(11)` are used to control the damage evolution.
+The reference strain $$e_{r,t}$$ and $$e_{r,c}$$ are used to control the damage evolution.
+They can be expressed as
+
+$$
+e_{r,t}=\zeta_t\dfrac{f_t}{h_t},\qquad
+e_{r,c}=\zeta_c\dfrac{f_c}{h_d},
+$$
+
+in which $$\zeta_t$$ and $$\zeta_c$$ are `(10)` and `(11)` respectively.
 
 
 ## Examples
@@ -110,7 +118,7 @@ The crack closing stiffness ratio `(3)` controls the slope of the segment where 
 Basic model:
 
 ```text
-material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-4 1E-3
+material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-2 3E-2
 ```
 
 ![tensile reference strain](K4.EX3.svg)
@@ -120,7 +128,7 @@ material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-4 1E-3
 Basic model:
 
 ```text
-material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-4 1E-3
+material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-2 3E-2
 ```
 
 ![compressive reference strain](K4.EX4.svg)
@@ -128,7 +136,7 @@ material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 1E-4 1E-3
 ### A Cyclic Example
 
 ```text
-material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 5E-4 5E-3
+material ConcreteK4 1 3E4 .05 .01 .01 3. 10. 2E-3 .7 5E-2 15E-2
 
 materialTest1D 1 -1E-5 300 90 150 90 150 90 150 90 150 90 150 90 150 90 150
 ```
