@@ -78,3 +78,5 @@ See [Fibre3DOS](../../Section/SectionOS/Fibre3DOS.md) for further explanation.
 ## Example
 
 See [this](../../../Example/Structural/Statics/thin-walled-section.md) example.
+
+Also see [benchmark](B31OS.BENCHMARK.md) problems.
