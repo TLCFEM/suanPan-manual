@@ -256,7 +256,8 @@ fix2 1 E 1
 hdf5recorder 1 Node U 5
 
 step arclength 1 5 2 .001
-solver Ramm 1 1 true
+set ini_step_size 1
+set fixed_step_size true
 
 criterion MaxResistance 1 5 2 .1
 
