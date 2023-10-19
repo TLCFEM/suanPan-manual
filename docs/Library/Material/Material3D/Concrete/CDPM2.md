@@ -19,15 +19,15 @@ material CDPM2ANISO (1) [2-16]
 # [4] double, tension strength (positive), default: 3.0
 # [5] double, compression strength (positive), default: 30.0
 # [6] double, q_h0, initial hardening factor, default: 0.3
-# [7] double, h_p hardening ratio, default: .05
+# [7] double, h_p hardening ratio, default: .01
 # [8] double, d_f, default: .85
 # [9] double, a_h, hardening related parameter, default: 0.08
 # [10] double, b_h, hardening related parameter, default: 0.003
 # [11] double, c_h, hardening related parameter, default: 2.0
 # [12] double, d_h, hardening related parameter, default: 1E-6
 # [13] double, a_s, ductility related parameter, default: 5.0
-# [14] double, e_ft, tension softening parameter, default: 3E-4
-# [15] double, e_fc, compression softening parameter, default: 3E-3
+# [14] double, e_ft, tension softening parameter, default: 5E-4
+# [15] double, e_fc, compression softening parameter, default: 5E-4
 # [16] double, density, default: 0.0
 ```
 
