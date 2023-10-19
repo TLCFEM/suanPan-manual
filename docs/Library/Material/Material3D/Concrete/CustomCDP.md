@@ -56,9 +56,9 @@ Further explanation of the curves can be seen in
 
 ## Example
 
-For the porpose of illustration, we provide a simple example, which may not be applicable to real concrete behaviour.
+For the purpose of illustration, we provide a simple example, which may not be applicable to real concrete behaviour.
 
-Let's, say for example, the damage degradation is a linear function of $$\kappa$$, that is
+Let's, say, for example, the damage degradation is a linear function of $$\kappa$$, that is
 
 $$
 d(\kappa)=\kappa,
