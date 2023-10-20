@@ -66,3 +66,12 @@ $$\omega_c$$ and $$\omega_t$$ are the compressive and tensile damage variables, 
 
 Both damage types have physical implications.
 Depending on the damage type, the model parameters may be adjusted differently.
+
+The reference strains $$e_{ft}$$ and $$e_{fc}$$ affect the degradation of strength.
+
+The following are two examples, using different values of $$e_{ft}$$ and $$e_{fc}$$,
+while all other parameters are the default values.
+
+![compressive](CDPM2.EX1.svg)
+
+![tensile](CDPM2.EX2.svg)
