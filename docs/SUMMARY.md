@@ -471,6 +471,7 @@
 * [BFGS](Library/Solver/BFGS.md)
 * [MPDC](Library/Solver/MPDC.md)
 * [Newton](Library/Solver/Newton.md)
+* [AICN](Library/Solver/AICN.md)
 * [Ramm](Library/Solver/Ramm.md)
 
 ### Step

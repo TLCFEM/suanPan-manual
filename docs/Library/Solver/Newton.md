@@ -14,5 +14,5 @@ solver mNewton (1)
 ## Remarks
 
 1. The modified Newton method only assembles tangent stiffness at the beginning of each sub-step. Automatic stepping can
-   be enabled to obtain optimized computational workload.
+   be enabled to obtain optimised computational workload.
 2. The Aitken acceleration is automatically enabled in the modified Newton method.
