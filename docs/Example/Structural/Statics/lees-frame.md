@@ -45,7 +45,8 @@ Both snap-back and snap-through are involved in this example, the arc length met
 magnitude $$-1$$ is applied on the DoF 2 of node 7.
 
 ```
-step arclength 1 7 2 -1
+refload 1 0 -1 2 7
+step arclength 1
 ```
 
 Here the magnitude of reference load matters. A proper selection of reference load may help to converge. By default,
