@@ -2,13 +2,35 @@
 
 ## Syntax
 
-```
+### prior to v3.2.0
+
+For versions prior to v3.2.0, the syntax is as follows.
+Only one single DoF is permitted to be controlled.
+It is directly defined in the step command.
+
+```text
 step ArcLength (1) (2) (3) (4)
 # (1) int, unique step tag
 # (2) int, reference node tag
 # (3) int, reference dof tag
 # (4) double, reference magnitude of applied load
 ```
+
+### v3.2.0 and later
+
+For versions v3.2.0 and later, the syntax is as follows.
+The reference load is no longer defined in the step command.
+Instead, it is defined by the [`RefForce`](../../Collection/Define/load.md) command.
+
+```text
+step ArcLength (1)
+# (1) int, unique step tag
+# (2) int, reference node tag
+# (3) int, reference dof tag
+# (4) double, reference magnitude of applied load
+```
+
+## Arc-length Control
 
 The step size in an arc-length analysis is now the arc length.
 One can use the following to control stepping strategy.

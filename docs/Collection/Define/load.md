@@ -120,6 +120,22 @@ load lineudl3d (1) (2) (3) (4) (5...)
 # (5...) int, node tags
 ```
 
+### Reference Load
+
+For arc-length analysis, reference load can be defined via the `RefForce` command.
+
+```text
+refforce (1) (2) (3) (4) (5...)
+refload (1) (2) (3) (4) (5...)
+load refforce (1) (2) (3) (4) (5...)
+load refload (1) (2) (3) (4) (5...)
+# (1) int, unique tag
+# (2) int, amplitude tag, has no effect in arc-length analysis, just a placeholder, can be set to 0
+# (3) double, reference magnitude
+# (4) int, dof tag
+# (5...) int, node tags
+```
+
 ## Remarks
 
 1. The leading `load` keyword can often be omitted for simplicity.
