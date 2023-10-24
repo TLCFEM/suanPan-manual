@@ -255,7 +255,9 @@ fix2 1 E 1
 
 hdf5recorder 1 Node U 5
 
-step arclength 1 5 2 .001
+refload 1 0 .001 2 5
+
+step arclength 1
 set ini_step_size 1
 set fixed_step_size true
 
