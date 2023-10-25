@@ -3,7 +3,7 @@
 Currently, the available types of output variables are listed as follows.
 
 Please note, in principle, it is possible to define any types on any recorders, but if the target recorder does not 
-support the type, trivial/empty values will be returns. If saving recorder does not create any files on the disk, 
+support the type, trivial/empty values will be returned. If saving recorder does not create any files on the disk, 
 meaning that the output type is not available for the target object. For example, recording strain/stress `E`/`S` 
 values of any nodes is not possible and will lead to no output.
 

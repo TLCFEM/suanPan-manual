@@ -86,6 +86,19 @@ recorder (1) hdf5 GroupNode (3) [every 4] [5...]
 
 If `GroupNode` is used, then the tags of node groups shall be used.
 
+Nodal scalar response can be directly summed up by using the `Sum` recorder.
+
+```text
+recorder (1) plain Sum (3) [every 4] [5...]
+recorder (1) hdf5 GroupSum (3) [every 4] [5...]
+# (1) int, unique recorder tag
+# (3) string, object type that needs to be recorded
+# [4] int, optional argument with leading keyword "every" to indicate the interval of recording
+# [5...] int, tags of nodes or node groups, etc.
+```
+
+It is handy to record the summation of nodal response, for example, the summation of nodal reaction force.
+
 ## Element Recorder
 
 To record element response,
