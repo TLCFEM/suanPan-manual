@@ -22,8 +22,9 @@ jobs:
           pip install -e .
       - name: Publish
         run: |
-          git pull
-          mike deploy 3.2
+          git fetch origin
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
+          git pull
+          mike deploy 3.2
           git push origin gh-pages
