@@ -34,7 +34,12 @@ See [SectionNM](../../Section/SectionNM/SectionNM.md) for more information about
 
 ## Output Type
 
-The `NMB31` element additional support recording element deformation and resistance via the `BEAME` and `BEAMS` tokens.
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning          |
+|----------------|---------------------------|
+| BEAME          | local element deformation |
+| BEAMS          | local element resistance  |
 
 For example,
 

@@ -45,6 +45,16 @@ material CDPM2ANISO (1) [2-16]
 Details of implementation can be seen in the corresponding section
 in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 
+## Recording
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning              |
+|----------------|-------------------------------|
+| DT             | tensile damage                |
+| DC             | compressive damage            |
+| KAPPAP         | plastic internal variable     |
+
 ## Examples
 
 The isotropic damage uses the following expression for the final stress $$\mathbf{\sigma}$$,

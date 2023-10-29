@@ -30,8 +30,10 @@ All 3D material models support the following basic output types.
 | PE             | plastic strain                  |
 | EEP            | principal elastic strain        |
 | PEP            | principal plastic strain        |
-| PEEP           | equivalent plastic strain       |
+| EEQ            | equivalent strain               |
+| PEEQ           | equivalent plastic strain       |
 | HYDRO          | hydrostatic stress              |
+| MISES          | von Mises stress                |
 | HIST           | history variable vector         |
 
 Depending on the specific material model, additional output types may be available.

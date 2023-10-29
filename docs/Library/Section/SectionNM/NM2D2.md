@@ -80,3 +80,11 @@ $$
 $$
 
 given that $$H$$ and $$K$$ are hardening ratios based on plastic strain.
+
+## Output Type
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning                 |
+|----------------|----------------------------------|
+| YF             | yielding flag (vector of size 2) |

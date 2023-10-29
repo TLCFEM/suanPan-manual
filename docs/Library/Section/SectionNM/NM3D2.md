@@ -31,8 +31,8 @@ $$
 f=1.15p^2+m_s^2+m_w^4+3.67p^2m_s^2+3p^6m_w^2+4.65m_s^4m_w^2-c
 $$
 
-where $$p$$, $$m_s$$ and $$m_w$$ are normalised axial force and moments about strong and weak axes. The surface is
-suitable for I-sections.
+where $$p$$, $$m_s$$ and $$m_w$$ are normalised axial force and moments about strong and weak axes.
+The surface is suitable for I-sections.
 
 ### Option Two
 
@@ -83,4 +83,12 @@ $$
 \dfrac{H+K}{1+H+K},
 $$
 
-given that $$H$$ and $$K$$ are hardening ratios based on plastic strain.
+since $$H$$ and $$K$$ are hardening ratios based on plastic strain.
+
+## Output Type
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning                 |
+|----------------|----------------------------------|
+| YF             | yielding flag (vector of size 2) |

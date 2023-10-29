@@ -62,3 +62,14 @@ material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 | `initial_history(2)`   | $$\kappa_t$$   |
 | `initial_history(3)`   | $$\kappa_c$$   |
 | `initial_history(4-9)` | plastic strain |
+
+## Recording
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning              |
+|----------------|-------------------------------|
+| DT             | tensile damage                |
+| DC             | compressive damage            |
+| KAPPAT         | tensile internal variable     |
+| KAPPAC         | compressive internal variable | 
