@@ -350,7 +350,6 @@
         * [VAFCRP1D](Library/Material/Material1D/vonMises/VAFCRP1D.md)
 * [Material2D](Library/Material/Material2D/Material2D.md)
     * [AxisymmetricElastic](Library/Material/Material2D/AxisymmetricElastic.md)
-    * [Bilinear2D](Library/Material/Material2D/Bilinear2D.md)
     * [Concrete21](Library/Material/Material2D/Concrete21.md)
     * [Concrete22](Library/Material/Material2D/Concrete22.md)
     * [Elastic2D](Library/Material/Material2D/Elastic2D.md)
