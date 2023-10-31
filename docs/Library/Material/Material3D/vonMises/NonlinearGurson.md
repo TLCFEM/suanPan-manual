@@ -56,3 +56,11 @@ $$
 Parameters $$f_N$$, $$s_N$$ and $$\varepsilon_N$$ controls the normal distribution of volume fraction. **If $$f_N=0$$,
 the nucleation is disabled. In this case, when $$f_0=0$$, the volume fraction will stay at zero regardless of strain
 history.**
+
+## Recording
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning |
+|----------------|------------------|
+| VF             | volume fraction  |

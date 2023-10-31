@@ -1,25 +1,25 @@
-# PCPE4DC
+# PCPE8DC
 
-Bilinear Quadrilateral With Pore Pressure (Drained)
+Quadratic Quadrilateral With Pore Pressure (Drained)
 
-* Number of Nodes: 4
+* Number of Nodes: 8
 * Number of DoFs: 4 (Solid Translation, Solid Translation, Fluid Translation, Fluid Translation)
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 
-![encoding](../../PIC/Q4.svg)
+![encoding](../../PIC/Q8.svg)
 
 ## Syntax
 
 ```
-element PCPE4DC (1) (2...5) (6) (7) (8) (9) (10)
+element PCPE8DC (1) (2...9) (10) (11) (12) (13) (14)
 # (1) int, unique element tag
-# (2...5) int, node i, j, k, l
-# (6) int, solid material tag
-# (7) int, fluid material tag
-# (8) double, alpha
-# (9) double, porosity n
-# (10) double, permeability k
+# (2...9) int, node i, j, k, l
+# (10) int, solid material tag
+# (11) int, fluid material tag
+# (12) double, alpha
+# (13) double, porosity n
+# (14) double, permeability k
 ```
 
 ## Remarks
@@ -34,7 +34,7 @@ For example,
 material Fluid 1 1000. 1E-2
 ```
 
-The $$\alpha$$ parameter `(8)` is often close to unity for soils. The porosity $$n$$ ranges from zero to unity. The
+The $$\alpha$$ parameter `(12)` is often close to unity for soils. The porosity $$n$$ ranges from zero to unity. The
 isotropic permeability is assumed.
 
 Interactions with other elements (with different arrangements of DoFs) can only be fulfilled via constraints.

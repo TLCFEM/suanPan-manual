@@ -485,7 +485,7 @@ with h5py.File("R1-RF.h5", "r") as f:
 
 We shall see the initial stiffness is $$74.93$$, which is close to the torsional constant $$J$$.
 Due to the existence of bi-moments, the torque is not linearly proportional to the rotation.
-If one records the `BEAMS` output, the St. Venant torsion would be $$GJ\phi'$$.
+If one records the `S` output, the St. Venant torsion would be $$GJ\phi'$$.
 
 ## Flat Bar Example
 

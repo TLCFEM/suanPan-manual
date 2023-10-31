@@ -40,7 +40,7 @@ implementation.
 2. Eq. 7.41
 3. Eq. 7.69
 
-Use `BEAMS` to record section forces.
+Use `S` to record section forces.
 Each section contains six force components, namely axial force, bending moment about major axis, bending moment about
 minor axis, Wagner stress resultant, bi-moment and St. Venant torsion.
 

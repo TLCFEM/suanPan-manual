@@ -20,3 +20,11 @@ $$
 $$
 
 where $$\nu$$ is Poisson's ratio.
+
+## Recording
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning |
+|----------------|------------------|
+| VF             | volume fraction  |

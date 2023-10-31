@@ -71,5 +71,3 @@ This model supports the following additional history variables to be recorded.
 |----------------|-------------------------------|
 | DT             | tensile damage                |
 | DC             | compressive damage            |
-| KAPPAT         | tensile internal variable     |
-| KAPPAC         | compressive internal variable | 

@@ -4,11 +4,8 @@ All uniaxial material models support the following basic output types.
 
 | variable label | physical meaning |
 |----------------|------------------|
-| S, S11         | uniaxial stress  |
-| E, E11         | uniaxial strain  |
-| EE             | elastic strain   |
-| PE             | plastic strain   |
-| HIST           | history vector   |
+| S11            | uniaxial stress  |
+| E11            | uniaxial strain  |
 
 Depending on the specific material model, additional output types may be available.
 

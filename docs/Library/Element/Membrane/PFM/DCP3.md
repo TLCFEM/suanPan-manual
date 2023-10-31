@@ -32,3 +32,12 @@ element DCP3 (1) (2...4) (5) (6) (7) [8]
 
 * The third DoF is the damage variable. Boundary conditions can be assigned.
 * The characteristic length `(7)` can be set to zero to automatically determine the value based on geometry.
+
+## Recording
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning |
+|----------------|------------------|
+| DAMAGE         | damage variable  |
+

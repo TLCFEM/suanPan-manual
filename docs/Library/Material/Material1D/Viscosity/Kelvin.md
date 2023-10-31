@@ -24,12 +24,12 @@ This model supports the following additional history variables to be recorded.
 
 | variable label | physical meaning   |
 |----------------|--------------------|
+| S              | total stress       |
+| E              | total strain       |
+| V              | total strain rate  | 
 | SD             | damper stress      |
 | ED             | damper strain      |
 | VD             | damper strain rate |
 | SS             | spring stress      |
 | ES             | spring strain      | 
 | VS             | spring strain rate |
-| S              | total stress       |
-| E              | total strain       |
-| V              | total strain rate  | 

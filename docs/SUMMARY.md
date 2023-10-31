@@ -218,6 +218,9 @@
         * [CINP4](Library/Element/Membrane/Plane/CINP4.md)
     * Geotechnical
         * [PCPE4DC](Library/Element/Membrane/Porous/PCPE4DC.md)
+        * [PCPE4UC](Library/Element/Membrane/Porous/PCPE4UC.md)
+        * [PCPE8DC](Library/Element/Membrane/Porous/PCPE8DC.md)
+        * [PCPE8UC](Library/Element/Membrane/Porous/PCPE8UC.md)
     * [Membrane](Library/Element/Membrane/Membrane.md)
 * Modifier
     * [Modifier](Library/Element/Modifier/Modifier.md)
@@ -345,7 +348,7 @@
         * [Multilinear1D](Library/Material/Material1D/vonMises/Multilinear1D.md)
         * [NonlinearGurson1D](Library/Material/Material1D/vonMises/NonlinearGurson1D.md)
         * [VAFCRP1D](Library/Material/Material1D/vonMises/VAFCRP1D.md)
-* Material2D
+* [Material2D](Library/Material/Material2D/Material2D.md)
     * [AxisymmetricElastic](Library/Material/Material2D/AxisymmetricElastic.md)
     * [Bilinear2D](Library/Material/Material2D/Bilinear2D.md)
     * [Concrete21](Library/Material/Material2D/Concrete21.md)

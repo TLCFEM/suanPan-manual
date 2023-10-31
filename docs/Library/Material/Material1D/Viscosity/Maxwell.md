@@ -37,12 +37,13 @@ material Maxwell (1) (2) (3) [4] [5] [6]
 
 This model supports the following additional history variables to be recorded.
 
-| variable label | physical meaning   |
-|----------------|--------------------|
-| SD, SS, S      | stress             |
-| ED             | damper strain      |
-| VD             | damper strain rate |
-| ES             | spring strain      | 
-| VS             | spring strain rate |
-| E              | total strain       |
-| V              | total strain rate  | 
+| variable label | physical meaning        |
+|----------------|-------------------------|
+| SD, SS, S      | stress                  |
+| ED             | damper strain           |
+| VD             | damper strain rate      |
+| ES             | spring strain           | 
+| VS             | spring strain rate      |
+| E              | total strain            |
+| V              | total strain rate       | 
+| LITR           | local iteration counter | 

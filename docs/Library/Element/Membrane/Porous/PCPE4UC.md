@@ -1,6 +1,6 @@
-# PCPE4DC
+# PCPE4UC
 
-Bilinear Quadrilateral With Pore Pressure (Drained)
+Bilinear Quadrilateral With Pore Pressure (Undrained)
 
 * Number of Nodes: 4
 * Number of DoFs: 4 (Solid Translation, Solid Translation, Fluid Translation, Fluid Translation)
@@ -12,14 +12,13 @@ Bilinear Quadrilateral With Pore Pressure (Drained)
 ## Syntax
 
 ```
-element PCPE4DC (1) (2...5) (6) (7) (8) (9) (10)
+element PCPE4UC (1) (2...5) (6) (7) (8) (9)
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l
 # (6) int, solid material tag
 # (7) int, fluid material tag
 # (8) double, alpha
 # (9) double, porosity n
-# (10) double, permeability k
 ```
 
 ## Remarks

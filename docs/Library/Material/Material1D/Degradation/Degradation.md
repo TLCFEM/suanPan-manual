@@ -33,7 +33,7 @@ $$
 
 where $$\bar{K}$$ is the effective stiffness of the intact material model.
 
-### Stress Depedent Degradation
+### Stress Dependent Degradation
 
 Assuming the degradation factor depends on the strain history, namely, $$D=D(\bar{\sigma}_{max})$$.
 In which $$\bar{\sigma}_{max}$$ is the maximum effective stress of the whole loading history.
@@ -61,3 +61,12 @@ In general, the computation procedure of a degradation model can be listed as fo
 ## Caveats
 
 Such a formulation is only valid for the damage models that do not depend on plasticity history.
+
+## Recording
+
+This model (and its derivatives) supports the following additional history variables to be recorded.
+
+| variable label | physical meaning   |
+|----------------|--------------------|
+| DT             | tensile damage     |
+| DC             | compressive damage |
