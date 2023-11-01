@@ -1,6 +1,6 @@
 # CST/CSM
 
-Couple Stress Triangle/Membrane
+Couple Stress Mixed Triangle/Quadrilateral
 
 * Number of Nodes: 3, 4, 5, 6, 7, 8
 * Number of DoFs: 3 (Translation, Translation, Rotation)
@@ -12,13 +12,13 @@ Couple Stress Triangle/Membrane
 ## Syntax
 
 ```text
-element CST3 (1) (2...*) (3) [4] [5]
-element CST6 (1) (2...*) (3) [4] [5]
-element CSM4 (1) (2...*) (3) [4] [5]
-element CSM5 (1) (2...*) (3) [4] [5]
-element CSM6 (1) (2...*) (3) [4] [5]
-element CSM7 (1) (2...*) (3) [4] [5]
-element CSM8 (1) (2...*) (3) [4] [5]
+element CSMT3 (1) (2...*) (3) [4] [5]
+element CSMT6 (1) (2...*) (3) [4] [5]
+element CSMQ4 (1) (2...*) (3) [4] [5]
+element CSMQ5 (1) (2...*) (3) [4] [5]
+element CSMQ6 (1) (2...*) (3) [4] [5]
+element CSMQ7 (1) (2...*) (3) [4] [5]
+element CSMQ8 (1) (2...*) (3) [4] [5]
 # (1) int, unique element tag
 # (2...*) int, corresponding number of node tags
 # (3) int, material tag

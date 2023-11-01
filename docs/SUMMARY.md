@@ -132,6 +132,9 @@
 * [NodeFacet](Library/Constraint/NodeFacet.md)
 * [Embed2D](Library/Constraint/Embed2D.md)
 * [Embed3D](Library/Constraint/Embed3D.md)
+* [LJPotential2D](Library/Constraint/LJPotential2D.md)
+* [MaximumGap2D](Library/Constraint/MaximumGap2D.md)
+* [MinimumGap2D](Library/Constraint/MinimumGap2D.md)
 
 ### Converger
 
@@ -225,6 +228,7 @@
 * Modifier
     * [Modifier](Library/Element/Modifier/Modifier.md)
     * [ElementalLee](Library/Element/Modifier/ElementalLee.md)
+    * [LinearViscosity](Library/Element/Modifier/LinearViscosity.md)
 * Patch
     * [Patch](Library/Element/Patch/Patch.md)
     * [PatchCube](Library/Element/Patch/PatchCube.md)
@@ -326,6 +330,7 @@
         * [SlipLock](Library/Material/Material1D/Hysteresis/SlipLock.md)
         * [SteelBRB](Library/Material/Material1D/Hysteresis/SteelBRB.md)
         * [Trivial](Library/Material/Material1D/Hysteresis/Trivial.md)
+        * [Gap01](Library/Material/Material1D/Hysteresis/Gap01.md)
     * Viscosity
         * [Kelvin](Library/Material/Material1D/Viscosity/Kelvin.md)
         * [Maxwell](Library/Material/Material1D/Viscosity/Maxwell.md)
@@ -422,6 +427,7 @@
     * [Uniaxial](Library/Material/Wrapper/Uniaxial.md)
     * [OS146](Library/Material/Wrapper/OS146.md)
     * [OS146S](Library/Material/Wrapper/OS146S.md)
+    * [Substepping](Library/Material/Wrapper/Substepping.md)
 
 ### Recorder
 
