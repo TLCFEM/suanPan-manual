@@ -135,6 +135,8 @@
 * [LJPotential2D](Library/Constraint/LJPotential2D.md)
 * [MaximumGap2D](Library/Constraint/MaximumGap2D.md)
 * [MinimumGap2D](Library/Constraint/MinimumGap2D.md)
+* [MaximumGap3D](Library/Constraint/MaximumGap3D.md)
+* [MinimumGap3D](Library/Constraint/MinimumGap3D.md)
 
 ### Converger
 
