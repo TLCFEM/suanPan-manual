@@ -1,6 +1,6 @@
 # NM3D2
 
-$$N$$-$$M$$ Interaction Inelastic Section
+$$N$$-$$M$$ Interaction Inelastic Section (Linear Hardening)
 
 ## Reference
 
@@ -40,7 +40,7 @@ One may wish to customise the surface by assigning different weights and orders,
 syntax.
 
 ```
-section NM3D2 (1) (2...11) [(12 13 14 15)...]
+section NM3D2 (1) (2...11) [(12) (13) (14) (15)...]
 # (1) int, unique section tag
 # (2) double, EA
 # (3) double, strong axis EI
@@ -48,7 +48,7 @@ section NM3D2 (1) (2...11) [(12 13 14 15)...]
 # (5) double, yielding axial force
 # (6) double, yielding strong axis moment
 # (7) double, yielding weak axis moment
-# (8) double, c
+# (8) double, e
 # (9) double, isotropic hardening parameter H
 # (10) double, kinematic hardening parameter K
 # (11) double, linear density

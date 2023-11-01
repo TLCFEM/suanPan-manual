@@ -26,7 +26,7 @@ $$
 
 Clearly, $$a_0$$ is the initial yielding stress.
 
-To define for example the following hardening
+To define, for example, the following hardening
 
 $$
 \sigma_y(\bar\varepsilon_p)=100+4000\bar\varepsilon_p+80000\bar\varepsilon_p^3

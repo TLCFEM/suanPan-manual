@@ -20,7 +20,7 @@ $$
 F=\dfrac{\alpha}{\Delta{}t^2}U_p,
 $$
 
-where $$\Delta{}t$$ is the time increment of current substep, $$\alpha$$ is the multiplier. The denominator
+where $$\Delta{}t$$ is the time increment of the current substep, $$\alpha$$ is the multiplier. The denominator
 $$\Delta{}t^2$$ is included to produce (relatively) objective results. The determination of multiplier $$\alpha$$ often
 requires trial and error. In general, too large values shall be avoided.
 
@@ -127,8 +127,8 @@ constraint finiterigidwallmultiplier (1) (2...4) (5...7) (8...10)
 
 ## Remarks
 
-1. The normal vector of finite rigid walls is computed by cross product between two edges defined. Beware of the order.
+1. The normal vector of finite rigid walls is computed by cross-product between two edges defined. Beware of the order.
 2. The penalty function method can be used in both static and dynamic analysis.
 3. The multiplier method can only be used in static analysis.
-4. Both methods do not perform well in dynamic analysis, to conserve energy and momentum, users may use the 
+4. Both methods do not perform well in dynamic analysis, to conserve energy and momentum; users may use the 
    [`RestitutionWall`](RestitutionWall.md) constraint instead.

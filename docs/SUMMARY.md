@@ -266,6 +266,9 @@
 ### Group
 
 * [CustomNodeGroup](Library/Group/CustomNodeGroup.md)
+* [NodeGroup](Library/Group/NodeGroup.md)
+* [ElementGroup](Library/Group/ElementGroup.md)
+* [GroupGroup](Library/Group/GroupGroup.md)
 
 ### Integrator
 
@@ -298,12 +301,14 @@
         * [ConcreteCM](Library/Material/Material1D/Concrete/ConcreteCM.md)
         * [ConcreteExp](Library/Material/Material1D/Concrete/ConcreteExp.md)
         * [ConcreteTsai](Library/Material/Material1D/Concrete/ConcreteTsai.md)
+        * [ConcreteTable](Library/Material/Material1D/Concrete/ConcreteTable.md)
         * [ConcreteK4](Library/Material/Material1D/Concrete/ConcreteK4.md)
     * Degradation
         * [Degradation](Library/Material/Material1D/Degradation/Degradation.md)
         * [CustomStrainDegradation](Library/Material/Material1D/Degradation/CustomStrainDegradation.md)
         * [CustomStressDegradation](Library/Material/Material1D/Degradation/CustomStressDegradation.md)
         * [Dhakal](Library/Material/Material1D/Degradation/Dhakal.md)
+        * [TrilinearStrainDegradation](Library/Material/Material1D/Degradation/TrilinearStrainDegradation.md)
     * Elastic
         * [BilinearElastic1D](Library/Material/Material1D/Elastic/BilinearElastic1D.md)
         * [Elastic1D](Library/Material/Material1D/Elastic/Elastic1D.md)
@@ -402,6 +407,7 @@
         * [BilinearJ2](Library/Material/Material3D/vonMises/BilinearJ2.md)
         * [BilinearPeric](Library/Material/Material3D/vonMises/BilinearPeric.md)
         * [CustomGurson](Library/Material/Material3D/vonMises/CustomGurson.md)
+        * [TableGurson](Library/Material/Material3D/vonMises/TableGurson.md)
         * [CustomJ2](Library/Material/Material3D/vonMises/CustomJ2.md)
         * [ExpGurson](Library/Material/Material3D/vonMises/ExpGurson.md)
         * [ExpJ2](Library/Material/Material3D/vonMises/ExpJ2.md)
@@ -471,8 +477,12 @@
     * [SectionNM](Library/Section/SectionNM/SectionNM.md)
     * [NM2D1](Library/Section/SectionNM/NM2D1.md)
     * [NM2D2](Library/Section/SectionNM/NM2D2.md)
+    * [NM2D3](Library/Section/SectionNM/NM2D3.md)
+    * [NM2D3K](Library/Section/SectionNM/NM2D3K.md)
     * [NM3D1](Library/Section/SectionNM/NM3D1.md)
     * [NM3D2](Library/Section/SectionNM/NM3D2.md)
+    * [NM3D3](Library/Section/SectionNM/NM3D3.md)
+    * [NM3D3K](Library/Section/SectionNM/NM3D3K.md)
 
 ### Solver
 
