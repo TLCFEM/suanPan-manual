@@ -258,6 +258,11 @@ In the CLI mode, it is possible to use `file` command to load the file.
 suanPan ~<> file example.supan
 ```
 
+## VS Code
+
+The VS Code extension is available [here](https://marketplace.visualstudio.com/items?itemName=tlcfem.suanpan).
+It provides syntax highlighting and code completion.
+
 ## Sublime Text Workspace
 
 I personally use [Sublime Text](https://www.sublimetext.com/) as my model editor. Other tools
