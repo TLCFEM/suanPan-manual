@@ -6,7 +6,9 @@ border stiffness matrix. The constraint is satisfied exactly.
 The `FixedLength2D` and `FixedLength3D` constraints behave similar to the `Tie` element, the nonlinear constraint is
 implemented via Lagrange multiplier method.
 
-It shall not be used with global damping models in dynamic analysis.
+It shall not be used with global damping models in dynamic analysis since it alters the frequency distribution, leading
+to an unintended damping response.
+Only damping models that do not depend on system properties can be used.
 
 ## Syntax
 
