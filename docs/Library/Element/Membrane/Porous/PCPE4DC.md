@@ -1,11 +1,13 @@
 # PCPE4DC
 
-Bilinear Quadrilateral With Pore Pressure
+Bilinear Quadrilateral With Pore Pressure (Drained)
 
 * Number of Nodes: 4
 * Number of DoFs: 4 (Solid Translation, Solid Translation, Fluid Translation, Fluid Translation)
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
+
+![encoding](../../PIC/Q4.svg)
 
 ## Syntax
 
@@ -36,3 +38,11 @@ The $$\alpha$$ parameter `(8)` is often close to unity for soils. The porosity $
 isotropic permeability is assumed.
 
 Interactions with other elements (with different arrangements of DoFs) can only be fulfilled via constraints.
+
+## Recording
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning |
+|----------------|------------------|
+| PP             | pore pressure    |

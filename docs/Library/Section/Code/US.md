@@ -2,6 +2,8 @@
 
 A collection of `W`, `M`, `S`, `HP`, `WT`, `MT`, `ST` sections are predefined using inch as default length unit.
 
+**See [Eccentricity](../Eccentricity.md) for more details.**
+
 ## Syntax
 
 To define a section, users can use the following commands.
@@ -25,13 +27,27 @@ section US3D (1) (2) (3) [4] [5] [6] [7]
 # [7] double, eccentricity of z axis, default: 0.0
 ```
 
+[available from v3.2]
+
+Some T-sections are placed at the centre of the web, which is not always desired. Use `US2DC` and `US3DC` to automatically recenter the section to its barycenter.
+
+```
+section US2DC (1) (2) (3) [4] [5]
+section US3DC (1) (2) (3) [4] [5]
+# (1) string, designation
+# (2) int, unique tag
+# (3) int, material model tag
+# [4] double, scale, default: 1.0
+# [5] int, number of integration points along web height (and flange width for 3D), default: 6
+```
+
 ## Remarks
 
-1. By default, inch is used as length unit, if users wants to switch to another unit, set `scale` to corresponding
+1. By default, inch is used as length unit, if users want to switch to another unit, set `scale` to corresponding
    values. For example, to use millimeter, `scale=25.4`.
-2. For 2D sections, the number of integration points is set to 2 using Gauss quadrature.
+2. For 2D sections, the number of integration points is set to two using Gauss quadrature for flange.
 3. For 3D sections, along web/flange thickness, one integration point is used. along flange width and web height, the
-   same amount of integration points are used as defined by user.
+   same number of integration points is used as defined by user.
 
 ## Supported Designations
 

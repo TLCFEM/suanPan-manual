@@ -153,7 +153,7 @@ Ubuntu official repository does not (Fedora does!) contain the latest VTK librar
    ```
 
 5. Now obtain `suanPan` source code and unpack it. To configure it with VTK support, users may use the following
-   flag `-DUSE_EXTERNAL_VTK=ON`. If `FindVTK` is presented and `VTK` is installed to default location, there is no need
+   flag `-DUSE_VTK=ON`. If `FindVTK` is presented and `VTK` is installed to default location, there is no need
    to provide the variable `VTK_DIR`, otherwise point it to the `lib/cmake/vtk-9.1` folder.
 
 #### Install MKL
@@ -188,7 +188,7 @@ for details.
       -DCMAKE_BUILD_TYPE=Release
       -DBUILD_MULTITHREAD=ON
       -DUSE_HDF5=ON
-      -DUSE_EXTERNAL_VTK=ON
+      -DUSE_VTK=ON
       -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/
       -DUSE_MKL=ON
       -DMKLROOT=/opt/intel/oneapi/mkl/latest
@@ -279,7 +279,7 @@ mkdir suanpan-build && cd suanpan-build
 # use clang, clang++ and gfortran
 export CC=/usr/local/opt/llvm/bin/clang && export CXX=/usr/local/opt/llvm/bin/clang++ && export FC=gfortran-10
 # configure project
-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_MULTITHREAD=ON -DUSE_HDF5=ON -DUSE_EXTERNAL_VTK=ON -DVTK_DIR=../VTK-out/lib/cmake/vtk-9.1/ .
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_MULTITHREAD=ON -DUSE_HDF5=ON -DUSE_VTK=ON -DVTK_DIR=../VTK-out/lib/cmake/vtk-9.1/ .
 # compile
 make -j4
 ```
@@ -296,10 +296,10 @@ If CMake GUI is used to configure the project, the following options are availab
 3. `BUILD_SHARED`: If enabled, all libraries will be built as shared libraries.
 4. `USE_SUPERLUMT`: If enabled, `SuperLU-MT` will be used, otherwise `SuperLU` will be used.
 5. `USE_HDF5`: If enabled, `HDF5` will be used to provide support for [`hdf5recorder`](../Library/Recorder/Recorder.md).
-6. `USE_EXTERNAL_VTK`: If enabled, `VTK` will be used to provide support for visualization. It will be useful to
+6. `USE_VTK`: If enabled, `VTK` will be used to provide support for visualization. It will be useful to
    generate `.vtk` files that can be used in `Paraview` for post-processing. If enabled, `VTK_DIR` needs to be set to
    the path of `VTK` installation. For example, `VTK_DIR=/usr/local/opt/vtk/lib/cmake/vtk-9.1`.
-7. `USE_EXTERNAL_CUDA`: `CUDA` needs to be installed manually by the user. If enabled, `CUDA` based solvers will be
+7. `USE_CUDA`: `CUDA` needs to be installed manually by the user. If enabled, `CUDA` based solvers will be
    available. However, for dense matrix storage, only full matrix storage scheme is supported by `CUDA`. Note full
    matrix storage scheme is not favorable for FEM. It can, however, be used for sparse matrix solving and mixed
    precision solving.
@@ -330,7 +330,7 @@ cmake -DCMAKE_INSTALL_PREFIX= \
       -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_MULTITHREAD=ON \
       -DUSE_HDF5=ON \
-      -DUSE_EXTERNAL_VTK=ON \
+      -DUSE_VTK=ON \
       -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/ \
       -DUSE_MKL=ON \
       -DMKLROOT=/opt/intel/oneapi/mkl/latest \

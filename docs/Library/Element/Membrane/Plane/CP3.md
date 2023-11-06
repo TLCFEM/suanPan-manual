@@ -4,8 +4,11 @@ Constant Strain Triangle
 
 * Number of Nodes: 3
 * Number of DoFs: 2 (Translation, Translation)
+* Integration Scheme: Single Point Centre
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
+
+![encoding](../../PIC/T3.svg)
 
 ## Syntax
 

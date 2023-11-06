@@ -5,6 +5,8 @@ DKT Triangle Plate
 * Number of Nodes: 3
 * Number of DoFs: 3 (Translation, Translation, Rotation)
 
+![encoding](../PIC/T3.svg)
+
 ## Syntax
 
 ```

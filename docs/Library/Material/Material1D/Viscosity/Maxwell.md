@@ -32,3 +32,18 @@ material Maxwell (1) (2) (3) [4] [5] [6]
 3. The parameter `[6]` is used to control how local strain is integrated. A value of $$0.0$$ indicates it would be
    automatically computed based on the input strain and strain rate increments. A value of $$0.5$$ indicates a linear
    distribution of spring strain over time.
+
+## Recording
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning        |
+|----------------|-------------------------|
+| SD, SS, S      | stress                  |
+| ED             | damper strain           |
+| VD             | damper strain rate      |
+| ES             | spring strain           | 
+| VS             | spring strain rate      |
+| E              | total strain            |
+| V              | total strain rate       | 
+| LITR           | local iteration counter | 

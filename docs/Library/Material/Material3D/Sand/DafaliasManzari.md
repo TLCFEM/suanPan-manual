@@ -22,25 +22,25 @@ The modifications can be summaries as follows.
 
 ```
 material DafaliasMazanri (1) (2-18) [19]
-(1) int, unique material tag
-(2) double, reference shear modulus G_0 ==> 125
-(3) double, poissons ratio \nu
-(4) double, \alpha^c ==> 1.5
-(5) double, slope of critical state line \lambda_c ==> 0.02
-(6) double, initial void ratio e_0
-(7) double, exponent \xi ==> 0.7
-(8) double, initial yield surface size m ==> 0.01
-(9) double, hardening constant h_0
-(10) double, hardening constant h_1 ==> 0.1
-(11) double, hardening constant c_h ==> 0.9
-(12) double, n^b ==> 1.1
-(13) double, dilatancy constant A_0 ==> -0.7
-(14) double, n^d ==> 3.5
-(15) double, z_{max} ==> 4
-(16) double, c_z ==> 600
-(17) double, atmospheric pressure p_{at} ==> -130
-(18) double, threshold G_r ==> 0.1
-[19] double, density, default: 0.0
+# (1) int, unique material tag
+# (2) double, reference shear modulus G_0 ==> 125
+# (3) double, poissons ratio \nu
+# (4) double, \alpha^c ==> 1.5
+# (5) double, slope of critical state line \lambda_c ==> 0.02
+# (6) double, initial void ratio e_0
+# (7) double, exponent \xi ==> 0.7
+# (8) double, initial yield surface size m ==> 0.01
+# (9) double, hardening constant h_0
+# (10) double, hardening constant h_1 ==> 0.1
+# (11) double, hardening constant c_h ==> 0.9
+# (12) double, n^b ==> 1.1
+# (13) double, dilatancy constant A_0 ==> -0.7
+# (14) double, n^d ==> 3.5
+# (15) double, z_{max} ==> 4
+# (16) double, c_z ==> 600
+# (17) double, atmospheric pressure p_{at} ==> -130
+# (18) double, threshold G_r ==> 0.1
+# [19] double, density, default: 0.0
 ```
 
 ## Theory

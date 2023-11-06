@@ -4,7 +4,7 @@ The [`RigidWall`](RigidWall.md) constraint essentially implements artificial spr
 nodes. The physical implication is clear but the main issue is that the conservation of energy/momentum cannot be 
 guaranteed.
 
-The `RestitutionWall` constraint adopts a different approach to ensure the assigned restitution is satisfies. If the 
+The `RestitutionWall` constraint adopts a different approach to ensure the assigned restitution is satisfied. If the 
 coefficient of restitution is set to unity, conservation of energy/momentum is guaranteed.
 
 ## Syntax
@@ -33,8 +33,8 @@ The 2D version takes the origin and either the edge vector or the normal vector 
 
 ```
 ! infinite rigid wall by penalty
-rigidwall (1) (2...3) (4...5) (6) [7]
-constraint rigidwall (1) (2...3) (4...5) (6) [7]
+restitutionwall (1) (2...3) (4...5) (6) [7]
+constraint restitutionwall (1) (2...3) (4...5) (6) [7]
 # (1) int, unique constraint tag
 # (2...3) double, coordinates of origin of rigid wall
 # (4...5) double, vector of normal direction
@@ -42,8 +42,8 @@ constraint rigidwall (1) (2...3) (4...5) (6) [7]
 # [7] double, multiplier, default: 1E4
 
 ! finite rigid wall by penalty
-finiterigidwall (1) (2...3) (4...5) (6) [7]
-constraint finiterigidwall (1) (2...3) (4...5) (6) [7]
+finiterestitutionwall (1) (2...3) (4...5) (6) [7]
+constraint finiterestitutionwall (1) (2...3) (4...5) (6) [7]
 # (1) int, unique constraint tag
 # (2...3) double, coordinates of origin of rigid wall
 # (4...5) double, vector of wall edge
@@ -58,8 +58,8 @@ define a finite wall.
 
 ```
 ! infinite rigid wall by penalty
-rigidwall (1) (2...4) (5...7) (8) [9]
-constraint rigidwall (1) (2...4) (5...7) (8) [9]
+restitutionwall (1) (2...4) (5...7) (8) [9]
+constraint restitutionwall (1) (2...4) (5...7) (8) [9]
 # (1) int, unique constraint tag
 # (2...4) double, coordinates of origin of rigid wall
 # (5...7) double, vector of normal direction
@@ -67,8 +67,8 @@ constraint rigidwall (1) (2...4) (5...7) (8) [9]
 # [9] double, multiplier, default: 1E4
 
 ! finite rigid wall by penalty
-finiterigidwall (1) (2...4) (5...7) (8...10) (11) [12]
-constraint finiterigidwall (1) (2...4) (5...7) (8...10) (11) [12]
+finiterestitutionwall (1) (2...4) (5...7) (8...10) (11) [12]
+constraint finiterestitutionwall (1) (2...4) (5...7) (8...10) (11) [12]
 # (1) int, unique constraint tag
 # (2...4) double, coordinates of origin of rigid wall
 # (5...7) double, vector of first edge
@@ -80,7 +80,7 @@ constraint finiterigidwall (1) (2...4) (5...7) (8...10) (11) [12]
 
 ## Assumptions
 
-It is assumed that the collision occurs within a very short time. As a result, the change of acceleration is not 
+It is assumed that the collision occurs within a brief time. As a result, the change of acceleration is not 
 reflected at either $$t_n$$ or $$t_{n+1}$$. The assumptions adopted are shown in the following figure.
 
 ![assumptions](RestitutionWall.svg)

@@ -32,10 +32,12 @@
         * [rc section analysis](Example/Structural/Statics/rc-section-analysis.md)
         * [truss roof](Example/Structural/Statics/truss-roof.md)
         * [uniform tension of a rubber specimen](Example/Structural/Statics/uniform-tension-of-a-rubber-specimen.md)
+        * [thin-walled section analysis for frame structures](Example/Structural/Statics/thin-walled-section.md)
     * Dynamics
         * [bouncing of a ball](Example/Structural/Dynamics/bouncing-of-a-ball.md)
         * [mass-spring-dashpot system](Example/Structural/Dynamics/mass-spring-dashpot-system.md)
         * [dynamic analysis of a portal frame](Example/Structural/Dynamics/dynamic-analysis-of-a-portal-frame.md)
+        * [elemental damping](Example/Structural/Dynamics/elemental-damping.md)
         * [particle collision](Example/Structural/Dynamics/particle-collision.md)
         * [response history analysis of an elastic coupled wall](Example/Structural/Dynamics/response-history-analysis-of-an-elastic-coupled-wall.md)
         * [multi-support excitation](Example/Structural/Dynamics/multi-support-excitation.md)
@@ -130,6 +132,11 @@
 * [NodeFacet](Library/Constraint/NodeFacet.md)
 * [Embed2D](Library/Constraint/Embed2D.md)
 * [Embed3D](Library/Constraint/Embed3D.md)
+* [LJPotential2D](Library/Constraint/LJPotential2D.md)
+* [MaximumGap2D](Library/Constraint/MaximumGap2D.md)
+* [MinimumGap2D](Library/Constraint/MinimumGap2D.md)
+* [MaximumGap3D](Library/Constraint/MaximumGap3D.md)
+* [MinimumGap3D](Library/Constraint/MinimumGap3D.md)
 
 ### Converger
 
@@ -169,7 +176,9 @@
     * [B21E](Library/Element/Beam/B21E.md)
     * [B21H](Library/Element/Beam/B21H.md)
     * [B31](Library/Element/Beam/B31.md)
+    * [B31OS](Library/Element/Beam/B31OS.md)
     * [EB21](Library/Element/Beam/EB21.md)
+    * [EB31OS](Library/Element/Beam/EB31OS.md)
     * [F21](Library/Element/Beam/F21.md)
     * [F21H](Library/Element/Beam/F21H.md)
     * [F31](Library/Element/Beam/F31.md)
@@ -189,8 +198,8 @@
 * Membrane
     * [Couple Stress](Library/Element/Membrane/CS.md)
     * Phase Field
-        * [DCP3](Library/Element/Membrane/DCP3.md)
-        * [DCP4](Library/Element/Membrane/DCP4.md)
+        * [DCP3](Library/Element/Membrane/PFM/DCP3.md)
+        * [DCP4](Library/Element/Membrane/PFM/DCP4.md)
     * Axisymmetric
         * [CAX3](Library/Element/Membrane/Axisymmetric/CAX3.md)
         * [CAX4](Library/Element/Membrane/Axisymmetric/CAX4.md)
@@ -213,10 +222,15 @@
     * Infinite
         * [CINP4](Library/Element/Membrane/Plane/CINP4.md)
     * Geotechnical
-        * [PCPE4DC](Library/Element/Membrane/PCPE4DC.md)
+        * [PCPE4DC](Library/Element/Membrane/Porous/PCPE4DC.md)
+        * [PCPE4UC](Library/Element/Membrane/Porous/PCPE4UC.md)
+        * [PCPE8DC](Library/Element/Membrane/Porous/PCPE8DC.md)
+        * [PCPE8UC](Library/Element/Membrane/Porous/PCPE8UC.md)
     * [Membrane](Library/Element/Membrane/Membrane.md)
 * Modifier
     * [Modifier](Library/Element/Modifier/Modifier.md)
+    * [ElementalLee](Library/Element/Modifier/ElementalLee.md)
+    * [LinearViscosity](Library/Element/Modifier/LinearViscosity.md)
 * Patch
     * [Patch](Library/Element/Patch/Patch.md)
     * [PatchCube](Library/Element/Patch/PatchCube.md)
@@ -254,6 +268,9 @@
 ### Group
 
 * [CustomNodeGroup](Library/Group/CustomNodeGroup.md)
+* [NodeGroup](Library/Group/NodeGroup.md)
+* [ElementGroup](Library/Group/ElementGroup.md)
+* [GroupGroup](Library/Group/GroupGroup.md)
 
 ### Integrator
 
@@ -265,6 +282,7 @@
     * [GSSSS](Library/Integrator/GSSSS.md)
     * Newmark
         * [LeeNewmark](Library/Integrator/Newmark/LeeNewmark.md)
+        * [LeeElementalNewmark](Library/Integrator/Newmark/LeeElementalNewmark.md)
         * [LeeNewmarkFull](Library/Integrator/Newmark/LeeNewmarkFull.md)
         * [Newmark](Library/Integrator/Newmark/Newmark.md)
         * [RayleighNewmark](Library/Integrator/Newmark/RayleighNewmark.md)
@@ -285,8 +303,14 @@
         * [ConcreteCM](Library/Material/Material1D/Concrete/ConcreteCM.md)
         * [ConcreteExp](Library/Material/Material1D/Concrete/ConcreteExp.md)
         * [ConcreteTsai](Library/Material/Material1D/Concrete/ConcreteTsai.md)
+        * [ConcreteTable](Library/Material/Material1D/Concrete/ConcreteTable.md)
+        * [ConcreteK4](Library/Material/Material1D/Concrete/ConcreteK4.md)
     * Degradation
         * [Degradation](Library/Material/Material1D/Degradation/Degradation.md)
+        * [CustomStrainDegradation](Library/Material/Material1D/Degradation/CustomStrainDegradation.md)
+        * [CustomStressDegradation](Library/Material/Material1D/Degradation/CustomStressDegradation.md)
+        * [Dhakal](Library/Material/Material1D/Degradation/Dhakal.md)
+        * [TrilinearStrainDegradation](Library/Material/Material1D/Degradation/TrilinearStrainDegradation.md)
     * Elastic
         * [BilinearElastic1D](Library/Material/Material1D/Elastic/BilinearElastic1D.md)
         * [Elastic1D](Library/Material/Material1D/Elastic/Elastic1D.md)
@@ -313,6 +337,7 @@
         * [SlipLock](Library/Material/Material1D/Hysteresis/SlipLock.md)
         * [SteelBRB](Library/Material/Material1D/Hysteresis/SteelBRB.md)
         * [Trivial](Library/Material/Material1D/Hysteresis/Trivial.md)
+        * [Gap01](Library/Material/Material1D/Hysteresis/Gap01.md)
     * Viscosity
         * [Kelvin](Library/Material/Material1D/Viscosity/Kelvin.md)
         * [Maxwell](Library/Material/Material1D/Viscosity/Maxwell.md)
@@ -335,9 +360,8 @@
         * [Multilinear1D](Library/Material/Material1D/vonMises/Multilinear1D.md)
         * [NonlinearGurson1D](Library/Material/Material1D/vonMises/NonlinearGurson1D.md)
         * [VAFCRP1D](Library/Material/Material1D/vonMises/VAFCRP1D.md)
-* Material2D
-    * [AxisymmetricElastic](Library/Material/Material2D/AxisymmetricELastic.md)
-    * [Bilinear2D](Library/Material/Material2D/Bilinear2D.md)
+* [Material2D](Library/Material/Material2D/Material2D.md)
+    * [AxisymmetricElastic](Library/Material/Material2D/AxisymmetricElastic.md)
     * [Concrete21](Library/Material/Material2D/Concrete21.md)
     * [Concrete22](Library/Material/Material2D/Concrete22.md)
     * [Elastic2D](Library/Material/Material2D/Elastic2D.md)
@@ -385,6 +409,7 @@
         * [BilinearJ2](Library/Material/Material3D/vonMises/BilinearJ2.md)
         * [BilinearPeric](Library/Material/Material3D/vonMises/BilinearPeric.md)
         * [CustomGurson](Library/Material/Material3D/vonMises/CustomGurson.md)
+        * [TableGurson](Library/Material/Material3D/vonMises/TableGurson.md)
         * [CustomJ2](Library/Material/Material3D/vonMises/CustomJ2.md)
         * [ExpGurson](Library/Material/Material3D/vonMises/ExpGurson.md)
         * [ExpJ2](Library/Material/Material3D/vonMises/ExpJ2.md)
@@ -394,6 +419,8 @@
         * [NonlinearPeric](Library/Material/Material3D/vonMises/NonlinearPeric.md)
         * [PolyJ2](Library/Material/Material3D/vonMises/PolyJ2.md)
         * [VAFCRP](Library/Material/Material3D/vonMises/VAFCRP.md)
+* MaterialOS
+    * [ElasticOS](Library/Material/MaterialOS/ElasticOS.md)
 * Wrapper
     * [Axisymmetric](Library/Material/Wrapper/Axisymmetric.md)
     * [Laminated](Library/Material/Wrapper/Laminated.md)
@@ -406,6 +433,9 @@
     * [Sequential](Library/Material/Wrapper/Sequential.md)
     * [Stacked](Library/Material/Wrapper/Stacked.md)
     * [Uniaxial](Library/Material/Wrapper/Uniaxial.md)
+    * [OS146](Library/Material/Wrapper/OS146.md)
+    * [OS146S](Library/Material/Wrapper/OS146S.md)
+    * [Substepping](Library/Material/Wrapper/Substepping.md)
 
 ### Recorder
 
@@ -442,18 +472,26 @@
     * [ISection3D](Library/Section/Section3D/ISection3D.md)
     * [Rectangle3D](Library/Section/Section3D/Rectangle3D.md)
     * [TSection3D](Library/Section/Section3D/TSection3D.md)
+* SectionOS
+    * [Cell3DOS](Library/Section/SectionOS/Cell3DOS.md)
+    * [Fibre3DOS](Library/Section/SectionOS/Fibre3DOS.md)
 * SectionNM
     * [SectionNM](Library/Section/SectionNM/SectionNM.md)
     * [NM2D1](Library/Section/SectionNM/NM2D1.md)
     * [NM2D2](Library/Section/SectionNM/NM2D2.md)
+    * [NM2D3](Library/Section/SectionNM/NM2D3.md)
+    * [NM2D3K](Library/Section/SectionNM/NM2D3K.md)
     * [NM3D1](Library/Section/SectionNM/NM3D1.md)
     * [NM3D2](Library/Section/SectionNM/NM3D2.md)
+    * [NM3D3](Library/Section/SectionNM/NM3D3.md)
+    * [NM3D3K](Library/Section/SectionNM/NM3D3K.md)
 
 ### Solver
 
 * [BFGS](Library/Solver/BFGS.md)
 * [MPDC](Library/Solver/MPDC.md)
 * [Newton](Library/Solver/Newton.md)
+* [AICN](Library/Solver/AICN.md)
 * [Ramm](Library/Solver/Ramm.md)
 
 ### Step

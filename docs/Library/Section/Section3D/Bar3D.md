@@ -2,6 +2,8 @@
 
 3D Reinforcing Bar Section
 
+![arrangement](PIC/Cell.svg)
+
 ## Syntax
 
 ```

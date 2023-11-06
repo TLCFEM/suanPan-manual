@@ -1,6 +1,6 @@
 # NM2D2
 
-$$N$$-$$M$$ Interaction Inelastic Section
+$$N$$-$$M$$ Interaction Inelastic Section (Linear Hardening)
 
 ## Reference
 
@@ -39,7 +39,7 @@ One may wish to customise the surface by assigning different weights and orders,
 syntax.
 
 ```
-section NM2D2 (1) (2...9) [(10 11 12)...]
+section NM2D2 (1) (2...9) [(10) (11) (12) ...]
 # (1) int, unique section tag
 # (2) double, EA
 # (3) double, EI
@@ -80,3 +80,11 @@ $$
 $$
 
 given that $$H$$ and $$K$$ are hardening ratios based on plastic strain.
+
+## Output Type
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning                 |
+|----------------|----------------------------------|
+| YF             | yielding flag (vector of size 2) |

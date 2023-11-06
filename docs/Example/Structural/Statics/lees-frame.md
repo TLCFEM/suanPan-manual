@@ -45,19 +45,22 @@ Both snap-back and snap-through are involved in this example, the arc length met
 magnitude $$-1$$ is applied on the DoF 2 of node 7.
 
 ```
-step arclength 1 7 2 -1
+refload 1 0 -1 2 7
+step arclength 1
 ```
 
-Here the magnitude of reference load matters. A proper selection of reference load may help to converge. The algorithm
-automatically scale the arc length so a stopping criterion shall be applied. If no solver is defined. To customize the
-solving strategy, it is possible to define a `Ramm` solver.
+Here the magnitude of reference load matters. A proper selection of reference load may help to converge. By default,
+the algorithm automatically scale the arc length until a stopping criterion is met.
+
+To control the solving strategy, one can control arc length by using
 
 ```
-solver Ramm 1 .05 true
+set ini_step_size .5
+set fixed_step_size true
 set max_iteration 1000
 ```
 
-The above command defines a `Ramm` solver using a fixed arc length of $$0.5$$. By default, a maximum of $$1000$$ sub
+The above command uses a fixed arc length of $$0.5$$. By default, a maximum of $$1000$$ sub
 steps are allowed, this may not be sufficient, to change it the `set` command can be called.
 
 ```

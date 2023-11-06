@@ -26,7 +26,8 @@ displacement at the free end.
 
 ```
 ! reference load of magnitude -1 along DoF 1 of node 6
-step arclength 1 6 1 -1
+refload 1 0 -1 1 6
+step arclength 1
 
 ! use asymmetric matrix storage
 set symm_mat 0

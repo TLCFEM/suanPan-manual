@@ -18,7 +18,7 @@ converger LogicXOR (1) (2) (3)
 
 ## Example
 
-Let's assume by default the relative increment of displacement [`RelIncreDisp`](../Relative/RelIncreDisp.md) converger
+Let's assume, by default, the relative increment of displacement [`RelIncreDisp`](../Relative/RelIncreDisp.md) converger
 is preferred. However, when performing a response history analysis, when the first displacement increment of some
 substep is close to zero, then a small relative increment of displacement is not achievable due to machine precision. In
 this case, we want to add another converger using absolute increment of

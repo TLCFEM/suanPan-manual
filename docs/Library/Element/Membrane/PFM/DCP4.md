@@ -4,7 +4,10 @@ Bilinear Quadrilateral With Crack Phase
 
 * Number of Nodes: 4
 * Number of DoFs: 3 (Translation, Translation, Damage)
+* Integration Scheme: 2nd Order Gauss
 * Zero Mass Entries On Damage DoFs
+
+![encoding](../../PIC/Q4.svg)
 
 ## Syntax
 
@@ -22,3 +25,12 @@ element DCP4 (1) (2...5) (6) (7) (8) [9]
 
 * The third DoF is the damage variable. Boundary conditions can be assigned.
 * The characteristic length `(7)` can be set to zero to automatically determine the value based on geometry.
+
+## Recording
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning |
+|----------------|------------------|
+| DAMAGE         | damage variable  |
+

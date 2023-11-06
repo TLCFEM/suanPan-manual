@@ -5,11 +5,12 @@ Uniaxial Multilinear Material Using J2 Plasticity
 ## Syntax
 
 ```
-material Multilinear1D (1) (2) (3) (4 5...)
+material MultilinearMises1D (1) (2) (3) ((4) (5)...)
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, density
-# (4 5...) double, pairs of stress and plastic strain
+# (4) double, plastic strain of control point
+# (5) double, stress of control point
 ```
 
 ## Remarks
@@ -22,7 +23,7 @@ material Multilinear1D (1) (2) (3) (4 5...)
 ## Usage
 
 ```
-material Multilinear1D 1 50000 1. 0. 100 2E-3 120 4E-3 250 1E-2 200
+material MultilinearMises1D 1 50000 1. 0. 100 2E-3 120 4E-3 250 1E-2 200
 materialTest1D 1 1E-4 120 120
 exit
 ```

@@ -14,8 +14,9 @@ The section configuration is shown as follows.
 
 ## Model Development
 
-The `SingleSection2D` element is **NOT** a connector element. Only one node is required to define the element. First we
-define an arbitrary node.
+The [`SingleSection2D`](../../../Library/Element/Special/SingleSection.md) element is **NOT** a connector element.
+Only one node is required to define the element.
+First, we define an arbitrary node.
 
 ```
 node 1 0 0
@@ -101,4 +102,21 @@ is about $$350~\text{kNm}$$.
 
 ![rotation versus moment](rc-section-analysis.svg)
 
-Users with relative background may help to justify the result.
+Users with a relative background may help to justify the result.
+
+### Asymmetric Layout
+
+If the layout is asymmetric, say, for example, the rebars at $$y=-220~\text{mm}$$ are removed.
+
+```text
+section Rectangle2D 2 400. 500. 1 9
+section Bar2D 3 900. 2 220.
+# section Bar2D 4 900. 2 -220.
+section Bar2D 5 600. 2 0.
+```
+
+In this case, a positive moment makes the unreinforced region in tension.
+This decreases the moment capacity.
+However, a negative moment does not change the moment capacity significantly.
+
+Interested readers can try to apply both positive and negative rotation and verify the results.

@@ -8,6 +8,8 @@ Mixed Four-Node Quadrilateral Element
 * Integration Scheme: 2nd Order Gauss
 * Constant Consistent Mass Matrix With Same Order Integration
 
+![encoding](../../PIC/Q4.svg)
+
 ## Reference
 
 1. [https://doi.org/10.1002/nme.1620381102](https://doi.org/10.1002/nme.1620381102)

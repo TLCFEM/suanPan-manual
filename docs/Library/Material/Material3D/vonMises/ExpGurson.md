@@ -19,7 +19,7 @@ material ExpGurson (1) (2) (3) (4) (5) [6] [7] [8] [9] [10] [11]
 
 ## Remarks
 
-1. Due to that the yield function has the quadratic term $$q^2$$, it shall be noted that the unit of the model shal be
-   selected carefully. For example, if the yield stress is $$1000~\mathrm{MPa}$$ and $$\mathrm{Pascal}$$ is used as the
-   unit for stress, then the input number is $$10^9$$, the square of which is greater than $$10^{16}$$ so that the yield
-   function likely overflows.
+Due to that the yield function has the quadratic term $$q^2$$, it shall be noted that the unit of the model shall be
+selected carefully. For example, if the yield stress is $$1000~\mathrm{MPa}$$ and $$\mathrm{Pascal}$$ is used as the
+unit for stress, then the input number is $$10^9$$, the square of which is greater than $$10^{16}$$ so that the yield
+function likely overflows.

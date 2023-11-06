@@ -1,6 +1,6 @@
 # NM3D2
 
-$$N$$-$$M$$ Interaction Inelastic Section
+$$N$$-$$M$$ Interaction Inelastic Section (Linear Hardening)
 
 ## Reference
 
@@ -31,8 +31,8 @@ $$
 f=1.15p^2+m_s^2+m_w^4+3.67p^2m_s^2+3p^6m_w^2+4.65m_s^4m_w^2-c
 $$
 
-where $$p$$, $$m_s$$ and $$m_w$$ are normalised axial force and moments about strong and weak axes. The surface is
-suitable for I-sections.
+where $$p$$, $$m_s$$ and $$m_w$$ are normalised axial force and moments about strong and weak axes.
+The surface is suitable for I-sections.
 
 ### Option Two
 
@@ -40,7 +40,7 @@ One may wish to customise the surface by assigning different weights and orders,
 syntax.
 
 ```
-section NM3D2 (1) (2...11) [(12 13 14 15)...]
+section NM3D2 (1) (2...11) [(12) (13) (14) (15)...]
 # (1) int, unique section tag
 # (2) double, EA
 # (3) double, strong axis EI
@@ -48,7 +48,7 @@ section NM3D2 (1) (2...11) [(12 13 14 15)...]
 # (5) double, yielding axial force
 # (6) double, yielding strong axis moment
 # (7) double, yielding weak axis moment
-# (8) double, c
+# (8) double, e
 # (9) double, isotropic hardening parameter H
 # (10) double, kinematic hardening parameter K
 # (11) double, linear density
@@ -83,4 +83,12 @@ $$
 \dfrac{H+K}{1+H+K},
 $$
 
-given that $$H$$ and $$K$$ are hardening ratios based on plastic strain.
+since $$H$$ and $$K$$ are hardening ratios based on plastic strain.
+
+## Output Type
+
+This model supports the following additional history variables to be recorded.
+
+| variable label | physical meaning                 |
+|----------------|----------------------------------|
+| YF             | yielding flag (vector of size 2) |
