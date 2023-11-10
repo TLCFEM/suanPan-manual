@@ -13,18 +13,17 @@ The underlying uniaxial concrete model used is the [`ConcreteTsai`](../Material1
 ## Syntax
 
 ```
-material Concrete21 (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) [11]
+material Concrete21 (1) (2) (3) (4) (5) (6) (7) (8) (9) [10]
 # (1) int, unique material tag
-# (2) double, compression strength, should be negative but sign insensitive
-# (3) double, tension strength, should be positive but sign insensitive
-# (4) double, MC
+# (2) double, elastic modulus
+# (3) double, compression strength, should be negative but sign insensitive
+# (4) double, tension strength, should be positive but sign insensitive
 # (5) double, NC
-# (6) double, MT
-# (7) double, NT
-# (8) double, middle point
-# (9) double, strain at compression strength
-# (10) double, strain at tension strength
-# [11] double, density, default: 0.0
+# (6) double, NT
+# (7) double, middle point
+# (8) double, strain at compression strength
+# (9) double, strain at tension strength
+# [10] double, density, default: 0.0
 ```
 
 ## Theory
