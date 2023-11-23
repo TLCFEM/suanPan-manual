@@ -7,10 +7,11 @@ Minimum version: v2.6
 ## Syntax
 
 ```text
-upsampling (1) (2) [3]
+upsampling (1) (2) [3] [4]
 # (1) string, file path of the seismogram file
 # (2) integer, upsampling rate
 # [3] string, window type, default: 'Hamming'
+# [4] integer, window length, default: 0
 ```
 
 ## Remarks
@@ -29,4 +30,5 @@ The window type can be one of the following:
 - BlackmanHarris
 - FlatTop
 
-If the upsampling rate is denoted as $$L$$, the window length is $$8L+1$$.
+If the upsampling rate is denoted as $$L$$, the window length is $$nL+1$$.
+The parameter $$n$$ is controlled by the last parameter.
