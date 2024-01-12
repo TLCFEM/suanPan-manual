@@ -364,3 +364,26 @@ suanpan
 Check the following recording.
 
 [![asciicast](https://asciinema.org/a/418408.svg)](https://asciinema.org/a/418408)
+
+## Changes Made to the System
+
+The application itself does **not** write any files to folders other than the current working directory.
+
+There are some exceptions though.
+
+1. If the [`terminal`](../Collection/Process/terminal.md) command is used, one can change files in the file system.
+2. If one decides to download new versions via the bundled updater, the archive is downloaded to the current working
+   directory. The updater is not always bundled.
+
+The script `suanPan.sh` writes the following files to the system.
+
+1. `$HOME/.local/share/applications/suanPan.desktop`
+2. `$HOME/.local/bin/suanpan`
+3. `$HOME/.config/sublime-text/Packages/User/suanPan.sublime-build`
+4. `$HOME/.config/sublime-text/Packages/User/suanPan.sublime-completions`
+5. `$HOME/.config/sublime-text/Packages/User/suanPan.sublime-syntax`
+
+The script `AddAssociation.bat` changes the following settings.
+
+1. Associate `*.sp` and `*.supan` files with the program.
+2. Copy configuration files to default folder if Sublime Text is installed.
