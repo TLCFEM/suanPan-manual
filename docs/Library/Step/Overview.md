@@ -49,13 +49,13 @@ one can interpret the above as follows.
     1. Use an initial step size of $$0.1$$.
     2. Fix the step size to $$0.1$$. Since the duration is $$4.0$$, the total number of substeps is $$40$$.
     3. Use a relative displacement increment [RelIncreDisp](../../Library/Converger/Relative/RelIncreDisp.md) converger
-       with a tolerance of $$1E-10$$.
+       with a tolerance of $$10^{-10}$$.
 2. Step 2
     1. Use an initial step size of $$1.0$$.
     2. Allow the step size to vary. The algorithm would automatically adjust the step size to satisfy the convergence
        criteria.
-    3. Use an absolute displacement increment [RelIncreDisp](../../Library/Converger/Absolute/AbsIncreDisp.md) converger
-       with a tolerance of $$1E-8$$.
+    3. Use an absolute displacement increment [AbsIncreDisp](../../Library/Converger/Absolute/AbsIncreDisp.md) converger
+       with a tolerance of $$10^{-8}$$.
 
 ## Inheriting from Previous Steps
 
