@@ -284,6 +284,7 @@
         * [LeeNewmark](Library/Integrator/Newmark/LeeNewmark.md)
         * [LeeElementalNewmark](Library/Integrator/Newmark/LeeElementalNewmark.md)
         * [LeeNewmarkFull](Library/Integrator/Newmark/LeeNewmarkFull.md)
+        * [LeeNewmarkIterative](Library/Integrator/Newmark/LeeNewmarkIterative.md)
         * [Newmark](Library/Integrator/Newmark/Newmark.md)
         * [RayleighNewmark](Library/Integrator/Newmark/RayleighNewmark.md)
         * [WilsonPenzienNewmark](Library/Integrator/Newmark/WilsonPenzienNewmark.md)
