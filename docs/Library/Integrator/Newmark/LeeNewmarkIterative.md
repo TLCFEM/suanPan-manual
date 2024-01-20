@@ -15,7 +15,7 @@ integrator LeeNewmarkIterative (1) (2) (3) ((4) (5) (6) [7...]...)
 
 ## Remarks
 
-1. The definition of parameters is **identical** to  [`LeeNewmarkFull`](LeeNewmarkFull.md).
+1. The definition of parameters is **identical** to that of [`LeeNewmarkFull`](LeeNewmarkFull.md).
 2. Instead of unrolling all modes into a single sparse damping matrix, this integrator uses an iterative procedure to
    solve system. The convergence rate is **linear**.
 3. Since the convergence rate is linear even with [`Newton`](../../Solver/Newton.md) method, one may use
