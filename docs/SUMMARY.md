@@ -230,6 +230,7 @@
 * Modifier
     * [Modifier](Library/Element/Modifier/Modifier.md)
     * [ElementalLee](Library/Element/Modifier/ElementalLee.md)
+    * [ElementalNonviscous](Library/Element/Modifier/ElementalNonviscous.md)
     * [LinearViscosity](Library/Element/Modifier/LinearViscosity.md)
 * Patch
     * [Patch](Library/Element/Patch/Patch.md)
