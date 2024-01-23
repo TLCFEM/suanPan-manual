@@ -4,7 +4,7 @@ Nonviscous Elemental Damping
 
 ## Reference
 
-1. []()
+1. [10.1016/j.ymssp.2024.111156](https://doi.org/10.1016/j.ymssp.2024.111156)
 
 The kernel function is defined as a summation of exponential functions.
 
