@@ -2,6 +2,10 @@
 
 Newmark Time Integration With Nonviscous Damping
 
+## Reference
+
+1. [10.1016/j.ymssp.2024.111156](https://doi.org/10.1016/j.ymssp.2024.111156)
+
 ## Syntax
 
 ```
@@ -9,12 +13,15 @@ integrator NonviscousNewmark (1) (2) (3) ((4) (5) (6) (7)...)
 # (1) int, unique tag
 # (2) double, alpha, typical: 0.25
 # (3) double, beta, typical: 0.5
-# (4-7) double, real and imaginary parts of m and s
+# (4) double, real part of `m_i`
+# (5) double, imaginary part of `m_i`
+# (6) double, real part of `s_i`
+# (7) double, imaginary part of `s_i`
 ```
 
 ## Theory
 
-The parameters $$m$$ and $$s$$ are two complex numbers that define the kernel function.
+The parameters $$m_i$$ and $$s_i$$ are two complex numbers that define the kernel function.
 
 $$
 g(t)=\sum_{i=1}^nm_ie^{-s_it}.

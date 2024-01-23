@@ -70,17 +70,26 @@ To compile `Release` version, please
 
 2. Make sure CUDA is installed. The environment variable `$(CUDA_PATH)` is used to locate headers.
 
-3. Make sure VTK is available. Then define two system environment variables `$(VTK_INC)` and `$(VTK_LIB)`, which point
-   to include and library folders. On my machine, they are
+3. Make sure VTK is available. Then define a system environment variable `$(VTK_DIR)`, which points
+   to the root folder of VTK library. On my machine, it is
 
    ```powershell
-   VTK_INC=C:\Program Files\VTK\include\vtk-9.2
-   VTK_LIB=C:\Program Files\VTK\lib
+   VTK_DIR=C:\Program Files\VTK\
    ```
 
    For versions other than 9.2, names of the linked libraries shall be manually changed as they contain version numbers.
    Thus, it is not a good idea to switch to a different version. Precompiled VTK library is also available in
    this [repository](https://github.com/TLCFEM/prebuilds).
+
+4. Make sure MAGMA is available. Then define a system environment variable `$(MAGMA_DIR)`, which points
+   to the root folder of MAGMA library. On my machine, it is
+
+   ```powershell
+   MAGMA_DIR=C:\Program Files\MAGMA\
+   ```
+   
+   You probably need to compile MAGMA yourself. You can manually remove all magma related settings in the solution file
+   if you don't want to use it.
 
 Alternatively, `CMake` can be used to generate solution files if some external packages are not available.
 

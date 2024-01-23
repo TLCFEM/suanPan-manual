@@ -4,7 +4,7 @@ $$N$$-$$M$$ Interaction Inelastic Section (Linear Hardening)
 
 ## Reference
 
-1. [10.1061/JSENDH/STENG-12176](http://dx.doi.org/10.1061/JSENDH/STENG-12176)
+1. [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176)
 
 ## Syntax
 
