@@ -13055,7 +13055,7 @@ In the later case, the global damping matrix can be assembled by the elemental d
 fundamental model.
 It can be expressed in a form that can be expressed as a linear combination of mass and stiffness matrices.</p>
 <p>The <a href="https://doi.org/10.1016/j.compstruc.2023.107152">10.1016/j.compstruc.2023.107152</a> discusses the application of the
-damping model at element level and investigates the relationship between the elemental adn global damping ratio.</p>
+damping model at element level and investigates the relationship between the elemental and global damping ratio.</p>
 <p>To use the model, the <a href="../../../../Library/Element/Modifier/ElementalLee/"><code>ElementalLee</code></a> modifier and
 the <a href="../../../../Library/Integrator/Newmark/LeeElementalNewmark/"><code>LeeElementalNewmark</code></a> integrator shall be used.</p>
 <h2 id="the-model">The Model</h2>
@@ -13104,7 +13104,7 @@ integrator.
 The second part assigns damping ratio multipliers to each element via
 the <a href="../../../../Library/Element/Modifier/ElementalLee/"><code>ElementalLee</code></a> modifier.
 The actual damping applied to each element is the product of the multiplier and the reference damping curve.</p>
-<p>Here, for illustration, we apply <span class="arithmatex">\(\eta=0.05\)</span> and <span class="arithmatex">\(\eta=0,2\)</span> to the two elements, respectively.</p>
+<p>Here, for illustration, we apply <span class="arithmatex">\(\eta=0.05\)</span> and <span class="arithmatex">\(\eta=0.2\)</span> to the two elements, respectively.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>modifier ElementalLee 1 .05 1 2
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>modifier ElementalLee 2 .2 3 4
