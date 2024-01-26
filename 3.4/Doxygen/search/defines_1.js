@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['arma_5fcerr_5fstream_9019',['ARMA_CERR_STREAM',['../d8/d8f/suan_pan_8h.html#ae8713bd2388de39581c6baee4546119b',1,'suanPan.h']]],
-  ['arma_5fcout_5fstream_9020',['ARMA_COUT_STREAM',['../d8/d8f/suan_pan_8h.html#a89d8360d6b0fc37b1b0dd2d22a4e73b2',1,'suanPan.h']]],
-  ['arma_5fuse_5fsuperlu_9021',['ARMA_USE_SUPERLU',['../d8/d8f/suan_pan_8h.html#a69a32d79b090e2afdaa28f8cf219cf9f',1,'suanPan.h']]]
+  ['arma_5fcerr_5fstream_9028',['ARMA_CERR_STREAM',['../d8/d8f/suan_pan_8h.html#ae8713bd2388de39581c6baee4546119b',1,'suanPan.h']]],
+  ['arma_5fcout_5fstream_9029',['ARMA_COUT_STREAM',['../d8/d8f/suan_pan_8h.html#a89d8360d6b0fc37b1b0dd2d22a4e73b2',1,'suanPan.h']]],
+  ['arma_5fuse_5fsuperlu_9030',['ARMA_USE_SUPERLU',['../d8/d8f/suan_pan_8h.html#a69a32d79b090e2afdaa28f8cf219cf9f',1,'suanPan.h']]]
 ];

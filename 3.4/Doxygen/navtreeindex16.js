@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"d6/d85/class_section_shell.html#ab7324854ddd2acf095710ecfc8b1f308":[3,17,2,9],
+"d6/d85/class_section_shell.html#abe1cf310ca1a7f0efcfb945b36d2a245":[3,17,2,8],
 "d6/d85/class_section_shell.html#ac3880d928778fcb3019fd1fd0d3f2db3":[3,17,2,17],
 "d6/d85/class_section_shell.html#ad844d7c674332f0e6ec78b02b728e25d":[3,17,2,31],
 "d6/d85/class_section_shell.html#ad91de306641ae69f420d202fd84a70b4":[3,17,2,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "d6/dfd/suan_pan_8cpp.html":[6,0,18],
 "d6/dfd/suan_pan_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627":[6,0,18,0],
 "d6/dfd/suan_pan_8cpp.html#a87950a8edc6f1526e7f1d7cc5eff9019":[6,0,18,1],
-"d7/d01/class_dhakal.html":[3,14,0,17],
-"d7/d01/class_dhakal.html#a4428646f80017ba45594666a5b995ce8":[3,14,0,17,0],
-"d7/d01/class_dhakal.html#adb0e6fc90d5409dd656531863ff6bb48":[3,14,0,17,1]
+"d7/d01/class_dhakal.html":[3,14,0,17]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"d6/d2a/struct_data_exp_mises1_d.html#a9fbfaa8e1307abfcb26ff9286ab6b12c":[3,14,0,93,2],
+"d6/d2d/struct_section_shell_data.html":[3,17,1],
 "d6/d2d/struct_section_shell_data.html#a18daaf10d428f90ef55a25ea732d6a6e":[3,17,1,11],
 "d6/d2d/struct_section_shell_data.html#a23ba2f641be2968330cb8f8648a2c5d9":[3,17,1,17],
 "d6/d2d/struct_section_shell_data.html#a23c7459106c31954d161e4e64fdcc123":[3,17,1,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "d6/d85/class_section_shell.html#aa203d3f46b1c1868d2e8ae4bc5eaffe9":[3,17,2,22],
 "d6/d85/class_section_shell.html#aa2a47db9a65cdd10e1cffbe905502d77":[3,17,2,2],
 "d6/d85/class_section_shell.html#aa31e9fba2c13b14a34c819bdafbec0b2":[3,17,2,21],
-"d6/d85/class_section_shell.html#ab111d9f86e7f1952f6d6cf2e30944ba2":[3,17,2,24],
-"d6/d85/class_section_shell.html#ab7324854ddd2acf095710ecfc8b1f308":[3,17,2,9],
-"d6/d85/class_section_shell.html#abe1cf310ca1a7f0efcfb945b36d2a245":[3,17,2,8]
+"d6/d85/class_section_shell.html#ab111d9f86e7f1952f6d6cf2e30944ba2":[3,17,2,24]
 };

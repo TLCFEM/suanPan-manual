@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"d7/d01/class_dhakal.html#a4428646f80017ba45594666a5b995ce8":[3,14,0,17,0],
+"d7/d01/class_dhakal.html#adb0e6fc90d5409dd656531863ff6bb48":[3,14,0,17,1],
 "d7/d01/class_l_b_f_g_s.html":[3,11,8,43],
 "d7/d01/class_l_b_f_g_s.html#a2b2892e126892f2244217984dbfa377b":[3,11,8,43,1],
 "d7/d01/class_l_b_f_g_s.html#a9f2b05fb2309548a8549da6caf57698f":[3,11,8,43,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "d7/d6a/class_rigid_wall_multiplier2_d.html#ad9d6afd32f9d8c6c91fca6553694822a":[3,0,26,1],
 "d7/d6f/_section1_d_8h.html":[6,0,13,0,7],
 "d7/d6f/_section1_d_8h_source.html":[6,0,13,0,7],
-"d7/d6f/class_section_example.html":[3,16,0,0],
-"d7/d6f/class_section_example.html#a0ddd7bcc1935b73a2d2cd78a979632ec":[3,16,0,0,3],
-"d7/d6f/class_section_example.html#a64cd1d94688f39042f5d9d1d1b68d256":[3,16,0,0,1]
+"d7/d6f/class_section_example.html":[3,16,0,0]
 };

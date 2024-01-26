@@ -452,9 +452,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#i-am-a-user-of-another-platform-x-why-should-i-use-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      I am a user of another platform X, why should I use this?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#where-to-start" class="md-nav__link">
     <span class="md-ellipsis">
-      Where to Start?
+      Where to start?
     </span>
   </a>
   
@@ -12966,9 +12975,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#i-am-a-user-of-another-platform-x-why-should-i-use-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      I am a user of another platform X, why should I use this?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#where-to-start" class="md-nav__link">
     <span class="md-ellipsis">
-      Where to Start?
+      Where to start?
     </span>
   </a>
   
@@ -13038,7 +13056,21 @@ which always contains the latest version of the manual.
 This serves as an alternative if the mkdocs theme is not preferred.</p>
 <p>I'm still working on this site from time to time. Hence, it is unlikely to get a complete reference by solely checking
 this site. For any potential doubts, please feel free to contact me.</p>
-<h2 id="where-to-start">Where to Start?</h2>
+<h2 id="i-am-a-user-of-another-platform-x-why-should-i-use-this">I am a user of another platform X, why should I use this?</h2>
+<p>Commercial packages are great, but may be too expensive. Unless your organization has already purchased a licence, it
+is not likely for individuals to get access to them. Developing new elements, materials, etc., is also not easy. Imaging
+you are asked to write a 3D material model in Fortran, which is not a pleasant experience (at least for me).</p>
+<p>Existing open source packages often focus on specific areas, such as heat transfer, wave propagation, etc. Not many are
+able to provide a wide range of elements, nonlinear material models, etc. <a href="https://tlcfem.github.io/suanPan/">suanPan</a>
+is striving to provide a platform to integrate latest research results into a single package. One can find many newly
+proposed (within, say, the past one decade) elements, material models, time integration methods, etc., that are not
+available in other packages but have been implemented in <a href="https://tlcfem.github.io/suanPan/">suanPan</a>.</p>
+<p>Performance is another concern. <a href="https://tlcfem.github.io/suanPan/">suanPan</a> is designed with high performance in mind.
+Who doesn't want to get the results as soon as possible? If you are a researcher, it is also very convenient to
+implement new ideas within the framework. For reference, I am able to implement a new uniaxial inelastic material model
+within hours. If you have experience in developing new models in any language, you shall be able to do the same. The
+architecture is continuously evolving to provide a hassle-free platform for researchers to implement new ideas.</p>
+<h2 id="where-to-start">Where to start?</h2>
 <p>It is not easy to pick up a new finite element analysis tool, but it is not impossible.
 The logic of input files resembles that of ABAQUS.
 If you have some experience with ABAQUS, it shall be easy to create a simple model by hand.</p>
@@ -13051,6 +13083,12 @@ and <a href="Example/Structural/Dynamics/dynamic-analysis-of-a-portal-frame/">Dy
 starting point.</p>
 <p>The <code>Collection</code> section includes the top level commands used to develop finite element models.</p>
 <p>The <code>Library</code> section contains all specific elements, materials, etc., that are available.</p>
+<p>To develop a specific model, you may need to have this manual at hand to check the syntax of the corresponding commands.
+You can also install the VS Code <a href="https://marketplace.visualstudio.com/items?itemName=tlc.suanpan">extension</a> to get
+syntax highlighting and auto-completion.</p>
+<p>You are also strongly recommended to check the <a href="https://github.com/TLCFEM/suanPan/tree/dev/Example">Example</a> folder in
+the source code repository. As those examples are used to provide coverage report, almost all commands are used in those
+examples. You shall be able to have a better understanding of the syntax by checking those examples.</p>
 <h2 id="summary">Summary</h2>
 <p>Here is a complete <a href="SUMMARY/">table of contents</a>. If you are interested in the architecture of the program, you can
 check the <a href="ARCH.pdf">slides</a> I prepared for a talk.</p>
@@ -13065,7 +13103,10 @@ The civil/structural community also needs an update of new tools for efficient n
 <code>suanPan</code> is designed to offer a concise but highly extensible framework for finite element analysis.
 With the assist of <code>Armadillo</code>, the syntax of which is expressive, researchers can try out new ideas easily.</p>
 <h2 id="contribution">Contribution</h2>
-<p>To contribute, please create pull requests. Besides, if you find any typos, please also feel free to create issues.</p>
+<p>You are very welcome to contribute to the application. Please feel free to create feature requests or directly contact
+me if you wish to have a new element, material model, etc., implemented.</p>
+<p>To contribute to this manual, please create pull requests. Besides, if you find any typos, please also feel free to
+create issues.</p>
 <p>All third party libraries must provide a single markdown file to explain how to use the library and if possible with
 some theories.</p>
 <p>It may be convenient to build the manual locally, please check <a href="Basic/Build/">Build</a> for more details.</p>

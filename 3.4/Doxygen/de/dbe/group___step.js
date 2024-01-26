@@ -76,6 +76,7 @@ var group___step =
       [ "set_solver", "d1/dc3/class_step.html#a6f71eb17cced0bc07ecc5b2456d31b50", null ],
       [ "set_solver_tag", "d1/dc3/class_step.html#ab9a0c81019b3d62d4be3b49e937cc6ff", null ],
       [ "set_sparse", "d1/dc3/class_step.html#a1c9046ab572a6234c8452a9b7d1558d3", null ],
+      [ "set_sub_system_solver", "d1/dc3/class_step.html#a5882b70da372df2be72cee2d3cae8b1c", null ],
       [ "set_symm", "d1/dc3/class_step.html#aaa78476e1e447b1d283cc5022798598d", null ],
       [ "set_system_solver", "d1/dc3/class_step.html#aef68b55b72809d13a440df541bc8a8f1", null ],
       [ "set_system_solver", "d1/dc3/class_step.html#a33c8480d01dbfad37359974903c6aa86", null ],
@@ -86,10 +87,11 @@ var group___step =
       [ "database", "d1/dc3/class_step.html#a54038501b488e09c0171c53a7b76535d", null ],
       [ "factory", "d1/dc3/class_step.html#afb5e66614efc4fb9423e1dea7b18d81b", null ],
       [ "modifier", "d1/dc3/class_step.html#adae528d4dabb1054128f81ea124ba3ee", null ],
-      [ "setting", "d1/dc3/class_step.html#a9ee6954b78cbfdd530386d92b73c1c8e", null ],
       [ "solver", "d1/dc3/class_step.html#adaff31a7ca34abad5af87857e653559b", null ],
       [ "sparse_mat", "d1/dc3/class_step.html#a03f26fb014795a615d1ce14b4b53d3b4", null ],
+      [ "sub_system_solver", "d1/dc3/class_step.html#a50e131e66dc0fe9e4adda5f9ddeb1230", null ],
       [ "symm_mat", "d1/dc3/class_step.html#aaf9dcb4b7d1c16f7e9083b1555c88edc", null ],
+      [ "system_setting", "d1/dc3/class_step.html#a9f8c2f6e58b9562283429b0d24594347", null ],
       [ "system_solver", "d1/dc3/class_step.html#aa83b217118bcb59c3b7242d7a5851930", null ],
       [ "tester", "d1/dc3/class_step.html#af473ae957b0f26a7c924d194f43cc3ca", null ]
     ] ]
