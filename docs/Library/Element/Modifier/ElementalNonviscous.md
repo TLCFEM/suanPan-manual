@@ -12,7 +12,7 @@ $$
 g(t)=\sum_{i=1}^n m_i\exp(-s_it)
 $$
 
-The parameters $m_i$ and $s_i$ are complex numbers.
+The parameters $$m_i$$ and $$s_i$$ are complex numbers.
 
 ## Syntax
 
