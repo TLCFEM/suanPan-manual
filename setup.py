@@ -15,6 +15,7 @@ def remove(path: str):
 def install():
     # root directory
     remove('docs/Doxygen')
+    remove('site')
 
     archive_name = 'suanPan-dev'
 
