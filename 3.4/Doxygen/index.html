@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="line">suanPan ~&lt;&gt; overview</div>
 </div><!-- fragment --><p>Sample models are available for almost all models/commands. Please check the <code>Example</code> folder for details. Further details can be seen <a href="https://tlcfem.gitbook.io/suanpan-manual/tutorial/obtain">here</a> regarding how to run model files.</p>
 <h1>Installation</h1>
-<p>Only the 64-bit version is compiled. It is assumed that <a href="https://en.wikipedia.org/wiki/Advanced_Vector_Extensions"><b>AVX</b></a> is available thus if the program fails, please check if your CPU supports AVX. Alternatively, you can try the <code>no-avx</code> version.</p>
+<p>Only the 64-bit version is compiled. It is assumed that <a href="https://en.wikipedia.org/wiki/Advanced_Vector_Extensions"><b>AVX2</b></a> is available thus if the program fails, please check if your CPU supports AVX2. Alternatively, you can try the <code>no-avx</code> version.</p>
 <blockquote class="doxtable">
 <p>Check artifacts of <a href="https://github.com/TLCFEM/suanPan/actions/workflows/dev-all.yml">workflows</a> for the latest binaries. </p>
 </blockquote>
@@ -201,7 +201,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <li><code>vtk</code> &mdash; visualisation support is enabled, with this you can record VTK files for postprocessing, however, OpenGL may be missing on server systems</li>
 <li><code>mkl</code> &mdash; linear algebra operations are offloaded to MKL, which gives the optimal performance on Intel chips</li>
 <li><code>openblas</code> &mdash; linear algebra operations are offloaded to OpenBLAS, which may outperform MKL on AMD platforms</li>
-<li><code>no-avx</code> &mdash; AVX support is disabled, useful for older CPUs which do not support AVX instructions</li>
+<li><code>no-avx</code> &mdash; AVX2 support is disabled, useful for older CPUs which do not support AVX2 instructions</li>
 </ol>
 <p>Advanced users can compile the program from source by themselves to enable GPU based solvers which require an available <a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/">CUDA</a> and/or MAGMA library.</p>
 <p>Since CI/CD uses <code>GCC 11</code> (on Linux) and <code>Clang 13.0.1</code> (on macOS), it may be required to update/install proper <code>libstdc++</code> (or <code>libc++</code>) version. The easiest way is to install the same compiler. For example, on Ubuntu 22.04,</p>
@@ -236,10 +236,10 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <li><a href="https://vtk.org/"><b>VTK</b></a> version 9.2.6</li>
 <li><a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/"><b>CUDA</b></a> version 12.0</li>
 <li><a href="https://icl.utk.edu/magma/"><b>MAGMA</b></a> version 2.7.1</li>
-<li><a href="http://arma.sourceforge.net/"><b>Armadillo</b></a> version 12.8.0</li>
+<li><a href="http://arma.sourceforge.net/"><b>Armadillo</b></a> version 12.8.1</li>
 <li><a href="https://ensmallen.org/"><b>ensmallen</b></a> version 2.20.0</li>
 <li><a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html"><b>oneMKL</b></a> version 2023.2.0</li>
-<li><a href="https://github.com/catchorg/Catch2"><b>Catch2</b></a> version 3.5.2</li>
+<li><a href="https://github.com/catchorg/Catch2"><b>Catch2</b></a> version 3.5.3</li>
 <li><a href="https://github.com/fmtlib/fmt"><b>fmt</b></a> version 10.2.1</li>
 <li><a href="https://github.com/gpakosz/whereami"><b>whereami</b></a></li>
 <li><a href="https://github.com/ArashPartow/exprtk"><b>exprtk</b></a></li>
