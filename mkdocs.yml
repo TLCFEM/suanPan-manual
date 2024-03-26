@@ -11,18 +11,18 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: white
       accent: pink
       toggle:
         icon: material/lightbulb-outline
         name: Turn off the lights
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: pink
       toggle:
         icon: material/lightbulb
         name: Turn on the lights
+extra_css:
+  - color_scheme.css
 markdown_extensions:
   - admonition
   - pymdownx.arithmatex:
