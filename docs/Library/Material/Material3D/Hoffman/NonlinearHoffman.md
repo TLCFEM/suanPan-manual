@@ -2,7 +2,7 @@
 
 Orthotropic Hoffman Material
 
-## Reference
+## References
 
 1. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
 

@@ -2,7 +2,7 @@
 
 A Uniaxial Plastic-Damage Concrete Model
 
-## Reference
+## References
 
 1. [10.1061/(ASCE)ST.1943-541X.0002592](https://doi.org/10.1061/(ASCE)ST.1943-541X.0002592)
 2. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)

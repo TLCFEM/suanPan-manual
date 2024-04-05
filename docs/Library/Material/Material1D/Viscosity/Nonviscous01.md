@@ -2,7 +2,7 @@
 
 Uniaxial Nonviscous Damping Material
 
-## Reference
+## References
 
 1. [10.1016/j.ymssp.2024.111156](https://doi.org/10.1016/j.ymssp.2024.111156)
 

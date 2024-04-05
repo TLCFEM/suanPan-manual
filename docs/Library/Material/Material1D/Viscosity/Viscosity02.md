@@ -8,7 +8,7 @@ and velocity, see [`Maxwell`](Maxwell.md) and [`Kelvin`](Kelvin.md).
 See also damper elements [`Damper01`](../../../Element/Special/Damper01.md)
 and [`Damper02`](../../../Element/Special/Damper02.md).
 
-## Reference
+## References
 
 1. [10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795)
 

@@ -2,7 +2,7 @@
 
 CDPM2 Model for Concrete Material
 
-## Reference
+## References
 
 1. [10.1016/j.ijsolstr.2013.07.008](https://doi.org/10.1016/j.ijsolstr.2013.07.008)
 2. [10.1016/j.ijsolstr.2005.05.038](https://doi.org/10.1016/j.ijsolstr.2005.05.038)

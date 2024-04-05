@@ -10,7 +10,7 @@ Pian-Sumihara Quadrilateral Element
 
 ![encoding](../../PIC/Q4.svg)
 
-## Reference
+## References
 
 1. [https://doi.org/10.1002/nme.1620200911](https://doi.org/10.1002/nme.1620200911)
 2. [https://doi.org/10.1002/nme.6066](https://doi.org/10.1002/nme.6066)

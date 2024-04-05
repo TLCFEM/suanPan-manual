@@ -5,7 +5,7 @@ Maxwell Model
 The `Damper02` and `Damper04` are Maxwell models that use **displacement** and **velocity** as inputs, that is, 
 element length is not used to compute strain or strain rate.
 
-## Reference
+## References
 
 The Maxwell model allows combinations of nonlinear springs and dampers. The algorithm implemented is documented in the
 following paper.

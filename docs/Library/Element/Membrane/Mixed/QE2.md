@@ -10,7 +10,7 @@ Mixed Four-Node Quadrilateral Element
 
 ![encoding](../../PIC/Q4.svg)
 
-## Reference
+## References
 
 1. [https://doi.org/10.1002/nme.1620381102](https://doi.org/10.1002/nme.1620381102)
 

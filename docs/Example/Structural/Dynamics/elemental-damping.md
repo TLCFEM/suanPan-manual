@@ -3,7 +3,7 @@
 In this example, we demonstrate how to apply elemental damping to the system.
 The model can be [downloaded](elemental-damping.sp).
 
-## Reference
+## References
 
 Some damping models are only valid at global level as they may depend on some attributes of the global matrices.
 They are inherently not applicable at element level.

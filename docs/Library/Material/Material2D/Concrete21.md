@@ -6,7 +6,7 @@ stress and stiffness response. These ae rotated back to the nominal direction us
 
 The underlying uniaxial concrete model used is the [`ConcreteTsai`](../Material1D/Concrete/ConcreteTsai.md) model.
 
-## Reference
+## References
 
 1. [10.1061/(ASCE)0733-9399(1989)115:3(578)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:3(578))
 

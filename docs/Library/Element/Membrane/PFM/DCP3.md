@@ -9,7 +9,7 @@ Constant Strain Triangle With Crack Phase
 
 ![encoding](../../PIC/T3.svg)
 
-## Reference
+## References
 
 There are a lot of papers on the phase-field model. A staggered scheme with maximum strain energy is adopted as an
 illustration of implementation.

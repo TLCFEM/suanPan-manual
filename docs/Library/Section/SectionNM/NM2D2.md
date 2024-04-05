@@ -2,7 +2,7 @@
 
 $$N$$-$$M$$ Interaction Inelastic Section (Linear Hardening)
 
-## Reference
+## References
 
 1. [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176)
 
