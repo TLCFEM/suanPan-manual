@@ -12,7 +12,7 @@ This serves as an alternative if the mkdocs theme is not preferred.
 I'm still working on this site from time to time. Hence, it is unlikely to get a complete reference by solely checking
 this site. For any potential doubts, please feel free to contact me.
 
-## I am a user of another platform X, why should I use this?
+## Why to use?
 
 Commercial packages are great, but may be too expensive. Unless your organization has already purchased a licence, it
 is not likely for individuals to get access to them. Developing new elements, materials, etc., is also not easy. Imaging
