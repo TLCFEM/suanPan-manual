@@ -46,13 +46,11 @@ precompiled binaries are compiled on the following OS versions.
 | Platform | Version             |
 |----------|---------------------|
 | Windows  | Windows Server 2022 |
-| Ubuntu   | Ubuntu 22.04        |
-| Fedora   | Fedora 36           |
-| macOS    | Big Sur 11          |
+| Linux    | Ubuntu 22.04        |
+| macOS    | Ventura 13          |
 
-The `.deb` and `.rpm` packages are tested on the same platforms. They do not include `updater`, which checks for new 
-versions on startup. For older versions or other flavours of Linux, successful execution is not guaranteed. Please 
-consider compiling the binaries manually.
+For older versions or other flavours of Linux, successful execution is not guaranteed.
+Please consider compiling the binaries manually.
 
 In order to enable `CUDA` backed solvers, the program shall be compiled locally with preinstalled external libraries.
 See this page [Compile](Compile.md).
@@ -65,13 +63,11 @@ Currently, the following package managers can be used to install the program.
 | Windows  | [scoop](https://scoop.sh/)                                           | `scoop install suanpan`                            |
 | Linux    | [snap](https://snapcraft.io/suanpan)                                 | `snap install suanpan`                             |
 | Linux    | [flatpak](https://flathub.org/apps/details/io.github.tlcfem.suanPan) | `flatpak install flathub io.github.tlcfem.suanPan` |
-| Ubuntu   | `apt` (not available in official repo)                               | `sudo apt install ./suanPan-x.x.x-1.x86_64.deb`    |
-| Fedora   | `dnf` (not available in official repo)                               | `sudo dnf install ./suanPan-x.x.x-1.x86_64.rpm`    |
 
 The binaries are tested in standard environments: fresh new
 [Win10/11](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/) images,
 docker images [Ubuntu](https://hub.docker.com/_/ubuntu) and [Fedora](https://hub.docker.com/_/fedora),
-and [macOS](https://github.com/actions/runner-images/blob/main/images/macos/macos-11-Readme.md) GitHub image.
+and [macOS](https://github.com/actions/runner-images/blob/main/images/macos/macos-13-Readme.md) GitHub image.
 
 ### Chocolatey
 
