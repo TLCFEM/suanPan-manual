@@ -17,19 +17,13 @@ Then it is possible to run the container in an interactive manner via:
 docker run -it --rm tlcfem/suanpan
 ```
 
-Within the container, the `suanPan` executable is available. To run, type:
-
-```bash
-suanPan
-```
+It automatically enters the CLI mode.
 
 One can also attach volume to the container to access the files in the host machine. And then run the file inside 
 the container.
 
 ```bash
-docker run -it --rm -v /path/to/host/folder:/path/to/container/folder tlcfem/suanpan
-cd /path/to/container/folder
-suanPan -f example.model.sp
+docker run -it --rm -v /path/to/host/folder:/path/to/container/folder tlcfem/suanpan -f /path/to/container/folder/example.model.sp
 ```
 
 Docker image is convenient on machines with older kernels or limited by other factors that does not allow 
