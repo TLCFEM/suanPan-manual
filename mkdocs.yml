@@ -59,8 +59,12 @@ plugins:
   - mkdocs-jupyter:
       kernel_name: python
       theme: dark
-      execute: False
-      include: ["*.ipynb"]
+      execute: false
+      include:
+        - '*.ipynb'
+      ignore:
+        - docs/Example/Structural/Statics/thin-walled-section.ipynb
+        - docs/Example/Structural/Dynamics/integrating-preprocessing-with-python.ipynb
   - overwrite_math
 #  - with-pdf:
 #      cover_subtitle: An Open Source, Parallel and Heterogeneous Finite Element Analysis Framework
