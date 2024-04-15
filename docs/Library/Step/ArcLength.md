@@ -25,9 +25,6 @@ Instead, it is defined by the [`RefForce`](../../Collection/Define/load.md) comm
 ```text
 step ArcLength (1)
 # (1) int, unique step tag
-# (2) int, reference node tag
-# (3) int, reference dof tag
-# (4) double, reference magnitude of applied load
 ```
 
 ## Arc-length Control
