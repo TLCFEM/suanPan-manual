@@ -21,11 +21,14 @@ jobs:
         run: |
           sudo apt-get install doxygen graphviz -y
           pip install -e .
+          sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
+          suanpan -v
       - name: Publish
         run: |
           git fetch origin
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
+          sed -i 's/execute: False/execute: True/g' mkdocs.yml
           mike deploy 3.4
           git push origin gh-pages

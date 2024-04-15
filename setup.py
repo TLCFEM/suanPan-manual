@@ -1,6 +1,7 @@
 import os
 import re
 import shutil
+import tarfile
 import urllib.request
 import zipfile
 
@@ -25,6 +26,12 @@ def install():
     with zipfile.ZipFile(f'{archive_name}.zip', 'r') as archive:
         archive.extractall('.')
     os.remove(f'{archive_name}.zip')
+
+    url = 'https://github.com/TLCFEM/suanPan/releases/download/suanPan-v3.3/suanPan-linux-openblas-no-avx.tar.gz'
+    with urllib.request.urlopen(url) as response, open('suanPan-linux-openblas-no-avx.tar.gz', 'wb') as archive:
+        shutil.copyfileobj(response, archive)
+    with tarfile.open('suanPan-linux-openblas-no-avx.tar.gz', 'r:gz') as archive:
+        archive.extractall('suanPan-linux-openblas-no-avx')
 
     os.chdir(archive_name)
 
