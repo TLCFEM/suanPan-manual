@@ -29,6 +29,5 @@ jobs:
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
-          sed -i 's/execute: False/execute: True/g' mkdocs.yml
           mike deploy 3.4
           git push origin gh-pages
