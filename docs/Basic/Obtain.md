@@ -2,7 +2,7 @@
 
 ## Docker Image
 
-A docker image is available at [Docker Hub](https://hub.docker.com/repository/docker/tlcfem/suanpan). To use it, 
+A docker image is available at [Docker Hub](https://hub.docker.com/r/tlcfem/suanpan). To use it, 
 docker needs to be installed first. See [this page](https://docs.docker.com/get-docker/) for details.
 
 Once docker is installed, it is possible to pull the image via:
