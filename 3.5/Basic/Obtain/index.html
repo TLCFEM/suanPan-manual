@@ -13429,7 +13429,7 @@ docker needs to be installed first. See <a href="https://docs.docker.com/get-doc
 </code></pre></div></td></tr></table></div>
 <p>One can also attach volume to the container to access the files in the host machine.
 This may be the main use case.
-And then run the file inside the container.</p>
+Then one can run the file inside the container as follows.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>/path/to/host/folder:/path/to/container/folder<span class="w"> </span>tlcfem/suanpan
@@ -13468,7 +13468,7 @@ precompiled binaries are compiled on the following OS versions.</p>
 <p>For older versions or other flavours of Linux, successful execution is not guaranteed.
 Please consider compiling the binaries manually.</p>
 <p>In order to enable <code>CUDA</code> backed solvers, the program shall be compiled locally with preinstalled external libraries.
-See this page <a href="../Compile/">Compile</a>.</p>
+See <a href="../Compile/">this</a> page.</p>
 <p>Currently, the following package managers can be used to install the program.</p>
 <table>
 <thead>
@@ -13518,10 +13518,9 @@ and <a href="https://github.com/actions/runner-images/blob/main/images/macos/mac
 </code></pre></div></td></tr></table></div>
 <p>Then it is possible to use <code>suanpan</code> to invoke the application.</p>
 <h2 id="execute-program">Execute Program</h2>
-<p>By default, the <code>AVX</code> support is turned on to utilize CPU capability. For CPUs that do not support <code>AVX</code>, the
+<p>By default, the <code>AVX2</code> support is turned on to utilize CPU capability. For CPUs that do not support <code>AVX2</code>, the
 application <strong>cannot</strong> be successfully executed. Users can either compile the program by themselves or request a
-specific version by filing an issue. Processors that do not support <code>AVX</code> may be too slow to perform HPC based
-simulations.</p>
+specific version by filing an issue.</p>
 <p>The name of the executable is <code>suanPan</code>, however, snap/chocolatey/scoop will create shim executable named as 
 <code>suanpan</code>. Depending on how the application is installed, one may use <code>suanpan</code> or <code>suanPan</code> to invoke the application.</p>
 <p>The parallelization is enabled mostly by the <code>TBB</code> library and <code>&lt;execution&gt;</code> header (C++17). If the program is compiled
@@ -13530,8 +13529,9 @@ program, users can set environment variable <strong>OMP_NUM_THREADS</strong> to 
 do so, users can, for example, in Windows, use the following command.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">PowerShell</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nb">set </span><span class="n">OMP_NUM_THREADS</span><span class="p">=</span><span class="n">6</span>
 </code></pre></div></td></tr></table></div>
-<p>On Linux, the dynamic loading path need to be set so that dynamic libraries such as <code>libtbb.so</code> can be successfully
-found. If the application is installed via snap/apt/dnf, it is automatically done.</p>
+<p>On Linux, the dynamic loading path needs to be set so that dynamic libraries such as <code>libtbb.so</code> can be successfully
+found.
+If the application is installed via <code>snap</code>/<code>apt</code>/<code>dnf</code>, it is automatically done.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># current path contains suanPan</span>
@@ -13728,8 +13728,8 @@ to terminals slows down the analysis. Users can use the <code>-np</code> or <cod
 It provides syntax highlighting and code completion.</p>
 <p><img alt="demo" src="https://github.com/TLCFEM/suanPan-vs/raw/master/images/example.gif" /></p>
 <h2 id="sublime-text-workspace">Sublime Text Workspace</h2>
-<p>I personally use <a href="https://www.sublimetext.com/">Sublime Text</a> as my model editor. Other tools
-like <a href="https://atom.io/">Atom</a> and <a href="https://code.visualstudio.com/">VS Code</a> can also be used.</p>
+<p>I personally use <a href="https://www.sublimetext.com/">Sublime Text</a> as my model editor.
+Other tools like <a href="https://code.visualstudio.com/">VS Code</a> can also be used.</p>
 <h3 id="syntax-highlighting">Syntax Highlighting</h3>
 <p>Create a new syntax file via <code>Tools -&gt; Developer -&gt; New Syntax...</code>, copy and paste the following sample content into the
 new file and save as <code>suanPan.sublime-syntax</code> under the default path. It provides syntax highlighting for comments only.
