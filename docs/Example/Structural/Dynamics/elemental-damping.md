@@ -3,7 +3,7 @@
 In this example, we demonstrate how to apply elemental damping to the system.
 The model can be [downloaded](elemental-damping.sp).
 
-## Reference
+## References
 
 Some damping models are only valid at global level as they may depend on some attributes of the global matrices.
 They are inherently not applicable at element level.
@@ -18,7 +18,7 @@ fundamental model.
 It can be expressed in a form that can be expressed as a linear combination of mass and stiffness matrices.
 
 The [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.107152) discusses the application of the
-damping model at element level and investigates the relationship between the elemental adn global damping ratio.
+damping model at element level and investigates the relationship between the elemental and global damping ratio.
 
 To use the model, the [`ElementalLee`](../../../Library/Element/Modifier/ElementalLee.md) modifier and
 the [`LeeElementalNewmark`](../../../Library/Integrator/Newmark/LeeElementalNewmark.md) integrator shall be used.
@@ -62,7 +62,7 @@ The second part assigns damping ratio multipliers to each element via
 the [`ElementalLee`](../../../Library/Element/Modifier/ElementalLee.md) modifier.
 The actual damping applied to each element is the product of the multiplier and the reference damping curve.
 
-Here, for illustration, we apply $$\eta=0.05$$ and $$\eta=0,2$$ to the two elements, respectively.
+Here, for illustration, we apply $$\eta=0.05$$ and $$\eta=0.2$$ to the two elements, respectively.
 
 ```text
 modifier ElementalLee 1 .05 1 2

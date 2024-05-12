@@ -5,7 +5,7 @@
 * Number of Nodes: 2
 * Number of DoFs: 6 (Translation, Translation, Translation, Rotation, Rotation, Rotation)
 
-## Reference
+## References
 
 1. [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176)
 

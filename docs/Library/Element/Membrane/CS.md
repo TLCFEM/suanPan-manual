@@ -5,7 +5,7 @@ Couple Stress Mixed Triangle/Quadrilateral
 * Number of Nodes: 3, 4, 5, 6, 7, 8
 * Number of DoFs: 3 (Translation, Translation, Rotation)
 
-## Reference
+## References
 
 1. [arXiv:2207.02544](https://arxiv.org/abs/2207.02544)
 

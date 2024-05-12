@@ -6,7 +6,7 @@ Before I can find a proper name for it, I would call it `VAFCRP` model. Although
 all the initials of researchers. Similar models are available as: [`ArmstrongFrederick`](ArmstrongFrederick.md)
 , [`ExpJ2`](ExpJ2.md) and [`NonlinearPeric`](NonlinearPeric.md).
 
-## Reference
+## References
 
 1. [https://doi.org/10.1017/S0368393100118759](https://doi.org/10.1017/S0368393100118759)
 2. [https://doi.org/10.1179/096034007X207589](https://doi.org/10.1179/096034007X207589)

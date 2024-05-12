@@ -2,7 +2,7 @@
 
 Elemental Damping Using Lee's Formulation
 
-## Reference
+## References
 
 1. [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.107152)
 

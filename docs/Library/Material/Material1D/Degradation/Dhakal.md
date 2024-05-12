@@ -2,7 +2,7 @@
 
 Dhakal Degradation
 
-## Reference
+## References
 
 1. [10.1061/(ASCE)0733-9445(2002)128:9(1139)](https://doi.org/10.1061/(ASCE)0733-9445(2002)128:9(1139))
 

@@ -4,7 +4,7 @@ Viscous J2 Steel Model
 
 The `VAFCRP1D` model is the uniaxial version of the [`VAFCRP`](../../Material3D/vonMises/VAFCRP.md) model.
 
-## Reference
+## References
 
 1. [10.1017/S0368393100118759](https://doi.org/10.1017/S0368393100118759)
 2. [10.1179/096034007X207589](https://doi.org/10.1179/096034007X207589)

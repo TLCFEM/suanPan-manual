@@ -366,6 +366,7 @@
     * [AxisymmetricElastic](Library/Material/Material2D/AxisymmetricElastic.md)
     * [Concrete21](Library/Material/Material2D/Concrete21.md)
     * [Concrete22](Library/Material/Material2D/Concrete22.md)
+    * [DuncanSelig](Library/Material/Material2D/DuncanSelig.md)
     * [Elastic2D](Library/Material/Material2D/Elastic2D.md)
     * [Rebar2D](Library/Material/Material2D/Rebar2D.md)
 * [Material3D](Library/Material/Material3D/Material3D.md)
@@ -498,7 +499,7 @@
 
 ### Step
 
-# [Overview](Library/Step/Overview.md)
+* [Overview](Library/Step/Overview.md)
 * [ArcLength](Library/Step/ArcLength.md)
 * [Buckle](Library/Step/Buckle.md)
 * [Dynamic](Library/Step/Dynamic.md)

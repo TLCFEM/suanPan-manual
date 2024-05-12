@@ -8,6 +8,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'Bump')"
     steps:
       - name: Clone
         uses: actions/checkout@v4
@@ -20,11 +21,13 @@ jobs:
         run: |
           sudo apt-get install doxygen graphviz -y
           pip install -e .
+          sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
+          suanpan -v
       - name: Publish
         run: |
           git fetch origin
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
-          mike deploy 3.3
+          mike deploy 3.4
           git push origin gh-pages

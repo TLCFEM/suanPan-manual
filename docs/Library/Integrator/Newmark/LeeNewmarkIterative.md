@@ -21,7 +21,21 @@ integrator LeeNewmarkIterative (1) (2) (3) ((4) (5) (6) [7...]...)
 3. Since the convergence rate is linear even with [`Newton`](../../Solver/Newton.md) method, one may use
    the [`(L)BFGS`](../../Solver/BFGS.md) method to achieve a super-linear convergence rate.
 
-It is recommended to use a dense matrix storage for the system with a [`(L)BFGS`](../../Solver/BFGS.md) solver.
+The damping force is obtained via matrix operations, which include matrix inversion. In this phase, some sparse matrices
+will be formed, to control what solver to be used to solve sparse matrix, one can set the subsystem solver via the
+following commands.
+
+```text
+set sub_system_solver MUMPS
+set sub_system_solver SuperLU
+set sub_system_solver PARDISO ! if MKL is available
+set sub_system_solver FGMRES ! if MKL is available
+set sub_system_solver CUDA ! if CUDA is available
+# currently no iterative solver is available
+```
+
+It is recommended to use a dense matrix storage for the system with a [`(L)BFGS`](../../Solver/BFGS.md) solver. This
+configuration can maximize the performance.
 For example,
 
 ```text
@@ -31,8 +45,11 @@ solver LBFGS 1 50
 set banded_mat true
 set symm_mat false
 set sparse_mat false
+set system_solver SPIKE
+set sub_system_solver SuperLU
 
 integrator LeeNewmarkIterative 1 .25 .5 ...
 ```
 
-This configuration can maximize the performance.
+The above configuration uses a dense banded asymmetric matrix to store the system matrix. The equation of motion will be solved via the SPIKE solver.
+For damping force computation, the relevant sparse matrices will be solved by the SuperLU solver.

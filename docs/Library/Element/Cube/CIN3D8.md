@@ -2,7 +2,7 @@
 
 Linear Infinite Cube/Brick
 
-## Reference
+## References
 
 1. [https://doi.org/10.1016/0045-7949(84)90019-1](https://doi.org/10.1016/0045-7949(84)90019-1)
 

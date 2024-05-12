@@ -2,7 +2,7 @@
 
 Armstrong-Frederick Steel Model
 
-## Reference
+## References
 
 1. [10.1016/S0749-6419(01)00049-3](https://doi.org/10.1016/S0749-6419(01)00049-3)
 2. [10.1115/1.3264257](https://doi.org/10.1115/1.3264257)

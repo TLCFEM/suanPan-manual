@@ -4,7 +4,7 @@ Maxwell Model Using An Iterative Solving Algorithm
 
 This material model does respond to both displacement and velocity.
 
-## Reference
+## References
 
 1. [10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795)
 

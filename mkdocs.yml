@@ -1,6 +1,6 @@
 site_name: suanPan manual
 site_author: Theodore Chang
-copyright: Copyright © 2017-2023 Theodore Chang
+copyright: Copyright © 2017-2024 Theodore Chang
 repo_url: "https://github.com/TLCFEM/suanPan-manual"
 theme:
   name: material
@@ -11,18 +11,18 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: white
       accent: pink
       toggle:
         icon: material/lightbulb-outline
         name: Turn off the lights
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: pink
       toggle:
         icon: material/lightbulb
         name: Turn on the lights
+extra_css:
+  - color_scheme.css
 markdown_extensions:
   - admonition
   - pymdownx.arithmatex:
@@ -56,11 +56,15 @@ extra:
 plugins:
   - search
   - awesome-pages
-#  - mkdocs-jupyter:
-#      kernel_name: python
-#      theme: dark
-#      execute: False
-#      ignore: [ "**/ProcessNZSM.py" ]
+  - mkdocs-jupyter:
+      kernel_name: python
+      theme: dark
+      execute: true
+      include:
+        - '*.ipynb'
+      ignore:
+        - docs/Example/Structural/Statics/thin-walled-section.ipynb
+        - docs/Example/Structural/Dynamics/integrating-preprocessing-with-python.ipynb
   - overwrite_math
 #  - with-pdf:
 #      cover_subtitle: An Open Source, Parallel and Heterogeneous Finite Element Analysis Framework

@@ -17,6 +17,10 @@ build:
     - libx11-6
     - libxcursor1
     - graphviz
+  jobs:
+    post_install:
+      - ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /home/docs/.asdf/shims/suanpan
+      - suanpan -v
 python:
   install:
     - method: pip
