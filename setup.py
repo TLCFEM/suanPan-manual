@@ -1,6 +1,7 @@
 import os
 import re
 import shutil
+import sys
 import tarfile
 import urllib.request
 import zipfile
@@ -29,16 +30,25 @@ def install():
         archive.extractall(".")
     os.remove(f"{archive_name}.zip")
 
-    tar_file = "suanPan-linux-openblas-no-avx"
-    remove(tar_file)
-    url = f"https://github.com/TLCFEM/suanPan/releases/download/suanPan-v3.3/{tar_file}.tar.gz"
-    with urllib.request.urlopen(url) as response, open(
-        f"{tar_file}.tar.gz", "wb"
-    ) as archive:
+    if sys.platform.startswith("linux"):
+        binary_file_name = "suanPan-linux-openblas-no-avx"
+        binary_file = f"{binary_file_name}.tar.gz"
+    else:
+        binary_file_name = "suanPan-win-mkl-vtk"
+        binary_file = f"{binary_file_name}.zip"
+    remove(binary_file_name)
+    url = f"https://github.com/TLCFEM/suanPan/releases/download/suanPan-v3.4/{binary_file}"
+    with urllib.request.urlopen(url) as response, open(binary_file, "wb") as archive:
         shutil.copyfileobj(response, archive)
-    with tarfile.open(f"{tar_file}.tar.gz", "r:gz") as archive:
-        archive.extractall(tar_file)
-    os.remove(f"{tar_file}.tar.gz")
+
+    if sys.platform.startswith("linux"):
+        with tarfile.open(binary_file, "r:gz") as archive:
+            archive.extractall(binary_file_name)
+    else:
+        with zipfile.ZipFile(binary_file, "r") as archive:
+            archive.extractall(binary_file_name)
+
+    os.remove(binary_file)
 
     os.chdir(archive_name)
 
