@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../suanPan.svg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -13216,8 +13216,8 @@
 <div class="arithmatex">\[
 f=1.15p^2+m_s^2+m_w^4+3.67p^2m_s^2+3p^6m_w^2+4.65m_s^4m_w^2-c
 \]</div>
-<p>where <span class="arithmatex">\(p\)</span>, <span class="arithmatex">\(m_s\)</span> and <span class="arithmatex">\(m_w\)</span> are normalised axial force and moments about strong and weak axes.
-The surface is suitable for I-sections.</p>
+<p>where <span class="arithmatex">\(p\)</span>, <span class="arithmatex">\(m_s\)</span> and <span class="arithmatex">\(m_w\)</span> are normalised axial force and moments about the strong and weak axes.
+This surface is suitable for I-sections.</p>
 <h3 id="option-two">Option Two</h3>
 <p>One may wish to customise the surface by assigning different weights and orders, it is possible by using the following
 syntax.</p>
@@ -13254,16 +13254,30 @@ syntax.</p>
 <a id="__codelineno-1-16" name="__codelineno-1-16"></a># (15) double, d_i
 </code></pre></div></td></tr></table></div>
 <p>In the above command, parameters <code>(12)</code>, <code>(13)</code>, <code>(14)</code> and <code>(15)</code> form a set of parameters and can be appended as many
-groups as analyst wishes. The surface is assumed to possess the following form,</p>
+groups as the analyst wishes.
+The surface is assumed to possess the following form,</p>
 <div class="arithmatex">\[
 f=\sum_{i=1}^na_ip^{b_i}m_s^{c_i}m_w^{d_i}-e.
 \]</div>
 <p>For example, the previous surface <span class="arithmatex">\(f=1.15p^2+m_s^2+m_w^4+3.67p^2m_s^2+3p^6m_w^2+4.65m_s^4m_w^2-c\)</span> can be equivalently
 expressed with the second syntax as follows.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>section NM3D2 (1) (2...11) 1.15 2. 0. 0. 1. 0. 2. 0. 3.67 2. 2. 0. 3. 6. 0. 2. 4.65 0. 4. 2.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>section NM3D2 (1) (2...11) \
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>1.15 2. 0. 0. \
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>1. 0. 2. 0. \
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>1. 0. 0. 4. \
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>3.67 2. 2. 0. \
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>3. 6. 0. 2. \
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>4.65 0. 4. 2.
 </code></pre></div></td></tr></table></div>
-<p>The only validation implemented is the number of triplets. The command takes <span class="arithmatex">\(4n\)</span> parameters and interprets them
-accordingly. Please make sure the definition is correct.</p>
+<p>The only validation implemented is the number of triplets.
+The command takes <span class="arithmatex">\(4n\)</span> parameters and interprets them accordingly.
+Please make sure the definition is correct.</p>
 <h2 id="remarks">Remarks</h2>
 <p>The true hardening ratio is defined as</p>
 <div class="arithmatex">\[
@@ -13339,7 +13353,7 @@ accordingly. Please make sure the definition is correct.</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
         <script src="../../../../javascripts/mathjax.js"></script>
       
