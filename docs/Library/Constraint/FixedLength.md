@@ -62,8 +62,6 @@ fix2 1 P 1 4
 
 constraint FixedLength2D 2 2 3
 
-plainrecorder 1 Visualisation U1 width 3
-
 cload 1 0 10 2 2
 
 step static 1 1
