@@ -3,8 +3,8 @@ import re
 import shutil
 import sys
 import tarfile
-import urllib.request
 import zipfile
+from urllib.request import urlopen
 
 from setuptools import setup
 
@@ -23,9 +23,7 @@ def install():
     archive_name = "suanPan-dev"
 
     url = "https://github.com/TLCFEM/suanPan/archive/refs/heads/dev.zip"
-    with urllib.request.urlopen(url) as response, open(
-        f"{archive_name}.zip", "wb"
-    ) as archive:
+    with urlopen(url) as response, open(f"{archive_name}.zip", "wb") as archive:
         shutil.copyfileobj(response, archive)
     with zipfile.ZipFile(f"{archive_name}.zip", "r") as archive:
         archive.extractall(".")
@@ -62,11 +60,13 @@ def install():
         binary_file_name = "suanPan-win-mkl-vtk"
         binary_file = f"{binary_file_name}.zip"
     remove(binary_file_name)
-    version_string = f"suanPan-v{major}.{minor}"
-    if patch != "0":
-        version_string += f".{patch}"
+
+    with urlopen("https://github.com/TLCFEM/suanPan") as response:
+        content = response.read().decode("utf-8")
+        version_string = re.search(r"suanPan-v\d\.\d(\.\d)?", content).group(0)
+
     url = f"https://github.com/TLCFEM/suanPan/releases/download/{version_string}/{binary_file}"
-    with urllib.request.urlopen(url) as response, open(binary_file, "wb") as archive:
+    with urlopen(url) as response, open(binary_file, "wb") as archive:
         shutil.copyfileobj(response, archive)
 
     if sys.platform.startswith("linux"):
