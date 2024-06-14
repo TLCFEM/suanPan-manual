@@ -397,6 +397,7 @@ var annotated_dup =
     [ "MaterialPatch3D", "dd/d7f/class_material_patch3_d.html", "dd/d7f/class_material_patch3_d" ],
     [ "MaterialTemplate", "d0/df4/class_material_template.html", "d0/df4/class_material_template" ],
     [ "MaxDisplacement", "dc/df3/class_max_displacement.html", "dc/df3/class_max_displacement" ],
+    [ "MaxForce", "d7/dce/class_max_force.html", "d7/dce/class_max_force" ],
     [ "MaxHistory", "dc/d95/class_max_history.html", "dc/d95/class_max_history" ],
     [ "MaximumGap", "d7/d3b/class_maximum_gap.html", "d7/d3b/class_maximum_gap" ],
     [ "MaxResistance", "df/ddd/class_max_resistance.html", "df/ddd/class_max_resistance" ],

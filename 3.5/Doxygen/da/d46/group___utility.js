@@ -499,6 +499,7 @@ var group___utility =
     [ "ExternalModule", "da/d46/group___utility.html#ga6529e08307ed1feba538ffccf5f63fb9", null ],
     [ "ExternalModule", "da/d46/group___utility.html#ga8de9cb80d62203d95dd4a0c55fc56223", null ],
     [ "ExternalModule", "da/d46/group___utility.html#ga4db27a780c77810cea0d315b17d598f5", null ],
+    [ "get_history_path", "da/d46/group___utility.html#ga88f709bce8b99606b3343d743a9f5d78", null ],
     [ "imag", "da/d46/group___utility.html#ga9ba910af0140cd7e4881a6ba58fcde6f", null ],
     [ "IntegrationPlan::generate< IntegrationType::CHEBYSHEV >", "da/d46/group___utility.html#gae8109ae25854d26829bc6b47dba690c1", null ],
     [ "IntegrationPlan::generate< IntegrationType::GAUSS >", "da/d46/group___utility.html#gaa352d4cfbd081211f1537bccd52f89d5", null ],

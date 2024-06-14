@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"d6/d2a/struct_data_exp_mises1_d.html#a863af6f75a87f7347a9f79b8a89a7a27":[3,14,0,93,3],
 "d6/d2a/struct_data_exp_mises1_d.html#a9fbfaa8e1307abfcb26ff9286ab6b12c":[3,14,0,93,2],
 "d6/d2d/struct_section_shell_data.html":[3,17,1],
 "d6/d2d/struct_section_shell_data.html#a18daaf10d428f90ef55a25ea732d6a6e":[3,17,1,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "d6/d85/class_section_shell.html#a99a8423b759af7f3efbe6988b5042f29":[3,17,2,16],
 "d6/d85/class_section_shell.html#aa203d3f46b1c1868d2e8ae4bc5eaffe9":[3,17,2,22],
 "d6/d85/class_section_shell.html#aa2a47db9a65cdd10e1cffbe905502d77":[3,17,2,2],
-"d6/d85/class_section_shell.html#aa31e9fba2c13b14a34c819bdafbec0b2":[3,17,2,21],
-"d6/d85/class_section_shell.html#ab111d9f86e7f1952f6d6cf2e30944ba2":[3,17,2,24]
+"d6/d85/class_section_shell.html#aa31e9fba2c13b14a34c819bdafbec0b2":[3,17,2,21]
 };

@@ -777,6 +777,7 @@ var hierarchy =
             [ "Embed3D", "d5/dbe/class_embed3_d.html", null ]
           ] ],
           [ "FixedLength", "dc/dfd/class_fixed_length.html", [
+            [ "MaxForce", "d7/dce/class_max_force.html", null ],
             [ "MaximumGap", "d7/d3b/class_maximum_gap.html", null ],
             [ "MinimumGap", "d6/d40/class_minimum_gap.html", null ],
             [ "Sleeve", "de/d2b/class_sleeve.html", null ]

@@ -9,6 +9,7 @@ var command_8cpp =
     [ "enable_object", "d1/d81/command_8cpp.html#a3dbae7ff3c82022daa4b62e46077ef49", null ],
     [ "erase_object", "d1/d81/command_8cpp.html#a17b66caa31811e6b5e696d2ea6b8a8f8", null ],
     [ "execute_command", "da/d46/group___utility.html#ga7b566bdab23ce7a78599e25a846e6059", null ],
+    [ "get_history_path", "da/d46/group___utility.html#ga88f709bce8b99606b3343d743a9f5d78", null ],
     [ "list_object", "d1/d81/command_8cpp.html#aeefede68aefddc4ed5d90ef084d85183", null ],
     [ "normalise_command", "da/d46/group___utility.html#ga16dc777f9c74f907a3710356a475c49b", null ],
     [ "overview", "d1/d81/command_8cpp.html#a5239be18e56b5ec86ad0fbadd6020737", null ],
