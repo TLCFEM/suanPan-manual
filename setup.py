@@ -19,6 +19,7 @@ def install():
     remove("docs/Doxygen")
     remove("site")
 
+    # 1. download source code
     archive_name = "suanPan-dev"
 
     url = "https://github.com/TLCFEM/suanPan/archive/refs/heads/dev.zip"
@@ -30,26 +31,7 @@ def install():
         archive.extractall(".")
     os.remove(f"{archive_name}.zip")
 
-    if sys.platform.startswith("linux"):
-        binary_file_name = "suanPan-linux-openblas-no-avx"
-        binary_file = f"{binary_file_name}.tar.gz"
-    else:
-        binary_file_name = "suanPan-win-mkl-vtk"
-        binary_file = f"{binary_file_name}.zip"
-    remove(binary_file_name)
-    url = f"https://github.com/TLCFEM/suanPan/releases/download/suanPan-v3.4/{binary_file}"
-    with urllib.request.urlopen(url) as response, open(binary_file, "wb") as archive:
-        shutil.copyfileobj(response, archive)
-
-    if sys.platform.startswith("linux"):
-        with tarfile.open(binary_file, "r:gz") as archive:
-            archive.extractall(binary_file_name)
-    else:
-        with zipfile.ZipFile(binary_file, "r") as archive:
-            archive.extractall(binary_file_name)
-
-    os.remove(binary_file)
-
+    # 2. generate doxygen documentation
     os.chdir(archive_name)
 
     doxygen_bin = "doxygen"
@@ -71,6 +53,30 @@ def install():
     os.chdir("..")
 
     remove(archive_name)
+
+    # 3. download binary file
+    if sys.platform.startswith("linux"):
+        binary_file_name = "suanPan-linux-openblas-no-avx"
+        binary_file = f"{binary_file_name}.tar.gz"
+    else:
+        binary_file_name = "suanPan-win-mkl-vtk"
+        binary_file = f"{binary_file_name}.zip"
+    remove(binary_file_name)
+    version_string = f"suanPan-v{major}.{minor}"
+    if patch != "0":
+        version_string += f".{patch}"
+    url = f"https://github.com/TLCFEM/suanPan/releases/download/{version_string}/{binary_file}"
+    with urllib.request.urlopen(url) as response, open(binary_file, "wb") as archive:
+        shutil.copyfileobj(response, archive)
+
+    if sys.platform.startswith("linux"):
+        with tarfile.open(binary_file, "r:gz") as archive:
+            archive.extractall(binary_file_name)
+    else:
+        with zipfile.ZipFile(binary_file, "r") as archive:
+            archive.extractall(binary_file_name)
+
+    os.remove(binary_file)
 
     with open("requirements.txt") as f:
         required = f.read().splitlines()
