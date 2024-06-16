@@ -6,6 +6,19 @@ border stiffness matrix. The constraint is satisfied exactly.
 The `FixedLength2D` and `FixedLength3D` constraints behave similar to the `Tie` element, the nonlinear constraint is
 implemented via Lagrange multiplier method.
 
+The position $$\mathbf{x}$$ of a given node can be expressed as the summation of coordinate $$\mathbf{d}$$ and
+displacement $$\mathbf{u}$$.
+
+$$
+\mathbf{x}=\mathbf{d}+\mathbf{u}.
+$$
+
+The constraint enforces that
+
+$$
+\Big|\mathbf{x}_i-\mathbf{x}_j\Big|=\Big|\mathbf{d}_i-\mathbf{d}_j\Big|.
+$$
+
 It shall not be used with global damping models in dynamic analysis since it alters the frequency distribution, leading
 to an unintended damping response.
 Only damping models that do not depend on system properties can be used.
