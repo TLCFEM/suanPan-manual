@@ -16,11 +16,9 @@ var namespaces_dup =
     [ "pack", "de/d29/namespacepack.html", [
       [ "an", "de/d29/namespacepack.html#a15c1a5a49167bf6cede80e72cce5e931", null ],
       [ "archive", "de/d29/namespacepack.html#ab8133a72733bd23d696991c593031486", null ],
-      [ "cl", "de/d29/namespacepack.html#a00b030eefef58eb7d6b226d535aa68d5", null ],
-      [ "fl", "de/d29/namespacepack.html#a0a428bb0a1b589e2b2ddd439dc60e62d", null ],
+      [ "base_name", "de/d29/namespacepack.html#ae8ea12fea7752bdd622a718d55f3b7d3", null ],
       [ "fn", "de/d29/namespacepack.html#a935ab2399eccb55656165b7f00a82b30", null ],
-      [ "hashfile", "de/d29/namespacepack.html#a0ce0bb030c05cfab241278787969dbda", null ],
-      [ "sha256", "de/d29/namespacepack.html#a63ab3afd4ad56c0715d0d4c2e2fe01f7", null ],
+      [ "full_path", "de/d29/namespacepack.html#a2582c32b1abfc3e0eae26493e52c9c81", null ],
       [ "verification", "de/d29/namespacepack.html#aa6e9c6b517a5ca22fed6637980e9043f", null ]
     ] ],
     [ "shape", "d3/d55/namespaceshape.html", "d3/d55/namespaceshape" ],

@@ -13120,6 +13120,15 @@
 border stiffness matrix. The constraint is satisfied exactly.</p>
 <p>The <code>FixedLength2D</code> and <code>FixedLength3D</code> constraints behave similar to the <code>Tie</code> element, the nonlinear constraint is
 implemented via Lagrange multiplier method.</p>
+<p>The position <span class="arithmatex">\(\mathbf{x}\)</span> of a given node can be expressed as the summation of coordinate <span class="arithmatex">\(\mathbf{d}\)</span> and
+displacement <span class="arithmatex">\(\mathbf{u}\)</span>.</p>
+<div class="arithmatex">\[
+\mathbf{x}=\mathbf{d}+\mathbf{u}.
+\]</div>
+<p>The constraint enforces that</p>
+<div class="arithmatex">\[
+\Big|\mathbf{x}_i-\mathbf{x}_j\Big|=\Big|\mathbf{d}_i-\mathbf{d}_j\Big|.
+\]</div>
 <p>It shall not be used with global damping models in dynamic analysis since it alters the frequency distribution, leading
 to an unintended damping response.
 Only damping models that do not depend on system properties can be used.</p>

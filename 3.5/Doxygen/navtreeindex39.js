@@ -1,8 +1,8 @@
 var NAVTREEINDEX39 =
 {
-"dd/d8d/class_damper02.html#ad2373949256690e002c6f1a947528f6e":[3,14,4,2,4],
-"dd/d8d/class_damper02.html#ad93f2e13be83ebdb347191f3677543c0":[3,11,6,2,6],
+"dd/d8d/class_damper02.html#ad2373949256690e002c6f1a947528f6e":[3,11,6,2,4],
 "dd/d8d/class_damper02.html#ad93f2e13be83ebdb347191f3677543c0":[3,14,4,2,6],
+"dd/d8d/class_damper02.html#ad93f2e13be83ebdb347191f3677543c0":[3,11,6,2,6],
 "dd/d8d/class_damper02.html#afd0b40e6fe49db5f418e1e86c54aa7b9":[3,11,6,2,7],
 "dd/d8d/class_damper02.html#afd0b40e6fe49db5f418e1e86c54aa7b9":[3,14,4,2,7],
 "dd/d8d/class_restitution_wall_penalty.html":[3,0,21],
