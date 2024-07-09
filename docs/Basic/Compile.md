@@ -1,17 +1,35 @@
 # Compile
 
-## Docker Images
+## With Docker
+
+### Docker Images
 
 For Linux users, if there is no access to `sudo` but can build containers with Docker, it is possible to compile the 
-project with 
-Docker. Check the provided [Dockerfiles](https://github.com/TLCFEM/suanPan/tree/dev/Script) for more information.
+project with Docker.
+Check the provided [Dockerfiles](https://github.com/TLCFEM/suanPan/tree/dev/Script) for more information.
 
-Once the container is built, the `.tar.gz` will be placed under `/`. Simply copy them out and install/unpack the 
-archive. The `.deb` or `.rpm` packages are installed in the images, so they can be used directly. 
+Once the image is built, use `sp`, `suanpan` or `suanPan` to invoke the program in the container.
+
+### Dev Container
+
+Two images are provided for development purposes.
+
+```bash
+# vtk+mkl+cuda
+docker pull tlcfem/suanpan-env-cuda
+# vtk+mkl
+docker pull tlcfem/suanpan-env
+```
+
+They can be used as development containers.
+VS Code and CLion can be configured to use these containers for development.
+There is no need to install any dependencies on the host machine.
+
+## Without Docker
 
 The following is a general guide that covers three main operating systems.
 
-## Prerequisites
+### Prerequisites
 
 1. To configure the source code, [CMake](https://cmake.org/download/) shall be available. Please download and install it
    before configuring the source code package.
@@ -23,31 +41,31 @@ The following is a general guide that covers three main operating systems.
    example [here](https://github.com/flame/blis/blob/master/docs/Performance.md). If you have AMD CPUs please collect
    more knowledge to determine which linear algebra library is more suitable.
 
-## Toolsets
+### Toolsets
 
 A number of new features from new standards are utilized. To compile the binary, a compiler that supports **C++20** is
 required.
 
 GCC 11, Clang 13, MSVC 14.3, Intel compilers and later version of those compilers are tested with the source code.
 
-On Windows, Visual Studio 2022 with Intel oneAPI toolkit is recommended. Alternatively, [WinLibs](http://winlibs.com/)
-can be used if GCC compilers are preferred.
+On Windows, Visual Studio with Intel oneAPI toolkit is recommended.
+Alternatively, [WinLibs](http://winlibs.com/) can be used if GCC compilers are preferred.
 
-On other platforms (Linux and macOS), simply use GCC (at least version 10) which comes with a valid Fortran
-compiler. Clang can also be used for C/CPP code, but since Clang and GCC have different supports for C++20, successful
+On other platforms (Linux and macOS), simply use GCC which comes with a valid Fortran compiler.
+Clang can also be used for C/CPP code, but since Clang and GCC have different supports for C++20, successful
 compilation is not guaranteed with Clang.
 
-## Obtain Source Code
+### Obtain Source Code
 
 Download the source code archive from GitHub [Releases](https://github.com/TLCFEM/suanPan/releases) or the
 latest [code](https://github.com/TLCFEM/suanPan/archive/master.zip).
 
-## Configure and Compile
+### Configure and Compile
 
 The manual compilation is not difficult in general. The CI/CD configuration files can be referred to if you wish. Please
 check [this](https://github.com/TLCFEM/suanPan/tree/dev/.github/workflows) page. Here some general guidelines are given.
 
-### Visual Studio
+#### Windows (Visual Studio)
 
 A solution file is provided under `MSVC/suanPan` folder. There are two configurations:
 
@@ -63,9 +81,7 @@ open the solution and switch to Debug configuration, ignore all potential warnin
 
 To compile `Release` version, please
 
-1. Make sure oneAPI both base and HPC toolkits, as well as VS integration, are installed. Be aware of this issue 
-   if you are using VS 2022: [Microsoft Visual Studio 2022 Version 17.2 and Newer Fails to Integrate with the Intel 
-   Fortran Compiler](https://www.intel.com/content/www/us/en/developer/articles/troubleshooting/vs2022-version-17-2-and-intel-fortran-integration.html).
+1. Make sure oneAPI both base and HPC toolkits, as well as VS integration, are installed.
    The MKL is enabled via integrated option `<UseInteloneMKL>Parallel</UseInteloneMKL>`.
 
 2. Make sure CUDA is installed. The environment variable `$(CUDA_PATH)` is used to locate headers.
@@ -93,7 +109,7 @@ To compile `Release` version, please
 
 Alternatively, `CMake` can be used to generate solution files if some external packages are not available.
 
-### Ubuntu
+#### Ubuntu
 
 The following instructions are based on Ubuntu 20.04. [CMake](https://cmake.org/) is used to manage builds. It is
 recommended to use **CMake** GUI if appropriate.
@@ -130,14 +146,14 @@ Check the following recording.
 
 [![asciicast](https://asciinema.org/a/418406.svg)](https://asciinema.org/a/418406)
 
-#### Install VTK
+##### Install VTK
 
 Ubuntu official repository does not (Fedora does!) contain the latest VTK library. It's better to compile it manually.
 
 1. Install OpenGL first, as well as compilers if necessary.
 
    ```bash
-   sudo apt install gcc-10 g++-10 gfortran-10 libglu1-mesa-dev freeglut3-dev mesa-common-dev libglvnd-dev
+   sudo apt install gcc-10 g++-10 gfortran-10 libglvnd-dev
    ```
 
 2. Obtain VTK source code and unpack.
@@ -165,7 +181,7 @@ Ubuntu official repository does not (Fedora does!) contain the latest VTK librar
    flag `-DUSE_VTK=ON`. If `FindVTK` is presented and `VTK` is installed to default location, there is no need
    to provide the variable `VTK_DIR`, otherwise point it to the `lib/cmake/vtk-9.1` folder.
 
-#### Install MKL
+##### Install MKL
 
 The provided CMake configuration covers both `oneMKL` and `Intel MKL 2020`. Please note MKL is included in oneAPI
 toolkit starting from 2021, which has a different folder structure compared to Intel Parallel Studio.
@@ -205,9 +221,9 @@ for details.
       -DLINK_DYNAMIC_MKL=OFF
    ```
 
-### Fedora
+#### Fedora
 
-#### VTK
+##### VTK
 
 Fedora offers the latest VTK library, simply install it.
 
@@ -215,7 +231,7 @@ Fedora offers the latest VTK library, simply install it.
 sudo dnf install vtk-devel
 ```
 
-#### MKL
+##### MKL
 
 Intel also provides a repository to install MKL via `dnf`.
 See [this page](https://www.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/top/installation/install-using-package-managers/yum-dnf-zypper.html)
@@ -250,7 +266,7 @@ sudo dnf install intel-oneapi-mkl-devel
 
 The source can be compiled with VTK and MKL enabled.
 
-### macOS
+#### macOS
 
 The following guide is based on macOS Big Sur (11).
 
