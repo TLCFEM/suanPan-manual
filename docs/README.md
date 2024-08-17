@@ -30,6 +30,13 @@ implement new ideas within the framework. For reference, I am able to implement 
 within hours. If you have experience in developing new models in any language, you shall be able to do the same. The
 architecture is continuously evolving to provide a hassle-free platform for researchers to implement new ideas.
 
+Modern programming paradigms for parallel computing have evolved a lot in recent years.
+C++ itself has also received a huge number of updates starting from `C++11`.
+`suanPan` is basically a practice of modern parallel computing with brand-new language features.
+The civil/structural community also needs an update of new tools for efficient numerical analysis.
+`suanPan` is designed to offer a concise but highly extensible framework for finite element analysis.
+With the assist of `Armadillo`, the syntax of which is expressive, researchers can try out new ideas easily.
+
 ## Where to start?
 
 It is not easy to pick up a new finite element analysis tool, but it is not impossible.
@@ -61,18 +68,6 @@ examples. You shall be able to have a better understanding of the syntax by chec
 
 Here is a complete [table of contents](SUMMARY.md). If you are interested in the architecture of the program, you can
 check the [slides](ARCH.pdf) I prepared for a talk.
-
-## About
-
-Many FEM packages are available out there, so why another package?
-Commercial packages are great, but may be too expensive for individuals to get access to.
-The limited extensibility is another pain in the butt.
-Modern programming paradigms for parallel computing have evolved a lot in recent years.
-C++ itself has also received a huge number of updates starting from `C++11`.
-`suanPan` is basically a practice of modern parallel computing with brand-new language features.
-The civil/structural community also needs an update of new tools for efficient numerical analysis.
-`suanPan` is designed to offer a concise but highly extensible framework for finite element analysis.
-With the assist of `Armadillo`, the syntax of which is expressive, researchers can try out new ideas easily.
 
 ## Contribution
 
