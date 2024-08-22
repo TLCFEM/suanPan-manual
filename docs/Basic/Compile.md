@@ -31,15 +31,15 @@ The following is a general guide that covers three main operating systems.
 
 ### Prerequisites
 
-1. To configure the source code, [CMake](https://cmake.org/download/) shall be available. Please download and install it
-   before configuring the source code package.
-2. The linear algebra driver used is [OpenBLAS](https://github.com/xianyi/OpenBLAS). You may want to compile it with the
-   optimal configuration based on the specific machine. Otherwise, precompiled binaries (dynamic platform) are available
-   in this [repository](https://github.com/TLCFEM/prebuilds).
-3. It is strongly recommended installing Intel MKL for potentially better performance.
-4. Please be aware that MKL is throttled on AMD platforms. Performance comparisons can be seen for
-   example [here](https://github.com/flame/blis/blob/master/docs/Performance.md). If you have AMD CPUs please collect
-   more knowledge to determine which linear algebra library is more suitable.
+1.  To configure the source code, [CMake](https://cmake.org/download/) shall be available. Please download and install it
+    before configuring the source code package.
+2.  The linear algebra driver used is [OpenBLAS](https://github.com/xianyi/OpenBLAS). You may want to compile it with the
+    optimal configuration based on the specific machine. Otherwise, precompiled binaries (dynamic platform) are available
+    in this [repository](https://github.com/TLCFEM/prebuilds).
+3.  It is strongly recommended installing Intel MKL for potentially better performance.
+4.  Please be aware that MKL is throttled on AMD platforms. Performance comparisons can be seen for
+    example [here](https://github.com/flame/blis/blob/master/docs/Performance.md). If you have AMD CPUs please collect
+    more knowledge to determine which linear algebra library is more suitable.
 
 ### Toolsets
 
@@ -69,10 +69,10 @@ check [this](https://github.com/TLCFEM/suanPan/tree/dev/.github/workflows) page.
 
 A solution file is provided under `MSVC/suanPan` folder. There are two configurations:
 
-1. `Debug`: Assume no available Fortran compiler, all Fortran related libraries are provided as precompiled DLLs. Use
-   OpenBLAS for linear algebra. Multithreading disabled. Visualisation disabled. HDF5 support disabled.
-2. `Release`: Fortran libraries are configured with Intel compilers. Use MKL for linear algebra. Multithreading enabled.
-   Visualisation enabled with VTK version 9.2. HDF5 support enabled. CUDA enabled.
+1.  `Debug`: Assume no available Fortran compiler, all Fortran related libraries are provided as precompiled DLLs. Use
+    OpenBLAS for linear algebra. Multithreading disabled. Visualisation disabled. HDF5 support disabled.
+2.  `Release`: Fortran libraries are configured with Intel compilers. Use MKL for linear algebra. Multithreading enabled.
+    Visualisation enabled with VTK version 9.2. HDF5 support enabled. CUDA enabled.
 
 This [repository](https://github.com/TLCFEM/prebuilds) contains some precompiled libraries used.
 
@@ -81,31 +81,31 @@ open the solution and switch to Debug configuration, ignore all potential warnin
 
 To compile `Release` version, please
 
-1. Make sure oneAPI both base and HPC toolkits, as well as VS integration, are installed.
-   The MKL is enabled via integrated option `<UseInteloneMKL>Parallel</UseInteloneMKL>`.
+1.  Make sure oneAPI both base and HPC toolkits, as well as VS integration, are installed.
+    The MKL is enabled via integrated option `<UseInteloneMKL>Parallel</UseInteloneMKL>`.
 
-2. Make sure CUDA is installed. The environment variable `$(CUDA_PATH)` is used to locate headers.
+2.  Make sure CUDA is installed. The environment variable `$(CUDA_PATH)` is used to locate headers.
 
-3. Make sure VTK is available. Then define a system environment variable `$(VTK_DIR)`, which points
-   to the root folder of VTK library. On my machine, it is
+3.  Make sure VTK is available. Then define a system environment variable `$(VTK_DIR)`, which points
+    to the root folder of VTK library. On my machine, it is
 
-   ```powershell
-   VTK_DIR=C:\Program Files\VTK\
-   ```
+    ```powershell
+    VTK_DIR=C:\Program Files\VTK\
+    ```
 
-   For versions other than 9.2, names of the linked libraries shall be manually changed as they contain version numbers.
-   Thus, it is not a good idea to switch to a different version. Precompiled VTK library is also available in
-   this [repository](https://github.com/TLCFEM/prebuilds).
+    For versions other than 9.2, names of the linked libraries shall be manually changed as they contain version numbers.
+    Thus, it is not a good idea to switch to a different version. Precompiled VTK library is also available in
+    this [repository](https://github.com/TLCFEM/prebuilds).
 
-4. Make sure MAGMA is available. Then define a system environment variable `$(MAGMA_DIR)`, which points
-   to the root folder of MAGMA library. On my machine, it is
+4.  Make sure MAGMA is available. Then define a system environment variable `$(MAGMA_DIR)`, which points
+    to the root folder of MAGMA library. On my machine, it is
 
-   ```powershell
-   MAGMA_DIR=C:\Program Files\MAGMA\
-   ```
+    ```powershell
+    MAGMA_DIR=C:\Program Files\MAGMA\
+    ```
 
-   You probably need to compile MAGMA yourself. You can manually remove all magma related settings in the solution file
-   if you don't want to use it.
+    You probably need to compile MAGMA yourself. You can manually remove all magma related settings in the solution file
+    if you don't want to use it.
 
 Alternatively, `CMake` can be used to generate solution files if some external packages are not available.
 
@@ -114,33 +114,33 @@ Alternatively, `CMake` can be used to generate solution files if some external p
 The following instructions are based on Ubuntu 20.04. [CMake](https://cmake.org/) is used to manage builds. It is
 recommended to use **CMake** GUI if appropriate.
 
-1. Install necessary tools.
+1.  Install necessary tools.
 
-   ```bash
-   sudo apt-get install gcc-10 g++-10 gfortran-10 git cmake libomp5 -y
-   ```
+    ```bash
+    sudo apt-get install gcc-10 g++-10 gfortran-10 git cmake libomp5 -y
+    ```
 
-2. Clone the project.
+2.  Clone the project.
 
-   ```bash
-   git clone -b master https://github.com/TLCFEM/suanPan.git
-   ```
+    ```bash
+    git clone -b master https://github.com/TLCFEM/suanPan.git
+    ```
 
-3. Create build folder and configure via CMake. The default configuration disables parallelism `-DBUILD_MULTITHREAD=OFF`
-   and enables HDF5 via bundled library `-DUSE_HDF5=ON`. Please
-   check [`Option.cmake`](https://github.com/TLCFEM/suanPan/blob/dev/Option.cmake) file or use GUI for available
-   options.
+3.  Create build folder and configure via CMake. The default configuration disables parallelism `-DBUILD_MULTITHREAD=OFF`
+    and enables HDF5 via bundled library `-DUSE_HDF5=ON`. Please
+    check [`Option.cmake`](https://github.com/TLCFEM/suanPan/blob/dev/Option.cmake) file or use GUI for available
+    options.
 
-   ```bash
-   cd suanPan && mkdir build && cd build
-   cmake ../
-   ```
+    ```bash
+    cd suanPan && mkdir build && cd build
+    cmake ../
+    ```
 
-4. Invoke `make`.
+4.  Invoke `make`.
 
-   ```bash
-   make -j4
-   ```
+    ```bash
+    make -j4
+    ```
 
 Check the following recording.
 
@@ -150,36 +150,36 @@ Check the following recording.
 
 Ubuntu official repository does not (Fedora does!) contain the latest VTK library. It's better to compile it manually.
 
-1. Install OpenGL first, as well as compilers if necessary.
+1.  Install OpenGL first, as well as compilers if necessary.
 
-   ```bash
-   sudo apt install gcc-10 g++-10 gfortran-10 libglvnd-dev
-   ```
+    ```bash
+    sudo apt install gcc-10 g++-10 gfortran-10 libglvnd-dev
+    ```
 
-2. Obtain VTK source code and unpack.
+2.  Obtain VTK source code and unpack.
 
-   ```bash
-   wget https://www.vtk.org/files/release/9.1/VTK-9.1.0.tar.gz
-   tar -xf VTK-9.1.0.tar.gz
-   ```
+    ```bash
+    wget https://www.vtk.org/files/release/9.1/VTK-9.1.0.tar.gz
+    tar -xf VTK-9.1.0.tar.gz
+    ```
 
-3. Create folder for building VTK.
+3.  Create folder for building VTK.
 
-   ```bash
-   mkdir VTK-build && cd VTK-build
-   ```
+    ```bash
+    mkdir VTK-build && cd VTK-build
+    ```
 
-4. Configure and compile VTK library. If necessary, installation destination can be modified. Here static libraries are
-   built.
+4.  Configure and compile VTK library. If necessary, installation destination can be modified. Here static libraries are
+    built.
 
-   ```bash
-   cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=../VTK-out ../VTK-9.1.0
-   make install -j4
-   ```
+    ```bash
+    cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=../VTK-out ../VTK-9.1.0
+    make install -j4
+    ```
 
-5. Now obtain `suanPan` source code and unpack it. To configure it with VTK support, users may use the following
-   flag `-DUSE_VTK=ON`. If `FindVTK` is presented and `VTK` is installed to default location, there is no need
-   to provide the variable `VTK_DIR`, otherwise point it to the `lib/cmake/vtk-9.1` folder.
+5.  Now obtain `suanPan` source code and unpack it. To configure it with VTK support, users may use the following
+    flag `-DUSE_VTK=ON`. If `FindVTK` is presented and `VTK` is installed to default location, there is no need
+    to provide the variable `VTK_DIR`, otherwise point it to the `lib/cmake/vtk-9.1` folder.
 
 ##### Install MKL
 
@@ -190,36 +190,36 @@ The following guide is a manual installation is based on Ubuntu terminal using t
 See [this page](https://www.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/top/installation/install-using-package-managers/apt.html)
 for details.
 
-1. Add repository. To summarise,
+1.  Add repository. To summarise,
 
-   ```bash
-   wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
-   sudo apt-key add GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
-   echo "deb https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list 
-   ```
+    ```bash
+    wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+    sudo apt-key add GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+    echo "deb https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list 
+    ```
 
-2. Install the package.
+2.  Install the package.
 
-   ```bash
-   sudo apt update && sudo apt install intel-oneapi-mkl-devel -y
-   ```
+    ```bash
+    sudo apt update && sudo apt install intel-oneapi-mkl-devel -y
+    ```
 
-3. Now compile `suanPan` by enabling MKL via option `-DUSE_MKL=ON`. The corresponding `MKLROOT` shall be assigned, for
-   example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used
-   for snap is the following one.
+3.  Now compile `suanPan` by enabling MKL via option `-DUSE_MKL=ON`. The corresponding `MKLROOT` shall be assigned, for
+    example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used
+    for snap is the following one.
 
-   ```bash
-      -DCMAKE_INSTALL_PREFIX=
-      -DCMAKE_BUILD_TYPE=Release
-      -DBUILD_MULTITHREAD=ON
-      -DUSE_HDF5=ON
-      -DUSE_VTK=ON
-      -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/
-      -DUSE_MKL=ON
-      -DMKLROOT=/opt/intel/oneapi/mkl/latest
-      -DUSE_INTEL_OPENMP=OFF
-      -DLINK_DYNAMIC_MKL=OFF
-   ```
+    ```bash
+    -DCMAKE_INSTALL_PREFIX=
+    -DCMAKE_BUILD_TYPE=Release
+    -DBUILD_MULTITHREAD=ON
+    -DUSE_HDF5=ON
+    -DUSE_VTK=ON
+    -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/
+    -DUSE_MKL=ON
+    -DMKLROOT=/opt/intel/oneapi/mkl/latest
+    -DUSE_INTEL_OPENMP=OFF
+    -DLINK_DYNAMIC_MKL=OFF
+    ```
 
 #### Fedora
 
