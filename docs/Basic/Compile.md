@@ -4,7 +4,7 @@
 
 ### Docker Images
 
-For Linux users, if there is no access to `sudo` but can build containers with Docker, it is possible to compile the 
+For Linux users, if there is no access to `sudo` but can build containers with Docker, it is possible to compile the
 project with Docker.
 Check the provided [Dockerfiles](https://github.com/TLCFEM/suanPan/tree/dev/Script) for more information.
 
@@ -103,7 +103,7 @@ To compile `Release` version, please
    ```powershell
    MAGMA_DIR=C:\Program Files\MAGMA\
    ```
-   
+
    You probably need to compile MAGMA yourself. You can manually remove all magma related settings in the solution file
    if you don't want to use it.
 
@@ -205,7 +205,7 @@ for details.
    ```
 
 3. Now compile `suanPan` by enabling MKL via option `-DUSE_MKL=ON`. The corresponding `MKLROOT` shall be assigned, for
-   example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used 
+   example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used
    for snap is the following one.
 
    ```bash
