@@ -138,14 +138,14 @@ load refload (1) (2) (3) (4) (5...)
 
 ## Remarks
 
-1. The leading `load` keyword can often be omitted for simplicity.
-2. The `acceleration` is by default applied to all active nodes in the model if `[5...]` is not assigned.
-3. The true load magnitude is the product of nominal magnitude and amplitude. This is similar to ABAQUS.
-4. The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if
-   a `displacement` or `groupdisplacement` is used.
-5. Optionally, the displacement can be applied by using [`MPC`](../../Library/Constraint/MPC.md) constraint.
-6. The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if
-   a `supportdisplacement`, `supportvelocity` and/or `supportacceleration` are used.
+1.  The leading `load` keyword can often be omitted for simplicity.
+2.  The `acceleration` is by default applied to all active nodes in the model if `[5...]` is not assigned.
+3.  The true load magnitude is the product of nominal magnitude and amplitude. This is similar to ABAQUS.
+4.  The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if
+    a `displacement` or `groupdisplacement` is used.
+5.  Optionally, the displacement can be applied by using [`MPC`](../../Library/Constraint/MPC.md) constraint.
+6.  The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if
+    a `supportdisplacement`, `supportvelocity` and/or `supportacceleration` are used.
 
 **It must be noted that nodal displacement loads are only valid for one single step.** This means, if a displacement 
 load is defined within a step, it will be activated for that step only.

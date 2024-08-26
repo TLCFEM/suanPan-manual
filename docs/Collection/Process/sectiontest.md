@@ -26,12 +26,12 @@ sectionTest3D (1) (2...4) (5) [6...]
 
 ## Remarks
 
-1. The increment size could be either positive or negative.
-2. The loading direction reverses after given numbers of steps.
-3. The strain-stress history would be saved to `RESULT.txt`. If `HDF5` is used, the result would be additionally saved
-   to `RESULT.h5`.
-4. The deformation vector consists of axial deformation, rotation about strong axis, rotation about weak axis. 1D, 2D
-   and 3D sections have the first, first two and all three components respectively.
+1.  The increment size could be either positive or negative.
+2.  The loading direction reverses after given numbers of steps.
+3.  The strain-stress history would be saved to `RESULT.txt`. If `HDF5` is used, the result would be additionally saved
+    to `RESULT.h5`.
+4.  The deformation vector consists of axial deformation, rotation about strong axis, rotation about weak axis. 1D, 2D
+    and 3D sections have the first, first two and all three components respectively.
 
 ## Example
 

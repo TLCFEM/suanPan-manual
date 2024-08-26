@@ -146,17 +146,17 @@ All available settings are summarised in the following table.
 
 Some empirical guidance can be concluded as follows.
 
-1. For most cases, the asymmetric banded storage with full precision solver is the most general option.
-2. The best performance is obtained by using symmetric banded storage, if the (effective) stiffness matrix is guaranteed
-   to be positive definite, users shall use it as a priority.
-3. The mixed precision algorithm often gives the most significant performance boost for full storage with `CUDA` solver.
-   It outperforms the full precision algorithm when the size of system exceeds several thousands.
-4. The `SPIKE` solver is slightly slower than the conventional `LAPACK` implementations.
-5. The `SuperLU` solver is slower than the `MUMPS` solver. The multithreaded `SuperLU` performs LU factorization in
-   parallel but forward/back substitution in sequence.
-6. The `PARDISO` direct solver and `FGMRES` iterative solver are provided by `MKL`.
-7. The `MUMPS` solver supports both symmetric and asymmetric algorithms. One can use `set symm_mat true`
-   or `set symm_mat false`.
+1.  For most cases, the asymmetric banded storage with full precision solver is the most general option.
+2.  The best performance is obtained by using symmetric banded storage, if the (effective) stiffness matrix is guaranteed
+    to be positive definite, users shall use it as a priority.
+3.  The mixed precision algorithm often gives the most significant performance boost for full storage with `CUDA` solver.
+    It outperforms the full precision algorithm when the size of system exceeds several thousands.
+4.  The `SPIKE` solver is slightly slower than the conventional `LAPACK` implementations.
+5.  The `SuperLU` solver is slower than the `MUMPS` solver. The multithreaded `SuperLU` performs LU factorization in
+    parallel but forward/back substitution in sequence.
+6.  The `PARDISO` direct solver and `FGMRES` iterative solver are provided by `MKL`.
+7.  The `MUMPS` solver supports both symmetric and asymmetric algorithms. One can use `set symm_mat true`
+    or `set symm_mat false`.
 
 ### Iterative System Solver
 

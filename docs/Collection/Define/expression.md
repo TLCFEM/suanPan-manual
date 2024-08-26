@@ -51,12 +51,12 @@ Thus, it ***cannot*** be used in models that require automatic computation of de
 
 ## Remarks
 
-1. The variables in the expression need to be explicitly given as the arguments.
-   It can be either unquoted or quoted by `"`.
-2. Multiple variables must be separated by vertical bar `|`.
-3. The expression can be given as a string or as a file name. The program tries to load the file first. If the file
-   does not exist, the program tries to parse the string as an expression.
-4. No whitespace (',', ' ', etc.) is allowed in any arguments.
+1.  The variables in the expression need to be explicitly given as the arguments.
+    It can be either unquoted or quoted by `"`.
+2.  Multiple variables must be separated by vertical bar `|`.
+3.  The expression can be given as a string or as a file name. The program tries to load the file first. If the file
+    does not exist, the program tries to parse the string as an expression.
+4.  No whitespace (',', ' ', etc.) is allowed in any arguments.
 
 `exprtk` provides very powerful functionalities. It is possible to apply logics and control flows in the expression.
 
