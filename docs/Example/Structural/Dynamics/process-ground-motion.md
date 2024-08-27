@@ -40,6 +40,15 @@ The conclusion is that, one shall always process the ground motion based on the 
 
 ## Ground Motion as Support Displacement
 
+The ground motion can also be applied on the supports.
+In this case, the ground motion is converted to displacement.
+But how?
+Naturally, acceleration shall be integrated twice to obtain displacement.
+However, the integration process is not straightforward.
+Furthermore, not any integration method is suitable for this purpose.
+
+## Example
+
 
 ```python
 import json
@@ -52,6 +61,7 @@ with open('process-ground-motion.json', 'r') as f:
 waveform = np.array(record['raw_data'], dtype=float)
 waveform /= max(abs(waveform))
 dt = record['time_interval']
+duration = dt * len(waveform)
 ```
 
 Let's peek at the ground motion record.
@@ -60,22 +70,20 @@ Let's peek at the ground motion record.
 ```python
 import matplotlib.pyplot as plt
 
-plt.grid(True)
-plt.plot(np.arange(0, len(waveform) * dt, dt), waveform)
-plt.xlabel('Time [s]')
-plt.ylabel('Acceleration')
+
+def plot_waveform(_dt, _waveform):
+    plt.plot(np.arange(0, _dt * len(_waveform), _dt), _waveform)
+    plt.xlabel('Time [s]')
+    plt.ylabel('Acceleration')
+    plt.grid(True)
+
+
+plot_waveform(dt, waveform)
 ```
 
 
-
-
-    Text(0, 0.5, 'Acceleration')
-
-
-
-
     
-![png](process-ground-motion_files/process-ground-motion_3_1.png)
+![png](process-ground-motion_files/process-ground-motion_3_0.png)
     
 
 
@@ -86,15 +94,20 @@ It can be done by Fourier transform.
 ```python
 from scipy.fft import rfft, rfftfreq
 
-n = len(waveform)
-frequencies = rfftfreq(n, dt)
-fft_values = 2 * np.abs(rfft(waveform)) / n
 
-plt.grid(True)
-plt.plot(frequencies, fft_values)
-plt.xlabel('Frequency [Hz]')
-plt.ylabel('Amplitude')
-plt.yscale('log')
+def plot_freq(_dt, _waveform):
+    n = len(_waveform)
+    frequencies = rfftfreq(n, _dt)
+    fft_values = 2 * np.abs(rfft(_waveform)) / n
+
+    plt.plot(frequencies, fft_values)
+    plt.xlabel('Frequency [Hz]')
+    plt.ylabel('Amplitude')
+    plt.yscale('log')
+    plt.grid(True)
+
+
+plot_freq(dt, waveform)
 ```
 
 
@@ -105,3 +118,23 @@ plt.yscale('log')
 
 It appears that the provided ground motion has been filtered using a band-pass filter.
 The frequency content above 50 Hz is significantly reduced.
+
+This ground motion is sampled at 200 Hz, with an interval of 0.005 s.
+If it is used in a response history analysis with a time step of 0.005 s, the ground motion shall be processed.
+The de facto method is to perform linear interpolation.
+
+
+```python
+from scipy.interpolate import interp1d
+
+interp_dt = dt / 10
+interp_func = interp1d(np.arange(0, duration, dt), waveform)
+interp_waveform = interp_func(np.arange(0, duration - dt + interp_dt, interp_dt))
+plot_freq(interp_dt, interp_waveform)
+```
+
+
+    
+![png](process-ground-motion_files/process-ground-motion_7_0.png)
+    
+
