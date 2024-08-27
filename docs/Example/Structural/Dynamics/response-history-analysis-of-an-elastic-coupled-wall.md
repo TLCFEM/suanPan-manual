@@ -1,4 +1,4 @@
-# [★★★☆☆] Response History Analysis of An Elastic Coupled Wall
+# [★★★☆☆] Response History Analysis of an Elastic Coupled Wall
 
 In this page, we perform eigen analysis and response history analysis of an elastic coupled wall model.
 
