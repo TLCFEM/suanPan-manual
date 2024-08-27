@@ -129,12 +129,92 @@ from scipy.interpolate import interp1d
 
 interp_dt = dt / 10
 interp_func = interp1d(np.arange(0, duration, dt), waveform)
-interp_waveform = interp_func(np.arange(0, duration - dt + interp_dt, interp_dt))
+interp_waveform = interp_func(np.arange(0, duration - dt, interp_dt))
 plot_freq(interp_dt, interp_waveform)
 ```
 
 
     
 ![png](process-ground-motion_files/process-ground-motion_7_0.png)
+    
+
+
+From the graph, one shall see that the interpolated acceleration contain significantly large components beyond the original 100 Hz.
+It is thus concluded that ***significant spurious response may be present***.
+
+The ground motion can also be converted to displacement.
+
+
+```python
+from scipy.integrate import cumulative_trapezoid
+
+disp = cumulative_trapezoid(cumulative_trapezoid(waveform, dx=dt), dx=dt)
+
+plot_waveform(dt, disp)
+```
+
+
+    
+![png](process-ground-motion_files/process-ground-motion_9_0.png)
+    
+
+
+What acceleration would such a displacement produce if the Newmark method is used?
+
+
+```python
+def newmark(displacement, interval, gamma=.5, beta=.25):
+    acceleration: np.ndarray = np.zeros_like(displacement)
+    velocity: np.ndarray = np.zeros_like(displacement)
+    for i in range(1, len(displacement)):
+        acceleration[i] = (displacement[i] - displacement[i - 1] - interval * velocity[i - 1] - (
+                0.5 - beta) * interval ** 2 * acceleration[i - 1]) / beta / interval ** 2
+        velocity[i] = velocity[i - 1] + (1.0 - gamma) * interval * acceleration[i - 1] + gamma * interval * \
+                      acceleration[i]
+    return acceleration
+
+
+acc = newmark(disp, dt)
+
+plot_freq(dt, waveform)
+plot_freq(dt, acc)
+plt.legend(['Original', 'Trap -> Newmark'])
+```
+
+
+
+
+    <matplotlib.legend.Legend at 0x7f1618220750>
+
+
+
+
+    
+![png](process-ground-motion_files/process-ground-motion_11_1.png)
+    
+
+
+
+```python
+from scipy.integrate import cumulative_simpson
+
+disp = cumulative_simpson(cumulative_simpson(interp_waveform, dx=interp_dt), dx=interp_dt)
+acc = newmark(disp, interp_dt)
+
+plot_freq(interp_dt, interp_waveform)
+plot_freq(interp_dt, acc)
+plt.legend(['Original', 'Trap -> Newmark'])
+```
+
+
+
+
+    <matplotlib.legend.Legend at 0x7f1618427790>
+
+
+
+
+    
+![png](process-ground-motion_files/process-ground-motion_12_1.png)
     
 
