@@ -142,7 +142,7 @@ plot_freq(interp_dt, interp_waveform)
 From the graph, one shall see that the interpolated acceleration contain significantly large components beyond the original 100 Hz.
 It is thus concluded that ***significant spurious response may be present***.
 
-The ground motion can also be converted to displacement.
+The ground motion can also be converted to displacement by using cumulative integration.
 
 
 ```python
@@ -179,20 +179,20 @@ acc = newmark(disp, dt)
 plot_freq(dt, waveform)
 plot_freq(dt, acc)
 plt.legend(['Original', 'Trap -> Newmark'])
+pass
 ```
 
 
-
-
-    <matplotlib.legend.Legend at 0x7f1618220750>
-
-
-
-
     
-![png](process-ground-motion_files/process-ground-motion_11_1.png)
+![png](process-ground-motion_files/process-ground-motion_11_0.png)
     
 
+
+In the above, we use Newmark method to compute the acceleration that corresponds to the integrated displacement.
+By comparing two accelerations records (original ground motion and converted from the integrated displacement), we could see some slight differences.
+Such differences appear to be negligible.
+
+However, if the acceleration is linearly interpolated, what would such a process bring?
 
 
 ```python
@@ -204,17 +204,13 @@ acc = newmark(disp, interp_dt)
 plot_freq(interp_dt, interp_waveform)
 plot_freq(interp_dt, acc)
 plt.legend(['Original', 'Trap -> Newmark'])
+pass
 ```
 
 
-
-
-    <matplotlib.legend.Legend at 0x7f1618427790>
-
-
-
-
     
-![png](process-ground-motion_files/process-ground-motion_12_1.png)
+![png](process-ground-motion_files/process-ground-motion_13_0.png)
     
 
+
+It seems the high frequency noise is significantly larger if the acceleration is integrated using an arbitrary integration method.
