@@ -44,6 +44,7 @@
         * [triple pendulum](Example/Structural/Dynamics/triple-pendulum.md)
         * [computing response spectrum](Example/Structural/Dynamics/computing-response-spectrum.md)
         * [integrate with python](Example/Structural/Dynamics/integrating-preprocessing-with-python.md)
+        * [process ground motion](Example/Structural/Dynamics/process-ground-motion.md)
     * Hybrid
         * [vibration of a displaced beam](Example/Structural/Hybrid/vibration-of-a-displaced-beam.md)
     * Buckling
