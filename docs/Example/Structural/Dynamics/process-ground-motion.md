@@ -127,9 +127,15 @@ The de facto method is to perform linear interpolation.
 ```python
 from scipy.interpolate import interp1d
 
-interp_dt = dt / 10
 interp_func = interp1d(np.arange(0, duration, dt), waveform)
-interp_waveform = interp_func(np.arange(0, duration - dt, interp_dt))
+
+
+def upsample(n):
+    _dt = dt / n
+    return _dt, interp_func(np.arange(0, duration - dt, _dt))
+
+
+interp_dt, interp_waveform = upsample(10)
 plot_freq(interp_dt, interp_waveform)
 ```
 
@@ -198,11 +204,13 @@ However, if the acceleration is linearly interpolated, what would such a process
 ```python
 from scipy.integrate import cumulative_simpson
 
-disp = cumulative_simpson(cumulative_simpson(interp_waveform, dx=interp_dt), dx=interp_dt)
-acc = newmark(disp, interp_dt)
+
+def double_convert(_dt, _waveform):
+    return newmark(cumulative_simpson(cumulative_simpson(_waveform, dx=_dt), dx=_dt), _dt)
+
 
 plot_freq(interp_dt, interp_waveform)
-plot_freq(interp_dt, acc)
+plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
 plt.legend(['Original', 'Trap -> Newmark'])
 pass
 ```
@@ -214,3 +222,35 @@ pass
 
 
 It seems the high frequency noise is significantly larger if the acceleration is integrated using an arbitrary integration method.
+Let's choose a different upsampling rate.
+
+
+```python
+interp_dt, interp_waveform = upsample(2)
+plot_freq(interp_dt, interp_waveform)
+plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
+plt.legend(['Original', 'Trap -> Newmark'])
+pass
+```
+
+
+    
+![png](process-ground-motion_files/process-ground-motion_15_0.png)
+    
+
+
+From the figure, one can assert that, if the structure responds to 200 Hz signals, the response could be significant as by choosing to integrate the acceleration using a method that is different from the one used in response history analysis (here, the Newmark method).
+
+## Remarks
+
+In the above example, we have demonstrated two things.
+
+1.  As discussed in [10.1080/13632469.2024.2372814](https://doi.org/10.1080/13632469.2024.2372814), when ground motion is applied in the form of inertial force, linear interpolation of acceleration introduces high frequency noise, the amplitude of which could be relatively large. This would introduce spurious responses.
+2.  When ground motion is applied in the form of support displacement, an inconsistent integration method that is used to integrate acceleration to displacement could introduce high frequency noise as well, if the integration method is different from the one used in response history analysis. This type of spurious response is not significant if the acceleration is not linear interpolated.
+
+In conclusion, analysts shall be aware of two things.
+
+1.  Linear interpolation is bad. It shall be avoided, or at least cannot be used alone.
+2.  When converting acceleration to displacement, or vice versa, the integration method shall be consistent with the one used in response history analysis.
+
+No matter what, the applied load, in the form of either inertial force or support displacement, shall be processed based on the time step size used in response history analysis.
