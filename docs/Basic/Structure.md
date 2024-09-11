@@ -2,9 +2,9 @@
 
 The default parser accepts a **three-part** structure. They are:
 
-1. Model Properties Setup
-2. Analysis Properties Setup
-3. Post-processing
+1.  Model Properties Setup
+2.  Analysis Properties Setup
+3.  Post-processing
 
 The previous cantilever beam example is used here to explain the structure. The model is shown as follows.
 

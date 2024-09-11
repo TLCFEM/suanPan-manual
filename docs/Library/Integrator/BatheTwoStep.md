@@ -11,6 +11,10 @@ References:
 
 The implementation follows the original algorithm. The only difference is the step size defined in `suanPan` is the mean step size of two sub-step sizes, that is $$\Delta{}t/2$$ in the references.
 
+For further discussions on this type of algorithm, one can check the following references.
+
+1. [10.1007/s11071-023-09065-7](https://doi.org/10.1007/s11071-023-09065-7)
+
 ## Syntax
 
 ```

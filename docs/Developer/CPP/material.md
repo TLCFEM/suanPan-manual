@@ -2,10 +2,10 @@
 
 ## Things to Know
 
-1. There is no need to write wrappers. Various wrappers are available to wrap 3D material models for 1D and 2D
-   applications.
-2. Unless the 2D material model is formulated directly in the 2D space, for example the plane stress space (such as the
-   Barlat-Lian model), developers are not encouraged to write any 2D versions of 3D models.
+1.  There is no need to write wrappers. Various wrappers are available to wrap 3D material models for 1D and 2D
+    applications.
+2.  Unless the 2D material model is formulated directly in the 2D space, for example the plane stress space (such as the
+    Barlat-Lian model), developers are not encouraged to write any 2D versions of 3D models.
 
 ## Main Tasks of a Material Model
 

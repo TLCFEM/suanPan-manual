@@ -36,27 +36,27 @@ state may or may not be the converged state, thus may or may not be kept in an i
 
 Some remarks to explain those operations.
 
-1. In operation `*info=0`, memory shall be allocated to store two states and other relevant variables. Since it is not
-   known to the main executable how large the memory is required, this has to be done by the library using whatever
-   methods to allocate.
-2. In operation `*info=2`, trial state is updated based on trial strain and current state (as an incremental form is
-   implemented). This operation will be called in a static analysis, or by elements that only computes strains. Before
-   calling this operation, the trial strain will be written to the corresponding location of allocated memory some place
-   defined in `*data`.
-3. In operation `*info=3`, trial state is updated based on trial strain, trial strain rate and current state (as an
-   incremental form is implemented). This operation will be called by elements that computes both strains and strain
-   rates and pass them to material models. Often, the resulting stiffness and damping matrices shall be computed. Before
-   calling this operation, the trial strain and the trial strain rate will be written to the corresponding location of
-   allocated memory some place defined in `*data`.
-4. In operation `*info=4`, we simply overwrite current state with trial state as the trial state now converges after
-   several iterations.
-5. In operation `*info=5`, when this operation is called, convergence is not met, so we overwrite trial state with
-   current state and update the system with a smaller increment of (pseudo) time.
-6. In operation `*info=6`, all state variables and history variables shall be reverted to initial (potential zero)
-   state.
-7. In operation `*info=7`, all model parameters shall be checked to see if a proper material model can be defined. This
-   cannot be done in the main executable although the command is processed in the main executable, in which all
-   parameters will be read as double inputs and stored in a raw double array in `*data`.
+1.  In operation `*info=0`, memory shall be allocated to store two states and other relevant variables. Since it is not
+    known to the main executable how large the memory is required, this has to be done by the library using whatever
+    methods to allocate.
+2.  In operation `*info=2`, trial state is updated based on trial strain and current state (as an incremental form is
+    implemented). This operation will be called in a static analysis, or by elements that only computes strains. Before
+    calling this operation, the trial strain will be written to the corresponding location of allocated memory some place
+    defined in `*data`.
+3.  In operation `*info=3`, trial state is updated based on trial strain, trial strain rate and current state (as an
+    incremental form is implemented). This operation will be called by elements that computes both strains and strain
+    rates and pass them to material models. Often, the resulting stiffness and damping matrices shall be computed. Before
+    calling this operation, the trial strain and the trial strain rate will be written to the corresponding location of
+    allocated memory some place defined in `*data`.
+4.  In operation `*info=4`, we simply overwrite current state with trial state as the trial state now converges after
+    several iterations.
+5.  In operation `*info=5`, when this operation is called, convergence is not met, so we overwrite trial state with
+    current state and update the system with a smaller increment of (pseudo) time.
+6.  In operation `*info=6`, all state variables and history variables shall be reverted to initial (potential zero)
+    state.
+7.  In operation `*info=7`, all model parameters shall be checked to see if a proper material model can be defined. This
+    cannot be done in the main executable although the command is processed in the main executable, in which all
+    parameters will be read as double inputs and stored in a raw double array in `*data`.
 
 In a typical analysis flow, `*info=0` will be called first to initialise memory, then `*info=7` will be called to valid
 parameters. If it fails, `*info=1` will be called. Otherwise, either `*info=2` or `*info=3` will be called to update

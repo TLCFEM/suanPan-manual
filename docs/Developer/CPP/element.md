@@ -148,12 +148,12 @@ void initialize_base(const shared_ptr<DomainBase>&) override final;
 
 A number of tasks are performed in the default initialization.
 
-1. Check if all involved nodes are active, if not, the element will be disabled.
-2. Check the current number of DoFs of each involved node, if it is smaller than that required by the current element,
-   then reset it.
-3. Check if there is a valid and active material/section model based on the corresponding tag provided in the
-   constructor, if not, the element will be disabled.
-4. On the second run, check again if all nodes are active, if not, the element will be disabled.
+1.  Check if all involved nodes are active, if not, the element will be disabled.
+2.  Check the current number of DoFs of each involved node, if it is smaller than that required by the current element,
+    then reset it.
+3.  Check if there is a valid and active material/section model based on the corresponding tag provided in the
+    constructor, if not, the element will be disabled.
+4.  On the second run, check again if all nodes are active, if not, the element will be disabled.
 
 ## General Procedure
 
@@ -187,11 +187,11 @@ The latter three manage states. Normally it is necessary to call the correspondi
 material/section models if the implemented element itself does not store history variables. As the name suggests, we
 need to update the trial state in the first method. A general procedure would be:
 
-1. obtain nodal displacement/velocity vector by calling for example `get_trial_displacement()`,
-2. compute strain at each integration point,
-3. update material models using new trial strains,
-4. get material response and form element resistance and stiffness matrix. If necessary, mass/damping matrix shall be
-   updated according to the new trial state.
+1.  obtain nodal displacement/velocity vector by calling for example `get_trial_displacement()`,
+2.  compute strain at each integration point,
+3.  update material models using new trial strains,
+4.  get material response and form element resistance and stiffness matrix. If necessary, mass/damping matrix shall be
+    updated according to the new trial state.
 
 ### If You Decide To Manage States In Your Way
 
@@ -223,25 +223,25 @@ virtual const mat& get_initial_secant() const;
 
 As a general guideline, here are some conventions to follow:
 
-1. It is not recommended using the second approach, that is, managing internal variables at derived class level, unless
-   all methods are carefully implemented.
-2. All state updates, including all history variables, shall only happen in the `update_status()` method, as all get
-   methods are declared as `const`.
-3. It is sometimes useful to update trial strain related variables only in `update_status()` and compute responses in
-   the corresponding getters. In that case, a `const_cast` is required. By doing so, developers must clearly know what
-   the operation means. A typical example would be, for example, the modified Newton algorithm or
-   the [`BFGS`](../../Library/Solver/BFGS.md) method, in which `update_status()` will only be called once and getters of
-   resistances and matrices would be called several times for each iteration in each sub-step. Splitting updater and
-   getters apart will for sure save some computation efforts but is also error-prone.
-4. Normally the damping matrix and the mass matrix shall only be defined as functions of current state at most --- if
-   they are not constants. Essentially, they cannot be functions of trial strain/displacement if a quadratic convergence
-   rate shall be preserved.
-5. If the stiffness matrix is constant throughout the analysis, it is recommended to use
-   function `ConstantStiffness(ElementData*)` to declare such a feature in order to save some memory.
-6. If the damping matrix is constant throughout the analysis, it is recommended to use
-   function `ConstantDamping(ElementData*)` to declare such a feature in order to save some memory.
-7. If the mass matrix is constant throughout the analysis, it is recommended to use
-   function `ConstantMass(ElementData*)` to declare such a feature in order to save some memory.
+1.  It is not recommended using the second approach, that is, managing internal variables at derived class level, unless
+    all methods are carefully implemented.
+2.  All state updates, including all history variables, shall only happen in the `update_status()` method, as all get
+    methods are declared as `const`.
+3.  It is sometimes useful to update trial strain related variables only in `update_status()` and compute responses in
+    the corresponding getters. In that case, a `const_cast` is required. By doing so, developers must clearly know what
+    the operation means. A typical example would be, for example, the modified Newton algorithm or
+    the [`BFGS`](../../Library/Solver/BFGS.md) method, in which `update_status()` will only be called once and getters of
+    resistances and matrices would be called several times for each iteration in each sub-step. Splitting updater and
+    getters apart will for sure save some computation efforts but is also error-prone.
+4.  Normally the damping matrix and the mass matrix shall only be defined as functions of current state at most --- if
+    they are not constants. Essentially, they cannot be functions of trial strain/displacement if a quadratic convergence
+    rate shall be preserved.
+5.  If the stiffness matrix is constant throughout the analysis, it is recommended to use
+    function `ConstantStiffness(ElementData*)` to declare such a feature in order to save some memory.
+6.  If the damping matrix is constant throughout the analysis, it is recommended to use
+    function `ConstantDamping(ElementData*)` to declare such a feature in order to save some memory.
+7.  If the mass matrix is constant throughout the analysis, it is recommended to use
+    function `ConstantMass(ElementData*)` to declare such a feature in order to save some memory.
 
 ## Record Response
 
@@ -263,6 +263,6 @@ remaining is automatically handled by the base class.
 
 For different dimensions, here are some very simple elements implemented for reference.
 
-1. 1D --- `Spring01` a spring element based on infinitesimal displacement.
-2. 2D --- `ElementExample` a three-node triangle plain membrane element.
-3. 3D --- `C3D4` a four-node tetragon using one-node integration.
+1.  1D --- `Spring01` a spring element based on infinitesimal displacement.
+2.  2D --- `ElementExample` a three-node triangle plain membrane element.
+3.  3D --- `C3D4` a four-node tetragon using one-node integration.

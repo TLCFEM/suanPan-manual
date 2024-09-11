@@ -31,8 +31,8 @@ $$
 f=1.15p^2+m_s^2+m_w^4+3.67p^2m_s^2+3p^6m_w^2+4.65m_s^4m_w^2-c
 $$
 
-where $$p$$, $$m_s$$ and $$m_w$$ are normalised axial force and moments about strong and weak axes.
-The surface is suitable for I-sections.
+where $$p$$, $$m_s$$ and $$m_w$$ are normalised axial force and moments about the strong and weak axes.
+This surface is suitable for I-sections.
 
 ### Option Two
 
@@ -59,7 +59,8 @@ section NM3D2 (1) (2...11) [(12) (13) (14) (15)...]
 ```
 
 In the above command, parameters `(12)`, `(13)`, `(14)` and `(15)` form a set of parameters and can be appended as many
-groups as analyst wishes. The surface is assumed to possess the following form,
+groups as the analyst wishes.
+The surface is assumed to possess the following form,
 
 $$
 f=\sum_{i=1}^na_ip^{b_i}m_s^{c_i}m_w^{d_i}-e.
@@ -69,11 +70,18 @@ For example, the previous surface $$f=1.15p^2+m_s^2+m_w^4+3.67p^2m_s^2+3p^6m_w^2
 expressed with the second syntax as follows.
 
 ```
-section NM3D2 (1) (2...11) 1.15 2. 0. 0. 1. 0. 2. 0. 3.67 2. 2. 0. 3. 6. 0. 2. 4.65 0. 4. 2.
+section NM3D2 (1) (2...11) \
+1.15 2. 0. 0. \
+1. 0. 2. 0. \
+1. 0. 0. 4. \
+3.67 2. 2. 0. \
+3. 6. 0. 2. \
+4.65 0. 4. 2.
 ```
 
-The only validation implemented is the number of triplets. The command takes $$4n$$ parameters and interprets them
-accordingly. Please make sure the definition is correct.
+The only validation implemented is the number of triplets.
+The command takes $$4n$$ parameters and interprets them accordingly.
+Please make sure the definition is correct.
 
 ## Remarks
 

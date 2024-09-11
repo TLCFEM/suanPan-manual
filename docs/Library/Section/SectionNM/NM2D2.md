@@ -30,8 +30,8 @@ $$
 f=1.15p^2+m_s^2+3.67p^2m_s^2-c
 $$
 
-where $$p$$ and $$m_s$$ are normalised axial force and moment (about strong axis). The surface is suitable for
-I-sections.
+where $$p$$ and $$m_s$$ are normalised axial force and moment (about the strong axis).
+This surface is suitable for I-sections.
 
 ### Option Two
 
@@ -54,8 +54,9 @@ section NM2D2 (1) (2...9) [(10) (11) (12) ...]
 # (12) double, c_i
 ```
 
-In the above command, parameters `(10)`, `(11)` and `(12)` form a triplet and can be appended as many groups as analyst
-wishes. The surface is assumed to possess the following form,
+In the above command, parameters `(10)`, `(11)` and `(12)` form a triplet and can be appended as many groups as the
+analyst wishes.
+The surface is assumed to possess the following form,
 
 $$
 f=\sum_{i=1}^na_ip^{b_i}m_s^{c_i}-d.
@@ -68,8 +69,9 @@ syntax as follows.
 section NM2D2 (1) (2...9) 1.15 2. 0. 1. 0. 2. 3.67 2. 2.
 ```
 
-The only validation implemented is the number of triplets. The command takes $$3n$$ parameters and interprets them
-accordingly. Please make sure the definition is correct.
+The only validation implemented is the number of triplets.
+The command takes $$3n$$ parameters and interprets them accordingly.
+Please make sure the definition is correct.
 
 ## Remarks
 

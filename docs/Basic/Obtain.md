@@ -2,7 +2,7 @@
 
 ## Docker Image
 
-A docker image is available at [Docker Hub](https://hub.docker.com/repository/docker/tlcfem/suanpan). To use it, 
+A docker image is available at [Docker Hub](https://hub.docker.com/r/tlcfem/suanpan). To use it, 
 docker needs to be installed first. See [this page](https://docs.docker.com/get-docker/) for details.
 
 Once docker is installed, it is possible to pull the image via:
@@ -27,7 +27,7 @@ sp
 
 One can also attach volume to the container to access the files in the host machine.
 This may be the main use case.
-And then run the file inside the container.
+Then one can run the file inside the container as follows.
 
 ```bash
 docker run -it --rm -v /path/to/host/folder:/path/to/container/folder tlcfem/suanpan
@@ -56,7 +56,7 @@ For older versions or other flavours of Linux, successful execution is not guara
 Please consider compiling the binaries manually.
 
 In order to enable `CUDA` backed solvers, the program shall be compiled locally with preinstalled external libraries.
-See this page [Compile](Compile.md).
+See [this](Compile.md) page.
 
 Currently, the following package managers can be used to install the program.
 
@@ -98,10 +98,9 @@ Then it is possible to use `suanpan` to invoke the application.
 
 ## Execute Program
 
-By default, the `AVX` support is turned on to utilize CPU capability. For CPUs that do not support `AVX`, the
+By default, the `AVX2` support is turned on to utilize CPU capability. For CPUs that do not support `AVX2`, the
 application **cannot** be successfully executed. Users can either compile the program by themselves or request a
-specific version by filing an issue. Processors that do not support `AVX` may be too slow to perform HPC based
-simulations.
+specific version by filing an issue.
 
 The name of the executable is `suanPan`, however, snap/chocolatey/scoop will create shim executable named as 
 `suanpan`. Depending on how the application is installed, one may use `suanpan` or `suanPan` to invoke the application.
@@ -115,8 +114,9 @@ do so, users can, for example, in Windows, use the following command.
 set OMP_NUM_THREADS=6
 ```
 
-On Linux, the dynamic loading path need to be set so that dynamic libraries such as `libtbb.so` can be successfully
-found. If the application is installed via snap/apt/dnf, it is automatically done.
+On Linux, the dynamic loading path needs to be set so that dynamic libraries such as `libtbb.so` can be successfully
+found.
+If the application is installed via `snap`/`apt`/`dnf`, it is automatically done.
 
 ```bash
 # current path contains suanPan
@@ -266,8 +266,8 @@ It provides syntax highlighting and code completion.
 
 ## Sublime Text Workspace
 
-I personally use [Sublime Text](https://www.sublimetext.com/) as my model editor. Other tools
-like [Atom](https://atom.io/) and [VS Code](https://code.visualstudio.com/) can also be used.
+I personally use [Sublime Text](https://www.sublimetext.com/) as my model editor.
+Other tools like [VS Code](https://code.visualstudio.com/) can also be used.
 
 ### Syntax Highlighting
 
@@ -370,19 +370,19 @@ The application itself does **not** write any files to folders other than the cu
 
 There are some exceptions though.
 
-1. If the [`terminal`](../Collection/Process/terminal.md) command is used, one can change files in the file system.
-2. If one decides to download new versions via the bundled updater, the archive is downloaded to the current working
-   directory. The updater is not always bundled.
+1.  If the [`terminal`](../Collection/Process/terminal.md) command is used, one can change files in the file system.
+2.  If one decides to download new versions via the bundled updater, the archive is downloaded to the current working
+    directory. The updater is not always bundled.
 
 The script `suanPan.sh` writes the following files to the system.
 
-1. `$HOME/.local/share/applications/suanPan.desktop`
-2. `$HOME/.local/bin/suanpan`
-3. `$HOME/.config/sublime-text/Packages/User/suanPan.sublime-build`
-4. `$HOME/.config/sublime-text/Packages/User/suanPan.sublime-completions`
-5. `$HOME/.config/sublime-text/Packages/User/suanPan.sublime-syntax`
+1.  `$HOME/.local/share/applications/suanPan.desktop`
+2.  `$HOME/.local/bin/suanpan`
+3.  `$HOME/.config/sublime-text/Packages/User/suanPan.sublime-build`
+4.  `$HOME/.config/sublime-text/Packages/User/suanPan.sublime-completions`
+5.  `$HOME/.config/sublime-text/Packages/User/suanPan.sublime-syntax`
 
 The script `AddAssociation.bat` changes the following settings.
 
-1. Associate `*.sp` and `*.supan` files with the program.
-2. Copy configuration files to default folder if Sublime Text is installed.
+1.  Associate `*.sp` and `*.supan` files with the program.
+2.  Copy configuration files to default folder if Sublime Text is installed.

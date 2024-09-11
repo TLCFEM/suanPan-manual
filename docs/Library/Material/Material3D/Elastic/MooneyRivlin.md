@@ -10,6 +10,10 @@ $$
 
 where $$A_{10}$$ and $$A_{01}$$ are two material constants and $$K$$ is the bulk modulus.
 
+## References
+
+1.  [10.1007/978-1-4419-1746-1](https://doi.org/10.1007/978-1-4419-1746-1) Chapter 3.5.2.1
+
 ## Syntax
 
 ```

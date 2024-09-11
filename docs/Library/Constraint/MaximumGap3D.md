@@ -15,7 +15,7 @@ constraint MaximumGap3D (1) (2) (3) (4)
 This is a conditional constraint that limits the distance between two nodes, viz.,
 
 $$
-\left|\mathbf{x}_i+\mathbf{u}_i\-\mathbf{x}_j-\mathbf{u}_j\right|\leq{}D_{max}.
+\left|\mathbf{d}_i+\mathbf{u}_i-\mathbf{d}_j-\mathbf{u}_j\right|\leq{}D_{max}.
 $$
 
 The participating DoFs are `1`, `2` and `3`.

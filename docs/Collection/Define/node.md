@@ -74,13 +74,13 @@ The following quantities can be recorded using the commands similar to `plainrec
 
 ### Remarks
 
-1. For static analysis, normally only displacement `U` and resistance `RF` are activated. Thus, recording other 
-   quantities returns trivial results.
-2. If the required quantity is not active, the output will be empty.
-3. The damping and inertial forces are collected from all the elements in the model. It **must** be noted that the 
-   recorded values do **not** include any contributions that do not stem from elements. For example, the damping 
-   force given by global damping models cannot be split to individual elements; thus it is not reflected in the 
-   nodal damping force. This design is necessary as one may wish to separate contributions from various sources apart.
-4. To record **global** damping and inertial forces that account for the total force, use `GDF`, `GDF1`, `GDF2`, 
-   `GDF3`, `GDF4`, `GDF5`, `GDF6`, `GIF`, `GIF1`, `GIF2`, `GIF3`, `GIF4`, `GIF5`, `GIF6`, which stand for global 
-   damping force and global inertial force.
+1.  For static analysis, normally only displacement `U` and resistance `RF` are activated. Thus, recording other 
+    quantities returns trivial results.
+2.  If the required quantity is not active, the output will be empty.
+3.  The damping and inertial forces are collected from all the elements in the model. It **must** be noted that the 
+    recorded values do **not** include any contributions that do not stem from elements. For example, the damping 
+    force given by global damping models cannot be split to individual elements; thus it is not reflected in the 
+    nodal damping force. This design is necessary as one may wish to separate contributions from various sources apart.
+4.  To record **global** damping and inertial forces that account for the total force, use `GDF`, `GDF1`, `GDF2`, 
+    `GDF3`, `GDF4`, `GDF5`, `GDF6`, `GIF`, `GIF1`, `GIF2`, `GIF3`, `GIF4`, `GIF5`, `GIF6`, which stand for global 
+    damping force and global inertial force.

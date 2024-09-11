@@ -27,8 +27,9 @@ section NM2D3 (1) (2...12) [(13) (14) (15) ...]
 # (15) double, c_i
 ```
 
-In the above command, parameters `(13)`, `(14)` and `(15)` form a triplet and can be appended as many groups as analyst
-wishes. The surface is assumed to possess the following form,
+In the above command, parameters `(13)`, `(14)` and `(15)` form a triplet and can be appended as many groups as the
+analyst wishes.
+The surface is assumed to possess the following form,
 
 $$
 f=\sum_{i=1}^na_ip^{b_i}m_s^{c_i}-d.
@@ -40,5 +41,6 @@ For example, the surface $$f=1.15p^2+m_s^2+3.67p^2m_s^2-c$$ can be expressed as 
 section NM2D3 (1) (2...12) 1.15 2. 0. 1. 0. 2. 3.67 2. 2.
 ```
 
-The only validation implemented is the number of triplets. The command takes $$3n$$ parameters and interprets them
-accordingly. Please make sure the definition is correct.
+The only validation implemented is the number of triplets.
+The command takes $$3n$$ parameters and interprets them accordingly.
+Please make sure the definition is correct.

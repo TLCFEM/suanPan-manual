@@ -27,5 +27,5 @@ materialTestByLoad3D (1) (2...7) (8) [9...]
 
 ## Remarks
 
-1. The Newton-Raphson method is implemented to solve the corresponding strain increments.
-   Thus, softening models should not be tested in this way.
+1.  The Newton-Raphson method is implemented to solve the corresponding strain increments.
+    Thus, softening models should not be tested in this way.

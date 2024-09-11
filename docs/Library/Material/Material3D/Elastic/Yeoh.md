@@ -40,7 +40,7 @@ The following command shall be used.
 material Yeoh 1 20 4000
 ```
 
-If density is nonzero, say for example $$\rho=1E-4$$, then the following command shall be used.
+If density is nonzero, say for example $$\rho=10^{-4}$$, then the following command shall be used.
 
 ```
 material Yeoh 1 20 4000 1E-4

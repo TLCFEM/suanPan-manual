@@ -27,10 +27,10 @@ materialTest3D (1) (2...7) (8) [9...]
 
 ## Remarks
 
-1. The increment size could be either positive or negative.
-2. The loading direction reverses after given numbers of steps.
-3. The strain-stress history would be saved to `RESULT.txt`. If `HDF5` is used, the result would be additionally saved
-   to `RESULT.h5`. Besides, a `gnuplot` file named `RESULT.plt` will be generated.
+1.  The increment size could be either positive or negative.
+2.  The loading direction reverses after given numbers of steps.
+3.  The strain-stress history would be saved to `RESULT.txt`. If `HDF5` is used, the result would be additionally saved
+    to `RESULT.h5`. Besides, a `gnuplot` file named `RESULT.plt` will be generated.
 
 ## Usage
 

@@ -1,4 +1,4 @@
-# [★★★☆☆] Bouncing of A Ball
+# [★★★☆☆] Bouncing of a Ball
 
 In this example we show the application of the [`RigidWall`](../../../Library/Constraint/RigidWall.md) and 
 [`RestitutionWall`](../../../Library/Constraint/RestitutionWall.md) constraints. It is also possible to define a 

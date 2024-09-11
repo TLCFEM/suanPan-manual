@@ -27,20 +27,20 @@ Users are encouraged to `perf` the performance of various analysis types.
 
 Here are some tips that may improve the performance.
 
-1. If the analysis is known to be linear elastic, use `set linear_system true` to skip convergence test and iteration.
-   Note the analysis should be both material and geometric linear.
-2. If the global system is known to be symmetric, use `set symm_mat true` to use a symmetric storage.
-   Analyses involving 1D materials are mostly (**_not always_**) symmetric.
-   Analyses involving 2D and 3D materials are mostly (**_not always_**) **_not_** symmetric.
-3. Consider a proper stepping strategy. A fixed stepping size may be unnecessarily expensive.
-   A proper adaptive stepping strategy can significantly improve the performance.
-4. Prefer a dense solver over a sparse solver if the system is small.
-   A dense solver is generally faster than a sparse solver for small systems.
-5. Prefer a mixed-precision algorithm `set precision mixed` over a full-precision algorithm if the system is large.
-   A mixed-precision algorithm is generally faster than a full-precision algorithm for large systems.
-   See following for details.
-6. The performance of various sparser solver can vary significantly.
-   It is recommended to try different solvers to find the best one.
+1.  If the analysis is known to be linear elastic, use `set linear_system true` to skip convergence test and iteration.
+    Note the analysis should be both material and geometric linear.
+2.  If the global system is known to be symmetric, use `set symm_mat true` to use a symmetric storage.
+    Analyses involving 1D materials are mostly (**_not always_**) symmetric.
+    Analyses involving 2D and 3D materials are mostly (**_not always_**) **_not_** symmetric.
+3.  Consider a proper stepping strategy. A fixed stepping size may be unnecessarily expensive.
+    A proper adaptive stepping strategy can significantly improve the performance.
+4.  Prefer a dense solver over a sparse solver if the system is small.
+    A dense solver is generally faster than a sparse solver for small systems.
+5.  Prefer a mixed-precision algorithm `set precision mixed` over a full-precision algorithm if the system is large.
+    A mixed-precision algorithm is generally faster than a full-precision algorithm for large systems.
+    See following for details.
+6.  The performance of various sparser solver can vary significantly.
+    It is recommended to try different solvers to find the best one.
 
 ## Mixed-Precision Algorithm
 
