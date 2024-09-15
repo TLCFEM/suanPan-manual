@@ -354,6 +354,7 @@
         * [Nonviscous01](Library/Material/Material1D/Viscosity/Nonviscous01.md)
     * vonMises
         * [ArmstrongFrederick1D](Library/Material/Material1D/vonMises/ArmstrongFrederick1D.md)
+        * [AFCO1D](Library/Material/Material1D/vonMises/AFCO1D.md)
         * [Bilinear1D](Library/Material/Material1D/vonMises/Bilinear1D.md)
         * [BilinearMises1D](Library/Material/Material1D/vonMises/BilinearMises1D.md)
         * [CustomGurson1D](Library/Material/Material1D/vonMises/CustomGurson1D.md)
