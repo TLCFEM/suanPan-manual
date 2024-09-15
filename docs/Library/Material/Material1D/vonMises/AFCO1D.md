@@ -4,8 +4,8 @@ This is an extension of [`ArmstrongFrederick1D`](ArmstrongFrederick1D.md) model.
 
 The name represents the following.
 
-`AF` --- Armstrong-Frederick type kinematic hardening rule
-`CO` --- Chaboche-Ohno type isotropic hardening reduction rule
+- `AF` --- Armstrong-Frederick type kinematic hardening rule
+- `CO` --- Chaboche-Ohno type isotropic hardening reduction rule
 
 ## References
 
