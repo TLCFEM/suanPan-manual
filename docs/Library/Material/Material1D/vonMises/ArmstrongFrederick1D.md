@@ -9,24 +9,26 @@ for details on the theory.
 
 ## Theory
 
-A von Mises type yield function is used. The associated plasticity is assumed. Both isotropic and kinematic hardening
-rules are employed.
+A von Mises type yield function is used.
+The associated plasticity is assumed.
+Both isotropic and kinematic hardening rules are employed.
 
 ### Isotropic Hardening
 
 An exponential function is added to the linear hardening law.
 
 $$
-k=\sigma_y+k_s(1-e^{-mp})+k_lp,
+\sigma_y=\sigma_i+\sigma_s(1-e^{-mp})+k_lp,
 $$
 
-where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturated stress, $$k_l$$ is the
+where $$\sigma_i$$ is the initial elastic limit (yielding stress), $$\sigma_s$$ is the saturation stress, $$k_l$$ is the
 linear hardening modulus, $$m$$ is a constant that controls the speed of hardening,
 $$\mathrm{d}p=\Big|\mathrm{d}\varepsilon^p\Big|$$ is the rate of accumulated plastic strain $$p$$.
 
 ### Kinematic Hardening
 
-The Armstrong-Frederick type rule is used. Multiple back stresses are defined,
+The Armstrong-Frederick type rule is used.
+Multiple back stresses are defined,
 
 $$
 \beta=\sum\beta^i
@@ -46,9 +48,9 @@ where $$a^i$$ and $$b^i$$ are material constants.
 material ArmstrongFrederick1D (1) (2) (3) (4) (5) (6) [(7) (8)...] [9]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, yield stress
-# (4) double, saturated stress
-# (5) double, linear hardening modulus
+# (3) double, yield stress, \sigma_i
+# (4) double, saturation stress, \sigma_s
+# (5) double, linear hardening modulus, k_l
 # (6) double, m
 # (7) double, a
 # (8) double, b
@@ -66,7 +68,7 @@ material ArmstrongFrederick1D 1 2E2 0. 0. 0. 0. 50 500.
 The maximum stress can be computed as
 
 $$
-\sigma_{max}=\sigma_y+\sum\dfrac{a^i}{b^i}=100~\mathrm{MPa}.
+\sigma_{max}=\sigma_y+\sum\dfrac{a^i}{b^i}=\dfrac{50}{500}=0.1.
 $$
 
 ![Example 1](ArmstrongFrederick1D.EX1.svg)
