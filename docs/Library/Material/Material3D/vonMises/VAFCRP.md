@@ -71,9 +71,9 @@ $$
 \dfrac{\gamma}{\Delta{}t}=\dot{\gamma}=\dfrac{1}{\mu}\left(\left(\dfrac{q}{k}\right)^{\dfrac{1}{\epsilon}}-1\right),
 $$
 
-where $$\mu$$ and $$\epsilon$$ are two material constants that controls viscosity. ***Note either $$\mu$$ or
-$$\epsilon$$ can be set to zero to disable rate-dependent response, in that case this model is identical to the
-Armstrong-Frederick model.***
+where $$\mu$$ and $$\epsilon$$ are two material constants that controls viscosity.
+Note either $$\mu$$ or $$\epsilon$$ can be set to zero to disable rate-dependent response
+In that case this model is identical to the [`ArmstrongFrederick`](ArmstrongFrederick.md) model.
 
 Also note the Perzyna type definition, which is defined as
 
@@ -86,30 +86,33 @@ known whether $$\dfrac{q}{k}-1$$ is greater or smaller than $$1$$.
 
 ## Syntax
 
+The following applies to `v3.6` and later.
+Check the older syntax in the older version of the documentation.
+
 ```
 material VAFCRP (1) (2) (3) (4) (5) (6) (7) (8) (9) [10 11...] [12]
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, poissons ratio
 # (4) double, yield stress
-# (5) double, saturated stress
-# (6) double, linear hardening modulus
-# (7) double, m
+# (5) double, linear hardening modulus
+# (6) double, saturation stress
+# (7) double, m, saturation rate
 # (8) double, mu
 # (9) double, epsilon
-# (10) double, a
-# (11) double, b
+# (10) double, a, kinematic hardening parameter
+# (11) double, b, kinematic hardening parameter
 # [12] double, density, default: 0.0
 ```
 
 ## Example
 
 This model is essentially a viscous extension of the [`ArmstrongFrederick`](ArmstrongFrederick.md) model. Only some
-different behavior is shown here.
+different behaviour is shown here.
 
 ### Viscosity
 
-For static analysis with viscosity material, the step time is not analytical time anymore, it represents real time as it
+For static analysis with viscosity material, the step time is not analytical time any more, it represents real time as it
 is used in the computation of viscous response. The step time shall be properly set to be consistent with the material
 parameters used in the model.
 
