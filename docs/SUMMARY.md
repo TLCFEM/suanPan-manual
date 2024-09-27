@@ -353,6 +353,7 @@
         * [CoulombFriction](Library/Material/Material1D/Viscosity/CoulombFriction.md)
         * [Nonviscous01](Library/Material/Material1D/Viscosity/Nonviscous01.md)
     * vonMises
+        * [Subloading1D](Library/Material/Material1D/vonMises/Subloading1D.md)
         * [ArmstrongFrederick1D](Library/Material/Material1D/vonMises/ArmstrongFrederick1D.md)
         * [AFCO1D](Library/Material/Material1D/vonMises/AFCO1D.md)
         * [Bilinear1D](Library/Material/Material1D/vonMises/Bilinear1D.md)
