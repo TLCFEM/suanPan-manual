@@ -46,7 +46,7 @@ def plot(title: str, curves: list[Curve]):
 ## Smooth Transition
 
 We consider a very basic, elastic-perfectly plastic response.
-We choose a moderate value \num{400} MPa for initial yield stress.
+We choose a moderate value $$\num{400}$$ MPa for initial yield stress.
 
 The evolution rate $$u$$ of yield ratio controls the curvature.
 A higher value $$u$$ results in a faster approaching, making the response closer to conventional elastic-perfectly plastic.
@@ -153,9 +153,9 @@ exit
 On top of the initial yield stress, a saturation can be added.
 The response exponentially approaches the saturation stress, this can be accompanied with a linear hardening as well.
 
-Here, we choose a linear hardening modulus \num{2000} MPa, which is \num{0.1} of elastic modulus.
+Here, we choose a linear hardening modulus $$\num{2000}$$ MPa, which is $$\num{0.1}$$ of elastic modulus.
 However, this hardening modulus is measured with plastic strain, the total response would present a different slope.
-We further choose a saturation of \num{200} MPa, so the total stress shall be \num{600} MPa, in absence of linear hardening.
+We further choose a saturation of $$\num{200}$$ MPa, so the total stress shall be $$\num{600}$$ MPa, in absence of linear hardening.
 
 We shall see that $$m^s_\text{iso}$$ controls saturation speed.
 
@@ -243,7 +243,7 @@ exit
 
 Similarly, kinematic hardening also saturated to $$a^i$$.
 In additional to that, since it is defined that the saturation itself is not a constant, itself can be saturated again.
-We choose a $$a^i=100~\text{MPa}$$ with potentially another \num{150} MPa saturation, resulting in \num{500} MPa to \num{650} MPa in total, depending on the configuration.
+We choose a $$a^i=100~\text{MPa}$$ with potentially another $$\num{150}$$ MPa saturation, resulting in $$\num{500}$$ MPa to $$\num{650}$$ MPa in total, depending on the configuration.
 
 
 ```python
