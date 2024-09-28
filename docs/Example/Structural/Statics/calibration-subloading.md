@@ -153,7 +153,7 @@ exit
 On top of the initial yield stress, a saturation can be added.
 The response exponentially approaches the saturation stress, this can be accompanied with a linear hardening as well.
 
-Here, we choose a linear hardening modulus $$2000~\text{MPa}$$ MPa, which is $$0.1$$ of elastic modulus.
+Here, we choose a linear hardening modulus $$2000~\text{MPa}$$, which is $$0.1$$ of elastic modulus.
 However, this hardening modulus is measured with plastic strain, the total response would present a different slope.
 We further choose a saturation of $$200~\text{MPa}$$, so the total stress shall be $$600~\text{MPa}$$, in absence of linear hardening.
 
