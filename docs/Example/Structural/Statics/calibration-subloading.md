@@ -370,7 +370,7 @@ exit
 material Subloading1D 1 2E5 \
 400 8000 0 0 \
 0 0 0 0 \
-5E2 0 2E3 0.8
+5E2 0 1E3 0.8
 
 materialTestByLoad1D 1 5 100 100 100 100 100 100 100 100 100 100 100
 
