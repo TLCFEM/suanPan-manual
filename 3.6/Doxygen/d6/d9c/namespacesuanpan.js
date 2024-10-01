@@ -11,7 +11,7 @@ var namespacesuanpan =
     [ "unordered_map", "d6/d9c/namespacesuanpan.html#ab46d2df7043c664a3e9f0cc0e6ffcfe2", null ],
     [ "unordered_set", "d6/d9c/namespacesuanpan.html#a5b207564275fff3d68ad19e5bbdcda1b", null ],
     [ "vector", "d6/d9c/namespacesuanpan.html#a0b39983b6d76db53f322409a30c4d353", null ],
-    [ "approx_equal", "d6/d9c/namespacesuanpan.html#ae535d6102dc59681dc5e00eb702f37ae", null ],
+    [ "approx_equal", "d6/d9c/namespacesuanpan.html#ad1097f9c5eb1426fb4cc847542a93c11", null ],
     [ "binomial", "d6/d9c/namespacesuanpan.html#a8f2820150f9540ea86c23b8c925ddc19", null ],
     [ "debug", "d6/d9c/namespacesuanpan.html#a6669c5d0bfd4ac0e93b6620520482ea9", null ],
     [ "error", "d6/d9c/namespacesuanpan.html#a6364aee09d05c5aea905aa0df10bf22a", null ],
