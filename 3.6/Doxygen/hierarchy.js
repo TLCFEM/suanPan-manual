@@ -251,6 +251,7 @@ var hierarchy =
           [ "Rotation3D", "d8/dff/class_rotation3_d.html", null ],
           [ "SimpleSand", "de/d26/class_simple_sand.html", null ],
           [ "Stacked", "d7/de9/class_stacked.html", null ],
+          [ "SubloadingMetal", "d5/da6/class_subloading_metal.html", null ],
           [ "VAFCRP", "d9/d6d/class_v_a_f_c_r_p.html", null ],
           [ "Yeoh", "d1/db3/class_yeoh.html", null ]
         ] ],
@@ -608,6 +609,9 @@ var hierarchy =
     ] ],
     [ "DataSubloading1D", "da/dcb/struct_data_subloading1_d.html", [
       [ "Subloading1D", "df/d28/class_subloading1_d.html", null ]
+    ] ],
+    [ "DataSubloadingMetal", "d6/dbd/struct_data_subloading_metal.html", [
+      [ "SubloadingMetal", "d5/da6/class_subloading_metal.html", null ]
     ] ],
     [ "DataTanh1D", "dc/d07/struct_data_tanh1_d.html", [
       [ "Tanh1D", "d7/d37/class_tanh1_d.html", null ]

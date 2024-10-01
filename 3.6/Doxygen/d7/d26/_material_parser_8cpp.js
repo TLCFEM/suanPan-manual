@@ -95,6 +95,7 @@ var _material_parser_8cpp =
     [ "new_stacked", "d7/d26/_material_parser_8cpp.html#a8fd9f946f23149f6a8ba19364fcbddb2", null ],
     [ "new_steelbrb", "d7/d26/_material_parser_8cpp.html#a1cef4fc220ac19a98c89f8b4f8f4ddba", null ],
     [ "new_subloading1d", "d7/d26/_material_parser_8cpp.html#ab9084d60da14b3a1b9ae2dcaf282bfb4", null ],
+    [ "new_subloadingmetal", "d7/d26/_material_parser_8cpp.html#ab551cbac4dd70947528f83dc7a20f44e", null ],
     [ "new_substepping", "d7/d26/_material_parser_8cpp.html#a28632386955d48f705b02f0e6f0f31d1", null ],
     [ "new_tablecdp", "d7/d26/_material_parser_8cpp.html#a0187495efc696333a3ef7026ea95d951", null ],
     [ "new_tablegurson", "d7/d26/_material_parser_8cpp.html#a9283a3d74693051c2a17fffcf0ea11e0", null ],

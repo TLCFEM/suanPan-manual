@@ -2,6 +2,7 @@ var namespacetensor =
 [
     [ "base", "d1/df0/namespacetensor_1_1base.html", "d1/df0/namespacetensor_1_1base" ],
     [ "strain", "d2/dfc/namespacetensor_1_1strain.html", [
+      [ "double_contraction", "d2/dfc/namespacetensor_1_1strain.html#acf3dfaa366c59740f0a75b052297c80a", null ],
       [ "double_contraction", "d2/dfc/namespacetensor_1_1strain.html#aeb54d0398d03f9dbee5b81f20ca5db41", null ],
       [ "double_contraction", "d2/dfc/namespacetensor_1_1strain.html#ae89229487a1cf3271bc7ccdc569211f4", null ],
       [ "invariant1", "d2/dfc/namespacetensor_1_1strain.html#ac308eebda5dfb8a7bea23549fea9e76c", null ],
@@ -16,6 +17,7 @@ var namespacetensor =
       [ "to_voigt", "d2/dfc/namespacetensor_1_1strain.html#af3f8b2df1b66f74a2b585406c655e7c1", null ]
     ] ],
     [ "stress", "d7/dfe/namespacetensor_1_1stress.html", [
+      [ "double_contraction", "d7/dfe/namespacetensor_1_1stress.html#af1b7616c9f3199750cd0c3c2a2b04912", null ],
       [ "double_contraction", "d7/dfe/namespacetensor_1_1stress.html#a6bbb04d56cbe73f01e7748767838ce9b", null ],
       [ "double_contraction", "d7/dfe/namespacetensor_1_1stress.html#ade9781fb5ee8d03291f1fda7fceb5b15", null ],
       [ "invariant1", "d7/dfe/namespacetensor_1_1stress.html#aad6a7215d3d8fd13adb14d23c97dc8c3", null ],

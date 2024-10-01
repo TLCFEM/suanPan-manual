@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../suanPan.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.06209087.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -13362,7 +13362,7 @@ for implementation details.</p>
 <div class="arithmatex">\[
 f_s=|\eta|-z\sigma^y
 \]</div>
-<p>where <span class="arithmatex">\(\eta=\sigma-\alpha+\left(z-1\right)d\)</span> is the shifted stress, shifted from the centre defined by <span class="arithmatex">\(\alpha+\left(1-z\right)d\)</span>.
+<p>where <span class="arithmatex">\(\eta=\sigma-a^y\alpha+\left(z-1\right)\sigma^yd\)</span> is the shifted stress, shifted from the centre defined by <span class="arithmatex">\(a^y\alpha+\left(1-z\right)\sigma^yd\)</span>.
 The scalar <span class="arithmatex">\(0\leqslant{}z\leqslant{}1\)</span> is the normal yield ratio that provides a smooth transition from the interior to the normal yield surface.
 The scalar <span class="arithmatex">\(\sigma^y\)</span> is the yield stress, that is affected by isotropic hardening.</p>
 <h3 id="isotropic-hardening">Isotropic Hardening</h3>
@@ -13378,9 +13378,9 @@ and <span class="arithmatex">\(m^s_\text{iso}\)</span> is the hardening rate.</p
 \]</div>
 <p>where <span class="arithmatex">\(\gamma\)</span> is the plasticity multiplier.</p>
 <h3 id="kinematic-hardening">Kinematic Hardening</h3>
-<p>A modified Armstrong--Frederick rule is adopted for the back stress <span class="arithmatex">\(\alpha\)</span>.</p>
+<p>A modified Armstrong--Frederick rule is adopted for the normalised back stress <span class="arithmatex">\(\alpha\)</span>.</p>
 <div class="arithmatex">\[
-\dot{\alpha}=b\gamma\left(a^yn-\alpha\right)
+\dot{\alpha}=b\gamma\left(n-\alpha\right)
 \]</div>
 <p>with</p>
 <div class="arithmatex">\[
@@ -13404,7 +13404,7 @@ We do not adopt such a limit.</p>
 <h3 id="evolution-of-d">Evolution of <span class="arithmatex">\(d\)</span></h3>
 <p>The evolution of <span class="arithmatex">\(d\)</span> resembles that of <span class="arithmatex">\(\alpha\)</span>.</p>
 <div class="arithmatex">\[
-\dot{d}=c_e\gamma\left(z_e\sigma^yn-d\right)
+\dot{d}=c_e\gamma\left(z_en-d\right)
 \]</div>
 <p>in which <span class="arithmatex">\(c_e\)</span> and <span class="arithmatex">\(z_e&lt;1\)</span> are two constants.</p>
 <h2 id="syntax">Syntax</h2>
@@ -13535,7 +13535,7 @@ We do not adopt such a limit.</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.footer"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
         <script src="../../../../../javascripts/mathjax.js"></script>
       

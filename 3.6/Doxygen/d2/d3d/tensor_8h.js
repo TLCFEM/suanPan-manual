@@ -12,6 +12,8 @@ var tensor_8h =
     [ "dev", "d2/d3d/tensor_8h.html#a02540f55acbac28515b504789b8cab19", null ],
     [ "diff_triad", "d2/d3d/tensor_8h.html#a7be943547c2d9eaf0c126619f4305a12", null ],
     [ "diff_unit", "d2/d3d/tensor_8h.html#a4f774e4d8619c260580a3b79e1afaa42", null ],
+    [ "double_contraction", "d2/d3d/tensor_8h.html#acf3dfaa366c59740f0a75b052297c80a", null ],
+    [ "double_contraction", "d2/d3d/tensor_8h.html#af1b7616c9f3199750cd0c3c2a2b04912", null ],
     [ "double_contraction", "d2/d3d/tensor_8h.html#aeb54d0398d03f9dbee5b81f20ca5db41", null ],
     [ "double_contraction", "d2/d3d/tensor_8h.html#a6bbb04d56cbe73f01e7748767838ce9b", null ],
     [ "double_contraction", "d2/d3d/tensor_8h.html#ae89229487a1cf3271bc7ccdc569211f4", null ],

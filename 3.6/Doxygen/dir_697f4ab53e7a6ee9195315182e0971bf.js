@@ -24,6 +24,8 @@ var dir_697f4ab53e7a6ee9195315182e0971bf =
     [ "NonlinearPeric.h", "db/d25/_nonlinear_peric_8h.html", null ],
     [ "PolyJ2.cpp", "d1/d2a/_poly_j2_8cpp.html", null ],
     [ "PolyJ2.h", "d2/def/_poly_j2_8h.html", null ],
+    [ "SubloadingMetal.cpp", "d2/db8/_subloading_metal_8cpp.html", null ],
+    [ "SubloadingMetal.h", "dd/dad/_subloading_metal_8h.html", null ],
     [ "TableGurson.cpp", "da/d7d/_table_gurson_8cpp.html", null ],
     [ "TableGurson.h", "dc/d53/_table_gurson_8h.html", null ],
     [ "VAFCRP.cpp", "d6/d34/_v_a_f_c_r_p_8cpp.html", null ],
