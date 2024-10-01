@@ -28,7 +28,7 @@ $$
 f_s=|\eta|-z\sigma^y
 $$
 
-where $$\eta=\sigma-\alpha+\left(z-1\right)d$$ is the shifted stress, shifted from the centre defined by $$\alpha+\left(1-z\right)d$$.
+where $$\eta=\sigma-a^y\alpha+\left(z-1\right)\sigma^yd$$ is the shifted stress, shifted from the centre defined by $$a^y\alpha+\left(1-z\right)\sigma^yd$$.
 The scalar $$0\leqslant{}z\leqslant{}1$$ is the normal yield ratio that provides a smooth transition from the interior to the normal yield surface.
 The scalar $$\sigma^y$$ is the yield stress, that is affected by isotropic hardening.
 
@@ -53,10 +53,10 @@ where $$\gamma$$ is the plasticity multiplier.
 
 ### Kinematic Hardening
 
-A modified Armstrong--Frederick rule is adopted for the back stress $$\alpha$$.
+A modified Armstrong--Frederick rule is adopted for the normalised back stress $$\alpha$$.
 
 $$
-\dot{\alpha}=b\gamma\left(a^yn-\alpha\right)
+\dot{\alpha}=b\gamma\left(n-\alpha\right)
 $$
 
 with
@@ -90,7 +90,7 @@ In which, $$u$$ is a constant that controls the rate of transition.
 The evolution of $$d$$ resembles that of $$\alpha$$.
 
 $$
-\dot{d}=c_e\gamma\left(z_e\sigma^yn-d\right)
+\dot{d}=c_e\gamma\left(z_en-d\right)
 $$
 
 in which $$c_e$$ and $$z_e<1$$ are two constants.
