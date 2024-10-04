@@ -206,8 +206,10 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="line">echo &quot;alias suanpan=\&quot;flatpak run io.github.tlcfem.suanPan\&quot;&quot; &gt;&gt; ~/.bashrc</div>
 </div><!-- fragment --><h2>Docker</h2>
 <p>It is also possible to compile the package via docker, check the dockerfiles under the <code>Script</code> folder, for any questions please open an issue.</p>
-<p>One can directly pull the image.</p>
+<p>One can directly pull the image. Using <a href="https://hub.docker.com/r/tlcfem/suanpan">Docker Hub</a>,</p>
 <div class="fragment"><div class="line">docker pull tlcfem/suanpan</div>
+</div><!-- fragment --><p>Or using <a href="https://github.com/TLCFEM/suanPan/pkgs/container/suanpan">GitHub Container Registry</a>,</p>
+<div class="fragment"><div class="line">docker pull ghcr.io/tlcfem/suanpan</div>
 </div><!-- fragment --><h2>Other Platforms</h2>
 <p>Precompiled binaries are provided via CI/CD on macOS, Windows, and Ubuntu. Please download the file from the <a href="https://github.com/TLCFEM/suanPan/releases">release</a> page.</p>
 <p>A few flavors are available:</p>
