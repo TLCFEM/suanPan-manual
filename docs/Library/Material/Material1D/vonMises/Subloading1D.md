@@ -116,6 +116,15 @@ material ExpGurson1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14
 # [15] double, density, default: 0.0
 ```
 
+## History Layout
+
+| location             | paramater                         |
+| -------------------- | --------------------------------- |
+| `initial_history(0)` | normalised back stress $$\alpha$$ |
+| `initial_history(1)` | normalised elastic core $$d$$     |
+| `initial_history(2)` | accumulated plastic strain $$q$$  |
+| `initial_history(3)` | normal yield ratio $$z$$          |
+
 ## Example
 
 See [this](../../../../Example/Structural/Statics/calibration-subloading.md) example.
