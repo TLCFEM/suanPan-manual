@@ -717,8 +717,14 @@ var group___material_1_d =
       [ "update_trial_status", "db/d14/class_nonlinear_mises1_d.html#a3c1ff226f98111302fb45bf5724853d3", null ]
     ] ],
     [ "DataSubloading1D", "da/dcb/struct_data_subloading1_d.html", [
-      [ "be", "da/dcb/struct_data_subloading1_d.html#a0b9cb551909cd6b381429847e3d875e3", null ],
-      [ "ce", "da/dcb/struct_data_subloading1_d.html#a28f088f4f021c43a43aa8393d8d6507c", null ],
+      [ "Saturation", "d1/de2/class_data_subloading1_d_1_1_saturation.html", [
+        [ "Saturation", "d1/de2/class_data_subloading1_d_1_1_saturation.html#aecfc15f6e3d0dadaa51086594a30afda", null ],
+        [ "b", "d1/de2/class_data_subloading1_d_1_1_saturation.html#ab4ab2027d2ed3fa4ef8219145caad709", null ],
+        [ "r", "d1/de2/class_data_subloading1_d_1_1_saturation.html#aaa8daacdb0bd5fb6f555f3511f46fdc0", null ],
+        [ "rb", "d1/de2/class_data_subloading1_d_1_1_saturation.html#a2c672cd89ffaa95855bbcba742fd78bf", null ]
+      ] ],
+      [ "b", "da/dcb/struct_data_subloading1_d.html#a63adaaf86d34674188ca0531013383a9", null ],
+      [ "c", "da/dcb/struct_data_subloading1_d.html#ab565d899f62e8ae9b53ed7e94ab22919", null ],
       [ "elastic", "da/dcb/struct_data_subloading1_d.html#af19b0badd5e3e93c35048c86ad567bd8", null ],
       [ "initial_iso", "da/dcb/struct_data_subloading1_d.html#af30ea169c5ffc7037b7c9729ab909857", null ],
       [ "initial_kin", "da/dcb/struct_data_subloading1_d.html#ac72869d779de4f9ec69dbe9b2c0c564f", null ],
@@ -728,8 +734,7 @@ var group___material_1_d =
       [ "m_kin", "da/dcb/struct_data_subloading1_d.html#aa945003d6b3624d11c70fafda8a06e18", null ],
       [ "saturation_iso", "da/dcb/struct_data_subloading1_d.html#abf37457927f3d4d3e33e737e712b9e2f", null ],
       [ "saturation_kin", "da/dcb/struct_data_subloading1_d.html#a3d3696c319f904af0058abd15b34becf", null ],
-      [ "u", "da/dcb/struct_data_subloading1_d.html#aa0ea950addb3ab3d6b8ae65567275654", null ],
-      [ "ze", "da/dcb/struct_data_subloading1_d.html#a77dab28ddb3193ad02823216d9a29f71", null ]
+      [ "u", "da/dcb/struct_data_subloading1_d.html#aa0ea950addb3ab3d6b8ae65567275654", null ]
     ] ],
     [ "Subloading1D", "df/d28/class_subloading1_d.html", [
       [ "Subloading1D", "df/d28/class_subloading1_d.html#a69eea6266a83cfa6e221fc8bdd2c2dbe", null ],

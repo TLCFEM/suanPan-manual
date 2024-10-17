@@ -21,7 +21,9 @@ var dir_22161c47bf342e9d370323b636e49db3 =
     [ "NonlinearMises1D.cpp", "d4/d17/_nonlinear_mises1_d_8cpp.html", null ],
     [ "NonlinearMises1D.h", "dd/d87/_nonlinear_mises1_d_8h.html", null ],
     [ "Subloading1D.cpp", "df/db0/_subloading1_d_8cpp.html", null ],
-    [ "Subloading1D.h", "d1/d9a/_subloading1_d_8h.html", null ],
+    [ "Subloading1D.h", "d1/d9a/_subloading1_d_8h.html", [
+      [ "Saturation", "d1/de2/class_data_subloading1_d_1_1_saturation.html", "d1/de2/class_data_subloading1_d_1_1_saturation" ]
+    ] ],
     [ "VAFCRP1D.cpp", "d7/db8/_v_a_f_c_r_p1_d_8cpp.html", null ],
     [ "VAFCRP1D.h", "dc/dfc/_v_a_f_c_r_p1_d_8h.html", null ]
 ];

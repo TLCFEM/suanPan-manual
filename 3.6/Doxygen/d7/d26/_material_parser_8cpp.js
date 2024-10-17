@@ -73,6 +73,7 @@ var _material_parser_8cpp =
     [ "new_multilinearmises1d", "d7/d26/_material_parser_8cpp.html#add6d01b883709301bb3ff227dfed646b", null ],
     [ "new_multilinearoo", "d7/d26/_material_parser_8cpp.html#ab461bcef06fbc7af7f5c370c826d079e", null ],
     [ "new_multilinearpo", "d7/d26/_material_parser_8cpp.html#ac95866dcda4352b5b89c3d13e13adc4e", null ],
+    [ "new_multisubloading1d", "d7/d26/_material_parser_8cpp.html#ad5610f056daca2e5a9a5e6178bbfc2ed", null ],
     [ "new_nle1d01", "d7/d26/_material_parser_8cpp.html#abbe6d37d19232518e34e94918038e44f", null ],
     [ "new_nle3d01", "d7/d26/_material_parser_8cpp.html#ac64b8b915ee15a22ab5275d9a9ef0c4b", null ],
     [ "new_nonviscous01", "d7/d26/_material_parser_8cpp.html#a7d39dd373b4e0ec3e136a847950119b5", null ],

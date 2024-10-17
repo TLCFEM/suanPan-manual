@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../suanPan.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
@@ -13376,7 +13376,7 @@ in <a href="https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/d
 for implementation details.</p>
 <h2 id="theory">Theory</h2>
 <h3 id="subloading-surface">Subloading Surface</h3>
-<p>The subloadin surface is defined as</p>
+<p>The subloading surface is defined as</p>
 <div class="arithmatex">\[
 f_s=|\eta|-z\sigma^y
 \]</div>
@@ -13441,7 +13441,7 @@ We do not adopt such a limit.</p>
 <span class="normal"><a href="#__codelineno-0-13">13</a></span>
 <span class="normal"><a href="#__codelineno-0-14">14</a></span>
 <span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>material ExpGurson1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
+<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>material Subloading1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a># (1) int, unique material tag
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a># (2) double, elastic modulus
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a># (3) double, initial isotropic stress, \sigma^i
@@ -13463,25 +13463,29 @@ We do not adopt such a limit.</p>
 <thead>
 <tr>
 <th>location</th>
-<th>paramater</th>
+<th>parameter</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>initial_history(0)</code></td>
-<td>normalised back stress <span class="arithmatex">\(\alpha\)</span></td>
+<td>iteration counter</td>
 </tr>
 <tr>
 <td><code>initial_history(1)</code></td>
-<td>normalised elastic core <span class="arithmatex">\(d\)</span></td>
-</tr>
-<tr>
-<td><code>initial_history(2)</code></td>
 <td>accumulated plastic strain <span class="arithmatex">\(q\)</span></td>
 </tr>
 <tr>
-<td><code>initial_history(3)</code></td>
+<td><code>initial_history(2)</code></td>
 <td>normal yield ratio <span class="arithmatex">\(z\)</span></td>
+</tr>
+<tr>
+<td><code>initial_history(3)</code></td>
+<td>normalised back stress <span class="arithmatex">\(\alpha\)</span></td>
+</tr>
+<tr>
+<td><code>initial_history(4)</code></td>
+<td>normalised elastic core <span class="arithmatex">\(d\)</span></td>
 </tr>
 </tbody>
 </table>

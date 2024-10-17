@@ -733,6 +733,7 @@ var hierarchy =
     [ "ResourceHolder", "de/d24/class_resource_holder.html", null ],
     [ "ResourceHolder< Expression >", "de/d24/class_resource_holder.html", null ],
     [ "ResourceHolder< Material >", "de/d24/class_resource_holder.html", null ],
+    [ "DataSubloading1D::Saturation", "d1/de2/class_data_subloading1_d_1_1_saturation.html", null ],
     [ "DKT3::IntegrationPoint::SectionIntegrationPoint", "d0/d8c/struct_d_k_t3_1_1_integration_point_1_1_section_integration_point.html", null ],
     [ "DKT4::IntegrationPoint::SectionIntegrationPoint", "dd/df1/struct_d_k_t4_1_1_integration_point_1_1_section_integration_point.html", null ],
     [ "DKTS3::IntegrationPoint::SectionIntegrationPoint", "da/da4/struct_d_k_t_s3_1_1_integration_point_1_1_section_integration_point.html", null ],
