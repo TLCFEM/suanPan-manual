@@ -22,7 +22,7 @@ for implementation details.
 
 ### Subloading Surface
 
-The subloadin surface is defined as
+The subloading surface is defined as
 
 $$
 f_s=|\eta|-z\sigma^y
@@ -98,7 +98,7 @@ in which $$c_e$$ and $$z_e<1$$ are two constants.
 ## Syntax
 
 ```text
-material ExpGurson1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
+material Subloading1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, initial isotropic stress, \sigma^i
@@ -118,12 +118,13 @@ material ExpGurson1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14
 
 ## History Layout
 
-| location             | paramater                         |
+| location             | parameter                         |
 | -------------------- | --------------------------------- |
-| `initial_history(0)` | normalised back stress $$\alpha$$ |
-| `initial_history(1)` | normalised elastic core $$d$$     |
-| `initial_history(2)` | accumulated plastic strain $$q$$  |
-| `initial_history(3)` | normal yield ratio $$z$$          |
+| `initial_history(0)` | iteration counter                 |
+| `initial_history(1)` | accumulated plastic strain $$q$$  |
+| `initial_history(2)` | normal yield ratio $$z$$          |
+| `initial_history(3)` | normalised back stress $$\alpha$$ |
+| `initial_history(4)` | normalised elastic core $$d$$     |
 
 ## Example
 
