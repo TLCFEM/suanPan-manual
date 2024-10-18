@@ -346,7 +346,7 @@ material Subloading1D 1 2E5 \
 0 0 0 0 \
 5E2 0 0 0
 
-materialTestByLoad1D 1 5 100 100 100 100 100 100 100 100 100 100 100
+materialTestByLoad1D 1 10 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50
 
 exit
 """,
@@ -359,7 +359,7 @@ material Subloading1D 1 2E5 \
 0 0 0 0 \
 5E2 0 1E2 0.5
 
-materialTestByLoad1D 1 5 100 100 100 100 100 100 100 100 100 100 100
+materialTestByLoad1D 1 10 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50
 
 exit
 """,
@@ -372,7 +372,7 @@ material Subloading1D 1 2E5 \
 0 0 0 0 \
 5E2 0 1E3 0.8
 
-materialTestByLoad1D 1 1 500 500 500 500 500 500 500 500 500 500 500
+materialTestByLoad1D 1 10 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50
 
 exit
 """,
@@ -432,7 +432,7 @@ material Subloading1D 1 2E5 \
 209 0 63 30 \
 1E3 2 143 0.7
 
-materialTestByLoad1D 1 1 250 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400
+materialTestByLoad1D 1 5 50 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
 
 exit
 """,
