@@ -78,7 +78,7 @@ and [macOS](https://github.com/actions/runner-images/blob/main/images/macos/maco
 
 ### snap
 
-[![asciicast](https://asciinema.org/a/lWRm5eV4gQtQ8rPX7NOdPZCyr.svg)](https://asciinema.org/a/lWRm5eV4gQtQ8rPX7NOdPZCyr)
+[![asciicast](https://asciinema.org/a/684061.svg)](https://asciinema.org/a/684061)
 
 ### flatpak
 
