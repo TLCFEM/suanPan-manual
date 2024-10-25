@@ -111,19 +111,19 @@ Alternatively, `CMake` can be used to generate solution files if some external p
 
 #### Ubuntu
 
-The following instructions are based on Ubuntu 20.04. [CMake](https://cmake.org/) is used to manage builds. It is
+The following instructions are based on Ubuntu 22.04. [CMake](https://cmake.org/) is used to manage builds. It is
 recommended to use **CMake** GUI if appropriate.
 
 1.  Install necessary tools.
 
     ```bash
-    sudo apt-get install gcc-10 g++-10 gfortran-10 git cmake libomp5 -y
+    sudo apt-get install gcc g++ gfortran git cmake libomp5 libglvnd-dev -y
     ```
 
 2.  Clone the project.
 
     ```bash
-    git clone -b master https://github.com/TLCFEM/suanPan.git
+    git clone -b master --depth 1 https://github.com/TLCFEM/suanPan.git
     ```
 
 3.  Create build folder and configure via CMake. The default configuration disables parallelism `-DBUILD_MULTITHREAD=OFF`
@@ -139,7 +139,7 @@ recommended to use **CMake** GUI if appropriate.
 4.  Invoke `make`.
 
     ```bash
-    make -j4
+    make -j"$(nproc)"
     ```
 
 Check the following recording.

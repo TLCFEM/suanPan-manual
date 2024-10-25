@@ -74,7 +74,7 @@ and [macOS](https://github.com/actions/runner-images/blob/main/images/macos/maco
 
 ### Chocolatey
 
-[![asciicast](https://asciinema.org/a/491350.svg)](https://asciinema.org/a/491350)
+[![asciicast](https://asciinema.org/a/684063.svg)](https://asciinema.org/a/684063)
 
 ### snap
 
