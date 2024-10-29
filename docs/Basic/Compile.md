@@ -144,7 +144,7 @@ recommended to use **CMake** GUI if appropriate.
 
 Check the following recording.
 
-[![asciicast](https://asciinema.org/a/418406.svg)](https://asciinema.org/a/418406)
+[![asciicast](https://asciinema.org/a/685434.svg)](https://asciinema.org/a/685434)
 
 ##### Install VTK
 
