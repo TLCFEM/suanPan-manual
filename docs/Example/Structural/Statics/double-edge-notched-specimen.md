@@ -56,7 +56,7 @@ groupdisplacement 2 2 .1 2 3
 If **VTK** is enabled, it is possible to record the distribution of tension damage at each converged substep.
 
 ```
-hdf5recorder 1 Visualisation KAPPAT width 3 scale 0
+hdf5recorder 1 Visualisation DT width 3 scale 0
 ```
 
 Since we are not interested in the displacement, `scale` is simply set to zero. The output file are automatically
@@ -84,11 +84,11 @@ Results are shown as follows, which agree with experimental results.
 
 ## Element Deletion
 
-It is possible to further define a criterion so that for elements that exceed a certain value of $$\kappa_t$$, they are
+It is possible to further define a criterion so that for elements that exceed a certain value of $$d_t$$, they are
 removed from the model. This is an approach adopted widely to simulate crack propagation.
 
 ```
-criterion MaxHistory 1 KAPPAT .8
+criterion MaxHistory 1 DT .8
 ```
 
 The animation of crack development is shown as follows.
