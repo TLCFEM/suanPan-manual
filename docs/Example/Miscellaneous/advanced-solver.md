@@ -18,7 +18,7 @@ You can also drag the initial guess (red dot) to see how the first four iteratio
 Such a failure pattern could commonly happen for hardening materials under cyclic loading.
 
 In the following example, we define a bilinear hardening material with $1\%$ hardening.
-The complete script can be (downloaded)[advanced-solver.zip].
+The complete script can be [downloaded](advanced-solver.zip).
 
 ```text
 node 1 0 0
