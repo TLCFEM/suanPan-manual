@@ -145,3 +145,9 @@ Running the analysis again, the L-BFGS solver converges in the first unloading s
 
 1. It is perfectly normal for the Newton solver to fail to converge in some situations.
 2. The advanced solvers, such as AICN and L-BFGS, can be used to overcome the convergence issue.
+
+In specific, the Newton-Raphson method should typically converge when the response is "nice", for example, monotonic with non-trivial curvature.
+If the quadratic convergence cannot be achieved in this specific case, then the local integration at material point level may be the culprit.
+
+When the response is not "nice", for example, cyclic loading, softening, the Newton solver may fail to converge even when everything is implemented correctly.
+In this case, one can either reduce the step size or use the advanced solvers.
