@@ -18,20 +18,39 @@ You can also drag the initial guess (red dot) to see how the first four iteratio
 Such a failure pattern could commonly happen for hardening materials under cyclic loading.
 
 In the following example, we define a bilinear hardening material with $1\%$ hardening.
+A cyclic load (loading and unloading) is applied to a truss element.
 The complete script can be [downloaded](advanced-solver.zip).
 
-```text
+```text hl_lines="4 11 13"
 node 1 0 0
 node 2 1 0
 
 material Bilinear1D 1 2E5 200 0.01
 
 element T2D2 1 1 2 1 1
+
+fix2 1 1 1
+fix2 2 2 1 2
+
+amplitude Tabular 1 cyclic
+
+cload 1 1 50 1 2
+
+step static 1 2
+set fixed_step_size 1
+set ini_step_size 2E-2
+set symm_mat 0
+
+converger RelIncreDisp 1 1E-10 20 1
+
+analyze
+
+exit
 ```
 
 With the default Newton solver, the analysis will fail to converge in the first unloading step.
 
-```text
+```text hl_lines="13-16"
 >> Current Analysis Time: 1.02000.
 --> Relative Incremental Displacement: 1.00000E+00.
 --> Relative Incremental Displacement: 1.01643E+00.
@@ -66,16 +85,16 @@ These two techniques can be further combined.
 [arXiv.2211.00140](https://doi.org/10.48550/arXiv.2211.00140) proposed a very interesting method that only requires damping.
 The algorithm has been implemented as the [AICN](../../Library/Solver/AICN.md) solver.
 It requires a proper estimation of the Lipschitz constant of the residual function.
-Here we choose $40$.
+Here we choose $$20$$.
 
 ```text
-solver AICN 1 40
+solver AICN 1 20
 ```
 
 Running the analysis again, convergence is achieved in the first unloading step after struggling for a few iterations.
 The quadratic convergence rate is recovered when the iteration starts to converge.
 
-```text
+```text hl_lines="11-15"
 >> Current Analysis Time: 1.02000.
 --> Relative Incremental Displacement: 1.00000E+00.
 --> Relative Incremental Displacement: 2.93208E-01.
@@ -101,7 +120,7 @@ The AICN algorithm guarantees the global quadratic convergence.
 
 ### L-BFGS
 
-Another general-purpose solver that can be utilised is the [L-BFGS](../../Library/Solver/LBFGS.md) solver.
+Another general-purpose solver that can be utilised is the [L-BFGS](../../Library/Solver/BFGS.md) solver.
 It is a quasi-Newton method that does not require exact Hessians.
 The trade-off is that it only possesses a super-linear convergence rate.
 
@@ -113,7 +132,7 @@ solver LBFGS 1
 
 Running the analysis again, the L-BFGS solver converges in the first unloading step.
 
-```text
+```text hl_lines="4-6"
 >> Current Analysis Time: 1.02000.
 --> Relative Incremental Displacement: 1.00000E+00.
 --> Relative Incremental Displacement: 6.18750E+01.

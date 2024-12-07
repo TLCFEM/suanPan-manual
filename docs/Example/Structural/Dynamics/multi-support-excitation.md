@@ -6,7 +6,7 @@ The model can be downloaded [here](multi-support-excitation.zip).
 
 The multiple support excitation refers to different prescribed motions at various supports. The general discussion of
 linear elastic systems, as presented in typical textbooks (see for
-example [Chopra, Dynamics of Structures, 5th Edition | Pearson](https://www.pearson.com/us/higher-education/program/Chopra-Dynamics-of-Structures-5th-Edition/PGM1101746.html))
+example [Chopra's textbook](https://www.pearson.com/us/higher-education/program/Chopra-Dynamics-of-Structures-5th-Edition/PGM1101746.html))
 , is somehow not suitable to numerical implementation.
 
 The implementation in `suanPan` converts whatever support excitations applied to prescribed displacements and the
@@ -65,7 +65,7 @@ exit
 To apply acceleration excitation on all nodes, the boundary conditions need to be assigned in a normal, conventional way
 so that no rigid body motion is allowed.
 
-```
+```text hl_lines="6"
 file geometry.sp
 
 fix 1 P 1
@@ -83,7 +83,7 @@ It shall be noted $-\ddot{u}_g$ is applied.
 To apply acceleration excitation on support, the corresponding DoF should not be constrained. Thus, rigid body motions
 are expected.
 
-```
+```text hl_lines="6"
 file geometry.sp
 
 fix 1 2 1
@@ -105,3 +105,6 @@ Here the displacement of the free end is plotted.
 
 It shall be noted that since rigid body motions are present when excitations are applied to the supports, the relative
 displacement needs to be obtained by computing the difference between displacements of target DoF and support.
+
+All time integration methods are implemented in such a way that both ways of applying excitations would yield the same results if they are equivalent theoretically.
+This is done by applying algorithm-aware conversion among displacement, velocity and acceleration excitations.
