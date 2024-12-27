@@ -20,7 +20,7 @@ and the effective internal angle of friction was computed as
 $$
 \phi=\arctan\dfrac{\tan\phi'}{\text{FoS}},
 $$
-where $$\phi'=20\degree$$ is the internal angle of friction.  
+where $$\phi'=20^\circ$$ is the internal angle of friction.  
 
 The mesh is defined in the files `nodes.supan` and `element.supan` presented in the zip file.
 
