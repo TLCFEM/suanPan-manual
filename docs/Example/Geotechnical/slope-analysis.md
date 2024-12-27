@@ -22,7 +22,7 @@ $$
 $$
 where $$\phi'=20^\circ$$ is the internal angle of friction.  
 
-The mesh is defined in the files `nodes.supan` and `element.supan` presented in the zip file.
+The mesh is defined in the files `nodes.supan` and `elements.supan` presented in the zip file.
 
 The elements are defined to be of [`CP4`](../../Library/Element/Membrane/Plane/CP4.md) type.
 
