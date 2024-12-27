@@ -1,4 +1,4 @@
-# Triaxial Compression of Sand Using SimpleSand
+# [★★☆☆☆] Triaxial Compression of Sand Using SimpleSand
 
 In this example, we demonstrate the usage of [`SimpleSand`](../../Library/Material/Material3D/Sand/SimpleSand.md) model
 by conducting a triaxial compression simulation.
