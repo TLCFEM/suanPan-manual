@@ -13,13 +13,17 @@ The model scripts can be [downloaded](slope-analysis.zip).
 The geometry is defined as a slope of vertical height of $$h=10~\mathrm{m}$$ and the slope angle is $$26.57$$ degrees.
 The factor of safety of the slope is taken to be $$1.432$$ and unit weight of soils is taken as $$w=20~\mathrm{kN/m^3}$$.
 The (initial) cohesion of the soil is computed using the formula
+
 $$
 c_0=\dfrac{0.05wh}{\text{FoS}}=\dfrac{0.05\times20~\mathrm{kN/m^3}\times10~\mathrm{m}}{1.432}=6.983~\mathrm{kPa}
 $$
+
 and the effective internal angle of friction was computed as
+
 $$
 \phi=\arctan\dfrac{\tan\phi'}{\text{FoS}},
 $$
+
 where $$\phi'=20^\circ$$ is the internal angle of friction.  
 
 The mesh is defined in the files `nodes.supan` and `elements.supan` presented in the zip file.
