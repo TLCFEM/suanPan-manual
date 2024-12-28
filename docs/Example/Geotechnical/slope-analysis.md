@@ -43,16 +43,33 @@ material PlaneStrain 2 1
 For more information on how to compute the parameters, please check [this](../../Library/Material/Material3D/DruckerPrager/NonlinearDruckerPrager.md) page.
 In this problem, the Drucker-Prager yield surface circumscribes the Mohr-Coulomb yield surface. 
 
-## Loading
+## BCs and Loading
+
+The horizontal displacement of left and bottom boundaries is constrained.
+The vertical displacement of the bottom boundary is constrained.
+To apply those constraints, we selects two boundaries by generating node groups.
+
+```text
+# left vertical boundary
+generatebyrule nodegroup 2 1 1. 0.
+# bottom horizontal boundary
+generatebyrule nodegroup 3 2 1. 0.
+
+grouppenaltybc 1 1 2 3
+grouppenaltybc 2 2 3
+```
 
 The loading applied was of gravity type, where the load factor is increased from `0` to `1`.
 We use [`bodyforce`](../../Collection/Define/load.md#body-force) to apply this load.
 
 ```text
-load bodyforce 1 0 -20 2 <list of all elements>
+# all elements
+generate elementgroup 1 1 2880
+load groupbodyforce 1 0 -20 2 1
 ```
 
-In this case, the force applied is equal to the specific weight of the soil applied in the negative y-direction. 
+In this case, the force applied is equal to the specific weight of the soil applied in the negative y-direction.
+We also generate an element group that contains all elements.
 
 ## Result
 
