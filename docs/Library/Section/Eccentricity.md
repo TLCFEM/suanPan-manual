@@ -115,7 +115,7 @@ $$
 
 It can be further verified by applying a moment while restraining the axial displacement.
 
-```text
+```text hl_lines="18"
 node 1 0 0
 node 2 1 0
 material Elastic1D 1 1

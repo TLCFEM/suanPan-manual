@@ -21,6 +21,7 @@ import pandas
 section_table = pandas.read_excel(
     'https://www.aisc.org/globalassets/aisc/manual/v15.0-shapes-database/aisc-shapes-database-v15.0.xlsx',
     sheet_name=1,
+    storage_options={'User-Agent': 'Mozilla/5.0'},
     usecols='A:CF')
 print(section_table.head())
 ```
