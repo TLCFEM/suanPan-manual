@@ -59,7 +59,7 @@ grouppenaltybc 1 1 2 3
 grouppenaltybc 2 2 3
 ```
 
-The loading applied was of gravity type, where the load factor is increased from `0` to `1`.
+The loading applied was of gravity type, where the load factor is increased from zero to unity.
 We use [`bodyforce`](../../Collection/Define/load.md#body-force) to apply this load.
 
 ```text
@@ -68,7 +68,7 @@ generate elementgroup 1 1 2880
 load groupbodyforce 1 0 -20 2 1
 ```
 
-In this case, the force applied is equal to the specific weight of the soil applied in the negative y-direction.
+In this case, the force applied is equal to the specific weight of the soil applied in the negative $$y$$-direction.
 We also generate an element group that contains all elements.
 
 ## Result
