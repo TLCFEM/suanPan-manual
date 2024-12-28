@@ -47,7 +47,7 @@ In this problem, the Drucker-Prager yield surface circumscribes the Mohr-Coulomb
 
 The horizontal displacement of left and bottom boundaries is constrained.
 The vertical displacement of the bottom boundary is constrained.
-To apply those constraints, we selects two boundaries by generating node groups.
+To apply those constraints, we select two boundaries by generating two node groups.
 
 ```text
 # left vertical boundary
