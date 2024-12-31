@@ -27,6 +27,7 @@ section EU3D (1) (2) (3) [4] [5] [6] [7]
 
 1. By default, millimeter is used as length unit, if users want to switch to another unit, set `scale` to corresponding
    values. For example, to use meter, `scale=0.001`, to use inch, `scale=1/25.4=0.03937007874`.
+2. Check [validation](EU.pdf) for accuracy validations.
 
 ## Supported Designations
 
