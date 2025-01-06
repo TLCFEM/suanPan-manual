@@ -27,6 +27,10 @@ jobs:
           rm $(pwd)/suanPan-linux-openblas-no-avx/bin/updater
           sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
           suanpan -v
+      - name: Deploy
+        if: ${{ github.event_name != 'push' }}
+        run: |
+          mkdocs build
       - name: Publish
         if: ${{ github.event_name == 'push' }}
         run: |
