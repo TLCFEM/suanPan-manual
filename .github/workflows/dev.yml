@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - dev
+  pull_request:
+    branches:
+      - dev
 permissions:
   contents: write
 jobs:
@@ -24,7 +27,12 @@ jobs:
           rm $(pwd)/suanPan-linux-openblas-no-avx/bin/updater
           sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
           suanpan -v
+      - name: Deploy
+        if: ${{ github.event_name != 'push' }}
+        run: |
+          mkdocs build
       - name: Publish
+        if: ${{ github.event_name == 'push' }}
         run: |
           git fetch origin
           git config --global user.name "Theodore Chang"
