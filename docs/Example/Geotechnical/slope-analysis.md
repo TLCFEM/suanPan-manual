@@ -76,3 +76,7 @@ We also generate an element group that contains all elements.
 The following shows the development of horizontal displacement.
 
 ![horizontal displacement](slope-analysis.gif)
+
+## Performance
+
+See a typical [profiling](slope-analysis.html).
