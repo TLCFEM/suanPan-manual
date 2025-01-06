@@ -94,3 +94,7 @@ criterion MaxHistory 1 DT .8
 The animation of crack development is shown as follows.
 
 ![crack development](double-edge-notched-specimen.gif)
+
+## Performance
+
+See a typical [profiling](double-edge-notched-specimen.html).
