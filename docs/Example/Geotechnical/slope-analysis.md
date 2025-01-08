@@ -33,7 +33,7 @@ The elements are defined to be of [`CP4`](../../Library/Element/Membrane/Plane/C
 Since it is a plain strain problem, the material model shall be wrapped into a [`PlainStrain`](../../Library//Material/Wrapper/PlaneStrain.md) one.
 Unlike other platforms such as `ABAQUS`, in which there are `CPS4` and `CPE4` elements, whether it is plane stress or plane strain is **not** controlled by the element in `suanPan`.
 That is why one can only find one unified element type [`CP4`](../../Library/Element/Membrane/Plane/CP4.md).
-Here, we use the bilinear hardening [`DruckerPrager`](../../Library/Material/Material3D/DruckerPrager/BilinearDP.md) model with a small hardening ratio.
+Here, we use the bilinear hardening [`DruckerPrager`](../../Library/Material/Material3D/DruckerPrager/BilinearDP.md) model with a small hardening modulus.
 
 ```text
 material BilinearDP 1 1E5 0.3 0.31 0.31 1.219 6.983 0.001

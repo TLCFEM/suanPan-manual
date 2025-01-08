@@ -21,6 +21,14 @@ $$
 with $$\eta_f$$ is another material constant. If $$\eta_f=\eta_y$$, the associative plasticity is defined so that the
 symmetry of stiffness matrix is recovered.
 
+The accumulated plastic strain $$\bar{\varepsilon_p}$$ is defined as
+
+$$
+\dot{\bar{\varepsilon_p}}=\xi\gamma,
+$$
+
+where $$\gamma$$ is the plasticity multiplier.
+
 ## History Variable Layout
 
 | location             | parameter                  |
