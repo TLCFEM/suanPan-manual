@@ -29,7 +29,7 @@ $$
 c=c_0+H\bar{\varepsilon_p},
 $$
 
-in which $$c_0$$ is the initial cohesion (similar to the initial yield stress), $$H$$ is the hardening modulus, and $$\epsilon_p$$ is the accumulated plastic strain.
+in which $$c_0$$ is the initial cohesion (similar to the initial yield stress), $$H$$ is the hardening modulus, and $$\bar{\varepsilon_p}$$ is the accumulated plastic strain.
 
 ### More
 
@@ -49,6 +49,8 @@ For the following model, one can compute the hardening ratio to be
 $$
 \dfrac{3\xi^2H}{E+3\xi^2H}=0.06204607451.
 $$
+
+One can validate this value by plotting the response.
 
 ```text
 node 1 5 -5 -5
@@ -75,7 +77,7 @@ hdf5recorder 2 Element S 1
 
 step static 1
 set fixed_step_size 1
-set ini_step_size 1E-3
+set ini_step_size 1E-2
 set symm_mat 0
 
 analyze
