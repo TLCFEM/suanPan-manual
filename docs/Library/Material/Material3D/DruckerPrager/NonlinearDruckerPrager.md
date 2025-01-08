@@ -27,7 +27,7 @@ symmetry of stiffness matrix is recovered.
 |----------------------|----------------------------|
 | `initial_history(0)` | accumulated plastic strain |
 
-## Decision of Material Constants
+## Determination of Material Constants
 
 There are quite a lot of schemes to determine the material constants used in Drucker-Prager model. Here a few are
 presented.
@@ -54,7 +54,7 @@ $$
 \eta_y=\dfrac{3\tan\phi}{\sqrt{9+12\tan^2\phi}},\qquad\xi=\dfrac{3}{\sqrt{9+12\tan^2\phi}}
 $$
 
-### Concrete, Rock, etc
+### Concrete, Rock, etc.
 
 To fit uniaxial tension and compression strength, the friction angle and cohesion shall be computed as
 
