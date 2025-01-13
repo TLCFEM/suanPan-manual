@@ -1,27 +1,69 @@
 # Performance
 
-`suanPan` prioritizes performance and designs the analysis logic in a parallel context.
+`suanPan` prioritizes performance and designs the analysis logic in a parallel context accordingly.
 
-Although the majority of the common analysis types can be parallelized, there are still some certain parts that have 
+Although the majority of analyses of common types can be parallelized, there are still certain parts that have 
 strong data dependencies that cannot be parallelized.
+The speed-up factor is mostly determined by the serial code.
 According to [Amdahl's law](https://en.wikipedia.org/wiki/Amdahl%27s_law), there would be an upper bound of the 
-theoretical speedup.
+theoretical speed-up.
 
-For example, for a static analysis of a simple model with a sufficiently large number of elements, there is no local 
-iteration required to update element status, the major tasks are to assemble global stiffness matrix and solve it. 
-In such a case, the performance is likely governed by the CPU capacity and often a large value of GFLOPS can be 
-achieved (close to practical limit).
+## Benchmark
 
-However, if one choose to perform a dynamic analysis of the same model with a fairly sophisticated time integration 
-algorithm, such as [GSSSS](../Library/Integrator/GSSSS.md), as the effective stiffness would be the summation of 
-the scaled versions of several global matrices, the analysis may be blocked by memory operations, which eventually 
-leads to a lower value of GFLOPS.
+Benchmarking is hard.
+Here we try to present a baseline of performance on recent PCs.
 
-In the nonlinear context, it is even more complicated. Several additional factors, such as the complexity of the 
-material models used, the use of constraints, the element type, can all affect the performance.
+There is a `benchmark` command that is designed to benchmark the platform by solving a large matrix repeatedly.
+The following is the main implementation.
+The matrix occupies 200 MB of memory.
+It is large enough to account for potential memory bandwidth bottleneck.
+It effectively reports the performance of `dgesv` subroutine in `LAPACK`.
 
-Nevertheless, experience has shown that the performance is generally good enough for most cases.
-Users are encouraged to `perf` the performance of various analysis types.
+```cpp
+int benchmark() {
+    constexpr auto N = 50;
+    constexpr auto M = 5120;
+
+    const mat A = mat(M, M, fill::randu) + eye(M, M);
+    const vec b(M, fill::randu);
+
+    for(auto I = 1; I <= N; ++I) {
+        vec x = solve(A, b);
+        x(randi<uvec>(1, distr_param(0, M - 1))).fill(I);
+    }
+
+    return SUANPAN_SUCCESS;
+}
+```
+
+As FEM is essentially solving large matrices, such a benchmark is practical and close to actually performance.
+Profiling it on an average laptop yields the following result.
+This particular platform is able to achieve a CPI (cycles per instruction) of 0.686.
+This serves as the baseline and upper bound of practical performance.
+
+![baseline](pics/benchmark.png)
+
+### Large-sized Elastic Analysis
+
+[This example](https://github.com/TLCFEM/suanPan/tree/dev/Example/Misc/DKTS3) is a linear elastic analysis.
+There are 20124 nodes and 39990 shell elements in total, and since each node has six DoFs, there are in total 120744 DoFs.
+
+Because an elastic material model is used, element state updating is trivial, requires only matrix multiplication.
+The main computation is assembling the global stiffness matrix and solving it.
+Profiling this example on the same platform yields the following result.
+It is able to achieve a CPI close to the baseline.
+
+![large elastic](pics/elastic.png)
+
+### Medium-sized Plastic Analysis
+
+[This example](../Example/Geotechnical/slope-analysis.md) contains 2990 nodes, and uses a plastic material model.
+Element state updating now involves local plasticity integration.
+It is able to achieve a CPI of 0.979 in this case.
+
+![medium plastic](pics/plastic.png)
+
+Assuming all (or at least the majority of) instructions are *useful* instructions, one can conclude that decent performance can be practically achieved, even when the problem size is not significantly large.
 
 ## Analysis Configurations
 
