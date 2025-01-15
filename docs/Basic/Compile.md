@@ -240,7 +240,7 @@ for details.
     -DBUILD_MULTITHREAD=ON
     -DUSE_HDF5=ON
     -DUSE_VTK=ON
-    -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/
+    -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/
     -DUSE_MKL=ON
     -DMKLROOT=/opt/intel/oneapi/mkl/latest
     -DUSE_INTEL_OPENMP=OFF
@@ -382,7 +382,7 @@ cmake -DCMAKE_INSTALL_PREFIX= \
       -DBUILD_MULTITHREAD=ON \
       -DUSE_HDF5=ON \
       -DUSE_VTK=ON \
-      -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/ \
+      -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/ \
       -DUSE_MKL=ON \
       -DMKLROOT=/opt/intel/oneapi/mkl/latest \
       -DUSE_INTEL_OPENMP=OFF \
