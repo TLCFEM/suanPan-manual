@@ -2,8 +2,10 @@
 
 ## Docker Image
 
-A docker image is available at [Docker Hub](https://hub.docker.com/r/tlcfem/suanpan). To use it, 
-docker needs to be installed first. See [this page](https://docs.docker.com/get-docker/) for details.
+A docker image is available at [Docker Hub](https://hub.docker.com/r/tlcfem/suanpan).
+Both `amd64` and `arm64` architectures are available.
+To use it, docker needs to be installed first.
+See [this page](https://docs.docker.com/get-docker/) for details.
 
 Once docker is installed, it is possible to pull the image via:
 
@@ -17,7 +19,7 @@ Then it is possible to run the container in an interactive manner via:
 docker run -it --rm tlcfem/suanpan
 ```
 
-Within the container, one can use one of the following commands to run the program.
+Within the container, one can use one of the following commands to invoke the application.
 
 ```bash
 suanPan
@@ -25,18 +27,21 @@ suanpan
 sp
 ```
 
-One can also attach volume to the container to access the files in the host machine.
+One can also attach volume to the container to access files in the host machine.
 This may be the main use case.
-Then one can run the file inside the container as follows.
+Assume there is a model file under the path `/path/to/host/folder/example.model.sp`, to run the analysis under this folder, one can use the following command.
 
 ```bash
-docker run -it --rm -v /path/to/host/folder:/path/to/container/folder tlcfem/suanpan
-cd /path/to/container/folder
-suanpan -f example.model.sp
+docker run --rm -v /path/to/host/folder:/dirty -w /dirty tlcfem/suanpan sp -f example.model.sp
 ```
 
 Docker image is convenient on machines with older kernels or limited by other factors that does not allow 
 execution of precompiled binaries.
+
+This is now supported by the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=tlc.suanpan).
+
+It shall be noted that for maximum compatibility, the image is compiled without AVX support.
+If necessary, one can build images with different configurations.
 
 ## Precompiled Binaries
 
