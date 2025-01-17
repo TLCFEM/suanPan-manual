@@ -40,8 +40,11 @@ execution of precompiled binaries.
 
 This is now supported by the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=tlc.suanpan).
 
-It shall be noted that for maximum compatibility, the image is compiled without AVX support.
-If necessary, one can build images with different configurations.
+The following shall be noted.
+1. For maximum compatibility, the image is compiled without AVX support.
+2. On `amd64`, Intel MKl is used. On `arm64` OpenBLAS is used.
+
+If necessary, one can build images with different configurations to enable `AVX` and `AVX2` support and/or `AOCL` support on AMD platforms.
 
 ## Precompiled Binaries
 
