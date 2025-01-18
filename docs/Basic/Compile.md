@@ -17,6 +17,10 @@ They can be used as development containers.
 VS Code and CLion can be configured to use these containers for development.
 There is no need to install any dependencies on the host machine.
 
+The `tlcfem/suanpan-env` image also supports `arm64`, in which `OpenBLAS` is used as the linear algebra driver.
+
+On AMD platforms, it is known that `MKL` may throttle thus yields a poor performance, it may be necessary to use a specific version of `OpenBLAS` or [`AMD Optimizing CPU Libraries (AOCL)`](https://www.amd.com/en/developer/aocl.html) instead.
+
 ### Docker Images
 
 It is possible to compile the project with Docker.
@@ -37,6 +41,9 @@ docker run -it --rm suanpan
 # now in the container
 suanpan -v
 ```
+
+Docker files provide a standard reproducible environment and a reference configuration.
+One can always introduce adaptions to cater various needs.
 
 ## Without Docker
 
@@ -393,7 +400,9 @@ cmake -DCMAKE_INSTALL_PREFIX= \
 
 The `aarch64` architecture is supported by the source code.
 But one shall prepare the dependencies manually.
-As MKL is not available for `aarch64`, one shall use `OpenBLAS` only.
+As MKL is not available for `aarch64`, one shall use `OpenBLAS` or `AOCL` only.
 
 `OpenBLAS` is the only necessary dependency.
 All other dependencies are optional.
+
+To use `AOCL`, one shall manually compile the `blis` and `flame` libraries in advance.
