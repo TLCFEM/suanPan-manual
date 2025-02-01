@@ -25,6 +25,24 @@ material Nonviscous01 (1) ((2) (3) (4) (5)...)
 # (5) double, imaginary part of `s_i`
 ```
 
+## Theory
+
+This material implements the nonviscous damping algorithm proposed in the reference.
+As of writing, the referenced algorithm is probably the most efficient algorithm for nonviscous damping as there is no explicit integration of the convolution integral.
+
+For arbitrary kernel functions $$g(t)$$, the damping force $$F_d$$ is given by
+
+$$
+F_d(t)=\int_0^t{}g(t-\tau)\dot{u}(\tau)\mathrm{d}\tau.
+$$
+
+The proposed algorithm converts the above convolution integral into a summation of differential equations.
+By further operations, the algorithm modifies the existing damping force (viscous damping, or zero if there is no damping other than the nonviscous damping) and the corresponding damping matrix to achieve the best accuracy and computational efficiency.
+
+Details can be seen in the referenced paper.
+
+By defining a uniaxial material model, it can be used in 1D analyses with damper elements.
+
 ## Example
 
 ```text
