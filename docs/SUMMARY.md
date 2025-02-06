@@ -428,6 +428,7 @@
         * [NonlinearPeric](Library/Material/Material3D/vonMises/NonlinearPeric.md)
         * [PolyJ2](Library/Material/Material3D/vonMises/PolyJ2.md)
         * [VAFCRP](Library/Material/Material3D/vonMises/VAFCRP.md)
+        * [Subloading](Library/Material/Material3D/vonMises/Subloading.md)
 * MaterialOS
     * [ElasticOS](Library/Material/MaterialOS/ElasticOS.md)
 * Wrapper
