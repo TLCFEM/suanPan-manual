@@ -342,6 +342,29 @@ cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_MULTITHREAD=ON -DUSE_HDF5=ON -DUSE_VTK=
 make -j4
 ```
 
+### Linear Algebra Driver
+
+Any standard BLAS and LAPACK implementation can be used as the linear algebra driver which the application itself and `Armadillo` rely on.
+Currently, the following are supported and tested.
+
+1. [`OpenBLAS`](http://www.openmathlib.org/OpenBLAS/)
+2. [`Intel oneAPI MKL`](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html)
+3. [`AMD Optimizing CPU Libraries (AOCL)`](https://www.amd.com/en/developer/aocl.html)
+
+As a general guideline, when it comes to choose a proper implementation, the following points shall be considered.
+
+1. From my very personal experience, `OpenBLAS` is okay for small matrices on a few cores, but could be slow when the size hits some threshold.
+   This is also seen in this [benchmark](https://github.com/flame/blis/blob/master/docs/Performance.md).
+2. `Intel oneAPI MKL` is exclusively optimised for Intel CPUs, and may throttle on other platforms.
+   This [benchmark](https://github.com/flame/blis/blob/master/docs/Performance.md) show clear differences on AMD platforms.
+3. `AMD Optimizing CPU Libraries (AOCL)` is optimised for AMD CPUs based on `BLIS` and `FLAME` libraries, it performance on both platforms (and others) is superb.
+
+Thus, use `Intel oneAPI MKL` if it is preferred or an Intel platform is targeted.
+The downside is that `Intel oneAPI MKL` is proprietary and the final binary may have a large size.
+For other cases, use `AMD Optimizing CPU Libraries (AOCL)` when possible.
+The downside it that it may need manual compilation of the libraries for the target OS.
+`OpenBLAS` shall be deemed as the last resort and the usage is discouraged as of writing.
+
 ### Build Options
 
 If CMake GUI is used to configure the project, the following options are available.
@@ -375,6 +398,7 @@ If CMake GUI is used to configure the project, the following options are availab
     example, `C:/Program Files (x86)/Intel/oneAPI/mkl/latest` or `/opt/intel/oneapi/mkl/latest`.
 14. `USE_INTEL_OPENMP`: If enabled, Intel OpenMP library will be used. Otherwise, Default ones (such as GNU OpenMP
     library) will be used.
+15. `USE_AOCL`: If enabled, one can use the `AOCL` implementation via `AOCL_BLIS_PATH`, `AOCL_FLAME_PATH` and `AOCL_UTILS_PATH`.
 
 ### Example Configuration
 
