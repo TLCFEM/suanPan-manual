@@ -1,0 +1,28 @@
+var class_quaternion =
+[
+    [ "Quaternion", "da/d46/group___utility.html#gad5008dba83ccdf61b2e66ac1bfb709f3", null ],
+    [ "Quaternion", "da/d46/group___utility.html#gad41927ec2bc9127cca3bd6ee027ef755", null ],
+    [ "Quaternion", "da/d46/group___utility.html#ga9fdf4f6df2ce9f74780c37da9af0abb9", null ],
+    [ "Quaternion", "da/d46/group___utility.html#ga363f0dafb754bf4ecd8c1154e5311378", null ],
+    [ "conj", "da/d46/group___utility.html#gae7b4930ec6f81cb76c4ea80ed7a6d922", null ],
+    [ "imag", "da/d46/group___utility.html#ga9ba910af0140cd7e4881a6ba58fcde6f", null ],
+    [ "inv", "da/d46/group___utility.html#ga0356cc7b1e2bb6a9a47c959a28139431", null ],
+    [ "norm", "da/d46/group___utility.html#ga5ce88d07462db0f4c248d09a12f3f090", null ],
+    [ "normalise", "da/d46/group___utility.html#ga2f1a0859860d319168c0c61b940c1c9d", null ],
+    [ "operator*", "da/d46/group___utility.html#gad150d35dede8c33dee933adc94f02daf", null ],
+    [ "operator*", "da/d46/group___utility.html#ga1f90b2ef33bbd4c670a92e90dbb81f2d", null ],
+    [ "operator*=", "da/d46/group___utility.html#ga98991f6b05388a608331452f84148bf0", null ],
+    [ "operator+", "da/d46/group___utility.html#ga7644f40c937b906ba0684d9f949e914b", null ],
+    [ "operator+=", "da/d46/group___utility.html#gab2ef2ce6966f5a989d1c8a24bc00d985", null ],
+    [ "operator-", "da/d46/group___utility.html#ga155545e85b1ec81367fb8c7c7822d9b8", null ],
+    [ "operator-=", "da/d46/group___utility.html#ga3e0462f480816126279a158254e3243e", null ],
+    [ "operator/", "da/d46/group___utility.html#ga18bb64fdcf2a2e5fca392cfaf37e3718", null ],
+    [ "operator/=", "da/d46/group___utility.html#gaa279c12392b3998b1284815224620f99", null ],
+    [ "print", "da/d46/group___utility.html#gaf84ce11ea5d0247272de452f1d5b97bc", null ],
+    [ "real", "da/d46/group___utility.html#gac410bcf503cb2ba732c55a29cbc9c678", null ],
+    [ "to_mat", "da/d46/group___utility.html#gaf8269705bfc420ac07b1ab36a125cd2d", null ],
+    [ "to_pseudo", "da/d46/group___utility.html#ga6012f4eb71741d41884c3ef5c50c4604", null ],
+    [ "operator-", "dc/de3/class_quaternion.html#a96accce27f8a3588a866e44492a4bc80", null ],
+    [ "operator-", "dc/de3/class_quaternion.html#a852b28308d60cd5a092067f15889e419", null ],
+    [ "operator==", "dc/de3/class_quaternion.html#a56566fea46fa2e7fa1415106722d954a", null ]
+];
