@@ -15,3 +15,5 @@ solver AICN (1) [2]
 ## Remarks
 
 1. `AICN` is an alternative to the [`Newton`](Newton.md) solver.
+
+For example usage, see [this](../../Example/Miscellaneous/advanced-solver.md) example.

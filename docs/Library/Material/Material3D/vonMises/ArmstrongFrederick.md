@@ -12,11 +12,12 @@ Armstrong-Frederick Steel Model
 
 Implementation can be found in a separate [document](ArmstrongFrederick.pdf).
 
-A von Mises type yield function is used. The associated plasticity is assumed. Both isotropic and kinematic hardening
-rules are employed.
+A von Mises type yield function is used.
+The associated plasticity is assumed.
+Both isotropic and kinematic hardening rules are employed.
 
-Although the plastic flow is associative, the hardening rules are not. As the result, the consistent tangent modulus is
-not symmetric.
+Although the plastic flow is associative, the hardening rules are not.
+As the result, the consistent tangent modulus is not symmetric.
 
 ### Isotropic Hardening
 
@@ -26,7 +27,7 @@ $$
 k=\sigma_y+k_s(1-e^{-mp})+k_lp,
 $$
 
-where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturated stress, $$k_l$$ is the
+where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturation stress, $$k_l$$ is the
 linear hardening modulus, $$m$$ is a constant that controls the speed of hardening,
 $$\mathrm{d}p=\sqrt{\dfrac{2}{3}\mathrm{d}\varepsilon^p:\mathrm{d}\varepsilon^p}$$ is the rate of accumulated plastic
 strain $$p$$.
@@ -51,17 +52,20 @@ derivation and does not affect anything.
 
 ## Syntax
 
+The following applies to `v3.6` and later.
+Check the older syntax in the older version of the documentation.
+
 ```
 material ArmstrongFrederick (1) (2) (3) (4) (5) (6) (7) [(8) (9)...] [10]
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, poissons ratio
 # (4) double, yield stress
-# (5) double, saturated stress
-# (6) double, linear hardening modulus
-# (7) double, m
-# (8) double, a
-# (9) double, b
+# (5) double, linear hardening modulus
+# (6) double, saturation stress
+# (7) double, m, saturation rate
+# (8) double, a, kinematic hardening parameter
+# (9) double, b, kinematic hardening parameter
 # [10] double, density, default: 0.0
 ```
 
@@ -84,7 +88,7 @@ There is no difference between the classic J2 plasticity model and this AF steel
 defined.
 
 ```
-material ArmstrongFrederick 1 2E2 .2 .1 .05 1. 1000.
+material ArmstrongFrederick 1 2E2 .2 .1 1. .05 1000.
 ```
 
 ![Example 1](ArmstrongFrederick.EX1.svg)
@@ -150,7 +154,7 @@ The corresponding maximum stress is $$100~\mathrm{MPa}$$.
 With some linear isotropic hardening,
 
 ```
-material ArmstrongFrederick 1 2E2 .2 0. 0. .1 0. 40.82482305 500.
+material ArmstrongFrederick 1 2E2 .2 0. .1 0. 0. 40.82482305 500.
 ```
 
 ![Example 7](ArmstrongFrederick.EX7.svg)

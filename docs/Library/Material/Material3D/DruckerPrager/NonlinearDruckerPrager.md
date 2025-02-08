@@ -21,13 +21,21 @@ $$
 with $$\eta_f$$ is another material constant. If $$\eta_f=\eta_y$$, the associative plasticity is defined so that the
 symmetry of stiffness matrix is recovered.
 
+The accumulated plastic strain $$\bar{\varepsilon_p}$$ is defined as
+
+$$
+\dot{\bar{\varepsilon_p}}=\xi\gamma,
+$$
+
+where $$\gamma$$ is the plasticity multiplier.
+
 ## History Variable Layout
 
 | location             | parameter                  |
 |----------------------|----------------------------|
 | `initial_history(0)` | accumulated plastic strain |
 
-## Decision of Material Constants
+## Determination of Material Constants
 
 There are quite a lot of schemes to determine the material constants used in Drucker-Prager model. Here a few are
 presented.
@@ -54,7 +62,7 @@ $$
 \eta_y=\dfrac{3\tan\phi}{\sqrt{9+12\tan^2\phi}},\qquad\xi=\dfrac{3}{\sqrt{9+12\tan^2\phi}}
 $$
 
-### Concrete, Rock, etc
+### Concrete, Rock, etc.
 
 To fit uniaxial tension and compression strength, the friction angle and cohesion shall be computed as
 

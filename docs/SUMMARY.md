@@ -22,6 +22,7 @@
     * [wave propagation](Example/Solid/wave-propagation.md)
 * Geotechnical
     * [triaxial compression of sand](Example/Geotechnical/triaxial-compression-of-sand.md)
+    * [slope analysis](Example/Geotechnical/slope-analysis.md)
 * Structural
     * Statics
         * [bending of a cantilever beam](Example/Structural/Statics/bending-of-a-cantilever-beam.md)
@@ -33,6 +34,7 @@
         * [truss roof](Example/Structural/Statics/truss-roof.md)
         * [uniform tension of a rubber specimen](Example/Structural/Statics/uniform-tension-of-a-rubber-specimen.md)
         * [thin-walled section analysis for frame structures](Example/Structural/Statics/thin-walled-section.md)
+        * [calibration of subloading surface model](Example/Structural/Statics/calibration-subloading.md)
     * Dynamics
         * [bouncing of a ball](Example/Structural/Dynamics/bouncing-of-a-ball.md)
         * [mass-spring-dashpot system](Example/Structural/Dynamics/mass-spring-dashpot-system.md)
@@ -353,7 +355,9 @@
         * [CoulombFriction](Library/Material/Material1D/Viscosity/CoulombFriction.md)
         * [Nonviscous01](Library/Material/Material1D/Viscosity/Nonviscous01.md)
     * vonMises
+        * [Subloading1D](Library/Material/Material1D/vonMises/Subloading1D.md)
         * [ArmstrongFrederick1D](Library/Material/Material1D/vonMises/ArmstrongFrederick1D.md)
+        * [AFCO1D](Library/Material/Material1D/vonMises/AFCO1D.md)
         * [Bilinear1D](Library/Material/Material1D/vonMises/Bilinear1D.md)
         * [BilinearMises1D](Library/Material/Material1D/vonMises/BilinearMises1D.md)
         * [CustomGurson1D](Library/Material/Material1D/vonMises/CustomGurson1D.md)
@@ -424,6 +428,7 @@
         * [NonlinearPeric](Library/Material/Material3D/vonMises/NonlinearPeric.md)
         * [PolyJ2](Library/Material/Material3D/vonMises/PolyJ2.md)
         * [VAFCRP](Library/Material/Material3D/vonMises/VAFCRP.md)
+        * [Subloading](Library/Material/Material3D/vonMises/Subloading.md)
 * MaterialOS
     * [ElasticOS](Library/Material/MaterialOS/ElasticOS.md)
 * Wrapper

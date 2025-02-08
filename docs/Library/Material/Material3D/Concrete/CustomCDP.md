@@ -118,7 +118,7 @@ element C3D8 2 5 6 7 8 9 10 11 12 1 G
 
 hdf5recorder 1 Element E33 1
 hdf5recorder 2 Element S33 1
-hdf5recorder 3 Element KAPPAT 1
+hdf5recorder 3 Element DT 1
 
 fix 1 1 1 2 5 6 9 10
 fix 2 2 1 4 5 8 9 12

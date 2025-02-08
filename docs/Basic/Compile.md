@@ -2,15 +2,7 @@
 
 ## With Docker
 
-### Docker Images
-
-For Linux users, if there is no access to `sudo` but can build containers with Docker, it is possible to compile the
-project with Docker.
-Check the provided [Dockerfiles](https://github.com/TLCFEM/suanPan/tree/dev/Script) for more information.
-
-Once the image is built, use `sp`, `suanpan` or `suanPan` to invoke the program in the container.
-
-### Dev Container
+### Dev Environment Images
 
 Two images are provided for development purposes.
 
@@ -25,13 +17,42 @@ They can be used as development containers.
 VS Code and CLion can be configured to use these containers for development.
 There is no need to install any dependencies on the host machine.
 
+The `tlcfem/suanpan-env` image also supports `arm64`, in which `OpenBLAS` is used as the linear algebra driver.
+
+On AMD platforms, it is known that `MKL` may throttle thus yields a poor performance, it may be necessary to use a specific version of `OpenBLAS` or [`AMD Optimizing CPU Libraries (AOCL)`](https://www.amd.com/en/developer/aocl.html) instead.
+
+### Docker Images
+
+It is possible to compile the project with Docker.
+Check the provided [`Dockerfile`s](https://github.com/TLCFEM/suanPan/tree/dev/Script) for more information.
+One can build the image using the example `Dockerfile` as it is.
+For example,
+
+```
+# the current folder contains the file Rocky.Dockerfile
+docker build -t suanpan -f ./Rocky.Dockerfile .
+```
+
+Once the image is built, run the container and use `sp`, `suanpan` or `suanPan` to invoke the program in the container.
+Maybe it is necessary to map some folders to the container.
+
+```bash
+docker run -it --rm suanpan
+# now in the container
+suanpan -v
+```
+
+Docker files provide a standard reproducible environment and a reference configuration.
+One can always introduce adaptions to cater various needs.
+
 ## Without Docker
 
 The following is a general guide that covers three main operating systems.
+It mainly targets the `amd64` architecture.
 
 ### Prerequisites
 
-1.  To configure the source code, [CMake](https://cmake.org/download/) shall be available. Please download and install it
+1.  To configure the source code, [CMake](https://cmake.org/download/) shall be available. Please install it
     before configuring the source code package.
 2.  The linear algebra driver used is [OpenBLAS](https://github.com/xianyi/OpenBLAS). You may want to compile it with the
     optimal configuration based on the specific machine. Otherwise, precompiled binaries (dynamic platform) are available
@@ -52,36 +73,42 @@ On Windows, Visual Studio with Intel oneAPI toolkit is recommended.
 Alternatively, [WinLibs](http://winlibs.com/) can be used if GCC compilers are preferred.
 
 On other platforms (Linux and macOS), simply use GCC which comes with a valid Fortran compiler.
-Clang can also be used for C/CPP code, but since Clang and GCC have different supports for C++20, successful
+Clang can also be used for C/CPP code, but since Clang and GCC have different supports for C++ new standards, successful
 compilation is not guaranteed with Clang.
 
 ### Obtain Source Code
 
 Download the source code archive from GitHub [Releases](https://github.com/TLCFEM/suanPan/releases) or the
-latest [code](https://github.com/TLCFEM/suanPan/archive/master.zip).
+latest [stable code](https://github.com/TLCFEM/suanPan/archive/master.zip).
 
 ### Configure and Compile
 
-The manual compilation is not difficult in general. The CI/CD configuration files can be referred to if you wish. Please
-check [this](https://github.com/TLCFEM/suanPan/tree/dev/.github/workflows) page. Here some general guidelines are given.
+The manual compilation is not difficult in general.
+The CI/CD configuration files can be referred to if you wish.
+Please check [this](https://github.com/TLCFEM/suanPan/tree/dev/.github/workflows) page.
+Here some general guidelines are given.
 
 #### Windows (Visual Studio)
+
+This is highly tailored to my own machine.
+Thus, it is not recommended to use it directly.
+Instead, use VS Code with CMake extension to automatically configure the project.
 
 A solution file is provided under `MSVC/suanPan` folder. There are two configurations:
 
 1.  `Debug`: Assume no available Fortran compiler, all Fortran related libraries are provided as precompiled DLLs. Use
     OpenBLAS for linear algebra. Multithreading disabled. Visualisation disabled. HDF5 support disabled.
 2.  `Release`: Fortran libraries are configured with Intel compilers. Use MKL for linear algebra. Multithreading enabled.
-    Visualisation enabled with VTK version 9.2. HDF5 support enabled. CUDA enabled.
+    Visualisation enabled with VTK version 9.4. HDF5 support enabled. CUDA enabled.
 
 This [repository](https://github.com/TLCFEM/prebuilds) contains some precompiled libraries used.
 
-If Intel oneAPI Toolkit and CUDA are not installed, only the `Debug` configuration can be successfully compiled. Simply
-open the solution and switch to Debug configuration, ignore all potential warnings and build the solution.
+If VTK, Intel oneAPI Toolkit and CUDA are not installed, only the `Debug` configuration can be successfully compiled.
+Simply open the solution and switch to Debug configuration, ignore all potential warnings and build the solution.
 
 To compile `Release` version, please
 
-1.  Make sure oneAPI both base and HPC toolkits, as well as VS integration, are installed.
+1.  Make sure oneAPI both Base and HPC toolkits, as well as VS integration, are installed.
     The MKL is enabled via integrated option `<UseInteloneMKL>Parallel</UseInteloneMKL>`.
 
 2.  Make sure CUDA is installed. The environment variable `$(CUDA_PATH)` is used to locate headers.
@@ -93,7 +120,7 @@ To compile `Release` version, please
     VTK_DIR=C:\Program Files\VTK\
     ```
 
-    For versions other than 9.2, names of the linked libraries shall be manually changed as they contain version numbers.
+    For versions other than 9.4, names of the linked libraries shall be manually changed as they contain version numbers.
     Thus, it is not a good idea to switch to a different version. Precompiled VTK library is also available in
     this [repository](https://github.com/TLCFEM/prebuilds).
 
@@ -109,21 +136,27 @@ To compile `Release` version, please
 
 Alternatively, `CMake` can be used to generate solution files if some external packages are not available.
 
+#### Windows (Visual Studio Code)
+
+Open the source code folder with VS Code.
+Whether you choose GCC or MSVC, the configuration is done by CMake automatically.
+
 #### Ubuntu
 
-The following instructions are based on Ubuntu 20.04. [CMake](https://cmake.org/) is used to manage builds. It is
-recommended to use **CMake** GUI if appropriate.
+The following instructions are based on Ubuntu 22.04.
+[CMake](https://cmake.org/) is used to manage builds.
+It is recommended to use **CMake** GUI if appropriate.
 
 1.  Install necessary tools.
 
     ```bash
-    sudo apt-get install gcc-10 g++-10 gfortran-10 git cmake libomp5 -y
+    sudo apt-get install gcc g++ gfortran git cmake libomp5 libglvnd-dev -y
     ```
 
 2.  Clone the project.
 
     ```bash
-    git clone -b master https://github.com/TLCFEM/suanPan.git
+    git clone -b master --depth 1 https://github.com/TLCFEM/suanPan.git
     ```
 
 3.  Create build folder and configure via CMake. The default configuration disables parallelism `-DBUILD_MULTITHREAD=OFF`
@@ -139,12 +172,12 @@ recommended to use **CMake** GUI if appropriate.
 4.  Invoke `make`.
 
     ```bash
-    make -j4
+    make -j"$(nproc)"
     ```
 
 Check the following recording.
 
-[![asciicast](https://asciinema.org/a/418406.svg)](https://asciinema.org/a/418406)
+[![asciicast](https://asciinema.org/a/685434.svg)](https://asciinema.org/a/685434)
 
 ##### Install VTK
 
@@ -214,7 +247,7 @@ for details.
     -DBUILD_MULTITHREAD=ON
     -DUSE_HDF5=ON
     -DUSE_VTK=ON
-    -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/
+    -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/
     -DUSE_MKL=ON
     -DMKLROOT=/opt/intel/oneapi/mkl/latest
     -DUSE_INTEL_OPENMP=OFF
@@ -309,6 +342,29 @@ cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_MULTITHREAD=ON -DUSE_HDF5=ON -DUSE_VTK=
 make -j4
 ```
 
+### Linear Algebra Driver
+
+Any standard BLAS and LAPACK implementation can be used as the linear algebra driver which the application itself and `Armadillo` rely on.
+Currently, the following are supported and tested.
+
+1. [`OpenBLAS`](http://www.openmathlib.org/OpenBLAS/)
+2. [`Intel oneAPI MKL`](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html)
+3. [`AMD Optimizing CPU Libraries (AOCL)`](https://www.amd.com/en/developer/aocl.html)
+
+As a general guideline, when it comes to choose a proper implementation, the following points shall be considered.
+
+1. From my very personal experience, `OpenBLAS` is okay for small matrices on a few cores, but could be slow when the size hits some threshold.
+   This is also seen in this [benchmark](https://github.com/flame/blis/blob/master/docs/Performance.md).
+2. `Intel oneAPI MKL` is exclusively optimised for Intel CPUs, and may throttle on other platforms.
+   This [benchmark](https://github.com/flame/blis/blob/master/docs/Performance.md) show clear differences on AMD platforms.
+3. `AMD Optimizing CPU Libraries (AOCL)` is optimised for AMD CPUs based on `BLIS` and `FLAME` libraries, it performance on both platforms (and others) is superb.
+
+Thus, use `Intel oneAPI MKL` if it is preferred or an Intel platform is targeted.
+The downside is that `Intel oneAPI MKL` is proprietary and the final binary may have a large size.
+For other cases, use `AMD Optimizing CPU Libraries (AOCL)` when possible.
+The downside it that it may need manual compilation of the libraries for the target OS.
+`OpenBLAS` shall be deemed as the last resort and the usage is discouraged as of writing.
+
 ### Build Options
 
 If CMake GUI is used to configure the project, the following options are available.
@@ -342,6 +398,7 @@ If CMake GUI is used to configure the project, the following options are availab
     example, `C:/Program Files (x86)/Intel/oneAPI/mkl/latest` or `/opt/intel/oneapi/mkl/latest`.
 14. `USE_INTEL_OPENMP`: If enabled, Intel OpenMP library will be used. Otherwise, Default ones (such as GNU OpenMP
     library) will be used.
+15. `USE_AOCL`: If enabled, one can use the `AOCL` implementation via `AOCL_BLIS_PATH`, `AOCL_FLAME_PATH` and `AOCL_UTILS_PATH`.
 
 ### Example Configuration
 
@@ -356,9 +413,20 @@ cmake -DCMAKE_INSTALL_PREFIX= \
       -DBUILD_MULTITHREAD=ON \
       -DUSE_HDF5=ON \
       -DUSE_VTK=ON \
-      -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.2/ \
+      -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/ \
       -DUSE_MKL=ON \
       -DMKLROOT=/opt/intel/oneapi/mkl/latest \
       -DUSE_INTEL_OPENMP=OFF \
       -DLINK_DYNAMIC_MKL=OFF
 ```
+
+### `aarch64` Architecture
+
+The `aarch64` architecture is supported by the source code.
+But one shall prepare the dependencies manually.
+As MKL is not available for `aarch64`, one shall use `OpenBLAS` or `AOCL` only.
+
+`OpenBLAS` is the only necessary dependency.
+All other dependencies are optional.
+
+To use `AOCL`, one shall manually compile the `blis` and `flame` libraries in advance.

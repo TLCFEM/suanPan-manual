@@ -27,7 +27,7 @@ We define a template of the model and use a placeholder named as `$groundMotionR
 record names. The analysis time is labelled as `$duration`. It can be changed for different records. The model script
 will look like the follows.
 
-```
+```text hl_lines="16 23"
 # an example of batch processing
 
 node 1 0 0

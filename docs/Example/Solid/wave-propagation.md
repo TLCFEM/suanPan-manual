@@ -95,8 +95,7 @@ Please be aware that most displacement-based constraints **cannot** be used in e
 
 #### Other Settings
 
-Since we are using a linear elastic material with the CP4 elements.
-The elemental stiffness is symmetric.
+Since we are using a linear elastic material with the [CP4](../../Library/Element/Membrane/Plane/CP4.md) elements, the elemental stiffness is symmetric.
 As there are no other non-linear constraints defined in the model, the global stiffness/mass matrix is also symmetric.
 It is possible to then turn on symmetric banded storage to save memory space.
 
@@ -115,7 +114,7 @@ For a not-so-rigorous comparison, different spectral radii are used for differen
 showcasing different methods.
 
 Also, the chosen model parameters are quite arbitrary.
-Sufficently accurate results often require an accurate estimation of the highest frequency of the model, which governs the time step size.
+Sufficiently accurate results often require an accurate estimation of the highest frequency of the model, which governs the time step size.
 
 ### Implicit
 

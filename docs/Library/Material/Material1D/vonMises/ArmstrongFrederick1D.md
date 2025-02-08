@@ -9,49 +9,54 @@ for details on the theory.
 
 ## Theory
 
-A von Mises type yield function is used. The associated plasticity is assumed. Both isotropic and kinematic hardening
-rules are employed.
+A von Mises type yield function is used.
+The associated plasticity is assumed.
+Both isotropic and kinematic hardening rules are employed.
 
 ### Isotropic Hardening
 
 An exponential function is added to the linear hardening law.
 
 $$
-k=\sigma_y+k_s(1-e^{-mp})+k_lp,
+\sigma^y=\sigma^i+Kq+\sigma^s(1-e^{-m^sq}),
 $$
 
-where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturated stress, $$k_l$$ is the
-linear hardening modulus, $$m$$ is a constant that controls the speed of hardening,
-$$\mathrm{d}p=\Big|\mathrm{d}\varepsilon^p\Big|$$ is the rate of accumulated plastic strain $$p$$.
+where $$\sigma^i$$ is the initial elastic limit (yielding stress), $$\sigma^s$$ is the saturation stress, $$K$$ is the
+linear hardening modulus, $$m^s$$ is a constant that controls the speed of hardening,
+$$\mathrm{d}q=|\mathrm{d}\varepsilon^p|$$ is the rate of accumulated plastic strain $$q$$.
 
 ### Kinematic Hardening
 
-The Armstrong-Frederick type rule is used. Multiple back stresses are defined,
+The Armstrong-Frederick type rule is used.
+Multiple back stresses are defined,
 
 $$
-\beta=\sum\beta^i
+\beta=\sum\beta_i
 $$
 
 in which
 
 $$
-\mathrm{d}\beta^i=a^i~\mathrm{d}\varepsilon^p-b^i\beta~\mathrm{d}p,
+\mathrm{d}\beta_i=a_i~\mathrm{d}\varepsilon^p-b_i\beta~\mathrm{d}q,
 $$
 
-where $$a^i$$ and $$b^i$$ are material constants.
+where $$a_i$$ and $$b_i$$ are material constants.
 
 ## Syntax
+
+The following applies to `v3.6` and later.
+Check the older syntax in the older version of the documentation.
 
 ```
 material ArmstrongFrederick1D (1) (2) (3) (4) (5) (6) [(7) (8)...] [9]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, yield stress
-# (4) double, saturated stress
-# (5) double, linear hardening modulus
-# (6) double, m
-# (7) double, a
-# (8) double, b
+# (3) double, yield stress, \sigma^i
+# (4) double, linear hardening modulus, K
+# (5) double, saturation stress, \sigma^s
+# (6) double, m^s, saturation rate
+# (7) double, a_i, kinematic hardening
+# (8) double, b_i, kinematic hardening
 # [9] double, density, default: 0.0
 ```
 
@@ -66,7 +71,7 @@ material ArmstrongFrederick1D 1 2E2 0. 0. 0. 0. 50 500.
 The maximum stress can be computed as
 
 $$
-\sigma_{max}=\sigma_y+\sum\dfrac{a^i}{b^i}=100~\mathrm{MPa}.
+\sigma_{\text{max}}=\sigma^i+\sum\dfrac{a_i}{b_i}=\dfrac{50}{500}=0.1.
 $$
 
 ![Example 1](ArmstrongFrederick1D.EX1.svg)

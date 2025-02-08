@@ -40,3 +40,5 @@ integrator NonviscousNewmark 1 .25 .5 1 9 2 8 3 7 4 6
 ```
 
 It is assumed that the kernel is applied to all DoFs in the system.
+
+As of writing, the referenced algorithm is probably the most efficient algorithm for nonviscous damping as there is no explicit integration of the convolution integral.
