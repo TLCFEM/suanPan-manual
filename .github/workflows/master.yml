@@ -1,0 +1,31 @@
+name: stable
+on:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Publish
+        run: |
+          sudo apt-get install doxygen graphviz -y
+          pip install -e .
+          rm $(pwd)/suanPan-linux-openblas-no-avx/bin/updater
+          sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
+          suanpan -v
+          git fetch origin
+          git config --global user.name "Theodore Chang"
+          git config --global user.email "tlcfem@gmail.com"
+          git pull
+          mike deploy ${{ github.event.head_commit.message }} -u latest
+          git push origin gh-pages
