@@ -161,7 +161,7 @@ It is recommended to use **CMake** GUI if appropriate.
 
 3.  Create build folder and configure via CMake. The default configuration disables parallelism `-DBUILD_MULTITHREAD=OFF`
     and enables HDF5 via bundled library `-DUSE_HDF5=ON`. Please
-    check [`Option.cmake`](https://github.com/TLCFEM/suanPan/blob/dev/Option.cmake) file or use GUI for available
+    check [`CMakeLists.txt`](https://github.com/TLCFEM/suanPan/blob/dev/CMakeLists.txt) file or use GUI for available
     options.
 
     ```bash
@@ -374,7 +374,7 @@ If CMake GUI is used to configure the project, the following options are availab
    assembly, etc., can be parallelized. `OpenMP` is not controlled by this option given that `OpenMP` support is
    available in major platforms. It will be used for low level parallelization such as linear algebra operations (which
    is controlled by `Armadillo`), matrix solving (which is controlled by various solvers).
-3. `BUILD_SHARED`: If enabled, all libraries will be built as shared libraries.
+3. `BUILD_SHARED_LIBS`: If enabled, all libraries will be built as shared libraries.
 4. `USE_SUPERLUMT`: If enabled, `SuperLU-MT` will be used, otherwise `SuperLU` will be used.
 5. `USE_HDF5`: If enabled, `HDF5` will be used to provide support for [`hdf5recorder`](../Library/Recorder/Recorder.md).
 6. `USE_VTK`: If enabled, `VTK` will be used to provide support for visualization. It will be useful to
