@@ -18,7 +18,7 @@ jobs:
           cache: 'pip'
       - name: Publish
         run: |
-          sudo apt-get install doxygen graphviz -y
+          sudo apt-get install doxygen graphviz
           pip install -e .
           rm $(pwd)/suanPan-linux-openblas-no-avx/bin/updater
           sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
