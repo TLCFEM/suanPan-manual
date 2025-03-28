@@ -154,7 +154,7 @@ All available settings are summarised in the following table.
 | symm. packed  | `set symm_mat true`   | `set band_mat false` | `LAPACK`      | yes             | `d(s)ppsv`                     |
 | sparse        | `set sparse_mat true` |                      | `SuperLU`     | yes             | `d(s)gssv`                     |
 |               |                       |                      | `CUDA`        | yes             | `cusolverSpD(S)csrlsvqr`       |
-|               |                       |                      | `MUMPS`       | yes             | `dmumps_c`                     |
+|               |                       |                      | `MUMPS`       | no              | `dmumps_c`                     |
 |               |                       |                      | `PARDISO`     | no              | `pardiso`                      |
 |               |                       |                      | `FGMRES`      | no              | `dfgmres`                      |
 |               |                       |                      | `LIS`         | no              |                                |
