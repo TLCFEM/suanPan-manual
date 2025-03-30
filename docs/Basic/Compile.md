@@ -159,8 +159,8 @@ It is recommended to use **CMake** GUI if appropriate.
     git clone -b master --depth 1 https://github.com/TLCFEM/suanPan.git
     ```
 
-3.  Create build folder and configure via CMake. The default configuration disables parallelism `-DBUILD_MULTITHREAD=OFF`
-    and enables HDF5 via bundled library `-DUSE_HDF5=ON`. Please
+3.  Create build folder and configure via CMake. The default configuration disables parallelism `-DSP_BUILD_PARALLEL=OFF`
+    and enables HDF5 via bundled library `-DSP_ENABLE_HDF5=ON`. Please
     check [`CMakeLists.txt`](https://github.com/TLCFEM/suanPan/blob/dev/CMakeLists.txt) file or use GUI for available
     options.
 
@@ -211,7 +211,7 @@ Ubuntu official repository does not (Fedora does!) contain the latest VTK librar
     ```
 
 5.  Now obtain `suanPan` source code and unpack it. To configure it with VTK support, users may use the following
-    flag `-DUSE_VTK=ON`. If `FindVTK` is presented and `VTK` is installed to default location, there is no need
+    flag `-DSP_ENABLE_VTK=ON`. If `FindVTK` is presented and `VTK` is installed to default location, there is no need
     to provide the variable `VTK_DIR`, otherwise point it to the `lib/cmake/vtk-9.1` folder.
 
 ##### Install MKL
@@ -237,21 +237,21 @@ for details.
     sudo apt update && sudo apt install intel-oneapi-mkl-devel -y
     ```
 
-3.  Now compile `suanPan` by enabling MKL via option `-DUSE_MKL=ON`. The corresponding `MKLROOT` shall be assigned, for
+3.  Now compile `suanPan` by enabling MKL via option `-DSP_ENABLE_MKL=ON`. The corresponding `MKLROOT` shall be assigned, for
     example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used
     for snap is the following one.
 
     ```bash
-    -DCMAKE_INSTALL_PREFIX=
     -DCMAKE_BUILD_TYPE=Release
-    -DBUILD_MULTITHREAD=ON
-    -DUSE_HDF5=ON
-    -DUSE_VTK=ON
-    -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/
-    -DUSE_MKL=ON
+    -DCMAKE_INSTALL_PREFIX=
     -DMKLROOT=/opt/intel/oneapi/mkl/latest
-    -DUSE_INTEL_OPENMP=OFF
-    -DLINK_DYNAMIC_MKL=OFF
+    -DSP_BUILD_PARALLEL=ON
+    -DSP_ENABLE_HDF5=ON
+    -DSP_ENABLE_IOMP=OFF
+    -DSP_ENABLE_MKL=ON
+    -DSP_ENABLE_SHARED_MKL=OFF
+    -DSP_ENABLE_VTK=ON
+    -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/
     ```
 
 #### Fedora
@@ -337,7 +337,7 @@ mkdir suanpan-build && cd suanpan-build
 # use clang, clang++ and gfortran
 export CC=/usr/local/opt/llvm/bin/clang && export CXX=/usr/local/opt/llvm/bin/clang++ && export FC=gfortran-10
 # configure project
-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_MULTITHREAD=ON -DUSE_HDF5=ON -DUSE_VTK=ON -DVTK_DIR=../VTK-out/lib/cmake/vtk-9.1/ .
+cmake -DCMAKE_BUILD_TYPE=Release -DSP_BUILD_PARALLEL=ON -DSP_ENABLE_HDF5=ON -DSP_ENABLE_VTK=ON -DVTK_DIR=../VTK-out/lib/cmake/vtk-9.1/ .
 # compile
 make -j4
 ```
@@ -369,36 +369,41 @@ The downside it that it may need manual compilation of the libraries for the tar
 
 If CMake GUI is used to configure the project, the following options are available.
 
-1. `BUILD_DLL_EXAMPLE`: If enabled, example element/material/section implemented as external libraries will be built.
-2. `BUILD_MULTITHREAD`: If enabled, `TBB` will be used for multithreading so that element update, global matrix
+1. `BUILD_SHARED_LIBS`: If enabled, all libraries will be built as shared libraries.
+2. `SP_BUILD_DLL_EXAMPLE`: If enabled, example element/material/section implemented as external libraries will be built.
+3. `SP_BUILD_PARALLEL`: If enabled, `TBB` will be used for multithreading so that element update, global matrix
    assembly, etc., can be parallelized. `OpenMP` is not controlled by this option given that `OpenMP` support is
    available in major platforms. It will be used for low level parallelization such as linear algebra operations (which
-   is controlled by `Armadillo`), matrix solving (which is controlled by various solvers).
-3. `BUILD_SHARED_LIBS`: If enabled, all libraries will be built as shared libraries.
-4. `USE_SUPERLUMT`: If enabled, `SuperLU-MT` will be used, otherwise `SuperLU` will be used.
-5. `USE_HDF5`: If enabled, `HDF5` will be used to provide support for [`hdf5recorder`](../Library/Recorder/Recorder.md).
-6. `USE_VTK`: If enabled, `VTK` will be used to provide support for visualization. It will be useful to
+   is controlled by `Armadillo`), matrix solving (which is controlled by various solvers). Thus, this flag only controls
+   the `suanPan` application itself.
+4. `SP_ENABLE_HDF5`: If enabled, `HDF5` will be used to provide support for [`hdf5recorder`](../Library/Recorder/Recorder.md).
+5. `SP_ENABLE_VTK`: If enabled, `VTK` will be used to provide support for visualization. It will be useful to
    generate `.vtk` files that can be used in `Paraview` for post-processing. If enabled, `VTK_DIR` needs to be set to
    the path of `VTK` installation. For example, `VTK_DIR=/usr/local/opt/vtk/lib/cmake/vtk-9.1`.
-7. `USE_CUDA`: `CUDA` needs to be installed manually by the user. If enabled, `CUDA` based solvers will be
+6. `SP_ENABLE_CUDA`: `CUDA` needs to be installed manually by the user. If enabled, `CUDA` based solvers will be
    available. However, for dense matrix storage, only full matrix storage scheme is supported by `CUDA`. Note full
    matrix storage scheme is not favorable for FEM. It can, however, be used for sparse matrix solving and mixed
    precision solving.
-8. `USE_AVX`: If enabled, compiler flags `-mavx` or `/arch:AVX` will be used. (~2011)
-9. `USE_AVX2`: If enabled, compiler flags `-mavx2` or `/arch:AVX2` will be used. (~2013)
-10. `USE_AVX512`: If enabled, compiler flags `-mavx512f` or `/arch:AVX512` will be used. (~2016)
-11. `USE_MKL`: `MKL` needs to be installed manually by the user. If enabled, the parallel version of `MKL` will be used
-    for linear algebra operations. It is possible to manually modify the configuration to use cluster version (MPI).
-    However, For the moment, the global matrix is still centralized in such a way that element updating will happen on a
-    single node. The linear algebra operations may be offloaded to other nodes. If `USE_MKL` is enabled, the following
+7. `SP_ENABLE_MAGMA`: `MAGMA` needs to be installed manually by the user. If enabled, `MAGMA` based solvers will be
+   available.
+8. `SP_ENABLE_ASAN`: If enabled, address sanitizer will be enabled.
+9. `SP_ENABLE_CODECOV`: If enabled, compile options will be enabled to support code coverage report.
+10. `SP_ENABLE_AVX`: If enabled, compiler flags `-mavx` or `/arch:AVX` will be used. (~2011)
+11. `SP_ENABLE_AVX2`: If enabled, compiler flags `-mavx2` or `/arch:AVX2` will be used. (~2013)
+12. `SP_ENABLE_AVX512`: If enabled, compiler flags `-mavx512f` or `/arch:AVX512` will be used. (~2016)
+13. `SP_ENABLE_TBB_ALLOC`: If enabled, the TBB's memory allocator will be used.
+14. `SP_OPENBLAS_PATH`: If assigned, link the designated `OpenBLAS` library, otherwise the bundled version will be used.
+15. `SP_ENABLE_AOCL`: If enabled, one can use the `AOCL` implementation via assigning library paths
+    `AOCL_BLIS_PATH`, `AOCL_FLAME_PATH` and `AOCL_UTILS_PATH`.
+16. `SP_ENABLE_MKL`: `MKL` needs to be installed manually by the user. If enabled, `MKL` will be used
+    for linear algebra operations. If `SP_ENABLE_MKL` is enabled, the following
     additional options are available.
-12. `LINK_DYNAMIC_MKL`: If enabled, dynamically linked `MKL` libraries will be used. Otherwise, statically linked `MKL`
+17. `SP_ENABLE_SHARED_MKL`: If enabled, dynamically linked `MKL` libraries will be used. Otherwise, statically linked `MKL`
     libraries will be used, leading to larger binary size but faster execution and fewer dependencies.
-13. `MKLROOT`: Set this path to the root directory of `MKL` installation. For
-    example, `C:/Program Files (x86)/Intel/oneAPI/mkl/latest` or `/opt/intel/oneapi/mkl/latest`.
-14. `USE_INTEL_OPENMP`: If enabled, Intel OpenMP library will be used. Otherwise, Default ones (such as GNU OpenMP
+18. `SP_ENABLE_IOMP`: If enabled, Intel's OpenMP implementation will be used. Otherwise, Default ones (such as GNU OpenMP
     library) will be used.
-15. `USE_AOCL`: If enabled, one can use the `AOCL` implementation via `AOCL_BLIS_PATH`, `AOCL_FLAME_PATH` and `AOCL_UTILS_PATH`.
+19. `MKLROOT`: Set this path to the root directory of `MKL` installation. For
+    example, `C:/Program Files (x86)/Intel/oneAPI/mkl/latest` or `/opt/intel/oneapi/mkl/latest`.
 
 ### Example Configuration
 
@@ -410,14 +415,14 @@ this [file](https://github.com/TLCFEM/suanPan/blob/dev/snapcraft.yaml).
 # the parent folder contains source code
 cmake -DCMAKE_INSTALL_PREFIX= \
       -DCMAKE_BUILD_TYPE=Release \
-      -DBUILD_MULTITHREAD=ON \
-      -DUSE_HDF5=ON \
-      -DUSE_VTK=ON \
+      -DSP_BUILD_PARALLEL=ON \
+      -DSP_ENABLE_HDF5=ON \
+      -DSP_ENABLE_VTK=ON \
       -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/ \
-      -DUSE_MKL=ON \
+      -DSP_ENABLE_MKL=ON \
       -DMKLROOT=/opt/intel/oneapi/mkl/latest \
-      -DUSE_INTEL_OPENMP=OFF \
-      -DLINK_DYNAMIC_MKL=OFF
+      -DSP_ENABLE_IOMP=OFF \
+      -DSP_ENABLE_SHARED_MKL=OFF
 ```
 
 ### `aarch64` Architecture
