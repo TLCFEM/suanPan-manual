@@ -141,7 +141,9 @@ See [here](magma.md) for more details.
 
 ### Summary
 
-All available settings are summarised in the following table.
+#### For Single Node Machine
+
+With `SP_ENABLE_MPI` **disabled**, all available settings are summarised in the following table.
 
 | storage       | configuration         | configuration        | system solver | mixed precision | subroutine in external library |
 |---------------|-----------------------|----------------------|---------------|-----------------|--------------------------------|
@@ -154,10 +156,22 @@ All available settings are summarised in the following table.
 | symm. packed  | `set symm_mat true`   | `set band_mat false` | `LAPACK`      | yes             | `d(s)ppsv`                     |
 | sparse        | `set sparse_mat true` |                      | `SuperLU`     | no              | `d(s)gssv`                     |
 |               |                       |                      | `CUDA`        | yes             | `cusolverSpD(S)csrlsvqr`       |
-|               |                       |                      | `MUMPS`       | no              | `dmumps_c`                     |
 |               |                       |                      | `PARDISO`     | no              | `pardiso`                      |
 |               |                       |                      | `FGMRES`      | no              | `dfgmres`                      |
-|               |                       |                      | `LIS`         | no              |                                |
+
+#### For Multi Node Cluster
+
+With `SP_ENABLE_MPI` **enabled**, all available settings are summarised in the following table.
+
+| storage       | configuration         | configuration        | system solver | mixed precision | subroutine in external library |
+|---------------|-----------------------|----------------------|---------------|-----------------|--------------------------------|
+| full          | `set symm_mat false`  | `set band_mat false` | `LAPACK`      | no              | `pdgesv`                       |
+| symm. banded  | `set symm_mat true`   | `set band_mat true`  | `LAPACK`      | no              | `pdpbsv`                       |
+| asymm. banded | `set symm_mat false`  | `set band_mat true`  | `LAPACK`      | no              | `pdgbsv`                       |
+| symm. packed  | `set symm_mat true`   | `set band_mat false` | `LAPACK`      | no              | `pdposv`                       |
+| sparse        | `set sparse_mat true` |                      | `PARDISO`     | no              | `cluster_sparse_solver`        |
+|               |                       |                      | `LIS`         | no              | `lis_solve`                    |
+|               |                       |                      | `MUMPS`       | no              | `dmumps_c`                     |
 
 Some empirical guidance can be concluded as follows.
 
@@ -167,11 +181,7 @@ Some empirical guidance can be concluded as follows.
 3.  The mixed precision algorithm often gives the most significant performance boost for full storage with `CUDA` solver.
     It outperforms the full precision algorithm when the size of system exceeds several thousands.
 4.  The `SPIKE` solver is slightly slower than the conventional `LAPACK` implementations.
-5.  The `SuperLU` solver is slower than the `MUMPS` solver. The multithreaded `SuperLU` performs LU factorization in
-    parallel but forward/back substitution in sequence.
-6.  The `PARDISO` direct solver and `FGMRES` iterative solver are provided by `MKL`.
-7.  The `MUMPS` solver supports both symmetric and asymmetric algorithms. One can use `set symm_mat true`
-    or `set symm_mat false`.
+5.  The `PARDISO` direct solver and `FGMRES` iterative solver are provided by `MKL`.
 
 ## Parallel Matrix Assembling
 
