@@ -26,7 +26,7 @@ sudo apt update
 sudo apt install intel-oneapi-mkl-devel
 ```
 
-It is likely that Intel's MPI library is also requied, otherwise a working implementation shall be pre-installed.
+It is likely that Intel's MPI library is also required, otherwise a working implementation shall be pre-installed.
 Note, the MPI bundled by your distro may not work.
 
 ```bash
