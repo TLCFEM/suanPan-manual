@@ -1,14 +1,18 @@
-# Architecture
+# Architecture Design
 
 The MPI-based distributed design could take various forms in the context of OOP.
 
 ## A Straightforward Method
-One approach is to serialize and send all associated data to another process, the receiving process deserialize the byte stream and create all necessary objects and perform the computation.
+One approach is to serialize and send all associated data to another process, the receiving process deserializes the byte stream and creates all necessary objects and performs the computation.
 This involves intensive data exchange, and packing/unpacking associated data every iteration is not a light task.
 This approach does not scale well as the analysis would quickly be bottlenecked by encoding/decoding message and latency.
 
 This is unfortunately the approach used by OpenSees.
 OpenSees is outdated in terms of both shared-memory parallelism (which does not exist at all) and distributed-memory parallelism (which is too fine aggregated and lacks both performance and flexibility).
+OpenSees effectively requires every class that needs to be distributed to provide a schema, in order to serialize/deserialize objects, manually, as there is a lack of reflection mechanism.
+Imaging for general nonlinear problems, in order to update the status of an element, it needs to send element history variable sets and that of associated material objects over the network.
+However, if it is an elastic step, the trial status can be simply computed by a matrix multiplication, the cost of messaging passing is disproportional and thus kills performance.
+It does not scale well by the nature of its design.
 
 ## Remote Objects with P2P Communication
 
@@ -16,6 +20,8 @@ An alternative is to create the same object on every process, the actual computa
 With this approach, there is no need for object 'proxies', as all objects on all processes are complete, fully functional, homogenous objects.
 They manage all necessary data internally, locally.
 There is also no need to pack/unpack complex data structure, making the implementation extremely simple and maintainable.
+The only message to communicate is the elemental matrices (stiffness, mass, etc.) and the corresponding resistance vector.
+The size is significantly smaller than the previous approach.
 
 To illustrate, consider the following class definition.
 Based on different `obj_tag`, the `assign_process` method labels each object with a process rank.
@@ -44,13 +50,13 @@ public:
         }
         else if(is_local) return comm_world.isend(object.memptr(), mpl::contiguous_layout<DT>{object.n_elem}, root_rank, mpl::tag_t{tag});
 
-        return {};
+        return std::nullopt;
     }
 };
 ```
 
 With such an approach, in the context of FEM, elements can be distributed on the process grid, and only elemental resistances and matrices need to be communicated.
-This minimises the data to be circulated as all other associated data (e.g., element and material internal state) can be kept on local processes.
+This minimises the data to be circulated as all other associated data (e.g., element and material internal states) can be kept on local processes.
 
 This approach only requires three MPI primitives: `MPI_Send`, `MPI_Recv` and `MPI_Bcast`, excluding the part of solving the global system.
 This approach initiates MPI communication per element per iteration.

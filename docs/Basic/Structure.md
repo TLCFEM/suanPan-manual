@@ -1,4 +1,4 @@
-# Structure
+# Model Structure
 
 The default parser accepts a **three-part** structure. They are:
 

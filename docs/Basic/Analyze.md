@@ -1,4 +1,4 @@
-# Analyze
+# The Very First Analysis
 
 This page aims to show an overview of how a model looks like by establishing a simple model, which is a simple elastic
 cantilever beam subjected to an end load.

@@ -1,4 +1,4 @@
-# Performance
+# Performance Tweaks
 
 `suanPan` prioritizes performance and designs the analysis logic in a parallel context accordingly.
 
