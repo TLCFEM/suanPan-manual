@@ -97,7 +97,7 @@ The built-in tests consist of benchmarks for mixed-precision algorithms.
 One can execute the following command to run the tests.
 
 ```bash
-suanpan -ctest
+suanpan -ct
 ```
 
 One can find the following information.
