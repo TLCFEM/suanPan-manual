@@ -371,6 +371,7 @@ If CMake GUI is used to configure the project, the following options are availab
 
 1. `BUILD_SHARED_LIBS`: If enabled, all libraries will be built as shared libraries.
 2. `SP_BUILD_DLL_EXAMPLE`: If enabled, example element/material/section implemented as external libraries will be built.
+   This is not required for the successful build of the main application.
 3. `SP_BUILD_PARALLEL`: If enabled, `TBB` will be used for multithreading so that element update, global matrix
    assembly, etc., can be parallelized. `OpenMP` is not controlled by this option given that `OpenMP` support is
    available in major platforms. It will be used for low level parallelization such as linear algebra operations (which
@@ -382,12 +383,12 @@ If CMake GUI is used to configure the project, the following options are availab
    the path of `VTK` installation. For example, `VTK_DIR=/usr/local/opt/vtk/lib/cmake/vtk-9.1`.
 6. `SP_ENABLE_CUDA`: `CUDA` needs to be installed manually by the user. If enabled, `CUDA` based solvers will be
    available. However, for dense matrix storage, only full matrix storage scheme is supported by `CUDA`. Note full
-   matrix storage scheme is not favorable for FEM. It can, however, be used for sparse matrix solving and mixed
+   matrix storage scheme is not favourable for FEM. It can, however, be used for sparse matrix solving and mixed
    precision solving.
 7. `SP_ENABLE_MAGMA`: `MAGMA` needs to be installed manually by the user. If enabled, `MAGMA` based solvers will be
-   available.
-8. `SP_ENABLE_ASAN`: If enabled, address sanitizer will be enabled.
-9. `SP_ENABLE_CODECOV`: If enabled, compile options will be enabled to support code coverage report.
+   available. The variable `MAGMAROOT` needs to be set to find necessary files.
+8. `SP_ENABLE_ASAN`: If enabled, address sanitizer will be enabled. This is useful for debugging purposes.
+9.  `SP_ENABLE_CODECOV`: If enabled, compile options will be enabled to support code coverage report.
 10. `SP_ENABLE_AVX`: If enabled, compiler flags `-mavx` or `/arch:AVX` will be used. (~2011)
 11. `SP_ENABLE_AVX2`: If enabled, compiler flags `-mavx2` or `/arch:AVX2` will be used. (~2013)
 12. `SP_ENABLE_AVX512`: If enabled, compiler flags `-mavx512f` or `/arch:AVX512` will be used. (~2016)
@@ -396,14 +397,15 @@ If CMake GUI is used to configure the project, the following options are availab
 15. `SP_ENABLE_AOCL`: If enabled, one can use the `AOCL` implementation via assigning library paths
     `AOCL_BLIS_PATH`, `AOCL_FLAME_PATH` and `AOCL_UTILS_PATH`.
 16. `SP_ENABLE_MKL`: `MKL` needs to be installed manually by the user. If enabled, `MKL` will be used
-    for linear algebra operations. If `SP_ENABLE_MKL` is enabled, the following
+    for linear algebra operations. If `SP_ENABLE_MKL` is enabled, set `MKLROOT` to the root directory of `MKL` installation. For
+    example, `C:/Program Files (x86)/Intel/oneAPI/mkl/latest` or `/opt/intel/oneapi/mkl/latest`, also the following
     additional options are available.
 17. `SP_ENABLE_SHARED_MKL`: If enabled, dynamically linked `MKL` libraries will be used. Otherwise, statically linked `MKL`
     libraries will be used, leading to larger binary size but faster execution and fewer dependencies.
 18. `SP_ENABLE_IOMP`: If enabled, Intel's OpenMP implementation will be used. Otherwise, Default ones (such as GNU OpenMP
     library) will be used.
-19. `MKLROOT`: Set this path to the root directory of `MKL` installation. For
-    example, `C:/Program Files (x86)/Intel/oneAPI/mkl/latest` or `/opt/intel/oneapi/mkl/latest`.
+19. `SP_ENABLE_MPI`: Enabled cluster support via MPI.
+20. `SP_ENABLE_64BIT_INDEXING`: Enable 64-bit integer for matrix indexing.
 
 ### Example Configuration
 
@@ -435,3 +437,20 @@ As MKL is not available for `aarch64`, one shall use `OpenBLAS` or `AOCL` only.
 All other dependencies are optional.
 
 To use `AOCL`, one shall manually compile the `blis` and `flame` libraries in advance.
+
+### 64-bit Indexing
+
+The FEM framework part itself uses `unsigned` 32-bit integer for indexing, this means it supports up to 4 billion objects, for example, nodes and elements.
+This is sufficient at least for the years coming.
+But the linear algebra driver may quickly hit the size limit.
+For [`lp64`](https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models) builds, the indexing capability of a default Fortran integer is around 2 billion.
+If the problem is large enough, the global matrix may have more than 2 billion entries (either dense or sparse storage).
+In this case, it is necessary to using 64-bit indexing, see [`ilp64`](https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models) model.
+
+To do so, compile the application with the flag `-DSP_ENABLE_64BIT_INDEXING=ON`.
+
+!!! note
+    The bundled `OpenBLAS` binaries are built for `lp64` only.
+    If one decides to use `OpenBLAS`, a `ilp64` version must be provided via `SP_OPENBLAS_PATH`.
+
+`MKL` provides both versions for `lp64` and `ilp64`, `CMake` will handle the linkage automatically.

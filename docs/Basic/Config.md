@@ -1,5 +1,21 @@
 # Configuration
 
+All available options can be printed via the `--help` flag.
+
+```text
+Usage: suanPan [--help] [--version] [--no-color] [--no-print] [--no-update] [--verbose] [--input-file INPUT_FILE_PATH] [--output-file OUTPUT_FILE_PATH]
+
+Optional arguments:
+  -h, --help                                    show this help message and exit 
+  -v, --version                                 show version information and exit 
+  -nc, --no-color                               suppress colors in terminal output 
+  -np, --no-print                               suppress (most) terminal output 
+  -nu, --no-update                              skip new version check on startup 
+  -vb, --verbose                                enable (very) verbose terminal output 
+  -f, --input, --input-file INPUT_FILE_PATH     specify path to the file containing input analysis 
+  -o, --output, --output-file OUTPUT_FILE_PATH  specify path to the file for terminal output redirection 
+```
+
 ## Disable New Version Check
 
 Some distributions are bundled with an updater that checks for new versions of the application on startup and allows you
@@ -12,9 +28,9 @@ suanpan -nu -f <your_input_model.sp>
 
 ## Disable Color Output
 
-By default, the console output is colored to make it more readable.
+By default, the console output is coloured to make it more readable.
 If the console output is redirected to a file, the ANSI color codes will be included in the file.
-To disable the color output, use the `-nc` option.
+To disable coloured output, use the `-nc` option.
 
 ```shell
 suanpan -nc -f <your_input_model.sp>
