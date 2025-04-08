@@ -461,4 +461,7 @@ To do so, compile the application with the flag `-DSP_ENABLE_64BIT_INDEXING=ON`.
     The bundled `OpenBLAS` binaries are built for `lp64` only.
     If one decides to use `OpenBLAS`, a `ilp64` version must be provided via `SP_OPENBLAS_PATH`.
 
+!!! note
+    If `SP_ENABLE_MPI=ON` is also enabled, one shall make sure the linked MPI is also compiled with 64-bit integer support.
+
 `MKL` provides both versions for `lp64` and `ilp64`, `CMake` will handle the linkage automatically.
