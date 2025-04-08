@@ -463,5 +463,6 @@ To do so, compile the application with the flag `-DSP_ENABLE_64BIT_INDEXING=ON`.
 
 !!! note
     If `SP_ENABLE_MPI=ON` is also enabled, one shall make sure the linked MPI is also compiled with 64-bit integer support.
+    [MPICH](https://www.mpich.org/) is known to work well with either 32-bit or 64-bit integer size.
 
 `MKL` provides both versions for `lp64` and `ilp64`, `CMake` will handle the linkage automatically.
