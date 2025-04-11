@@ -145,33 +145,32 @@ See [here](magma.md) for more details.
 
 With `SP_ENABLE_MPI` **disabled**, all available settings are summarised in the following table.
 
-| storage       | configuration         | configuration        | system solver | mixed precision | subroutine in external library |
-|---------------|-----------------------|----------------------|---------------|-----------------|--------------------------------|
-| full          | `set symm_mat false`  | `set band_mat false` | `LAPACK`      | yes             | `d(s)gesv`                     |
-|               |                       |                      | `CUDA`        | yes             | `cusolverDnD(S)gesv`           |
-| symm. banded  | `set symm_mat true`   | `set band_mat true`  | `LAPACK`      | yes             | `d(s)pbsv`                     |
-|               |                       |                      | `SPIKE`       | yes             | `d(s)spike_gbsv`               |
-| asymm. banded | `set symm_mat false`  | `set band_mat true`  | `LAPACK`      | yes             | `d(s)gbsv`                     |
-|               |                       |                      | `SPIKE`       | yes             | `d(s)spike_gbsv`               |
-| symm. packed  | `set symm_mat true`   | `set band_mat false` | `LAPACK`      | yes             | `d(s)ppsv`                     |
-| sparse        | `set sparse_mat true` |                      | `SuperLU`     | no              | `d(s)gssv`                     |
-|               |                       |                      | `CUDA`        | yes             | `cusolverSpD(S)csrlsvqr`       |
-|               |                       |                      | `PARDISO`     | no              | `pardiso`                      |
-|               |                       |                      | `FGMRES`      | no              | `dfgmres`                      |
+| storage       | configuration         | configuration        | system solver  | mixed precision | subroutine in external library |
+|---------------|-----------------------|----------------------|----------------|-----------------|--------------------------------|
+| full          | `set symm_mat false`  | `set band_mat false` | `LAPACK`       | yes             | (default) `d(s)gesv`           |
+|               |                       |                      | `CUDA`         | yes             | `cusolverDnD(S)gesv`           |
+| symm. banded  | `set symm_mat true`   | `set band_mat true`  | `LAPACK`       | yes             | (default) `d(s)pbsv`           |
+|               |                       |                      | `SPIKE`        | yes             | `d(s)spike_gbsv`               |
+| asymm. banded | `set symm_mat false`  | `set band_mat true`  | (not required) | yes             | `d(s)gbsv`                     |
+| symm. packed  | `set symm_mat true`   | `set band_mat false` | (not required) | yes             | `d(s)ppsv`                     |
+| sparse        | `set sparse_mat true` |                      | `SuperLU`      | no              | (default) `d(s)gssv`           |
+|               |                       |                      | `CUDA`         | yes             | `cusolverSpD(S)csrlsvqr`       |
+|               |                       |                      | `PARDISO`      | no              | `pardiso`                      |
+|               |                       |                      | `FGMRES`       | no              | `dfgmres`                      |
 
 #### For Multi Node Cluster
 
 With `SP_ENABLE_MPI` **enabled**, all available settings are summarised in the following table.
 
-| storage       | configuration         | configuration        | system solver | mixed precision | subroutine in external library |
-|---------------|-----------------------|----------------------|---------------|-----------------|--------------------------------|
-| full          | `set symm_mat false`  | `set band_mat false` | `LAPACK`      | no              | `pdgesv`                       |
-| symm. banded  | `set symm_mat true`   | `set band_mat true`  | `LAPACK`      | no              | `pdpbsv`                       |
-| asymm. banded | `set symm_mat false`  | `set band_mat true`  | `LAPACK`      | no              | `pdgbsv`                       |
-| symm. packed  | `set symm_mat true`   | `set band_mat false` | `LAPACK`      | no              | `pdposv`                       |
-| sparse        | `set sparse_mat true` |                      | `PARDISO`     | no              | `cluster_sparse_solver`        |
-|               |                       |                      | `LIS`         | no              | `lis_solve`                    |
-|               |                       |                      | `MUMPS`       | no              | `dmumps_c`                     |
+| storage       | configuration         | configuration        | system solver  | mixed precision | subroutine in external library |
+|---------------|-----------------------|----------------------|----------------|-----------------|--------------------------------|
+| full          | `set symm_mat false`  | `set band_mat false` | (not required) | no              | `pdgesv`                       |
+| symm. banded  | `set symm_mat true`   | `set band_mat true`  | (not required) | no              | `pdpbsv`                       |
+| asymm. banded | `set symm_mat false`  | `set band_mat true`  | (not required) | no              | `pdgbsv`                       |
+| symm. packed  | `set symm_mat true`   | `set band_mat false` | (not required) | no              | `pdposv`                       |
+| sparse        | `set sparse_mat true` |                      | `PARDISO`      | no              | `cluster_sparse_solver`        |
+|               |                       |                      | `LIS`          | no              | `lis_solve`                    |
+|               |                       |                      | `MUMPS`        | no              | (default) `dmumps_c`           |
 
 Some empirical guidance can be concluded as follows.
 
