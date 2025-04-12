@@ -1,4 +1,4 @@
-# Performance
+# Performance Tweaks
 
 `suanPan` prioritizes performance and designs the analysis logic in a parallel context accordingly.
 
@@ -97,7 +97,7 @@ The built-in tests consist of benchmarks for mixed-precision algorithms.
 One can execute the following command to run the tests.
 
 ```bash
-suanpan -ctest
+suanpan -ct
 ```
 
 One can find the following information.
@@ -122,7 +122,7 @@ Band N=1024 NZ=3234 NE=10240 Mixed             100             1    11.4429 ms
 
 The mixed-precision algorithm is around three times faster than the full-precision algorithm.
 Note the results are obtained with MKL on a platform with a 13-th generation Intel CPU.
-For platforms that have a slow memory bandwidth, the performance gain may not be as significant.
+For platforms that have a low memory bandwidth, the performance gain may not be as significant.
 
 One could always benchmark the platform to find the best algorithm.
 

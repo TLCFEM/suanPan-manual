@@ -408,7 +408,7 @@ materialTestByLoad1D 1 8.3 100 100 100 100 100 100 100 100 100 100 100
 
 exit
 """,
-        ), 
+        ),
     ],
 )
 ```
@@ -436,7 +436,7 @@ materialTestByLoad1D 1 5 50 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 8
 
 exit
 """,
-        ), 
+        ),
     ],
 )
 ```
@@ -444,5 +444,123 @@ exit
 
     
 ![png](calibration-subloading_files/calibration-subloading_12_0.png)
+    
+
+
+## Caveats
+
+It is not recommanded to define a large linear isotropic hardening.
+
+Since the loading phase always incurs accumulation of plasticity, stable one sided cycles will accumulate plasticity, which further results in larger yield surface if the linear isotropic hardening is present.
+
+The following shows an example with a small amount of linear isotropic hardening. 
+
+
+```python
+plot(
+    "linear isotropic hardening",
+    [
+        execute(
+            "slight linear isotropic hardening, many cycles",
+            """
+material Subloading1D 1 2E5 \
+200 2E2 0 0 \
+0 0 0 0 \
+1E3 0 1E2 0.7
+
+materialTest1D 1 1E-4 50 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 50
+
+exit
+""",
+        ),
+        execute(
+            "slight linear isotropic hardening, few cycles",
+            """
+material Subloading1D 1 2E5 \
+200 2E2 0 0 \
+0 0 0 0 \
+1E3 0 1E2 0.7
+
+materialTest1D 1 1E-4 50 20 20 20 20 20 50
+
+exit
+""",
+        ),
+        execute(
+            "no linear isotropic hardening",
+            """
+material Subloading1D 1 2E5 \
+200 0 0 0 \
+0 0 0 0 \
+1E3 0 1E2 0.7
+
+materialTest1D 1 1E-4 50 20 20 20 20 20 50
+
+exit
+""",
+        ),
+    ],
+)
+```
+
+
+    
+![png](calibration-subloading_files/calibration-subloading_14_0.png)
+    
+
+
+However, when a significant linear isotropic hardening is defined, the accumulated plasticity will yield significantly larger yield surface.
+
+
+```python
+plot(
+    "linear isotropic hardening",
+    [
+        execute(
+            "some linear isotropic hardening, many cycles",
+            """
+material Subloading1D 1 2E5 \
+200 5E3 0 0 \
+0 0 0 0 \
+1E3 0 1E2 0.7
+
+materialTest1D 1 1E-4 50 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 50
+
+exit
+""",
+        ),
+        execute(
+            "some linear isotropic hardening, few cycles",
+            """
+material Subloading1D 1 2E5 \
+200 5E3 0 0 \
+0 0 0 0 \
+1E3 0 1E2 0.7
+
+materialTest1D 1 1E-4 50 20 20 20 20 20 50
+
+exit
+""",
+        ),
+        execute(
+            "no linear isotropic hardening",
+            """
+material Subloading1D 1 2E5 \
+200 0 0 0 \
+0 0 0 0 \
+1E3 0 1E2 0.7
+
+materialTest1D 1 1E-4 50 20 20 20 20 20 50
+
+exit
+""",
+        ),
+    ],
+)
+```
+
+
+    
+![png](calibration-subloading_files/calibration-subloading_16_0.png)
     
 

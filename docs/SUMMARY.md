@@ -12,6 +12,8 @@
 * [Tweak Performance](Basic/Performance.md)
 * [Compile Application](Basic/Compile.md)
 * [Build Documentation](Basic/Build.md)
+* [Architecture Design](Basic/Architecture.md)
+* [On Clusters](Basic/Cluster.md)
 
 ## Example
 

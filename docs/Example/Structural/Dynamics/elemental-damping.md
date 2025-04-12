@@ -97,7 +97,6 @@ The actual damping ratios are $$0.05\times1=0.05$$ and $$0.2\times1=0.2$$, respe
 step dynamic 2 6
 set ini_step_size .02
 set fixed_step_size 1
-set system_solver GMRES
 
 integrator LeeElementalNewmark 1 .25 .5 1 5
 

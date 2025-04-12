@@ -22,7 +22,7 @@ jobs:
           cache: 'pip'
       - name: Dependency
         run: |
-          sudo apt-get install doxygen graphviz -y
+          sudo apt-get install doxygen graphviz
           pip install -e .
           rm $(pwd)/suanPan-linux-openblas-no-avx/bin/updater
           sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
@@ -38,5 +38,5 @@ jobs:
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
-          mike deploy 3.6
+          mike deploy 3.7
           git push origin gh-pages

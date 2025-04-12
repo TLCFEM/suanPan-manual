@@ -2,7 +2,7 @@
 
 The [MAGMA](https://icl.utk.edu/magma/) library provides a vast number of algorithms that can be used to solve sparse
 linear systems on GPUs. To enable MAGMA solver, the valid CUDA installation must be present. The application should be
-compiled with `-DUSE_CUDA=ON` and `-DUSE_MAGMA=ON` options.
+compiled with `-DSP_ENABLE_CUDA=ON` and `-DSP_ENABLE_MAGMA=ON` options.
 
 ## Compiling MAGMA
 
@@ -28,14 +28,14 @@ for my specific platform only:
 
 ## Compiling `suanPan`
 
-Once MAGMA is compiled, the application should be compiled with `-DUSE_CUDA=ON` and `-DUSE_MAGMA=ON` options.
+Once MAGMA is compiled, the application should be compiled with `-DSP_ENABLE_CUDA=ON` and `-DSP_ENABLE_MAGMA=ON` options.
 An additional path shall be set to the MAGMA installation directory.
 
 ```json
 {
   "cmake.configureSettings": {
-    "USE_CUDA": "ON",
-    "USE_MAGMA": "ON",
+    "SP_ENABLE_CUDA": "ON",
+    "SP_ENABLE_MAGMA": "ON",
     "MAGMAROOT": "magma/installation/root"
   }
 }

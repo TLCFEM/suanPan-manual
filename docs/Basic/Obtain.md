@@ -1,4 +1,4 @@
-# Obtain
+# Obtain the Application
 
 ## Docker Image
 
@@ -43,14 +43,14 @@ This is now supported by the [VS Code extension](https://marketplace.visualstudi
 The following shall be noted.
 
 1. For maximum compatibility, the image is compiled without AVX support.
-2. On `amd64`, Intel MKl is used. On `arm64`, OpenBLAS is used.
+2. On `amd64`, Intel MKL is used. On `arm64`, OpenBLAS is used.
 
 If necessary, one can build images with different configurations to enable `AVX` and `AVX2` support and/or `AOCL` support on AMD platforms.
 
 ## Precompiled Binaries
 
-The binaries are published on
-GitHub. [https://github.com/TLCFEM/suanPan/releases](https://github.com/TLCFEM/suanPan/releases)
+The binaries are published on GitHub.
+[https://github.com/TLCFEM/suanPan/releases](https://github.com/TLCFEM/suanPan/releases)
 
 Binaries on Windows, Ubuntu and macOS are compiled and deployed automatically on the `master` branch. The 
 precompiled binaries are compiled on the following OS versions.
@@ -150,39 +150,39 @@ By running the program without any parameters, it enters CLI mode by default. Us
 manner.
 
 ```
-+--------------------------------------------------+
-|   __        __         suanPan is an open source |
-|  /  \      |  \           FEM framework (64-bit) |
-|  \__       |__/  __   __      Betelgeuse (2.3.0) |
-|     \ |  | |    |  \ |  |      maintained by tlc |
-|  \__/ |__| |    |__X |  |    all rights reserved |
-|                           10.5281/zenodo.1285221 |
-+--------------------------------------------------+
-|  https://github.com/TLCFEM/suanPan               |
-|  https://github.com/TLCFEM/suanPan-manual        |
-+--------------------------------------------------+
-|  https://gitter.im/suanPan-dev/community         |
-+--------------------------------------------------+
++--------------------------------------------------------+
+|             ____             suanPan is an open source |
+|   ___ _   _|  _ \ __ _ _ __     FEM framework (64-bit) |
+|  / __| | | | |_) / _` | '_ \           Canopus (3.7.0) |
+|  \__ \ |_| |  __/ (_| | | | |        by tlc @ 427eefcb |
+|  |___/\__,_|_|   \__,_|_| |_|      all rights reserved |
+|                                 10.5281/zenodo.1285221 |
++--------------------------------------------------------+
+|  https://github.com/TLCFEM/suanPan                     |
+|  https://tlcfem.github.io/suanPan-manual/latest        |
++--------------------------------------------------------+
+|  https://bit.ly/vsc-sp                                 |
++--------------------------------------------------------+
 
-suanPan ~<>
+suanPan ~<> 
 ```
 
 A command named as `example` is available to automatically create an example model and perform the analysis.
 
 ```
-+--------------------------------------------------+
-|   __        __         suanPan is an open source |
-|  /  \      |  \           FEM framework (64-bit) |
-|  \__       |__/  __   __      Betelgeuse (2.3.0) |
-|     \ |  | |    |  \ |  |      maintained by tlc |
-|  \__/ |__| |    |__X |  |    all rights reserved |
-|                           10.5281/zenodo.1285221 |
-+--------------------------------------------------+
-|  https://github.com/TLCFEM/suanPan               |
-|  https://github.com/TLCFEM/suanPan-manual        |
-+--------------------------------------------------+
-|  https://gitter.im/suanPan-dev/community         |
-+--------------------------------------------------+
++--------------------------------------------------------+
+|             ____             suanPan is an open source |
+|   ___ _   _|  _ \ __ _ _ __     FEM framework (64-bit) |
+|  / __| | | | |_) / _` | '_ \           Canopus (3.7.0) |
+|  \__ \ |_| |  __/ (_| | | | |        by tlc @ 427eefcb |
+|  |___/\__,_|_|   \__,_|_| |_|      all rights reserved |
+|                                 10.5281/zenodo.1285221 |
++--------------------------------------------------------+
+|  https://github.com/TLCFEM/suanPan                     |
+|  https://tlcfem.github.io/suanPan-manual/latest        |
++--------------------------------------------------------+
+|  https://bit.ly/vsc-sp                                 |
++--------------------------------------------------------+
 
 suanPan ~<> example
 ====================================================
@@ -203,19 +203,22 @@ suanPan ~<> example
         step static 1
 --> perform the analysis:
         analyze
-current analysis time: 1.00000.
+[WARNING] BandMat.hpp:62 ~> The storage requirement for the banded matrix is larger than that of a full matrix, consider using a full/sparse matrix instead.
+>> Current Analysis Time: 1.00000.
+
 --> check nodal force (P=UEA/L=1.4*52*93/2=3385.2):
         peek node 2
 Node 2:
-   2.0000        0
+Coordinate:
+  2.0000e+00  0.0000e+00
 Displacement:
-   1.4000        0
+  1.4000e+00  0.0000e+00
 Resistance:
-   3.3852e+03            0
+  3.3852e+03  0.0000e+00
 
 --> clean up and it's your turn!
 ====================================================
-suanPan ~<>
+suanPan ~<> 
 ```
 
 ### Batch Mode
@@ -270,6 +273,8 @@ suanPan ~<> file example.supan
 
 The VS Code extension is available [here](https://marketplace.visualstudio.com/items?itemName=tlc.suanpan).
 It provides syntax highlighting and code completion.
+
+The plugin also provides functionalities to invoke the analysis in docker containers.
 
 ![demo](https://github.com/TLCFEM/suanPan-vs/raw/master/images/example.gif)
 
@@ -335,7 +340,7 @@ as `suanPan.sublime-build`. You may need to replace command `suanpan` with the f
 
 Now models can be run in Sublime Text via the shortcut `Ctrl+B`.
 
-To disable colored output, use `-nc` option such as
+To disable coloured output, use `-nc` (no colour) option such as
 
 ```bash
 suanpan -nc -f model_file.supan

@@ -76,7 +76,7 @@ no better. The `_spsv()` subroutine is used for matrix solving. It is not recomm
 
 The sparse matrix is also supported. Several sparse solvers are implemented.
 
-#### Direct System Solver
+### Direct System Solver
 
 Different solvers are implemented for different storage schemes. It is possible to switch from one to another by using
 the following command. Details are covered in the summary table.
@@ -86,10 +86,10 @@ set system_solver (1)
 # (1) string, system solver name
 ```
 
-### Mixed Precision Algorithm
+#### Mixed Precision Algorithm
 
-The following command can be used to control if to use mixed precision refinement. This command has no effect if the
-target matrix storage scheme has no mixed precision implementation.
+The following command can be used to control if to use mixed precision refinement.
+This command has no effect if the target matrix storage scheme has no mixed precision implementation.
 
 ```
 set precision (1)
@@ -98,6 +98,7 @@ set precision (1)
 
 #### Iterative Refinement
 
+The mixed precision algorithm requires iterative refinement.
 The maximum number of refinements can be bounded by
 
 ```text
@@ -105,17 +106,19 @@ set iterative_refinement (1)
 # (1) integer, maximum number of refinements
 ```
 
+It **cannot** exceed 256.
+
 #### Iterative Refinement Tolerance
 
 If the mixed precision algorithm is used, it is possible to use the following command to control the tolerance.
 
 ```text
 set tolerance (1)
-# (1) double, tolerance of the iterative solver
+# (1) double, tolerance
 ```
 
-Typically, each refinement reduces the error by a factor of $$10^{-7}$$. Thus two or three refinements should be
-sufficient to achieve the working precision.
+Typically, each refinement reduces the error by a factor of $$10^{-7}$$.
+Thus, two or three refinements should be sufficient to achieve the working precision.
 
 Thus, the following command set makes sense.
 
@@ -125,24 +128,49 @@ set iterative_refinement 3
 set tolerance 1e-15
 ```
 
+### Iterative System Solver
+
+Iterative solvers are available for sparse storage.
+The [`Lis`](https://www.ssisc.org/lis/) library provides a wide range of solvers and preconditioners.
+See [here](lis.md) for more details.
+
+It is also possible to use GPU-based iterative solver powered by the [MAGMA](https://icl.utk.edu/magma/) library.
+The binaries shipped officially are **not** compiled with GPU support.
+Users can compile the library with GPU support by themselves.
+See [here](magma.md) for more details.
+
 ### Summary
 
-All available settings are summarised in the following table.
+#### For Single Node Machine
 
-| storage       | configuration         | configuration        | system solver | mixed precision | subroutine in external library |
-|---------------|-----------------------|----------------------|---------------|-----------------|--------------------------------|
-| full          | `set symm_mat false`  | `set band_mat false` | `LAPACK`      | yes             | `d(s)gesv`                     |
-|               |                       |                      | `CUDA`        | yes             | `cusolverDnD(S)gesv`           |
-| symm. banded  | `set symm_mat true`   | `set band_mat true`  | `LAPACK`      | yes             | `d(s)pbsv`                     |
-|               |                       |                      | `SPIKE`       | yes             | `d(s)spike_gbsv`               |
-| asymm. banded | `set symm_mat false`  | `set band_mat true`  | `LAPACK`      | yes             | `d(s)gbsv`                     |
-|               |                       |                      | `SPIKE`       | yes             | `d(s)spike_gbsv`               |
-| symm. packed  | `set symm_mat true`   | `set band_mat false` | `LAPACK`      | yes             | `d(s)ppsv`                     |
-| sparse        | `set sparse_mat true` |                      | `SuperLU`     | yes             | `d(s)gssv`                     |
-|               |                       |                      | `CUDA`        | yes             | `cusolverSpD(S)csrlsvqr`       |
-|               |                       |                      | `MUMPS`       | no              | `dmumps_c`                     |
-|               |                       |                      | `PARDISO`     | no              | `pardiso`                      |
-|               |                       |                      | `FGMRES`      | no              | `dfgmres`                      |
+With `SP_ENABLE_MPI` **disabled**, all available settings are summarised in the following table.
+
+| storage       | configuration         | configuration        | system solver  | mixed precision | subroutine in external library |
+|---------------|-----------------------|----------------------|----------------|-----------------|--------------------------------|
+| full          | `set symm_mat false`  | `set band_mat false` | `LAPACK`       | yes             | (default) `d(s)gesv`           |
+|               |                       |                      | `CUDA`         | yes             | `cusolverDnD(S)gesv`           |
+| symm. banded  | `set symm_mat true`   | `set band_mat true`  | `LAPACK`       | yes             | (default) `d(s)pbsv`           |
+|               |                       |                      | `SPIKE`        | yes             | `d(s)spike_gbsv`               |
+| asymm. banded | `set symm_mat false`  | `set band_mat true`  | (not required) | yes             | `d(s)gbsv`                     |
+| symm. packed  | `set symm_mat true`   | `set band_mat false` | (not required) | yes             | `d(s)ppsv`                     |
+| sparse        | `set sparse_mat true` |                      | `SuperLU`      | no              | (default) `d(s)gssv`           |
+|               |                       |                      | `CUDA`         | yes             | `cusolverSpD(S)csrlsvqr`       |
+|               |                       |                      | `PARDISO`      | no              | `pardiso`                      |
+|               |                       |                      | `FGMRES`       | no              | `dfgmres`                      |
+
+#### For Multi Node Cluster
+
+With `SP_ENABLE_MPI` **enabled**, all available settings are summarised in the following table.
+
+| storage       | configuration         | configuration        | system solver  | mixed precision | subroutine in external library |
+|---------------|-----------------------|----------------------|----------------|-----------------|--------------------------------|
+| full          | `set symm_mat false`  | `set band_mat false` | (not required) | no              | `pdgesv`                       |
+| symm. banded  | `set symm_mat true`   | `set band_mat true`  | (not required) | no              | `pdpbsv`                       |
+| asymm. banded | `set symm_mat false`  | `set band_mat true`  | (not required) | no              | `pdgbsv`                       |
+| symm. packed  | `set symm_mat true`   | `set band_mat false` | (not required) | no              | `pdposv`                       |
+| sparse        | `set sparse_mat true` |                      | `PARDISO`      | no              | `cluster_sparse_solver`        |
+|               |                       |                      | `LIS`          | no              | `lis_solve`                    |
+|               |                       |                      | `MUMPS`        | no              | (default) `dmumps_c`           |
 
 Some empirical guidance can be concluded as follows.
 
@@ -152,66 +180,7 @@ Some empirical guidance can be concluded as follows.
 3.  The mixed precision algorithm often gives the most significant performance boost for full storage with `CUDA` solver.
     It outperforms the full precision algorithm when the size of system exceeds several thousands.
 4.  The `SPIKE` solver is slightly slower than the conventional `LAPACK` implementations.
-5.  The `SuperLU` solver is slower than the `MUMPS` solver. The multithreaded `SuperLU` performs LU factorization in
-    parallel but forward/back substitution in sequence.
-6.  The `PARDISO` direct solver and `FGMRES` iterative solver are provided by `MKL`.
-7.  The `MUMPS` solver supports both symmetric and asymmetric algorithms. One can use `set symm_mat true`
-    or `set symm_mat false`.
-
-### Iterative System Solver
-
-[available from v2.5]
-
-It is possible to use iterative solvers to solve the linear system of equations. Currently, two solvers are available
-by using the following command.
-
-```text
-set system_solver BiCGSTAB
-set system_solver GMRES
-```
-
-As the iterative solvers are relatively independent of the matrix storage scheme, thus, all different storage
-schemes can be used along with different iterative solvers. One should beware that different storage schemes may
-affect the performance of iterative solvers as they largely depend on matrix--vector multiplication.
-
-Mixed precision solving is not supported by the iterative solvers.
-
-[available from v3.0]
-
-It is also possible to use GPU-based iterative solver powered by the [MAGMA](https://icl.utk.edu/magma/) library. The
-binaries shipped officially are not compiled with GPU support. Users can compile the library with GPU support by
-themselves. See [here](magma.md) for more details.
-
-#### Preconditioner
-
-Three preconditioners are available for the iterative solvers.
-
-```text
-set preconditioner None
-set preconditioner Jacobi
-set preconditioner ILU
-```
-
-The `None` preconditioner uses identify matrix as the preconditioner.
-
-The `Jacobi` preconditioner uses the diagonal of the matrix as the preconditioner. This is the default one but may
-not perform well for certain problems.
-
-The `ILU` preconditioner uses the incomplete LU factorization of the matrix as the preconditioner. This `ILU`
-preconditioner
-is provided by the `SuperLU` library.
-
-If the iterative solver is used, then it is possible to set the tolerance of the iterative solver. In this case,
-tolerance assigned will not be used by mixed precision algorithm as it is not activated due to an iterative solver
-is defined.
-
-```text
-set tolerance (1)
-# (1) double, tolerance of the iterative solver
-```
-
-Alternatively, there is a dedicated matrix storage which employs the [`Lis`](https://www.ssisc.org/lis/) library.
-See [here](lis.md) for more details.
+5.  The `PARDISO` direct solver and `FGMRES` iterative solver are provided by `MKL`.
 
 ## Parallel Matrix Assembling
 
