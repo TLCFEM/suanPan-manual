@@ -1,0 +1,27 @@
+var class_storage =
+[
+    [ "object_type", "da/d56/class_storage.html#ac03accea99a482997b49bf8a06147995", null ],
+    [ "Storage", "da/d56/class_storage.html#a52a5e7fc0f4e41cfae67f80fb3372e84", null ],
+    [ "Storage", "da/d56/class_storage.html#a12dced712f10c473c41e0656e2548ab0", null ],
+    [ "Storage", "da/d56/class_storage.html#aab633cf3babf0c31536e2e583db0dc33", null ],
+    [ "~Storage", "da/d56/class_storage.html#a17bf88c95f564e792f25c8e25975e58e", null ],
+    [ "at", "da/d56/class_storage.html#a51835b9f2ffd4b3bbf076492b5a1f2c2", null ],
+    [ "begin", "da/d56/class_storage.html#a7bfcc96a0c37e9a615657b0e25d36ba2", null ],
+    [ "cbegin", "da/d56/class_storage.html#afe741dbe0b72f3fbf284ffffb422dcb3", null ],
+    [ "cend", "da/d56/class_storage.html#a714c2f17c882e47a55baa026f8181cb5", null ],
+    [ "clear", "da/d56/class_storage.html#a679fb7e6b9da4a81c8882b96a48128e5", null ],
+    [ "disable", "da/d56/class_storage.html#a943b002d5726416b145f33701c7db86d", null ],
+    [ "enable", "da/d56/class_storage.html#a15f02e19fc564b2d64411ac4911cac04", null ],
+    [ "enable", "da/d56/class_storage.html#a0c3366c165ce282edb40ff7ec3d54838", null ],
+    [ "end", "da/d56/class_storage.html#a4f8d0f14299232dc53d4633b972a814f", null ],
+    [ "erase", "da/d56/class_storage.html#a81e65e59906a407ed2fdd0ed8b8a2900", null ],
+    [ "find", "da/d56/class_storage.html#a0c06f55c3c192fa18e8e0d6465fa078d", null ],
+    [ "get", "da/d56/class_storage.html#aaea6dbc46854eaf228e053459c79743d", null ],
+    [ "insert", "da/d56/class_storage.html#a013cb19bdce869254a6c7644921f75e0", null ],
+    [ "operator=", "da/d56/class_storage.html#a2bcad82959a7851b0aed0c324b17cc1b", null ],
+    [ "operator=", "da/d56/class_storage.html#af89785c371c1b3872d004260a30946b1", null ],
+    [ "operator[]", "da/d56/class_storage.html#a06be2b0a936464f23e4cd6147b1a1584", null ],
+    [ "reset", "da/d56/class_storage.html#a0224b21796a7b8e879146a0c573729e6", null ],
+    [ "size", "da/d56/class_storage.html#a46dd09875ad737879c04a3268795848e", null ],
+    [ "update", "da/d56/class_storage.html#a6b51334e65934ab09fd23bd4fa91aa17", null ]
+];
