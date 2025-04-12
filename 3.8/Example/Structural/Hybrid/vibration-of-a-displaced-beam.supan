@@ -1,0 +1,32 @@
+# A TEST MODEL FOR MPC
+
+node 1 0 0
+node 2 1 0
+
+material Elastic1D 1 10
+
+element EB21 1 1 2 12 1 1
+element Mass 2 2 2 2
+
+fix 1 P 1
+
+hdf5recorder 1 Node U2 2
+
+step static 1 1
+set ini_step_size .1
+
+displacement 1 0 1 2 2
+
+converger AbsIncreDisp 1 1E-8 3 1
+
+step dynamic 2 2
+set ini_step_size .02
+set fixed_step_size 1
+
+converger AbsIncreDisp 2 1E-8 3 1
+
+analyze
+
+save recorder 1
+
+exit
