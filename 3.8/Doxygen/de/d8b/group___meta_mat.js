@@ -45,16 +45,6 @@ var group___meta_mat =
       [ "m_rows", "d9/dac/class_band_mat.html#ad8b14a0d5192d2ea2ea5d8f44ac80870", null ],
       [ "u_band", "d9/dac/class_band_mat.html#a7d588e3e48d5331bb849e1921f40686d", null ]
     ] ],
-    [ "BandMatCUDA< T >", "d9/d2c/class_band_mat_c_u_d_a.html", [
-      [ "BandMatCUDA", "d9/d2c/class_band_mat_c_u_d_a.html#ac656613cf4e12e5fb103f8f9128642ed", null ],
-      [ "BandMatCUDA", "d9/d2c/class_band_mat_c_u_d_a.html#a602b45768781ded12a217009eda7b00d", null ],
-      [ "BandMatCUDA", "d9/d2c/class_band_mat_c_u_d_a.html#a61eddefb22865dc164db0512fed69211", null ],
-      [ "~BandMatCUDA", "d9/d2c/class_band_mat_c_u_d_a.html#ab55df83eb1bd33943b2d06020f459440", null ],
-      [ "direct_solve", "de/d8b/group___meta_mat.html#gaaa68bb54a22a0b4c747f9ddd6d819ea4", null ],
-      [ "make_copy", "d9/d2c/class_band_mat_c_u_d_a.html#a27da226691ef45ed0fbb71e034aa7e37", null ],
-      [ "operator=", "d9/d2c/class_band_mat_c_u_d_a.html#a9cede1c4ffd90162d0f47a7987a0a920", null ],
-      [ "operator=", "d9/d2c/class_band_mat_c_u_d_a.html#a3c9555beec4f45d032ad0b7309c18be5", null ]
-    ] ],
     [ "BandMatMAGMA< T >", "de/d54/class_band_mat_m_a_g_m_a.html", [
       [ "BandMatMAGMA", "de/d54/class_band_mat_m_a_g_m_a.html#a44534dca52b1afc985a152fd86ef4f2c", null ],
       [ "BandMatMAGMA", "de/d54/class_band_mat_m_a_g_m_a.html#abc4d3146cf57f7084a8924902fe0bd4f", null ],
@@ -308,7 +298,6 @@ var group___meta_mat =
     [ "BandSymmMatCluster::direct_solve", "de/d8b/group___meta_mat.html#ga16f2913c0024e3f1e7f6a65f64bbe7c1", null ],
     [ "FullMatBaseCluster::direct_solve", "de/d8b/group___meta_mat.html#ga80f36448902b2b26f68b272b9b92c54c", null ],
     [ "BandMat::direct_solve", "de/d8b/group___meta_mat.html#ga68cb5fbc5bb70db011c2114cbc3b7155", null ],
-    [ "BandMatCUDA::direct_solve", "de/d8b/group___meta_mat.html#gaaa68bb54a22a0b4c747f9ddd6d819ea4", null ],
     [ "BandMatMAGMA::direct_solve", "de/d8b/group___meta_mat.html#ga3109d942ee0fa99fb498ac3154e0b040", null ],
     [ "BandMatSpike::direct_solve", "de/d8b/group___meta_mat.html#ga79309157ef184e91347d53c02a6160c5", null ],
     [ "BandSymmMat::direct_solve", "de/d8b/group___meta_mat.html#gaf189e4d7dd607129f87bde8dd35d921e", null ],

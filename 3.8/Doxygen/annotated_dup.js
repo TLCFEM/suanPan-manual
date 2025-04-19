@@ -51,7 +51,6 @@ var annotated_dup =
     [ "B3DOSL", "dd/dba/class_b3_d_o_s_l.html", "dd/dba/class_b3_d_o_s_l" ],
     [ "BandMat", "d9/dac/class_band_mat.html", "d9/dac/class_band_mat" ],
     [ "BandMatCluster", "d5/d28/class_band_mat_cluster.html", "d5/d28/class_band_mat_cluster" ],
-    [ "BandMatCUDA", "d9/d2c/class_band_mat_c_u_d_a.html", "d9/d2c/class_band_mat_c_u_d_a" ],
     [ "BandMatMAGMA", "de/d54/class_band_mat_m_a_g_m_a.html", "de/d54/class_band_mat_m_a_g_m_a" ],
     [ "BandMatSpike", "de/d71/class_band_mat_spike.html", "de/d71/class_band_mat_spike" ],
     [ "BandSymmMat", "d6/d79/class_band_symm_mat.html", "d6/d79/class_band_symm_mat" ],

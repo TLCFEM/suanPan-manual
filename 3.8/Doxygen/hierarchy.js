@@ -692,7 +692,6 @@ var hierarchy =
     [ "MetaMat< T >", "d8/d79/class_meta_mat.html", [
       [ "DenseMat< T >", "d0/de9/class_dense_mat.html", [
         [ "BandMat< T >", "d9/dac/class_band_mat.html", [
-          [ "BandMatCUDA< T >", "d9/d2c/class_band_mat_c_u_d_a.html", null ],
           [ "BandMatMAGMA< T >", "de/d54/class_band_mat_m_a_g_m_a.html", null ]
         ] ],
         [ "BandMatCluster< T >", "d5/d28/class_band_mat_cluster.html", null ],
@@ -1014,13 +1013,11 @@ var hierarchy =
     [ "thread_pool", "d3/dce/classthread__pool.html", null ],
     [ "triplet_form< data_t, index_t >", "db/d78/classtriplet__form.html", null ],
     [ "triplet_form< double, uword >", "db/d78/classtriplet__form.html", null ],
-    [ "triplet_form< float, int >", "db/d78/classtriplet__form.html", null ],
     [ "triplet_form< T, int >", "db/d78/classtriplet__form.html", null ],
     [ "triplet_form< T, uword >", "db/d78/classtriplet__form.html", null ],
     [ "vtkBase", "db/ddc/classvtk_base.html", [
       [ "ElementBase", "d4/d6b/class_element_base.html", null ]
     ] ],
-    [ "bool", "d9/db9/classbool.html", null ],
     [ "unique_ptr< Expression >", "d4/d32/classstd_1_1unique__ptr_3_01_expression_01_4.html", null ],
     [ "unique_ptr< Material >", "d7/da0/classstd_1_1unique__ptr_3_01_material_01_4.html", null ],
     [ "unordered_map< unsigned, shared_ptr< Amplitude > >", "dc/d07/classsuanpan_1_1unordered__map_3_01unsigned_00_01shared__ptr_3_01_amplitude_01_4_01_4.html", null ],

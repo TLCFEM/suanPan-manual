@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../suanPan.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -14525,15 +14525,19 @@ typically requires the stiffness matrix to be symmetric. Besides, it must have</
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>solver FEAST (1) (2) (3)
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>solver FEAST (1) (2) (3) [4]
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a># (1) int, unique solver tag
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a># (2) int, number of eigen modes
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a># (3) double, radius
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a># (3) double, centre
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a># [4] double, radius, default: centre
 </code></pre></div></td></tr></table></div>
 <p>Currently, the <code>FEAST</code> solver can be applied to full, banded and sparse storage. For banded storage, it is necessary to
 use the <code>SPIKE</code> solver.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>set system_solver SPIKE
 </code></pre></div></td></tr></table></div>
+<p>For the given centre <span class="arithmatex">\(c\)</span> and radius <span class="arithmatex">\(r\)</span>, the FEAST solver seeks eigenvalues within the bracket <span class="arithmatex">\([c-r,c+r]\)</span>.
+If the radius is not assigned, it defaults to <span class="arithmatex">\(c\)</span>, thus the bracket becomes <span class="arithmatex">\([0,2c]\)</span>.</p>
 <h2 id="example">Example</h2>
 <p>Consider a massless elastic cantilever beam with lumped end mass. Assume the length is <span class="arithmatex">\(L=2.84\)</span>, the elastic modulus
 is <span class="arithmatex">\(E=94.13\)</span>, the moment of inertia is <span class="arithmatex">\(I=1.34\)</span> and the lumped mass is <span class="arithmatex">\(M=5.76\)</span> so that</p>

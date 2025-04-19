@@ -24,11 +24,10 @@ var searchData=
   ['trilinearstraindegradation_21',['TrilinearStrainDegradation',['../d8/db1/class_trilinear_strain_degradation.html',1,'']]],
   ['triplet_5fform_22',['triplet_form',['../db/d78/classtriplet__form.html',1,'']]],
   ['triplet_5fform_3c_20double_2c_20uword_20_3e_23',['triplet_form&lt; double, uword &gt;',['../db/d78/classtriplet__form.html',1,'']]],
-  ['triplet_5fform_3c_20float_2c_20int_20_3e_24',['triplet_form&lt; float, int &gt;',['../db/d78/classtriplet__form.html',1,'']]],
-  ['triplet_5fform_3c_20t_2c_20int_20_3e_25',['triplet_form&lt; T, int &gt;',['../db/d78/classtriplet__form.html',1,'']]],
-  ['triplet_5fform_3c_20t_2c_20uword_20_3e_26',['triplet_form&lt; T, uword &gt;',['../db/d78/classtriplet__form.html',1,'']]],
-  ['trivial_27',['Trivial',['../d2/d39/class_trivial.html',1,'']]],
-  ['trusssection_28',['TrussSection',['../d0/d32/class_truss_section.html',1,'']]],
-  ['tsection2d_29',['TSection2D',['../d4/dce/class_t_section2_d.html',1,'']]],
-  ['tsection3d_30',['TSection3D',['../d0/d7b/class_t_section3_d.html',1,'']]]
+  ['triplet_5fform_3c_20t_2c_20int_20_3e_24',['triplet_form&lt; T, int &gt;',['../db/d78/classtriplet__form.html',1,'']]],
+  ['triplet_5fform_3c_20t_2c_20uword_20_3e_25',['triplet_form&lt; T, uword &gt;',['../db/d78/classtriplet__form.html',1,'']]],
+  ['trivial_26',['Trivial',['../d2/d39/class_trivial.html',1,'']]],
+  ['trusssection_27',['TrussSection',['../d0/d32/class_truss_section.html',1,'']]],
+  ['tsection2d_28',['TSection2D',['../d4/dce/class_t_section2_d.html',1,'']]],
+  ['tsection3d_29',['TSection3D',['../d0/d7b/class_t_section3_d.html',1,'']]]
 ];
