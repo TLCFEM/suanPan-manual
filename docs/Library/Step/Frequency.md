@@ -32,10 +32,11 @@ By default, the `ARPACK` solver is used to solve the generalized eigen problem.
 The [FEAST Eigenvalue Solver](http://www.feast-solver.org/) can also be used. To switch, one can use
 
 ```
-solver FEAST (1) (2) (3)
+solver FEAST (1) (2) (3) [4]
 # (1) int, unique solver tag
 # (2) int, number of eigen modes
-# (3) double, radius
+# (3) double, centre
+# [4] double, radius, default: centre
 ```
 
 Currently, the `FEAST` solver can be applied to full, banded and sparse storage. For banded storage, it is necessary to
@@ -44,6 +45,9 @@ use the `SPIKE` solver.
 ```
 set system_solver SPIKE
 ```
+
+For the given centre $$c$$ and radius $$r$$, the FEAST solver seeks eigenvalues within the bracket $$[c-r,c+r]$$.
+If the radius is not assigned, it defaults to $$c$$, thus the bracket becomes $$[0,2c]$$.
 
 ## Example
 
