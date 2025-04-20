@@ -367,7 +367,7 @@ var searchData=
   ['static_364',['static',['../d4/daf/class_static.html',1,'Static'],['../d4/df8/class_optimization.html#a9c3ed57bbb13a596cfa2651c419e5d2f',1,'Optimization::Static()'],['../d4/daf/class_static.html#a9c3ed57bbb13a596cfa2651c419e5d2f',1,'Static::Static()']]],
   ['static_2ecpp_365',['Static.cpp',['../d7/d53/_static_8cpp.html',1,'']]],
   ['static_2eh_366',['Static.h',['../d5/d33/_static_8h.html',1,'']]],
-  ['static_5fupdate_367',['static_update',['../de/db5/group___material.html#ggafbf12274aeca22ceeccecf524e311e35a433bf9b3b06f74cc5467a6579c9153c9',1,'STATIC_UPDATE:&#160;ExternalMaterialData.h'],['../d7/d98/_elastic_external_8cpp.html#a679f3088717becbc19a0ff96007e3a84',1,'static_update(ExternalMaterialData *data, int *info):&#160;ElasticExternal.cpp']]],
+  ['static_5fupdate_367',['static_update',['../d7/d98/_elastic_external_8cpp.html#a679f3088717becbc19a0ff96007e3a84',1,'static_update(ExternalMaterialData *data, int *info):&#160;ElasticExternal.cpp'],['../de/db5/group___material.html#ggafbf12274aeca22ceeccecf524e311e35a433bf9b3b06f74cc5467a6579c9153c9',1,'STATIC_UPDATE:&#160;ExternalMaterialData.h']]],
   ['statics_368',['STATICS',['../dc/d56/group___storage.html#gga7d90861a140b3b6cf1087c5662cf4223aaddabf8aa3a3d49a7dda2c672c9cd656',1,'Factory.hpp']]],
   ['statistics_369',['Statistics',['../d9/df2/group___domain.html#ga52353aee9ba94010e7fb16a3043ab2e9',1,'DomainBase.h']]],
   ['stats_370',['stats',['../d4/d83/class_domain_base.html#a9a71141780b3850f5f42ae5f9fb101a4',1,'DomainBase::stats(Statistics) const =0'],['../d4/d83/class_domain_base.html#a3016c6ad2b482685cc77e9dc7b31b798',1,'DomainBase::stats() const'],['../d4/df4/class_domain.html#ac2579a01b7505ac4a00d86a3684c3200',1,'Domain::stats()']]],

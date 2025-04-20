@@ -1,5 +1,7 @@
 var NAVTREEINDEX34 =
 {
+"de/d54/class_band_mat_m_a_g_m_a.html#a3ea3f45d35cbcd415650d1d654614726":[2,9,4,7],
+"de/d54/class_band_mat_m_a_g_m_a.html#a44534dca52b1afc985a152fd86ef4f2c":[2,9,4,0],
 "de/d54/class_band_mat_m_a_g_m_a.html#a7ae8522571f8ce8b164530314188cfc5":[2,9,4,6],
 "de/d54/class_band_mat_m_a_g_m_a.html#abc4d3146cf57f7084a8924902fe0bd4f":[2,9,4,1],
 "de/d54/class_band_mat_m_a_g_m_a.html#ae7e2568427cd33422bc206a408d77c76":[2,9,4,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX34 =
 "de/da5/_test_matrix_8cpp.html#a6c6fd377dcf59912db9c9d05c8f822fe":[6,0,16,5,1],
 "de/da5/_test_matrix_8cpp.html#a71063b691cf2ab3a0a6f58ec477d69d9":[6,0,16,5,4],
 "de/da5/_test_matrix_8cpp.html#a8cb60efbfa2917c54d63467ede173c58":[6,0,16,5,8],
-"de/da5/_test_matrix_8cpp.html#a9d186fda5c8131978f3b427034559344":[6,0,16,5,7],
-"de/da5/_test_matrix_8cpp.html#aa53451c59cc68e0c50b880377d8fab1a":[6,0,16,5,17],
-"de/da5/_test_matrix_8cpp.html#ab67d20d4f69753bc0eb048f5e63e4810":[6,0,16,5,13]
+"de/da5/_test_matrix_8cpp.html#a9d186fda5c8131978f3b427034559344":[6,0,16,5,7]
 };

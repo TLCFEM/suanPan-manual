@@ -498,6 +498,7 @@ var group___utility =
     [ "Oscillator::compute_maximum_response", "da/d46/group___utility.html#gaa5cd80684e92417c27db49112dfd5191", null ],
     [ "Oscillator::compute_response", "da/d46/group___utility.html#ga7cad08317a6ceac02b3df9713a342cd0", null ],
     [ "Quaternion::conj", "da/d46/group___utility.html#gae7b4930ec6f81cb76c4ea80ed7a6d922", null ],
+    [ "eig_solve", "da/d46/group___utility.html#ga59ae152720803c40641e0458ed272b17", null ],
     [ "eig_solve", "da/d46/group___utility.html#gac42e66d9610283c2f3360b6d85381068", null ],
     [ "eig_solve", "da/d46/group___utility.html#ga74c0fd691ea92ff7db34edad8d7d93c8", null ],
     [ "execute_command", "da/d46/group___utility.html#ga7b566bdab23ce7a78599e25a846e6059", null ],

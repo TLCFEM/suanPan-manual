@@ -13894,6 +13894,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Remarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-mpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Without MPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-mpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      With MPI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -14455,6 +14479,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Remarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-mpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Without MPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-mpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      With MPI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -14478,7 +14526,8 @@
 
 <h1 id="ramm">Ramm</h1>
 <p>Arc Length Algorithm Using Ramm's Approach</p>
-<p>The Ramm's version of arc length algorithm is implemented. This solver can only be used in solving static problems.</p>
+<p>The Ramm's version of arc length algorithm is implemented.
+This solver can only be used in solving static problems.</p>
 <h2 id="syntax">Syntax</h2>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>solver Ramm (1)
@@ -14504,12 +14553,40 @@ One can use the following to control stepping strategy.</p>
 <ol>
 <li>A proper arc length shall be manually input to achieve an efficient analysis.</li>
 <li>Often the arc length is allowed to change depending on the smoothness of the turning point.</li>
-<li>The computation of determinant is involved. A proper matrix storage scheme shall be activated. For dense matrix
-   storage, please use asymmetric schemes by <code>set symm_mat false</code>. For sparse solvers, please use <code>MUMPS</code> only.</li>
 <li>If the arc length is not fixed, a positive minimum/maximum arc length (step size) will kick in to prevent the
    arc length from being too small/large.</li>
 <li>Any non-positive values for the minimum/maximum arc length will be ignored.</li>
 </ol>
+<p>A good overview of the method and its implementation detail can be found in Crisfield's book (ISBN: 9780471929567), see Chapter 9.</p>
+<p>Solvers for symmetric storage often require the target matrix to be positive definite.
+This is <strong>not</strong> the case in arc-length related applications, although it can still be used for problems in which the tangent stiffness is positive definite.
+Thus, as a rule of thumb, one may need to switch off <code>symm_mat</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>set symm_mat 0
+</code></pre></div></td></tr></table></div>
+<p>If positive definiteness is known to be guaranteed, symmetric storage can also be used.</p>
+<p>For general cases, the (sign of) determinant of the tangent stiffness is required to identify turning points.
+<strong>Not all solvers support the computation of determinant.</strong></p>
+<h3 id="without-mpi">Without MPI</h3>
+<p>Only <code>LAPACK</code> based solvers can be used.
+Thus, one need to use the following settings.
+Note they are all default settings thus do not need to be explicitly set.
+The point is <strong>do not choose something else</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>set symm_mat 0
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>set band_mat 1
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>set sparse_mat 0
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>set system_solver LAPACK
+</code></pre></div></td></tr></table></div>
+<h3 id="with-mpi">With MPI</h3>
+<p>Only the <code>MUMPS</code> solver is able to compute the determinant.
+<code>ScaLAPACK</code> based solvers do not support inspection of factorization thus cannot provide an efficient way of computing determinant.
+Thus, one need to enable sparse storage and choose the <code>MUMPS</code> solver.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>set sparse_mat 1
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>set system_solver MUMPS
+</code></pre></div></td></tr></table></div>
 
 
 
