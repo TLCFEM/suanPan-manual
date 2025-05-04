@@ -106,9 +106,9 @@ $(document).ready(function(){initNavTree('dc/df2/_domain_base_8h.html','../../')
   <div class="headertitle"><div class="title">DomainBase.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;future&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d2/d4a/_tag_8h_source.html">Domain/Tag.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d2/d4a/_tag_8h_source.html">Domain/Tag.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d4/ddd/container_8h_source.html">Toolbox/container.h</a>&gt;</code><br />
+<code>#include &lt;future&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for DomainBase.h:</div>
 <div class="dyncontent">
@@ -166,24 +166,24 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ga015e5e29db221d9afe91cc9420336916" id="r_ga015e5e29db221d9afe91cc9420336916"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga015e5e29db221d9afe91cc9420336916">ColorMethod</a> { <a class="el" href="../../d9/df2/group___domain.html#gga015e5e29db221d9afe91cc9420336916a88559a0cfd8250c9d65970cc145c92d4">ColorMethod::OFF</a>
-, <a class="el" href="../../d9/df2/group___domain.html#gga015e5e29db221d9afe91cc9420336916a84aee62cd1bc3644a3a81a8352b36d4f">ColorMethod::WP</a>
-, <a class="el" href="../../d9/df2/group___domain.html#gga015e5e29db221d9afe91cc9420336916afac1240d9bec673e6b735e209b16c3cf">ColorMethod::MIS</a>
+<tr class="memitem:gac3c5213f2c4f62cc8106f30cdeee14e3" id="r_gac3c5213f2c4f62cc8106f30cdeee14e3"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gac3c5213f2c4f62cc8106f30cdeee14e3">ColorMethod</a> : std::uint8_t { <a class="el" href="../../d9/df2/group___domain.html#ggac3c5213f2c4f62cc8106f30cdeee14e3a88559a0cfd8250c9d65970cc145c92d4">ColorMethod::OFF</a>
+, <a class="el" href="../../d9/df2/group___domain.html#ggac3c5213f2c4f62cc8106f30cdeee14e3a84aee62cd1bc3644a3a81a8352b36d4f">ColorMethod::WP</a>
+, <a class="el" href="../../d9/df2/group___domain.html#ggac3c5213f2c4f62cc8106f30cdeee14e3afac1240d9bec673e6b735e209b16c3cf">ColorMethod::MIS</a>
  }</td></tr>
-<tr class="separator:ga015e5e29db221d9afe91cc9420336916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf3c9365f70985218e28fc40842fb8f3f" id="r_gaf3c9365f70985218e28fc40842fb8f3f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gaf3c9365f70985218e28fc40842fb8f3f">ModalAttribute</a> : size_t { <a class="el" href="../../d9/df2/group___domain.html#ggaf3c9365f70985218e28fc40842fb8f3fa74971adebeed927a967457bf2cea15b0">ModalAttribute::LinearSystem</a>
+<tr class="separator:gac3c5213f2c4f62cc8106f30cdeee14e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7768e0cdfe37b3e3faa826544f9e73ff" id="r_ga7768e0cdfe37b3e3faa826544f9e73ff"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga7768e0cdfe37b3e3faa826544f9e73ff">ModalAttribute</a> : std::uint8_t { <a class="el" href="../../d9/df2/group___domain.html#gga7768e0cdfe37b3e3faa826544f9e73ffa74971adebeed927a967457bf2cea15b0">ModalAttribute::LinearSystem</a>
  }</td></tr>
-<tr class="separator:gaf3c9365f70985218e28fc40842fb8f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52353aee9ba94010e7fb16a3043ab2e9" id="r_ga52353aee9ba94010e7fb16a3043ab2e9"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga52353aee9ba94010e7fb16a3043ab2e9">Statistics</a> : size_t { <br />
-&#160;&#160;<a class="el" href="../../d9/df2/group___domain.html#gga52353aee9ba94010e7fb16a3043ab2e9a588d21810a086ab1ae436ef98380d099">Statistics::UpdateStatus</a>
-, <a class="el" href="../../d9/df2/group___domain.html#gga52353aee9ba94010e7fb16a3043ab2e9a38728cf6efbe2d9df9a6acf65abbcbf8">Statistics::AssembleVector</a>
-, <a class="el" href="../../d9/df2/group___domain.html#gga52353aee9ba94010e7fb16a3043ab2e9adce99288a618cb030ced432cfde8e906">Statistics::AssembleMatrix</a>
-, <a class="el" href="../../d9/df2/group___domain.html#gga52353aee9ba94010e7fb16a3043ab2e9a2c015e40d4fc7fc5e43ff7a3f237da7d">Statistics::ProcessConstraint</a>
+<tr class="separator:ga7768e0cdfe37b3e3faa826544f9e73ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaddb70032c90829f31a41a6157a06efe9" id="r_gaddb70032c90829f31a41a6157a06efe9"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gaddb70032c90829f31a41a6157a06efe9">Statistics</a> : std::uint8_t { <br />
+&#160;&#160;<a class="el" href="../../d9/df2/group___domain.html#ggaddb70032c90829f31a41a6157a06efe9a588d21810a086ab1ae436ef98380d099">Statistics::UpdateStatus</a>
+, <a class="el" href="../../d9/df2/group___domain.html#ggaddb70032c90829f31a41a6157a06efe9a38728cf6efbe2d9df9a6acf65abbcbf8">Statistics::AssembleVector</a>
+, <a class="el" href="../../d9/df2/group___domain.html#ggaddb70032c90829f31a41a6157a06efe9adce99288a618cb030ced432cfde8e906">Statistics::AssembleMatrix</a>
+, <a class="el" href="../../d9/df2/group___domain.html#ggaddb70032c90829f31a41a6157a06efe9a2c015e40d4fc7fc5e43ff7a3f237da7d">Statistics::ProcessConstraint</a>
 , <br />
-&#160;&#160;<a class="el" href="../../d9/df2/group___domain.html#gga52353aee9ba94010e7fb16a3043ab2e9a579d66ca6654f2f1b3193317a11d6bac">Statistics::SolveSystem</a>
+&#160;&#160;<a class="el" href="../../d9/df2/group___domain.html#ggaddb70032c90829f31a41a6157a06efe9a579d66ca6654f2f1b3193317a11d6bac">Statistics::SolveSystem</a>
 <br />
  }</td></tr>
-<tr class="separator:ga52353aee9ba94010e7fb16a3043ab2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:gaddb70032c90829f31a41a6157a06efe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

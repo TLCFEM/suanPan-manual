@@ -4,8 +4,6 @@ var group___recorder =
       [ "initialize", "d7/dd6/class_amplitude_recorder.html#a2fb65aad9eed2b1d7aee0b291f59987b", null ],
       [ "print", "d7/dd6/class_amplitude_recorder.html#a57c3e79e6538b66bd34ba9f54d00aacf", null ],
       [ "record", "d7/dd6/class_amplitude_recorder.html#aab0f92c0d6187aa384ae9f2753ed458b", null ],
-      [ "Recorder", "d7/dd6/class_amplitude_recorder.html#a5f88d8088e7c70f9ae1220344986b47b", null ],
-      [ "Recorder", "d7/dd6/class_amplitude_recorder.html#ac90a9b6090a444850bb370b68d8eb713", null ],
       [ "Recorder", "d7/dd6/class_amplitude_recorder.html#a576df8c5d7ddd81002850a64de9121ce", null ]
     ] ],
     [ "EigenRecorder", "d6/d32/class_eigen_recorder.html", [
@@ -18,8 +16,6 @@ var group___recorder =
       [ "initialize", "d2/da4/class_element_recorder.html#aea1efd3d046681a81a3d3735b1217723", null ],
       [ "print", "d2/da4/class_element_recorder.html#a970ed7776ec7dcca7647aed11900ea1e", null ],
       [ "record", "d2/da4/class_element_recorder.html#a6cf95c75254f5294a6073a4ac7bb95c2", null ],
-      [ "Recorder", "d2/da4/class_element_recorder.html#a5f88d8088e7c70f9ae1220344986b47b", null ],
-      [ "Recorder", "d2/da4/class_element_recorder.html#ac90a9b6090a444850bb370b68d8eb713", null ],
       [ "Recorder", "d2/da4/class_element_recorder.html#a576df8c5d7ddd81002850a64de9121ce", null ]
     ] ],
     [ "FrameRecorder", "da/d11/class_frame_recorder.html", [
@@ -67,8 +63,6 @@ var group___recorder =
       [ "initialize", "de/d66/class_node_recorder.html#a5d112e20e4cd06230af971451167d4f6", null ],
       [ "print", "de/d66/class_node_recorder.html#ae96da1099bee6bf62e72d17b230ce7b3", null ],
       [ "record", "de/d66/class_node_recorder.html#a3a102a0bdd79c204e4da5a7951964130", null ],
-      [ "Recorder", "de/d66/class_node_recorder.html#a5f88d8088e7c70f9ae1220344986b47b", null ],
-      [ "Recorder", "de/d66/class_node_recorder.html#ac90a9b6090a444850bb370b68d8eb713", null ],
       [ "Recorder", "de/d66/class_node_recorder.html#a576df8c5d7ddd81002850a64de9121ce", null ]
     ] ],
     [ "SumRecorder", "d4/d62/class_sum_recorder.html", [

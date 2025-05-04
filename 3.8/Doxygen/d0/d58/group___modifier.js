@@ -27,40 +27,29 @@ var group___modifier =
       [ "update_status", "d7/d45/class_linear_viscosity.html#a17f165bedc5bd773f7de39c0d596d408", null ]
     ] ],
     [ "LumpedScale", "d4/d78/class_lumped_scale.html", [
-      [ "Modifier", "d4/d78/class_lumped_scale.html#aef66ffcfd2ff9a1c778f4d666dc5ddfd", null ],
-      [ "Modifier", "d4/d78/class_lumped_scale.html#aa88db4b80dc7b2f022ec2f88bb8a6c42", null ],
       [ "Modifier", "d4/d78/class_lumped_scale.html#a944cb7bc0a37c0dc7a79b7c2a69cbaa4", null ],
       [ "update_status", "d4/d78/class_lumped_scale.html#a90955f7916e9459eb92b2cae849210f5", null ]
     ] ],
     [ "LumpedSimple", "d8/ddb/class_lumped_simple.html", [
-      [ "Modifier", "d8/ddb/class_lumped_simple.html#aef66ffcfd2ff9a1c778f4d666dc5ddfd", null ],
-      [ "Modifier", "d8/ddb/class_lumped_simple.html#aa88db4b80dc7b2f022ec2f88bb8a6c42", null ],
       [ "Modifier", "d8/ddb/class_lumped_simple.html#a944cb7bc0a37c0dc7a79b7c2a69cbaa4", null ],
       [ "update_status", "d8/ddb/class_lumped_simple.html#a49fd13703e4961c37e5a1b485e96f24a", null ]
     ] ],
     [ "Modifier", "d8/dc0/class_modifier.html", [
       [ "Modifier", "d8/dc0/class_modifier.html#a944cb7bc0a37c0dc7a79b7c2a69cbaa4", null ],
-      [ "Modifier", "d8/dc0/class_modifier.html#aef66ffcfd2ff9a1c778f4d666dc5ddfd", null ],
-      [ "Modifier", "d8/dc0/class_modifier.html#aa88db4b80dc7b2f022ec2f88bb8a6c42", null ],
-      [ "~Modifier", "d8/dc0/class_modifier.html#af2f436be9530ad112e19b96df7d21012", null ],
       [ "has_nonviscous", "d8/dc0/class_modifier.html#a521fd1375d8d65a00f36f0dde9b2ef23", null ],
       [ "if_apply", "d8/dc0/class_modifier.html#af93f8752f566ab361bfa00c6b502cce2", null ],
       [ "initialize", "d8/dc0/class_modifier.html#a7379daa7dd170e6ec7a668f0b283c8f2", null ],
-      [ "operator=", "d8/dc0/class_modifier.html#a25c2fae9798c9a58cc025c4b688b3819", null ],
-      [ "operator=", "d8/dc0/class_modifier.html#aa5333e73cb2603dad9acda6ab6b29c87", null ],
       [ "update_status", "d8/dc0/class_modifier.html#a9b63976f95e2df781ef42d7e43e4ec6d", null ],
-      [ "element_pool", "d8/dc0/class_modifier.html#a4a9e147318cf7bbc7bfe43e1cc16bed1", null ],
+      [ "element_pool", "d8/dc0/class_modifier.html#aaacdfd279dfa01955fbbb9743064ad8d", null ],
       [ "element_tag", "d8/dc0/class_modifier.html#a7397010b51c81e4bc8475c7e78e5df0d", null ]
     ] ],
     [ "ModifierDynamics", "da/d57/class_modifier_dynamics.html", [
       [ "if_apply", "da/d57/class_modifier_dynamics.html#ae2415bdff19b84f58b4da1124187f901", null ],
-      [ "Modifier", "da/d57/class_modifier_dynamics.html#aef66ffcfd2ff9a1c778f4d666dc5ddfd", null ],
-      [ "Modifier", "da/d57/class_modifier_dynamics.html#aa88db4b80dc7b2f022ec2f88bb8a6c42", null ],
       [ "Modifier", "da/d57/class_modifier_dynamics.html#a944cb7bc0a37c0dc7a79b7c2a69cbaa4", null ]
     ] ],
     [ "Rayleigh", "d2/d7d/class_rayleigh.html", [
       [ "Rayleigh", "d2/d7d/class_rayleigh.html#ad029b0c92ec129c51454d966d3adc8e6", null ],
       [ "update_status", "d2/d7d/class_rayleigh.html#a2be8412c436b7a65f5477d1d9e2762cc", null ]
     ] ],
-    [ "new_modifierexample", "d0/d58/group___modifier.html#gae8c5e26d817be786afc24233dc38c479", null ]
+    [ "new_modifierexample", "d0/d58/group___modifier.html#gafc99d186d7df4e6b99cd2c1c6dd7fe2a", null ]
 ];

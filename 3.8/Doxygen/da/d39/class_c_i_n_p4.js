@@ -5,7 +5,7 @@ var class_c_i_n_p4 =
     [ "commit_status", "da/d39/class_c_i_n_p4.html#a03e5adc5b1a9782b1691d15c10f5a10f", null ],
     [ "initialize", "da/d39/class_c_i_n_p4.html#ae30474023849daf10ee4972c29c827fa", null ],
     [ "print", "da/d39/class_c_i_n_p4.html#a8dfd95e994bbdd499486508486037a03", null ],
-    [ "record", "da/d39/class_c_i_n_p4.html#a9d494b440a744526f47b1c6bc498ccea", null ],
+    [ "record", "da/d39/class_c_i_n_p4.html#a857dc848f503dd0a72da1b143869e56a", null ],
     [ "reset_status", "da/d39/class_c_i_n_p4.html#a94145b1f04ec18dfe981bbac57e24f24", null ],
     [ "update_status", "da/d39/class_c_i_n_p4.html#aa47cb17d8f24ba2c0bd336b7c5646b28", null ]
 ];

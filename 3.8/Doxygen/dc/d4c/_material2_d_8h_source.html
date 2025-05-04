@@ -128,27 +128,25 @@ $(document).ready(function(){initNavTree('dc/d4c/_material2_d_8h_source.html','.
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d09/_material_8h.html">Material/Material.h</a>&gt;</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">using </span>std::vector;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d1/d0a/class_material2_d.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d1/d0a/class_material2_d.html">Material2D</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/dee/class_material.html">Material</a> {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="../../d1/d0a/class_material2_d.html">Material2D</a>(</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">unsigned</span>,  <span class="comment">// tag</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_enumeration" href="../../de/db5/group___material.html#gab64cf36e331cfb4f1d2ebc9803ae725c">PlaneType</a>, <span class="comment">// plane type</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">double</span>     <span class="comment">// density</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    );</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    vector&lt;vec&gt; <a class="code hl_function" href="../../d1/d0a/class_material2_d.html#ac025aa7a7181f6ef1c959e90ad652b31">record</a>(<a class="code hl_enumeration" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d1/d0a/class_material2_d.html">   41</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d1/d0a/class_material2_d.html">Material2D</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/dee/class_material.html">Material</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="../../d1/d0a/class_material2_d.html">Material2D</a>(</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">unsigned</span>,  <span class="comment">// tag</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_enumeration" href="../../de/db5/group___material.html#gab64cf36e331cfb4f1d2ebc9803ae725c">PlaneType</a>, <span class="comment">// plane type</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">double</span>     <span class="comment">// density</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    );</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::vector&lt;vec&gt; <a class="code hl_function" href="../../d1/d0a/class_material2_d.html#ae3799256620e716aafe5984228ec4255">record</a>(<a class="code hl_enumeration" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
 </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="ttc" id="a_material_8h_html"><div class="ttname"><a href="../../d3/d09/_material_8h.html">Material.h</a></div></div>
 <div class="ttc" id="a_output_type_8h_html_a4e0517338e6c4a31a2addafc06d4f3a3"><div class="ttname"><a href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a></div><div class="ttdeci">OutputType</div><div class="ttdef"><b>Definition</b> OutputType.h:23</div></div>
-<div class="ttc" id="aclass_material2_d_html"><div class="ttname"><a href="../../d1/d0a/class_material2_d.html">Material2D</a></div><div class="ttdoc">The Material2D class defines a isotropic elastic material for plane stress and plane strain problems.</div><div class="ttdef"><b>Definition</b> Material2D.h:43</div></div>
-<div class="ttc" id="aclass_material2_d_html_ac025aa7a7181f6ef1c959e90ad652b31"><div class="ttname"><a href="../../d1/d0a/class_material2_d.html#ac025aa7a7181f6ef1c959e90ad652b31">Material2D::record</a></div><div class="ttdeci">vector&lt; vec &gt; record(OutputType) override</div><div class="ttdef"><b>Definition</b> Material2D.cpp:25</div></div>
+<div class="ttc" id="aclass_material2_d_html"><div class="ttname"><a href="../../d1/d0a/class_material2_d.html">Material2D</a></div><div class="ttdoc">The Material2D class defines a isotropic elastic material for plane stress and plane strain problems.</div><div class="ttdef"><b>Definition</b> Material2D.h:41</div></div>
+<div class="ttc" id="aclass_material2_d_html_ae3799256620e716aafe5984228ec4255"><div class="ttname"><a href="../../d1/d0a/class_material2_d.html#ae3799256620e716aafe5984228ec4255">Material2D::record</a></div><div class="ttdeci">std::vector&lt; vec &gt; record(OutputType) override</div><div class="ttdef"><b>Definition</b> Material2D.cpp:26</div></div>
 <div class="ttc" id="aclass_material_html"><div class="ttname"><a href="../../dc/dee/class_material.html">Material</a></div><div class="ttdoc">A Material abstract base class.</div><div class="ttdef"><b>Definition</b> Material.h:116</div></div>
 <div class="ttc" id="agroup___material_html_gab64cf36e331cfb4f1d2ebc9803ae725c"><div class="ttname"><a href="../../de/db5/group___material.html#gab64cf36e331cfb4f1d2ebc9803ae725c">PlaneType</a></div><div class="ttdeci">PlaneType</div><div class="ttdef"><b>Definition</b> Material.h:48</div></div>
 </div><!-- fragment --></div><!-- contents -->

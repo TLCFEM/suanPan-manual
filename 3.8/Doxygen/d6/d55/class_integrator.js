@@ -1,9 +1,6 @@
 var class_integrator =
 [
     [ "Integrator", "d6/d55/class_integrator.html#a54cddb12aa8880efea6c1a1c39694a98", null ],
-    [ "Integrator", "d6/d55/class_integrator.html#a3804589408d937067d5b4ba8087a19cd", null ],
-    [ "Integrator", "d6/d55/class_integrator.html#ab069d03cce0ee796148ceeaca8666bfd", null ],
-    [ "~Integrator", "d6/d55/class_integrator.html#a68e44cea27aa0c4bf2b4f3ec4f23d030", null ],
     [ "allow_to_change_time_step", "d6/d55/class_integrator.html#ad6d137b13bc9777e4a81038ca739b904", null ],
     [ "assemble_matrix", "d6/d55/class_integrator.html#aaadfbbb10da3655e82c7f337f69827c5", null ],
     [ "assemble_resistance", "d6/d55/class_integrator.html#a8fd4d0278e4092a2ec85d720d1ce2b15", null ],
@@ -28,8 +25,6 @@ var class_integrator =
     [ "has_corrector", "d6/d55/class_integrator.html#a26d4aafa57aedaebde86ffdef0a5e287", null ],
     [ "initialize", "d6/d55/class_integrator.html#a877129a65c0a537e642757973da64920", null ],
     [ "matrix_is_assembled", "d6/d55/class_integrator.html#ad9791c032038deef83367eb74f339214", null ],
-    [ "operator=", "d6/d55/class_integrator.html#a081c3ed3bc5f5e8bba7dab8355e6f9fa", null ],
-    [ "operator=", "d6/d55/class_integrator.html#abed4669044418d3d512f0bc72342f116", null ],
     [ "process_constraint", "d6/d55/class_integrator.html#a2c8e625ed5045df0bff9407cb3ed20aa", null ],
     [ "process_constraint_resistance", "d6/d55/class_integrator.html#a8c7e387576ac3fc881cb2386640b38e9", null ],
     [ "process_criterion", "d6/d55/class_integrator.html#a9cec549067569080626ed77ab4f2acf5", null ],
@@ -38,7 +33,7 @@ var class_integrator =
     [ "process_modifier", "d6/d55/class_integrator.html#a4afc6c8377077122c7e79160c9698a16", null ],
     [ "record", "d6/d55/class_integrator.html#a5e66c0e841694a03d5d2c0d98fe8f8b6", null ],
     [ "reset_status", "d6/d55/class_integrator.html#ad8c6b4adfd3feae32889e91d3fad382c", null ],
-    [ "set_domain", "d6/d55/class_integrator.html#a06527313c93dd844bb12d040a61ef1b6", null ],
+    [ "set_domain", "d6/d55/class_integrator.html#a876b5faffe19cec9a36071477629af90", null ],
     [ "set_matrix_assembled_switch", "d6/d55/class_integrator.html#a0e5c6e3c06a6ee7011e7d58369043479", null ],
     [ "set_time_step_switch", "d6/d55/class_integrator.html#a591476dad967fcbf8b6a5f17eeeeaed6", null ],
     [ "solve", "d6/d55/class_integrator.html#a8100a6ce7638990e84cb5aa52c232cbc", null ],

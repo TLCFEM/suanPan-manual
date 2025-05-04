@@ -68,9 +68,6 @@ var group___element =
       [ "Element", "d5/d50/class_element.html#afcabbdb5de72732a88fa0e1052eace3b", null ],
       [ "Element", "d5/d50/class_element.html#a675f2a4212588821f9f18d3ca3ce3154", null ],
       [ "Element", "d5/d50/class_element.html#ab53f38af56524feb8fc064f5f9ed66f0", null ],
-      [ "Element", "d5/d50/class_element.html#a11d861303a5ffa3797861b3108ce1d63", null ],
-      [ "Element", "d5/d50/class_element.html#a9ab156a7b1932893a5093a2de8714067", null ],
-      [ "~Element", "d5/d50/class_element.html#a3cfc759f334706947e6ea0cad2078fd3", null ],
       [ "allow_modify_mass", "d5/d50/class_element.html#ac7b7c475971132b672827425b04d9055", null ],
       [ "allow_modify_nonviscous", "d5/d50/class_element.html#a23fd800ec2949b127d02ccac78278b32", null ],
       [ "allow_modify_viscous", "d5/d50/class_element.html#a9f8b0159eecd4ea3d68cbe9eab8e4951", null ],
@@ -118,7 +115,7 @@ var group___element =
       [ "get_node_encoding", "d5/d50/class_element.html#a29b9f7e1f4b28829ba3d3644dba4cff5", null ],
       [ "get_node_incre_resistance", "d5/d50/class_element.html#ad99e1a477b4474c4995b99a088306121", null ],
       [ "get_node_number", "d5/d50/class_element.html#a20025c1cbafcf567571598a4e1d489aa", null ],
-      [ "get_node_ptr", "d5/d50/class_element.html#a342dabb18bbd248d71108c102229288b", null ],
+      [ "get_node_ptr", "d5/d50/class_element.html#a239e98c9d103e94218ba3b15ed2bf31b", null ],
       [ "get_node_trial_resistance", "d5/d50/class_element.html#ac4302bed70824af9ba335ffbde604a11", null ],
       [ "get_nonviscous_energy", "d5/d50/class_element.html#a8da960b73eca7e69a5eaf5117862ca46", null ],
       [ "get_section", "d5/d50/class_element.html#a0d951e47abb0c2014bef0f7c410e0a2c", null ],
@@ -151,8 +148,6 @@ var group___element =
       [ "is_initialized", "d5/d50/class_element.html#ac817977a07767ee4bde279663327ce99", null ],
       [ "is_nlgeom", "d5/d50/class_element.html#a901da916385f38921914dbe62c559028", null ],
       [ "is_symmetric", "d5/d50/class_element.html#a70d1205e11ebd090d076338b3e627fc6", null ],
-      [ "operator=", "d5/d50/class_element.html#aa711d7fa3156e1f7b6458ed511f146f7", null ],
-      [ "operator=", "d5/d50/class_element.html#a97d5021896fb4b1d9148ffefa14f8e16", null ],
       [ "record", "d5/d50/class_element.html#aedd7fea1add416608e7078d576340b5c", null ],
       [ "reset_status", "d5/d50/class_element.html#a95c85b30884b33b2d1c804fc69ddddda", null ],
       [ "set_initialized", "d5/d50/class_element.html#ac131e08b59d08ff72752b551270999c5", null ],
@@ -164,13 +159,10 @@ var group___element =
       [ "ConstantGeometry", "d5/d50/class_element.html#a0a130abee9068960389f1d315ec1e57d", null ],
       [ "ConstantMass", "d5/d50/class_element.html#a7d3b46fed1e8e2b08f8f1e925b2ece8d", null ],
       [ "ConstantStiffness", "d5/d50/class_element.html#aa422efaf1ce794ff02580db57305c213", null ],
-      [ "node_ptr", "d5/d50/class_element.html#a7d8390a474c80117b2beaa290419c1c6", null ]
+      [ "node_ptr", "d5/d50/class_element.html#af60fa44ec25c0f0db2f9dbb024e8dbbe", null ]
     ] ],
     [ "ElementBase", "d4/d6b/class_element_base.html", [
       [ "ElementBase", "d4/d6b/class_element_base.html#aa99a2853b04f8f60dd394d2418ea859c", null ],
-      [ "ElementBase", "d4/d6b/class_element_base.html#a64714345839b1880f22183ec90b6f705", null ],
-      [ "ElementBase", "d4/d6b/class_element_base.html#acab0443a81a9d9f4fc65bb5ebbcdda1b", null ],
-      [ "~ElementBase", "d4/d6b/class_element_base.html#a97c918f5938a5cff51aa9d4496f084de", null ],
       [ "allow_modify_mass", "d4/d6b/class_element_base.html#a67cd4edb7ad5fe451a6e5bb8ee8ee3ad", null ],
       [ "allow_modify_nonviscous", "d4/d6b/class_element_base.html#ae2481cbc61e55d092ff22db909aef853", null ],
       [ "allow_modify_viscous", "d4/d6b/class_element_base.html#a40c0fb191f71e6b58a1837b7941c5c70", null ],
@@ -218,7 +210,7 @@ var group___element =
       [ "get_node_encoding", "d4/d6b/class_element_base.html#a1e85c32fa1f802e2e95ddb28babd0d3e", null ],
       [ "get_node_incre_resistance", "d4/d6b/class_element_base.html#ad7b61ec604483af08a8981a243171ebb", null ],
       [ "get_node_number", "d4/d6b/class_element_base.html#ab994756741e0a9a0a69d21c0e863f307", null ],
-      [ "get_node_ptr", "d4/d6b/class_element_base.html#aa19aa30d58866c878267d146dc935e63", null ],
+      [ "get_node_ptr", "d4/d6b/class_element_base.html#a985444d86bf5e079d534176ef945f3b3", null ],
       [ "get_node_trial_resistance", "d4/d6b/class_element_base.html#a2aaa38ac6023037f5bf9d1c696a97c61", null ],
       [ "get_nonviscous_energy", "d4/d6b/class_element_base.html#a708adcd595b213ba8c57e572a7845f1b", null ],
       [ "get_section", "d4/d6b/class_element_base.html#a4f614d9e18a2f3a281f3a52ba1dc28af", null ],
@@ -252,8 +244,6 @@ var group___element =
       [ "is_initialized", "d4/d6b/class_element_base.html#a0db2cc8aa4f10ad2f85a081c46711248", null ],
       [ "is_nlgeom", "d4/d6b/class_element_base.html#ab8b1078bfc734c6e4e5b6e02b3546135", null ],
       [ "is_symmetric", "d4/d6b/class_element_base.html#af64e0c47eb49d6deb9f36769223301fa", null ],
-      [ "operator=", "d4/d6b/class_element_base.html#a49ae30f388c3e1c120a30ed754727fc5", null ],
-      [ "operator=", "d4/d6b/class_element_base.html#ab2aa7d22bdad319cb961e068f8f4e0f8", null ],
       [ "record", "d4/d6b/class_element_base.html#aef4511669dc2b4b769fa602b629390eb", null ],
       [ "reset_status", "d4/d6b/class_element_base.html#a37691e0ca0dd01ec7238f989a8b84c0a", null ],
       [ "set_initialized", "d4/d6b/class_element_base.html#a87718f85e2b17c0a6c9d9c48f5ff7802", null ],
@@ -282,37 +272,37 @@ var group___element =
       [ "update_status", "d0/d1a/class_element_template.html#a6b91174bc2271830d8f234f30cbd5f03", null ]
     ] ],
     [ "MaterialElement", "d0/d07/class_material_element.html", [
-      [ "MaterialElement", "d0/d07/class_material_element.html#adfcbc805ddc488659f187d04f7b4f50f", null ]
+      [ "MaterialElement", "d0/d07/class_material_element.html#a0cf36d4738b368d3b0e21cd301704b3c", null ]
     ] ],
     [ "MaterialElement1D", "d6/dbb/class_material_element1_d.html", [
-      [ "MaterialElement1D", "d6/dbb/class_material_element1_d.html#af5144bcd68579b0d9d6af0edea408735", null ]
+      [ "MaterialElement1D", "d6/dbb/class_material_element1_d.html#a0757181f299b31b99cf3e588008bbbb9", null ]
     ] ],
     [ "MaterialElement2D", "d8/df9/class_material_element2_d.html", [
-      [ "MaterialElement2D", "d8/df9/class_material_element2_d.html#ab7b136f6147012b89f28ab705a9ee794", null ]
+      [ "MaterialElement2D", "d8/df9/class_material_element2_d.html#ab673ce779ee3eef3b1ec7dfa21360d7e", null ]
     ] ],
     [ "MaterialElement3D", "d7/df2/class_material_element3_d.html", [
-      [ "MaterialElement3D", "d7/df2/class_material_element3_d.html#aa8ea8388709eb9f9ab5ab183e8b50969", null ]
+      [ "MaterialElement3D", "d7/df2/class_material_element3_d.html#a22ebc5f2ba4225865997e9de947063ea", null ]
     ] ],
     [ "SectionElement", "d4/d10/class_section_element.html", [
-      [ "SectionElement", "d4/d10/class_section_element.html#a2df02b3aaebc4216e2e0e0fb3ebff523", null ]
+      [ "SectionElement", "d4/d10/class_section_element.html#a3cdb48daa31e911ae94516c5a24af528", null ]
     ] ],
     [ "SectionElement1D", "da/dd2/class_section_element1_d.html", [
-      [ "SectionElement1D", "da/dd2/class_section_element1_d.html#ac96b5d1d172446e18557b65e95782c6d", null ]
+      [ "SectionElement1D", "da/dd2/class_section_element1_d.html#a929efc4c85b1e60f41fa4a2dfeff0af9", null ]
     ] ],
     [ "SectionElement2D", "d9/d88/class_section_element2_d.html", [
-      [ "SectionElement2D", "d9/d88/class_section_element2_d.html#aa34dfa53365df4468b537955acc82cc8", null ]
+      [ "SectionElement2D", "d9/d88/class_section_element2_d.html#a7c9b7f0a9aa6f4355fc59eb8f7f3d842", null ]
     ] ],
     [ "SectionElement3D", "da/d1c/class_section_element3_d.html", [
-      [ "SectionElement3D", "da/d1c/class_section_element3_d.html#a95cd7b5456628b027758d04a0dd72585", null ]
+      [ "SectionElement3D", "da/d1c/class_section_element3_d.html#a579c9edc0e5645c794000279a7bc48c4", null ]
     ] ],
     [ "SectionNMElement2D", "d5/d31/class_section_n_m_element2_d.html", [
-      [ "SectionNMElement2D", "d5/d31/class_section_n_m_element2_d.html#a0897fb11bf362a1e433cd20242ada60d", null ]
+      [ "SectionNMElement2D", "d5/d31/class_section_n_m_element2_d.html#a70b13012eff76ff4f6745aed541a966f", null ]
     ] ],
     [ "SectionNMElement3D", "d3/d91/class_section_n_m_element3_d.html", [
-      [ "SectionNMElement3D", "d3/d91/class_section_n_m_element3_d.html#a86e07e7b8407f1164959d56403691030", null ]
+      [ "SectionNMElement3D", "d3/d91/class_section_n_m_element3_d.html#ab7f8abb063e7d07288db2b46843f987a", null ]
     ] ],
     [ "SectionOSElement3D", "df/d5c/class_section_o_s_element3_d.html", [
-      [ "SectionOSElement3D", "df/d5c/class_section_o_s_element3_d.html#a4f722e7728d1eef313084b7b0ae0c7d8", null ]
+      [ "SectionOSElement3D", "df/d5c/class_section_o_s_element3_d.html#ae35470606f31d2dea374fe242ef31160", null ]
     ] ],
     [ "append_to", "db/dd2/group___element.html#gafef35b7af4b3476d308cd9e51d3cf53d", null ]
 ];

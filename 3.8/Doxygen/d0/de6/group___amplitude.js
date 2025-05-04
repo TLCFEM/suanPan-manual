@@ -2,7 +2,6 @@ var group___amplitude =
 [
     [ "Amplitude", "de/d90/class_amplitude.html", [
       [ "Amplitude", "de/d90/class_amplitude.html#a4020da668d651ec1bd535ea935f26a9c", null ],
-      [ "~Amplitude", "de/d90/class_amplitude.html#a7ef304c6a83148419e5f59962fd7299e", null ],
       [ "get_amplitude", "de/d90/class_amplitude.html#af97539a4d3936abb309bcd48e2ccac78", null ],
       [ "get_start_step", "de/d90/class_amplitude.html#ab70d4f70bde64aeefe8dd0cd83c1f644", null ],
       [ "initialize", "de/d90/class_amplitude.html#a073090c2dc25c2e3b88e8d2006cc11ad", null ],
@@ -67,7 +66,7 @@ var group___amplitude =
     ] ],
     [ "Tabular", "d0/d22/class_tabular.html", [
       [ "Tabular", "d0/d22/class_tabular.html#a7f7a2708ecea612cf8b7618a52c49426", null ],
-      [ "Tabular", "d0/d22/class_tabular.html#a60b2a0edd56344723b56f3ad5a758d1e", null ],
+      [ "Tabular", "d0/d22/class_tabular.html#a1ac875fa90977f2ebd3491c66d7bcc79", null ],
       [ "get_amplitude", "d0/d22/class_tabular.html#a98b7d98ea2f05f6015781a6fa90b3ecb", null ],
       [ "initialize", "d0/d22/class_tabular.html#a1637a344aad204ad4fd7c2e1c37582fb", null ],
       [ "print", "d0/d22/class_tabular.html#a64e8e407e33535ac3284034691ccb11d", null ],
@@ -78,7 +77,7 @@ var group___amplitude =
       [ "get_amplitude", "dd/d36/class_tabular_spline.html#a9caa625e17dc0bef94aba804e414605b", null ],
       [ "initialize", "dd/d36/class_tabular_spline.html#a968f7e140ba5c509be574295c06fd0ba", null ],
       [ "print", "dd/d36/class_tabular_spline.html#ad929dec52e48f7c9720767a802ca2c26", null ],
-      [ "Tabular", "dd/d36/class_tabular_spline.html#a60b2a0edd56344723b56f3ad5a758d1e", null ],
+      [ "Tabular", "dd/d36/class_tabular_spline.html#a1ac875fa90977f2ebd3491c66d7bcc79", null ],
       [ "Tabular", "dd/d36/class_tabular_spline.html#a7f7a2708ecea612cf8b7618a52c49426", null ]
     ] ],
     [ "AmplitudeType", "d0/de6/group___amplitude.html#gaa4e1e9c8020584207f78ea983edbf32a", [

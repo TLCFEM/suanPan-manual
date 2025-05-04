@@ -72,7 +72,7 @@ var group___section_2_d =
       [ "reset_status", "d7/d9a/class_section2_d.html#a43b3f667dcc0dd42208e7515917e403d", null ],
       [ "set_characteristic_length", "d7/d9a/class_section2_d.html#afc3edd5adff5ca87acc63c15a3c4bdd2", null ],
       [ "update_trial_status", "d7/d9a/class_section2_d.html#a872bf56381c27381a0493071d759e31a", null ],
-      [ "int_pt", "d7/d9a/class_section2_d.html#a35ed19668bb823ca9a878e10d2fe01fc", null ]
+      [ "int_pt", "d7/d9a/class_section2_d.html#abd5b36139e6f173cd1be9c794eb4e6d2", null ]
     ] ],
     [ "TSection2D", "d4/dce/class_t_section2_d.html", [
       [ "TSection2D", "d4/dce/class_t_section2_d.html#af5bf2409258b7b0ddeddd54c87272f79", null ],
@@ -80,5 +80,5 @@ var group___section_2_d =
       [ "get_copy", "d4/dce/class_t_section2_d.html#afc5831749a0edcb690fdd556cebb66d7", null ]
     ] ],
     [ "Bar2D", "d8/d9b/group___section-2_d.html#ga57966aff83d325af133a7f688f42c8fc", null ],
-    [ "new_sectionexample", "d8/d9b/group___section-2_d.html#gafb04b82a2b1ff0d8512a2719abfcffd7", null ]
+    [ "new_sectionexample", "d8/d9b/group___section-2_d.html#gad558b611fa36d4fb989f88ed73c2b086", null ]
 ];

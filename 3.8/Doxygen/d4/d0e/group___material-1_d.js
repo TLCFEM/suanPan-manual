@@ -110,7 +110,7 @@ var group___material_1_d =
       [ "Degradation", "d6/d69/class_strain_degradation.html#a1c2af4919a54920ccd49f7f987a8e0e6", null ],
       [ "Degradation", "d6/d69/class_strain_degradation.html#aa23158b560076ba2808725355487a798", null ],
       [ "initialize", "d6/d69/class_strain_degradation.html#aea749df041c73fdafe0b8b4192c408d9", null ],
-      [ "record", "d6/d69/class_strain_degradation.html#a5b66122f9c20b55a4837ede40f446f1a", null ],
+      [ "record", "d6/d69/class_strain_degradation.html#a341bfe99188131273cdaf483345466be", null ],
       [ "update_trial_status", "d6/d69/class_strain_degradation.html#aecb7fa16f05a1e3f42cf3c899325dd41", null ]
     ] ],
     [ "StressDegradation", "d3/ddf/class_stress_degradation.html", [
@@ -118,7 +118,7 @@ var group___material_1_d =
       [ "Degradation", "d3/ddf/class_stress_degradation.html#a1c2af4919a54920ccd49f7f987a8e0e6", null ],
       [ "Degradation", "d3/ddf/class_stress_degradation.html#aa23158b560076ba2808725355487a798", null ],
       [ "initialize", "d3/ddf/class_stress_degradation.html#a24d4c1a76b21c01329137cbadf3e1591", null ],
-      [ "record", "d3/ddf/class_stress_degradation.html#a50635037530ce2e7516b21cbfe1914bd", null ],
+      [ "record", "d3/ddf/class_stress_degradation.html#aa3e1346856f88a4847177793cdac9fad", null ],
       [ "update_trial_status", "d3/ddf/class_stress_degradation.html#a76412a873b69aef1b102dc98c0ea4b81", null ]
     ] ],
     [ "DataDhakal", "db/d0a/struct_data_dhakal.html", [
@@ -529,7 +529,7 @@ var group___material_1_d =
     [ "Material1D", "d9/d97/class_material1_d.html", [
       [ "Material1D", "d9/d97/class_material1_d.html#a6954ada81c4d717ecd0963da77251463", null ],
       [ "print", "d9/d97/class_material1_d.html#a56592fab91c2670aa4cd230369aa61e8", null ],
-      [ "record", "d9/d97/class_material1_d.html#a4065eddeb5c1e8d141c449048b7cbb58", null ]
+      [ "record", "d9/d97/class_material1_d.html#ad2c37b9358c69509f3498a56abc37a71", null ]
     ] ],
     [ "DataBilinearViscosity", "d5/d08/struct_data_bilinear_viscosity.html", [
       [ "damping", "d5/d08/struct_data_bilinear_viscosity.html#acb877fdab6e390019e0350980677a46e", null ],
@@ -552,7 +552,7 @@ var group___material_1_d =
       [ "get_copy", "d9/d46/class_kelvin.html#a543bd2bff49348c9486af342060f2767", null ],
       [ "initialize", "d9/d46/class_kelvin.html#a2d362ddff87f26372e8f991aebc0bf82", null ],
       [ "print", "d9/d46/class_kelvin.html#ae1b1459b5fef0424d280b830da7ffdcb", null ],
-      [ "record", "d9/d46/class_kelvin.html#a274dfadee3dbd45f6d5c64c2250570b0", null ],
+      [ "record", "d9/d46/class_kelvin.html#ab323e984e3ccac064c3c3131a3349757", null ],
       [ "reset_status", "d9/d46/class_kelvin.html#a080736ada86a99241a611483ea118c65", null ],
       [ "update_trial_status", "d9/d46/class_kelvin.html#a80a100fc9e0ce4998d75a1615946c5e4", null ],
       [ "update_trial_status", "d9/d46/class_kelvin.html#a056e6c26bfc03f19a8bb084e6608b47a", null ]
@@ -564,7 +564,7 @@ var group___material_1_d =
       [ "get_copy", "db/d83/class_maxwell.html#a0e66cfa14ab3e1c9aa88a734fccb34d8", null ],
       [ "initialize", "db/d83/class_maxwell.html#aabb0055472b413978d8d1b774e90c39d", null ],
       [ "print", "db/d83/class_maxwell.html#a2ee5f0be7e3a7afeed7fe7d927ddba1b", null ],
-      [ "record", "db/d83/class_maxwell.html#a49aed22fe6b81fba9b656aafcd40c9c8", null ],
+      [ "record", "db/d83/class_maxwell.html#a4cd92bc52890f00c27b2a163297f3687", null ],
       [ "reset_status", "db/d83/class_maxwell.html#ae564f6d4290e72a2953ffba170ec5469", null ],
       [ "update_trial_status", "db/d83/class_maxwell.html#ae8e0461e2692f52cd8c845eead1101ec", null ],
       [ "update_trial_status", "db/d83/class_maxwell.html#ab7056f092e9a8da26e27cf7f7a389d1d", null ]
@@ -579,7 +579,7 @@ var group___material_1_d =
       [ "commit_status", "df/db0/class_nonlinear_viscosity.html#a0dc589c082f60ce39ecad4ff9877403e", null ],
       [ "initialize", "df/db0/class_nonlinear_viscosity.html#a89319b32468e509250ee911163ccf999", null ],
       [ "print", "df/db0/class_nonlinear_viscosity.html#a568dc1eaa42745ee578deee96b8b7495", null ],
-      [ "record", "df/db0/class_nonlinear_viscosity.html#a220e6ad5c458ca57bca24a98e5f923d0", null ],
+      [ "record", "df/db0/class_nonlinear_viscosity.html#a027f940f06f2fade042577056d489cb8", null ],
       [ "reset_status", "df/db0/class_nonlinear_viscosity.html#a6535c426d7d2980ea1f1fc260091e17e", null ],
       [ "update_trial_status", "df/db0/class_nonlinear_viscosity.html#a5f355a16f974ded564ab43d3e8c49cb0", null ],
       [ "update_trial_status", "df/db0/class_nonlinear_viscosity.html#aa8c8aa210e48d1cbf28741b726efce78", null ]
@@ -595,7 +595,7 @@ var group___material_1_d =
       [ "get_copy", "dc/d77/class_nonviscous01.html#aa1849fa6a2d14efb135c228ab138381b", null ],
       [ "initialize", "dc/d77/class_nonviscous01.html#a5a3d0b496e8fb2d4ff71c0385ccd77a8", null ],
       [ "print", "dc/d77/class_nonviscous01.html#ae0932e03cc0e2421f65f9e8212d2a965", null ],
-      [ "record", "dc/d77/class_nonviscous01.html#a64c4994144c0f3d11d0ac8f6b00ed4b0", null ],
+      [ "record", "dc/d77/class_nonviscous01.html#a044708e6aedeed01cb7b98ec2c55bc41", null ],
       [ "reset_status", "dc/d77/class_nonviscous01.html#a7f4f860c6ec891a2bb78883c5df3f814", null ],
       [ "update_trial_status", "dc/d77/class_nonviscous01.html#a809d117a07faca6262c9e409b6bf94c6", null ],
       [ "update_trial_status", "dc/d77/class_nonviscous01.html#abfe2b2d66ba9b49eb2c82cf7453e868e", null ]
@@ -778,7 +778,7 @@ var group___material_1_d =
       [ "get_copy", "d4/d0e/group___material-1_d.html#gacac69dd871c52b59571bf2418dc6b061", null ],
       [ "initialize", "d4/d0e/group___material-1_d.html#ga47bc7b2dbca7a1f0383ab33f7372a745", null ],
       [ "print", "d4/d0e/group___material-1_d.html#gad712da6da413cf307a190885b65ebe25", null ],
-      [ "record", "d4/d0e/group___material-1_d.html#ga9df05ff386edbc391ecc2f6fe915dd09", null ],
+      [ "record", "d4/d0e/group___material-1_d.html#gabc342120137cdbfbfc40c8e7ed3bf250", null ],
       [ "reset_status", "d4/d0e/group___material-1_d.html#ga199a8dd1dd719d9d40b174fab2434452", null ],
       [ "update_trial_status", "d4/d0e/group___material-1_d.html#ga45577b40ac1b7203a08cea8163de8439", null ],
       [ "update_trial_status", "d4/d0e/group___material-1_d.html#gabeff3c5120109488f3c22ae78c8cebbc", null ]
@@ -790,7 +790,7 @@ var group___material_1_d =
       [ "get_copy", "d4/d0e/group___material-1_d.html#ga8da718d5fec214c3b6d34d32c39675e9", null ],
       [ "initialize", "d4/d0e/group___material-1_d.html#gaa506aa71e2d7cf8e383e815333885a5c", null ],
       [ "print", "d4/d0e/group___material-1_d.html#ga80f3c3c2e2fa2332601d33a7e1aafde9", null ],
-      [ "record", "d4/d0e/group___material-1_d.html#ga0192c387f985bf7731e41cbc0537f084", null ],
+      [ "record", "d4/d0e/group___material-1_d.html#gab2df8afd71c6f8d2cc5e0c1096f6f3a3", null ],
       [ "reset_status", "d4/d0e/group___material-1_d.html#gae09cb532afff4150651398fd636e50e7", null ],
       [ "update_trial_status", "d4/d0e/group___material-1_d.html#gac260ef34660418b203a0bb48ca81d062", null ]
     ] ],
@@ -838,12 +838,12 @@ var group___material_1_d =
     [ "Sequential::get_copy", "d4/d0e/group___material-1_d.html#ga8da718d5fec214c3b6d34d32c39675e9", null ],
     [ "Parallel::initialize", "d4/d0e/group___material-1_d.html#ga47bc7b2dbca7a1f0383ab33f7372a745", null ],
     [ "Sequential::initialize", "d4/d0e/group___material-1_d.html#gaa506aa71e2d7cf8e383e815333885a5c", null ],
-    [ "new_materialexample", "d4/d0e/group___material-1_d.html#ga355d5151dcfb468f3530895622324a0a", null ],
+    [ "new_materialexample", "d4/d0e/group___material-1_d.html#ga3102f5a6a2211e8fa603f09d7953a04f", null ],
     [ "Parallel::Parallel", "d4/d0e/group___material-1_d.html#ga51bdcce056b40df24363517adb591b9b", null ],
     [ "Parallel::print", "d4/d0e/group___material-1_d.html#gad712da6da413cf307a190885b65ebe25", null ],
     [ "Sequential::print", "d4/d0e/group___material-1_d.html#ga80f3c3c2e2fa2332601d33a7e1aafde9", null ],
-    [ "Parallel::record", "d4/d0e/group___material-1_d.html#ga9df05ff386edbc391ecc2f6fe915dd09", null ],
-    [ "Sequential::record", "d4/d0e/group___material-1_d.html#ga0192c387f985bf7731e41cbc0537f084", null ],
+    [ "Parallel::record", "d4/d0e/group___material-1_d.html#gabc342120137cdbfbfc40c8e7ed3bf250", null ],
+    [ "Sequential::record", "d4/d0e/group___material-1_d.html#gab2df8afd71c6f8d2cc5e0c1096f6f3a3", null ],
     [ "Parallel::reset_status", "d4/d0e/group___material-1_d.html#ga199a8dd1dd719d9d40b174fab2434452", null ],
     [ "Sequential::reset_status", "d4/d0e/group___material-1_d.html#gae09cb532afff4150651398fd636e50e7", null ],
     [ "Sequential::Sequential", "d4/d0e/group___material-1_d.html#ga397a3d66cb3e2165e053dece7eec8d5c", null ],

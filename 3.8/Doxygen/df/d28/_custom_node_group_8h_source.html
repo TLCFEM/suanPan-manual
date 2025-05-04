@@ -127,29 +127,30 @@ $(document).ready(function(){initNavTree('df/d28/_custom_node_group_8h_source.ht
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define CUSTOMNODEGROUP_H</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="../../d7/dc4/_group_8h.html">Group.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d99/_expression_8h.html">Toolbox/Expression.h</a>&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/da0/_resource_holder_8h.html">Toolbox/ResourceHolder.h</a>&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../de/d01/class_custom_node_group.html">   36</a></span><span class="keyword">class </span><a class="code hl_class" href="../../de/d01/class_custom_node_group.html">CustomNodeGroup</a> final : <span class="keyword">public</span> <a class="code hl_class" href="../../da/d50/class_group.html">Group</a> {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> expression_tag;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="../../de/d24/class_resource_holder.html">ResourceHolder&lt;Expression&gt;</a> expression;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_class" href="../../de/d01/class_custom_node_group.html">CustomNodeGroup</a>(<span class="keywordtype">unsigned</span>, <span class="keywordtype">unsigned</span>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d01/class_custom_node_group.html#a0ecaca744f95fa05f9b1f3db603536e6">initialize</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d99/_expression_8h.html">Toolbox/Expression.h</a>&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/da0/_resource_holder_8h.html">Toolbox/ResourceHolder.h</a>&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../de/d01/class_custom_node_group.html">   37</a></span><span class="keyword">class </span><a class="code hl_class" href="../../de/d01/class_custom_node_group.html">CustomNodeGroup</a> final : <span class="keyword">public</span> <a class="code hl_class" href="../../da/d50/class_group.html">Group</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> expression_tag;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="../../de/d24/class_resource_holder.html">ResourceHolder&lt;Expression&gt;</a> expression;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="../../de/d01/class_custom_node_group.html">CustomNodeGroup</a>(<span class="keywordtype">unsigned</span>, <span class="keywordtype">unsigned</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d01/class_custom_node_group.html#a0ecaca744f95fa05f9b1f3db603536e6">initialize</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
 </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="ttc" id="a_expression_8h_html"><div class="ttname"><a href="../../d6/d99/_expression_8h.html">Expression.h</a></div></div>
 <div class="ttc" id="a_group_8h_html"><div class="ttname"><a href="../../d7/dc4/_group_8h.html">Group.h</a></div></div>
 <div class="ttc" id="a_resource_holder_8h_html"><div class="ttname"><a href="../../d4/da0/_resource_holder_8h.html">ResourceHolder.h</a></div></div>
-<div class="ttc" id="aclass_custom_node_group_html"><div class="ttname"><a href="../../de/d01/class_custom_node_group.html">CustomNodeGroup</a></div><div class="ttdoc">The CustomNodeGroup class.</div><div class="ttdef"><b>Definition</b> CustomNodeGroup.h:36</div></div>
-<div class="ttc" id="aclass_custom_node_group_html_a0ecaca744f95fa05f9b1f3db603536e6"><div class="ttname"><a href="../../de/d01/class_custom_node_group.html#a0ecaca744f95fa05f9b1f3db603536e6">CustomNodeGroup::initialize</a></div><div class="ttdeci">void initialize(const shared_ptr&lt; DomainBase &gt; &amp;) override</div><div class="ttdef"><b>Definition</b> CustomNodeGroup.cpp:26</div></div>
+<div class="ttc" id="aclass_custom_node_group_html"><div class="ttname"><a href="../../de/d01/class_custom_node_group.html">CustomNodeGroup</a></div><div class="ttdoc">The CustomNodeGroup class.</div><div class="ttdef"><b>Definition</b> CustomNodeGroup.h:37</div></div>
+<div class="ttc" id="aclass_custom_node_group_html_a0ecaca744f95fa05f9b1f3db603536e6"><div class="ttname"><a href="../../de/d01/class_custom_node_group.html#a0ecaca744f95fa05f9b1f3db603536e6">CustomNodeGroup::initialize</a></div><div class="ttdeci">void initialize(const shared_ptr&lt; DomainBase &gt; &amp;) override</div><div class="ttdef"><b>Definition</b> CustomNodeGroup.cpp:27</div></div>
 <div class="ttc" id="aclass_group_html"><div class="ttname"><a href="../../da/d50/class_group.html">Group</a></div><div class="ttdoc">The Group class.</div><div class="ttdef"><b>Definition</b> Group.h:36</div></div>
 <div class="ttc" id="aclass_resource_holder_html"><div class="ttname"><a href="../../de/d24/class_resource_holder.html">ResourceHolder</a></div><div class="ttdef"><b>Definition</b> ResourceHolder.h:32</div></div>
 </div><!-- fragment --></div><!-- contents -->

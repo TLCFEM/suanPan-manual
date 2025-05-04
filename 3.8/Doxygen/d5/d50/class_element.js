@@ -5,9 +5,6 @@ var class_element =
     [ "Element", "d5/d50/class_element.html#afcabbdb5de72732a88fa0e1052eace3b", null ],
     [ "Element", "d5/d50/class_element.html#a675f2a4212588821f9f18d3ca3ce3154", null ],
     [ "Element", "d5/d50/class_element.html#ab53f38af56524feb8fc064f5f9ed66f0", null ],
-    [ "Element", "d5/d50/class_element.html#a11d861303a5ffa3797861b3108ce1d63", null ],
-    [ "Element", "d5/d50/class_element.html#a9ab156a7b1932893a5093a2de8714067", null ],
-    [ "~Element", "d5/d50/class_element.html#a3cfc759f334706947e6ea0cad2078fd3", null ],
     [ "allow_modify_mass", "d5/d50/class_element.html#ac7b7c475971132b672827425b04d9055", null ],
     [ "allow_modify_nonviscous", "d5/d50/class_element.html#a23fd800ec2949b127d02ccac78278b32", null ],
     [ "allow_modify_viscous", "d5/d50/class_element.html#a9f8b0159eecd4ea3d68cbe9eab8e4951", null ],
@@ -55,7 +52,7 @@ var class_element =
     [ "get_node_encoding", "d5/d50/class_element.html#a29b9f7e1f4b28829ba3d3644dba4cff5", null ],
     [ "get_node_incre_resistance", "d5/d50/class_element.html#ad99e1a477b4474c4995b99a088306121", null ],
     [ "get_node_number", "d5/d50/class_element.html#a20025c1cbafcf567571598a4e1d489aa", null ],
-    [ "get_node_ptr", "d5/d50/class_element.html#a342dabb18bbd248d71108c102229288b", null ],
+    [ "get_node_ptr", "d5/d50/class_element.html#a239e98c9d103e94218ba3b15ed2bf31b", null ],
     [ "get_node_trial_resistance", "d5/d50/class_element.html#ac4302bed70824af9ba335ffbde604a11", null ],
     [ "get_nonviscous_energy", "d5/d50/class_element.html#a8da960b73eca7e69a5eaf5117862ca46", null ],
     [ "get_section", "d5/d50/class_element.html#a0d951e47abb0c2014bef0f7c410e0a2c", null ],
@@ -88,8 +85,6 @@ var class_element =
     [ "is_initialized", "d5/d50/class_element.html#ac817977a07767ee4bde279663327ce99", null ],
     [ "is_nlgeom", "d5/d50/class_element.html#a901da916385f38921914dbe62c559028", null ],
     [ "is_symmetric", "d5/d50/class_element.html#a70d1205e11ebd090d076338b3e627fc6", null ],
-    [ "operator=", "d5/d50/class_element.html#aa711d7fa3156e1f7b6458ed511f146f7", null ],
-    [ "operator=", "d5/d50/class_element.html#a97d5021896fb4b1d9148ffefa14f8e16", null ],
     [ "record", "d5/d50/class_element.html#aedd7fea1add416608e7078d576340b5c", null ],
     [ "reset_status", "d5/d50/class_element.html#a95c85b30884b33b2d1c804fc69ddddda", null ],
     [ "set_initialized", "d5/d50/class_element.html#ac131e08b59d08ff72752b551270999c5", null ],
@@ -101,5 +96,5 @@ var class_element =
     [ "ConstantGeometry", "d5/d50/class_element.html#a0a130abee9068960389f1d315ec1e57d", null ],
     [ "ConstantMass", "d5/d50/class_element.html#a7d3b46fed1e8e2b08f8f1e925b2ece8d", null ],
     [ "ConstantStiffness", "d5/d50/class_element.html#aa422efaf1ce794ff02580db57305c213", null ],
-    [ "node_ptr", "d5/d50/class_element.html#a7d8390a474c80117b2beaa290419c1c6", null ]
+    [ "node_ptr", "d5/d50/class_element.html#af60fa44ec25c0f0db2f9dbb024e8dbbe", null ]
 ];

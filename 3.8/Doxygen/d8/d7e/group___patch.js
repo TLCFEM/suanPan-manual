@@ -3,7 +3,7 @@ var group___patch =
     [ "Patch", "d2/db8/class_patch.html", [
       [ "Patch", "d2/db8/class_patch.html#a4d8f5df8d4644a4571263cca88e61cb7", null ],
       [ "get_number_of_control_points", "d2/db8/class_patch.html#a4e533899b81d69dcdb24355a9dec9696", null ],
-      [ "element_span", "d2/db8/class_patch.html#aaedecf7d8b650288ef4dab9d636dc2cc", null ],
+      [ "element_span", "d2/db8/class_patch.html#a3bbc7eadce6ae6fbe5a859a6bb477d90", null ],
       [ "knot_pool", "d2/db8/class_patch.html#a9cce972e391dc94ad506e467151ff2f4", null ]
     ] ],
     [ "MaterialPatch", "d6/dfb/class_material_patch.html", [
@@ -30,7 +30,7 @@ var group___patch =
       [ "commit_status", "d7/d72/class_patch_cube.html#ad0d339d0624a11667fe99d85e9e3c689", null ],
       [ "initialize", "d7/d72/class_patch_cube.html#a818909b39ea020b9f19e611c40aa6bcf", null ],
       [ "print", "d7/d72/class_patch_cube.html#a144abdc4958e68d6073d107df05ab1ab", null ],
-      [ "record", "d7/d72/class_patch_cube.html#a8111de8763d56362b55704aafa63a176", null ],
+      [ "record", "d7/d72/class_patch_cube.html#a224b4a1ce9cbf47df8d2fcb73b1d5cef", null ],
       [ "reset_status", "d7/d72/class_patch_cube.html#a60084842bc6b17da4cff0f903919fbbc", null ],
       [ "update_status", "d7/d72/class_patch_cube.html#ab7d74356621750011a10364b7980a022", null ]
     ] ],
@@ -40,7 +40,7 @@ var group___patch =
       [ "commit_status", "da/d6e/class_patch_quad.html#aff9eebbcb06c89f7dd5e74ff908c9617", null ],
       [ "initialize", "da/d6e/class_patch_quad.html#a428caccd29b82675c6e4c8fc684e5eaf", null ],
       [ "print", "da/d6e/class_patch_quad.html#a4ac562d9a1fef6ce90b7fe4f50df1e42", null ],
-      [ "record", "da/d6e/class_patch_quad.html#a3f097dfedb275265a3fc9ec94c5116c5", null ],
+      [ "record", "da/d6e/class_patch_quad.html#a79eb401b21207e109dd28d36d69f1520", null ],
       [ "reset_status", "da/d6e/class_patch_quad.html#ab461e65a1d90233eb84d767d792b8eb2", null ],
       [ "update_status", "da/d6e/class_patch_quad.html#a18edb08143b4873977f4f917bf526c2e", null ]
     ] ]

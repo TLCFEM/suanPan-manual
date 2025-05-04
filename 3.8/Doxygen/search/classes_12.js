@@ -93,6 +93,5 @@ var searchData=
   ['supportvelocity_90',['SupportVelocity',['../d1/d63/class_support_velocity.html',1,'']]],
   ['surfacenm2d_91',['SurfaceNM2D',['../d8/d5b/class_surface_n_m2_d.html',1,'']]],
   ['surfacenm3d_92',['SurfaceNM3D',['../db/dda/class_surface_n_m3_d.html',1,'']]],
-  ['symmpackmat_93',['SymmPackMat',['../da/d5b/class_symm_pack_mat.html',1,'']]],
-  ['sync_5fostream_94',['sync_ostream',['../da/d80/classsync__ostream.html',1,'']]]
+  ['symmpackmat_93',['SymmPackMat',['../da/d5b/class_symm_pack_mat.html',1,'']]]
 ];

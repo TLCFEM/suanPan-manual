@@ -7,7 +7,7 @@ var class_axisymmetric =
     [ "get_parameter", "db/d80/class_axisymmetric.html#a4671ca9f1b8519226215253c9438956f", null ],
     [ "initialize", "db/d80/class_axisymmetric.html#a18a8f87fe451df609d846a8fd75879ca", null ],
     [ "print", "db/d80/class_axisymmetric.html#a217a925cc980fe7bb1978a716ce1bcc3", null ],
-    [ "record", "db/d80/class_axisymmetric.html#aa9bb0f86bae3595c2d9d21ccd8fc8db6", null ],
+    [ "record", "db/d80/class_axisymmetric.html#afd6f9ca190ab75d62a4be6687fcd9ab0", null ],
     [ "reset_status", "db/d80/class_axisymmetric.html#a14aa12eeaf32c7478d63bf2850576c7d", null ],
     [ "update_trial_status", "db/d80/class_axisymmetric.html#a1aa88c9e6dabbbaca059c99427059112", null ]
 ];

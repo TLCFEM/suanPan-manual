@@ -1,9 +1,6 @@
 var class_element_base =
 [
     [ "ElementBase", "d4/d6b/class_element_base.html#aa99a2853b04f8f60dd394d2418ea859c", null ],
-    [ "ElementBase", "d4/d6b/class_element_base.html#a64714345839b1880f22183ec90b6f705", null ],
-    [ "ElementBase", "d4/d6b/class_element_base.html#acab0443a81a9d9f4fc65bb5ebbcdda1b", null ],
-    [ "~ElementBase", "d4/d6b/class_element_base.html#a97c918f5938a5cff51aa9d4496f084de", null ],
     [ "allow_modify_mass", "d4/d6b/class_element_base.html#a67cd4edb7ad5fe451a6e5bb8ee8ee3ad", null ],
     [ "allow_modify_nonviscous", "d4/d6b/class_element_base.html#ae2481cbc61e55d092ff22db909aef853", null ],
     [ "allow_modify_viscous", "d4/d6b/class_element_base.html#a40c0fb191f71e6b58a1837b7941c5c70", null ],
@@ -51,7 +48,7 @@ var class_element_base =
     [ "get_node_encoding", "d4/d6b/class_element_base.html#a1e85c32fa1f802e2e95ddb28babd0d3e", null ],
     [ "get_node_incre_resistance", "d4/d6b/class_element_base.html#ad7b61ec604483af08a8981a243171ebb", null ],
     [ "get_node_number", "d4/d6b/class_element_base.html#ab994756741e0a9a0a69d21c0e863f307", null ],
-    [ "get_node_ptr", "d4/d6b/class_element_base.html#aa19aa30d58866c878267d146dc935e63", null ],
+    [ "get_node_ptr", "d4/d6b/class_element_base.html#a985444d86bf5e079d534176ef945f3b3", null ],
     [ "get_node_trial_resistance", "d4/d6b/class_element_base.html#a2aaa38ac6023037f5bf9d1c696a97c61", null ],
     [ "get_nonviscous_energy", "d4/d6b/class_element_base.html#a708adcd595b213ba8c57e572a7845f1b", null ],
     [ "get_section", "d4/d6b/class_element_base.html#a4f614d9e18a2f3a281f3a52ba1dc28af", null ],
@@ -85,8 +82,6 @@ var class_element_base =
     [ "is_initialized", "d4/d6b/class_element_base.html#a0db2cc8aa4f10ad2f85a081c46711248", null ],
     [ "is_nlgeom", "d4/d6b/class_element_base.html#ab8b1078bfc734c6e4e5b6e02b3546135", null ],
     [ "is_symmetric", "d4/d6b/class_element_base.html#af64e0c47eb49d6deb9f36769223301fa", null ],
-    [ "operator=", "d4/d6b/class_element_base.html#a49ae30f388c3e1c120a30ed754727fc5", null ],
-    [ "operator=", "d4/d6b/class_element_base.html#ab2aa7d22bdad319cb961e068f8f4e0f8", null ],
     [ "record", "d4/d6b/class_element_base.html#aef4511669dc2b4b769fa602b629390eb", null ],
     [ "reset_status", "d4/d6b/class_element_base.html#a37691e0ca0dd01ec7238f989a8b84c0a", null ],
     [ "set_initialized", "d4/d6b/class_element_base.html#a87718f85e2b17c0a6c9d9c48f5ff7802", null ],

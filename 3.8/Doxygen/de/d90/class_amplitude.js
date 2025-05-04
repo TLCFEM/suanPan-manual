@@ -1,7 +1,6 @@
 var class_amplitude =
 [
     [ "Amplitude", "de/d90/class_amplitude.html#a4020da668d651ec1bd535ea935f26a9c", null ],
-    [ "~Amplitude", "de/d90/class_amplitude.html#a7ef304c6a83148419e5f59962fd7299e", null ],
     [ "get_amplitude", "de/d90/class_amplitude.html#af97539a4d3936abb309bcd48e2ccac78", null ],
     [ "get_start_step", "de/d90/class_amplitude.html#ab70d4f70bde64aeefe8dd0cd83c1f644", null ],
     [ "initialize", "de/d90/class_amplitude.html#a073090c2dc25c2e3b88e8d2006cc11ad", null ],

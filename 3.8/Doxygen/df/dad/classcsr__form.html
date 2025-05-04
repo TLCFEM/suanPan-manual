@@ -158,6 +158,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a77ef904149d32a9d0b6a7237370b79e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae30d3205b4d97d365a3fc8a81e6ac891" id="r_ae30d3205b4d97d365a3fc8a81e6ac891"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d33/conceptsp__d.html">sp_d</a> in_dt, <a class="el" href="../../d5/d08/conceptsp__i.html">sp_i</a> in_it&gt; </td></tr>
 <tr class="memitem:ae30d3205b4d97d365a3fc8a81e6ac891"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/dad/classcsr__form.html#ae30d3205b4d97d365a3fc8a81e6ac891">csr_form</a> (<a class="el" href="../../db/d78/classtriplet__form.html">triplet_form</a>&lt; in_dt, in_it &gt; &amp;, <a class="el" href="../../df/df1/triplet__form_8hpp.html#ab75c8180b8fab73bab1292f75133e0ad">SparseBase</a>=<a class="el" href="../../df/df1/triplet__form_8hpp.html#ab75c8180b8fab73bab1292f75133e0ada529e9e0beb5f85d1f132917c1a09860c">SparseBase::ZERO</a>, bool=false)</td></tr>
+<tr class="memdesc:ae30d3205b4d97d365a3fc8a81e6ac891"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a CSR (Compressed Sparse Row) representation of a sparse matrix from a triplet-form matrix.  <br /></td></tr>
 <tr class="separator:ae30d3205b4d97d365a3fc8a81e6ac891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ca3688b6419b2f739d962d5dbb09727" id="r_a9ca3688b6419b2f739d962d5dbb09727"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d33/conceptsp__d.html">sp_d</a> in_dt, <a class="el" href="../../d5/d08/conceptsp__i.html">sp_i</a> in_it&gt; </td></tr>
 <tr class="memitem:a9ca3688b6419b2f739d962d5dbb09727"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/dad/classcsr__form.html#a9ca3688b6419b2f739d962d5dbb09727">csr_form</a> (<a class="el" href="../../db/d78/classtriplet__form.html">triplet_form</a>&lt; in_dt, in_it &gt; &amp;&amp;in_mat, const <a class="el" href="../../df/df1/triplet__form_8hpp.html#ab75c8180b8fab73bab1292f75133e0ad">SparseBase</a> in_base=<a class="el" href="../../df/df1/triplet__form_8hpp.html#ab75c8180b8fab73bab1292f75133e0ada529e9e0beb5f85d1f132917c1a09860c">SparseBase::ZERO</a>, const bool in_full=false)</td></tr>
@@ -330,6 +331,27 @@ template&lt;<a class="el" href="../../de/d33/conceptsp__d.html">sp_d</a> in_dt, 
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a CSR (Compressed Sparse Row) representation of a sparse matrix from a triplet-form matrix. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">data_t</td><td>The data type of the values in the sparse matrix. </td></tr>
+    <tr><td class="paramname">index_t</td><td>The data type of the indices in the sparse matrix. </td></tr>
+    <tr><td class="paramname">in_dt</td><td>The data type of the input triplet-form matrix values. </td></tr>
+    <tr><td class="paramname">in_it</td><td>The data type of the input triplet-form matrix indices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_mat</td><td>The input matrix in triplet form. </td></tr>
+    <tr><td class="paramname">base</td><td>The base for indexing (e.g., 0 for zero-based indexing, 1 for one-based indexing). </td></tr>
+    <tr><td class="paramname">full</td><td>A boolean flag indicating whether to include all diagonal entries.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This constructor initializes the CSR representation of a sparse matrix by converting the input triplet-form matrix. Depending on the <code>full</code> parameter, it either fully condenses the triplet-form matrix or performs a partial condensation. The row pointers, column indices, and values are computed and stored in the CSR format. The indexing is adjusted based on the specified base (0 or 1).</p>
+<p>Some sparse solvers require the presence of all diagonal entries in the matrix, even if some are zeros. The flag <code>full</code> indicates whether to include all diagonal entries in the CSR representation. This is useful to stamp out some weird segfaults. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

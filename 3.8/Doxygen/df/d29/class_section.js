@@ -1,9 +1,6 @@
 var class_section =
 [
     [ "Section", "df/d29/class_section.html#a37636e9529e9e2a0a0415f8816fad819", null ],
-    [ "Section", "df/d29/class_section.html#abaec61fc4ea43c36181077f1aad90c61", null ],
-    [ "Section", "df/d29/class_section.html#aa7d679a9e4722a7e1499235a96e57d43", null ],
-    [ "~Section", "df/d29/class_section.html#a5962d6a10e6e98b245ded342288ec847", null ],
     [ "clear_status", "df/d29/class_section.html#a252986256a78f185d9167fa9a076198b", null ],
     [ "commit_status", "df/d29/class_section.html#aaa8319ae076236262d4c1c54b3f0f5a0", null ],
     [ "get_area", "df/d29/class_section.html#a7894d81e13792282dd5182b4d3aa0af6", null ],
@@ -28,8 +25,6 @@ var class_section =
     [ "initialize_base", "df/d29/class_section.html#a66b1d45a3f0904993da037ba0e4e78ae", null ],
     [ "is_initialized", "df/d29/class_section.html#a0102df44f5e8db1ee3607ff5e1e11eef", null ],
     [ "is_symmetric", "df/d29/class_section.html#ab43624b28ce05726086a5706a7b92b69", null ],
-    [ "operator=", "df/d29/class_section.html#a30323fb5069653e3870f6162eb4c439a", null ],
-    [ "operator=", "df/d29/class_section.html#abf2c82c10146960144e2291c870c2e9f", null ],
     [ "record", "df/d29/class_section.html#a750e25778e52135ba3375aa0493c58a1", null ],
     [ "reset_status", "df/d29/class_section.html#ac11fc706c6614d5596488078e1940225", null ],
     [ "set_characteristic_length", "df/d29/class_section.html#a9c315c993d9f0dda7d998f29cfc167f1", null ],

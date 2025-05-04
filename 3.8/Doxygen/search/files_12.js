@@ -103,7 +103,5 @@ var searchData=
   ['surfacenm2d_2eh_100',['SurfaceNM2D.h',['../d1/d13/_surface_n_m2_d_8h.html',1,'']]],
   ['surfacenm3d_2ecpp_101',['SurfaceNM3D.cpp',['../d2/d99/_surface_n_m3_d_8cpp.html',1,'']]],
   ['surfacenm3d_2eh_102',['SurfaceNM3D.h',['../d8/d0c/_surface_n_m3_d_8h.html',1,'']]],
-  ['symmpackmat_2ehpp_103',['SymmPackMat.hpp',['../d0/d1a/_symm_pack_mat_8hpp.html',1,'']]],
-  ['sync_5fostream_2ecpp_104',['sync_ostream.cpp',['../d5/d71/sync__ostream_8cpp.html',1,'']]],
-  ['sync_5fostream_2eh_105',['sync_ostream.h',['../da/d05/sync__ostream_8h.html',1,'']]]
+  ['symmpackmat_2ehpp_103',['SymmPackMat.hpp',['../d0/d1a/_symm_pack_mat_8hpp.html',1,'']]]
 ];

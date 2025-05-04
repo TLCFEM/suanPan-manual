@@ -5,7 +5,7 @@ var class_b31 =
     [ "commit_status", "df/daa/class_b31.html#a0b695a6ee7aa8dd8e7ff7c7e00047dd3", null ],
     [ "initialize", "df/daa/class_b31.html#a4171b1dd2c26b4b1cc17bc87387479e3", null ],
     [ "print", "df/daa/class_b31.html#aa8314e0b5b40a74dce89c2894e2c9478", null ],
-    [ "record", "df/daa/class_b31.html#ad7026d6f589596882ab9f31bdc39eb15", null ],
+    [ "record", "df/daa/class_b31.html#a5d8da2cb86f43c837e37dc367aea0fae", null ],
     [ "reset_status", "df/daa/class_b31.html#a3148e540d08cf2f2ec678a6b24d4ff2c", null ],
     [ "update_status", "df/daa/class_b31.html#a39e2ca7509069e05e6dd90304797ce74", null ]
 ];

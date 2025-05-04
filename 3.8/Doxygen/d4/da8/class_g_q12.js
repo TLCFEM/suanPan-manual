@@ -6,7 +6,7 @@ var class_g_q12 =
     [ "compute_shape_function", "d4/da8/class_g_q12.html#a4975546a47dce6ce7bc4dc1d76947263", null ],
     [ "initialize", "d4/da8/class_g_q12.html#a3bea5589428cffb9032dbef78e3ef5bc", null ],
     [ "print", "d4/da8/class_g_q12.html#ace7d2890877afb906e513a2befdc68e5", null ],
-    [ "record", "d4/da8/class_g_q12.html#abfd57839403b9e6fa7e3550752f58f40", null ],
+    [ "record", "d4/da8/class_g_q12.html#a5b46f72f2008b522adee445f9d1d11cf", null ],
     [ "reset_status", "d4/da8/class_g_q12.html#a97a63802d5f569d6119b41026e6ece3a", null ],
     [ "update_status", "d4/da8/class_g_q12.html#a4525625e372ffaf94d5b3069f0f43d6d", null ]
 ];

@@ -1,9 +1,6 @@
 var class_orientation =
 [
     [ "Orientation", "d2/dcd/class_orientation.html#acdea9b091a8d2a62a54935fd231598e7", null ],
-    [ "Orientation", "d2/dcd/class_orientation.html#a20d7d3e6e0ef46aeca5357174b89a8a6", null ],
-    [ "Orientation", "d2/dcd/class_orientation.html#ad3995fe26bc8cbc741f4514808df4d99", null ],
-    [ "~Orientation", "d2/dcd/class_orientation.html#abdec5e0097bc1900409344ed8444011f", null ],
     [ "check_element_ptr", "d2/dcd/class_orientation.html#a9ee035cb9b8f73d1a19fa1ca8ecab6ed", null ],
     [ "clear_status", "d2/dcd/class_orientation.html#af66ecdc669efe9e4eef4bb0a001ea47a", null ],
     [ "commit_status", "d2/dcd/class_orientation.html#af937b38b7a093f4b691f1a7a3a53fccc", null ],
@@ -13,8 +10,6 @@ var class_orientation =
     [ "get_orientation_type", "d2/dcd/class_orientation.html#a1ba39f43d971a9c9a5ac9711bc5fc622", null ],
     [ "get_transformation", "d2/dcd/class_orientation.html#ab5bd50d55386e857789c7003f7f3daa2", null ],
     [ "is_nlgeom", "d2/dcd/class_orientation.html#a1636467d47810932f8a7d03503af34a0", null ],
-    [ "operator=", "d2/dcd/class_orientation.html#a8671a0b6561a1ab8ffb7558291bc63c2", null ],
-    [ "operator=", "d2/dcd/class_orientation.html#a2d9c86d608ad9de33a80e8006f9f16a3", null ],
     [ "reset_status", "d2/dcd/class_orientation.html#aa4fee7c32801d0603de5c5d8b8ce084e", null ],
     [ "set_element_ptr", "d2/dcd/class_orientation.html#aaa99e5d11dedfc133f49e110d4dfa4fe", null ],
     [ "to_global_geometry_mat", "d2/dcd/class_orientation.html#a03b56e294b61b86d90e098a08a1a57a1", null ],

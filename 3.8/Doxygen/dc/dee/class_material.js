@@ -1,9 +1,6 @@
 var class_material =
 [
     [ "Material", "dc/dee/class_material.html#a7bb833f688adec50a02cc289722ede23", null ],
-    [ "Material", "dc/dee/class_material.html#a7ea61c71ac05b6df27fafa0ce2680341", null ],
-    [ "Material", "dc/dee/class_material.html#a883f8dac6125f3c0266efe2b28f65882", null ],
-    [ "~Material", "dc/dee/class_material.html#a6ec18fa60789ef2dc961f5b60623d67b", null ],
     [ "clear_couple_status", "dc/dee/class_material.html#a44cf824cbd8bd714a7d6e19c33f7df82", null ],
     [ "clear_status", "dc/dee/class_material.html#a49534cc5898d5e3033806510402239ae", null ],
     [ "commit_couple_status", "dc/dee/class_material.html#a26aef81013bfe4d8ea7b738007cdddd3", null ],
@@ -48,8 +45,6 @@ var class_material =
     [ "is_initialized", "dc/dee/class_material.html#abaf13ba10d04b322f9b4f538ea8de928", null ],
     [ "is_support_couple", "dc/dee/class_material.html#a8089b14ef8a91581281ac842e6a10123", null ],
     [ "is_symmetric", "dc/dee/class_material.html#abaafa31e28f70f320832063ea0733f3d", null ],
-    [ "operator=", "dc/dee/class_material.html#aa114078f437ae09781af21ed23dfce45", null ],
-    [ "operator=", "dc/dee/class_material.html#accc191780784fdeecaeb654264531556", null ],
     [ "record", "dc/dee/class_material.html#a54faa9201afe628a82327618628e226e", null ],
     [ "reset_couple_status", "dc/dee/class_material.html#a0dd2a94cc92adb1897f103f6e179df8c", null ],
     [ "reset_status", "dc/dee/class_material.html#a7b974ec9d0b5df5bbc37a9ceaf7173f9", null ],

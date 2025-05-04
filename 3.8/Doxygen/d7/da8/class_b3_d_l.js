@@ -2,8 +2,6 @@ var class_b3_d_l =
 [
     [ "get_copy", "d7/da8/class_b3_d_l.html#a819752078d6dfc52de58d9b2d7e07c31", null ],
     [ "get_orientation_type", "d7/da8/class_b3_d_l.html#ac23d785299c871bafef12b9fbcbd165f", null ],
-    [ "Orientation", "d7/da8/class_b3_d_l.html#a20d7d3e6e0ef46aeca5357174b89a8a6", null ],
-    [ "Orientation", "d7/da8/class_b3_d_l.html#ad3995fe26bc8cbc741f4514808df4d99", null ],
     [ "Orientation", "d7/da8/class_b3_d_l.html#acdea9b091a8d2a62a54935fd231598e7", null ],
     [ "to_global_mass_mat", "d7/da8/class_b3_d_l.html#a2150b29ff407c68dd20210798d589d67", null ],
     [ "to_global_stiffness_mat", "d7/da8/class_b3_d_l.html#a3004e3ae4552e9dd1eb9164ad343a860", null ],

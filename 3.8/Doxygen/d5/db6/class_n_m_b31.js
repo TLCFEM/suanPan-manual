@@ -5,7 +5,7 @@ var class_n_m_b31 =
     [ "commit_status", "d5/db6/class_n_m_b31.html#af094559a62615a1ddbc2e7ee5dfc087c", null ],
     [ "initialize", "d5/db6/class_n_m_b31.html#a147103e56a317ec9c65b341877770855", null ],
     [ "print", "d5/db6/class_n_m_b31.html#a864f136629f3352f4b28dce854af5c2b", null ],
-    [ "record", "d5/db6/class_n_m_b31.html#a982735d5e2be6d2dd2b2d2056f59a176", null ],
+    [ "record", "d5/db6/class_n_m_b31.html#a8569d827cd638ad7a303bc68c9475eb0", null ],
     [ "reset_status", "d5/db6/class_n_m_b31.html#a83f94c12bc0bf42079c785b77a8c4135", null ],
     [ "update_status", "d5/db6/class_n_m_b31.html#a7a7608e9f27344fc7223c3b46010ec77", null ]
 ];

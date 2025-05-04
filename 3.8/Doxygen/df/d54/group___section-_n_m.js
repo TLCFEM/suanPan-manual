@@ -61,7 +61,7 @@ var group___section__n_m =
       [ "compute_f", "d8/dc8/class_nonlinear_n_m.html#a2c1bc39bb2eb97b1e0f639ab8f8ab77c", null ],
       [ "compute_h", "d8/dc8/class_nonlinear_n_m.html#a978a577f49635fe1d4e6ef5a241e798b", null ],
       [ "initialize", "d8/dc8/class_nonlinear_n_m.html#a15134a101d0d71daf909e830e78abcb6", null ],
-      [ "record", "d8/dc8/class_nonlinear_n_m.html#a04dc67c7700b4ad1556ddb93576d4564", null ],
+      [ "record", "d8/dc8/class_nonlinear_n_m.html#a5284d9660e904e53f51e65752f002814", null ],
       [ "update_trial_status", "d8/dc8/class_nonlinear_n_m.html#a0aeee65a3161f8b1a4a5aeeea73044c2", null ],
       [ "d_size", "d8/dc8/class_nonlinear_n_m.html#a362912e82e1666625cc041d6ceb0c234", null ],
       [ "g_size", "d8/dc8/class_nonlinear_n_m.html#a8d02dafdbe39c01b0e9d08f710f2f8f3", null ],
@@ -89,8 +89,6 @@ var group___section__n_m =
       [ "initialize_history", "df/db4/class_section_n_m.html#aea032b800a16610c3c7d9c1ea592ba75", null ],
       [ "print", "df/db4/class_section_n_m.html#a48070beb3b6e9837671256bcf0a2cb2e", null ],
       [ "reset_status", "df/db4/class_section_n_m.html#adae4a71778823430249b441480de6d8d", null ],
-      [ "Section", "df/db4/class_section_n_m.html#abaec61fc4ea43c36181077f1aad90c61", null ],
-      [ "Section", "df/db4/class_section_n_m.html#aa7d679a9e4722a7e1499235a96e57d43", null ],
       [ "Section", "df/db4/class_section_n_m.html#a37636e9529e9e2a0a0415f8816fad819", null ]
     ] ],
     [ "DataSectionNM2D", "d5/d13/struct_data_section_n_m2_d.html", [

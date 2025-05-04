@@ -8,7 +8,7 @@ var class_elastic2_d =
     [ "initialize", "d3/d70/class_elastic2_d.html#a57be8d810dca3ab2fb84808246299cb5", null ],
     [ "initialize_couple", "d3/d70/class_elastic2_d.html#a21527ae80901553aca0241ef74296abf", null ],
     [ "print", "d3/d70/class_elastic2_d.html#a85b622b21409c1efc732f699424914d9", null ],
-    [ "record", "d3/d70/class_elastic2_d.html#a9a58cd5c2ed77736af0ee241df0fec98", null ],
+    [ "record", "d3/d70/class_elastic2_d.html#ac30664a3fb3acaa7984b317e913abd65", null ],
     [ "reset_status", "d3/d70/class_elastic2_d.html#a3aa1980789d98cbf762f8342167e4a4e", null ],
     [ "update_trial_status", "d3/d70/class_elastic2_d.html#a700d1dcd3483f042699c6f69d7da4fe2", null ]
 ];

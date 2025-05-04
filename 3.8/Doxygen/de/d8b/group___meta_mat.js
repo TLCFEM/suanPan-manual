@@ -153,7 +153,7 @@ var group___meta_mat =
       [ "max", "d8/d79/class_meta_mat.html#a27c941f6f663ebce5efd95eb53b9bd1a", null ],
       [ "memptr", "d8/d79/class_meta_mat.html#a47f6f64d9240982b8bf8aa76ef2e625d", null ],
       [ "memptr", "d8/d79/class_meta_mat.html#a81bebbfcd6009e08238ffdc993820dc7", null ],
-      [ "mixed_trs", "d8/d79/class_meta_mat.html#adda0ce3e86ab0593a1269f4b8e346d2c", null ],
+      [ "mixed_trs", "d8/d79/class_meta_mat.html#a5d262bbde562c3e67219a5906b3a2c17", null ],
       [ "nullify", "d8/d79/class_meta_mat.html#a905b72c3ebee975874d8d6e3abf2ba42", null ],
       [ "operator()", "d8/d79/class_meta_mat.html#abd9a2ec3d58c4858b2054de1f2124b89", null ],
       [ "operator*", "d8/d79/class_meta_mat.html#ad9989aa74eb64baa099bfa1200948f18", null ],
@@ -219,7 +219,6 @@ var group___meta_mat =
       [ "operator=", "df/d0d/class_sparse_mat_c_u_d_a.html#a64ece3030d1589d82bcd58e0dc9f53bc", null ]
     ] ],
     [ "SparseMatFGMRES< T >", "d2/db5/class_sparse_mat_f_g_m_r_e_s.html", [
-      [ "SparseMatFGMRES", "d2/db5/class_sparse_mat_f_g_m_r_e_s.html#ab53bf84a4c19d29908349923a4fb3e5b", null ],
       [ "SparseMatFGMRES", "d2/db5/class_sparse_mat_f_g_m_r_e_s.html#a8bdd6f4ad70ff3a0dd9317356da7165c", null ],
       [ "SparseMatFGMRES", "d2/db5/class_sparse_mat_f_g_m_r_e_s.html#a4280950e2119a4c40d862db7f9770701", null ],
       [ "~SparseMatFGMRES", "d2/db5/class_sparse_mat_f_g_m_r_e_s.html#a21f10cab44a134d93efd753420113394", null ],
@@ -309,7 +308,7 @@ var group___meta_mat =
     [ "dspike_gbtrf_", "de/d8b/group___meta_mat.html#ga22909f0b3bfb78606725c1e671528f73", null ],
     [ "dspike_gbtrs_", "de/d8b/group___meta_mat.html#ga5a83473564cadf13f720a1816b94120f", null ],
     [ "dspike_tune_", "de/d8b/group___meta_mat.html#ga80b5be92261a9f45a34e5b9ba32f7b06", null ],
-    [ "magma_parse_opts", "de/d8b/group___meta_mat.html#ga626d0d85aec245b4f31e09446bb04ca4", null ],
+    [ "magma_parse_opts", "de/d8b/group___meta_mat.html#gaadc4910ddaf136a8805ecaeaedcb9233", null ],
     [ "SparseMatSuperLU::make_copy", "de/d8b/group___meta_mat.html#ga1f4d2b1e8b25efab1f28cb6f87296003", null ],
     [ "BandMatCluster::operator*", "de/d8b/group___meta_mat.html#ga4c83aa64b770b9b621e475dbd4923702", null ],
     [ "BandSymmMatCluster::operator*", "de/d8b/group___meta_mat.html#gac1268cb881ccdefc6fb6da2d015ab5c7", null ],

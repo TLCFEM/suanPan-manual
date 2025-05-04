@@ -2,7 +2,7 @@ var class_shell_base =
 [
     [ "direction_cosine", "d7/d11/class_shell_base.html#a40b3034fd8c6713dc066bb2f5671d256", null ],
     [ "get_local_coordinate", "d7/d11/class_shell_base.html#a9ab75105a1e00aa67515fcc9f899cbf5", null ],
-    [ "MaterialElement2D", "d7/d11/class_shell_base.html#ab7b136f6147012b89f28ab705a9ee794", null ],
+    [ "MaterialElement2D", "d7/d11/class_shell_base.html#ab673ce779ee3eef3b1ec7dfa21360d7e", null ],
     [ "transform_from_global_to_local", "d7/d11/class_shell_base.html#a52a211cc6058466fcb870e78866e0473", null ],
     [ "transform_from_global_to_local", "d7/d11/class_shell_base.html#afd7b4b3d6bc5672d9fb0dc2a918ea9bd", null ],
     [ "transform_from_local_to_global", "d7/d11/class_shell_base.html#aa067d1db5f8fcdafe42b87291fa92c5f", null ],

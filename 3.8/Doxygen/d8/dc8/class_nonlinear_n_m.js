@@ -8,7 +8,7 @@ var class_nonlinear_n_m =
     [ "compute_f", "d8/dc8/class_nonlinear_n_m.html#a2c1bc39bb2eb97b1e0f639ab8f8ab77c", null ],
     [ "compute_h", "d8/dc8/class_nonlinear_n_m.html#a978a577f49635fe1d4e6ef5a241e798b", null ],
     [ "initialize", "d8/dc8/class_nonlinear_n_m.html#a15134a101d0d71daf909e830e78abcb6", null ],
-    [ "record", "d8/dc8/class_nonlinear_n_m.html#a04dc67c7700b4ad1556ddb93576d4564", null ],
+    [ "record", "d8/dc8/class_nonlinear_n_m.html#a5284d9660e904e53f51e65752f002814", null ],
     [ "update_trial_status", "d8/dc8/class_nonlinear_n_m.html#a0aeee65a3161f8b1a4a5aeeea73044c2", null ],
     [ "d_size", "d8/dc8/class_nonlinear_n_m.html#a362912e82e1666625cc041d6ceb0c234", null ],
     [ "g_size", "d8/dc8/class_nonlinear_n_m.html#a8d02dafdbe39c01b0e9d08f710f2f8f3", null ],

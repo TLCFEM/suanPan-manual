@@ -768,245 +768,248 @@ var hierarchy =
       [ "NM3D2", "df/d9a/class_n_m3_d2.html", null ],
       [ "NM3D3", "d8/da2/class_n_m3_d3.html", null ]
     ] ],
-    [ "sync_ostream", "da/d80/classsync__ostream.html", null ],
     [ "Tag", "d0/d57/class_tag.html", [
-      [ "Amplitude", "de/d90/class_amplitude.html", [
-        [ "Combine", "d2/d33/class_combine.html", null ],
-        [ "Constant", "d9/d09/class_constant.html", null ],
-        [ "Cosine", "d3/d2a/class_cosine.html", null ],
-        [ "CustomAmplitude", "dc/d83/class_custom_amplitude.html", null ],
-        [ "Decay", "d9/d89/class_decay.html", null ],
-        [ "Linear", "db/d62/class_linear.html", null ],
-        [ "Modulated", "d8/d3a/class_modulated.html", null ],
-        [ "NZStrongMotion", "d4/dbd/class_n_z_strong_motion.html", null ],
-        [ "Ramp", "d7/d3e/class_ramp.html", null ],
-        [ "Sine", "de/dd2/class_sine.html", null ],
-        [ "Tabular", "d0/d22/class_tabular.html", [
-          [ "TabularSpline", "dd/d36/class_tabular_spline.html", null ]
-        ] ]
-      ] ],
-      [ "ConditionalModifier", "da/d44/class_conditional_modifier.html", [
-        [ "Constraint", "d8/d71/class_constraint.html", [
-          [ "Embed", "d7/d79/class_embed.html", [
-            [ "Embed2D", "d7/dd2/class_embed2_d.html", null ],
-            [ "Embed3D", "d5/dbe/class_embed3_d.html", null ]
+      [ "CopiableTag", "dd/d78/class_copiable_tag.html", [
+        [ "Converger", "d7/dae/class_converger.html", [
+          [ "AbsDisp", "db/d5a/class_abs_disp.html", null ],
+          [ "AbsError", "d8/dab/class_abs_error.html", null ],
+          [ "AbsIncreAcc", "dc/d4d/class_abs_incre_acc.html", null ],
+          [ "AbsIncreDisp", "d4/d8d/class_abs_incre_disp.html", null ],
+          [ "AbsIncreEnergy", "d5/d86/class_abs_incre_energy.html", null ],
+          [ "AbsResidual", "de/dce/class_abs_residual.html", null ],
+          [ "FixedNumber", "dd/d07/class_fixed_number.html", null ],
+          [ "LogicConverger", "de/d65/class_logic_converger.html", [
+            [ "LogicAND", "dc/d0d/class_logic_a_n_d.html", null ],
+            [ "LogicOR", "dc/d41/class_logic_o_r.html", null ],
+            [ "LogicXOR", "da/d98/class_logic_x_o_r.html", null ]
           ] ],
-          [ "FixedLength", "dc/dfd/class_fixed_length.html", [
-            [ "MaxForce", "d7/dce/class_max_force.html", null ],
-            [ "MaximumGap", "d7/d3b/class_maximum_gap.html", null ],
-            [ "MinimumGap", "d6/d40/class_minimum_gap.html", null ],
-            [ "Sleeve", "de/d2b/class_sleeve.html", null ]
+          [ "RelDisp", "dc/dee/class_rel_disp.html", null ],
+          [ "RelError", "dd/d17/class_rel_error.html", null ],
+          [ "RelIncreAcc", "d8/d3b/class_rel_incre_acc.html", null ],
+          [ "RelIncreDisp", "d2/d85/class_rel_incre_disp.html", null ],
+          [ "RelIncreEnergy", "dd/dec/class_rel_incre_energy.html", null ],
+          [ "RelResidual", "dc/db8/class_rel_residual.html", null ]
+        ] ],
+        [ "Criterion", "d3/d46/class_criterion.html", [
+          [ "EnergyEvolution", "d1/d87/class_energy_evolution.html", [
+            [ "ComplementaryEnergyEvolution", "de/ddd/class_complementary_energy_evolution.html", null ],
+            [ "StrainEnergyEvolution", "de/d88/class_strain_energy_evolution.html", null ]
           ] ],
-          [ "MPC", "df/d9d/class_m_p_c.html", null ],
-          [ "NodeFacet", "d3/d97/class_node_facet.html", null ],
-          [ "NodeLine", "d0/da4/class_node_line.html", null ],
-          [ "ParticleCollision", "d0/de2/class_particle_collision.html", [
-            [ "ParticleCollision2D", "d2/dde/class_particle_collision2_d.html", [
-              [ "LJPotential2D", "de/d70/class_l_j_potential2_d.html", null ],
-              [ "LinearSpring2D", "d7/dab/class_linear_spring2_d.html", null ]
+          [ "LogicCriterion", "d4/ddd/class_logic_criterion.html", [
+            [ "LogicCriterionAND", "d7/d4e/class_logic_criterion_a_n_d.html", null ],
+            [ "LogicCriterionOR", "d6/d76/class_logic_criterion_o_r.html", null ]
+          ] ],
+          [ "MaxHistory", "dc/d95/class_max_history.html", null ],
+          [ "NodeBasedCriterion", "df/da9/class_node_based_criterion.html", [
+            [ "MaxDisplacement", "dc/df3/class_max_displacement.html", null ],
+            [ "MaxResistance", "df/ddd/class_max_resistance.html", null ],
+            [ "MinDisplacement", "df/db4/class_min_displacement.html", null ],
+            [ "MinResistance", "d4/da5/class_min_resistance.html", null ]
+          ] ]
+        ] ],
+        [ "Database", "dc/d83/class_database.html", null ],
+        [ "Material", "dc/dee/class_material.html", null ],
+        [ "Orientation", "d2/dcd/class_orientation.html", [
+          [ "B2DL", "d6/d93/class_b2_d_l.html", [
+            [ "B2DC", "d9/d16/class_b2_d_c.html", null ]
+          ] ],
+          [ "B3DL", "d7/da8/class_b3_d_l.html", [
+            [ "B3DC", "df/dcf/class_b3_d_c.html", [
+              [ "B3DOSC", "da/dd7/class_b3_d_o_s_c.html", null ]
             ] ],
-            [ "ParticleCollision3D", "d2/d6e/class_particle_collision3_d.html", null ]
+            [ "B3DOSL", "dd/dba/class_b3_d_o_s_l.html", null ]
           ] ],
-          [ "PenaltyBC", "dd/d1e/class_penalty_b_c.html", [
-            [ "MultiplierBC", "db/d0b/class_multiplier_b_c.html", [
-              [ "GroupPenaltyBC", "d1/d4a/class_group_penalty_b_c.html", [
-                [ "GroupMultiplierBC", "db/dfd/class_group_multiplier_b_c.html", null ]
+          [ "T2DL", "d9/d8e/class_t2_d_l.html", [
+            [ "T2DC", "d7/d39/class_t2_d_c.html", null ]
+          ] ],
+          [ "T3DL", "d9/dc2/class_t3_d_l.html", [
+            [ "T3DC", "d9/d8e/class_t3_d_c.html", null ]
+          ] ]
+        ] ],
+        [ "Section", "df/d29/class_section.html", null ],
+        [ "SectionShell", "d6/d85/class_section_shell.html", null ]
+      ] ],
+      [ "UniqueTag", "db/db8/class_unique_tag.html", [
+        [ "Amplitude", "de/d90/class_amplitude.html", [
+          [ "Combine", "d2/d33/class_combine.html", null ],
+          [ "Constant", "d9/d09/class_constant.html", null ],
+          [ "Cosine", "d3/d2a/class_cosine.html", null ],
+          [ "CustomAmplitude", "dc/d83/class_custom_amplitude.html", null ],
+          [ "Decay", "d9/d89/class_decay.html", null ],
+          [ "Linear", "db/d62/class_linear.html", null ],
+          [ "Modulated", "d8/d3a/class_modulated.html", null ],
+          [ "NZStrongMotion", "d4/dbd/class_n_z_strong_motion.html", null ],
+          [ "Ramp", "d7/d3e/class_ramp.html", null ],
+          [ "Sine", "de/dd2/class_sine.html", null ],
+          [ "Tabular", "d0/d22/class_tabular.html", [
+            [ "TabularSpline", "dd/d36/class_tabular_spline.html", null ]
+          ] ]
+        ] ],
+        [ "ConditionalModifier", "da/d44/class_conditional_modifier.html", [
+          [ "Constraint", "d8/d71/class_constraint.html", [
+            [ "Embed", "d7/d79/class_embed.html", [
+              [ "Embed2D", "d7/dd2/class_embed2_d.html", null ],
+              [ "Embed3D", "d5/dbe/class_embed3_d.html", null ]
+            ] ],
+            [ "FixedLength", "dc/dfd/class_fixed_length.html", [
+              [ "MaxForce", "d7/dce/class_max_force.html", null ],
+              [ "MaximumGap", "d7/d3b/class_maximum_gap.html", null ],
+              [ "MinimumGap", "d6/d40/class_minimum_gap.html", null ],
+              [ "Sleeve", "de/d2b/class_sleeve.html", null ]
+            ] ],
+            [ "MPC", "df/d9d/class_m_p_c.html", null ],
+            [ "NodeFacet", "d3/d97/class_node_facet.html", null ],
+            [ "NodeLine", "d0/da4/class_node_line.html", null ],
+            [ "ParticleCollision", "d0/de2/class_particle_collision.html", [
+              [ "ParticleCollision2D", "d2/dde/class_particle_collision2_d.html", [
+                [ "LJPotential2D", "de/d70/class_l_j_potential2_d.html", null ],
+                [ "LinearSpring2D", "d7/dab/class_linear_spring2_d.html", null ]
+              ] ],
+              [ "ParticleCollision3D", "d2/d6e/class_particle_collision3_d.html", null ]
+            ] ],
+            [ "PenaltyBC", "dd/d1e/class_penalty_b_c.html", [
+              [ "MultiplierBC", "db/d0b/class_multiplier_b_c.html", [
+                [ "GroupPenaltyBC", "d1/d4a/class_group_penalty_b_c.html", [
+                  [ "GroupMultiplierBC", "db/dfd/class_group_multiplier_b_c.html", null ]
+                ] ]
               ] ]
+            ] ],
+            [ "RigidWallPenalty", "de/d24/class_rigid_wall_penalty.html", [
+              [ "RestitutionWallPenalty", "dd/d8d/class_restitution_wall_penalty.html", [
+                [ "RestitutionWallPenalty1D", "d7/de5/class_restitution_wall_penalty1_d.html", null ],
+                [ "RestitutionWallPenalty2D", "d2/df9/class_restitution_wall_penalty2_d.html", null ],
+                [ "RestitutionWallPenalty3D", "d0/d27/class_restitution_wall_penalty3_d.html", null ]
+              ] ],
+              [ "RigidWallMultiplier", "d4/db6/class_rigid_wall_multiplier.html", [
+                [ "RigidWallMultiplier1D", "dc/d73/class_rigid_wall_multiplier1_d.html", null ],
+                [ "RigidWallMultiplier2D", "d7/d6a/class_rigid_wall_multiplier2_d.html", null ],
+                [ "RigidWallMultiplier3D", "d7/dbe/class_rigid_wall_multiplier3_d.html", null ]
+              ] ],
+              [ "RigidWallPenalty1D", "d4/d7b/class_rigid_wall_penalty1_d.html", null ],
+              [ "RigidWallPenalty2D", "d0/d5a/class_rigid_wall_penalty2_d.html", null ],
+              [ "RigidWallPenalty3D", "db/dd2/class_rigid_wall_penalty3_d.html", null ]
             ] ]
           ] ],
-          [ "RigidWallPenalty", "de/d24/class_rigid_wall_penalty.html", [
-            [ "RestitutionWallPenalty", "dd/d8d/class_restitution_wall_penalty.html", [
-              [ "RestitutionWallPenalty1D", "d7/de5/class_restitution_wall_penalty1_d.html", null ],
-              [ "RestitutionWallPenalty2D", "d2/df9/class_restitution_wall_penalty2_d.html", null ],
-              [ "RestitutionWallPenalty3D", "d0/d27/class_restitution_wall_penalty3_d.html", null ]
+          [ "Load", "df/d07/class_load.html", [
+            [ "BodyForce", "d6/d28/class_body_force.html", [
+              [ "GroupBodyForce", "d4/d10/class_group_body_force.html", null ]
             ] ],
-            [ "RigidWallMultiplier", "d4/db6/class_rigid_wall_multiplier.html", [
-              [ "RigidWallMultiplier1D", "dc/d73/class_rigid_wall_multiplier1_d.html", null ],
-              [ "RigidWallMultiplier2D", "d7/d6a/class_rigid_wall_multiplier2_d.html", null ],
-              [ "RigidWallMultiplier3D", "d7/dbe/class_rigid_wall_multiplier3_d.html", null ]
+            [ "LineUDL", "de/de9/class_line_u_d_l.html", [
+              [ "LineUDL2D", "d6/d5f/class_line_u_d_l2_d.html", null ],
+              [ "LineUDL3D", "d5/d3e/class_line_u_d_l3_d.html", null ]
             ] ],
-            [ "RigidWallPenalty1D", "d4/d7b/class_rigid_wall_penalty1_d.html", null ],
-            [ "RigidWallPenalty2D", "d0/d5a/class_rigid_wall_penalty2_d.html", null ],
-            [ "RigidWallPenalty3D", "db/dd2/class_rigid_wall_penalty3_d.html", null ]
+            [ "NodalAcceleration", "d5/df8/class_nodal_acceleration.html", null ],
+            [ "NodalDisplacement", "d2/ddb/class_nodal_displacement.html", [
+              [ "GroupNodalDisplacement", "dc/de7/class_group_nodal_displacement.html", null ]
+            ] ],
+            [ "NodalForce", "d2/d05/class_nodal_force.html", [
+              [ "GroupNodalForce", "d2/d3a/class_group_nodal_force.html", null ]
+            ] ],
+            [ "ReferenceForce", "d3/dca/class_reference_force.html", null ],
+            [ "SupportMotion", "da/dbb/class_support_motion.html", [
+              [ "SupportAcceleration", "d1/d73/class_support_acceleration.html", null ],
+              [ "SupportDisplacement", "da/d11/class_support_displacement.html", null ],
+              [ "SupportVelocity", "d1/d63/class_support_velocity.html", null ]
+            ] ]
           ] ]
         ] ],
-        [ "Load", "df/d07/class_load.html", [
-          [ "BodyForce", "d6/d28/class_body_force.html", [
-            [ "GroupBodyForce", "d4/d10/class_group_body_force.html", null ]
-          ] ],
-          [ "LineUDL", "de/de9/class_line_u_d_l.html", [
-            [ "LineUDL2D", "d6/d5f/class_line_u_d_l2_d.html", null ],
-            [ "LineUDL3D", "d5/d3e/class_line_u_d_l3_d.html", null ]
-          ] ],
-          [ "NodalAcceleration", "d5/df8/class_nodal_acceleration.html", null ],
-          [ "NodalDisplacement", "d2/ddb/class_nodal_displacement.html", [
-            [ "GroupNodalDisplacement", "dc/de7/class_group_nodal_displacement.html", null ]
-          ] ],
-          [ "NodalForce", "d2/d05/class_nodal_force.html", [
-            [ "GroupNodalForce", "d2/d3a/class_group_nodal_force.html", null ]
-          ] ],
-          [ "ReferenceForce", "d3/dca/class_reference_force.html", null ],
-          [ "SupportMotion", "da/dbb/class_support_motion.html", [
-            [ "SupportAcceleration", "d1/d73/class_support_acceleration.html", null ],
-            [ "SupportDisplacement", "da/d11/class_support_displacement.html", null ],
-            [ "SupportVelocity", "d1/d63/class_support_velocity.html", null ]
-          ] ]
-        ] ]
-      ] ],
-      [ "Converger", "d7/dae/class_converger.html", [
-        [ "AbsDisp", "db/d5a/class_abs_disp.html", null ],
-        [ "AbsError", "d8/dab/class_abs_error.html", null ],
-        [ "AbsIncreAcc", "dc/d4d/class_abs_incre_acc.html", null ],
-        [ "AbsIncreDisp", "d4/d8d/class_abs_incre_disp.html", null ],
-        [ "AbsIncreEnergy", "d5/d86/class_abs_incre_energy.html", null ],
-        [ "AbsResidual", "de/dce/class_abs_residual.html", null ],
-        [ "FixedNumber", "dd/d07/class_fixed_number.html", null ],
-        [ "LogicConverger", "de/d65/class_logic_converger.html", [
-          [ "LogicAND", "dc/d0d/class_logic_a_n_d.html", null ],
-          [ "LogicOR", "dc/d41/class_logic_o_r.html", null ],
-          [ "LogicXOR", "da/d98/class_logic_x_o_r.html", null ]
+        [ "DomainBase", "d4/d83/class_domain_base.html", [
+          [ "Domain", "d4/df4/class_domain.html", null ]
         ] ],
-        [ "RelDisp", "dc/dee/class_rel_disp.html", null ],
-        [ "RelError", "dd/d17/class_rel_error.html", null ],
-        [ "RelIncreAcc", "d8/d3b/class_rel_incre_acc.html", null ],
-        [ "RelIncreDisp", "d2/d85/class_rel_incre_disp.html", null ],
-        [ "RelIncreEnergy", "dd/dec/class_rel_incre_energy.html", null ],
-        [ "RelResidual", "dc/db8/class_rel_residual.html", null ]
-      ] ],
-      [ "Criterion", "d3/d46/class_criterion.html", [
-        [ "EnergyEvolution", "d1/d87/class_energy_evolution.html", [
-          [ "ComplementaryEnergyEvolution", "de/ddd/class_complementary_energy_evolution.html", null ],
-          [ "StrainEnergyEvolution", "de/d88/class_strain_energy_evolution.html", null ]
+        [ "ElementBase", "d4/d6b/class_element_base.html", [
+          [ "Element", "d5/d50/class_element.html", null ]
         ] ],
-        [ "LogicCriterion", "d4/ddd/class_logic_criterion.html", [
-          [ "LogicCriterionAND", "d7/d4e/class_logic_criterion_a_n_d.html", null ],
-          [ "LogicCriterionOR", "d6/d76/class_logic_criterion_o_r.html", null ]
+        [ "Expression", "df/d03/class_expression.html", [
+          [ "SimpleScalarExpression", "d7/d10/class_simple_scalar_expression.html", null ],
+          [ "SimpleVectorExpression", "d2/d5e/class_simple_vector_expression.html", null ]
         ] ],
-        [ "MaxHistory", "dc/d95/class_max_history.html", null ],
-        [ "NodeBasedCriterion", "df/da9/class_node_based_criterion.html", [
-          [ "MaxDisplacement", "dc/df3/class_max_displacement.html", null ],
-          [ "MaxResistance", "df/ddd/class_max_resistance.html", null ],
-          [ "MinDisplacement", "df/db4/class_min_displacement.html", null ],
-          [ "MinResistance", "d4/da5/class_min_resistance.html", null ]
-        ] ]
-      ] ],
-      [ "Database", "dc/d83/class_database.html", null ],
-      [ "DomainBase", "d4/d83/class_domain_base.html", [
-        [ "Domain", "d4/df4/class_domain.html", null ]
-      ] ],
-      [ "ElementBase", "d4/d6b/class_element_base.html", [
-        [ "Element", "d5/d50/class_element.html", null ]
-      ] ],
-      [ "Expression", "df/d03/class_expression.html", [
-        [ "SimpleScalarExpression", "d7/d10/class_simple_scalar_expression.html", null ],
-        [ "SimpleVectorExpression", "d2/d5e/class_simple_vector_expression.html", null ]
-      ] ],
-      [ "Group", "da/d50/class_group.html", [
-        [ "CustomNodeGroup", "de/d01/class_custom_node_group.html", null ],
-        [ "ElementGroup", "df/dd2/class_element_group.html", null ],
-        [ "GroupGroup", "dd/ddb/class_group_group.html", null ],
-        [ "NodeGroup", "d1/ddc/class_node_group.html", null ]
-      ] ],
-      [ "Integrator", "d6/d55/class_integrator.html", [
-        [ "ExplicitIntegrator", "d4/df8/class_explicit_integrator.html", [
-          [ "BatheExplicit", "d3/d9a/class_bathe_explicit.html", null ],
-          [ "GeneralizedAlphaExplicit", "d8/d10/class_generalized_alpha_explicit.html", null ],
-          [ "Tchamwa", "dd/d2b/class_tchamwa.html", null ]
+        [ "Group", "da/d50/class_group.html", [
+          [ "CustomNodeGroup", "de/d01/class_custom_node_group.html", null ],
+          [ "ElementGroup", "df/dd2/class_element_group.html", null ],
+          [ "GroupGroup", "dd/ddb/class_group_group.html", null ],
+          [ "NodeGroup", "d1/ddc/class_node_group.html", null ]
         ] ],
-        [ "ImplicitIntegrator", "d2/df8/class_implicit_integrator.html", [
-          [ "BatheTwoStep", "d9/dd7/class_bathe_two_step.html", null ],
-          [ "GSSSS", "d8/da3/class_g_s_s_s_s.html", [
-            [ "GSSSSOptimal", "d7/d02/class_g_s_s_s_s_optimal.html", null ],
-            [ "GSSSSU0", "df/dfe/class_g_s_s_s_s_u0.html", null ],
-            [ "GSSSSV0", "dd/d20/class_g_s_s_s_s_v0.html", null ]
+        [ "Integrator", "d6/d55/class_integrator.html", [
+          [ "ExplicitIntegrator", "d4/df8/class_explicit_integrator.html", [
+            [ "BatheExplicit", "d3/d9a/class_bathe_explicit.html", null ],
+            [ "GeneralizedAlphaExplicit", "d8/d10/class_generalized_alpha_explicit.html", null ],
+            [ "Tchamwa", "dd/d2b/class_tchamwa.html", null ]
           ] ],
-          [ "GeneralizedAlpha", "da/d53/class_generalized_alpha.html", null ],
-          [ "Newmark", "dd/d8e/class_newmark.html", [
-            [ "LeeNewmarkBase", "d2/d22/class_lee_newmark_base.html", [
-              [ "LeeNewmark", "d7/d28/class_lee_newmark.html", [
-                [ "LeeElementalNewmark", "d7/de2/class_lee_elemental_newmark.html", null ]
+          [ "ImplicitIntegrator", "d2/df8/class_implicit_integrator.html", [
+            [ "BatheTwoStep", "d9/dd7/class_bathe_two_step.html", null ],
+            [ "GSSSS", "d8/da3/class_g_s_s_s_s.html", [
+              [ "GSSSSOptimal", "d7/d02/class_g_s_s_s_s_optimal.html", null ],
+              [ "GSSSSU0", "df/dfe/class_g_s_s_s_s_u0.html", null ],
+              [ "GSSSSV0", "dd/d20/class_g_s_s_s_s_v0.html", null ]
+            ] ],
+            [ "GeneralizedAlpha", "da/d53/class_generalized_alpha.html", null ],
+            [ "Newmark", "dd/d8e/class_newmark.html", [
+              [ "LeeNewmarkBase", "d2/d22/class_lee_newmark_base.html", [
+                [ "LeeNewmark", "d7/d28/class_lee_newmark.html", [
+                  [ "LeeElementalNewmark", "d7/de2/class_lee_elemental_newmark.html", null ]
+                ] ],
+                [ "LeeNewmarkFull", "d4/d3c/class_lee_newmark_full.html", null ]
               ] ],
-              [ "LeeNewmarkFull", "d4/d3c/class_lee_newmark_full.html", null ]
+              [ "LeeNewmarkIterative", "d0/d6e/class_lee_newmark_iterative.html", null ],
+              [ "NonviscousNewmark", "d9/d75/class_nonviscous_newmark.html", null ],
+              [ "RayleighNewmark", "d6/d6d/class_rayleigh_newmark.html", null ],
+              [ "WilsonPenzienNewmark", "d8/d75/class_wilson_penzien_newmark.html", null ]
             ] ],
-            [ "LeeNewmarkIterative", "d0/d6e/class_lee_newmark_iterative.html", null ],
-            [ "NonviscousNewmark", "d9/d75/class_nonviscous_newmark.html", null ],
-            [ "RayleighNewmark", "d6/d6d/class_rayleigh_newmark.html", null ],
-            [ "WilsonPenzienNewmark", "d8/d75/class_wilson_penzien_newmark.html", null ]
+            [ "OALTS", "db/d4b/class_o_a_l_t_s.html", null ]
+          ] ]
+        ] ],
+        [ "Modifier", "d8/dc0/class_modifier.html", [
+          [ "LumpedScale", "d4/d78/class_lumped_scale.html", null ],
+          [ "LumpedSimple", "d8/ddb/class_lumped_simple.html", null ],
+          [ "ModifierDynamics", "da/d57/class_modifier_dynamics.html", [
+            [ "ElementalLee", "d7/d87/class_elemental_lee.html", null ],
+            [ "ElementalModal", "d1/d4a/class_elemental_modal.html", null ],
+            [ "ElementalNonviscous", "df/df2/class_elemental_nonviscous.html", [
+              [ "ElementalNonviscousGroup", "da/d45/class_elemental_nonviscous_group.html", null ]
+            ] ],
+            [ "LinearViscosity", "d7/d45/class_linear_viscosity.html", null ],
+            [ "Rayleigh", "d2/d7d/class_rayleigh.html", null ]
           ] ],
-          [ "OALTS", "db/d4b/class_o_a_l_t_s.html", null ]
-        ] ]
-      ] ],
-      [ "Material", "dc/dee/class_material.html", null ],
-      [ "Modifier", "d8/dc0/class_modifier.html", [
-        [ "LumpedScale", "d4/d78/class_lumped_scale.html", null ],
-        [ "LumpedSimple", "d8/ddb/class_lumped_simple.html", null ],
-        [ "ModifierDynamics", "da/d57/class_modifier_dynamics.html", [
-          [ "ElementalLee", "d7/d87/class_elemental_lee.html", null ],
-          [ "ElementalModal", "d1/d4a/class_elemental_modal.html", null ],
-          [ "ElementalNonviscous", "df/df2/class_elemental_nonviscous.html", [
-            [ "ElementalNonviscousGroup", "da/d45/class_elemental_nonviscous_group.html", null ]
+          [ "ModifierExample", "d0/dd6/class_modifier_example.html", null ]
+        ] ],
+        [ "Node", "dc/d8f/class_node.html", null ],
+        [ "Recorder", "d3/d1a/class_recorder.html", [
+          [ "AmplitudeRecorder", "d7/dd6/class_amplitude_recorder.html", null ],
+          [ "EigenRecorder", "d6/d32/class_eigen_recorder.html", null ],
+          [ "ElementRecorder", "d2/da4/class_element_recorder.html", [
+            [ "GroupElementRecorder", "d9/d00/class_group_element_recorder.html", null ]
           ] ],
-          [ "LinearViscosity", "d7/d45/class_linear_viscosity.html", null ],
-          [ "Rayleigh", "d2/d7d/class_rayleigh.html", null ]
-        ] ],
-        [ "ModifierExample", "d0/dd6/class_modifier_example.html", null ]
-      ] ],
-      [ "Node", "dc/d8f/class_node.html", null ],
-      [ "Orientation", "d2/dcd/class_orientation.html", [
-        [ "B2DL", "d6/d93/class_b2_d_l.html", [
-          [ "B2DC", "d9/d16/class_b2_d_c.html", null ]
-        ] ],
-        [ "B3DL", "d7/da8/class_b3_d_l.html", [
-          [ "B3DC", "df/dcf/class_b3_d_c.html", [
-            [ "B3DOSC", "da/dd7/class_b3_d_o_s_c.html", null ]
+          [ "FrameRecorder", "da/d11/class_frame_recorder.html", null ],
+          [ "GlobalRecorder", "d8/d66/class_global_recorder.html", [
+            [ "GlobalMassRecorder", "d6/d11/class_global_mass_recorder.html", null ],
+            [ "GlobalStiffnessRecorder", "d8/d7d/class_global_stiffness_recorder.html", null ]
           ] ],
-          [ "B3DOSL", "dd/dba/class_b3_d_o_s_l.html", null ]
+          [ "NodeRecorder", "de/d66/class_node_recorder.html", [
+            [ "GroupNodeRecorder", "d1/dcb/class_group_node_recorder.html", null ]
+          ] ],
+          [ "SumRecorder", "d4/d62/class_sum_recorder.html", [
+            [ "GroupSumRecorder", "d8/d73/class_group_sum_recorder.html", null ]
+          ] ],
+          [ "VisualisationRecorder", "d6/df5/class_visualisation_recorder.html", null ]
         ] ],
-        [ "T2DL", "d9/d8e/class_t2_d_l.html", [
-          [ "T2DC", "d7/d39/class_t2_d_c.html", null ]
+        [ "Solver", "d6/d8d/class_solver.html", [
+          [ "Arnoldi", "dc/d1c/class_arnoldi.html", null ],
+          [ "BFGS", "d0/d54/class_b_f_g_s.html", null ],
+          [ "FEAST", "d9/df9/class_f_e_a_s_t.html", null ],
+          [ "MPDC", "da/d34/class_m_p_d_c.html", null ],
+          [ "Newton", "de/d8e/class_newton.html", [
+            [ "AICN", "db/d21/class_a_i_c_n.html", null ]
+          ] ],
+          [ "Ramm", "d6/dec/class_ramm.html", null ]
         ] ],
-        [ "T3DL", "d9/dc2/class_t3_d_l.html", [
-          [ "T3DC", "d9/d8e/class_t3_d_c.html", null ]
-        ] ]
-      ] ],
-      [ "Recorder", "d3/d1a/class_recorder.html", [
-        [ "AmplitudeRecorder", "d7/dd6/class_amplitude_recorder.html", null ],
-        [ "EigenRecorder", "d6/d32/class_eigen_recorder.html", null ],
-        [ "ElementRecorder", "d2/da4/class_element_recorder.html", [
-          [ "GroupElementRecorder", "d9/d00/class_group_element_recorder.html", null ]
-        ] ],
-        [ "FrameRecorder", "da/d11/class_frame_recorder.html", null ],
-        [ "GlobalRecorder", "d8/d66/class_global_recorder.html", [
-          [ "GlobalMassRecorder", "d6/d11/class_global_mass_recorder.html", null ],
-          [ "GlobalStiffnessRecorder", "d8/d7d/class_global_stiffness_recorder.html", null ]
-        ] ],
-        [ "NodeRecorder", "de/d66/class_node_recorder.html", [
-          [ "GroupNodeRecorder", "d1/dcb/class_group_node_recorder.html", null ]
-        ] ],
-        [ "SumRecorder", "d4/d62/class_sum_recorder.html", [
-          [ "GroupSumRecorder", "d8/d73/class_group_sum_recorder.html", null ]
-        ] ],
-        [ "VisualisationRecorder", "d6/df5/class_visualisation_recorder.html", null ]
-      ] ],
-      [ "Section", "df/d29/class_section.html", null ],
-      [ "SectionShell", "d6/d85/class_section_shell.html", null ],
-      [ "Solver", "d6/d8d/class_solver.html", [
-        [ "Arnoldi", "dc/d1c/class_arnoldi.html", null ],
-        [ "BFGS", "d0/d54/class_b_f_g_s.html", null ],
-        [ "FEAST", "d9/df9/class_f_e_a_s_t.html", null ],
-        [ "MPDC", "da/d34/class_m_p_d_c.html", null ],
-        [ "Newton", "de/d8e/class_newton.html", [
-          [ "AICN", "db/d21/class_a_i_c_n.html", null ]
-        ] ],
-        [ "Ramm", "d6/dec/class_ramm.html", null ]
-      ] ],
-      [ "Step", "d1/dc3/class_step.html", [
-        [ "ArcLength", "d8/d33/class_arc_length.html", null ],
-        [ "Dynamic", "db/d7f/class_dynamic.html", null ],
-        [ "Frequency", "d6/df2/class_frequency.html", null ],
-        [ "Static", "d4/daf/class_static.html", [
-          [ "Buckle", "d3/d86/class_buckle.html", null ],
-          [ "Optimization", "d4/df8/class_optimization.html", null ]
+        [ "Step", "d1/dc3/class_step.html", [
+          [ "ArcLength", "d8/d33/class_arc_length.html", null ],
+          [ "Dynamic", "db/d7f/class_dynamic.html", null ],
+          [ "Frequency", "d6/df2/class_frequency.html", null ],
+          [ "Static", "d4/daf/class_static.html", [
+            [ "Buckle", "d3/d86/class_buckle.html", null ],
+            [ "Optimization", "d4/df8/class_optimization.html", null ]
+          ] ]
         ] ]
       ] ]
     ] ],

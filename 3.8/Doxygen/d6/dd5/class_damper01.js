@@ -5,7 +5,7 @@ var class_damper01 =
     [ "commit_status", "d6/dd5/class_damper01.html#a19e84c1ba00443491adae54349c72ada", null ],
     [ "initialize", "d6/dd5/class_damper01.html#a4529f8d4f9e1f17b8f41b243f5bde36d", null ],
     [ "print", "d6/dd5/class_damper01.html#ad5868f64abfffb16faf7ceb2aeecb71d", null ],
-    [ "record", "d6/dd5/class_damper01.html#af6f14fc0ab0d7133f3c2011e2991c88a", null ],
+    [ "record", "d6/dd5/class_damper01.html#afcbfb00f61b26632956db4f1c4e04285", null ],
     [ "reset_status", "d6/dd5/class_damper01.html#a7ac655315489b3791d030faab4dad87f", null ],
     [ "update_status", "d6/dd5/class_damper01.html#a79dc00c35c1f34b9cfd997b10953941b", null ],
     [ "d_size", "d6/dd5/class_damper01.html#a29dcd720f3a6424b15ee9f90ae1bf2d0", null ],

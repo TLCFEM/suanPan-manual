@@ -107,6 +107,8 @@ $(document).ready(function(){initNavTree('d1/d9f/_test_solver_8cpp.html','../../
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d1/d62/_catch_header_8h_source.html">CatchHeader.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/d9a/_l_b_f_g_s_8hpp_source.html">Toolbox/LBFGS.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../df/d09/brent_8hpp_source.html">Toolbox/brent.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d0/d40/ridders_8hpp_source.html">Toolbox/ridders.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for TestSolver.cpp:</div>
 <div class="dyncontent">
@@ -122,10 +124,47 @@ Classes</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a65fea237250d992568b205dfd3361553" id="r_a65fea237250d992568b205dfd3361553"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9f/_test_solver_8cpp.html#a65fea237250d992568b205dfd3361553">TEST_CASE</a> (&quot;LBFGS Solver&quot;, &quot;[Utility.Solver]&quot;)</td></tr>
 <tr class="separator:a65fea237250d992568b205dfd3361553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4d4f7d11e4bd22ed3552706730f6d7" id="r_a1a4d4f7d11e4bd22ed3552706730f6d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9f/_test_solver_8cpp.html#a1a4d4f7d11e4bd22ed3552706730f6d7">TEST_CASE</a> (&quot;Ridders Solver&quot;, &quot;[Utility.Solver]&quot;)</td></tr>
+<tr class="separator:a1a4d4f7d11e4bd22ed3552706730f6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0f3375ec5c3ed01fb1f03da1c1aaae" id="r_a8d0f3375ec5c3ed01fb1f03da1c1aaae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9f/_test_solver_8cpp.html#a8d0f3375ec5c3ed01fb1f03da1c1aaae">TEST_CASE</a> (&quot;Brent Solver&quot;, &quot;[Utility.Solver]&quot;)</td></tr>
+<tr class="separator:a8d0f3375ec5c3ed01fb1f03da1c1aaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a8d0f3375ec5c3ed01fb1f03da1c1aaae" name="a8d0f3375ec5c3ed01fb1f03da1c1aaae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d0f3375ec5c3ed01fb1f03da1c1aaae">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Brent Solver&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;&#160;</td>
+          <td class="paramname">[Utility.Solver]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d9f/_test_solver_8cpp_a8d0f3375ec5c3ed01fb1f03da1c1aaae_cgraph.svg" width="228" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="a65fea237250d992568b205dfd3361553" name="a65fea237250d992568b205dfd3361553"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65fea237250d992568b205dfd3361553">&#9670;&#160;</a></span>TEST_CASE()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a65fea237250d992568b205dfd3361553">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,6 +192,39 @@ Functions</h2></td></tr>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d9f/_test_solver_8cpp_a65fea237250d992568b205dfd3361553_cgraph.svg" width="319" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1a4d4f7d11e4bd22ed3552706730f6d7" name="a1a4d4f7d11e4bd22ed3552706730f6d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4d4f7d11e4bd22ed3552706730f6d7">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Ridders Solver&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;&#160;</td>
+          <td class="paramname">[Utility.Solver]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d9f/_test_solver_8cpp_a1a4d4f7d11e4bd22ed3552706730f6d7_cgraph.svg" width="247" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

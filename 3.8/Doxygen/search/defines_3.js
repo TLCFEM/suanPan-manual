@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['suanpan_5fdebug_0',['suanpan_debug',['../d8/d8f/suan_pan_8h.html#af266a5b644b4944b161e88f16c092444',1,'SUANPAN_DEBUG:&#160;suanPan.h'],['../d8/d8f/suan_pan_8h.html#a25eeaeba608fccad92ecab15a5bdb909',1,'suanpan_debug:&#160;suanPan.h']]],
+  ['suanpan_5fdebug_0',['suanpan_debug',['../d8/d8f/suan_pan_8h.html#a25eeaeba608fccad92ecab15a5bdb909',1,'suanpan_debug:&#160;suanPan.h'],['../d8/d8f/suan_pan_8h.html#af266a5b644b4944b161e88f16c092444',1,'SUANPAN_DEBUG:&#160;suanPan.h']]],
   ['suanpan_5ferror_1',['suanpan_error',['../d8/d8f/suan_pan_8h.html#add7f710d53ecd5c25e781b0f949a7c32',1,'suanPan.h']]],
   ['suanpan_5fexport_2',['SUANPAN_EXPORT',['../d8/d8f/suan_pan_8h.html#a3a306a1c89377475df46cf72827a9baa',1,'suanPan.h']]],
   ['suanpan_5fextra_5fdebug_3',['SUANPAN_EXTRA_DEBUG',['../d8/d8f/suan_pan_8h.html#a8dc7a98e8c443a6eb00b45b52fd01392',1,'suanPan.h']]],

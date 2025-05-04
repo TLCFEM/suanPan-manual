@@ -131,29 +131,27 @@ $(document).ready(function(){initNavTree('d1/d94/_database_8h_source.html','../.
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">class </span><a class="code hl_class" href="../../d4/d83/class_domain_base.html">DomainBase</a>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html">   33</a></span><span class="keyword">class </span><a class="code hl_class" href="../../dc/d83/class_database.html">Database</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d0/d57/class_tag.html">Tag</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html">   33</a></span><span class="keyword">class </span><a class="code hl_class" href="../../dc/d83/class_database.html">Database</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d78/class_copiable_tag.html">CopiableTag</a> {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    shared_ptr&lt;DomainBase&gt; domain = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>(<span class="keywordtype">unsigned</span> = 0);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#a645123fc4b106712f3085ad7234b9d3d">   38</a></span>    <a class="code hl_function" href="../../dc/d83/class_database.html#a645123fc4b106712f3085ad7234b9d3d">~Database</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d83/class_database.html#a98fc583dde315adae615e5ecc3a17452">set_domain</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp; D);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    [[nodiscard]] <span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp; <a class="code hl_function" href="../../dc/d83/class_database.html#adb4d552663b205f3bfe119d19ac09589">get_domain</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#afb0ef32dfaec6d7e4639746e6cdd6be4">   43</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../dc/d83/class_database.html#afb0ef32dfaec6d7e4639746e6cdd6be4">save</a>() = 0;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d83/class_database.html#a98fc583dde315adae615e5ecc3a17452">set_domain</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp; D);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    [[nodiscard]] <span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp; <a class="code hl_function" href="../../dc/d83/class_database.html#adb4d552663b205f3bfe119d19ac09589">get_domain</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#afb0ef32dfaec6d7e4639746e6cdd6be4">   42</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../dc/d83/class_database.html#afb0ef32dfaec6d7e4639746e6cdd6be4">save</a>() = 0;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
 </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_tag_8h_html"><div class="ttname"><a href="../../d2/d4a/_tag_8h.html">Tag.h</a></div></div>
+<div class="ttc" id="aclass_copiable_tag_html"><div class="ttname"><a href="../../dd/d78/class_copiable_tag.html">CopiableTag</a></div><div class="ttdef"><b>Definition</b> Tag.h:66</div></div>
 <div class="ttc" id="aclass_database_html"><div class="ttname"><a href="../../dc/d83/class_database.html">Database</a></div><div class="ttdoc">A Database class is a top level container.</div><div class="ttdef"><b>Definition</b> Database.h:33</div></div>
-<div class="ttc" id="aclass_database_html_a645123fc4b106712f3085ad7234b9d3d"><div class="ttname"><a href="../../dc/d83/class_database.html#a645123fc4b106712f3085ad7234b9d3d">Database::~Database</a></div><div class="ttdeci">~Database() override=default</div></div>
 <div class="ttc" id="aclass_database_html_a98fc583dde315adae615e5ecc3a17452"><div class="ttname"><a href="../../dc/d83/class_database.html#a98fc583dde315adae615e5ecc3a17452">Database::set_domain</a></div><div class="ttdeci">void set_domain(const shared_ptr&lt; DomainBase &gt; &amp;D)</div><div class="ttdef"><b>Definition</b> Database.cpp:23</div></div>
 <div class="ttc" id="aclass_database_html_adb4d552663b205f3bfe119d19ac09589"><div class="ttname"><a href="../../dc/d83/class_database.html#adb4d552663b205f3bfe119d19ac09589">Database::get_domain</a></div><div class="ttdeci">const shared_ptr&lt; DomainBase &gt; &amp; get_domain() const</div><div class="ttdef"><b>Definition</b> Database.cpp:25</div></div>
 <div class="ttc" id="aclass_database_html_afb0ef32dfaec6d7e4639746e6cdd6be4"><div class="ttname"><a href="../../dc/d83/class_database.html#afb0ef32dfaec6d7e4639746e6cdd6be4">Database::save</a></div><div class="ttdeci">virtual int save()=0</div></div>
-<div class="ttc" id="aclass_domain_base_html"><div class="ttname"><a href="../../d4/d83/class_domain_base.html">DomainBase</a></div><div class="ttdoc">The DomainBase class is a template.</div><div class="ttdef"><b>Definition</b> DomainBase.h:104</div></div>
-<div class="ttc" id="aclass_tag_html"><div class="ttname"><a href="../../d0/d57/class_tag.html">Tag</a></div><div class="ttdoc">A base Tag class.</div><div class="ttdef"><b>Definition</b> Tag.h:38</div></div>
+<div class="ttc" id="aclass_domain_base_html"><div class="ttname"><a href="../../d4/d83/class_domain_base.html">DomainBase</a></div><div class="ttdoc">The DomainBase class is a template.</div><div class="ttdef"><b>Definition</b> DomainBase.h:102</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

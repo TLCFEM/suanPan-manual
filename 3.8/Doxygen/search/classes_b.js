@@ -16,7 +16,7 @@ var searchData=
   ['lineudl2d_13',['LineUDL2D',['../d6/d5f/class_line_u_d_l2_d.html',1,'']]],
   ['lineudl3d_14',['LineUDL3D',['../d5/d3e/class_line_u_d_l3_d.html',1,'']]],
   ['ljpotential2d_15',['LJPotential2D',['../de/d70/class_l_j_potential2_d.html',1,'']]],
-  ['load_16',['load',['../dc/d30/classload.html',1,'load'],['../df/d07/class_load.html',1,'Load']]],
+  ['load_16',['load',['../df/d07/class_load.html',1,'Load'],['../dc/d30/classload.html',1,'load']]],
   ['logicand_17',['LogicAND',['../dc/d0d/class_logic_a_n_d.html',1,'']]],
   ['logicconverger_18',['LogicConverger',['../de/d65/class_logic_converger.html',1,'']]],
   ['logiccriterion_19',['LogicCriterion',['../d4/ddd/class_logic_criterion.html',1,'']]],

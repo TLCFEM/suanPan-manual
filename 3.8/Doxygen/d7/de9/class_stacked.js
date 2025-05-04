@@ -6,7 +6,7 @@ var class_stacked =
     [ "get_copy", "d7/de9/class_stacked.html#a148087258955482be5b47d033a14d248", null ],
     [ "initialize", "d7/de9/class_stacked.html#a440e4e091df56530bc1e82206cd07478", null ],
     [ "print", "d7/de9/class_stacked.html#ae200fdcfe011184055ea8dec195f7b10", null ],
-    [ "record", "d7/de9/class_stacked.html#afd1c8f09df0264254530447bd7a2d35d", null ],
+    [ "record", "d7/de9/class_stacked.html#a76d4ddf318999b5f685a17461c811b13", null ],
     [ "reset_status", "d7/de9/class_stacked.html#ac12258d9b93549de496d8b85d458a0ae", null ],
     [ "update_trial_status", "d7/de9/class_stacked.html#af15410f5c001dbb2fc39fa68de687c42", null ]
 ];

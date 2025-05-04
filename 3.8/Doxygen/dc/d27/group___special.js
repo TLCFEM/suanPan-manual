@@ -6,7 +6,7 @@ var group___special =
       [ "commit_status", "d6/dd5/class_damper01.html#a19e84c1ba00443491adae54349c72ada", null ],
       [ "initialize", "d6/dd5/class_damper01.html#a4529f8d4f9e1f17b8f41b243f5bde36d", null ],
       [ "print", "d6/dd5/class_damper01.html#ad5868f64abfffb16faf7ceb2aeecb71d", null ],
-      [ "record", "d6/dd5/class_damper01.html#af6f14fc0ab0d7133f3c2011e2991c88a", null ],
+      [ "record", "d6/dd5/class_damper01.html#afcbfb00f61b26632956db4f1c4e04285", null ],
       [ "reset_status", "d6/dd5/class_damper01.html#a7ac655315489b3791d030faab4dad87f", null ],
       [ "update_status", "d6/dd5/class_damper01.html#a79dc00c35c1f34b9cfd997b10953941b", null ],
       [ "d_size", "d6/dd5/class_damper01.html#a29dcd720f3a6424b15ee9f90ae1bf2d0", null ],
@@ -25,7 +25,7 @@ var group___special =
       [ "commit_status", "dd/d8d/class_damper02.html#a508708c24a3c7b4f3f28eb5d78b85d43", null ],
       [ "initialize", "dd/d8d/class_damper02.html#a483c3b6ee0a0daef86eb92b42ad21f5a", null ],
       [ "print", "dd/d8d/class_damper02.html#ad2373949256690e002c6f1a947528f6e", null ],
-      [ "record", "dd/d8d/class_damper02.html#a36c2629cd5dc53702d4cc70303814fa7", null ],
+      [ "record", "dd/d8d/class_damper02.html#a50b4a8b4d9dbe8cc0a1ece68826965d9", null ],
       [ "reset_status", "dd/d8d/class_damper02.html#ad93f2e13be83ebdb347191f3677543c0", null ],
       [ "update_status", "dd/d8d/class_damper02.html#afd0b40e6fe49db5f418e1e86c54aa7b9", null ]
     ] ],
@@ -35,7 +35,7 @@ var group___special =
       [ "commit_status", "d6/dd7/class_joint.html#ab01220baeca68f65209740862c825e2b", null ],
       [ "initialize", "d6/dd7/class_joint.html#a31f9e39a29b20201bb823d74ac72db05", null ],
       [ "print", "d6/dd7/class_joint.html#a33f1882d96d1444e955d0dfb20bd8696", null ],
-      [ "record", "d6/dd7/class_joint.html#ad8d68bdde074a898c8d10e269f65e1f3", null ],
+      [ "record", "d6/dd7/class_joint.html#a7b692874cd66703e344c784836c3fc42", null ],
       [ "reset_status", "d6/dd7/class_joint.html#ac5a614d1deb5df07736374b669dda40d", null ],
       [ "update_status", "d6/dd7/class_joint.html#af8ebfb8ff20355da320b1ff9ee16f02a", null ]
     ] ],
@@ -89,7 +89,7 @@ var group___special =
       [ "commit_status", "d2/d40/class_spring01.html#a183be111683b3a9d25afd23b5c0580ce", null ],
       [ "initialize", "d2/d40/class_spring01.html#a4a9bab471188f8fb38c2c06fa5247ea9", null ],
       [ "print", "d2/d40/class_spring01.html#ac952095efe14a72cd7a87969dc22603b", null ],
-      [ "record", "d2/d40/class_spring01.html#a98ab233a3bf067c899b3408a65488ef1", null ],
+      [ "record", "d2/d40/class_spring01.html#a3453bd0cdfdc75acd73cbe31b862811e", null ],
       [ "reset_status", "d2/d40/class_spring01.html#a56bcf0cc6968e7aae7b0ec3a6f7a6673", null ],
       [ "update_status", "d2/d40/class_spring01.html#a2a6bdb59f1c5e53bfbf3daa65207157c", null ]
     ] ],
@@ -99,7 +99,7 @@ var group___special =
       [ "commit_status", "d6/d1f/class_spring02.html#ab9c2acd864808617dc8bf8420f6a7cb0", null ],
       [ "initialize", "d6/d1f/class_spring02.html#a19432afc765300a0841d489e9214943a", null ],
       [ "print", "d6/d1f/class_spring02.html#af67d5608451c8cafbbf0486768735ba2", null ],
-      [ "record", "d6/d1f/class_spring02.html#ac500da798817a11251bb05fb1a6de9ec", null ],
+      [ "record", "d6/d1f/class_spring02.html#a183bff04c7abd3434aea153702b2bdde", null ],
       [ "reset_status", "d6/d1f/class_spring02.html#a4d505df0e46c8629fbbd4fc4e907c0e9", null ],
       [ "update_status", "d6/d1f/class_spring02.html#ac681b8e607575b0b75c6286adf0a9216", null ]
     ] ],

@@ -1,9 +1,6 @@
 var class_recorder =
 [
     [ "Recorder", "d3/d1a/class_recorder.html#a576df8c5d7ddd81002850a64de9121ce", null ],
-    [ "Recorder", "d3/d1a/class_recorder.html#a5f88d8088e7c70f9ae1220344986b47b", null ],
-    [ "Recorder", "d3/d1a/class_recorder.html#ac90a9b6090a444850bb370b68d8eb713", null ],
-    [ "~Recorder", "d3/d1a/class_recorder.html#ae33305e7f9a114f60f53e78badc01617", null ],
     [ "clear_status", "d3/d1a/class_recorder.html#a90ca4282b40701fc7285b32026df6177", null ],
     [ "get_data_pool", "d3/d1a/class_recorder.html#ac25250e64996f0b9962db99809b5e35e", null ],
     [ "get_object_tag", "d3/d1a/class_recorder.html#ac4a4102be6d05a42ff43190b282166ba", null ],
@@ -15,8 +12,6 @@ var class_recorder =
     [ "initialize", "d3/d1a/class_recorder.html#a95aba2ed79f5dcb53dac987de0a99254", null ],
     [ "insert", "d3/d1a/class_recorder.html#a5658d9bb90b2b723cfc729cf08510414", null ],
     [ "insert", "d3/d1a/class_recorder.html#a579680f7c9603576fc9aed8a49997b57", null ],
-    [ "operator=", "d3/d1a/class_recorder.html#adf51ac79d8beee929b07f3df204f8438", null ],
-    [ "operator=", "d3/d1a/class_recorder.html#ae96ffb3c2c756d0294745b3ff02d20c5", null ],
     [ "print", "d3/d1a/class_recorder.html#afed78f7ef9ca577b5d027818da466f71", null ],
     [ "record", "d3/d1a/class_recorder.html#a51d53681e3ba2c9b192245e8936e7bb4", null ],
     [ "save", "d3/d1a/class_recorder.html#a82201bf02428d81dc45471bb7f7455f5", null ],

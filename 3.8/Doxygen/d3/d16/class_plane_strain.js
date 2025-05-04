@@ -7,7 +7,7 @@ var class_plane_strain =
     [ "get_parameter", "d3/d16/class_plane_strain.html#a3cff7b813b04b6f7d17af554dab3e910", null ],
     [ "initialize", "d3/d16/class_plane_strain.html#a117cb713d29055f43204e29cd9f0db4f", null ],
     [ "print", "d3/d16/class_plane_strain.html#a9f0dc5dadfbb78521bd92a84a079221c", null ],
-    [ "record", "d3/d16/class_plane_strain.html#a7c06efcab240b49b2ea71400eba5a074", null ],
+    [ "record", "d3/d16/class_plane_strain.html#ae433dd39ceffd2d3f692abb0d27b6dfc", null ],
     [ "reset_status", "d3/d16/class_plane_strain.html#a3dfdbc485de42765edb5b32d766b2bf7", null ],
     [ "update_trial_status", "d3/d16/class_plane_strain.html#a1dd49c6b1049998ae072d78a04e98f90", null ]
 ];

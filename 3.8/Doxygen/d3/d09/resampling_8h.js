@@ -47,7 +47,7 @@ var resampling_8h =
     [ "gcd", "d3/d09/resampling_8h.html#a6b29a9880bf2bc22878f1e593ddc7abc", null ],
     [ "hamming", "d3/d09/resampling_8h.html#a6eeaf37957c1b296bac44a5fc8962544", null ],
     [ "hann", "d3/d09/resampling_8h.html#a4214e958381dc082bac33a517a4588fb", null ],
-    [ "upsampling", "d3/d09/resampling_8h.html#a3eeda7fcaa70cec2099a171e6299d64d", null ],
-    [ "upsampling", "d3/d09/resampling_8h.html#adaa7c885e3d61d84653572e5f7dcbda7", null ],
+    [ "upsampling", "d3/d09/resampling_8h.html#a6ae2e5a56076796b11382d7c526fcfaa", null ],
+    [ "upsampling", "d3/d09/resampling_8h.html#a355ce123f7485d9a05e49d61a7a0634d", null ],
     [ "upsampling", "d3/d09/resampling_8h.html#a63e69a31494cf926e8e1602fafa1f944", null ]
 ];

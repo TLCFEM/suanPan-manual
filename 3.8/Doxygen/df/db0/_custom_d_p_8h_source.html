@@ -127,47 +127,48 @@ $(document).ready(function(){initNavTree('df/db0/_custom_d_p_8h_source.html','..
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define CUSTOMDP_H</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/dc8/_nonlinear_drucker_prager_8h.html">NonlinearDruckerPrager.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d99/_expression_8h.html">Toolbox/Expression.h</a>&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/da0/_resource_holder_8h.html">Toolbox/ResourceHolder.h</a>&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d1/d95/class_custom_d_p.html">   36</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d1/d95/class_custom_d_p.html">CustomDP</a> final : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/dbe/class_nonlinear_drucker_prager.html">NonlinearDruckerPrager</a> {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    [[nodiscard]] <span class="keywordtype">double</span> compute_c(<span class="keywordtype">double</span>) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    [[nodiscard]] <span class="keywordtype">double</span> compute_dc(<span class="keywordtype">double</span>) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> c_tag;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_class" href="../../de/d24/class_resource_holder.html">ResourceHolder&lt;Expression&gt;</a> c_expression;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="../../d1/d95/class_custom_d_p.html">CustomDP</a>(</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">unsigned</span>,   <span class="comment">// tag</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">double</span>,     <span class="comment">// elastic modulus</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">double</span>,     <span class="comment">// poisson&#39;s ratio</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">double</span>,     <span class="comment">// eta_yield (hydrostatic stress related)</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">double</span>,     <span class="comment">// eta_flow (dilatancy angle related)</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">double</span>,     <span class="comment">// xi (cohesion related)</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">unsigned</span>,   <span class="comment">// expression tag</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">double</span> = 0. <span class="comment">// density</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    );</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/d95/class_custom_d_p.html#a2b9127259ac05cfe7b2d8586d369278a">initialize</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    unique_ptr&lt;Material&gt; <a class="code hl_function" href="../../d1/d95/class_custom_d_p.html#a886f212db800b817348a4d664d981831">get_copy</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d95/class_custom_d_p.html#a92dc09214f659829cee9c5bf2d8783bb">print</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d99/_expression_8h.html">Toolbox/Expression.h</a>&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;<a class="code" href="../../d4/da0/_resource_holder_8h.html">Toolbox/ResourceHolder.h</a>&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d1/d95/class_custom_d_p.html">   37</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d1/d95/class_custom_d_p.html">CustomDP</a> final : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/dbe/class_nonlinear_drucker_prager.html">NonlinearDruckerPrager</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    [[nodiscard]] <span class="keywordtype">double</span> compute_c(<span class="keywordtype">double</span>) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    [[nodiscard]] <span class="keywordtype">double</span> compute_dc(<span class="keywordtype">double</span>) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> c_tag;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="../../de/d24/class_resource_holder.html">ResourceHolder&lt;Expression&gt;</a> c_expression;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="../../d1/d95/class_custom_d_p.html">CustomDP</a>(</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">unsigned</span>,   <span class="comment">// tag</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">double</span>,     <span class="comment">// elastic modulus</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">double</span>,     <span class="comment">// poisson&#39;s ratio</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">double</span>,     <span class="comment">// eta_yield (hydrostatic stress related)</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">double</span>,     <span class="comment">// eta_flow (dilatancy angle related)</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">double</span>,     <span class="comment">// xi (cohesion related)</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">unsigned</span>,   <span class="comment">// expression tag</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">double</span> = 0. <span class="comment">// density</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    );</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/d95/class_custom_d_p.html#a2b9127259ac05cfe7b2d8586d369278a">initialize</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    unique_ptr&lt;Material&gt; <a class="code hl_function" href="../../d1/d95/class_custom_d_p.html#a886f212db800b817348a4d664d981831">get_copy</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d95/class_custom_d_p.html#a92dc09214f659829cee9c5bf2d8783bb">print</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
 </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="ttc" id="a_expression_8h_html"><div class="ttname"><a href="../../d6/d99/_expression_8h.html">Expression.h</a></div></div>
 <div class="ttc" id="a_nonlinear_drucker_prager_8h_html"><div class="ttname"><a href="../../db/dc8/_nonlinear_drucker_prager_8h.html">NonlinearDruckerPrager.h</a></div></div>
 <div class="ttc" id="a_resource_holder_8h_html"><div class="ttname"><a href="../../d4/da0/_resource_holder_8h.html">ResourceHolder.h</a></div></div>
-<div class="ttc" id="aclass_custom_d_p_html"><div class="ttname"><a href="../../d1/d95/class_custom_d_p.html">CustomDP</a></div><div class="ttdoc">The CustomDP class.</div><div class="ttdef"><b>Definition</b> CustomDP.h:36</div></div>
-<div class="ttc" id="aclass_custom_d_p_html_a2b9127259ac05cfe7b2d8586d369278a"><div class="ttname"><a href="../../d1/d95/class_custom_d_p.html#a2b9127259ac05cfe7b2d8586d369278a">CustomDP::initialize</a></div><div class="ttdeci">int initialize(const shared_ptr&lt; DomainBase &gt; &amp;) override</div><div class="ttdef"><b>Definition</b> CustomDP.cpp:29</div></div>
-<div class="ttc" id="aclass_custom_d_p_html_a886f212db800b817348a4d664d981831"><div class="ttname"><a href="../../d1/d95/class_custom_d_p.html#a886f212db800b817348a4d664d981831">CustomDP::get_copy</a></div><div class="ttdeci">unique_ptr&lt; Material &gt; get_copy() override</div><div class="ttdef"><b>Definition</b> CustomDP.cpp:45</div></div>
-<div class="ttc" id="aclass_custom_d_p_html_a92dc09214f659829cee9c5bf2d8783bb"><div class="ttname"><a href="../../d1/d95/class_custom_d_p.html#a92dc09214f659829cee9c5bf2d8783bb">CustomDP::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition</b> CustomDP.cpp:47</div></div>
+<div class="ttc" id="aclass_custom_d_p_html"><div class="ttname"><a href="../../d1/d95/class_custom_d_p.html">CustomDP</a></div><div class="ttdoc">The CustomDP class.</div><div class="ttdef"><b>Definition</b> CustomDP.h:37</div></div>
+<div class="ttc" id="aclass_custom_d_p_html_a2b9127259ac05cfe7b2d8586d369278a"><div class="ttname"><a href="../../d1/d95/class_custom_d_p.html#a2b9127259ac05cfe7b2d8586d369278a">CustomDP::initialize</a></div><div class="ttdeci">int initialize(const shared_ptr&lt; DomainBase &gt; &amp;) override</div><div class="ttdef"><b>Definition</b> CustomDP.cpp:30</div></div>
+<div class="ttc" id="aclass_custom_d_p_html_a886f212db800b817348a4d664d981831"><div class="ttname"><a href="../../d1/d95/class_custom_d_p.html#a886f212db800b817348a4d664d981831">CustomDP::get_copy</a></div><div class="ttdeci">unique_ptr&lt; Material &gt; get_copy() override</div><div class="ttdef"><b>Definition</b> CustomDP.cpp:46</div></div>
+<div class="ttc" id="aclass_custom_d_p_html_a92dc09214f659829cee9c5bf2d8783bb"><div class="ttname"><a href="../../d1/d95/class_custom_d_p.html#a92dc09214f659829cee9c5bf2d8783bb">CustomDP::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition</b> CustomDP.cpp:48</div></div>
 <div class="ttc" id="aclass_nonlinear_drucker_prager_html"><div class="ttname"><a href="../../d2/dbe/class_nonlinear_drucker_prager.html">NonlinearDruckerPrager</a></div><div class="ttdoc">The NonlinearDruckerPrager class.</div><div class="ttdef"><b>Definition</b> NonlinearDruckerPrager.h:45</div></div>
 <div class="ttc" id="aclass_resource_holder_html"><div class="ttname"><a href="../../de/d24/class_resource_holder.html">ResourceHolder</a></div><div class="ttdef"><b>Definition</b> ResourceHolder.h:32</div></div>
 </div><!-- fragment --></div><!-- contents -->

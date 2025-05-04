@@ -1,6 +1,5 @@
 var class_sparse_mat_f_g_m_r_e_s =
 [
-    [ "SparseMatFGMRES", "d2/db5/class_sparse_mat_f_g_m_r_e_s.html#ab53bf84a4c19d29908349923a4fb3e5b", null ],
     [ "SparseMatFGMRES", "d2/db5/class_sparse_mat_f_g_m_r_e_s.html#a8bdd6f4ad70ff3a0dd9317356da7165c", null ],
     [ "SparseMatFGMRES", "d2/db5/class_sparse_mat_f_g_m_r_e_s.html#a4280950e2119a4c40d862db7f9770701", null ],
     [ "~SparseMatFGMRES", "d2/db5/class_sparse_mat_f_g_m_r_e_s.html#a21f10cab44a134d93efd753420113394", null ],

@@ -4,8 +4,6 @@ var class_explicit_integrator =
     [ "from_incre_velocity", "d4/df8/class_explicit_integrator.html#a84b50d6c6eb677a9c9b83e4b98ba99df", null ],
     [ "from_total_acceleration", "d4/df8/class_explicit_integrator.html#a49f59f5caf0dbb51b9b67deff28f1d4f", null ],
     [ "get_trial_displacement", "d4/df8/class_explicit_integrator.html#a0ce644f130bec1e8351f758f82481b04", null ],
-    [ "Integrator", "d4/df8/class_explicit_integrator.html#a3804589408d937067d5b4ba8087a19cd", null ],
-    [ "Integrator", "d4/df8/class_explicit_integrator.html#ab069d03cce0ee796148ceeaca8666bfd", null ],
     [ "Integrator", "d4/df8/class_explicit_integrator.html#a54cddb12aa8880efea6c1a1c39694a98", null ],
     [ "solve", "d4/df8/class_explicit_integrator.html#afe7804e121862b9df3e2f19ed5a1915a", null ],
     [ "solve", "d4/df8/class_explicit_integrator.html#a39ab9a904dcb6e00ea88929def6d3994", null ],

@@ -1,7 +1,7 @@
 var class_tabular =
 [
     [ "Tabular", "d0/d22/class_tabular.html#a7f7a2708ecea612cf8b7618a52c49426", null ],
-    [ "Tabular", "d0/d22/class_tabular.html#a60b2a0edd56344723b56f3ad5a758d1e", null ],
+    [ "Tabular", "d0/d22/class_tabular.html#a1ac875fa90977f2ebd3491c66d7bcc79", null ],
     [ "get_amplitude", "d0/d22/class_tabular.html#a98b7d98ea2f05f6015781a6fa90b3ecb", null ],
     [ "initialize", "d0/d22/class_tabular.html#a1637a344aad204ad4fd7c2e1c37582fb", null ],
     [ "print", "d0/d22/class_tabular.html#a64e8e407e33535ac3284034691ccb11d", null ],

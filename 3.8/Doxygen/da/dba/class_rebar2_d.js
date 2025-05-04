@@ -6,7 +6,7 @@ var class_rebar2_d =
     [ "get_copy", "da/dba/class_rebar2_d.html#ac2f0abacad9d7b3889385e3ffcbaada5", null ],
     [ "initialize", "da/dba/class_rebar2_d.html#a0a16dd322b4441014b3587e6bb1af10c", null ],
     [ "print", "da/dba/class_rebar2_d.html#a1de0f0f9733d8c19d21acc7ad9c3cca3", null ],
-    [ "record", "da/dba/class_rebar2_d.html#a8f28b72acdf0fc20b22ebf8326173982", null ],
+    [ "record", "da/dba/class_rebar2_d.html#a24f5f0e940d687a15306dd9f3200ce20", null ],
     [ "reset_status", "da/dba/class_rebar2_d.html#a728bddaeef305bccced9a3e59ec1e638", null ],
     [ "update_trial_status", "da/dba/class_rebar2_d.html#a8fd075016149e9be8abf87de40887646", null ]
 ];

@@ -6,7 +6,7 @@ var class_p_s =
     [ "compute_shape_function", "db/d61/class_p_s.html#adba69f489e6812a1acadc847ee950c88", null ],
     [ "initialize", "db/d61/class_p_s.html#ad09698a2a4b7d97c88a4461a58b47de6", null ],
     [ "print", "db/d61/class_p_s.html#a4579cc5ba53e2b27deab439329a6723b", null ],
-    [ "record", "db/d61/class_p_s.html#ac8624891a59b8c7bbec1b0b0d324b14f", null ],
+    [ "record", "db/d61/class_p_s.html#a8c75d25c6e129cb8c0c2fa201ceec7da", null ],
     [ "reset_status", "db/d61/class_p_s.html#a4cc8bab5c235d7db380de9540fe28b8f", null ],
     [ "update_status", "db/d61/class_p_s.html#a6a6e53e17bd3acae0e840ac4f0607d45", null ]
 ];

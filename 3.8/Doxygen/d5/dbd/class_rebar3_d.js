@@ -5,7 +5,7 @@ var class_rebar3_d =
     [ "commit_status", "d5/dbd/class_rebar3_d.html#a4ee4830adb51be5df38c30b4d60eb33b", null ],
     [ "get_copy", "d5/dbd/class_rebar3_d.html#a0071f54510a61e42d274e37738cff85c", null ],
     [ "initialize", "d5/dbd/class_rebar3_d.html#ac276adf32bc606b6d16c41c36b8a07f1", null ],
-    [ "record", "d5/dbd/class_rebar3_d.html#a2c0498bc83b37864892770e76f5f314d", null ],
+    [ "record", "d5/dbd/class_rebar3_d.html#a4523fa5de30610f241bf48510834e467", null ],
     [ "reset_status", "d5/dbd/class_rebar3_d.html#a8255bc2362de97d74cda1d4fe0cefe01", null ],
     [ "update_trial_status", "d5/dbd/class_rebar3_d.html#a038b29c259de1b8303c0c0ef41748692", null ]
 ];
