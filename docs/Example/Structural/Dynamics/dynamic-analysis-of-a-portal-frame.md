@@ -104,7 +104,8 @@ be different from the values given in section property table.
 
 ## Dynamic Analysis
 
-Now we run a time history analysis. The El Centro (NS component) ground motion is used.
+Now we run a time history analysis.
+The El Centro (NS component) ground motion is used.
 
 First we define the recorder to record response.
 
@@ -112,7 +113,8 @@ First we define the recorder to record response.
 hdf5recorder 1 Node U1 2 3
 ```
 
-Then the step. We define a dynamic step with a duration of fifty seconds.
+Then the step.
+We define a dynamic step with a duration of fifty seconds.
 
 ```
 step dynamic 1 50.
@@ -137,7 +139,8 @@ Now we apply acceleration on horizontal DoFs.
 acceleration 1 1 9.83 1
 ```
 
-The Newmark algorithm would be used. We adopt absolute displacement increment as convergence criterion.
+The Newmark algorithm would be used.
+We adopt absolute displacement increment as convergence criterion.
 
 ```
 integrator Newmark 1
@@ -154,7 +157,8 @@ The displacement history is shown as follows.
 
 ![undamped displacement history](dynamic-analysis-of-a-portal-frame-a.svg)
 
-Since no damping is defined, the system oscillates. Next we use a damper as energy dissipater.
+Since no damping is defined, the system oscillates.
+Next we use a damper as energy dissipater.
 
 ## Damped Model
 
@@ -165,7 +169,8 @@ material Viscosity01 2 1. 1E1
 element Damper01 6 1 3 2
 ```
 
-So the damping coefficient is $$\eta=10~\mathrm{kNms^{-1}}$$. The damping force is simply $$F=\eta\cdot{}v$$.
+So the damping coefficient is $$\eta=10~\mathrm{kNms^{-1}}$$.
+The damping force is simply $$F=\eta\cdot{}v$$.
 
 Rerun the analysis and the damped displacement history is given as follows.
 
