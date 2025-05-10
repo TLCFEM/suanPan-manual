@@ -1,6 +1,6 @@
 # [★★☆☆☆] Dynamic Analysis of a Portal Frame
 
-A portal frame is analyzed using viscous damper as energy dissipator.
+A portal frame is analysed using viscous damper as energy dissipater.
 
 The model script can be downloaded. [dynamic-analysis-of-a-portal-frame.zip](dynamic-analysis-of-a-portal-frame.zip)
 
@@ -13,11 +13,11 @@ Consider a simple portal frame with the following configurations.
 Then
 
 $$
-EI_c=2\times10^5\times3.18\times10^6=6.36\times10^{13}~\mathrm{Nmm^2}=0.636~\mathrm{MNm^2}.
+EI_c=2\times10^5\times3.18\times10^6=6.36\times10^{11}~\mathrm{Nmm^2}=0.636~\mathrm{MNm^2}.
 $$
 
-Since the moment of inertia of the beam is about ten times larger than that of column, it is fair to assume the beam is
-rigid. So the horizontal translation stiffness is
+Since the moment of inertia of the beam is about ten times larger than that of column, it is fair to assume the beam is rigid.
+So the horizontal translation stiffness is
 
 $$
 K=2K_c=2\times\dfrac{12EI}{L^3}=2\times\dfrac{12\times0.636~\mathrm{MNm^2}}{5^3~\mathrm{m^3}}=122.112~\mathrm{kN/m}.
@@ -71,19 +71,26 @@ peek eigenvalue
 The output is
 
 ```
-+--------------------------------------------------+
-|   __        __        suanPan is an open source  |
-|  /  \      |  \          FEM framework (64-bit)  |
-|  \__       |__/  __   __          Acrux (0.1.0)  |
-|     \ |  | |    |  \ |  |                        |
-|  \__/ |__| |    |__X |  |     maintained by tlc  |
-|                             all rights reserved  |
-+--------------------------------------------------+
++--------------------------------------------------------+
+|             ____             suanPan is an open source |
+|   ___ _   _|  _ \ __ _ _ __     FEM framework (64-bit) |
+|  / __| | | | |_) / _` | '_ \           Canopus (3.8.0) |
+|  \__ \ |_| |  __/ (_| | | | |        by tlc @ 236da9bc |
+|  |___/\__,_|_|   \__,_|_| |_|      all rights reserved |
+|                                 10.5281/zenodo.1285221 |
++--------------------------------------------------------+
+|  🧮 https://github.com/TLCFEM/suanPan                  |
+|  📚 https://tlcfem.github.io/suanPan-manual/latest     |
++--------------------------------------------------------+
+|  🌈 https://bit.ly/vsc-sp                              |
++--------------------------------------------------------+
+
 
 Eigenvalues:
    11.2068
 
-Finished in 0.006 seconds.
+
+Time Wasted: 0.0031 Seconds.
 ```
 
 Hence, the corresponding period is
