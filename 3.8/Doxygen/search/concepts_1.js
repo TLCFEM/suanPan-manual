@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5farma_5fmat_0',['is_arma_mat',['../dd/dbd/conceptis__arma__mat.html',1,'']]]
+  ['differentiable_0',['Differentiable',['../dd/d66/concept_differentiable.html',1,'']]]
 ];

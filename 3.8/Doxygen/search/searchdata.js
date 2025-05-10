@@ -13,7 +13,7 @@ var indexSectionsWithContent =
   10: "_ais",
   11: "123abcdegilmnoprstu",
   12: "cs",
-  13: "dist"
+  13: "cdirst"
 };
 
 var indexSectionNames =

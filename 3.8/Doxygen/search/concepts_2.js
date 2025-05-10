@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sp_5fd_0',['sp_d',['../de/d33/conceptsp__d.html',1,'']]],
-  ['sp_5fi_1',['sp_i',['../d5/d08/conceptsp__i.html',1,'']]]
+  ['is_5farma_5fmat_0',['is_arma_mat',['../dd/dbd/conceptis__arma__mat.html',1,'']]]
 ];

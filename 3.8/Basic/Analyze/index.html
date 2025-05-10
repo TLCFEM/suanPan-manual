@@ -14401,10 +14401,13 @@
 <h1 id="the-very-first-analysis">The Very First Analysis</h1>
 <p>This page aims to show an overview of how a model looks like by establishing a simple model, which is a simple elastic
 cantilever beam subjected to an end load.</p>
-<p>A native CPP parser is used by <code>suanPan</code>. The default syntax resembles the one of <code>OpenSees</code>. Model files are written in
-plain text. Although there is no restriction, the suffix <code>.supan</code> is reserved by default.</p>
-<p>The line starts with the hash symbol (<code>#</code>) or the exclamation symbol (<code>!</code>) is a comment line. To write one command spans
-a few lines, please use backslash (<code>\</code>) to concatenate multiple lines. Please refer to <a href="../Syntax/">Syntax</a> for details.</p>
+<p>A native C++ parser is used by <code>suanPan</code>.
+The default syntax resembles the one of <code>OpenSees</code>.
+Model files are written in plain text.
+Although there is no restriction, the suffix <code>.supan</code> is reserved by default.</p>
+<p>The line starts with the hash symbol (<code>#</code>) or the exclamation symbol (<code>!</code>) is a comment line.
+To write one command spans a few lines, please use backslash (<code>\</code>) to concatenate multiple lines.
+Please refer to <a href="../Syntax/">Syntax</a> for details.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -14459,8 +14462,9 @@ a few lines, please use backslash (<code>\</code>) to concatenate multiple lines
 <a id="__codelineno-0-26" name="__codelineno-0-26"></a>
 <a id="__codelineno-0-27" name="__codelineno-0-27"></a>exit
 </code></pre></div></td></tr></table></div>
-<p>Since each command is commented, there is not much to explain. This model is similar to the one created by the <code>example</code>
-command, both are simple one element models. The output is directly printed on screen by default. For this model, it is</p>
+<p>Since each command is commented, there is not much to explain.
+This model is similar to the one created by the <code>example</code> command, both are simple one element models.
+The output is directly printed on screen by default. For this model, it is</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -14483,29 +14487,35 @@ command, both are simple one element models. The output is directly printed on s
 <span class="normal"><a href="#__codelineno-1-20">20</a></span>
 <span class="normal"><a href="#__codelineno-1-21">21</a></span>
 <span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>+--------------------------------------------------+
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>|   __        __         suanPan is an open source |
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>|  /  \      |  \           FEM framework (64-bit) |
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>|  \__       |__/  __   __           Acrux (1.0.0) |
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>|     \ |  | |    |  \ |  |      maintained by tlc |
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>|  \__/ |__| |    |__X |  |    all rights reserved |
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>|                           10.5281/zenodo.1285221 |
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>+--------------------------------------------------+
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>|  https://github.com/TLCFEM/suanPan               |
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>|  https://github.com/TLCFEM/suanPan-manual        |
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>+--------------------------------------------------+
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>|  https://gitter.im/suanPan-dev/community         |
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>+--------------------------------------------------+
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>+--------------------------------------------------------+
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>|             ____             suanPan is an open source |
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>|   ___ _   _|  _ \ __ _ _ __     FEM framework (64-bit) |
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>|  / __| | | | |_) / _` | &#39;_ \           Canopus (3.8.0) |
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>|  \__ \ |_| |  __/ (_| | | | |        by tlc @ 236da9bc |
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>|  |___/\__,_|_|   \__,_|_| |_|      all rights reserved |
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>|                                 10.5281/zenodo.1285221 |
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>+--------------------------------------------------------+
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>|  🧮 https://github.com/TLCFEM/suanPan                  |
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>|  📚 https://tlcfem.github.io/suanPan-manual/latest     |
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>+--------------------------------------------------------+
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>|  🎧 https://bit.ly/vsc-sp                              |
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>+--------------------------------------------------------+
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>current analysis time: 1.00000.
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>Node 2:
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>   1.3400        0
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>Displacement:
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>   0.0239   0.0205   0.0229
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a>Resistance:
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>   1.7000E+01   2.3000E+01  -3.0820E-07
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a>Finished in 0.015 seconds.
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>&gt;&gt; Current Analysis Time: 1.00000.
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>Node 2:
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>Coordinate:
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>  1.3400e+00  0.0000e+00
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>Displacement:
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>  2.3926e-02  2.0476e-02  2.2921e-02
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>Resistance:
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>  1.7000e+01  2.3000e+01 -2.4633e-07
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>Time Wasted: 0.0029 Seconds.
 </code></pre></div></td></tr></table></div>
 <p>The analytical solution of horizontal tip displacement is</p>
 <div class="arithmatex">\[
@@ -14513,7 +14523,7 @@ u=\dfrac{PL}{EA}=\dfrac{17\times1.34}{132\times7.213}=0.023926.
 \]</div>
 <p>The analytical solution of vertical tip displacement is</p>
 <div class="arithmatex">\[
-u=\dfrac{PL^3}{3EI}=\dfrac{23\times1.34^3}{3\times132\times6.835}=0.020476.
+v=\dfrac{PL^3}{3EI}=\dfrac{23\times1.34^3}{3\times132\times6.835}=0.020476.
 \]</div>
 
 

@@ -28,6 +28,7 @@ var dir_90a01da27c815ec0f52ae9e4dc4ab23c =
     [ "revision.h", "d5/dbc/revision_8h.html", "d5/dbc/revision_8h" ],
     [ "ridders.hpp", "d0/d40/ridders_8hpp.html", "d0/d40/ridders_8hpp" ],
     [ "shape.h", "da/d18/shape_8h.html", "da/d18/shape_8h" ],
+    [ "sketching.hpp", "d8/d8c/sketching_8hpp.html", "d8/d8c/sketching_8hpp" ],
     [ "sort_color.hpp", "d2/df1/sort__color_8hpp.html", "d2/df1/sort__color_8hpp" ],
     [ "sort_rcm.cpp", "d8/d12/sort__rcm_8cpp.html", "d8/d12/sort__rcm_8cpp" ],
     [ "sort_rcm.h", "d0/d79/sort__rcm_8h.html", "d0/d79/sort__rcm_8h" ],
