@@ -394,8 +394,7 @@ If CMake GUI is used to configure the project, the following options are availab
 12. `SP_ENABLE_AVX512`: If enabled, compiler flags `-mavx512f` or `/arch:AVX512` will be used. (~2016)
 13. `SP_ENABLE_TBB_ALLOC`: If enabled, the TBB's memory allocator will be used.
 14. `SP_OPENBLAS_PATH`: If assigned, link the designated `OpenBLAS` library, otherwise the bundled version will be used.
-15. `SP_ENABLE_AOCL`: If enabled, one can use the `AOCL` implementation via assigning library paths
-    `AOCL_BLIS_PATH`, `AOCL_FLAME_PATH` and `AOCL_UTILS_PATH`.
+15. `SP_ENABLE_AOCL`: If enabled, one can use the `AOCL` implementation via assigning library path `AOCL_PATH`.
 16. `SP_ENABLE_MKL`: `MKL` needs to be installed manually by the user. If enabled, `MKL` will be used
     for linear algebra operations. If `SP_ENABLE_MKL` is enabled, set `MKLROOT` to the root directory of `MKL` installation. For
     example, `C:/Program Files (x86)/Intel/oneAPI/mkl/latest` or `/opt/intel/oneapi/mkl/latest`, also the following
