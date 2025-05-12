@@ -1,6 +1,6 @@
 # BFGS
 
-The `BFGS` solver uses the rank two update algorithm BFGS.
+The `BFGS` solver uses the rank-two update algorithm BFGS.
 Alternatively, the limited memory version can also be switched on.
 
 ## Reference
@@ -27,4 +27,9 @@ Since BFGS possesses a super-linear convergence rate, the overall performance sh
 
 Regardless of whether LBFGS is used, the maximum number of iterations will be limited to the size of the problem.
 
-There is no support for constraints implemented via the Lagrange multiplier method.
+There is **no** support for constraints implemented via the Lagrange multiplier method.
+
+Theoretically, BFGS only works on symmetric positive definite systems.
+The algorithm will eventually fail if the system is not positive definite.
+Thus, it cannot be used in problems that exhibits material softening, snap-back, snap-through, etc.
+However, the solver itself does **not** validate the type of systems given.
