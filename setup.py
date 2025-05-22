@@ -14,7 +14,7 @@ def remove(path: str):
         shutil.rmtree(path)
 
 
-def install():
+def install(run_doxygen: bool):
     # root directory
     remove("docs/Doxygen")
     remove("site")
@@ -32,8 +32,7 @@ def install():
     # 2. generate doxygen documentation
     os.chdir(archive_name)
 
-    doxygen_bin = "doxygen"
-    if shutil.which(doxygen_bin) is not None:
+    if shutil.which(doxygen_bin := "doxygen") is not None and run_doxygen:
         os.system(doxygen_bin)
 
         target_path = "../docs/Doxygen"
@@ -97,4 +96,4 @@ def install():
 
 
 if __name__ == "__main__":
-    install()
+    install("egg_info" not in sys.argv)
