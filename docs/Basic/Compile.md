@@ -212,7 +212,7 @@ Ubuntu official repository does not (Fedora does!) contain the latest VTK librar
 
 5.  Now obtain `suanPan` source code and unpack it. To configure it with VTK support, users may use the following
     flag `-DSP_ENABLE_VTK=ON`. If `FindVTK` is presented and `VTK` is installed to default location, there is no need
-    to provide the variable `VTK_DIR`, otherwise point it to the `lib/cmake/vtk-9.1` folder.
+    to provide the variable `VTK_PATH`, otherwise point it to the `lib/cmake/vtk-9.1` folder.
 
 ##### Install MKL
 
@@ -237,21 +237,21 @@ for details.
     sudo apt update && sudo apt install intel-oneapi-mkl-devel -y
     ```
 
-3.  Now compile `suanPan` by enabling MKL via option `-DSP_ENABLE_MKL=ON`. The corresponding `MKLROOT` shall be assigned, for
-    example `-DMKLROOT=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used
+3.  Now compile `suanPan` by enabling MKL via option `-DSP_ENABLE_MKL=ON`. The corresponding `MKL_PATH` shall be assigned, for
+    example `-DMKL_PATH=/opt/intel/oneapi/mkl/latest/`, depending on the installation location. The configuration used
     for snap is the following one.
 
     ```bash
     -DCMAKE_BUILD_TYPE=Release
     -DCMAKE_INSTALL_PREFIX=
-    -DMKLROOT=/opt/intel/oneapi/mkl/latest
+    -DMKL_PATH=/opt/intel/oneapi/mkl/latest
     -DSP_BUILD_PARALLEL=ON
     -DSP_ENABLE_HDF5=ON
     -DSP_ENABLE_IOMP=OFF
     -DSP_ENABLE_MKL=ON
     -DSP_ENABLE_SHARED_MKL=OFF
     -DSP_ENABLE_VTK=ON
-    -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/
+    -DVTK_PATH=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/
     ```
 
 #### Fedora
@@ -337,7 +337,7 @@ mkdir suanpan-build && cd suanpan-build
 # use clang, clang++ and gfortran
 export CC=/usr/local/opt/llvm/bin/clang && export CXX=/usr/local/opt/llvm/bin/clang++ && export FC=gfortran-10
 # configure project
-cmake -DCMAKE_BUILD_TYPE=Release -DSP_BUILD_PARALLEL=ON -DSP_ENABLE_HDF5=ON -DSP_ENABLE_VTK=ON -DVTK_DIR=../VTK-out/lib/cmake/vtk-9.1/ .
+cmake -DCMAKE_BUILD_TYPE=Release -DSP_BUILD_PARALLEL=ON -DSP_ENABLE_HDF5=ON -DSP_ENABLE_VTK=ON -DVTK_PATH=../VTK-out/lib/cmake/vtk-9.1/ .
 # compile
 make -j4
 ```
@@ -379,14 +379,14 @@ If CMake GUI is used to configure the project, the following options are availab
    the `suanPan` application itself.
 4. `SP_ENABLE_HDF5`: If enabled, `HDF5` will be used to provide support for [`hdf5recorder`](../Library/Recorder/Recorder.md).
 5. `SP_ENABLE_VTK`: If enabled, `VTK` will be used to provide support for visualization. It will be useful to
-   generate `.vtk` files that can be used in `Paraview` for post-processing. If enabled, `VTK_DIR` needs to be set to
-   the path of `VTK` installation. For example, `VTK_DIR=/usr/local/opt/vtk/lib/cmake/vtk-9.1`.
+   generate `.vtk` files that can be used in `Paraview` for post-processing. If enabled, `VTK_PATH` needs to be set to
+   the path of `VTK` installation. For example, `VTK_PATH=/usr/local/opt/vtk/lib/cmake/vtk-9.1`.
 6. `SP_ENABLE_CUDA`: `CUDA` needs to be installed manually by the user. If enabled, `CUDA` based solvers will be
    available. However, for dense matrix storage, only full matrix storage scheme is supported by `CUDA`. Note full
    matrix storage scheme is not favourable for FEM. It can, however, be used for sparse matrix solving and mixed
    precision solving.
 7. `SP_ENABLE_MAGMA`: `MAGMA` needs to be installed manually by the user. If enabled, `MAGMA` based solvers will be
-   available. The variable `MAGMAROOT` needs to be set to find necessary files.
+   available. The variable `MAGMA_PATH` needs to be set to find necessary files.
 8. `SP_ENABLE_ASAN`: If enabled, address sanitizer will be enabled. This is useful for debugging purposes.
 9.  `SP_ENABLE_CODECOV`: If enabled, compile options will be enabled to support code coverage report.
 10. `SP_ENABLE_AVX`: If enabled, compiler flags `-mavx` or `/arch:AVX` will be used. (~2011)
@@ -396,7 +396,7 @@ If CMake GUI is used to configure the project, the following options are availab
 14. `SP_OPENBLAS_PATH`: If assigned, link the designated `OpenBLAS` library, otherwise the bundled version will be used.
 15. `SP_ENABLE_AOCL`: If enabled, one can use the `AOCL` implementation via assigning library path `SP_AOCL_PATH`.
 16. `SP_ENABLE_MKL`: `MKL` needs to be installed manually by the user. If enabled, `MKL` will be used
-    for linear algebra operations. If `SP_ENABLE_MKL` is enabled, set `MKLROOT` to the root directory of `MKL` installation. For
+    for linear algebra operations. If `SP_ENABLE_MKL` is enabled, set `MKL_PATH` to the root directory of `MKL` installation. For
     example, `C:/Program Files (x86)/Intel/oneAPI/mkl/latest` or `/opt/intel/oneapi/mkl/latest`, also the following
     additional options are available.
 17. `SP_ENABLE_SHARED_MKL`: If enabled, dynamically linked `MKL` libraries will be used. Otherwise, statically linked `MKL`
@@ -424,14 +424,14 @@ this [file](https://github.com/TLCFEM/suanPan/blob/dev/snapcraft.yaml).
 # the parent folder contains source code
 cmake -DCMAKE_INSTALL_PREFIX= \
       -DCMAKE_BUILD_TYPE=Release \
+      -DMKL_PATH=/opt/intel/oneapi/mkl/latest \
       -DSP_BUILD_PARALLEL=ON \
       -DSP_ENABLE_HDF5=ON \
-      -DSP_ENABLE_VTK=ON \
-      -DVTK_DIR=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/ \
-      -DSP_ENABLE_MKL=ON \
-      -DMKLROOT=/opt/intel/oneapi/mkl/latest \
       -DSP_ENABLE_IOMP=OFF \
-      -DSP_ENABLE_SHARED_MKL=OFF
+      -DSP_ENABLE_MKL=ON \
+      -DSP_ENABLE_SHARED_MKL=OFF \
+      -DSP_ENABLE_VTK=ON \
+      -DVTK_PATH=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/
 ```
 
 ### `aarch64` Architecture

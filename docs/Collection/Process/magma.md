@@ -18,7 +18,7 @@ for my specific platform only:
       "C:/Program Files (x86)/Intel/oneAPI/mkl/2023.0.0/lib/intel64/mkl_core.lib",
       "C:/Program Files (x86)/Intel/oneAPI/compiler/2023.0.0/windows/compiler/lib/intel64_win/libiomp5md.lib"
     ],
-    "MKLROOT": "C:/Program Files (x86)/Intel/oneAPI/mkl/2023.0.0/",
+    "MKL_ROOT": "C:/Program Files (x86)/Intel/oneAPI/mkl/2023.0.0/",
     "GPU_TARGET": "Turing",
     "FORTRAN_CONVENTION": "-DADD_",
     "CMAKE_INSTALL_PREFIX": "magma-build"
@@ -36,13 +36,13 @@ An additional path shall be set to the MAGMA installation directory.
   "cmake.configureSettings": {
     "SP_ENABLE_CUDA": "ON",
     "SP_ENABLE_MAGMA": "ON",
-    "MAGMAROOT": "magma/installation/root"
+    "MAGMA_PATH": "magma/installation/root"
   }
 }
 ```
 
-The following files shall be present: `${MAGMAROOT}/include/magma.h`, `${MAGMAROOT}/lib/libmagma.a`
-and `${MAGMAROOT}/lib/libmagma_sparse.a`.
+The following files shall be present: `${MAGMA_PATH}/include/magma.h`, `${MAGMA_PATH}/lib/libmagma.a`
+and `${MAGMA_PATH}/lib/libmagma_sparse.a`.
 
 ## Using MAGMA Solver
 
