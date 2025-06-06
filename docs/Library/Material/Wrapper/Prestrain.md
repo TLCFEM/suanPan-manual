@@ -51,7 +51,7 @@ exit
 ```
 
 The above example is a simple demonstration.
-The prestrain $$\num{1E-2}$$ will be gradually (linearly increasing from zero to the specific magnitude) applied to the second element.
+The prestrain $$0.01$$ will be gradually (linearly increasing from zero to the specific magnitude) applied to the second element.
 The system balances itself without any external load.
 
-The final displacement of node 2 should be $$\num{5E-3}$$ since both elements share the same section properties.
+The final displacement of node 2 should be $$0.005$$ since both elements share the same section properties.
