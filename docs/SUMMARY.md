@@ -300,6 +300,7 @@
     * [Tchamwa](Library/Integrator/Tchamwa.md)
     * [BatheExplicit](Library/Integrator/BatheExplicit.md)
     * [GeneralizedAlphaExplicit](Library/Integrator/GeneralizedAlphaExplicit.md)
+    * [WAT2](Library/Integrator/WAT2.md)
 
 ### Material
 
