@@ -119,6 +119,7 @@
 * Universal
     * [Combine](Library/Amplitude/Universal/Combine.md)
     * [Constant](Library/Amplitude/Universal/Constant.md)
+    * [Custom](Library/Amplitude/Universal/Custom.md)
     * [Decay](Library/Amplitude/Universal/Decay.md)
     * [Linear](Library/Amplitude/Universal/Linear.md)
     * [Modulated](Library/Amplitude/Universal/Modulated.md)

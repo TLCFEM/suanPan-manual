@@ -25,3 +25,7 @@ amplitutde Linear (1) (2)
 amplitude Ramp (1)
 # (1) int, unique amplitude tag
 ```
+
+The `Ramp` amplitude would look like this.
+
+<iframe src="https://www.desmos.com/calculator/7nb8pjfljr?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
