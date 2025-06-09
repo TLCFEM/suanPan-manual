@@ -16,7 +16,7 @@ step implicitdynamic (1) (2)
 ### Remarks
 
 1. Displacement control solver [`MPDC`](../Solver/MPDC.md) is automatically enabled if a displacement load is active.
-2. The [`Newmark`](../Integrator/Newmark/Newmark.md) is automatically enabled if there is no valid integrator defined.
+2. The [`Newmark`](../Integrator/Implicit/Newmark/Newmark.md) is automatically enabled if there is no valid integrator defined.
 
 ## Explicit Dynamics System
 
@@ -34,5 +34,5 @@ step explicitdynamic (1) (2)
 
 ### Remarks
 
-1. The [`Tchamwa`](../Integrator/Tchamwa.md) with spectral radius of $$0.8$$ is automatically enabled if there is no
+1. The [`Tchamwa`](../Integrator/Explicit/Tchamwa.md) with spectral radius of $$0.8$$ is automatically enabled if there is no
    valid integrator defined.

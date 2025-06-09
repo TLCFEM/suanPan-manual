@@ -2,7 +2,7 @@
 
 Newmark Algorithm With Lee Damping Model (Type 0 Only)
 
-See this [example](../../../Example/Structural/Dynamics/response-history-analysis-of-an-elastic-coupled-wall.md).
+See this [example](../../../../Example/Structural/Dynamics/response-history-analysis-of-an-elastic-coupled-wall.md).
 
 Please check the references for theory.
 

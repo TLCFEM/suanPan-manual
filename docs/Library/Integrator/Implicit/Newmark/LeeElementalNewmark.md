@@ -11,7 +11,7 @@ Please check the references for theory.
 **For the moment, MPC cannot be considered in all global damping models.**
 
 !!! Note
-    This integrator must be used with [`ElementalLee`](../../../Library/Element/Modifier/ElementalLee.md)
+    This integrator must be used with [`ElementalLee`](../../../Element/Modifier/ElementalLee.md)
     modifier to work properly.
 
 ## Syntax
@@ -25,7 +25,7 @@ integrator LeeElementalNewmark (1) (2) (3) ((4) (5)...)
 # (5) double, circular frequency \omega_p at the peak of each mode
 ```
 
-See also [LeeNewmark](../../../Library/Integrator/Newmark/LeeNewmark.md)
-and [LeeNewmarkFull](../../../Library/Integrator/Newmark/LeeNewmarkFull.md).
+See also [LeeNewmark](LeeNewmark.md)
+and [LeeNewmarkFull](LeeNewmarkFull.md).
 
 The actually damping ratio applied is the product of the reference damping ratio and the ratio defined in each modifier.

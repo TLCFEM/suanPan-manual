@@ -21,7 +21,7 @@ The [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.1
 damping model at element level and investigates the relationship between the elemental and global damping ratio.
 
 To use the model, the [`ElementalLee`](../../../Library/Element/Modifier/ElementalLee.md) modifier and
-the [`LeeElementalNewmark`](../../../Library/Integrator/Newmark/LeeElementalNewmark.md) integrator shall be used.
+the [`LeeElementalNewmark`](../../../Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md) integrator shall be used.
 
 ## The Model
 
@@ -56,7 +56,7 @@ fix 2 2 1 2 3 4
 The elemental damping is achieved by two parts.
 The global configuration of the damping curve adjusts how the system responds to different frequencies, that is, defines
 a reference damping curve.
-This part is done via the [`LeeElementalNewmark`](../../../Library/Integrator/Newmark/LeeElementalNewmark.md)
+This part is done via the [`LeeElementalNewmark`](../../../Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md)
 integrator.
 The second part assigns damping ratio multipliers to each element via
 the [`ElementalLee`](../../../Library/Element/Modifier/ElementalLee.md) modifier.
@@ -88,7 +88,7 @@ converger RelIncreDisp 1 1E-10 3 1
 ```
 
 The dynamic step is used to release the spring.
-In this step, the [`LeeElementalNewmark`](../../../Library/Integrator/Newmark/LeeElementalNewmark.md)
+In this step, the [`LeeElementalNewmark`](../../../Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md)
 integrator is used to define the reference damping curve.
 One base function is used, the reference damping ratio is $$1$$ at $$5~\text{rad/s}$$.
 The actual damping ratios are $$0.05\times1=0.05$$ and $$0.2\times1=0.2$$, respectively.

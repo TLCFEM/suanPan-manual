@@ -10,30 +10,30 @@ an `Integrator`. A number of integrators are implemented.
 ## Newmark
 
 But how can one determine which `Integrator` to use? The most widely used integrator is (probably)
-the [`Newmark`](Newmark/Newmark.md) integrator. Indeed, it is almost the standard practice to use it in earthquake
-engineering, and there is no need to justify the choice. But the [`Newmark`](Newmark/Newmark.md) method is not always
+the [`Newmark`](Implicit/Newmark/Newmark.md) integrator. Indeed, it is almost the standard practice to use it in earthquake
+engineering, and there is no need to justify the choice. But the [`Newmark`](Implicit/Newmark/Newmark.md) method is not always
 the best choice.
 
 ## Bathe Two--Step
 
-If energy and momentum conservations matter, the [`BatheTwoStep`](BatheTwoStep.md) integrator provides a very
-cost-efficient solution. The performance should be comparable to the [`Newmark`](Newmark/Newmark.md) integrator.
+If energy and momentum conservations matter, the [`BatheTwoStep`](Implicit/BatheTwoStep.md) integrator provides a very
+cost-efficient solution. The performance should be comparable to the [`Newmark`](Implicit/Newmark/Newmark.md) integrator.
 
 ## Generalized-$$\alpha$$
 
-If one wants to customise algorithmic damping, the [`GeneralizedAlpha`](GeneralizedAlpha.md) integrator can be used. By
+If one wants to customise algorithmic damping, the [`GeneralizedAlpha`](Implicit/GeneralizedAlpha.md) integrator can be used. By
 adjusting two parameters, several other methods can be recovered. Since the equation of motion is satisfied somewhere
 within the time step (rather than the beginning/ending), it requires roughly a factor of two more **vector** operations
-than the [`Newmark`](Newmark/Newmark.md) integrator. However, vector operations are not costly and are mostly
+than the [`Newmark`](Implicit/Newmark/Newmark.md) integrator. However, vector operations are not costly and are mostly
 implemented in a parallel fashion, it is not considered a severe performance issue.
 
 ## GSSSS
 
-The most general integrator is the [`GSSSS`](GSSSS.md) integrator. The optimal performance (in terms of overshoot,
+The most general integrator is the [`GSSSS`](Implicit/GSSSS.md) integrator. The optimal performance (in terms of overshoot,
 energy dissipation/dispersion) can be achieved by using the **U0-V0 Optimal** scheme.
 
-The [`GSSSS`](GSSSS.md) integrator requires an additional iteration to synchronise the state of the system. Thus, the
-performance is sightly higher than that of the [`GeneralizedAlpha`](GeneralizedAlpha.md) integrator.
+The [`GSSSS`](Implicit/GSSSS.md) integrator requires an additional iteration to synchronise the state of the system. Thus, the
+performance is sightly higher than that of the [`GeneralizedAlpha`](Implicit/GeneralizedAlpha.md) integrator.
 
 ## Central Difference (Not Available)
 

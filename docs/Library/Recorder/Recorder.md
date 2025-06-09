@@ -153,7 +153,7 @@ level energy dissipation.
 A very direct example is the global damping models used in seismic engineering. Take the `Rayleigh` model as an example.
 Since it can be implemented in two ways, either apply linear combination of stiffness and mass at element level after
 computing elemental stiffness and mass (see Rayleigh [`Modifier`](../Element/Modifier/Modifier.md)), or globally after
-assembling global stiffness and mass (see [`RayleighNewmark`](../Integrator/Newmark/RayleighNewmark.md)). If the former
+assembling global stiffness and mass (see [`RayleighNewmark`](../Integrator/Implicit/Newmark/RayleighNewmark.md)). If the former
 is selected, each element can record its own energy dissipation term. If the latter is selected, the dissipated energy
 can only be computed from global stored quantities.
 

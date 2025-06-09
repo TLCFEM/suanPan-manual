@@ -120,11 +120,11 @@ If one plots the acceleration history, one can notice that the acceleration is n
 ![newmark acceleration](triple-pendulum-newmark.svg)
 
 Given that the Newmark method has no algorithmic damping, the high frequency noise cannot be suppressed. Try the extra 
-two models using [`BatheTwoStep`](../../../Library/Integrator/BatheTwoStep.md) and
-[`GSSSS`](../../../Library/Integrator/GSSSS.md) methods in the archive.
+two models using [`BatheTwoStep`](../../../Library/Integrator/Implicit/BatheTwoStep.md) and
+[`GSSSS`](../../../Library/Integrator/Implicit/GSSSS.md) methods in the archive.
 
-If one instead uses the [`GSSSS`](../../../Library/Integrator/GSSSS.md) method with identical spectral radii, which is 
-equivalent to the [`generalised alpha`](../../../Library/Integrator/GeneralizedAlpha.md) method, the acceleration 
+If one instead uses the [`GSSSS`](../../../Library/Integrator/Implicit/GSSSS.md) method with identical spectral radii, which is 
+equivalent to the [`generalised alpha`](../../../Library/Integrator/Implicit/GeneralizedAlpha.md) method, the acceleration 
 history can be plotted as follows.
 
 ![generalised alpha acceleration](triple-pendulum-gssss.svg)

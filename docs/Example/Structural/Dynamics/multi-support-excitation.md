@@ -39,7 +39,7 @@ hdf5recorder 1 Node U1 1 2
 amplitude Tabular 1 EZ
 ```
 
-The analysis setting consists of a dynamic step with [`Newmark`](../../../Library/Integrator/Newmark/Newmark.md)
+The analysis setting consists of a dynamic step with [`Newmark`](../../../Library/Integrator/Implicit/Newmark/Newmark.md)
 integrator. Those settings are stored in `setting.sp` file.
 
 ```

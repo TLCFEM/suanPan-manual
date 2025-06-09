@@ -1,6 +1,6 @@
 # GeneralizedAlphaExplicit
 
-Explicit version of the [GeneralizedAlpha](GeneralizedAlpha.md) integrator.
+Explicit version of the [GeneralizedAlpha](../Implicit/GeneralizedAlpha.md) integrator.
 
 References:
 
