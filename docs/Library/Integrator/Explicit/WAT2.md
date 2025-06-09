@@ -18,7 +18,7 @@ integrator WAT2 (1) [2]
 ## Remarks
 
 The parameter $$r$$ is a ratio between zero and unity.
-It yields $C_1$$ ranging from $$0.3$$ to $$0.4$$ as recommended in the reference.
+It yields $$C_1$$ ranging from $$0.3$$ to $$0.4$$ as recommended in the reference.
 
 $$
 C_1=0.3+0.1r.
