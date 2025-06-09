@@ -46,7 +46,7 @@ An assignment must be used to explicitly assign values to the output variables.
 The input arguments can be either scalars or vectors.
 The output argument should be a vector, the size shall be given such that $$y|3$$ represents a vector of size 3.
 
-This form ***does support*** automatic computation of derivatives.
+This form ***does not support*** automatic computation of derivatives.
 Thus, it ***cannot*** be used in models that require automatic computation of derivatives.
 
 ## Remarks
@@ -56,7 +56,7 @@ Thus, it ***cannot*** be used in models that require automatic computation of de
 2.  Multiple variables must be separated by vertical bar `|`.
 3.  The expression can be given as a string or as a file name. The program tries to load the file first. If the file
     does not exist, the program tries to parse the string as an expression.
-4.  No whitespace (',', ' ', etc.) is allowed in any arguments.
+4.  No whitespace (including `,`, ` `, etc.) is allowed in any arguments.
 
 `exprtk` provides very powerful functionalities. It is possible to apply logics and control flows in the expression.
 
@@ -81,8 +81,7 @@ For the unixial nonlienar elastic model, the input is strain, which maps to `x`,
 
 Alternatively, the expression can be stored in a file and loaded by the program.
 
-```text
-# file cubic.txt
+```text title="cubic.txt"
 x^3+x
 ```
 
