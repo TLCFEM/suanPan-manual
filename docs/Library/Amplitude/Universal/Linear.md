@@ -28,4 +28,4 @@ amplitude Ramp (1)
 
 The `Ramp` amplitude would look like this.
 
-<iframe src="https://www.desmos.com/calculator/7nb8pjfljr?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/7nb8pjfljr?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
