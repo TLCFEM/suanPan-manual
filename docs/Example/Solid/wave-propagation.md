@@ -134,24 +134,24 @@ Sufficiently accurate results often require an accurate estimation of the highes
 
 ### Implicit
 
-The [Bathe](../../Library/Integrator/Implicit/BatheTwoStep.md) two-step method appears to have the best numerical dispersion
-performance among implicit methods.
+The [Bathe](../../Library/Integrator/Implicit/BatheTwoStep.md) two-step method appears to have the best numerical dispersion performance among implicit methods.
 
-The [GSSSS](../../Library/Integrator/Implicit/GSSSS.md) optimal scheme is also fine if the spectral radius is chosen properly.
+The [GSSSS](../../Library/Integrator/Implicit/GSSSS.md) optimal scheme and [OALTS](../../Library/Integrator/Implicit/OALTS.md) perform fine if the spectral radius is chosen properly.
 
-The second-order, unconditionally stable [Newmark](../../Library/Integrator/Implicit/Newmark/Newmark.md) method has significant
-high-frequency noise.
+The second-order, unconditionally stable [Newmark](../../Library/Integrator/Implicit/Newmark/Newmark.md) method has significant high-frequency noise.
 This explains why it is mainly used for structural dynamics in which the low-frequency response is of interest.
 
-The chosen time step size is $$0.005$$ seconds for all three cases.
+The chosen time step size is $$0.005$$ seconds for all cases.
 The following radii are used:
 
 - Implicit Bathe: 0.6
 - Implicit GSSSS Optimal: 0.6
+- Implicit OALTS: 0.6
 - Implicit Newmark: 1.0
 
 ![implicit bathe](implicit-bathe-0.6.gif)
 ![implicit gssss](implicit-gssss-0.6.gif)
+![implicit oalts](implicit-oalts-0.6.gif)
 ![implicit newmark](implicit-newmark.gif)
 
 ### Explicit
@@ -165,13 +165,17 @@ reference, shows superior performance.
 However, it requires a corrector step, which requires an additional element-wise computation for each substep.
 This increases the computational cost.
 
+The [WAT2](../../Library/Integrator/Explicit/WAT2.md) is a newly developed framework.
+
 The chosen time step size is $$0.0005$$ seconds.
 The following radii are used:
 
 - Explicit Bathe: 0.6
 - Explicit Tchamwa: 0.6
 - Explicit Tchamwa: 0.3
+- Explicit WAT2: ~0.36
 
 ![explicit bathe](explicit-bathe-0.6.gif)
 ![explicit tchamwa](explicit-tchamwa-0.6.gif)
 ![explicit tchamwa](explicit-tchamwa-0.3.gif)
+![explicit wat2](explicit-wat2.gif)
