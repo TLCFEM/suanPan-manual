@@ -149,10 +149,7 @@ The following radii are used:
 - Implicit OALTS: 0.6
 - Implicit Newmark: 1.0
 
-![implicit bathe](implicit-bathe-0.6.gif)
-![implicit gssss](implicit-gssss-0.6.gif)
-![implicit oalts](implicit-oalts-0.6.gif)
-![implicit newmark](implicit-newmark.gif)
+![implicit methods](implicit.gif)
 
 ### Explicit
 
@@ -175,7 +172,4 @@ The following radii are used:
 - Explicit Tchamwa: 0.3
 - Explicit WAT2: ~0.36
 
-![explicit bathe](explicit-bathe-0.6.gif)
-![explicit tchamwa](explicit-tchamwa-0.6.gif)
-![explicit tchamwa](explicit-tchamwa-0.3.gif)
-![explicit wat2](explicit-wat2.gif)
+![explicit methods](explicit.gif)
