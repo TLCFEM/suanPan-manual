@@ -113,7 +113,7 @@ The animation is presented as follows.
 
 Everything seems to be working fine, which appears to be good. So what's next? If the results are carefully examined,
 one would notice some unexpected behaviour. For ones who have a good background of dynamics, it must be noticed that 
-he Newmark method has no algorithmic damping. It is also not ideal in terms of energy/momentum conservation.
+the Newmark method has no algorithmic damping. It is also not ideal in terms of energy/momentum conservation.
 
 If one plots the acceleration history, one can notice that the acceleration is not physically meaningful.
 
