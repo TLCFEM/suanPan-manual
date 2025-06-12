@@ -4,7 +4,8 @@ First order explicit time integration method using the Tchamwa scheme.
 
 References:
 
-1. [10.1002/nme.6574](https://doi.org/10.1002/nme.6574)
+1. [10.1016/j.advengsoft.2004.10.011](https://doi.org/10.1016/j.advengsoft.2004.10.011)
+2. [10.1002/nme.6574](https://doi.org/10.1002/nme.6574)
 
 ## Syntax
 
@@ -36,7 +37,7 @@ The Tchamwa scheme has a first order accuracy and controllable numerical dissipa
 
 ## Remarks
 
-If the model is linear elastic, it is possible to indicate using
+If the model is linear, it is possible to indicate using
 
 ```text
 set linear_system true
