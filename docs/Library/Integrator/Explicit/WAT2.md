@@ -34,3 +34,9 @@ It is a two-stage method implemented in an alternating fashion.
     For the results at the end of the first stage, it is only second-order accurate.
     For nonlinear problems, the error introduced in the first stage will be carried over to the history of the material model, thus affecting the results of the second stage.
     The overall accuracy can at best be second-order for nonlinear problems.
+
+## Accuracy Analysis
+
+![wat2-0.0](wat2-0.0.svg)
+![wat2-1.0](wat2-1.0.svg)
+![wat2-default](wat2-default.svg)

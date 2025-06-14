@@ -25,3 +25,9 @@ set linear_system true
 ```
 
 to speed up the computation.
+
+## Accuracy Analysis
+
+![batheexplicit-0.0](batheexplicit-0.0.svg)
+![batheexplicit-0.5](batheexplicit-0.5.svg)
+![batheexplicit-1.0](batheexplicit-1.0.svg)

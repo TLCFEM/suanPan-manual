@@ -64,3 +64,9 @@ A number of commonly known methods can be accommodated in the framework. For exa
 | HHT               | U0     | $$\rho$$                  | $$\rho$$                  | $$\dfrac{1-\rho}{2\rho}$$ |
 | **U0-V0 Optimal** | U0/V0  | $$\rho$$                  | $$1$$                     | $$\rho$$                  |
 | New Midpoint      | V0     | $$1$$                     | $$1$$                     | $$0$$                     |
+
+## Accuracy Analysis
+
+![gssss-optimal-0.0](gssss-optimal-0.0.svg)
+![gssss-optimal-0.5](gssss-optimal-0.5.svg)
+![gssss-optimal-1.0](gssss-optimal-1.0.svg)

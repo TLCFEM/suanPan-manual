@@ -44,3 +44,9 @@ set linear_system true
 ```
 
 to speed up the computation.
+
+## Accuracy Analysis
+
+![tchamwa-0.0](tchamwa-0.0.svg)
+![tchamwa-0.5](tchamwa-0.5.svg)
+![tchamwa-1.0](tchamwa-1.0.svg)

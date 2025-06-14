@@ -107,3 +107,9 @@ The effective stiffness is then
 $$
 \bar{K}=K+\dfrac{1}{q_2\Delta{}t}C+\dfrac{1}{q_2^2\Delta{}t^2}M.
 $$
+
+## Accuracy Analysis
+
+![bathetwostep-0.0](bathetwostep-0.0.svg)
+![bathetwostep-0.5](bathetwostep-0.5.svg)
+![bathetwostep-1.0](bathetwostep-1.0.svg)

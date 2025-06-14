@@ -35,3 +35,9 @@ set fixed_step_size true
 ```
 
 is not required and this flag is always `true`.
+
+## Accuracy Analysis
+
+![oalts-0.0](oalts-0.0.svg)
+![oalts-0.5](oalts-0.5.svg)
+![oalts-1.0](oalts-1.0.svg)

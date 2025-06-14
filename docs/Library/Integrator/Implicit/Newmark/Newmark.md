@@ -28,3 +28,8 @@ The equation of motion is expressed at $$t_{n+1}$$.
 $$
 Ma_{n+1}+Cv_{n+1}+Kd_{n+1}=F_{n+1}.
 $$
+
+## Accuracy Analysis
+
+![newmark-default](newmark-default.svg)
+![newmark-linear-acceleration](newmark-linear-acceleration.svg)

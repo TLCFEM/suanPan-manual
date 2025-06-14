@@ -77,3 +77,9 @@ Some special parameters can be chosen.
 | $$0.0$$      | $$0.0$$      | Newmark        |
 | -            | $$0.0$$      | HHT-$$\alpha$$ |
 | $$0.0$$      | -            | WBZ-$$\alpha$$ |
+
+## Accuracy Analysis
+
+![generalizedalpha-0.0](generalizedalpha-0.0.svg)
+![generalizedalpha-0.5](generalizedalpha-0.5.svg)
+![generalizedalpha-1.0](generalizedalpha-1.0.svg)

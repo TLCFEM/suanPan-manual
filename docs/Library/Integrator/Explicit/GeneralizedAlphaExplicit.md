@@ -24,3 +24,9 @@ set linear_system true
 ```
 
 to speed up the computation.
+
+## Accuracy Analysis
+
+![generalizedalphaexplicit-0.0](generalizedalphaexplicit-0.0.svg)
+![generalizedalphaexplicit-0.5](generalizedalphaexplicit-0.5.svg)
+![generalizedalphaexplicit-1.0](generalizedalphaexplicit-1.0.svg)
