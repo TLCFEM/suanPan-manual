@@ -42,8 +42,8 @@ integrator GSSSSOptimal (1) [2]
 
 ## Remarks
 
-The framework has three parameters to be defined, namely $$\rho_{1,\infty}$$, $$\rho_{2,\infty}$$ and $$\rho_
-{3,\infty}$$. They satisfy the following condition,
+The framework has three parameters to be defined, namely $$\rho_{1,\infty}$$, $$\rho_{2,\infty}$$ and $$\rho_{3,\infty}$$.
+They satisfy the following condition,
 
 $$
 0\leqslant\rho_{3,\infty}\leqslant\rho_{1,\infty}\leqslant\rho_{2,\infty}\leqslant1.
