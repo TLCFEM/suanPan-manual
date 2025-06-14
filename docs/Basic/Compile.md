@@ -406,7 +406,7 @@ If CMake GUI is used to configure the project, the following options are availab
 19. `SP_ENABLE_MPI`: Enabled cluster support via MPI.
 20. `SP_ENABLE_64BIT_INDEXING`: Enable 64-bit integer for matrix indexing.
 
-!!! warning
+!!! Warning
     The `SP_ENABLE_IOMP` should be switched on/off based on the compilers used.
     In principle, there should be only one implementation of OpenMP.
     Thus, if the compilers used are `gcc/g++/gfortran`, `SP_ENABLE_IOMP=OFF`.
