@@ -20,7 +20,7 @@ Thus, support excitations in forms of displacement, velocity and acceleration ar
 Here we first create a simple cantilever beam with additional point mass at the free end. The basic geometry related
 commands are stored in file `geometry.sp`.
 
-``` title="geometry.sp"
+```text title="geometry.sp"
 # geometry.sp
 
 node 1 0 0
@@ -42,7 +42,7 @@ amplitude Tabular 1 EZ
 The analysis setting consists of a dynamic step with [`Newmark`](../../../Library/Integrator/Implicit/Newmark/Newmark.md)
 integrator. Those settings are stored in `setting.sp` file.
 
-``` title="setting.sp"
+```text title="setting.sp"
 # setting.sp
 
 step dynamic 1 30
@@ -76,7 +76,7 @@ acceleration 2 1 -.2 1 2
 file setting.sp
 ```
 
-It shall be noted $-\ddot{u}_g$ is applied.
+It shall be noted $$-\ddot{u}_g$$ is applied.
 
 ### Apply Excitation On Support
 
