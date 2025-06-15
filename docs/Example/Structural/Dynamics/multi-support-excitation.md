@@ -20,7 +20,7 @@ Thus, support excitations in forms of displacement, velocity and acceleration ar
 Here we first create a simple cantilever beam with additional point mass at the free end. The basic geometry related
 commands are stored in file `geometry.sp`.
 
-```
+``` title="geometry.sp"
 # geometry.sp
 
 node 1 0 0
@@ -42,7 +42,7 @@ amplitude Tabular 1 EZ
 The analysis setting consists of a dynamic step with [`Newmark`](../../../Library/Integrator/Implicit/Newmark/Newmark.md)
 integrator. Those settings are stored in `setting.sp` file.
 
-```
+``` title="setting.sp"
 # setting.sp
 
 step dynamic 1 30
@@ -108,3 +108,18 @@ displacement needs to be obtained by computing the difference between displaceme
 
 All time integration methods are implemented in such a way that both ways of applying excitations would yield the same results if they are equivalent theoretically.
 This is done by applying algorithm-aware conversion among displacement, velocity and acceleration excitations.
+
+## Implicit vs Explicit
+
+Implicit integration methods are different from explicit methods in the sense that different quantities are used as the base quantity.
+In implicit methods, the base quantity is displacement, while in explicit methods, the base quantity is acceleration.
+
+Thus, with implicit methods, both `supportvelocity` and `supportacceleration` will be converted to prescribed displacement.
+However, with explicit methods, `supportacceleration` will be converted to prescribed acceleration, while `supportvelocity` **cannot** be used.
+This is because typically there is no way to convert velocity to acceleration in explicit methods.
+
+The following is a validation of several integration methods.
+
+![support motion validation](multi-support-excitation-validation.svg)
+
+The presented results can be reproduced via [this](multi-support-excitation.py) script.
