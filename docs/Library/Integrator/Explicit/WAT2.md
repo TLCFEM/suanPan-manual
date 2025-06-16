@@ -26,6 +26,9 @@ $$
 
 The default value of $$r=1/3$$ yields $$C_1=1/3$$.
 
+!!! Warning
+    When $$r>1/3$$, the algorithm extrapolates.
+
 It is a two-stage method implemented in an alternating fashion.
 
 !!! Warning

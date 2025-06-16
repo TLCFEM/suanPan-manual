@@ -1,5 +1,6 @@
 import dataclasses
 import os
+import shutil
 import subprocess
 from itertools import cycle
 
@@ -7,6 +8,7 @@ import h5py
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.interpolate import interp1d
 from scipy.signal import butter, filtfilt
 
 matplotlib.rcParams.update({"font.size": 6})
@@ -69,6 +71,9 @@ class Response:
     u2: np.ndarray
 
 
+data = None
+
+
 def numerical():
     def read_h5(name):
         with h5py.File(f"{name}.h5", "r") as f:
@@ -79,7 +84,9 @@ def numerical():
     time, _, u2 = read_h5("R1-U1")
     _, a1, _ = read_h5("R2-A1")
 
-    return Response(time, a1, u2)
+    interp_func = interp1d(data[:, 0], data[:, 1], bounds_error=False, fill_value=0)
+
+    return Response(time, a1 - 0.2 * interp_func(time), u2)
 
 
 def amplitude():
@@ -100,6 +107,7 @@ def amplitude():
         np.random.normal(0, 1, len(t)), 0.1, 10, fs=1 / dt
     )
 
+    global data
     data = np.column_stack(
         (
             t,
@@ -109,7 +117,7 @@ def amplitude():
     )
     data[0, 1] = 0.0
 
-    np.savetxt("random", data, fmt="%.2f %.6f", comments="")
+    np.savetxt("random", data, fmt="%.2f %.16f", comments="")
 
 
 results = {}
@@ -128,12 +136,16 @@ def run(config):
             )
         )
 
-    subprocess.run(["suanpan", "-np", "-f", "tester.sp"], check=True)
+    subprocess.run(["suanpan", "-np", "-f", "tester.sp"])
 
     results[title] = numerical()
 
 
 if __name__ == "__main__":
+    if not shutil.which("suanpan"):
+        print("suanpan command not found.")
+        exit(1)
+
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
     amplitude()
@@ -160,26 +172,29 @@ if __name__ == "__main__":
         ("BatheExplicit 1.0", "explicitdynamic", "BatheExplicit 1 1.0"),
         ("BatheExplicit 0.5", "explicitdynamic", "BatheExplicit 1 0.5"),
         ("BatheExplicit 0.0", "explicitdynamic", "BatheExplicit 1 0.0"),
+        ("ICL 1.0", "explicitdynamic", "ICL 1 1.0"),
+        ("ICL 0.5", "explicitdynamic", "ICL 1 0.5"),
         (
             "GeneralizedAlphaExplicit 1.0",
             "explicitdynamic",
             "GeneralizedAlphaExplicit 1 1.0",
         ),
-        (
-            "GeneralizedAlphaExplicit 0.0",
-            "explicitdynamic",
-            "GeneralizedAlphaExplicit 1 0.0",
-        ),
-        (
-            "GeneralizedAlphaExplicit 0.5",
-            "explicitdynamic",
-            "GeneralizedAlphaExplicit 1 0.5",
-        ),
+        # extrapolate # (
+        # extrapolate #     "GeneralizedAlphaExplicit 0.5",
+        # extrapolate #     "explicitdynamic",
+        # extrapolate #     "GeneralizedAlphaExplicit 1 0.5",
+        # extrapolate # ),
+        # extrapolate # (
+        # extrapolate #     "GeneralizedAlphaExplicit 0.0",
+        # extrapolate #     "explicitdynamic",
+        # extrapolate #     "GeneralizedAlphaExplicit 1 0.0",
+        # extrapolate # ),
         ("GSSE 1.0", "explicitdynamic", "GSSE 1 1.0"),
         ("GSSE 0.5", "explicitdynamic", "GSSE 1 0.5"),
-        ("GSSE 0.0", "explicitdynamic", "GSSE 1 0.0"),
-        ("ICL 1.0", "explicitdynamic", "ICL 1 1.0"),
-        ("ICL 0.5", "explicitdynamic", "ICL 1 0.5"),
+        # extrapolate # ("GSSE 0.0", "explicitdynamic", "GSSE 1 0.0"),
+        # extrapolate # ("WAT2 1.0", "explicitdynamic", "WAT2 1 1.0"),
+        ("WAT2 Default", "explicitdynamic", "WAT2 1"),
+        ("WAT2 0.0", "explicitdynamic", "WAT2 1 0.0"),
     ]
 
     for config in configs:
@@ -209,7 +224,7 @@ if __name__ == "__main__":
     for key, value in results.items():
         plt.plot(
             value.time,
-            value.a1,
+            np.abs(value.a1),
             label=key,
             linestyle=next(LS),
             linewidth=0.8,
@@ -217,21 +232,22 @@ if __name__ == "__main__":
 
     plt.legend(ncol=3, fontsize=4)
     plt.xlabel("time (s)")
-    plt.ylabel("acceleration (fixed end)")
+    plt.ylabel("absolute acceleration error (fixed end)")
     plt.grid(which="both", linestyle="--", linewidth=0.2)
     plt.xlim(0, 2)
+    plt.yscale("log")
 
     fig.text(
         0,
         0,
-        "Ground motion applied via support acceleration at the fixed end.",
+        "Ground motion applied via support acceleration at the fixed end. Extrapolating schemes excluded.",
         horizontalalignment="left",
         verticalalignment="bottom",
         fontsize=4,
     )
 
     fig.tight_layout(pad=0.1)
-    formatted_title = "support-motion"
+    formatted_title = "multi-support-excitation-validation"
     fig.savefig(f"{formatted_title}.pdf")
     fig.savefig(f"{formatted_title}.svg", format="svg")
     plt.close(fig)

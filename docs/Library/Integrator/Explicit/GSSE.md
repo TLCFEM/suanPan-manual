@@ -24,6 +24,9 @@ set linear_system true
 
 to speed up the computation.
 
+!!! Warning
+    When $$\rho_b<0.5$$, the algorithm extrapolates.
+
 ## Accuracy Analysis
 
 ![gsse-0.0](gsse-0.0.svg)

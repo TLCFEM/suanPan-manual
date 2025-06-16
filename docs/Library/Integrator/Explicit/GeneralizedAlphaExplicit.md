@@ -25,6 +25,9 @@ set linear_system true
 
 to speed up the computation.
 
+!!! Warning
+    When $$\rho_\infty<1$$, the algorithm extrapolates.
+
 ## Accuracy Analysis
 
 ![generalizedalphaexplicit-0.0](generalizedalphaexplicit-0.0.svg)
