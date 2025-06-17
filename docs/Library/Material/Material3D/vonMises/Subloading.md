@@ -61,3 +61,10 @@ material Subloading (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14)
 ## Example
 
 See [this](../../../../Example/Structural/Statics/calibration-subloading.md) example.
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the script [subloading.iso.error.map.py](subloading.iso.error.map.py).
+
+![absolute error uniaxial](subloading.abs.error.uniaxial.svg)
+![absolute error biaxial](subloading.abs.error.biaxial.svg)
