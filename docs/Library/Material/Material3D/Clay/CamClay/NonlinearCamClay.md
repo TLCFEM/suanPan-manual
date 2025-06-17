@@ -56,5 +56,5 @@ Please note in practical applications, this value is negative as soil is often i
 
 The following example iso-error maps are obtained via the script [cam.clay.iso.error.map.py](cam.clay.iso.error.map.py).
 
-![absolute error uniaxial](abs.error.uniaxial.svg)
-![absolute error biaxial](abs.error.biaxial.svg)
+![absolute error uniaxial](cam.clay.abs.error.uniaxial.svg)
+![absolute error biaxial](cam.clay.abs.error.biaxial.svg)

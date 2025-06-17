@@ -71,3 +71,10 @@ This model supports the following additional history variables to be recorded.
 |----------------|-------------------------------|
 | DT             | tensile damage                |
 | DC             | compressive damage            |
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the script [cdp.iso.error.map.py](cdp.iso.error.map.py).
+
+![absolute error uniaxial](cdp.abs.error.uniaxial.svg)
+![absolute error biaxial](cdp.abs.error.biaxial.svg)
