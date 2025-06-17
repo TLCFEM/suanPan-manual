@@ -52,7 +52,6 @@ Please note in practical applications, this value is negative as soil is often i
 |----------------------|----------------------------|
 | `initial_history(0)` | accumulated plastic strain |
 
-
 ## Iso-error Map
 
 The following example iso-error maps are obtained via the script [cam.clay.iso.error.map.py](cam.clay.iso.error.map.py).

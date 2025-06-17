@@ -35,7 +35,10 @@ def run_analysis(strain):
         os.remove("RESULT.txt")
 
     result = subprocess.run(
-        ["suanpan", "-f", "isomap.sp"], capture_output=True, text=True, encoding="utf-8"
+        ["suanpan", "-np", "-f", "isomap.sp"],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
     )
 
     if "[ERROR]" in result.stdout:
@@ -129,6 +132,6 @@ if __name__ == "__main__":
 
     for flag in (True, False):
         plot(
-            f"material BilinearCC 1 {young_modulus} .4 .8 .8 {0.2 * yield_stress} {yield_stress} {hardening_ratio * young_modulus}",
+            f"material BilinearJ2 1 {young_modulus} .2 {yield_stress} {hardening_ratio} 0.5",
             flag,
         )

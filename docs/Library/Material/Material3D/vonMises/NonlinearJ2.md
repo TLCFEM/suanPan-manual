@@ -152,4 +152,12 @@ double PolyJ2::compute_dk(const double p_strain) const {
 
 ## Example
 
-A few different models are shown as examples. User can define arbitrary models.
+A few different models are shown as examples.
+User can define arbitrary models.
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the script [j2.iso.error.map.py](j2.iso.error.map.py).
+
+![absolute error uniaxial](j2.abs.error.uniaxial.svg)
+![absolute error biaxial](j2.abs.error.biaxial.svg)
