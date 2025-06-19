@@ -21,8 +21,23 @@ class ErrorMap:
         base_resolution: int = 200,
         executable: str = "suanpan",
         tmp_dir: str = "tmp",
-            contour_resolution: int = 20,
+        contour_samples: int = 20,
     ):
+        """Initializes an ErrorMap instance with the specified parameters.
+        Args:
+            command (str): The command string, typically containing the material name as the second word.
+            ref_strain (float): The reference strain value.
+            center (tuple[int, int]): The (x, y) coordinates for the center of the map.
+            size (int): The size of the error map region (unit: ref_strain).
+            ref_stress (float, optional): The reference stress value. Defaults to 1.0.
+            resolution (int, optional): The number of steps used to compute from center to target. Defaults to 100.
+            base_resolution (int, optional): The number of steps used to compute from origin to center. Defaults to 200.
+            executable (str, optional): The name or path of the executable to use. Defaults to "suanpan".
+            tmp_dir (str, optional): The directory for temporary files. Defaults to "tmp".
+            contour_samples (int, optional): The number of samples for contour calculation. Defaults to 20.
+        Raises:
+            FileNotFoundError: If the specified executable is not found in the system PATH.
+        """
         self.material_name = command.split()[1].lower()
         self.command = command
         self.ref_strain = ref_strain
@@ -31,7 +46,7 @@ class ErrorMap:
         self.resolution = resolution
         self.executable = executable
         self.tmp_dir = tmp_dir
-        self.contour_resolution = contour_resolution
+        self.contour_samples = contour_samples
 
         self.base_deformation = self._generate_base(center, base_resolution)
 
@@ -133,10 +148,10 @@ center: ({self.base_deformation[-1, 0]:.4e}, {self.base_deformation[-1, 1]:.4e})
         stress[3:] = 2 * stress[3:]
         return np.sqrt(np.sum(stress))
 
-    def contour(self,title:str=''):
-        contour_size = self.contour_resolution
+    def contour(self, title: str = ""):
+        contour_size = self.contour_samples
         region = (
-            np.array(range(-contour_size, contour_size + 1) )
+            np.array(range(-contour_size, contour_size + 1))
             * self.size
             / float(contour_size)
         )
@@ -166,7 +181,7 @@ center: ({self.base_deformation[-1, 0]:.4e}, {self.base_deformation[-1, 1]:.4e})
 
         ex_grid, ey_grid = np.meshgrid(region, region)
         fig = self._generate_figure(ex_grid, ey_grid, error_grid)
-        full_title= f'{title or self.material_name}.abs.error'
+        full_title = f"{title or self.material_name}.abs.error"
         fig.savefig(f"{full_title}.pdf")
         fig.savefig(f"{full_title}.svg")
 
