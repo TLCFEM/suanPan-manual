@@ -157,7 +157,26 @@ User can define arbitrary models.
 
 ## Iso-error Map
 
-The following example iso-error maps are obtained via the script [j2.iso.error.map.py](j2.iso.error.map.py).
+The following example iso-error maps are obtained via the following script.
 
-![absolute error uniaxial](j2.abs.error.uniaxial.svg)
-![absolute error biaxial](j2.abs.error.biaxial.svg)
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 1e5
+yield_stress = 100.0
+hardening_ratio = 0.05
+
+with ErrorMap(
+    f"material BilinearJ2 1 {young_modulus} .2 {yield_stress} {hardening_ratio} 0.5",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+    contour_samples=20,
+) as error_map:
+    error_map.contour("j2.uniaxial", center=(-2, 0), size=1)
+    error_map.contour("j2.biaxial", center=(-2, -2), size=1)
+```
+
+![absolute error uniaxial](j2.uniaxial.abs.error.svg)
+![absolute error biaxial](j2.biaxial.abs.error.svg)

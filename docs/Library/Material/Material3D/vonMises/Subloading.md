@@ -64,7 +64,29 @@ See [this](../../../../Example/Structural/Statics/calibration-subloading.md) exa
 
 ## Iso-error Map
 
-The following example iso-error maps are obtained via the script [subloading.iso.error.map.py](subloading.iso.error.map.py).
+The following example iso-error maps are obtained via the following script.
 
-![absolute error uniaxial](subloading.abs.error.uniaxial.svg)
-![absolute error biaxial](subloading.abs.error.biaxial.svg)
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 1e5
+yield_stress = 100.0
+hardening_ratio = 0.05
+
+with ErrorMap(
+    f"""material Subloading 1 {young_modulus} 0.2 \
+{yield_stress} {hardening_ratio * young_modulus} 0 0 \
+0 0 0 0 \
+5E2 0 0 0""",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+    contour_samples=20,
+) as error_map:
+    error_map.contour("subloading.uniaxial", center=(-2, 0), size=1)
+    error_map.contour("subloading.biaxial", center=(-2, -2), size=1)
+```
+
+![absolute error uniaxial](subloading.uniaxial.abs.error.svg)
+![absolute error biaxial](subloading.biaxial.abs.error.svg)
