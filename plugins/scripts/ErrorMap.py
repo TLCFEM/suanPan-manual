@@ -125,8 +125,7 @@ center: ({self.base_deformation[-1, 0]:.4e}, {self.base_deformation[-1, 1]:.4e})
         )
         plt.gca().set_aspect("equal", adjustable="box")
         plt.tight_layout()
-        plt.savefig(f"{self.material_name}.abs.error.pdf")
-        plt.savefig(f"{self.material_name}.abs.error.svg")
+        return fig
 
     @staticmethod
     def _norm(stress: np.ndarray):
@@ -134,7 +133,7 @@ center: ({self.base_deformation[-1, 0]:.4e}, {self.base_deformation[-1, 1]:.4e})
         stress[3:] = 2 * stress[3:]
         return np.sqrt(np.sum(stress))
 
-    def contour(self):
+    def contour(self,title:str=''):
         contour_size = self.contour_resolution
         region = (
             np.array(range(-contour_size, contour_size + 1) )
@@ -166,7 +165,10 @@ center: ({self.base_deformation[-1, 0]:.4e}, {self.base_deformation[-1, 1]:.4e})
                 )
 
         ex_grid, ey_grid = np.meshgrid(region, region)
-        self._generate_figure(ex_grid, ey_grid, error_grid)
+        fig = self._generate_figure(ex_grid, ey_grid, error_grid)
+        full_title= f'{title or self.material_name}.abs.error'
+        fig.savefig(f"{full_title}.pdf")
+        fig.savefig(f"{full_title}.svg")
 
 
 if __name__ == "__main__":
