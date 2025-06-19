@@ -1,6 +1,6 @@
 import subprocess
 from genericpath import exists
-from os import chdir, mkdir, remove
+from os import chdir, getcwd, mkdir, remove
 from shutil import which
 from time import sleep
 
@@ -55,12 +55,16 @@ class ErrorMap:
                 f"Executable '{self.executable}' not found. Please ensure it is installed and in your PATH."
             )
 
+        self.original_dir = None
+
     def __enter__(self):
         if not self.tmp_dir:
             return self
 
         if not exists(self.tmp_dir):
             mkdir(self.tmp_dir)
+
+        self.original_dir = getcwd()
         chdir(self.tmp_dir)
 
         with open("isomap.sp", "w") as f:
@@ -71,6 +75,9 @@ class ErrorMap:
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
+        if self.original_dir:
+            chdir(self.original_dir)
+
         return False
 
     def _generate_base(self, center: tuple[int, int], resolution: int):

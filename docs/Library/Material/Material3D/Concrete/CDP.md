@@ -74,7 +74,36 @@ This model supports the following additional history variables to be recorded.
 
 ## Iso-error Map
 
-The following example iso-error maps are obtained via the script [cdp.iso.error.map.py](cdp.iso.error.map.py).
+The following example iso-error maps are obtained via the following script.
 
-![absolute error uniaxial](cdp.abs.error.uniaxial.svg)
-![absolute error biaxial](cdp.abs.error.biaxial.svg)
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 3e4
+yield_stress = 30
+
+with ErrorMap(
+   f"material CDP 1 {young_modulus} .18 {0.1 * yield_stress} {yield_stress} 1E-2 1E-1 .4 3. .6 .8 .23 1.16 .4",
+   ref_strain=yield_stress / young_modulus,
+   center=(-2, 0),
+   size=1,
+   ref_stress=yield_stress,
+   contour_samples=20,
+) as error_map:
+   error_map.contour("cdp.uniaxial")
+
+with ErrorMap(
+   f"material CDP 1 {young_modulus} .18 {0.1 * yield_stress} {yield_stress} 1E-2 1E-1 .4 3. .6 .8 .23 1.16 .4",
+   ref_strain=yield_stress / young_modulus,
+   center=(-2, -2),
+   size=1,
+   ref_stress=yield_stress,
+   contour_samples=20,
+) as error_map:
+   error_map.contour("cdp.biaxial")
+```
+
+![absolute error uniaxial](cdp.uniaxial.abs.error.svg)
+![absolute error biaxial](cdp.biaxial.abs.error.svg)
