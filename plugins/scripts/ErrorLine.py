@@ -7,14 +7,13 @@ from time import sleep
 import numpy as np
 from matplotlib import pyplot as plt
 
-has_rich = False
 
 try:
     from rich.progress import track
 
     has_rich = True
 except ImportError:
-    pass
+    has_rich = False
 
 
 class ErrorLine:
@@ -139,7 +138,7 @@ class ErrorLine:
         error_curve = np.zeros(num_points)
 
         for i in (
-            track(range(num_points), description="Contouring...", transient=True)
+            track(range(num_points), description="Contouring...", transient=True)  # type: ignore
             if has_rich
             else range(num_points)
         ):

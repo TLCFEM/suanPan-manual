@@ -7,6 +7,13 @@ from time import sleep
 import numpy as np
 from matplotlib import pyplot as plt
 
+try:
+    from rich.progress import track
+
+    has_rich = True
+except ImportError:
+    has_rich = False
+
 
 class ErrorMap:
     def __init__(
@@ -161,26 +168,28 @@ class ErrorMap:
         num_points = len(region)
         error_grid = np.zeros((num_points, num_points))
 
-        counter = 0
-        for i in range(num_points):
-            for j in range(num_points):
-                counter += 1
-                print(f"Contouring {counter}/{error_grid.size}...")
+        for x in (
+            track(range(error_grid.size), description="Contouring...", transient=True)  # type: ignore
+            if has_rich
+            else range(error_grid.size)
+        ):
+            if not has_rich:
+                print(f"Contouring {x + 1}/{error_grid.size}...")
 
-                increment = (
-                    self._generate_increment(region[i], region[j])
-                    + self.base_deformation[-1, :]
-                )
-                reference = self._run_analysis(
-                    np.vstack((self.base_deformation, increment))
-                )
-                coarse = self._run_analysis(
-                    np.vstack((self.base_deformation, increment[-1, :]))
-                )
+            i, j = divmod(x, num_points)
 
-                error_grid[i, j] = (
-                    100 * self._norm(coarse - reference) / self.ref_stress
-                )
+            increment = (
+                self._generate_increment(region[i], region[j])
+                + self.base_deformation[-1, :]
+            )
+            reference = self._run_analysis(
+                np.vstack((self.base_deformation, increment))
+            )
+            coarse = self._run_analysis(
+                np.vstack((self.base_deformation, increment[-1, :]))
+            )
+
+            error_grid[i, j] = 100 * self._norm(coarse - reference) / self.ref_stress
 
         ex_grid, ey_grid = np.meshgrid(region, region)
         fig = self._generate_figure(ex_grid, ey_grid, error_grid)
