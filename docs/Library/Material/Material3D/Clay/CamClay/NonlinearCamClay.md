@@ -54,7 +54,26 @@ Please note in practical applications, this value is negative as soil is often i
 
 ## Iso-error Map
 
-The following example iso-error maps are obtained via the script [cam.clay.iso.error.map.py](cam.clay.iso.error.map.py).
+The following example iso-error maps are obtained via the following script.
 
-![absolute error uniaxial](cam.clay.abs.error.uniaxial.svg)
-![absolute error biaxial](cam.clay.abs.error.biaxial.svg)
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 1e5
+yield_stress = 100.0
+hardening_ratio = 0.05
+
+with ErrorMap(
+    f"material BilinearCC 1 {young_modulus} .4 .8 .8 {0.2 * yield_stress} {yield_stress} {hardening_ratio * young_modulus}",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+    contour_samples=20,
+) as error_map:
+    error_map.contour("cam.clay.uniaxial", center=(-2, 0), size=1)
+    error_map.contour("cam.clay.biaxial", center=(-2, -2), size=1)
+```
+
+![absolute error uniaxial](cam.clay.uniaxial.abs.error.svg)
+![absolute error biaxial](cam.clay.biaxial.abs.error.svg)

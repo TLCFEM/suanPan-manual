@@ -14,8 +14,6 @@ class ErrorMap:
         command: str,
         *,
         ref_strain: float,
-        center: tuple[int, int],
-        size: int,
         ref_stress: float = 1.0,
         resolution: int = 100,
         base_resolution: int = 200,
@@ -27,8 +25,6 @@ class ErrorMap:
         Args:
             command (str): The command string, typically containing the material name as the second word.
             ref_strain (float): The reference strain value.
-            center (tuple[int, int]): The (x, y) coordinates for the center of the map.
-            size (int): The size of the error map region (unit: ref_strain).
             ref_stress (float, optional): The reference stress value. Defaults to 1.0.
             resolution (int, optional): The number of steps used to compute from center to target. Defaults to 100.
             base_resolution (int, optional): The number of steps used to compute from origin to center. Defaults to 200.
@@ -41,14 +37,13 @@ class ErrorMap:
         self.material_name = command.split()[1].lower()
         self.command = command
         self.ref_strain = ref_strain
-        self.size = size
         self.ref_stress = ref_stress
         self.resolution = resolution
+        self.base_resolution = base_resolution
+        self.base_deformation: np.ndarray = None  # type: ignore
         self.executable = executable
         self.tmp_dir = tmp_dir
         self.contour_samples = contour_samples
-
-        self.base_deformation = self._generate_base(center, base_resolution)
 
         if which(self.executable) is None:
             raise FileNotFoundError(
@@ -139,8 +134,7 @@ class ErrorMap:
         fig.text(
             0,
             0,
-            f"""{self.command}
-center: ({self.base_deformation[-1, 0]:.4e}, {self.base_deformation[-1, 1]:.4e}), reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}""",
+            f"{self.command}\ncenter: ({self.base_deformation[-1, 0]:.4e}, {self.base_deformation[-1, 1]:.4e}), reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}",
             fontsize=8,
             va="bottom",
             ha="left",
@@ -155,11 +149,13 @@ center: ({self.base_deformation[-1, 0]:.4e}, {self.base_deformation[-1, 1]:.4e})
         stress[3:] = 2 * stress[3:]
         return np.sqrt(np.sum(stress))
 
-    def contour(self, title: str = ""):
+    def contour(self, title: str = "", *, center: tuple[int, int], size: int):
+        self.base_deformation = self._generate_base(center, self.base_resolution)
+
         contour_size = self.contour_samples
         region = (
             np.array(range(-contour_size, contour_size + 1))
-            * self.size
+            * size
             / float(contour_size)
         )
         num_points = len(region)
