@@ -89,7 +89,7 @@ def install(run_doxygen: bool):
         install_requires=required,
         entry_points={
             "mkdocs.plugins": [
-                "overwrite_math = overwrite.overwrite:OverwriteMath",
+                "overwrite_math = plugins.overwrite.overwrite:OverwriteMath",
             ]
         },
     )
