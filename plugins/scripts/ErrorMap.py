@@ -82,14 +82,12 @@ class ErrorMap:
 
         return False
 
-    def _generate_base(self, center: tuple[int, int], resolution: int):
+    def _generate_base(self, center: tuple, resolution: int):
         deformation = np.zeros((resolution, 6))
-        deformation[:, 0] = np.linspace(
-            0, center[0] * self.ref_strain, resolution + 1, endpoint=True
-        )[1:]
-        deformation[:, 1] = np.linspace(
-            0, center[1] * self.ref_strain, resolution + 1, endpoint=True
-        )[1:]
+        for i, x in enumerate(center):
+            deformation[:, i] = np.linspace(
+                0, x * self.ref_strain, resolution + 1, endpoint=True
+            )[1:]
         return deformation
 
     def _generate_increment(self, dx: float, dy: float):
@@ -138,10 +136,15 @@ class ErrorMap:
         plt.title(
             f"{self.material_name.upper()} Absolute Error (unit: % of $\\sigma_\\text{{ref}}$)"
         )
+        center = []
+        for x in self.base_deformation[-1, :]:
+            if x == 0:
+                break
+            center.append(f"{x:.4e}")
         fig.text(
             0,
             0,
-            f"{self.command}\ncenter: ({self.base_deformation[-1, 0]:.4e}, {self.base_deformation[-1, 1]:.4e}), reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}",
+            f"{self.command}\ncenter: ({', '.join(center)}), reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}",
             fontsize=8,
             va="bottom",
             ha="left",
@@ -156,7 +159,7 @@ class ErrorMap:
         stress[3:] = 2 * stress[3:]
         return np.sqrt(np.sum(stress))
 
-    def contour(self, title: str = "", *, center: tuple[int, int], size: int):
+    def contour(self, title: str = "", *, center: tuple, size: int):
         self.base_deformation = self._generate_base(center, self.base_resolution)
 
         contour_size = self.contour_samples

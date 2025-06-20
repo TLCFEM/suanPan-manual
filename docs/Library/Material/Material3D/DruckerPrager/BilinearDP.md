@@ -86,3 +86,26 @@ save recorder 1 2
 
 exit
 ```
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the following script.
+
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 1e5
+ref_stress = 20
+
+with ErrorMap(
+    f"material BilinearDP 1 {young_modulus} 0.3 0.31 0.31 1.219 6.983 100",
+    ref_strain=ref_stress / young_modulus,
+    ref_stress=ref_stress,
+    contour_samples=20,
+) as error_map:
+    error_map.contour("dp.uniaxial", center=(-2, 0.5, 0.5), size=1)
+```
+
+![absolute error uniaxial](dp.uniaxial.abs.error.svg)
