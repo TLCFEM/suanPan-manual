@@ -40,7 +40,7 @@ $$
 F(\sigma,c)=\sigma-\sqrt{3}\xi{}c.
 $$
 
-This leads to a yield stress $\sigma_y=\sqrt{3}\xi{}c_0$.
+This leads to a yield stress $$\sigma_y=\sqrt{3}\xi{}c_0$$.
 The plastic hardening modulus is $$3\xi^2H$$.
 In terms of total strain and stress, the hardening ratio is $$3\xi^2H/(E+3\xi^2H)$$.
 
