@@ -2,6 +2,8 @@
 
 Nonlinear General Gurson Porous Model
 
+See also the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
+
 ## Yield Function
 
 An extended yield function is used,
