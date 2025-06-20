@@ -115,8 +115,13 @@ class ErrorMap:
         )[1:]
         return increment
 
-    def _run_analysis(self, strain_history: np.ndarray):
-        np.savetxt("strain_history", strain_history)
+    def _run_analysis(self, increment: np.ndarray):
+        np.savetxt(
+            "strain_history",
+            np.vstack(
+                (self.base_deformation, self.base_deformation[-1, :] + increment)
+            ),
+        )
 
         if exists("RESULT.txt"):
             remove("RESULT.txt")
@@ -196,16 +201,9 @@ class ErrorMap:
 
             i, j = divmod(x, num_points)
 
-            increment = (
-                self._generate_increment(region[i], region[j])
-                + self.base_deformation[-1, :]
-            )
-            reference = self._run_analysis(
-                np.vstack((self.base_deformation, increment))
-            )
-            coarse = self._run_analysis(
-                np.vstack((self.base_deformation, increment[-1, :]))
-            )
+            increment = self._generate_increment(region[i], region[j])
+            reference = self._run_analysis(increment)
+            coarse = self._run_analysis(increment[-1, :])
 
             error_grid[i, j] = 100 * self._norm(coarse - reference) / self.ref_stress
 
