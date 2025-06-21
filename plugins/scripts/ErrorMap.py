@@ -23,7 +23,7 @@ from time import sleep
 from typing import Literal
 
 import numpy as np
-from joblib import Parallel, delayed
+from joblib import Parallel, cpu_count, delayed
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
@@ -40,7 +40,7 @@ class ErrorMap:
         executable: str = "suanpan",
         tmp_dir: str = "tmp",
         contour_samples: int = 20,
-        parallel: int = 1,
+        parallel: int = cpu_count(True),
         dimension: int = 6,
     ):
         """Initializes an ErrorMap instance with the specified parameters.
@@ -53,7 +53,7 @@ class ErrorMap:
             executable (str, optional): The name or path of the executable to use. Defaults to "suanpan".
             tmp_dir (str, optional): The directory for temporary files. Defaults to "tmp".
             contour_samples (int, optional): The number of samples for contour calculation. Defaults to 20.
-            parallel (int, optional): The number of parallel processes to use. Defaults to 1.
+            parallel (int, optional): The number of parallel processes to use. Defaults to the number of CPU cores available.
             dimension (int, optional): The dimension of the problem, either 3 or 6. Defaults to 6.
         Raises:
             FileNotFoundError: If the specified executable is not found in the system PATH.
