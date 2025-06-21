@@ -90,3 +90,31 @@ with ErrorMap(
 
 ![absolute error uniaxial](subloading.uniaxial.abs.error.svg)
 ![absolute error biaxial](subloading.biaxial.abs.error.svg)
+
+The following example iso-error maps are obtained via the following script.
+
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 1e5
+yield_stress = 100.0
+hardening_ratio = 0.05
+
+with ErrorMap(
+    f"""material Subloading 1 {young_modulus} 0.2 \
+{yield_stress} {hardening_ratio * young_modulus} 0 0 \
+0 0 0 0 \
+5E2 0 5E2 0.7""",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+    contour_samples=30,
+    parallel=7,
+) as error_map:
+    error_map.contour("subloading.uniaxial", center=(-4, 0), size=3, type="rel")
+    error_map.contour("subloading.biaxial", center=(-4, -4), size=3, type="rel")
+```
+
+![relative error uniaxial](subloading.uniaxial.rel.error.svg)
+![relative error biaxial](subloading.biaxial.rel.error.svg)
