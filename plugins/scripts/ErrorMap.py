@@ -143,7 +143,7 @@ class ErrorMap:
         return np.loadtxt("RESULT.txt")[-1, :]
 
     def _generate_figure(
-        self, x_grid: np.ndarray, y_grid: np.ndarray, grid: np.ndarray
+        self, x_grid: np.ndarray, y_grid: np.ndarray, grid: np.ndarray, type: str
     ):
         fig = plt.figure(figsize=(7.5, 7))
         contour = plt.contourf(x_grid, y_grid, grid, levels=20, cmap="coolwarm")
@@ -154,9 +154,11 @@ class ErrorMap:
         plt.clabel(contour, inline=True, fontsize=8)
         plt.xlabel("$\\Delta{}\\varepsilon_x/\\varepsilon_{\\text{ref}}$")
         plt.ylabel("$\\Delta{}\\varepsilon_y/\\varepsilon_{\\text{ref}}$")
-        plt.title(
-            f"{self._material_name.upper()} Absolute Error (unit: % of $\\sigma_\\text{{ref}}$)"
-        )
+        if type == "abs":
+            full_title = f"{self._material_name.upper()} Absolute Error (unit: % of $\\sigma_\\text{{ref}}$)"
+        else:
+            full_title = f"{self._material_name.upper()} Relative Error (unit: %)"
+        plt.title(full_title)
         center = []
         for x in self._base[-1, :]:
             if x == 0:
@@ -194,14 +196,18 @@ class ErrorMap:
         else:
             yield
 
-    def _run_all(self, dx, dy):
+    def _run_all(self, dx, dy, type):
         with self._temporary_dir():
             increment = self._generate_increment(dx, dy)
             reference = self._run_analysis(increment)
             coarse = self._run_analysis(increment[-1, :])
-            return 100 * self._norm(coarse - reference) / self.ref_stress
+            return (
+                100
+                * self._norm(coarse - reference)
+                / (self.ref_stress if type == "abs" else self._norm(reference))
+            )
 
-    def contour(self, title: str = "", *, center: tuple, size: int):
+    def contour(self, title: str = "", *, type: str = "abs", center: tuple, size: int):
         self._base = self._generate_base(center, self.base_resolution)
 
         region = (
@@ -218,7 +224,7 @@ class ErrorMap:
             tasks[x] = (i, j, region[i], region[j])
 
         def _runner(_i, _j, _dx, _dy):
-            return _i, _j, self._run_all(_dx, _dy)
+            return _i, _j, self._run_all(_dx, _dy, type)
 
         tasks = tqdm(tasks, desc="Contouring...")  # type: ignore
 
@@ -233,8 +239,8 @@ class ErrorMap:
                 error_grid[i, j] = point
 
         ex_grid, ey_grid = np.meshgrid(region, region)
-        fig = self._generate_figure(ex_grid, ey_grid, error_grid)
-        full_title = f"{title or self._material_name}.abs.error"
+        fig = self._generate_figure(ex_grid, ey_grid, error_grid, type)
+        full_title = f"{title or self._material_name}.{type}.error"
         fig.savefig(f"{full_title}.pdf")
         fig.savefig(f"{full_title}.svg")
 
