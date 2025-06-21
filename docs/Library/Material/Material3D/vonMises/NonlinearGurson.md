@@ -25,6 +25,10 @@ $$\sigma_y(\varepsilon_m^p)$$ is the yield stress, $$\varepsilon_m^p$$ is the eq
 * $$q_1=q_2=1$$ The original Gurson model is recovered.
 * $$q_1=0$$ The von Mises model is recovered.
 
+The following is a visualization of the yield surface in the $$p-q$$ plane.
+
+<iframe src="https://www.desmos.com/calculator/5x3nh1l317?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 ## Evolution of Equivalent Plastic Strain
 
 The evolution of $$\varepsilon_m^p$$ is assumed to be governed by the equivalent plastic work expression,
