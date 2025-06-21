@@ -65,6 +65,10 @@ $$
 where $$s$$ is the deviatoric stress, $$p$$ is the hydrostatic stress, $$\alpha$$ is the back stress ratio and $$m$$ is
 a constant that controls the size of the wedge.
 
+The following is a visualization of the yield surface in the $$p-q$$ plane.
+
+<iframe src="https://www.desmos.com/calculator/seqn4zrjzt?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 ### Flow Rule
 
 A non-associated flow rule is defined.
