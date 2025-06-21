@@ -62,26 +62,24 @@ class ErrorMap:
             FileNotFoundError: If the specified executable is not found in the system PATH.
             ValueError: If the temporary directory is not specified.
         """
-        self.material_name = command.split()[1].lower()
         self.command = command
         self.ref_strain = ref_strain
         self.ref_stress = ref_stress
         self.resolution = resolution
         self.base_resolution = base_resolution
-        self.base_deformation: np.ndarray = None  # type: ignore
         self.executable = executable
         self.tmp_dir = tmp_dir
         self.contour_samples = contour_samples
         self.parallel = parallel
 
         if which(self.executable) is None:
-            raise FileNotFoundError(
-                f"Executable '{self.executable}' not found. Please ensure it is installed and in your PATH."
-            )
+            raise FileNotFoundError(f"Executable '{self.executable}' not found.")
 
         if not self.tmp_dir:
             raise ValueError("Temporary directory must be specified.")
 
+        self._material_name = command.split()[1].lower()
+        self._base: np.ndarray = None  # type: ignore
         self._original_dir = getcwd()
 
         environ["MKL_NUM_THREADS"] = "1"
@@ -129,9 +127,7 @@ class ErrorMap:
     def _run_analysis(self, increment: np.ndarray):
         np.savetxt(
             "strain_history",
-            np.vstack(
-                (self.base_deformation, self.base_deformation[-1, :] + increment)
-            ),
+            np.vstack((self._base, self._base[-1, :] + increment)),
         )
 
         if exists("RESULT.txt"):
@@ -165,10 +161,10 @@ class ErrorMap:
         plt.xlabel("$\\Delta{}\\varepsilon_x/\\varepsilon_{\\text{ref}}$")
         plt.ylabel("$\\Delta{}\\varepsilon_y/\\varepsilon_{\\text{ref}}$")
         plt.title(
-            f"{self.material_name.upper()} Absolute Error (unit: % of $\\sigma_\\text{{ref}}$)"
+            f"{self._material_name.upper()} Absolute Error (unit: % of $\\sigma_\\text{{ref}}$)"
         )
         center = []
-        for x in self.base_deformation[-1, :]:
+        for x in self._base[-1, :]:
             if x == 0:
                 break
             center.append(f"{x:.4e}")
@@ -212,13 +208,12 @@ class ErrorMap:
             return 100 * self._norm(coarse - reference) / self.ref_stress
 
     def contour(self, title: str = "", *, center: tuple, size: int):
-        self.base_deformation = self._generate_base(center, self.base_resolution)
+        self._base = self._generate_base(center, self.base_resolution)
 
-        contour_size = self.contour_samples
         region = (
-            np.array(range(-contour_size, contour_size + 1))
+            np.array(range(-self.contour_samples, self.contour_samples + 1))
             * size
-            / float(contour_size)
+            / float(self.contour_samples)
         )
         num_points = len(region)
         error_grid = np.zeros((num_points, num_points))
@@ -256,7 +251,7 @@ class ErrorMap:
 
         ex_grid, ey_grid = np.meshgrid(region, region)
         fig = self._generate_figure(ex_grid, ey_grid, error_grid)
-        full_title = f"{title or self.material_name}.abs.error"
+        full_title = f"{title or self._material_name}.abs.error"
         fig.savefig(f"{full_title}.pdf")
         fig.savefig(f"{full_title}.svg")
 
