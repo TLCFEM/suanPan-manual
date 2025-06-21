@@ -223,7 +223,7 @@ class ErrorMap:
         tasks = tqdm(tasks, desc="Contouring...")  # type: ignore
 
         if self.parallel > 1:
-            for i, j, point in Parallel(
+            for i, j, point in Parallel(  # type: ignore
                 n_jobs=self.parallel, return_as="generator_unordered"
             )(delayed(_runner)(*task) for task in tasks):
                 error_grid[i, j] = point
