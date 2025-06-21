@@ -14,13 +14,16 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import subprocess
+from contextlib import contextmanager
 from genericpath import exists
 from os import chdir, environ, getcwd, mkdir, remove
 from shutil import which
+from tempfile import TemporaryDirectory
 from time import sleep
 
 import numpy as np
 from matplotlib import pyplot as plt
+from multiprocess import Manager, Pool
 
 try:
     from rich.progress import track
@@ -42,6 +45,7 @@ class ErrorMap:
         executable: str = "suanpan",
         tmp_dir: str = "tmp",
         contour_samples: int = 20,
+        parallel: int = 1,
     ):
         """Initializes an ErrorMap instance with the specified parameters.
         Args:
@@ -53,8 +57,10 @@ class ErrorMap:
             executable (str, optional): The name or path of the executable to use. Defaults to "suanpan".
             tmp_dir (str, optional): The directory for temporary files. Defaults to "tmp".
             contour_samples (int, optional): The number of samples for contour calculation. Defaults to 20.
+            parallel (int, optional): The number of parallel processes to use. Defaults to 1.
         Raises:
             FileNotFoundError: If the specified executable is not found in the system PATH.
+            ValueError: If the temporary directory is not specified.
         """
         self.material_name = command.split()[1].lower()
         self.command = command
@@ -66,39 +72,41 @@ class ErrorMap:
         self.executable = executable
         self.tmp_dir = tmp_dir
         self.contour_samples = contour_samples
+        self.parallel = parallel
 
         if which(self.executable) is None:
             raise FileNotFoundError(
                 f"Executable '{self.executable}' not found. Please ensure it is installed and in your PATH."
             )
 
-        self._original_dir = None
+        if not self.tmp_dir:
+            raise ValueError("Temporary directory must be specified.")
 
-    def __enter__(self):
+        self._original_dir = getcwd()
+
         environ["MKL_NUM_THREADS"] = "1"
         environ["OMP_NUM_THREADS"] = "1"
 
-        if not self.tmp_dir:
-            return self
-
+    def __enter__(self):
         if not exists(self.tmp_dir):
             mkdir(self.tmp_dir)
-
-        self._original_dir = getcwd()
         chdir(self.tmp_dir)
 
-        with open("isomap.sp", "w") as f:
-            f.write(
-                f"{self.command}\nmaterialtestbystrainhistory 1 strain_history\nexit\n"
-            )
+        if self.parallel < 2:
+            self._write_main()
 
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
-        if self._original_dir:
-            chdir(self._original_dir)
+        chdir(self._original_dir)
 
         return False
+
+    def _write_main(self):
+        with open("isomap.sp", "w") as f:
+            f.write(
+                f"{self.command}\nmaterialtestbystrainhistory 1 strain_history\nexit\n"
+            )
 
     def _generate_base(self, center: tuple, resolution: int):
         deformation = np.zeros((resolution, 6))
@@ -182,6 +190,27 @@ class ErrorMap:
         stress[3:] = 2 * stress[3:]
         return np.sqrt(np.sum(stress))
 
+    @contextmanager
+    def _temporary_dir(self):
+        if self.parallel > 1:
+            original_dir = getcwd()
+            with TemporaryDirectory() as tmp_dir:
+                chdir(tmp_dir)
+                self._write_main()
+                try:
+                    yield tmp_dir
+                finally:
+                    chdir(original_dir)
+        else:
+            yield
+
+    def _run_all(self, dx, dy):
+        with self._temporary_dir():
+            increment = self._generate_increment(dx, dy)
+            reference = self._run_analysis(increment)
+            coarse = self._run_analysis(increment[-1, :])
+            return 100 * self._norm(coarse - reference) / self.ref_stress
+
     def contour(self, title: str = "", *, center: tuple, size: int):
         self.base_deformation = self._generate_base(center, self.base_resolution)
 
@@ -194,21 +223,36 @@ class ErrorMap:
         num_points = len(region)
         error_grid = np.zeros((num_points, num_points))
 
-        for x in (
-            track(range(error_grid.size), description="Contouring...", transient=True)  # type: ignore
-            if has_rich
-            else range(error_grid.size)
-        ):
-            if not has_rich:
-                print(f"Contouring {x + 1}/{error_grid.size}...")
+        if self.parallel > 1:
+            tasks: list = [None] * error_grid.size
+            for x in range(error_grid.size):
+                i, j = divmod(x, num_points)
+                tasks[x] = (i, j, region[i], region[j])
 
-            i, j = divmod(x, num_points)
+            with Manager() as manager:
+                value = manager.Value("i", 0)
+                lock = manager.Lock()
 
-            increment = self._generate_increment(region[i], region[j])
-            reference = self._run_analysis(increment)
-            coarse = self._run_analysis(increment[-1, :])
+                def _runner(_pack):
+                    _i, _j, _dx, _dy = _pack
+                    with lock:
+                        value.value += 1
+                        print(f"Contouring {value.value}/{num_points * num_points}...")
+                    return _i, _j, self._run_all(_dx, _dy)
 
-            error_grid[i, j] = 100 * self._norm(coarse - reference) / self.ref_stress
+                with Pool(self.parallel) as pool:
+                    for i, j, point in pool.imap_unordered(_runner, tasks):
+                        error_grid[i, j] = point
+        else:
+            ranges = range(error_grid.size)
+            if has_rich:
+                ranges = track(ranges, description="Contouring...", transient=True)  # type: ignore
+            for x in ranges:
+                if not has_rich:
+                    print(f"Contouring {x + 1}/{error_grid.size}...")
+
+                i, j = divmod(x, num_points)
+                error_grid[i, j] = self._run_all(region[i], region[j])
 
         ex_grid, ey_grid = np.meshgrid(region, region)
         fig = self._generate_figure(ex_grid, ey_grid, error_grid)
