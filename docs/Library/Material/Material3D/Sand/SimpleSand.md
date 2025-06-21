@@ -109,9 +109,11 @@ with ErrorMap(
     f"material SimpleSand 1 {young_modulus} .2 .01 -.7 5. 1.25 1.1 3.5 1.915 -130. .02 2. 0.",
     ref_strain=ref_stress / young_modulus,
     ref_stress=ref_stress,
-    contour_samples=30,
+    contour_samples=40,
 ) as error_map:
-    error_map.contour("simple.sand.uniaxial", center=(-2, -1, -1), size=1)
+    error_map.contour(
+        "simple.sand.uniaxial", center=(-4, -2.5, -2.5), size=2, type="rel"
+    )
 ```
 
-![absolute error uniaxial](simple.sand.uniaxial.abs.error.svg)
+![relative error uniaxial](simple.sand.uniaxial.rel.error.svg)
