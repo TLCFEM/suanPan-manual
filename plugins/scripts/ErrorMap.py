@@ -54,6 +54,7 @@ class ErrorMap:
             tmp_dir (str, optional): The directory for temporary files. Defaults to "tmp".
             contour_samples (int, optional): The number of samples for contour calculation. Defaults to 20.
             parallel (int, optional): The number of parallel processes to use. Defaults to 1.
+            dimension (int, optional): The dimension of the problem, either 3 or 6. Defaults to 6.
         Raises:
             FileNotFoundError: If the specified executable is not found in the system PATH.
             ValueError: If the temporary directory is not specified.
