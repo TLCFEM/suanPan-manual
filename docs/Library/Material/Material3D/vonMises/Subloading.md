@@ -110,7 +110,6 @@ with ErrorMap(
     ref_strain=yield_stress / young_modulus,
     ref_stress=yield_stress,
     contour_samples=30,
-    parallel=7,
 ) as error_map:
     error_map.contour("subloading.uniaxial", center=(-4, 0), size=3, type="rel")
     error_map.contour("subloading.biaxial", center=(-4, -4), size=3, type="rel")
