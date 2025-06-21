@@ -22,15 +22,9 @@ from tempfile import TemporaryDirectory
 from time import sleep
 
 import numpy as np
+from joblib import Parallel, delayed
 from matplotlib import pyplot as plt
-from multiprocess import Manager, Pool
-
-try:
-    from rich.progress import track
-
-    has_rich = True
-except ImportError:
-    has_rich = False
+from tqdm import tqdm
 
 
 class ErrorMap:
@@ -218,36 +212,25 @@ class ErrorMap:
         num_points = len(region)
         error_grid = np.zeros((num_points, num_points))
 
+        tasks: list = [None] * error_grid.size
+        for x in range(error_grid.size):
+            i, j = divmod(x, num_points)
+            tasks[x] = (i, j, region[i], region[j])
+
+        def _runner(_i, _j, _dx, _dy):
+            return _i, _j, self._run_all(_dx, _dy)
+
+        tasks = tqdm(tasks, desc="Contouring...")  # type: ignore
+
         if self.parallel > 1:
-            tasks: list = [None] * error_grid.size
-            for x in range(error_grid.size):
-                i, j = divmod(x, num_points)
-                tasks[x] = (i, j, region[i], region[j])
-
-            with Manager() as manager:
-                value = manager.Value("i", 0)
-                lock = manager.Lock()
-
-                def _runner(_pack):
-                    _i, _j, _dx, _dy = _pack
-                    with lock:
-                        value.value += 1
-                        print(f"Contouring {value.value}/{num_points * num_points}...")
-                    return _i, _j, self._run_all(_dx, _dy)
-
-                with Pool(self.parallel) as pool:
-                    for i, j, point in pool.imap_unordered(_runner, tasks):
-                        error_grid[i, j] = point
+            for i, j, point in Parallel(
+                n_jobs=self.parallel, return_as="generator_unordered"
+            )(delayed(_runner)(*task) for task in tasks):
+                error_grid[i, j] = point
         else:
-            ranges = range(error_grid.size)
-            if has_rich:
-                ranges = track(ranges, description="Contouring...", transient=True)  # type: ignore
-            for x in ranges:
-                if not has_rich:
-                    print(f"Contouring {x + 1}/{error_grid.size}...")
-
-                i, j = divmod(x, num_points)
-                error_grid[i, j] = self._run_all(region[i], region[j])
+            for task in tasks:
+                i, j, point = _runner(*task)
+                error_grid[i, j] = point
 
         ex_grid, ey_grid = np.meshgrid(region, region)
         fig = self._generate_figure(ex_grid, ey_grid, error_grid)
