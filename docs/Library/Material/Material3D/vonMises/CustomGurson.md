@@ -1,5 +1,7 @@
 # CustomGurson
 
+Gurson Model With Custom Hardening
+
 ## Syntax
 
 ```
@@ -15,3 +17,9 @@ material CustomGurson (1) (2) (3) (4) [5] [6] [7] [8] [9] [10]
 # [9] double, en, default: 0.0
 # [10] double, density, default: 0.0
 ```
+
+## Remarks
+
+The yield stress evolution can be customized.
+The attached expression must return $$\sigma_y(\varepsilon_m^p)$$ and its derivative with respect to $$\varepsilon_m^p$$.
+See the [parent](NonlinearGurson.md) page for more details.

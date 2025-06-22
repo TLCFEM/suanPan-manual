@@ -17,7 +17,9 @@ import subprocess
 from contextlib import contextmanager
 from genericpath import exists
 from os import chdir, environ, getcwd, mkdir, remove
+from random import choices
 from shutil import which
+from string import ascii_letters, digits
 from tempfile import TemporaryDirectory
 from time import sleep
 from typing import Literal
@@ -82,6 +84,7 @@ class ErrorMap:
         self._material_name = command.split()[1].lower()
         self._base: np.ndarray = None  # type: ignore
         self._original_dir = getcwd()
+        self._tmp_abs_dir = None  # type: ignore
 
         environ["MKL_NUM_THREADS"] = "1"
         environ["OMP_NUM_THREADS"] = "1"
@@ -90,9 +93,9 @@ class ErrorMap:
         if not exists(self.tmp_dir):
             mkdir(self.tmp_dir)
         chdir(self.tmp_dir)
+        self._tmp_abs_dir = getcwd()
 
-        if self.parallel < 2:
-            self._write_main()
+        self._write_main()
 
         return self
 
@@ -142,6 +145,11 @@ class ErrorMap:
         )
 
         if "[ERROR]" in result.stdout:
+            np.savetxt(
+                f"{self._tmp_abs_dir}/strain_history_"
+                + "".join(choices(ascii_letters + digits, k=6)),
+                np.vstack((self._base, self._base[-1, :] + increment)),
+            )
             raise RuntimeError(result.stdout)
 
         while not exists("RESULT.txt"):
@@ -203,13 +211,20 @@ class ErrorMap:
         else:
             yield
 
-    def _run_all(self, dx, dy, type):
+    def _run_all(self, dx, dy, type: set):
         with self._temporary_dir():
             increment = self._generate_increment(dx, dy)
             reference = self._run_analysis(increment)
             coarse = self._run_analysis(increment[-1, :])
-            denominator = self.ref_stress if type == "abs" else self._norm(reference)
-            return 100 * self._norm(coarse - reference) / denominator
+            results: dict = {}
+            error = 100 * self._norm(coarse - reference)
+            for t in type:
+                match t:
+                    case "abs":
+                        results[t] = error / self.ref_stress
+                    case "rel":
+                        results[t] = error / self._norm(reference)
+            return results
 
     def contour(
         self,
@@ -217,7 +232,7 @@ class ErrorMap:
         *,
         center: tuple,
         size: int,
-        type: Literal["abs", "rel"] = "abs",
+        type: Literal["abs", "rel"] | set[Literal["abs", "rel"]] = "abs",
     ):
         """Generates and saves a contour plot of error values over a specified region.
         Args:
@@ -239,6 +254,9 @@ class ErrorMap:
         num_points = len(region)
         error_grid = np.zeros((num_points, num_points))
 
+        if isinstance(type, str):
+            type = {type}
+
         tasks: list = [None] * error_grid.size
         for x in range(error_grid.size):
             i, j = divmod(x, num_points)
@@ -247,16 +265,28 @@ class ErrorMap:
         def _runner(_i, _j, _dx, _dy):
             return _i, _j, self._run_all(_dx, _dy, type)
 
-        for i, j, point in Parallel(  # type: ignore
-            n_jobs=self.parallel, return_as="generator_unordered"
-        )(delayed(_runner)(*task) for task in tqdm(tasks, desc="Contouring...")):
-            error_grid[i, j] = point
+        results: dict = {}
+        try:
+            for i, j, point in Parallel(  # type: ignore
+                n_jobs=self.parallel, return_as="generator_unordered"
+            )(delayed(_runner)(*task) for task in tqdm(tasks, desc="Contouring...")):
+                results[(i, j)] = point
+        except RuntimeError:
+            print(
+                "\nError encountered. Check the temporary directory for strain history files."
+            )
+            return
 
         ex_grid, ey_grid = np.meshgrid(region, region)
-        fig = self._generate_figure(ex_grid, ey_grid, error_grid, type)
-        full_title = f"{title or self._material_name}.{type}.error"
-        fig.savefig(f"{full_title}.pdf")
-        fig.savefig(f"{full_title}.svg")
+
+        for t in type:
+            for (i, j), value in results.items():
+                error_grid[i, j] = value[t]
+            fig = self._generate_figure(ex_grid, ey_grid, error_grid, t)
+            full_title = f"{title or self._material_name}.{t}.error"
+            fig.savefig(f"{full_title}.pdf")
+            fig.savefig(f"{full_title}.svg")
+            plt.close()
 
 
 if __name__ == "__main__":

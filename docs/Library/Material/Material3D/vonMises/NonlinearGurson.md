@@ -63,6 +63,8 @@ Parameters $$f_N$$, $$s_N$$ and $$\varepsilon_N$$ controls the normal distributi
 the nucleation is disabled. In this case, when $$f_0=0$$, the volume fraction will stay at zero regardless of strain
 history.**
 
+There is no consideration of coalescence in the current implementation.
+
 ## Recording
 
 This model supports the following additional history variables to be recorded.
