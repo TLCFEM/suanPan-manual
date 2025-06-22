@@ -14,21 +14,20 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import subprocess
+from contextlib import contextmanager
 from genericpath import exists
-from os import chdir, getcwd, mkdir, remove
+from os import chdir, environ, getcwd, mkdir, remove
+from random import choices
 from shutil import which
+from string import ascii_letters, digits
+from tempfile import TemporaryDirectory
 from time import sleep
+from typing import Literal
 
 import numpy as np
+from joblib import Parallel, cpu_count, delayed
 from matplotlib import pyplot as plt
-
-
-try:
-    from rich.progress import track
-
-    has_rich = True
-except ImportError:
-    has_rich = False
+from tqdm import tqdm
 
 
 class ErrorLine:
@@ -42,7 +41,8 @@ class ErrorLine:
         base_resolution: int = 200,
         executable: str = "suanpan",
         tmp_dir: str = "tmp",
-        contour_samples: int = 40,
+        contour_samples: int = 20,
+        parallel: int = cpu_count(True),
     ):
         """Initializes an ErrorLine instance with the specified parameters.
         Args:
@@ -53,60 +53,70 @@ class ErrorLine:
             base_resolution (int, optional): The number of steps used to compute from origin to center. Defaults to 200.
             executable (str, optional): The name or path of the executable to use. Defaults to "suanpan".
             tmp_dir (str, optional): The directory for temporary files. Defaults to "tmp".
-            contour_samples (int, optional): The number of samples for contour calculation. Defaults to 40.
+            contour_samples (int, optional): The number of samples for contour calculation. Defaults to 20.
+            parallel (int, optional): The number of parallel processes to use. Defaults to the number of CPU cores available.
         Raises:
             FileNotFoundError: If the specified executable is not found in the system PATH.
+            ValueError: If the temporary directory is not specified.
         """
-        self.material_name = command.split()[1].lower()
         self.command = command
         self.ref_strain = ref_strain
         self.ref_stress = ref_stress
         self.resolution = resolution
         self.base_resolution = base_resolution
-        self.base_deformation: np.ndarray = None  # type: ignore
         self.executable = executable
         self.tmp_dir = tmp_dir
         self.contour_samples = contour_samples
+        self.parallel = max(1, parallel)
 
         if which(self.executable) is None:
-            raise FileNotFoundError(
-                f"Executable '{self.executable}' not found. Please ensure it is installed and in your PATH."
-            )
+            raise FileNotFoundError(f"Executable '{self.executable}' not found.")
 
-        self.original_dir = None
+        if not self.tmp_dir:
+            raise ValueError("Temporary directory must be specified.")
+
+        self._material_name = command.split()[1].lower()
+        self._base: np.ndarray = None  # type: ignore
+        self._original_dir = getcwd()
+        self._tmp_abs_dir = None  # type: ignore
+
+        environ["MKL_NUM_THREADS"] = "1"
+        environ["OMP_NUM_THREADS"] = "1"
 
     def __enter__(self):
-        if not self.tmp_dir:
-            return self
-
         if not exists(self.tmp_dir):
             mkdir(self.tmp_dir)
-
-        self.original_dir = getcwd()
         chdir(self.tmp_dir)
+        self._tmp_abs_dir = getcwd()
 
+        self._write_main()
+
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        chdir(self._original_dir)
+
+        return False
+
+    def _write_main(self):
         with open("isomap.sp", "w") as f:
             f.write(
                 f"{self.command}\nmaterialtestbystrainhistory 1 strain_history\nexit\n"
             )
 
-        return self
-
-    def __exit__(self, exc_type, exc_value, traceback):
-        if self.original_dir:
-            chdir(self.original_dir)
-
-        return False
-
-    def _generate_base(self, center: int, resolution: int):
-        base = np.linspace(0, center * self.ref_strain, resolution + 1, endpoint=True)
-        return base[1:]
+    def _generate_base(self, center: float, resolution: int):
+        return np.linspace(0, center * self.ref_strain, resolution + 1, endpoint=True)[
+            1:
+        ]
 
     def _generate_increment(self, dx: float):
-        incre = np.linspace(0, dx * self.ref_strain, self.resolution + 1, endpoint=True)
-        return incre[1:]
+        return np.linspace(0, dx * self.ref_strain, self.resolution + 1, endpoint=True)[
+            1:
+        ]
 
-    def _run_analysis(self, strain_history: np.ndarray):
+    def _run_analysis(self, increment: np.ndarray):
+        strain_history = np.concatenate((self._base, self._base[-1] + increment))
+
         np.savetxt("strain_history", strain_history)
 
         if exists("RESULT.txt"):
@@ -120,6 +130,11 @@ class ErrorLine:
         )
 
         if "[ERROR]" in result.stdout:
+            np.savetxt(
+                f"{self._tmp_abs_dir}/strain_history_"
+                + "".join(choices(ascii_letters + digits, k=6)),
+                strain_history,
+            )
             raise RuntimeError(result.stdout)
 
         while not exists("RESULT.txt"):
@@ -127,16 +142,19 @@ class ErrorLine:
 
         return np.loadtxt("RESULT.txt")[-1]
 
-    def _generate_figure(self, x, y):
-        fig = plt.figure(figsize=(7.5, 7))
+    def _generate_figure(self, x: np.ndarray, y: np.ndarray, type: str):
+        fig = plt.figure(figsize=(7.5, 5))
         plt.plot(x, y)
         plt.xlabel("$\\Delta{}\\varepsilon_x/\\varepsilon_{\\text{ref}}$")
-        plt.ylabel("$\\Delta{}\\sigma_y/\\sigma_{\\text{ref}}$")
-        plt.title(f"{self.material_name.upper()} Absolute Error")
+        if type == "abs":
+            full_title = f"{self._material_name.upper()} Absolute Error (unit: % of $\\sigma_\\text{{ref}}$)"
+        else:
+            full_title = f"{self._material_name.upper()} Relative Error (unit: %)"
+        plt.ylabel(full_title)
         fig.text(
             0,
             0,
-            f"{self.command}\ncenter: {self.base_deformation[-1]:.4e}, reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}",
+            f"{self.command}\ncenter: ({self._base[-1]:.4e}), reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}",
             fontsize=8,
             va="bottom",
             ha="left",
@@ -144,34 +162,91 @@ class ErrorLine:
         plt.tight_layout()
         return fig
 
-    def contour(self, title: str = "", *, center: int, size: int):
-        self.base_deformation = self._generate_base(center, self.base_resolution)
+    @contextmanager
+    def _temporary_dir(self):
+        if self.parallel > 1:
+            original_dir = getcwd()
+            with TemporaryDirectory() as tmp_dir:
+                chdir(tmp_dir)
+                self._write_main()
+                try:
+                    yield tmp_dir
+                finally:
+                    chdir(original_dir)
+        else:
+            yield
 
-        density = self.contour_samples
-        region = np.array(range(-density, density + 1)) * size / float(density)
-        num_points = len(region)
-        error_curve = np.zeros(num_points)
+    def _run_all(self, dx, type: set):
+        with self._temporary_dir():
+            increment = self._generate_increment(dx)
+            reference = self._run_analysis(increment)
+            coarse = self._run_analysis(increment[-1:])
+            results: dict = {}
+            error = 100 * (coarse - reference)
+            for t in type:
+                match t:
+                    case "abs":
+                        results[t] = error / self.ref_stress
+                    case "rel":
+                        results[t] = error / reference
+            return results
 
-        for i in (
-            track(range(num_points), description="Contouring...", transient=True)  # type: ignore
-            if has_rich
-            else range(num_points)
-        ):
-            if not has_rich:
-                print(f"Contouring {i + 1}/{num_points}...")
+    def contour(
+        self,
+        title: str = "",
+        *,
+        center: float,
+        size: int,
+        type: Literal["abs", "rel"] | set[Literal["abs", "rel"]] = "abs",
+    ):
+        """Generates and saves a contour plot of error values over a specified region.
+        Args:
+            title (str, optional): The title prefix for the generated plot files. Defaults to "".
+            type (Literal["abs", "rel"], optional): The type of error to plot, either "abs" for absolute error or "rel" for relative error. Defaults to "abs".
+            center (float): The center coordinates of the region to plot.
+            size (int): The half-size of the region to plot, determining the extent of the contour grid.
+        Generates:
+            - A contour plot of error values computed over a grid centered at `center` with the specified `size`.
+            - Saves the plot as both PDF and SVG files, named using the material name, error type, and "error" suffix.
+        """
+        self._base = self._generate_base(center, self.base_resolution)
 
-            increment = self._generate_increment(region[i]) + self.base_deformation[-1]
-            reference = self._run_analysis(
-                np.concatenate((self.base_deformation, increment))
+        region = (
+            np.array(range(-self.contour_samples, self.contour_samples + 1))
+            * size
+            / float(self.contour_samples)
+        )
+        error_grid = np.zeros_like(region)
+
+        if isinstance(type, str):
+            type = {type}
+
+        def _runner(_x, _dx):
+            return _x, self._run_all(_dx, type)
+
+        results: list = [None] * error_grid.size
+        try:
+            for i, point in Parallel(  # type: ignore
+                n_jobs=self.parallel, return_as="generator_unordered"
+            )(
+                delayed(_runner)(x, dx)
+                for x, dx in enumerate(tqdm(region, desc="Contouring..."))
+            ):
+                results[i] = point
+        except RuntimeError:
+            print(
+                "\nError encountered. Check the temporary directory for strain history files."
             )
-            coarse = self._run_analysis(np.append(self.base_deformation, increment[-1]))
+            return
 
-            error_curve[i] = 100 * np.fabs(coarse - reference) / self.ref_stress
-
-        fig = self._generate_figure(region, error_curve)
-        full_title = f"{title or self.material_name}.abs.error"
-        fig.savefig(f"{full_title}.pdf")
-        fig.savefig(f"{full_title}.svg")
+        for t in type:
+            for i, value in enumerate(results):
+                error_grid[i] = value[t]
+            fig = self._generate_figure(region, error_grid, t)
+            full_title = f"{title or self._material_name}.{t}.error"
+            fig.savefig(f"{full_title}.pdf")
+            fig.savefig(f"{full_title}.svg")
+            plt.close()
 
 
 if __name__ == "__main__":
