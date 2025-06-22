@@ -50,7 +50,7 @@ from plugins import ErrorMap
 # https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
 
 young_modulus = 2e2
-yield_stress = .4
+yield_stress = 0.4
 
 with ErrorMap(
     f"material ExpGurson 1 {young_modulus} 0.3 {yield_stress} 0.2 1.5 1.0 0.3 0.1 0.3",
@@ -58,10 +58,12 @@ with ErrorMap(
     ref_stress=yield_stress,
     contour_samples=30,
 ) as error_map:
-    error_map.contour("exp.gurson.uniaxial", center=(-3, 0), size=2)
-    error_map.contour("exp.gurson.biaxial", center=(-3, -3), size=2)
-    error_map.contour("exp.gurson.uniaxial", center=(-3, 0), size=2, type="rel")
-    error_map.contour("exp.gurson.biaxial", center=(-3, -3), size=2, type="rel")
+    error_map.contour(
+        "exp.gurson.uniaxial", center=(-3, 0), size=2, type={"rel", "abs"}
+    )
+    error_map.contour(
+        "exp.gurson.biaxial", center=(-3, -3), size=2, type={"rel", "abs"}
+    )
 ```
 
 ![absolute error uniaxial](exp.gurson.uniaxial.abs.error.svg)
