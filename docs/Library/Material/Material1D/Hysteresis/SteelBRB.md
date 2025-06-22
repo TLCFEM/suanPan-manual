@@ -81,10 +81,10 @@ $$
 and
 
 $$
-\sigma_y=\sigma_s-(\sigma_s-\sigma_y)\exp(-\dfrac{\mu}{\delta_r})
+\sigma_y=\sigma_s-(\sigma_s-\sigma_{y,0})\exp(-\dfrac{\mu}{\delta_r})
 $$
 
-where $$\sigma_r$$ is the saturated stress, $$\sigma_y$$ is the yield stress, $$\delta_r$$ is a constant parameter that
+where $$\sigma_s$$ is the saturated stress, $$\sigma_y$$ is the yield stress, $$\delta_r$$ is a constant parameter that
 controls the speed of isotropic hardening, $$\mu$$ is the accumulated plastic strain which is defined to be
 
 $$
