@@ -172,35 +172,13 @@ with ErrorMap(
     f"material BilinearJ2 1 {young_modulus} .2 {yield_stress} {hardening_ratio} 0.5",
     ref_strain=yield_stress / young_modulus,
     ref_stress=yield_stress,
-    contour_samples=20,
+    contour_samples=30,
 ) as error_map:
-    error_map.contour("j2.uniaxial", center=(-2, 0), size=1)
-    error_map.contour("j2.biaxial", center=(-2, -2), size=1)
+    error_map.contour("j2.uniaxial", center=(-4, 0), size=5, type={"rel", "abs"})
+    error_map.contour("j2.biaxial", center=(-4, -4), size=5, type={"rel", "abs"})
 ```
 
 ![absolute error uniaxial](j2.uniaxial.abs.error.svg)
 ![absolute error biaxial](j2.biaxial.abs.error.svg)
-
-The following example iso-error maps are obtained via the following script.
-
-```py
-from plugins import ErrorMap
-# note: the dependency `ErrorMap` can be found in the following link
-# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
-
-young_modulus = 1e5
-yield_stress = 100.0
-hardening_ratio = 0.05
-
-with ErrorMap(
-    f"material BilinearJ2 1 {young_modulus} .2 {yield_stress} {hardening_ratio} 0.5",
-    ref_strain=yield_stress / young_modulus,
-    ref_stress=yield_stress,
-    contour_samples=30,
-) as error_map:
-    error_map.contour("j2.uniaxial", center=(-4, 0), size=5, type="rel")
-    error_map.contour("j2.biaxial", center=(-4, -4), size=5, type="rel")
-```
-
 ![relative error uniaxial](j2.uniaxial.rel.error.svg)
 ![relative error biaxial](j2.biaxial.rel.error.svg)
