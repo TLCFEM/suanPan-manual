@@ -223,10 +223,11 @@ class ErrorLine:
         """
         self._base = self._generate_base(center, self.base_resolution)
 
+        bound = self.contour_samples
         region = (
-            np.array(range(-self.contour_samples, self.contour_samples + 1))
+            np.array([x for x in range(-bound, bound + 1) if x != 0])
             * size
-            / float(self.contour_samples)
+            / float(bound)
         )
         error_grid = np.zeros_like(region)
 
