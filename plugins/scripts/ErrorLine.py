@@ -144,13 +144,25 @@ class ErrorLine:
 
     def _generate_figure(self, x: np.ndarray, y: np.ndarray, type: str):
         fig = plt.figure(figsize=(7.5, 5))
-        plt.plot(x, y)
-        plt.xlabel("$\\Delta{}\\varepsilon_x/\\varepsilon_{\\text{ref}}$")
+        plt.title(self._material_name.upper())
         if type == "abs":
-            full_title = f"{self._material_name.upper()} Absolute Error (unit: % of $\\sigma_\\text{{ref}}$)"
+            full_title = r"Absolute Error (unit: % of $\sigma_\text{ref}$)"
         else:
-            full_title = f"{self._material_name.upper()} Relative Error (unit: %)"
+            full_title = "Relative Error (unit: %)"
+
+        plt.plot(x, y, label="linear scale")
+        plt.xlabel("$\\Delta{}\\varepsilon_x/\\varepsilon_{\\text{ref}}$")
         plt.ylabel(full_title)
+        plt.legend(loc="center left")
+        plt.grid()
+
+        ax2 = plt.gca().twinx()
+        ax2.set_ylabel(" absolute value")
+        ax2.plot(x, np.abs(y), label="log scale", color="orange")
+        ax2.set_yscale("log")
+        plt.legend(loc="center right")
+        plt.grid(linestyle="--")
+
         fig.text(
             0,
             0,
