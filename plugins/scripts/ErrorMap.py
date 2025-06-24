@@ -118,21 +118,24 @@ class ErrorMap:
             )[1:]
         return deformation
 
-    def _generate_increment(self, dx: float, dy: float):
+    def _generate_increment(self, dd: tuple[float, float], components: tuple[int, int]):
         increment = np.zeros((self.resolution, self.dimension))
-        increment[:, 0] = np.linspace(
-            0, dx * self.ref_strain, self.resolution + 1, endpoint=True
-        )[1:]
-        increment[:, 1] = np.linspace(
-            0, dy * self.ref_strain, self.resolution + 1, endpoint=True
-        )[1:]
+        for c, d in zip(components, dd):
+            increment[:, c] = np.linspace(
+                0, d * self.ref_strain, self.resolution + 1, endpoint=True
+            )[1:]
         return increment
 
     def _run_analysis(self, increment: np.ndarray):
-        np.savetxt(
-            "strain_history",
-            np.vstack((self._base, self._base[-1, :] + increment)),
-        )
+        def _ensure_2d(_x):
+            return _x.reshape(1, -1) if len(_x.shape) == 1 else _x
+
+        if self._base is None:
+            strain_history = _ensure_2d(increment)
+        else:
+            strain_history = np.vstack((self._base, self._base[-1, :] + increment))
+
+        np.savetxt("strain_history", strain_history)
 
         if exists("RESULT.txt"):
             remove("RESULT.txt")
@@ -148,14 +151,14 @@ class ErrorMap:
             np.savetxt(
                 f"{self._tmp_abs_dir}/strain_history_"
                 + "".join(choices(ascii_letters + digits, k=6)),
-                np.vstack((self._base, self._base[-1, :] + increment)),
+                strain_history,
             )
             raise RuntimeError(result.stdout)
 
         while not exists("RESULT.txt"):
             sleep(0.01)
 
-        return np.loadtxt("RESULT.txt")[-1, :]
+        return _ensure_2d(np.loadtxt("RESULT.txt"))[-1, :]
 
     def _generate_figure(
         self, x_grid: np.ndarray, y_grid: np.ndarray, grid: np.ndarray, type: str
@@ -174,15 +177,18 @@ class ErrorMap:
         else:
             full_title = f"{self._material_name.upper()} Relative Error (unit: %)"
         plt.title(full_title)
-        center = []
-        for x in self._base[-1, :]:
-            if x == 0:
-                break
-            center.append(f"{x:.4e}")
+        center_text = ""
+        if self._base is not None:
+            center = []
+            for x in self._base[-1, :]:
+                if x == 0:
+                    break
+                center.append(f"{x:.4e}")
+            center_text = f"center: ({', '.join(center)}), "
         fig.text(
             0,
             0,
-            f"{self.command}\ncenter: ({', '.join(center)}), reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}",
+            f"{self.command}\n{center_text}reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}",
             fontsize=8,
             va="bottom",
             ha="left",
@@ -211,9 +217,9 @@ class ErrorMap:
         else:
             yield
 
-    def _run_all(self, dx, dy, type: set):
+    def _run_all(self, dd: tuple[float, float], type: set, components: tuple[int, int]):
         with self._temporary_dir():
-            increment = self._generate_increment(dx, dy)
+            increment = self._generate_increment(dd, components)
             reference = self._run_analysis(increment)
             coarse = self._run_analysis(increment[-1, :])
             results: dict = {}
@@ -230,8 +236,9 @@ class ErrorMap:
         self,
         title: str = "",
         *,
-        center: tuple,
+        center: tuple | None,
         size: int,
+        components: tuple[int, int] = (0, 1),
         type: Literal["abs", "rel"] | set[Literal["abs", "rel"]] = "abs",
     ):
         """Generates and saves a contour plot of error values over a specified region.
@@ -244,7 +251,8 @@ class ErrorMap:
             - A contour plot of error values computed over a grid centered at `center` with the specified `size`.
             - Saves the plot as both PDF and SVG files, named using the material name, error type, and "error" suffix.
         """
-        self._base = self._generate_base(center, self.base_resolution)
+        if center:
+            self._base = self._generate_base(center, self.base_resolution)
 
         region = (
             np.array(range(-self.contour_samples, self.contour_samples + 1))
@@ -263,7 +271,7 @@ class ErrorMap:
             tasks[x] = (i, j, region[i], region[j])
 
         def _runner(_i, _j, _dx, _dy):
-            return _i, _j, self._run_all(_dx, _dy, type)
+            return _i, _j, self._run_all((_dx, _dy), type, components)
 
         results: dict = {}
         try:
