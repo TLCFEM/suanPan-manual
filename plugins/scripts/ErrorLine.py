@@ -115,7 +115,10 @@ class ErrorLine:
         ]
 
     def _run_analysis(self, increment: np.ndarray):
-        strain_history = np.concatenate((self._base, self._base[-1] + increment))
+        if self._base is not None:
+            strain_history = np.concatenate((self._base, self._base[-1] + increment))
+        else:
+            strain_history = increment
 
         np.savetxt("strain_history", strain_history)
 
@@ -163,10 +166,14 @@ class ErrorLine:
         plt.legend(loc="center right")
         plt.grid(linestyle="--")
 
+        center_text = ""
+        if self._base is not None:
+            center_text = f"center: ({self._base[-1]:.4e}), "
+
         fig.text(
             0,
             0,
-            f"{self.command}\ncenter: ({self._base[-1]:.4e}), reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}",
+            f"{self.command}\n{center_text}reference strain $\\varepsilon_\\text{{ref}}$: {self.ref_strain:.4e}, reference stress $\\sigma_\\text{{ref}}$: {self.ref_stress:.4e}",
             fontsize=8,
             va="bottom",
             ha="left",
@@ -207,21 +214,29 @@ class ErrorLine:
         self,
         title: str = "",
         *,
-        center: float,
+        center: float | None,
         size: int,
         type: Literal["abs", "rel"] | set[Literal["abs", "rel"]] = "abs",
     ):
-        """Generates and saves a contour plot of error values over a specified region.
-        Args:
-            title (str, optional): The title prefix for the generated plot files. Defaults to "".
-            type (Literal["abs", "rel"], optional): The type of error to plot, either "abs" for absolute error or "rel" for relative error. Defaults to "abs".
-            center (float): The center coordinates of the region to plot.
-            size (int): The half-size of the region to plot, determining the extent of the contour grid.
-        Generates:
-            - A contour plot of error values computed over a grid centered at `center` with the specified `size`.
-            - Saves the plot as both PDF and SVG files, named using the material name, error type, and "error" suffix.
         """
-        self._base = self._generate_base(center, self.base_resolution)
+        Generates and saves a 1D contour plot of error values over a specified region.
+
+        This method computes error values along a 1D line centered at a given point, for one
+        or both error types (absolute and/or relative), and generates corresponding plots.
+
+        :param str title: Optional prefix for the output filenames. Defaults to an empty string.
+        :param float center: Center coordinate of the region to evaluate.
+        :param int size: Half-size of the region to plot. Determines the extent of the sampling region.
+        :param type: Type(s) of error to compute: "abs" (absolute error), "rel" (relative error),
+            or both. Can be a single string or a set of strings.
+        :type type: Literal["abs", "rel"] or set[Literal["abs", "rel"]]
+
+        :raises RuntimeError: If a parallel execution error occurs during evaluation.
+
+        :returns: None
+        """
+        if center is not None:
+            self._base = self._generate_base(center, self.base_resolution)
 
         bound = self.contour_samples
         region = (

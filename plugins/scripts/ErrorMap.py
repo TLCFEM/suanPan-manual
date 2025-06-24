@@ -241,24 +241,34 @@ class ErrorMap:
         components: tuple[int, int] = (0, 1),
         type: Literal["abs", "rel"] | set[Literal["abs", "rel"]] = "abs",
     ):
-        """Generates and saves a contour plot of error values over a specified region.
-        Args:
-            title (str, optional): The title prefix for the generated plot files. Defaults to "".
-            type (Literal["abs", "rel"], optional): The type of error to plot, either "abs" for absolute error or "rel" for relative error. Defaults to "abs".
-            center (tuple): The center coordinates of the region to plot.
-            size (int): The half-size of the region to plot, determining the extent of the contour grid.
-        Generates:
-            - A contour plot of error values computed over a grid centered at `center` with the specified `size`.
-            - Saves the plot as both PDF and SVG files, named using the material name, error type, and "error" suffix.
+        """
+        Generates and saves contour plots of error values over a specified 2D region.
+
+        This method evaluates error values on a grid centred at a specified point, for the
+        selected components and error types (absolute and/or relative). It then produces and
+        saves contour plots in both PDF and SVG formats.
+
+        :param str title: Optional title used as the base for the output filenames.
+        :param tuple center: Center of the region in local coordinates. If provided,
+            the base state will be regenerated with this center.
+        :param int size: Half-size of the region in each direction. Determines the extent
+            of the grid over which errors are computed.
+        :param tuple[int, int] components: Indices of the components for which errors
+            will be computed. Defaults to (0, 1).
+        :param type: Type(s) of error to compute: absolute ("abs"), relative ("rel"), or both.
+            Can be a single string or a set of strings.
+        :type type: Literal["abs", "rel"] or set[Literal["abs", "rel"]]
+
+        :raises RuntimeError: If there is a failure during the parallelized computation.
+            In that case, a message will be printed, and no plots will be generated.
+
+        :returns: None
         """
         if center:
             self._base = self._generate_base(center, self.base_resolution)
 
-        region = (
-            np.array(range(-self.contour_samples, self.contour_samples + 1))
-            * size
-            / float(self.contour_samples)
-        )
+        bound = self.contour_samples
+        region = np.array(range(-bound, bound + 1)) * size / float(bound)
         num_points = len(region)
         error_grid = np.zeros((num_points, num_points))
 
