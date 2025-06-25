@@ -153,7 +153,7 @@ class ErrorLine:
         else:
             full_title = "Relative Error (unit: %)"
 
-        plt.plot(x, y, label="linear scale")
+        plt.plot(x, y, label="linear scale", marker="o")
         plt.xlabel("$\\Delta{}\\varepsilon_x/\\varepsilon_{\\text{ref}}$")
         plt.ylabel(full_title)
         plt.legend(loc="center left")
@@ -161,7 +161,7 @@ class ErrorLine:
 
         ax2 = plt.gca().twinx()
         ax2.set_ylabel(" absolute value")
-        ax2.plot(x, np.abs(y), label="log scale", color="orange")
+        ax2.plot(x, np.abs(y), label="log scale", marker="x", color="orange")
         ax2.set_yscale("log")
         plt.legend(loc="center right")
         plt.grid(linestyle="--")
