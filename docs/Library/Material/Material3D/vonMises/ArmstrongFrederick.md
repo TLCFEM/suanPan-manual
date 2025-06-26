@@ -158,3 +158,31 @@ material ArmstrongFrederick 1 2E2 .2 0. .1 0. 0. 40.82482305 500.
 ```
 
 ![Example 7](ArmstrongFrederick.EX7.svg)
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the following script.
+
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 2e2
+yield_stress = 0.2
+hardening_ratio = 0.01
+
+with ErrorMap(
+    f"material ArmstrongFrederick 1 {young_modulus} .2 0. {hardening_ratio * young_modulus} 0. 0. 40.82482305 500.",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+    contour_samples=30,
+) as error_map:
+    error_map.contour("af.uniaxial", center=(-5, 0), size=3, type={"rel", "abs"})
+    error_map.contour("af.biaxial", center=(-5, -5), size=3, type={"rel", "abs"})
+```
+
+![absolute error uniaxial](af.uniaxial.abs.error.svg)
+![absolute error biaxial](af.biaxial.abs.error.svg)
+![relative error uniaxial](af.uniaxial.rel.error.svg)
+![relative error biaxial](af.biaxial.rel.error.svg)

@@ -2,6 +2,8 @@
 
 Nonlinear General Gurson Porous Model
 
+See also the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
+
 ## Yield Function
 
 An extended yield function is used,
@@ -22,6 +24,10 @@ $$\sigma_y(\varepsilon_m^p)$$ is the yield stress, $$\varepsilon_m^p$$ is the eq
 
 * $$q_1=q_2=1$$ The original Gurson model is recovered.
 * $$q_1=0$$ The von Mises model is recovered.
+
+The following is a visualization of the yield surface in the $$p-q$$ plane.
+
+<iframe src="https://www.desmos.com/calculator/5x3nh1l317?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 ## Evolution of Equivalent Plastic Strain
 
@@ -56,6 +62,8 @@ $$
 Parameters $$f_N$$, $$s_N$$ and $$\varepsilon_N$$ controls the normal distribution of volume fraction. **If $$f_N=0$$,
 the nucleation is disabled. In this case, when $$f_0=0$$, the volume fraction will stay at zero regardless of strain
 history.**
+
+There is no consideration of coalescence in the current implementation.
 
 ## Recording
 

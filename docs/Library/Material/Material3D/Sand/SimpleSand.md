@@ -65,6 +65,10 @@ $$
 where $$s$$ is the deviatoric stress, $$p$$ is the hydrostatic stress, $$\alpha$$ is the back stress ratio and $$m$$ is
 a constant that controls the size of the wedge.
 
+The following is a visualization of the yield surface in the $$p-q$$ plane.
+
+<iframe src="https://www.desmos.com/calculator/seqn4zrjzt?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 ### Flow Rule
 
 A non-associated flow rule is defined.
@@ -92,3 +96,28 @@ where $$h$$ is a constant that controls the speed of hardening.
 ## Example
 
 Please refer to [triaxial-compression-of-sand](../../../../Example/Geotechnical/triaxial-compression-of-sand.md).
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the following script.
+
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 1e5
+ref_stress = 20
+
+with ErrorMap(
+    f"material SimpleSand 1 {young_modulus} .2 .01 -.7 5. 1.25 1.1 3.5 1.915 -130. .02 2. 0.",
+    ref_strain=ref_stress / young_modulus,
+    ref_stress=ref_stress,
+    contour_samples=40,
+) as error_map:
+    error_map.contour(
+        "simple.sand.uniaxial", center=(-4, -2.5, -2.5), size=2, type="rel"
+    )
+```
+
+![relative error uniaxial](simple.sand.uniaxial.rel.error.svg)

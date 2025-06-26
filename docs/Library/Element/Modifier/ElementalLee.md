@@ -7,7 +7,7 @@ Elemental Damping Using Lee's Formulation
 1. [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.107152)
 
 !!! Note
-    This modifier must be used with [`LeeElementalNewmark`](../../../Library/Integrator/Newmark/LeeElementalNewmark.md)
+    This modifier must be used with [`LeeElementalNewmark`](../../Integrator/Implicit/Newmark/LeeElementalNewmark.md)
     integrator to work properly.
 
 ## Syntax
@@ -23,7 +23,7 @@ modifier ElementalLee (1) (2) [(3)...]
 
 1. If no element tag is provided, this modifier applies to all active elements.
    In this case, it is equivalent to a global damping model such
-   as [`LeeNewmark`](../../../Library/Integrator/Newmark/LeeNewmark.md)
-   or [`LeeNewmarkFull`](../../../Library/Integrator/Newmark/LeeNewmarkFull.md).
+   as [`LeeNewmark`](../../Integrator/Implicit/Newmark/LeeNewmark.md)
+   or [`LeeNewmarkFull`](../../Integrator/Implicit/Newmark/LeeNewmarkFull.md).
 2. Unlike the above global damping models, damping ratio is applied to each element individually. In case of an invalid
    number assigned, a default one $$0.02$$ is used.

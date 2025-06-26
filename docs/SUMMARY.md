@@ -119,6 +119,7 @@
 * Universal
     * [Combine](Library/Amplitude/Universal/Combine.md)
     * [Constant](Library/Amplitude/Universal/Constant.md)
+    * [Custom](Library/Amplitude/Universal/Custom.md)
     * [Decay](Library/Amplitude/Universal/Decay.md)
     * [Linear](Library/Amplitude/Universal/Linear.md)
     * [Modulated](Library/Amplitude/Universal/Modulated.md)
@@ -281,25 +282,29 @@
 
 ### Integrator
 
+* [Overview](Library/Integrator/Overview.md)
+* [Linear](Library/Integrator/Linear.md)
 * Implicit
-    * [Linear](Library/Integrator/Linear.md)
-    * [BatheTwoStep](Library/Integrator/BatheTwoStep.md)
-    * [GeneralizedAlpha](Library/Integrator/GeneralizedAlpha.md)
-    * [OALTS](Library/Integrator/OALTS.md)
-    * [GSSSS](Library/Integrator/GSSSS.md)
+    * [BatheTwoStep](Library/Integrator/Implicit/BatheTwoStep.md)
+    * [GeneralizedAlpha](Library/Integrator/Implicit/GeneralizedAlpha.md)
+    * [GSSSS](Library/Integrator/Implicit/GSSSS.md)
+    * [OALTS](Library/Integrator/Implicit/OALTS.md)
     * Newmark
-        * [LeeNewmark](Library/Integrator/Newmark/LeeNewmark.md)
-        * [LeeElementalNewmark](Library/Integrator/Newmark/LeeElementalNewmark.md)
-        * [LeeNewmarkFull](Library/Integrator/Newmark/LeeNewmarkFull.md)
-        * [LeeNewmarkIterative](Library/Integrator/Newmark/LeeNewmarkIterative.md)
-        * [Newmark](Library/Integrator/Newmark/Newmark.md)
-        * [RayleighNewmark](Library/Integrator/Newmark/RayleighNewmark.md)
-        * [WilsonPenzienNewmark](Library/Integrator/Newmark/WilsonPenzienNewmark.md)
-        * [NonviscousNewmark](Library/Integrator/Newmark/NonviscousNewmark.md)
+        * [LeeElementalNewmark](Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md)
+        * [LeeNewmark](Library/Integrator/Implicit/Newmark/LeeNewmark.md)
+        * [LeeNewmarkFull](Library/Integrator/Implicit/Newmark/LeeNewmarkFull.md)
+        * [LeeNewmarkIterative](Library/Integrator/Implicit/Newmark/LeeNewmarkIterative.md)
+        * [Newmark](Library/Integrator/Implicit/Newmark/Newmark.md)
+        * [NonviscousNewmark](Library/Integrator/Implicit/Newmark/NonviscousNewmark.md)
+        * [RayleighNewmark](Library/Integrator/Implicit/Newmark/RayleighNewmark.md)
+        * [WilsonPenzienNewmark](Library/Integrator/Implicit/Newmark/WilsonPenzienNewmark.md)
 * Explicit
-    * [Tchamwa](Library/Integrator/Tchamwa.md)
-    * [BatheExplicit](Library/Integrator/BatheExplicit.md)
-    * [GeneralizedAlphaExplicit](Library/Integrator/GeneralizedAlphaExplicit.md)
+    * [BatheExplicit](Library/Integrator/Explicit/BatheExplicit.md)
+    * [GeneralizedAlphaExplicit](Library/Integrator/Explicit/GeneralizedAlphaExplicit.md)
+    * [GSSE](Library/Integrator/Explicit/GSSE.md)
+    * [ICL](Library/Integrator/Explicit/ICL.md)
+    * [Tchamwa](Library/Integrator/Explicit/Tchamwa.md)
+    * [WAT2](Library/Integrator/Explicit/WAT2.md)
 
 ### Material
 
@@ -448,6 +453,7 @@
     * [OS146](Library/Material/Wrapper/OS146.md)
     * [OS146S](Library/Material/Wrapper/OS146S.md)
     * [Substepping](Library/Material/Wrapper/Substepping.md)
+    * [Prestrain](Library/Material/Wrapper/Prestrain.md)
 
 ### Recorder
 

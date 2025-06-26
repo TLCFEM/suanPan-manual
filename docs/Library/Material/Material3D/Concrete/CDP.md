@@ -71,3 +71,28 @@ This model supports the following additional history variables to be recorded.
 |----------------|-------------------------------|
 | DT             | tensile damage                |
 | DC             | compressive damage            |
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the following script.
+
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 3e4
+yield_stress = 30
+
+with ErrorMap(
+   f"material CDP 1 {young_modulus} .18 {0.1 * yield_stress} {yield_stress} 1E-2 1E-1 .4 3. .6 .8 .23 1.16 .4",
+   ref_strain=yield_stress / young_modulus,
+   ref_stress=yield_stress,
+   contour_samples=20,
+) as error_map:
+   error_map.contour("cdp.uniaxial", center=(-2, 0), size=1)
+   error_map.contour("cdp.biaxial", center=(-2, -2), size=1)
+```
+
+![absolute error uniaxial](cdp.uniaxial.abs.error.svg)
+![absolute error biaxial](cdp.biaxial.abs.error.svg)

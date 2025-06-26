@@ -84,3 +84,28 @@ while all other parameters are the default values.
 ![compressive](CDPM2.EX1.svg)
 
 ![tensile](CDPM2.EX2.svg)
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the following script.
+
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+young_modulus = 3e4
+yield_stress = 30
+
+with ErrorMap(
+   f"material CDPM2 1 {young_modulus} .3 6. {yield_stress} .3 .01 .85 .08 .003 2. 1E-6 5. 15E-4 5E-4",
+   ref_strain=yield_stress / young_modulus,
+   ref_stress=yield_stress,
+   contour_samples=20,
+) as error_map:
+   error_map.contour("cdpm2.uniaxial", center=(-2, -2), size=1)
+   error_map.contour("cdpm2.biaxial", center=(-2, 0), size=1)
+```
+
+![absolute error uniaxial](cdpm2.uniaxial.abs.error.svg)
+![absolute error biaxial](cdpm2.biaxial.abs.error.svg)

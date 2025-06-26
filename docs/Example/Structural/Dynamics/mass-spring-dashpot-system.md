@@ -135,7 +135,7 @@ hdf5recorder 2 Node V1 2 3
 ### Step and Analysis
 
 The remaining settings are pretty standard. We use a dynamic step with a default integration
-scheme ([Newmark](../../../Library/Integrator/Newmark/Newmark.md)).
+scheme ([Newmark](../../../Library/Integrator/Implicit/Newmark/Newmark.md)).
 If one wishes, other integration schemes can be used.
 
 ```text

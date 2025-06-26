@@ -7,6 +7,12 @@ It is highly recommended to try it out.
 
 ## References
 
+The implementation is based on the following paper.
+
+1. [10.1007/s00707-025-04339-0](https://doi.org/10.1007/s00707-025-04339-0)
+
+Additional material on the same topic can be found in the following literature.
+
 1. [10.1007/978-3-030-93138-4](https://doi.org/10.1007/978-3-030-93138-4)
 2. [10.1007/s11831-023-10022-1](https://doi.org/10.1007/s11831-023-10022-1)
 3. [10.1007/s11831-022-09880-y](https://doi.org/10.1007/s11831-022-09880-y)

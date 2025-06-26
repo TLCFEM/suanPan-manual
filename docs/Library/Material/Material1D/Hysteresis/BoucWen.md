@@ -1,4 +1,4 @@
-# BouncWen
+# BoucWen
 
 Bouc-Wen Model
 

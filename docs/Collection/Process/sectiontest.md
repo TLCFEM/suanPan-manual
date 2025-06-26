@@ -44,4 +44,4 @@ sectiontest2d 1 1E-3 0 100
 ```
 
 For the above example, a W21X68 section is defined with the bilinear hardening model. It is loaded with 100 increments
-of $\num{1E-3}$ axial deformation while the rotation is zero.
+of $$0.001$$ axial deformation while the rotation is zero.

@@ -86,7 +86,7 @@ acceleration 1 1 3.92 1
 
 ### Damping Model
 
-The [Lee's damping model](../../../Library/Integrator/Newmark/LeeNewmark.md) is chosen as an illustration. Knowing that
+The [Lee's damping model](../../../Library/Integrator/Implicit/Newmark/LeeNewmark.md) is chosen as an illustration. Knowing that
 $$\omega_1=\sqrt{367.59}=19.17~\mathrm{rad/s}$$, we assign a single basic function at $$\omega_1$$ with $$5\%$$ damping
 ratio.
 
