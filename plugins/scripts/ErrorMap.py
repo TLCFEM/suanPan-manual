@@ -194,7 +194,7 @@ class ErrorMap:
             ha="left",
         )
         plt.gca().set_aspect("equal", adjustable="box")
-        plt.tight_layout()
+        plt.tight_layout(pad=1.5)
         return fig
 
     @staticmethod
