@@ -2,6 +2,15 @@
 
 Uniaxial Bilinear Material Using J2 Plasticity
 
+The `Bilinear1D` material implements a simple plasticity model that employs both linear isotropic and kinematic hardening rules.
+Further details can be found Section 1.4.4 of [Computational Inelasticity ](https://doi.org/10.1007/b98904).
+Alternatively, refer to the corresponding section
+in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
+for implementation details.
+
+It is suitable for simple hysteresis modelling.
+For more complex behaviour, one shall use other models.
+
 ## Syntax
 
 ```
@@ -68,3 +77,27 @@ exit
 ```
 
 ![Example 4](Bilinear1D.EX4.svg)
+
+## Accuracy
+
+There is no local iteration required.
+The result is accurate.
+
+```py
+from plugins import ErrorLine
+# note: the dependency `ErrorLine` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorLine.py
+
+young_modulus = 2e5
+yield_stress = 4e2
+hardening_ratio = 0.05
+
+with ErrorLine(
+    f"material Bilinear1D 1 {young_modulus} {yield_stress} {hardening_ratio} .5",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+) as error_map:
+    error_map.contour("bilinear1d", center=-5, size=10, type={"abs"})
+```
+
+![accuracy analysis](bilinear1d.abs.error.svg)
