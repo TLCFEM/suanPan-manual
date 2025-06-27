@@ -90,6 +90,7 @@ with ErrorLine(
     ref_strain=yield_stress / young_modulus,
     ref_stress=yield_stress,
 ) as error_map:
+    error_map.contour("af1d", center=-5, size=10, type={"abs"})
 ```
 
 ![accuracy analysis](af1d.abs.error.svg)

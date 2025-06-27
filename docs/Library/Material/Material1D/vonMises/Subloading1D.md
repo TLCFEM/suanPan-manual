@@ -135,3 +135,27 @@ material Subloading1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (1
 ## Example
 
 See [this](../../../../Example/Structural/Statics/calibration-subloading.md) example.
+
+## Accuracy
+
+```py
+from plugins import ErrorLine
+# note: the dependency `ErrorLine` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorLine.py
+
+young_modulus = 2e5
+yield_stress = 4e2
+hardening_ratio = 0.01
+
+with ErrorLine(
+    f"""material Subloading1D 1 {young_modulus} \
+{yield_stress} 10 50 10 \
+200 10 50 10 \
+4E2 10 10 0.3""",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+) as error_map:
+    error_map.contour("subloading", center=-5, size=5, type={"abs"})
+```
+
+![accuracy analysis](subloading.abs.error.svg)
