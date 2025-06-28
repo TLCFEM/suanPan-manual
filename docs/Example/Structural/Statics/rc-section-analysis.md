@@ -141,7 +141,7 @@ The net lever arm is total height minus half of the compression depth minus cove
     The above procedure is nothing but a rough estimate.
     The actual engineering practice may follow a more rigorous procedure accounting for more factors (concrete strength reduction, etc.) depending on the design code.
 
-### Asymmetric Layout
+## Asymmetric Layout
 
 If the layout is asymmetric, say, for example, the rebars at $$y=-220~\text{mm}$$ are removed.
 
@@ -158,3 +158,7 @@ This decreases the moment capacity.
 However, a negative moment does not change the moment capacity significantly.
 
 Interested readers can try to apply both positive and negative rotation and verify the results.
+
+## Prestressed Section
+
+One can also apply prestressing to the rebars via the [Prestrain](../../../Library/Material/Wrapper/Prestrain.md) wrapper.
