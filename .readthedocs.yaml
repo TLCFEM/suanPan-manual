@@ -7,16 +7,23 @@ build:
   tools:
     python: "3.12"
   apt_packages:
+    - graphviz
     - libc6
+    - libcairo2-dev
+    - libffi-dev
+    - libfreetype6-dev
     - libgcc-s1
     - libgfortran5
     - libglx0
     - libgomp1
+    - libjpeg-dev
     - libopengl0
+    - libpng-dev
     - libstdc++6
     - libx11-6
     - libxcursor1
-    - graphviz
+    - libz-dev
+    - pngquant
   jobs:
     post_install:
       - ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /home/docs/.asdf/shims/suanpan

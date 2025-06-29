@@ -22,7 +22,7 @@ jobs:
           cache: 'pip'
       - name: Dependency
         run: |
-          sudo apt-get install doxygen graphviz
+          sudo apt-get install doxygen graphviz pngquant
           pip install -e .
           rm $(pwd)/suanPan-linux-openblas-no-avx/bin/updater
           sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
