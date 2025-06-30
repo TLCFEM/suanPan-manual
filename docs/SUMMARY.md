@@ -410,13 +410,13 @@
         * [NLE3D01](Library/Material/Material3D/Elastic/NLE3D01.md)
         * [OrthotropicElastic3D](Library/Material/Material3D/Elastic/OrthotropicElastic3D.md)
         * [Yeoh](Library/Material/Material3D/Elastic/Yeoh.md)
-    * Hoffman
-        * [BilinearHoffman](Library/Material/Material3D/Hoffman/BilinearHoffman.md)
-        * [ExpHoffman](Library/Material/Material3D/Hoffman/ExpHoffman.md)
-        * [CustomHoffman](Library/Material/Material3D/Hoffman/CustomHoffman.md)
-        * [NonlinearHill](Library/Material/Material3D/Hoffman/NonlinearHill.md)
-        * [NonlinearHoffman](Library/Material/Material3D/Hoffman/NonlinearHoffman.md)
-        * [TimberPD](Library/Material/Material3D/Hoffman/TimberPD.md)
+    * Orthotropic
+        * [BilinearHoffman](Library/Material/Material3D/Orthotropic/BilinearHoffman.md)
+        * [ExpHoffman](Library/Material/Material3D/Orthotropic/ExpHoffman.md)
+        * [CustomHoffman](Library/Material/Material3D/Orthotropic/CustomHoffman.md)
+        * [NonlinearHill](Library/Material/Material3D/Orthotropic/NonlinearHill.md)
+        * [NonlinearHoffman](Library/Material/Material3D/Orthotropic/NonlinearHoffman.md)
+        * [TimberPD](Library/Material/Material3D/Orthotropic/TimberPD.md)
     * Sand
         * [SimpleSand](Library/Material/Material3D/Sand/SimpleSand.md)
         * [DafalisaManzari](Library/Material/Material3D/Sand/DafaliasManzari.md)

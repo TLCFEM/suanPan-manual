@@ -31,7 +31,6 @@ with ErrorMap(
     ref_strain=yield_stress / modulus,
     ref_stress=yield_stress,
     contour_samples=30,
-    executable=suanpan,
 ) as error_map:
     error_map.contour("bilinear.hoffman.uniaxial", center=(-3, 0), size=2, type={"rel", "abs"})
     error_map.contour("bilinear.hoffman.biaxial", center=(-3, -3), size=2, type={"rel", "abs"})
