@@ -83,8 +83,8 @@ load groupbodyforce (1) (2) (3) (4) (5...)
 
 ### Support Excitation
 
-For response history analysis, sometimes it is necessary to apply excitations on supports. The multi-support excitation
-is automatically supported if analysts assign different excitations to different supports.
+For response history analysis, sometimes it is necessary to apply excitations on supports.
+The multi-support excitation is automatically supported if analysts assign different excitations to different supports.
 
 ```text
 supportdisplacement (1) (2) (3) (4) (5...)
@@ -105,6 +105,25 @@ loads, thus displacement controlled scheme is automatically enabled.
 
 Although it is designed to be used in response history analysis, it can also be used to apply acceleration/velocity on
 any nodes (not only supports).
+
+!!! warning "difference in explicit and implicit dynamic analysis"
+    Implicit time integration schemes use displacement as the primary variable, thus `supportdisplacement`, `supportvelocity` and `supportacceleration`
+    all converts to the corresponding nodal displacement.
+    However, explicit time integration schemes use acceleration as the primary variable, and there is no way to obtain the corresponding nodal displacement/velocity from the acceleration (because they are explicit methods).
+    Thus, in explicit dynamic analysis, `supportdisplacement` is identical to `supportacceleration` which all applies acceleration on the nodes.
+    `supportvelocity` is not available in explicit dynamic analysis.
+
+#### Validation
+
+The algorithms implemented is not some naive integration.
+All support excitations are guaranteed to be consistent with the time integration scheme used.
+This means, the exact same input can be observed in the output for all interpolating methods.
+Extrapolating methods will not guarantee the exact same input in the output.
+
+The following validation can be obtained via the [script](support-motion-validation.py).
+
+![interpolating schemes](support-motion-validation-interpolating.svg)
+![extrapolating schemes](support-motion-validation-extrapolating.svg)
 
 ### Uniformly Distributed Load (UDL)
 

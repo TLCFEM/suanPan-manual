@@ -122,4 +122,4 @@ The following is a validation of several integration methods.
 
 ![support motion validation](multi-support-excitation-validation.svg)
 
-The presented results can be reproduced via [this](multi-support-excitation.py) script.
+The presented results can be reproduced via [this](../../../Collection/Define/support-motion-validation.py) script.

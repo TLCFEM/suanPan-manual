@@ -94,7 +94,7 @@ def amplitude():
     dt = 0.01
     t = np.arange(0, duration, dt)
 
-    np.random.seed(42)
+    np.random.seed(742389047)
 
     def bandpass_filter(data, lowcut, highcut, fs, order=4):
         nyquist = 0.5 * fs
@@ -141,62 +141,8 @@ def run(config):
     results[title] = numerical()
 
 
-if __name__ == "__main__":
-    if not shutil.which("suanpan"):
-        print("suanpan command not found.")
-        exit(1)
-
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
-    amplitude()
-
-    configs = [
-        ("Newmark Default", "dynamic", "Newmark 1"),
-        (
-            "Newmark Linear Acceleration",
-            "dynamic",
-            "Newmark 1 0.166666666666666666 0.5",
-        ),
-        ("OALTS 1.0", "dynamic", "OALTS 1 1"),
-        ("OALTS 0.5", "dynamic", "OALTS 1 0.5"),
-        ("OALTS 0.0", "dynamic", "OALTS 1 0"),
-        ("BatheTwoStep 1.0", "dynamic", "BatheTwoStep 1"),
-        ("BatheTwoStep 0.5", "dynamic", "BatheTwoStep 1 0.5"),
-        ("BatheTwoStep 0.0", "dynamic", "BatheTwoStep 1 0.0"),
-        ("GeneralizedAlpha 1.0", "dynamic", "GeneralizedAlpha 1 1.0"),
-        ("GeneralizedAlpha 0.5", "dynamic", "GeneralizedAlpha 1 0.5"),
-        ("GeneralizedAlpha 0.0", "dynamic", "GeneralizedAlpha 1 0.0"),
-        ("GSSSS Optimal 1.0", "dynamic", "GSSSSOptimal 1 1.0"),
-        ("GSSSS Optimal 0.5", "dynamic", "GSSSSOptimal 1 0.5"),
-        ("GSSSS Optimal 0.0", "dynamic", "GSSSSOptimal 1 0.0"),
-        ("BatheExplicit 1.0", "explicitdynamic", "BatheExplicit 1 1.0"),
-        ("BatheExplicit 0.5", "explicitdynamic", "BatheExplicit 1 0.5"),
-        ("BatheExplicit 0.0", "explicitdynamic", "BatheExplicit 1 0.0"),
-        ("ICL 1.0", "explicitdynamic", "ICL 1 1.0"),
-        ("ICL 0.5", "explicitdynamic", "ICL 1 0.5"),
-        (
-            "GeneralizedAlphaExplicit 1.0",
-            "explicitdynamic",
-            "GeneralizedAlphaExplicit 1 1.0",
-        ),
-        # extrapolate # (
-        # extrapolate #     "GeneralizedAlphaExplicit 0.5",
-        # extrapolate #     "explicitdynamic",
-        # extrapolate #     "GeneralizedAlphaExplicit 1 0.5",
-        # extrapolate # ),
-        # extrapolate # (
-        # extrapolate #     "GeneralizedAlphaExplicit 0.0",
-        # extrapolate #     "explicitdynamic",
-        # extrapolate #     "GeneralizedAlphaExplicit 1 0.0",
-        # extrapolate # ),
-        ("GSSE 1.0", "explicitdynamic", "GSSE 1 1.0"),
-        ("GSSE 0.5", "explicitdynamic", "GSSE 1 0.5"),
-        # extrapolate # ("GSSE 0.0", "explicitdynamic", "GSSE 1 0.0"),
-        # extrapolate # ("WAT2 1.0", "explicitdynamic", "WAT2 1 1.0"),
-        ("WAT2 Default", "explicitdynamic", "WAT2 1"),
-        ("WAT2 0.0", "explicitdynamic", "WAT2 1 0.0"),
-    ]
-
+def collect(configs, title):
+    results.clear()
     for config in configs:
         run(config)
 
@@ -240,14 +186,81 @@ if __name__ == "__main__":
     fig.text(
         0,
         0,
-        "Ground motion applied via support acceleration at the fixed end. Extrapolating schemes excluded.",
+        "Ground motion applied via support acceleration at the fixed end.",
         horizontalalignment="left",
         verticalalignment="bottom",
         fontsize=4,
     )
-
-    fig.tight_layout(pad=0.1)
-    formatted_title = "multi-support-excitation-validation"
+    fig.suptitle(f"{title} schemes")
+    fig.tight_layout(pad=0.2)
+    fig.subplots_adjust(top=0.95)
+    formatted_title = f"support-motion-validation-{title}"
     fig.savefig(f"{formatted_title}.pdf")
     fig.savefig(f"{formatted_title}.svg", format="svg")
     plt.close(fig)
+
+
+if __name__ == "__main__":
+    if not shutil.which("suanpan"):
+        print("suanpan command not found.")
+        exit(1)
+
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+    amplitude()
+
+    collect(
+        [
+            ("Newmark Default", "dynamic", "Newmark 1"),
+            (
+                "Newmark Linear Acceleration",
+                "dynamic",
+                "Newmark 1 0.166666666666666666 0.5",
+            ),
+            ("OALTS 1.0", "dynamic", "OALTS 1 1"),
+            ("OALTS 0.5", "dynamic", "OALTS 1 0.5"),
+            ("OALTS 0.0", "dynamic", "OALTS 1 0"),
+            ("BatheTwoStep 1.0", "dynamic", "BatheTwoStep 1"),
+            ("BatheTwoStep 0.5", "dynamic", "BatheTwoStep 1 0.5"),
+            ("BatheTwoStep 0.0", "dynamic", "BatheTwoStep 1 0.0"),
+            ("GeneralizedAlpha 1.0", "dynamic", "GeneralizedAlpha 1 1.0"),
+            ("GeneralizedAlpha 0.5", "dynamic", "GeneralizedAlpha 1 0.5"),
+            ("GeneralizedAlpha 0.0", "dynamic", "GeneralizedAlpha 1 0.0"),
+            ("GSSSS Optimal 1.0", "dynamic", "GSSSSOptimal 1 1.0"),
+            ("GSSSS Optimal 0.5", "dynamic", "GSSSSOptimal 1 0.5"),
+            ("GSSSS Optimal 0.0", "dynamic", "GSSSSOptimal 1 0.0"),
+            ("BatheExplicit 1.0", "explicitdynamic", "BatheExplicit 1 1.0"),
+            ("BatheExplicit 0.5", "explicitdynamic", "BatheExplicit 1 0.5"),
+            ("BatheExplicit 0.0", "explicitdynamic", "BatheExplicit 1 0.0"),
+            ("ICL 1.0", "explicitdynamic", "ICL 1 1.0"),
+            ("ICL 0.5", "explicitdynamic", "ICL 1 0.5"),
+            (
+                "GeneralizedAlphaExplicit 1.0",
+                "explicitdynamic",
+                "GeneralizedAlphaExplicit 1 1.0",
+            ),
+            ("GSSE 1.0", "explicitdynamic", "GSSE 1 1.0"),
+            ("GSSE 0.5", "explicitdynamic", "GSSE 1 0.5"),
+            ("WAT2 Default", "explicitdynamic", "WAT2 1"),
+            ("WAT2 0.0", "explicitdynamic", "WAT2 1 0.0"),
+        ],
+        "interpolating",
+    )
+
+    collect(
+        [
+            (
+                "GeneralizedAlphaExplicit 0.5",
+                "explicitdynamic",
+                "GeneralizedAlphaExplicit 1 0.5",
+            ),
+            (
+                "GeneralizedAlphaExplicit 0.0",
+                "explicitdynamic",
+                "GeneralizedAlphaExplicit 1 0.0",
+            ),
+            ("GSSE 0.0", "explicitdynamic", "GSSE 1 0.0"),
+            ("WAT2 1.0", "explicitdynamic", "WAT2 1 1.0"),
+        ],
+        "extrapolating",
+    )
