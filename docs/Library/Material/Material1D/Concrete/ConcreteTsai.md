@@ -8,6 +8,10 @@ The `ConcreteTsai` model is a simple concrete model using Tsai's equation.
 
 1. [10.1061/(ASCE)0733-9445(1988)114:9(2133)](https://doi.org/10.1061/(ASCE)0733-9445(1988)114:9(2133))
 
+The backbone is governed by a normalized function which is controlled by two parameters $$m$$ and $$n$$.
+
+<iframe src="https://www.desmos.com/calculator/l5lebk1toq?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 ## Syntax
 
 ```
@@ -35,7 +39,7 @@ variable layout.
    recommended).
 2. There is no additional consideration for small loops, which is available in [`ConcreteCM`](ConcreteCM.md).
 
-There is an additional parameter $$m$$ defined in the reference.
+The parameter $$m$$ defined in the reference.
 But it is not explicitly exposed in order to eliminate inconsistent elastic modulus in compression and tension.
 It is, instead, computed internally based on the given strains at compression and tension strength.
 
