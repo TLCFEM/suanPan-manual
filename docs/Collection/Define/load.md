@@ -115,12 +115,19 @@ any nodes (not only supports).
 
 #### Validation
 
-The algorithms implemented is not some naive integration.
-All support excitations are guaranteed to be consistent with the time integration scheme used.
+The algorithms implemented is **not** some naive integration.
+**All support excitations are guaranteed to be consistent with the time integration scheme used.**
 This means, the exact same input can be observed in the output for all interpolating methods.
 Extrapolating methods will not guarantee the exact same input in the output.
 
 The following validation can be obtained via the [script](support-motion-validation.py).
+It defines a simple column and applies a support motion at the base (fixed) end of the column.
+It measures both the top (free) end displacement and the base (fixed) end acceleration.
+
+Interpolating schemes will produce the same acceleration history at the base as the input.
+Extrapolating schemes yield some difference since they extrapolate.
+Such an error may cause spurious responses in the structure.
+This problem is discussed in [this](https://doi.org/10.1080/13632469.2024.2372814) paper.
 
 ![interpolating schemes](support-motion-validation-interpolating.svg)
 ![extrapolating schemes](support-motion-validation-extrapolating.svg)
