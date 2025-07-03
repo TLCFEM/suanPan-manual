@@ -17,10 +17,10 @@ material TimberPD (1) (2...7) (8...10) (11...19) (20) (21) (22) (23) (24) (25) (
 # (11...19) double, nine yield stress
 # (20) double, h
 # (21) double, r_t^0
-# (22) double, b_t
+# (22) double, b_t, [0,1]
 # (23) double, m_t
 # (24) double, r_c^0
-# (25) double, b_c
+# (25) double, b_c, [0,1]
 # (26) double, m_c
 # [27] double, density, default: 0.0
 ```
@@ -47,11 +47,15 @@ $$
 \omega_t=1-\dfrac{r_t^0}{r_t}\left(1-b_t+b_t\exp\left(m_t\left(r_t^0-r_t\right)\right)\right)
 $$
 
+The parameter $$b_t$$ will be clamped to $$0\leq{}b_t\leq1$$.
+
 ### Compression Damage Evolution
 
 $$
 \omega_c=b_c\left(1-\dfrac{r_c^0}{r_c}\right)^{m_c}
 $$
+
+The parameter $$b_c$$ will be clamped to $$0\leq{}b_c\leq1$$.
 
 View and edit parameters to see how they affect the damage evolution.
 
