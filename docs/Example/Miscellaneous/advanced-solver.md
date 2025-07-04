@@ -13,7 +13,7 @@ We will also show how to use the advanced solver to overcome the convergence iss
 It is possible to click the right bottom corner of the plot to open the plot in a new tab.
 You can also drag the initial guess (red dot) to see how the first four iterations go.
 
-<iframe src="https://www.desmos.com/calculator/uvmdtncok7?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/38b56e84f0?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 Such a failure pattern could commonly happen for hardening materials under cyclic loading.
 

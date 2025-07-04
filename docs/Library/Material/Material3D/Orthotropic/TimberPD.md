@@ -59,7 +59,7 @@ The parameter $$b_c$$ will be clamped to $$0\leq{}b_c\leq1$$.
 
 View and edit parameters to see how they affect the damage evolution.
 
-<p style="text-align:center"><iframe src="https://www.desmos.com/calculator/erkilecav8?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe></p>
+<iframe src="https://www.desmos.com/calculator/8v6hsu3iga?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 ## Recording
 
