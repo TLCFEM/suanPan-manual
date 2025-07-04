@@ -56,7 +56,7 @@ material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 ## History Layout
 
 | location               | parameter      |
-|------------------------|----------------|
+| ---------------------- | -------------- |
 | `initial_history(0)`   | $$d_t$$        |
 | `initial_history(1)`   | $$d_c$$        |
 | `initial_history(2)`   | $$\kappa_t$$   |
@@ -67,10 +67,10 @@ material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 
 This model supports the following additional history variables to be recorded.
 
-| variable label | physical meaning              |
-|----------------|-------------------------------|
-| DT             | tensile damage                |
-| DC             | compressive damage            |
+| variable label | physical meaning   |
+| -------------- | ------------------ |
+| DT             | tensile damage     |
+| DC             | compressive damage |
 
 ## Iso-error Map
 
