@@ -60,3 +60,33 @@ The parameter $$b_c$$ will be clamped to $$0\leq{}b_c\leq1$$.
 View and edit parameters to see how they affect the damage evolution.
 
 <p style="text-align:center"><iframe src="https://www.desmos.com/calculator/erkilecav8?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe></p>
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the following script.
+
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+with ErrorMap(
+    """material TimberPD 1 \
+9936 345 345 690 125.9 690 \
+.41 .37 .41 \
+20 40 2 4 2 4 4 4 4 \
+12.9 \
+1 .98 .3 \
+1 .95 2""",
+    ref_strain=1e-2,
+    ref_stress=5,
+    contour_samples=30,
+) as error_map:
+    error_map.contour("timberpd.uniaxial", center=(-2, 0), size=2, type={"rel", "abs"})
+    error_map.contour("timberpd.biaxial", center=(-2, -2), size=2, type={"rel", "abs"})
+```
+
+![absolute error uniaxial](timberpd.uniaxial.abs.error.svg)
+![absolute error biaxial](timberpd.biaxial.abs.error.svg)
+![relative error uniaxial](timberpd.uniaxial.rel.error.svg)
+![relative error biaxial](timberpd.biaxial.rel.error.svg)
