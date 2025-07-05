@@ -412,9 +412,10 @@
         * [Yeoh](Library/Material/Material3D/Elastic/Yeoh.md)
     * Orthotropic
         * [BilinearHoffman](Library/Material/Material3D/Orthotropic/BilinearHoffman.md)
-        * [ExpHoffman](Library/Material/Material3D/Orthotropic/ExpHoffman.md)
-        * [CustomHoffman](Library/Material/Material3D/Orthotropic/CustomHoffman.md)
         * [BilinearTsaiWu](Library/Material/Material3D/Orthotropic/BilinearTsaiWu.md)
+        * [CustomHoffman](Library/Material/Material3D/Orthotropic/CustomHoffman.md)
+        * [CustomTsaiWu](Library/Material/Material3D/Orthotropic/CustomTsaiWu.md)
+        * [ExpHoffman](Library/Material/Material3D/Orthotropic/ExpHoffman.md)
         * [ExpTsaiWu](Library/Material/Material3D/Orthotropic/ExpTsaiWu.md)
         * [NonlinearHill](Library/Material/Material3D/Orthotropic/NonlinearHill.md)
         * [NonlinearHoffman](Library/Material/Material3D/Orthotropic/NonlinearHoffman.md)
