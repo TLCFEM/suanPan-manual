@@ -1,13 +1,12 @@
 # expression
 
-The `expression` command can be used to define mathematical expressions that can be later used to customise relevant
-material models.
+The `expression` command can be used to define mathematical expressions that can be later used to customise relevant material models.
 
 The `expression` command essentially parses a block of plain text into mathematical expressions.
 The parsing and evaluation functionalities are powered by [`exprtk`](https://github.com/ArashPartow/exprtk).
 
-The `exprtk` generates an AST from the input text. The evaluation of the expression has an on par performance with
-the native C++ code.
+The `exprtk` generates an AST from the input text.
+The evaluation of the expression has an on par performance with the native C++ code.
 
 But a customisable expression allows for more flexibility and it is easier to experiment different functions.
 
@@ -44,7 +43,7 @@ expression SimpleVector (1) (2) (3) (4)
 This evaluates a vector-valued function $$y:=f(x_1,x_2,\cdots,x_n)$$.
 An assignment must be used to explicitly assign values to the output variables.
 The input arguments can be either scalars or vectors.
-The output argument should be a vector, the size shall be given such that $$y|3$$ represents a vector of size 3.
+The output argument should be a vector, the size shall be given such that `"y|3"` represents a vector of size 3.
 
 This form ***does not support*** automatic computation of derivatives.
 Thus, it ***cannot*** be used in models that require automatic computation of derivatives.

@@ -420,6 +420,7 @@
         * [NonlinearHill](Library/Material/Material3D/Orthotropic/NonlinearHill.md)
         * [NonlinearHoffman](Library/Material/Material3D/Orthotropic/NonlinearHoffman.md)
         * [TimberPD](Library/Material/Material3D/Orthotropic/TimberPD.md)
+        * [YLD0418P](Library/Material/Material3D/Orthotropic/YLD0418P.md)
     * Sand
         * [SimpleSand](Library/Material/Material3D/Sand/SimpleSand.md)
         * [DafalisaManzari](Library/Material/Material3D/Sand/DafaliasManzari.md)
