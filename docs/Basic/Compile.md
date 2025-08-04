@@ -8,7 +8,7 @@ Two images are provided for development purposes.
 
 ```bash
 # vtk+mkl+cuda
-docker pull tlcfem/suanpan-env-cuda
+docker pull tlcfem/suanpan-env:cuda
 # vtk+mkl
 docker pull tlcfem/suanpan-env
 ```
