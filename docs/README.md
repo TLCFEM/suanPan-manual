@@ -38,7 +38,7 @@ It aims to provide a wide collection of
 3. advanced solving techniques and modern time integration methods;
 4. and many more.
 
-[suanPan](https://tlcfem.github.io/suanPan/) also fully utilise the multicore architecture of today's PCs.
+[suanPan](https://tlcfem.github.io/suanPan/) also fully utilises the multicore architecture of today's PCs.
 From element/material state determination to global matrix assembly and handling of constraints, almost all parts of FEA are parallelised, meaning the computational capacity provided by the hardware is fully used.
 For the same analysis task, it is typically faster than other single-threaded or MPI based packages.
 
@@ -65,8 +65,7 @@ The `Collection` section includes the top level commands used to develop finite 
 The `Library` section contains all specific elements, materials, etc., that are available.
 
 To develop a specific model, you may need to have this manual at hand to check the syntax of the corresponding commands.
-You can also install the VS Code [extension](https://marketplace.visualstudio.com/items?itemName=tlc.suanpan) to get
-syntax highlighting and auto-completion.
+You can also install the VS Code [extension](https://marketplace.visualstudio.com/items?itemName=tlc.suanpan) to get syntax highlighting and auto-completion.
 
 You are also strongly recommended to check the [Example](https://github.com/TLCFEM/suanPan/tree/dev/Example) folder in the source code repository.
 As those examples are used to provide coverage report, almost all commands are used in those examples.
@@ -74,23 +73,20 @@ You shall be able to have a better understanding of the syntax by checking those
 
 ## Summary
 
-Here is a complete [table of contents](SUMMARY.md). If you are interested in the architecture of the program, you can
-check the [slides](ARCH.pdf) I prepared for a talk.
+Here is a complete [table of contents](SUMMARY.md).
+If you are interested in the architecture of the program, you can check the [slides](ARCH.pdf) I prepared for a talk.
 
 ## Contribution
 
-You are very welcome to contribute to the application. Please feel free to create feature requests or directly contact
-me if you wish to have a new element, material model, etc., implemented.
+You are very welcome to contribute to the application.
+Please feel free to create feature requests or directly contact me if you wish to have a new element, material model, etc., implemented.
 
-To contribute to this manual, please create pull requests. Besides, if you find any typos, please also feel free to
-create issues.
+To contribute to this manual, please create pull requests. Besides, if you find any typos, please also feel free to create issues.
 
-All third party libraries must provide a single markdown file to explain how to use the library and if possible with
-some theories.
+All third party libraries must provide a single markdown file to explain how to use the library and if possible with some theories.
 
 It may be convenient to build the manual locally, please check [Build](Basic/Build.md) for more details.
 
 ## Citation
 
-If `suanPan` has offered some convenience to your research work, please consider
-visiting [10.5281/zenodo.1285221](https://doi.org/10.5281/zenodo.1285221) and citing any version appropriate.
+If `suanPan` has offered some convenience to your research work, please consider visiting [10.5281/zenodo.1285221](https://doi.org/10.5281/zenodo.1285221) and citing any version appropriate.
