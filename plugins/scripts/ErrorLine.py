@@ -149,7 +149,7 @@ class ErrorLine:
         fig = plt.figure(figsize=(7.5, 5))
         plt.title(self._material_name.upper())
         if type == "abs":
-            full_title = r"Absolute Error (unit: % of $\sigma_\text{ref}$)"
+            full_title = r"Error (unit: % of $\sigma_\text{ref}$)"
         else:
             full_title = "Relative Error (unit: %)"
 
@@ -160,7 +160,7 @@ class ErrorLine:
         plt.grid()
 
         ax2 = plt.gca().twinx()
-        ax2.set_ylabel(" absolute value")
+        ax2.set_ylabel("Error Magnitude")
         ax2.plot(x, np.abs(y), label="log scale", marker="x", color="orange")
         ax2.set_yscale("log")
         plt.legend(loc="center right")
@@ -178,7 +178,8 @@ class ErrorLine:
             va="bottom",
             ha="left",
         )
-        plt.tight_layout()
+        plt.tight_layout(pad=0.2)
+        plt.subplots_adjust(bottom=0.15)
         return fig
 
     @contextmanager

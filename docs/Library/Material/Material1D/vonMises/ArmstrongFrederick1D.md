@@ -2,10 +2,8 @@
 
 1D Armstrong-Frederick Steel Model
 
-This model is a uni-axial version of the [`ArmstrongFrederick`](../../Material3D/vonMises/ArmstrongFrederick.md) steel
-model. Readers can also refer to the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
-for details on the theory.
+This model is a uniaxial version of the [`ArmstrongFrederick`](../../Material3D/vonMises/ArmstrongFrederick.md) steel model.
+Readers can also refer to the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf) for details on the theory.
 
 ## Theory
 
@@ -75,3 +73,24 @@ $$
 $$
 
 ![Example 1](ArmstrongFrederick1D.EX1.svg)
+
+## Accuracy
+
+```py
+from plugins import ErrorLine
+# note: the dependency `ErrorLine` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorLine.py
+
+young_modulus = 2e5
+yield_stress = 4e2
+hardening_ratio = 0.01
+
+with ErrorLine(
+    f"material ArmstrongFrederick1D 1 {young_modulus} {yield_stress} {hardening_ratio * young_modulus} 500 5 500 5",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+) as error_map:
+    error_map.contour("af1d", center=-5, size=10, type={"abs"})
+```
+
+![accuracy analysis](af1d.abs.error.svg)

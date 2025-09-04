@@ -107,3 +107,24 @@ materialTest1D 1 1E-4 40 80 120 160 200 240 280 320 360 400 400
 ```
 
 ![example one](SteelBRB.EX1.svg)
+
+## Accuracy
+
+```py
+from plugins import ErrorLine
+# note: the dependency `ErrorLine` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorLine.py
+
+young_modulus = 2e5
+yield_stress = 4e2
+hardening_ratio = 0.01
+
+with ErrorLine(
+    f"material SteelBRB 1 {young_modulus} {yield_stress} {hardening_ratio * young_modulus} {1.5 * yield_stress} .2 .6 {2 * yield_stress} .15 .4",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+) as error_map:
+    error_map.contour("steelbrb", center=-5, size=5, type={"abs"})
+```
+
+![accuracy analysis](steelbrb.abs.error.svg)

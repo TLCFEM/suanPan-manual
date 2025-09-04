@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup
         uses: actions/setup-python@v5
         with:
@@ -18,7 +18,7 @@ jobs:
           cache: 'pip'
       - name: Publish
         run: |
-          sudo apt-get install doxygen graphviz
+          sudo apt-get install doxygen graphviz pngquant
           pip install -e .
           rm $(pwd)/suanPan-linux-openblas-no-avx/bin/updater
           sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
@@ -27,5 +27,5 @@ jobs:
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
-          mike deploy 3.8 -u latest
+          mike deploy 3.9 -u latest
           git push origin gh-pages

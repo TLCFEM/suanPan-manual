@@ -27,7 +27,7 @@ $$\sigma_y(\varepsilon_m^p)$$ is the yield stress, $$\varepsilon_m^p$$ is the eq
 
 The following is a visualization of the yield surface in the $$p-q$$ plane.
 
-<iframe src="https://www.desmos.com/calculator/5x3nh1l317?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/e3b2fbea70?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 ## Evolution of Equivalent Plastic Strain
 

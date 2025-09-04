@@ -6,6 +6,15 @@ Orthotropic Hoffman Material
 
 1. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
 
+## Parameter Order
+
+All orthotropic models take nine parameters to define the elasticity.
+
+Using a standard notation (11, 22, 33, 12, 23, 13), the nine parameters needed are listed as follows.
+
+1. Six moduli: $$E_{11}$$, $$E_{22}$$, $$E_{33}$$, $$G_{12}$$, $$G_{23}$$, $$G_{13}$$. Note $$G_{ij}=G_{ji}$$.
+2. Three Poisson's ratios: $$\nu_{12}$$ $$\nu_{23}$$ $$\nu_{13}$$. Note $$\nu_{ij}\neq\nu_{ji}$$.
+
 ## Theory
 
 The `NonlinearHoffman` defines an orthotropic material using Hoffman yield criterion and associative plasticity.

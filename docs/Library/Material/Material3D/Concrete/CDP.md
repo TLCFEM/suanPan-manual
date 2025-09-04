@@ -15,6 +15,10 @@ The CDP model supports stiffness degradation. The backbone envelops are defined 
 plastic strain [4]. Apart from the listed references, readers can also refer to the corresponding section
 in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 
+The following shows the backbone of effective stress and the corresponding damage variable as functions of $$\kappa$$.
+
+<iframe src="https://www.desmos.com/calculator/5qxxcya0jt?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 ## Syntax
 
 ```text
@@ -56,7 +60,7 @@ material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 ## History Layout
 
 | location               | parameter      |
-|------------------------|----------------|
+| ---------------------- | -------------- |
 | `initial_history(0)`   | $$d_t$$        |
 | `initial_history(1)`   | $$d_c$$        |
 | `initial_history(2)`   | $$\kappa_t$$   |
@@ -67,10 +71,10 @@ material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 
 This model supports the following additional history variables to be recorded.
 
-| variable label | physical meaning              |
-|----------------|-------------------------------|
-| DT             | tensile damage                |
-| DC             | compressive damage            |
+| variable label | physical meaning   |
+| -------------- | ------------------ |
+| DT             | tensile damage     |
+| DC             | compressive damage |
 
 ## Iso-error Map
 

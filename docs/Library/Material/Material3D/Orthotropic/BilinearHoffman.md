@@ -7,8 +7,8 @@ Bilinear Hardening Hoffman Model
 ```
 material BilinearHoffman (1) (2...7) (8...10) (11...19) [20] [21]
 # (1) int, unique material tag
-# (2...7) double, six moduli: E_{xx}, E_{yy}, E_{zz}, E_{xy}, E_{yz}, E_{zx}
-# (8...10) double, three poissions ratios: v_{xy}, v_{yz}, v_{zx}
+# (2...7) double, six moduli: E_{xx}, E_{yy}, E_{zz}, G_{xy}, G_{yz}, G_{zx}
+# (8...10) double, three poissions ratios: v_{xy}, v_{yz}, v_{xz}
 # (11...19) double, nine yield stress
 # [20] double, hardening ratio, default: 0.0
 # [21] double, density, default: 0.0
@@ -31,7 +31,6 @@ with ErrorMap(
     ref_strain=yield_stress / modulus,
     ref_stress=yield_stress,
     contour_samples=30,
-    executable=suanpan,
 ) as error_map:
     error_map.contour("bilinear.hoffman.uniaxial", center=(-3, 0), size=2, type={"rel", "abs"})
     error_map.contour("bilinear.hoffman.biaxial", center=(-3, -3), size=2, type={"rel", "abs"})

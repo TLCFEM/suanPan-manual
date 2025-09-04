@@ -83,8 +83,8 @@ load groupbodyforce (1) (2) (3) (4) (5...)
 
 ### Support Excitation
 
-For response history analysis, sometimes it is necessary to apply excitations on supports. The multi-support excitation
-is automatically supported if analysts assign different excitations to different supports.
+For response history analysis, sometimes it is necessary to apply excitations on supports.
+The multi-support excitation is automatically supported if analysts assign different excitations to different supports.
 
 ```text
 supportdisplacement (1) (2) (3) (4) (5...)
@@ -105,6 +105,32 @@ loads, thus displacement controlled scheme is automatically enabled.
 
 Although it is designed to be used in response history analysis, it can also be used to apply acceleration/velocity on
 any nodes (not only supports).
+
+!!! warning "difference in explicit and implicit dynamic analysis"
+    Implicit time integration schemes use displacement as the primary variable, thus `supportdisplacement`, `supportvelocity` and `supportacceleration`
+    all converts to the corresponding nodal displacement.
+    However, explicit time integration schemes use acceleration as the primary variable, and there is no way to obtain the corresponding nodal displacement/velocity from the acceleration (because they are explicit methods).
+    Thus, in explicit dynamic analysis, `supportdisplacement` is identical to `supportacceleration` which all applies acceleration on the nodes.
+    `supportvelocity` is not available in explicit dynamic analysis.
+
+#### Validation
+
+The algorithms implemented is **not** some naive integration.
+**All support excitations are guaranteed to be consistent with the time integration scheme used.**
+This means, the exact same input can be observed in the output for all interpolating methods.
+Extrapolating methods will not guarantee the exact same input in the output.
+
+The following validation can be obtained via the [script](support-motion-validation.py).
+It defines a simple column and applies a support motion at the base (fixed) end of the column.
+It measures both the top (free) end displacement and the base (fixed) end acceleration.
+
+Interpolating schemes will produce the same acceleration history at the base as the input.
+Extrapolating schemes yield some difference since they extrapolate.
+Such an error may cause spurious responses in the structure.
+This problem is discussed in [this](https://doi.org/10.1080/13632469.2024.2372814) paper.
+
+![interpolating schemes](support-motion-validation-interpolating.svg)
+![extrapolating schemes](support-motion-validation-extrapolating.svg)
 
 ### Uniformly Distributed Load (UDL)
 

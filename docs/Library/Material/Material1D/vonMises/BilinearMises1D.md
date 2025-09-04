@@ -6,7 +6,9 @@ Bilinear J2 Plasticity Model
 
 This model is an implementation of the [`Mises1D`](Mises1D.md) abstract model.
 
-Only isotropic hardening is defined. The kinematic hardening is set to zero.
+Compared to[`Bilinear1D`](Bilinear1D.md), only isotropic hardening is defined.
+The kinematic hardening is set to zero.
+There is no other significant difference.
 
 ## Syntax
 
