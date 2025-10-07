@@ -14,14 +14,14 @@ jobs:
       - name: Setup
         uses: actions/setup-python@v6
         with:
-          python-version: '3.12'
-          cache: 'pip'
+          python-version: "3.12"
+          cache: "pip"
       - name: Publish
         run: |
           sudo apt-get install doxygen graphviz pngquant
           pip install -e .
-          rm $(pwd)/suanPan-linux-openblas-no-avx/bin/updater
-          sudo ln -s $(pwd)/suanPan-linux-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
+          rm $(pwd)/suanPan-linux-amd64-openblas-no-avx/bin/updater
+          sudo ln -s $(pwd)/suanPan-linux-amd64-openblas-no-avx/bin/suanPan.sh /usr/bin/suanpan
           suanpan -v
           git fetch origin
           git config --global user.name "Theodore Chang"
