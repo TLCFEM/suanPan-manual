@@ -13,6 +13,7 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+import json
 import os
 import re
 import shutil
@@ -75,11 +76,12 @@ def install(run_doxygen: bool):
         binary_file = f"{binary_file_name}.zip"
     remove(binary_file_name)
 
-    with urlopen("https://github.com/TLCFEM/suanPan") as response:
-        content = response.read().decode("utf-8")
-        version_string = re.search(r"suanPan-v\d\.\d(\.\d)?", content).group(0)
+    with urlopen(
+        "https://api.github.com/repos/TLCFEM/suanPan/releases/latest"
+    ) as response:
+        latest_tag = json.load(response)["tag_name"]
 
-    url = f"https://github.com/TLCFEM/suanPan/releases/download/{version_string}/{binary_file}"
+    url = f"https://github.com/TLCFEM/suanPan/releases/download/{latest_tag}/{binary_file}"
     with urlopen(url) as response, open(binary_file, "wb") as archive:
         shutil.copyfileobj(response, archive)
 
