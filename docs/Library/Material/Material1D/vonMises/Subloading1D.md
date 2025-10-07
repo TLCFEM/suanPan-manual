@@ -107,20 +107,24 @@ in which $$c_e$$ and $$z_e<1$$ are two constants.
 material Subloading1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, initial isotropic stress, \sigma^i
-# (4) double, linear isotropic hardening modulus, k_{iso}
-# (5) double, isotropic saturation stress, \sigma^s
-# (6) double, isotropic saturation rate, m^s_{iso}
-# (7) double, initial kinematic stress, a^i
-# (8) double, linear kinematic hardening modulus, k_{kin}
-# (9) double, kinematic saturation stress, a^s
-# (10) double, kinematic saturation rate, m^s_{kin}
-# (11) double, yield ratio evolution rate, u
-# (12) double, kinematic hardening rate, b
-# (13) double, elastic core evolution rate, c_e
-# (14) double, limit elastic core ratio, z_e
+# (3) double, initial isotropic stress, \sigma^i>=0
+# (4) double, linear isotropic hardening modulus, k_{iso}>=0
+# (5) double, isotropic saturation stress, \sigma^s>=0
+# (6) double, isotropic saturation rate, m^s_{iso}>=0
+# (7) double, initial kinematic stress, a^i>=0
+# (8) double, linear kinematic hardening modulus, k_{kin}>=0
+# (9) double, kinematic saturation stress, a^s>=0
+# (10) double, kinematic saturation rate, m^s_{kin}>=0
+# (11) double, yield ratio evolution rate, u>=0
+# (12) double, kinematic hardening rate, b>=0
+# (13) double, elastic core evolution rate, c_e>=0
+# (14) double, limit elastic core ratio, 1>z_e>=0
 # [15] double, density, default: 0.0
 ```
+
+!!! Warning
+    The model is limited to strain hardening only.
+    Softening behaviour is not feasible.
 
 ## History Layout
 
