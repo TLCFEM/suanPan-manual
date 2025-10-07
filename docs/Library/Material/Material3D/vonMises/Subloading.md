@@ -48,10 +48,6 @@ material Subloading (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14)
 # [16] double, density, default: 0.0
 ```
 
-!!! Warning
-    The model is limited to strain hardening only.
-    Softening behaviour is not feasible.
-
 ## History Layout
 
 | location                | parameter                                  |
