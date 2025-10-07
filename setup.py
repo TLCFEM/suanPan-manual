@@ -69,7 +69,7 @@ def install(run_doxygen: bool):
 
     # 3. download binary file
     if sys.platform.startswith("linux"):
-        binary_file_name = "suanPan-linux-openblas-no-avx"
+        binary_file_name = "suanPan-linux-amd64-openblas-no-avx"
         binary_file = f"{binary_file_name}.tar.gz"
     else:
         binary_file_name = "suanPan-win-mkl-vtk"
