@@ -15,6 +15,7 @@
 
 import json
 import os
+from pathlib import Path
 import re
 import shutil
 import sys
@@ -47,6 +48,18 @@ def install(run_doxygen: bool):
 
     # 2. generate doxygen documentation
     os.chdir(archive_name)
+
+    with urlopen("https://api.github.com/repos/TLCFEM/suanPan/commits/dev") as response:
+        revision = json.load(response)["sha"]
+
+    doxyfile = Path("Doxyfile").read_text()
+    Path("Doxyfile").write_text(
+        re.sub(
+            r"^PROJECT_NUMBER\s+=.*$",
+            f"PROJECT_NUMBER = {revision[:7]}",
+            doxyfile,
+        )
+    )
 
     if shutil.which(doxygen_bin := "doxygen") is not None and run_doxygen:
         os.system(doxygen_bin)
