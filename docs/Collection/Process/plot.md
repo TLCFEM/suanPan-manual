@@ -1,6 +1,6 @@
 # plot
 
-The `plot` command can be used to plot and save visualization as `.vtk` file.
+The `plot` command can be used to plot and save visualization as files.
 
 **Only binaries compiled with VTK libraries can use this command. Otherwise, it does nothing.**
 
@@ -29,7 +29,7 @@ Available keywords and corresponding parameters are listed as follows.
 7. `material` filters the elements plotted based on material tag. A single unsigned integer is required as parameter.
    Example: `material 1`
 8. `size` controls the size of plot window. Two double values are required. Examples: `size 300 400`
-9. `save` indicates the file name. A string value with suffix of `.vtk` is required. Example: `save S11.vtk`
+9. `save` indicates the file name. A string value is required. The extension suffix will be automatically appended. Example: `save S11`
 
 ## Remarks
 

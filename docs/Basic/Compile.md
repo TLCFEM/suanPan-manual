@@ -379,7 +379,7 @@ If CMake GUI is used to configure the project, the following options are availab
    the `suanPan` application itself.
 4. `SP_ENABLE_HDF5`: If enabled, `HDF5` will be used to provide support for [`hdf5recorder`](../Library/Recorder/Recorder.md).
 5. `SP_ENABLE_VTK`: If enabled, `VTK` will be used to provide support for visualization. It will be useful to
-   generate `.vtk` files that can be used in `Paraview` for post-processing. If enabled, `VTK_PATH` needs to be set to
+   generate files that can be used in `Paraview` for post-processing. If enabled, `VTK_PATH` needs to be set to
    the path of `VTK` installation. For example, `VTK_PATH=/usr/local/opt/vtk/lib/cmake/vtk-9.1`.
 6. `SP_ENABLE_CUDA`: `CUDA` needs to be installed manually by the user. If enabled, `CUDA` based solvers will be
    available. However, for dense matrix storage, only full matrix storage scheme is supported by `CUDA`. Note full

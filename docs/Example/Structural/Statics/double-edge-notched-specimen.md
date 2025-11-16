@@ -60,7 +60,7 @@ hdf5recorder 1 Visualisation DT width 3 scale 0
 ```
 
 Since we are not interested in the displacement, `scale` is simply set to zero. The output file are automatically
-numbered with a total width of four. It is changed to three in this example. The generated `.vtk` files can be loaded
+numbered with a total width of four. It is changed to three in this example. The generated visualisation files can be loaded
 into **ParaView** as a group to generate animations.
 
 The analysis has a duration of two seconds. In the first second, the horizontal tension is applied, then the vertical
