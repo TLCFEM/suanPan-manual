@@ -23,10 +23,8 @@ Available keywords and corresponding parameters are listed as follows.
 3. `fontsize` controls the font size of legend, title, etc. This has no effect if the plot is saved.
    Example: `fontsize 14`
 4. `nobar` disables legend in plot window.
-5. `material` filters the elements plotted based on material tag. A single unsigned integer is required as parameter.
-   Example: `material 1`
-6. `size` controls the size of plot window. Two double values are required. Examples: `size 300 400`
-7. `save` indicates the file name. A string value is required. The extension suffix will be automatically appended. Example: `save S11`
+5. `size` controls the size of plot window. Two double values are required. Examples: `size 300 400`
+6. `save` indicates the file name. A string value is required. The extension suffix will be automatically appended. Example: `save S11`
 
 ## Remarks
 
