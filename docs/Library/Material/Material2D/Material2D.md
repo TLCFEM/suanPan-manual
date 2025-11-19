@@ -2,16 +2,12 @@
 
 All 2D material models support the following basic output types.
 
-| variable label | physical meaning                              |
-|----------------|-----------------------------------------------|
-| S11            | $$\sigma_{11}$$                               |
-| S12            | $$\sigma_{12}$$                               |
-| S22            | $$\sigma_{22}$$                               |
-| E11            | $$\varepsilon_{11}$$                          |
-| E12            | $$\varepsilon_{12}$$                          |
-| E22            | $$\varepsilon_{22}$$                          |
-| SP             | all principal stress components               |
-| EP             | all principal strain components               |
+| variable label | physical meaning                    |
+| -------------- | ----------------------------------- |
+| SP             | principal stress components         |
+| EP             | principal strain components         |
+| EEP            | principal elastic strain components |
+| PEP            | principal plastic strain components |
 
 Depending on the specific material model, additional output types may be available.
 
