@@ -80,32 +80,33 @@ def install(run_doxygen: bool):
 
     remove(archive_name)
 
-    # 3. download binary file
-    if sys.platform.startswith("linux"):
-        binary_file_name = "suanPan-linux-amd64-openblas-no-avx"
-        binary_file = f"{binary_file_name}.tar.gz"
-    else:
-        binary_file_name = "suanPan-win-mkl-vtk"
-        binary_file = f"{binary_file_name}.zip"
-    remove(binary_file_name)
+    if shutil.which("suanpan") is None and shutil.which("sp") is None:
+        # 3. download binary file
+        if sys.platform.startswith("linux"):
+            binary_file_name = "suanPan-linux-amd64-openblas-no-avx"
+            binary_file = f"{binary_file_name}.tar.gz"
+        else:
+            binary_file_name = "suanPan-win-mkl-vtk"
+            binary_file = f"{binary_file_name}.zip"
+        remove(binary_file_name)
 
-    with urlopen(
-        "https://api.github.com/repos/TLCFEM/suanPan/releases/latest"
-    ) as response:
-        latest_tag = json.load(response)["tag_name"]
+        with urlopen(
+            "https://api.github.com/repos/TLCFEM/suanPan/releases/latest"
+        ) as response:
+            latest_tag = json.load(response)["tag_name"]
 
-    url = f"https://github.com/TLCFEM/suanPan/releases/download/{latest_tag}/{binary_file}"
-    with urlopen(url) as response, open(binary_file, "wb") as archive:
-        shutil.copyfileobj(response, archive)
+        url = f"https://github.com/TLCFEM/suanPan/releases/download/{latest_tag}/{binary_file}"
+        with urlopen(url) as response, open(binary_file, "wb") as archive:
+            shutil.copyfileobj(response, archive)
 
-    if sys.platform.startswith("linux"):
-        with tarfile.open(binary_file, "r:gz") as archive:
-            archive.extractall(binary_file_name)
-    else:
-        with zipfile.ZipFile(binary_file, "r") as archive:
-            archive.extractall(binary_file_name)
+        if sys.platform.startswith("linux"):
+            with tarfile.open(binary_file, "r:gz") as archive:
+                archive.extractall(binary_file_name)
+        else:
+            with zipfile.ZipFile(binary_file, "r") as archive:
+                archive.extractall(binary_file_name)
 
-    os.remove(binary_file)
+        os.remove(binary_file)
 
     with open("requirements.txt") as f:
         required = f.read().splitlines()
