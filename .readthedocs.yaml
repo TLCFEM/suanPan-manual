@@ -26,7 +26,7 @@ build:
     - pngquant
   jobs:
     post_install:
-      - ln -s $(pwd)/suanPan-linux-amd64-openblas-no-avx/suanPan.sh /home/docs/.asdf/shims/suanpan
+      - ln -s $(find $(pwd)/suanPan* -type f -name suanPan.sh | head -n1) /home/docs/.asdf/shims/suanpan
       - suanpan -v
 python:
   install:

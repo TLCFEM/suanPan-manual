@@ -11,6 +11,8 @@ WORKDIR /manual
 
 RUN pip install --no-cache-dir --no-compile --upgrade .
 
+RUN find /usr/local/lib/python*/site-packages -type d \( -name "__pycache__" \) -not -path "*/numpy/testing" -prune -exec rm -rf {} +
+
 RUN find /usr/local/lib/python*/site-packages -name "*.so" -exec strip --strip-unneeded {} +
 
 RUN sed -i '/^extra:/,+2d' mkdocs.yml
