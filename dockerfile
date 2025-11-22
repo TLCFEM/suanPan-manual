@@ -19,13 +19,8 @@ RUN mkdocs build --site-dir site
 
 FROM python:3.12-slim AS runtime
 
-RUN pip install --no-cache-dir --no-compile --upgrade aiohttp
-
 COPY --from=dependency /manual/site /manual/site
-COPY plugins/misc/runner.py /manual/runner.py
 
-WORKDIR /manual
-
-CMD ["python3", "runner.py"]
+CMD ["python3", "-m", "http.server", "8000", "--directory", "/manual/site"]
 
 EXPOSE 8000
