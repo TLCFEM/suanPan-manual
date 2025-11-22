@@ -41,7 +41,6 @@ jobs:
           mike deploy 4.0
           git push origin gh-pages
   docker:
-    needs: deploy
     runs-on: ubuntu-latest
     timeout-minutes: 100
     permissions:

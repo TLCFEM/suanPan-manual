@@ -1,5 +1,3 @@
-import asyncio
-
 from aiohttp import web
 
 
@@ -8,9 +6,9 @@ async def handle(request):
     return web.FileResponse(f"./site/{path}")
 
 
-app = web.Application()
-app.router.add_get("/", handle)
-app.router.add_get("/{filename:.*}", handle)
-
 if __name__ == "__main__":
+    app = web.Application()
+    app.router.add_get("/", handle)
+    app.router.add_get("/{filename:.*}", handle)
+
     web.run_app(app, port=8000)
