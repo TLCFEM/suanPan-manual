@@ -15,7 +15,7 @@ RUN find /usr/local/lib/python*/site-packages -name "*.so" -exec strip --strip-u
 
 RUN sed -i '/^extra:/,+2d' mkdocs.yml
 
-RUN ln -sf "$(find /manual/suanPan* -type f -name suanPan.sh | head -n1)" /usr/local/bin/suanpan
+RUN ln -s "$(find /manual/suanPan* -type f -name suanPan.sh | head -n1)" /usr/local/bin/suanpan
 
 ENV PYTHONOPTIMIZE=1
 

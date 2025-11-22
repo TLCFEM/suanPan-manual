@@ -20,8 +20,8 @@ jobs:
         run: |
           sudo apt-get install doxygen graphviz pngquant
           pip install -e .
-          rm $(find suanPan* -type f -path "*/bin/updater" | head -n1)
-          sudo ln -s $(find suanPan* -type f -name suanPan.sh | head -n1) /usr/bin/suanpan
+          find $(pwd)/suanPan* -type f -path "*/bin/updater" -exec rm -f {} +
+          sudo ln -s $(find $(pwd)/suanPan* -type f -name suanPan.sh | head -n1) /usr/bin/suanpan
           suanpan -v
           git fetch origin
           git config --global user.name "Theodore Chang"
