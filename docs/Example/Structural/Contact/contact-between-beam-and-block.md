@@ -30,7 +30,7 @@ element EB21 2 2 3 12 1 1
 element EB21 3 3 4 12 1 1
 element EB21 4 4 5 12 1 1
 
-fix 1 P 1
+fix 1 E 1
 
 displacement 1 0 -.1 2 3
 ```
@@ -51,7 +51,7 @@ material Elastic2D 2 10 .2
 # use material 2
 element CP4 5 6 7 8 9 2 1.
 
-fix 2 P 6 7
+fix 2 E 6 7
 ```
 
 ## The Contact Interaction

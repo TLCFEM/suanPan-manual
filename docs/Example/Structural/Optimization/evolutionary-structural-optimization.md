@@ -19,7 +19,7 @@ The boundary condition is applied to a group that selects all nodes on $$x=0$$.
 
 ```
 generatebyrule nodegroup 1 1 1. 0.
-groupmultiplierbc 1 P 1
+groupmultiplierbc 1 E 1
 ```
 
 ## The Optimization Step

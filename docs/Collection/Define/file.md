@@ -36,5 +36,5 @@ node 1 0 0
 node 2 1.34 0
 material Elastic1D 1 132
 element EB21 1 1 2 7.213 6.825 1
-fix 1 P 1
+fix 1 E 1
 ```

@@ -55,7 +55,7 @@ element B21 3 3 4 2 6
 element Mass 4 2 5 1
 element Mass 5 3 5 1
 
-fix 1 P 1 4
+fix 1 E 1 4
 ```
 
 ## Model Analysis

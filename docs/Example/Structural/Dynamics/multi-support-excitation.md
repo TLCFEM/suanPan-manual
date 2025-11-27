@@ -68,7 +68,7 @@ so that no rigid body motion is allowed.
 ```text hl_lines="6"
 file geometry.sp
 
-fix 1 P 1
+fix 1 E 1
 
 # on DoF 1 node 2
 acceleration 2 1 -.2 1 2

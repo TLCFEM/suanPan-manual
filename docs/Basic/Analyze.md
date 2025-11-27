@@ -23,8 +23,8 @@ material Elastic1D 1 132
 # define an (E)lastic (B)eam element 1 connecting node 1 and node 2 with A=7.213 and I=6.825 using material 1
 element EB21 1 1 2 7.213 6.825 1
 
-# fix all DoFs (P) of node 1
-fix 1 P 1
+# fix all DoFs (E) of node 1
+fix 1 E 1
 
 # apply a load of magnitude 23 at DoF 2 of node 2
 cload 1 0 23 2 2

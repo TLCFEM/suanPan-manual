@@ -71,7 +71,7 @@ element EB21 8 22 23 12 1 1 1
 element EB21 9 23 24 12 1 1 1
 element EB21 10 24 4 12 1 1 1
 
-fix2 1 P 1 4
+fix2 1 E 1 4
 
 constraint FixedLength2D 2 2 3
 

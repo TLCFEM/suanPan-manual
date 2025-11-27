@@ -64,7 +64,7 @@ node 2 0 2.84
 material Elastic1D 1 94.13
 element EB21 1 1 2 1 1.34 1
 mass 2 2 5.76 1
-fix 1 P 1
+fix 1 E 1
 recorder 1 hdf5 Eigen
 step frequency 1 1
 analyze

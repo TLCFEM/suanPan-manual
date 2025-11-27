@@ -62,7 +62,7 @@ So the result depends on the magnitude of applied force.
 ! load model geometry first
 file geometry.supan
 ! apply bc
-fix 1 P 1
+fix 1 E 1
 ! apply axial load on the free end
 cload 1 0 -1E-2 1 6
 ```
