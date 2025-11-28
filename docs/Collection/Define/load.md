@@ -146,6 +146,9 @@ load lineudl3d (1) (2) (3) (4) (5...)
 # (5...) int, node tags
 ```
 
+The magnitude can be either positive or negative, applying the load to different directions of the assigned DoF.
+Only translational DoFs are supported, thus, use `1`, `2`, `3`, `U1`, `U2`, `U3` only.
+
 ### Reference Load
 
 For arc-length analysis, reference load can be defined via the `RefForce` command.
