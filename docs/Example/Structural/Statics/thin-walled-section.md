@@ -262,7 +262,7 @@ Now it is possible to pass in a geometry, and call the export function to genera
 to_file(to_cell3dos(geometry), "circular.sp")
 ```
 
-!!! Note
+!!! note
     The above functionality has been added to the latest `sectionproperties` library, see [this](https://sectionproperties.readthedocs.io/en/latest/gen/sectionproperties.post.fibre.to_fibre_section.html) page.
 
 ### Validation

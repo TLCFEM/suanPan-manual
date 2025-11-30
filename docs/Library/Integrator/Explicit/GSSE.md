@@ -24,7 +24,7 @@ set linear_system true
 
 to speed up the computation.
 
-!!! Warning
+!!! warning
     When $$\rho_b<0.5$$, the algorithm extrapolates.
 
 ## Accuracy Analysis

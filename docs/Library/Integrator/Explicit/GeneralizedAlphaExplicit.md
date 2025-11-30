@@ -25,7 +25,7 @@ set linear_system true
 
 to speed up the computation.
 
-!!! Warning
+!!! warning
     When $$\rho_\infty<1$$, the algorithm extrapolates.
 
 ## Accuracy Analysis
