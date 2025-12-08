@@ -12,14 +12,16 @@ This `Damper01` is a simple 2D viscous/nonviscous damper.
 See this [example](../../../Example/Structural/Dynamics/dynamic-analysis-of-a-portal-frame.md).
 
 * Number of Nodes: 2
-* Number of DoFs: 2 (Translation: UX, Translation: UY)
+* Number of DoFs: 2 (Translation, Translation)
+* DoF Label: U1, U2
 
 ## Damper03
 
 This `Damper03` is a simple 3D viscous/nonviscous damper.
 
 * Number of Nodes: 2
-* Number of DoFs: 3 (Translation: UX, Translation: UY, Translation: UZ)
+* Number of DoFs: 3 (Translation, Translation, Translation)
+* DoF Label: U1, U2, U3
 
 ## Syntax
 

@@ -2,6 +2,9 @@
 
 3D Node(Slave)-Triangular Facet(Master) Contact Element
 
+* Number of DoFs: 3
+* DoF Label: U1, U2, U3
+
 ## Syntax
 
 ```

@@ -3,7 +3,8 @@
 Quadratic Quadrilateral With Pore Pressure (Undrained)
 
 * Number of Nodes: 8
-* Number of DoFs: 4 (Solid Translation, Solid Translation, Fluid Translation, Fluid Translation)
+* Number of DoFs: 2 (Solid Translation, Solid Translation)
+* DoF Label: U1, U2
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 

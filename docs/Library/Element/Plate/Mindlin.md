@@ -3,7 +3,8 @@
 Mindlin Plate Element
 
 * Number of Nodes: 4
-* Number of DoFs: 3 (Translation, Translation, Rotation)
+* Number of DoFs: 3 (Translation, Rotation, Rotation)
+* DoF Label: U3, UR1, UR2
 
 ![encoding](../PIC/Q4.svg)
 

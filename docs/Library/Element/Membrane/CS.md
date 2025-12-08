@@ -4,6 +4,7 @@ Couple Stress Mixed Triangle/Quadrilateral
 
 * Number of Nodes: 3, 4, 5, 6, 7, 8
 * Number of DoFs: 3 (Translation, Translation, Rotation)
+* DoF Label: U1, U2, UR3
 
 ## References
 

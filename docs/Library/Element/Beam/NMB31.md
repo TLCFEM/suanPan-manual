@@ -4,6 +4,7 @@
 
 * Number of Nodes: 2
 * Number of DoFs: 6 (Translation, Translation, Translation, Rotation, Rotation, Rotation)
+* DoF Label: U1, U2, U3, UR1, UR2, UR3
 
 ## References
 

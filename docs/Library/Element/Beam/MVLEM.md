@@ -4,6 +4,7 @@ Multiple Vertical Line Element Model
 
 * Number of Nodes: 2
 * Number of DoFs: 3 (Translation, Translation, Rotation)
+* DoF Label: U1, U2, UR3
 
 The `MVLEM` element is often used in modelling walls. It is in fact a simplified beam element with shear response.
 

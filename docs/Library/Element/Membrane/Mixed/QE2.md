@@ -4,6 +4,7 @@ Mixed Four-Node Quadrilateral Element
 
 * Number of Nodes: 4
 * Number of DoFs: 2
+* DoF Label: U1, U2
 * Supports Body Force
 * Integration Scheme: 2nd Order Gauss
 * Constant Consistent Mass Matrix With Same Order Integration

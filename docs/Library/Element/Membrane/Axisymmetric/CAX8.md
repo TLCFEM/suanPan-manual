@@ -4,6 +4,7 @@ Axisymmetric Quadratic Quadrilateral
 
 * Number of Nodes: 8
 * Number of DoFs: 2
+* DoF Label: RADIAL, AXIAL
 
 ## Syntax
 

@@ -4,8 +4,10 @@ Single Section Analysis
 
 - 2D:
   * Number of DoFs: 2 (AXIAL, STRONG AXIS ROTATION)
+  * DoF Label: AXIAL, RS
 - 3D:
   * Number of DoFs: 3 (AXIAL, STRONG AXIS ROTATION, WEAK AXIS ROTATION)
+  * DoF Label: AXIAL, RS, RW
 
 It is often demanded to do a section analysis to see the capacity of the target section, etc.
 The `SingleSection` element is exactly for this purpose.

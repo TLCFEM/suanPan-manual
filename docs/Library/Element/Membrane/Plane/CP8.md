@@ -4,6 +4,7 @@ Second Order Quadrilateral
 
 * Number of Nodes: 8
 * Number of DoFs: 2 (Translation, Translation)
+* DoF Label: U1, U2
 * Integration Scheme: 2nd Order Irons (Full) or 2nd Order Gauss (Reduced)
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration

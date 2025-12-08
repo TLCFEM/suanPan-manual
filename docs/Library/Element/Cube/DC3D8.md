@@ -1,5 +1,9 @@
 # DC3D8
 
+* Number of Nodes: 8
+* Number of DoFs: 4 (Translation, Translation, Translation, Damage)
+* DoF Label: U1, U2, U3, DAMAGE
+
 ## Syntax
 
 ```text
