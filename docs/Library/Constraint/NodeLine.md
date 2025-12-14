@@ -12,7 +12,22 @@ constraint NodeLine (1) (2) (3) (4)
 # (4) int, slave node k tag
 ```
 
-## Remarks
+The geometry can be illustrated in the following figure.
 
-1. The outer normal vector of master line is defined by rotating the master axis defined by $$\mathbf{x}_j-\mathbf{x}_
-   i$$ by $$\pi/2$$ anticlockwise. Thus, the sequence of master nodes matters.
+![node-line](NodeLine.svg)
+
+This constraint is intended to model the line-crossing style contact.
+In most cases, the whole plane can be divided into two regions, separated by a series of line segments, one side shall be the no-entry zone.
+The target slave nodes are constrained in such way that they can only stay on the initial side. 
+
+Nodes $$i$$ and $$j$$ define a line segment with a finite length.
+Node $$k$$ is not allowed to enter the  shaded region on opposite side of the line.
+It can, however, enter the unshaded regions on either side.
+The initial positions of three nodes define the initial side of node $$k$$.
+
+!!! warning "limited applicability"
+    This constraint is **not** suitable for some problems involving large displacement, or large rigid body motion, in which there are no clear rules that target slave nodes must stay on one side of some boundary. 
+
+!!! note "node order"
+    Prior to `v4.0.0`, node $$k$$ must be on the **left** side of vector $$ij$$, as the normal direction is computed by rotating vector $$ij$$ anticlockwise by 90 degrees.
+    Starting from `v4.0.0`, this restriction is **lifted** so the order of nodes $$i$$ and $$j$$ does not matter any more.
