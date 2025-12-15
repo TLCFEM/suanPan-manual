@@ -26,4 +26,10 @@ class OverwriteMath(BasePlugin):
             output,
         )
         output = re.sub(r"\\\)</span>\\\)</span>", r"\\)</span>", output)
+        output = re.sub(
+            r'\$<span class="arithmatex">\\\(',
+            r'<span class="arithmatex">\\(',
+            output,
+        )
+        output = re.sub(r"\\\)</span>\$", r"\\)</span>", output)
         return output

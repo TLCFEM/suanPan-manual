@@ -12,8 +12,8 @@ assigned automatically.
 ## Syntax
 
 ```
-mpc (1) (2) (3) [(4) (5) (6))...]
-constraint mpc (1) (2) (3) [(4) (5) (6))...]
+mpc (1) (2) (3) [(4) (5) (6)...]
+constraint mpc (1) (2) (3) [(4) (5) (6)...]
 # (1) int, unique constraint tag
 # (2) int, amplitude tag, can be zero
 # (3) double, right hand side of the constraint equation, the constraint is homogeneous if this parameter is zero
