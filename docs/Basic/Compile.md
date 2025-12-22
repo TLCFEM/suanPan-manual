@@ -99,7 +99,7 @@ A solution file is provided under `MSVC/suanPan` folder. There are two configura
 1.  `Debug`: Assume no available Fortran compiler, all Fortran related libraries are provided as precompiled DLLs. Use
     OpenBLAS for linear algebra. Multithreading disabled. Visualisation disabled. HDF5 support disabled.
 2.  `Release`: Fortran libraries are configured with Intel compilers. Use MKL for linear algebra. Multithreading enabled.
-    Visualisation enabled with VTK version 9.4. HDF5 support enabled. CUDA enabled.
+    Visualisation enabled with VTK version 9.5. HDF5 support enabled. CUDA enabled.
 
 This [repository](https://github.com/TLCFEM/prebuilds) contains some precompiled libraries used.
 
@@ -120,19 +120,9 @@ To compile `Release` version, please
     VTK_DIR=C:\Program Files\VTK\
     ```
 
-    For versions other than 9.4, names of the linked libraries shall be manually changed as they contain version numbers.
+    For versions other than 9.5, names of the linked libraries shall be manually changed as they contain version numbers.
     Thus, it is not a good idea to switch to a different version. Precompiled VTK library is also available in
     this [repository](https://github.com/TLCFEM/prebuilds).
-
-4.  Make sure MAGMA is available. Then define a system environment variable `$(MAGMA_DIR)`, which points
-    to the root folder of MAGMA library. On my machine, it is
-
-    ```powershell
-    MAGMA_DIR=C:\Program Files\MAGMA\
-    ```
-
-    You probably need to compile MAGMA yourself. You can manually remove all magma related settings in the solution file
-    if you don't want to use it.
 
 Alternatively, `CMake` can be used to generate solution files if some external packages are not available.
 
