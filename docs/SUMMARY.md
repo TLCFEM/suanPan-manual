@@ -363,6 +363,7 @@
         * [Nonviscous01](Library/Material/Material1D/Viscosity/Nonviscous01.md)
     * vonMises
         * [Subloading1D](Library/Material/Material1D/vonMises/Subloading1D.md)
+        * [Balloon1D](Library/Material/Material1D/vonMises/Balloon1D.md)
         * [ArmstrongFrederick1D](Library/Material/Material1D/vonMises/ArmstrongFrederick1D.md)
         * [AFCO1D](Library/Material/Material1D/vonMises/AFCO1D.md)
         * [Bilinear1D](Library/Material/Material1D/vonMises/Bilinear1D.md)
@@ -440,6 +441,7 @@
         * [PolyJ2](Library/Material/Material3D/vonMises/PolyJ2.md)
         * [VAFCRP](Library/Material/Material3D/vonMises/VAFCRP.md)
         * [Subloading](Library/Material/Material3D/vonMises/Subloading.md)
+        * [Balloon](Library/Material/Material3D/vonMises/Balloon.md)
 * MaterialOS
     * [ElasticOS](Library/Material/MaterialOS/ElasticOS.md)
 * Wrapper
