@@ -26,6 +26,20 @@ material Balloon ${1:(1)} ${2:(2)} ${3:(3)} ${4:(4)} ${5:(5)} ${6:(6 7 8 9)} ${7
 # (28 29) double, saturation, rate
 ```
 
+## Theory
+
+### Bound Function
+
+The scalar bounds use the following general form.
+
+$$
+\chi\left(q\right)=\chi_0+kq+\chi_s\left(1-\exp\left(-rq\right)\right).
+$$
+
+In which $$q$$ is the proper accumulated plastic strain.
+Effectively, it has three parts: 1) initial value $$\chi_0$$, 2) linear part $$kq$$ and 3) saturation part $$\chi_s\left(1-\exp\left(-rq\right)\right)$$.
+The parameter tuple takes $$\chi_0$$, $$k$$, $$\chi_s$$ and $$r$$.
+
 ## Iso-error Map
 
 The Balloon-v1 model extends the subloading surface model and behaves in a similar way under monotonic loading.
@@ -52,10 +66,10 @@ material Balloon 1 \
 .02 0 0 0 \ ! ham
 0 0 0 0 \ ! hac
 0 \ ! density
--fc 5E0 1. \ ! fc
--na 1E2 1. \ ! na
--na 0 90. \ ! na
--nd 1E2 .8 ! nd
+-fc 1. 5E0 \ ! fc
+-na 1. 1E2 \ ! na
+-na 90. 0 \ ! na
+-nd .8 1E2 ! nd
 ''',
         ref_strain=yield_stress / young_modulus,
         ref_stress=yield_stress,
