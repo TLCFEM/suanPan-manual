@@ -2,6 +2,9 @@
 
 Uniaxial Balloon Model
 
+Both this model and [Balloon3D](../../Material3D/vonMises/Balloon.md) share the same definitions of parameters.
+Both models shall yield the same uniaxial behaviour if the same parameter set is used.
+
 ## Syntax
 
 ```text
