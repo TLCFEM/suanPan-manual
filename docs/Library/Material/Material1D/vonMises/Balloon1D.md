@@ -22,3 +22,7 @@ material Balloon1D ${1:(1)} ${2:(2)} ${3:(3)} ${4:(4)} ${5:(5 6 7 8)} ${6:(9 10 
 # (26) string, token, one of '-fc', '-ac', '-na', '-nd'
 # (27 28) double, saturation, rate
 ```
+
+## Theory
+
+See [Balloon3D](../../Material3D/vonMises/Balloon.md) for more details.

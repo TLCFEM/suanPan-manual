@@ -40,6 +40,17 @@ In which $$q$$ is the proper accumulated plastic strain.
 Effectively, it has three parts: 1) initial value $$\chi_0$$, 2) linear part $$kq$$ and 3) saturation part $$\chi_s\left(1-\exp\left(-rq\right)\right)$$.
 The parameter tuple takes $$\chi_0$$, $$k$$, $$\chi_s$$ and $$r$$.
 
+### Cyclic Evolution
+
+The key-value tuples indicated by tokens '-fc' and '-ac' control the evolutions of cyclic bounds (scalars).
+The key-value tuples indicated by tokens '-na' and '-nd'  control the evolutions of back stress like quantities (tensors).
+For all four sets, the Armstrong-Fredrick style exponential rule is used, and two parameters indicator the saturation target and the corresponding saturation rate.
+
+Typically, the saturation value can be fixed to unity such that those quantities saturation to unity (either scalar or tensor) as the actual magnitudes need to account for the previous bounds.
+For the same quantity, more than one tuple can be defined.
+For example, `-fc .4 100 -fc .6 200` means there are two components, one saturates to 0.4 with a rate of 100 and the other saturates to 0.6 with a rate of 200.
+The two parts are summed up so $$F_c$$ will eventually saturate to 1.0.
+
 ## Iso-error Map
 
 The Balloon-v1 model extends the subloading surface model and behaves in a similar way under monotonic loading.
