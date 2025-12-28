@@ -94,3 +94,7 @@ material Balloon 1 \
 ![absolute error biaxial](balloon.biaxial.abs.error.svg)
 ![relative error uniaxial](balloon.uniaxial.rel.error.svg)
 ![relative error biaxial](balloon.biaxial.rel.error.svg)
+
+## Examples
+
+See the [demo](Balloon.Demo.md) page.
