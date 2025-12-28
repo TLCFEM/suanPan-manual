@@ -19,8 +19,8 @@ material Balloon ${1:(1)} ${2:(2)} ${3:(3)} ${4:(4)} ${5:(5)} ${6:(6 7 8 9)} ${7
 # (6 7 8 9) double, u bound, initial, linear, saturation, rate
 # (10 11 12 13) double, fm bound, initial, linear, saturation, rate
 # (14 15 16 17) double, fc bound, initial, linear, saturation, rate
-# (18 19 20 21) double, back stress bound, initial, linear, saturation, rate
-# (22 23 24 25) double, similarity bound, initial, linear, saturation, rate
+# (18 19 20 21) double, am bound, initial, linear, saturation, rate
+# (22 23 24 25) double, ac bound, initial, linear, saturation, rate
 # (26) double, density
 # (27) string, token, one of '-fc', '-ac', '-na', '-nd'
 # (28 29) double, saturation, rate
