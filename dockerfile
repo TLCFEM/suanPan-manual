@@ -7,7 +7,7 @@ COPY plugins /manual/plugins
 COPY mkdocs.yml /manual/mkdocs.yml
 COPY requirements.txt /manual/requirements.txt
 COPY setup.py /manual/setup.py
-WORKDIR /manual 
+WORKDIR /manual
 
 RUN pip install --no-cache-dir --no-compile --upgrade .
 
