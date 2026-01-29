@@ -10,3 +10,13 @@ jobs:
         with:
           token: ${{ secrets.ALL }}
           environment: github-pages
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete Package
+        uses: Chizkiyahu/delete-untagged-ghcr-action@v6
+        with:
+          token: ${{ secrets.ALL }}
+          package_name: suanpan-manual
+          untagged_only: true
+          owner_type: "user"
