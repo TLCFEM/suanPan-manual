@@ -80,6 +80,14 @@ compilation is not guaranteed with Clang.
 
 Download the source code archive from GitHub [Releases](https://github.com/TLCFEM/suanPan/releases) or the
 latest [stable code](https://github.com/TLCFEM/suanPan/archive/master.zip).
+The archive is complete for non-MPI compilations.
+
+To compile with MPI support, it is necessary to clone the dependencies as well.
+This can be done via `git clone` such as
+
+```bash
+git clone --recurse-submodules https://github.com/TLCFEM/suanPan.git
+```
 
 ### Configure and Compile
 
