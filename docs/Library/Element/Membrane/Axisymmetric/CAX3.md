@@ -4,6 +4,7 @@ Axisymmetric Linear Triangle
 
 * Number of Nodes: 3
 * Number of DoFs: 2
+* DoF Label: RADIAL, AXIAL
 
 ## Syntax
 

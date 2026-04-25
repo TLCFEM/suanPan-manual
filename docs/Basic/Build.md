@@ -1,9 +1,23 @@
 # Build Manual
 
-This manual can be built locally using [`mkdocs`](https://www.mkdocs.org/). To do so, a python environment must be
-created.
+## Docker
 
-## Tools
+To avoid all the hassles, this manual can be viewed locally via `docker`.
+
+Simply run the following command, the manual will be available at [http://localhost:8000](http://localhost:8000).
+
+```bash
+docker run --rm -d -p 8000:8000/tcp ghcr.io/tlcfem/suanpan-manual:latest
+# or via docker hub
+# docker run --rm -d -p 8000:8000/tcp tlcfem/suanpan-manual:latest
+```
+
+## Python
+
+For development purposes, this manual can be built locally using [`mkdocs`](https://www.mkdocs.org/).
+To do so, a python environment must be created.
+
+### Tools
 
 `git` shall be available to clone the repository. Otherwise, you may want to manually download the archive.
 
@@ -12,11 +26,11 @@ created.
 If `doxygen` generated documentation is required, [`doxygen`](https://www.doxygen.nl/) shall be available. It also
 uses `graphviz` to generate the graph, install it according to the [instructions](https://graphviz.org/download/).
 
-## Steps
+### Steps
 
 Please follow the instructions below to create a local editing environment.
 
-### Clone the Repository
+#### Clone the Repository
 
 Clone the repository using the following command:
 
@@ -25,7 +39,7 @@ git clone https://github.com/TLCFEM/suanPan-manual.git
 cd suanPan-manual
 ```
 
-### Create a Python Environment
+#### Create a Python Environment
 
 Within the `suanPan-manual` directory, create a new virtual environment using whatever tools you have available. Here
 the plain python virtual environment is used.
@@ -35,7 +49,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### Install Requirements
+#### Install Requirements
 
 Now that the virtual environment is created, install the requirements using the following command:
 
@@ -52,7 +66,7 @@ python -m pip install -e .
 Note `doxygen` and `git` are required to be available.
 This also installs a custom mkdocs plugin to overwrite inline math expressions to properly render them.
 
-### Build and Run
+#### Build and Run
 
 The following command builds and runs the server on `localhost:8000`.
 
@@ -60,6 +74,6 @@ The following command builds and runs the server on `localhost:8000`.
 mkdocs serve
 ```
 
-## Make Changes
+#### Make Changes
 
 The server monitors changes in real time. Now you can make changes to the manual and check the changes in the browser.

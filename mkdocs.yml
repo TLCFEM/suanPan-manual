@@ -1,7 +1,7 @@
 site_name: suanPan manual
 site_author: Theodore Chang
-copyright: Copyright © 2017-2025 Theodore Chang
-repo_url: "https://github.com/TLCFEM/suanPan-manual"
+copyright: Copyright © 2017-2026 Theodore Chang
+repo_url: "https://github.com/TLCFEM/suanPan"
 theme:
   name: material
   features:
@@ -55,7 +55,6 @@ extra:
   version:
     provider: mike
 plugins:
-  # - optimize
   - search
   - awesome-pages
   - overwrite_math
@@ -70,9 +69,4 @@ plugins:
         - docs/Example/Structural/Statics/calibration-subloading.ipynb
         - docs/Example/Structural/Dynamics/integrating-preprocessing-with-python.ipynb
         - docs/Example/Structural/Dynamics/process-ground-motion.ipynb
-  # - with-pdf:
-  #     cover_subtitle: An Open Source, Parallel and Heterogeneous Finite Element Analysis Framework
-  #     ordered_chapter_level: 3
-  #     output_path: pdf/suanPan-manual.pdf
-  #     author: Theodore Chang
-  #     copyright: Copyright © 2017-2025 Theodore Chang
+        - docs/Library/Material/Material3D/vonMises/Balloon.Demo.ipynb

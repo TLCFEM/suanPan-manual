@@ -19,7 +19,7 @@ node 2 0 -2
 node 3 0 -3
 node 4 0 -5
 
-fix2 1 P 1
+fix2 1 E 1
 ```
 
 The first node is pinned so that it does not move.

@@ -4,6 +4,7 @@ Generalised Conforming Mixed Quadrilateral With Drilling DoFs
 
 * Number of Nodes: 4
 * Number of DoFs: 3 (Translation, Translation, Rotation)
+* DoF Label: U1, U2, UR3
 * Supports Body Force
 * Constant Consistent Mass Matrix With Same Order Integration
 

@@ -4,6 +4,7 @@ Bilinear Quadrilateral With Crack Phase
 
 * Number of Nodes: 4
 * Number of DoFs: 3 (Translation, Translation, Damage)
+* DoF Label: U1, U2, DAMAGE
 * Integration Scheme: 2nd Order Gauss
 * Zero Mass Entries On Damage DoFs
 

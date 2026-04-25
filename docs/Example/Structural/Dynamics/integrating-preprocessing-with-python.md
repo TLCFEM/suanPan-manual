@@ -418,7 +418,7 @@ The boundary conditions can be assigned by simply fixing all bottom nodes.
 
 
 ```python
-main_file.write(f'fix 1 P 1 {" ".join(str(tag) for tag in node_grid[0, :])}\n')
+main_file.write(f'fix 1 E 1 {" ".join(str(tag) for tag in node_grid[0, :])}\n')
 
 pass
 ```
@@ -504,7 +504,7 @@ with open('three-storey-frame.sp', 'r') as f:
     file beam.sp
     file column.sp
     file mass.sp
-    fix 1 P 1 1 5 9
+    fix 1 E 1 1 5 9
     
     amplitude Tabular 1 ELNS
     

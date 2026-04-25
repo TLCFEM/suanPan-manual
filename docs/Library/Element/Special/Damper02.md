@@ -17,14 +17,16 @@ following paper.
 The `Damper02` is the 2D version.
 
 * Number of Nodes: 2
-* Number of DoFs: 2 (Translation: UX, Translation: UY)
+* Number of DoFs: 2 (Translation, Translation)
+* DoF Label: U1, U2
 
 ## Damper04
 
 The `Damper04` is the 3D version.
 
 * Number of Nodes: 2
-* Number of DoFs: 3 (Translation: UX, Translation: UY, Translation: UZ)
+* Number of DoFs: 3 (Translation, Translation, Translation)
+* DoF Label: U1, U2, U3
 
 ## Syntax
 

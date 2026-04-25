@@ -80,6 +80,14 @@ compilation is not guaranteed with Clang.
 
 Download the source code archive from GitHub [Releases](https://github.com/TLCFEM/suanPan/releases) or the
 latest [stable code](https://github.com/TLCFEM/suanPan/archive/master.zip).
+The archive is complete for non-MPI compilations.
+
+To compile with MPI support, it is necessary to clone the dependencies as well.
+This can be done via `git clone` such as
+
+```bash
+git clone --recurse-submodules https://github.com/TLCFEM/suanPan.git
+```
 
 ### Configure and Compile
 
@@ -99,7 +107,7 @@ A solution file is provided under `MSVC/suanPan` folder. There are two configura
 1.  `Debug`: Assume no available Fortran compiler, all Fortran related libraries are provided as precompiled DLLs. Use
     OpenBLAS for linear algebra. Multithreading disabled. Visualisation disabled. HDF5 support disabled.
 2.  `Release`: Fortran libraries are configured with Intel compilers. Use MKL for linear algebra. Multithreading enabled.
-    Visualisation enabled with VTK version 9.4. HDF5 support enabled. CUDA enabled.
+    Visualisation enabled with VTK version 9.5. HDF5 support enabled. CUDA enabled.
 
 This [repository](https://github.com/TLCFEM/prebuilds) contains some precompiled libraries used.
 
@@ -120,19 +128,9 @@ To compile `Release` version, please
     VTK_DIR=C:\Program Files\VTK\
     ```
 
-    For versions other than 9.4, names of the linked libraries shall be manually changed as they contain version numbers.
+    For versions other than 9.5, names of the linked libraries shall be manually changed as they contain version numbers.
     Thus, it is not a good idea to switch to a different version. Precompiled VTK library is also available in
     this [repository](https://github.com/TLCFEM/prebuilds).
-
-4.  Make sure MAGMA is available. Then define a system environment variable `$(MAGMA_DIR)`, which points
-    to the root folder of MAGMA library. On my machine, it is
-
-    ```powershell
-    MAGMA_DIR=C:\Program Files\MAGMA\
-    ```
-
-    You probably need to compile MAGMA yourself. You can manually remove all magma related settings in the solution file
-    if you don't want to use it.
 
 Alternatively, `CMake` can be used to generate solution files if some external packages are not available.
 
@@ -379,7 +377,7 @@ If CMake GUI is used to configure the project, the following options are availab
    the `suanPan` application itself.
 4. `SP_ENABLE_HDF5`: If enabled, `HDF5` will be used to provide support for [`hdf5recorder`](../Library/Recorder/Recorder.md).
 5. `SP_ENABLE_VTK`: If enabled, `VTK` will be used to provide support for visualization. It will be useful to
-   generate `.vtk` files that can be used in `Paraview` for post-processing. If enabled, `VTK_PATH` needs to be set to
+   generate files that can be used in `Paraview` for post-processing. If enabled, `VTK_PATH` needs to be set to
    the path of `VTK` installation. For example, `VTK_PATH=/usr/local/opt/vtk/lib/cmake/vtk-9.1`.
 6. `SP_ENABLE_CUDA`: `CUDA` needs to be installed manually by the user. If enabled, `CUDA` based solvers will be
    available. However, for dense matrix storage, only full matrix storage scheme is supported by `CUDA`. Note full
@@ -406,7 +404,7 @@ If CMake GUI is used to configure the project, the following options are availab
 19. `SP_ENABLE_MPI`: Enabled cluster support via MPI.
 20. `SP_ENABLE_64BIT_INDEXING`: Enable 64-bit integer for matrix indexing.
 
-!!! Warning
+!!! warning "multiple runtimes"
     The `SP_ENABLE_IOMP` should be switched on/off based on the compilers used.
     In principle, there should be only one implementation of OpenMP.
     Thus, if the compilers used are `gcc/g++/gfortran`, `SP_ENABLE_IOMP=OFF`.

@@ -10,7 +10,7 @@ Please check the references for theory.
 
 **For the moment, MPC cannot be considered in all global damping models.**
 
-!!! Note
+!!! note
     This integrator must be used with [`ElementalLee`](../../../Element/Modifier/ElementalLee.md)
     modifier to work properly.
 

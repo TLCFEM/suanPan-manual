@@ -6,7 +6,7 @@ Elemental Damping Using Lee's Formulation
 
 1. [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.107152)
 
-!!! Note
+!!! note
     This modifier must be used with [`LeeElementalNewmark`](../../Integrator/Implicit/Newmark/LeeElementalNewmark.md)
     integrator to work properly.
 

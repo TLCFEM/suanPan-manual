@@ -4,6 +4,7 @@ Linear Cube/Brick With Incompatible Modes
 
 * Number of Nodes: 8
 * Number of DoFs: 3 (All Translation)
+* DoF Label: U1, U2, U3
 * Supports Body Force
 * Integration Scheme: Irons Six-Point
 * Constant Consistent Mass Matrix With Same Order Integration

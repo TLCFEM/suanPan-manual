@@ -82,7 +82,7 @@ material Elastic1D 1 10 1E-4
 section Rectangle2D 1 12 1 1
 element B21 1 1 2 1 6 1
 
-fix 1 P 1
+fix 1 E 1
 cload 1 0 10 2 2
 
 plainrecorder 1 Node U 1 2

@@ -4,6 +4,7 @@
 
 * Number of Nodes: 2
 * Number of DoFs: 3 (Translation, Translation, Translation)
+* DoF Label: U1, U2, U3
 
 ## Syntax
 

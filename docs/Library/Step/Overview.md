@@ -92,7 +92,7 @@ converger RelIncreDisp 1 1E-10 3 1
 For the above, since there is no converger defined in the first step, the default converger will be used in the first
 step. The converger defined in the second step will not affect the first step.
 
-!!! Warning
+!!! warning
     The solver settings are not inherited. They must be defined in each step.
     This is because if two steps use the same solver settings, it's likely that it is possible to combine two steps into
     one step. If two steps are intended, it is likely that the solver settings are different.

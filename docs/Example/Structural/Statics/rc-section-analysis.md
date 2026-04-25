@@ -84,7 +84,7 @@ set ini_step_size 1E-1
 set fixed_step_size 1
 set symm_mat 0
 
-cload 1 0 -6E5 1 1
+cload 1 0 -6E5 axial 1
 
 converger AbsIncreDisp 1 1E-10 20 1
 ```
@@ -97,7 +97,7 @@ set ini_step_size 1E-2
 set fixed_step_size 1
 set symm_mat 0
 
-displacement 2 0 1E-4 2 1
+displacement 2 0 1E-4 rs 1
 
 converger AbsIncreDisp 2 1E-10 20 1
 ```

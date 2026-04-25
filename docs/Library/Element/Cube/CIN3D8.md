@@ -2,6 +2,10 @@
 
 Linear Infinite Cube/Brick
 
+* Number of Nodes: 8
+* Number of DoFs: 3 (All Translation)
+* DoF Label: U1, U2, U3
+
 ## References
 
 1. [https://doi.org/10.1016/0045-7949(84)90019-1](https://doi.org/10.1016/0045-7949(84)90019-1)

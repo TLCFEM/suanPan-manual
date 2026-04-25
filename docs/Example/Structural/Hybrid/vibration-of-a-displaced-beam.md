@@ -26,7 +26,7 @@ element Mass 2 2 2 2
 Then we fix point $$1$$.
 
 ```
-fix 1 P 1
+fix 1 E 1
 ```
 
 We record the displacement of node $$2$$ as the result.

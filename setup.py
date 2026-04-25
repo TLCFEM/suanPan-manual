@@ -1,4 +1,4 @@
-#  Copyright (C) 2022-2025 Theodore Chang
+#  Copyright (C) 2022-2026 Theodore Chang
 #
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -13,7 +13,9 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+import json
 import os
+from pathlib import Path
 import re
 import shutil
 import sys
@@ -47,6 +49,18 @@ def install(run_doxygen: bool):
     # 2. generate doxygen documentation
     os.chdir(archive_name)
 
+    with urlopen("https://api.github.com/repos/TLCFEM/suanPan/commits/dev") as response:
+        revision = json.load(response)["sha"]
+
+    doxyfile = Path("Doxyfile").read_text()
+    Path("Doxyfile").write_text(
+        re.sub(
+            r"^PROJECT_NUMBER\s+=.*$",
+            f"PROJECT_NUMBER = {revision[:7]}",
+            doxyfile,
+        )
+    )
+
     if shutil.which(doxygen_bin := "doxygen") is not None and run_doxygen:
         os.system(doxygen_bin)
 
@@ -55,7 +69,7 @@ def install(run_doxygen: bool):
         shutil.copytree("Resource", f"{target_path}/Resource/")
         shutil.copy("../docs/favicon.ico", f"{target_path}/favicon.ico")
 
-    with open("Toolbox/argument.cpp") as f:
+    with open("Toolbox/command.h") as f:
         version_file = f.read()
 
     major = re.search(r"constexpr auto SUANPAN_MAJOR = (\d);", version_file).group(1)
@@ -66,31 +80,34 @@ def install(run_doxygen: bool):
 
     remove(archive_name)
 
-    # 3. download binary file
-    if sys.platform.startswith("linux"):
-        binary_file_name = "suanPan-linux-openblas-no-avx"
-        binary_file = f"{binary_file_name}.tar.gz"
-    else:
-        binary_file_name = "suanPan-win-mkl-vtk"
-        binary_file = f"{binary_file_name}.zip"
-    remove(binary_file_name)
+    if shutil.which("suanpan") is None and shutil.which("sp") is None:
+        # 3. download binary file
+        if sys.platform.startswith("linux"):
+            binary_file_name = "suanPan-linux-amd64-openblas-no-avx"
+            binary_file = f"{binary_file_name}.tar.gz"
+        else:
+            binary_file_name = "suanPan-win-mkl-vtk"
+            binary_file = f"{binary_file_name}.zip"
+        remove(binary_file_name)
 
-    with urlopen("https://github.com/TLCFEM/suanPan") as response:
-        content = response.read().decode("utf-8")
-        version_string = re.search(r"suanPan-v\d\.\d(\.\d)?", content).group(0)
+        with urlopen(
+            "https://api.github.com/repos/TLCFEM/suanPan/releases"
+        ) as response:
+            releases = json.load(response)
+            latest_tag = next((r["tag_name"] for r in releases if r["assets"]), None)
 
-    url = f"https://github.com/TLCFEM/suanPan/releases/download/{version_string}/{binary_file}"
-    with urlopen(url) as response, open(binary_file, "wb") as archive:
-        shutil.copyfileobj(response, archive)
+        url = f"https://github.com/TLCFEM/suanPan/releases/download/{latest_tag}/{binary_file}"
+        with urlopen(url) as response, open(binary_file, "wb") as archive:
+            shutil.copyfileobj(response, archive)
 
-    if sys.platform.startswith("linux"):
-        with tarfile.open(binary_file, "r:gz") as archive:
-            archive.extractall(binary_file_name)
-    else:
-        with zipfile.ZipFile(binary_file, "r") as archive:
-            archive.extractall(binary_file_name)
+        if sys.platform.startswith("linux"):
+            with tarfile.open(binary_file, "r:gz") as archive:
+                archive.extractall(binary_file_name)
+        else:
+            with zipfile.ZipFile(binary_file, "r") as archive:
+                archive.extractall(binary_file_name)
 
-    os.remove(binary_file)
+        os.remove(binary_file)
 
     with open("requirements.txt") as f:
         required = f.read().splitlines()

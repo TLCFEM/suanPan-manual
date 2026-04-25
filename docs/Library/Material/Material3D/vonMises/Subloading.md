@@ -33,18 +33,18 @@ material Subloading (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14)
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, poisson's ratio
-# (4) double, isotropic initial stress, \sigma^i
-# (5) double, isotropic linear hardening modulus, k_{iso}
-# (6) double, isotropic saturation stress, \sigma^s
-# (7) double, isotropic saturation rate, m^s_{iso}
-# (8) double, kinematic initial stress, a^i
-# (9) double, kinematic linear hardening modulus, k_{kin}
-# (10) double, kinematic saturation stress, a^s
-# (11) double, kinematic saturation rate, m^s_{kin}
-# (12) double, yield ratio evolution rate, u
-# (13) double, kinematic hardening rate, b
-# (14) double, elastic core evolution rate, c_e
-# (15) double, elastic core size, z_e
+# (4) double, isotropic initial stress, \sigma^i>=0
+# (5) double, isotropic linear hardening modulus, k_{iso}>=0
+# (6) double, isotropic saturation stress, \sigma^s>=0
+# (7) double, isotropic saturation rate, m^s_{iso}>=0
+# (8) double, kinematic initial stress, a^i>=0
+# (9) double, kinematic linear hardening modulus, k_{kin}>=0
+# (10) double, kinematic saturation stress, a^s>=0
+# (11) double, kinematic saturation rate, m^s_{kin}>=0
+# (12) double, yield ratio evolution rate, u>=0
+# (13) double, kinematic hardening rate, b>=0
+# (14) double, elastic core evolution rate, c_e>=0
+# (15) double, elastic core size, 1>z_e>=0
 # [16] double, density, default: 0.0
 ```
 

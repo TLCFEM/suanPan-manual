@@ -2,6 +2,9 @@
 
 3D Embedded Element
 
+* Number of DoFs: 3
+* DoF Label: U1, U2, U3
+
 ## Syntax
 
 ```

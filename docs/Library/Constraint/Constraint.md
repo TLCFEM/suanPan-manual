@@ -39,7 +39,7 @@ material Elastic1D 1 10
 element EB21 1 1 2 12 1 1
 
 # use penalty function method
-fix 1 P 1
+fix 1 E 1
 
 # to change penalty factor
 # set constraint_multiplier 1E12
@@ -110,7 +110,7 @@ linear elastic analysis, additional iterations are required to converge.
 The `fix2` command implements the Lagrange multiplier method. With which,
 
 ```text
-fix2 1 P 1
+fix2 1 E 1
 ```
 
 The corresponding iteration results are shown as follows.

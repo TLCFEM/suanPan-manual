@@ -4,6 +4,7 @@ Elastic 3D Beam With Open Section
 
 * Number of Nodes: 2
 * Number of DoFs: 7 (Translation, Translation, Translation, Rotation, Rotation, Rotation, WARPING)
+* DoF Label: U1, U2, U3, UR1, UR2, UR3, WARP
 
 ## Syntax
 

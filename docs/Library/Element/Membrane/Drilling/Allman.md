@@ -4,6 +4,7 @@ Allman's Triangle With Drilling DoFs
 
 * Number of Nodes: 3
 * Number of DoFs: 3 (Translation, Translation, Rotation)
+* DoF Label: U1, U2, UR3
 * Integration Scheme: 3-Point Mid-edge
 
 ![encoding](../../PIC/T3.svg)

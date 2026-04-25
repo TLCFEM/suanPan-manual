@@ -27,7 +27,7 @@ u'&v'&w'&v''&w''&\phi&\phi'&\phi''&\theta_{z,i}&\theta_{z,j}&\theta_{y,i}&\theta
 \end{bmatrix}
 $$
 
-!!! Note
+!!! note
     All quantities ($$u$$, $$v$$, $$w$$ and $$\phi$$) are measured about the reference axis ($$y=z=0$$).
     Any offset/shift should be directly defined via section composition.
 

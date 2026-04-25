@@ -3,6 +3,7 @@
 Patch of Hexahedron Elements
 
 * Number of DoFs: 3
+* DoF Label: U1, U2, U3
 * Number of Nodes: varies
 * Support Mass
 * Support Body Force

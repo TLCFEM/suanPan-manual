@@ -1,4 +1,4 @@
-#  Copyright (C) 2022-2025 Theodore Chang
+#  Copyright (C) 2022-2026 Theodore Chang
 #
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -26,4 +26,10 @@ class OverwriteMath(BasePlugin):
             output,
         )
         output = re.sub(r"\\\)</span>\\\)</span>", r"\\)</span>", output)
+        output = re.sub(
+            r'\$<span class="arithmatex">\\\(',
+            r'<span class="arithmatex">\\(',
+            output,
+        )
+        output = re.sub(r"\\\)</span>\$", r"\\)</span>", output)
         return output

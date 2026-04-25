@@ -2,6 +2,9 @@
 
 2D Embedded Element
 
+* Number of DoFs: 2
+* DoF Label: U1, U2
+
 ## Syntax
 
 ```

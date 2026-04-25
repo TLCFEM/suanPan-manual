@@ -6,6 +6,7 @@ A planar shell element uses SGCMQ for membrane action and DKT4 element for plate
 
 * Number of Nodes: 4
 * Number of DoFs: 6 (Translation, Translation, Translation, Rotation, Rotation, Rotation)
+* DoF Label: U1, U2, U3, UR1, UR2, UR3
 * Integration Membrane: Five-Point Irons Scheme
 * Integration Plate: 3rd Gauss Scheme
 

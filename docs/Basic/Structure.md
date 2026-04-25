@@ -14,7 +14,7 @@ node 2 1.34 0
 material Elastic1D 1 132
 element EB21 1 1 2 7.213 6.825 1
 step static 1
-fix 1 P 1
+fix 1 E 1
 cload 1 0 23 2 2
 cload 2 0 17 1 2
 analyze
@@ -51,7 +51,7 @@ node 2 along two directions. For the purpose of illustration, those two loads ca
 follows.
 
 ```
-fix 1 P 1
+fix 1 E 1
 step static 1
 cload 1 0 23 2 2
 step static 2

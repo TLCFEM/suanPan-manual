@@ -26,12 +26,12 @@ $$
 
 The default value of $$r=1/3$$ yields $$C_1=1/3$$.
 
-!!! Warning
+!!! warning
     When $$r>1/3$$, the algorithm extrapolates.
 
 It is a two-stage method implemented in an alternating fashion.
 
-!!! Warning
+!!! warning
     It is claimed to have a third-order accuracy for displacement and velocity.
     However, it is only valid for results at the end of the time step (the second stage after applying the corrector).
     For the results at the end of the first stage, it is only second-order accurate.

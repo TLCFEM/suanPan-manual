@@ -4,6 +4,7 @@ Constant Strain Triangle With Crack Phase
 
 * Number of Nodes: 3
 * Number of DoFs: 3 (Translation, Translation, Damage)
+* DoF Label: U1, U2, DAMAGE
 * Integration Scheme: Single Point Centre
 * Zero Mass Entries On Damage DoFs
 

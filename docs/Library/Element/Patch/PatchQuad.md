@@ -3,6 +3,7 @@
 Patch of Quadrilateral Elements
 
 * Number of DoFs: 2
+* DoF Label: U1, U2
 * Number of Nodes: varies
 * Support Mass
 * Support Body Force
