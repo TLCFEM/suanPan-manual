@@ -91,9 +91,10 @@ def install(run_doxygen: bool):
         remove(binary_file_name)
 
         with urlopen(
-            "https://api.github.com/repos/TLCFEM/suanPan/releases/latest"
+            "https://api.github.com/repos/TLCFEM/suanPan/releases"
         ) as response:
-            latest_tag = json.load(response)["tag_name"]
+            releases = json.load(response)
+            latest_tag = next((r["tag_name"] for r in releases if r["assets"]), None)
 
         url = f"https://github.com/TLCFEM/suanPan/releases/download/{latest_tag}/{binary_file}"
         with urlopen(url) as response, open(binary_file, "wb") as archive:
