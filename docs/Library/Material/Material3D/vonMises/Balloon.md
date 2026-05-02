@@ -7,6 +7,10 @@ The Balloon-v1 model is an advanced model for metals with enhanced cyclic behavi
 Both this model and [Balloon1D](../../Material1D/vonMises/Balloon1D.md) share the same definitions of parameters.
 Both models shall yield the same uniaxial behaviour if the same parameter set is used.
 
+## References
+
+1. [10.31224/6937](https://doi.org/10.31224/6937)
+
 ## Syntax
 
 ```text
