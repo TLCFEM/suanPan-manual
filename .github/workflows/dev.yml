@@ -45,6 +45,7 @@ jobs:
           git push origin gh-pages
   docker:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }}
     timeout-minutes: 100
     permissions:
       contents: read
