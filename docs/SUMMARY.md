@@ -296,6 +296,7 @@
         * [LeeNewmarkIterative](Library/Integrator/Implicit/Newmark/LeeNewmarkIterative.md)
         * [Newmark](Library/Integrator/Implicit/Newmark/Newmark.md)
         * [NonviscousNewmark](Library/Integrator/Implicit/Newmark/NonviscousNewmark.md)
+        * [UDNewmark](Library/Integrator/Implicit/Newmark/UDNewmark.md)
         * [RayleighNewmark](Library/Integrator/Implicit/Newmark/RayleighNewmark.md)
         * [WilsonPenzienNewmark](Library/Integrator/Implicit/Newmark/WilsonPenzienNewmark.md)
 * Explicit

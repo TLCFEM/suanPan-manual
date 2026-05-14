@@ -62,7 +62,7 @@ $$
 
 ## Remarks
 
-Two forms `UDDNewmark` and `UDANewmark` are equivalent.
+Two forms `UDDNewmark` and `UDANewmark` are equivalent if only hysteretic and inertial actions exist.
 The following function converts from one to another.
 
 ```py
