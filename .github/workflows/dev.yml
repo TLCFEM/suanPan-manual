@@ -23,10 +23,15 @@ jobs:
         with:
           python-version: "3.12"
           cache: "pip"
+      - name: Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
       - name: Dependency
         run: |
           sudo apt-get install doxygen graphviz pngquant
           pip install -e .
+          npm install -g svgo
           find $(pwd)/suanPan* -type f -path "*/bin/updater" -exec rm -f {} +
           sudo ln -s $(find $(pwd)/suanPan* -type f -name suanPan.sh | head -n1) /usr/bin/suanpan
           suanpan -v
@@ -34,6 +39,7 @@ jobs:
         if: ${{ github.event_name != 'push' }}
         run: |
           mkdocs build
+          svgo -rf site -o site
       - name: Publish
         if: ${{ github.event_name == 'push' }}
         run: |
@@ -42,6 +48,10 @@ jobs:
           git config --global user.email "tlcfem@gmail.com"
           git pull
           mike deploy 4.1
+          git checkout gh-pages
+          svgo -rf 4.1 -o 4.1
+          git add -A
+          git commit --amend --no-edit
           git push origin gh-pages
   docker:
     runs-on: ubuntu-latest
