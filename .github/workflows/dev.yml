@@ -48,7 +48,7 @@ jobs:
           git config --global user.email "tlcfem@gmail.com"
           git pull
           mike deploy 4.1
-          git reset --hard && git checkout gh-pages
+          git clean -fd && git reset --hard && git checkout gh-pages
           svgo -rf 4.1 --exclude inherit_graph.* -o 4.1
           git add -A
           git commit --amend --no-edit
