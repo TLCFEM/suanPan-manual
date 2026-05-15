@@ -49,7 +49,7 @@ jobs:
           git pull
           mike deploy 4.1
           git reset --hard && git checkout gh-pages
-          svgo -rf 4.1 -o 4.1
+          svgo -rf 4.1 --exclude DOXYGEN -o 4.1
           git add -A
           git commit --amend --no-edit
           git push origin gh-pages
