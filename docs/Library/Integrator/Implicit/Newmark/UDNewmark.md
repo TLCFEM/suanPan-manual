@@ -90,20 +90,13 @@ def inverse(m, s):
     m = np.asarray(m, dtype=np.complex128)
     ones = np.ones_like(m)
 
-    A = np.diag(np.asarray(s, dtype=np.complex128)) + np.outer(m, ones)
+    ar, R = np.linalg.eig(
+        np.diag(np.asarray(s, dtype=np.complex128)) + np.outer(m, ones)
+    )
 
-    ar, R = np.linalg.eig(A)
-    al, L = np.linalg.eig(A.T)
+    R = R[:, idx := np.argsort(ar)]
 
-    rs = ar[idx := np.argsort(ar)]
-    R = R[:, idx]
-    L = L[:, np.argsort(al)]
-
-    rm = np.zeros_like(rs)
-    for k in range(rm.size):
-        rm[k] = -(ones @ R[:, k]) * (L[:, k] @ m) / (L[:, k] @ R[:, k])
-
-    return rm, rs
+    return -(ones @ R) * np.linalg.solve(R, m), ar[idx]
 ```
 
 Since `UDANewmark` applies to inertial terms, if the mass matrix is constant and/or lumped, it will be more performant than `UDDNewmark`, which is typically computationally more costly.
