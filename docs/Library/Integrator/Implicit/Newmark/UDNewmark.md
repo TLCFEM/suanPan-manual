@@ -68,35 +68,39 @@ The following function converts from one to another.
 ```py
 import numpy as np
 
+class Damping:
+    def __init__(self, m, s):
+        m_tmp = np.asarray(m, dtype=np.complex128)
+        s_tmp = np.asarray(s, dtype=np.complex128)
+        self.m = m_tmp[idx := np.argsort(s_tmp)]
+        self.s = s_tmp[idx]
 
-def inverse(m, s):
-    """
-    Compute transformed modal weights and poles from a rank-one updated diagonal matrix.
+    def pair(self):
+        return np.real_if_close(self.m), np.real_if_close(self.s)
 
-    Parameters
-    ----------
-    m : array_like, shape (n,)
-        Input modal weights. Converted to `np.complex128`.
-    s : array_like, shape (n,)
-        Input poles. Converted to `np.complex128`.
+    def convert(self):
+        scalar = 1 + np.sum(self.m)
 
-    Returns
-    -------
-    rm : np.ndarray, shape (n,), dtype=complex128
-        Transformed modal weights.
-    rs : np.ndarray, shape (n,), dtype=complex128
-        Transformed poles.
-    """
-    m = np.asarray(m, dtype=np.complex128)
-    ones = np.ones_like(m)
+        poles, ev = np.linalg.eig(
+            np.diag(self.s) * scalar - np.outer(self.m, self.s)
+        )
 
-    ar, R = np.linalg.eig(
-        np.diag(np.asarray(s, dtype=np.complex128)) + np.outer(m, ones)
-    )
+        ev = ev[:, idx := np.argsort(poles)]
+        poles = poles[idx]
 
-    R = R[:, idx := np.argsort(ar)]
+        return Damping(
+            self.s @ ev * np.linalg.solve(ev, self.m) / (-scalar * poles),
+            poles / scalar,
+        )
 
-    return -(ones @ R) * np.linalg.solve(R, m), ar[idx]
+    @staticmethod
+    def map(m, s):
+        m = np.asarray(m, dtype=np.complex128)
+        s = np.asarray(s, dtype=np.complex128)
+        m, s = Damping(-m / s, s).convert().pair()
+        return -m * s, s
+
+print(Damping.map([-2], [10])) # UDD -> UDA
 ```
 
 Since `UDANewmark` applies to inertial terms, if the mass matrix is constant and/or lumped, it will be more performant than `UDDNewmark`, which is typically computationally more costly.
