@@ -68,39 +68,32 @@ The following function converts from one to another.
 ```py
 import numpy as np
 
-class Damping:
-    def __init__(self, m, s):
-        m_tmp = np.asarray(m, dtype=np.complex128)
-        s_tmp = np.asarray(s, dtype=np.complex128)
-        self.m = m_tmp[idx := np.argsort(s_tmp)]
-        self.s = s_tmp[idx]
 
-    def pair(self):
-        return np.real_if_close(self.m), np.real_if_close(self.s)
+def map(m, s):
+    """
+    Transform damping coefficients between UDD and UDA.
+    """
+    m, s = np.asarray(m, np.complex128), np.asarray(s, np.complex128)
 
-    def convert(self):
-        scalar = 1 + np.sum(self.m)
+    scalar = 1 - np.sum(ms := m / s)
+    poles, ev = np.linalg.eig(np.diag(s) * scalar + np.outer(ms, s))
 
-        poles, ev = np.linalg.eig(
-            np.diag(self.s) * scalar - np.outer(self.m, self.s)
-        )
+    ev = ev[:, idx := np.argsort(poles)]
+    poles = poles[idx]
 
-        ev = ev[:, idx := np.argsort(poles)]
-        poles = poles[idx]
+    ms = s @ ev * np.linalg.solve(ev, ms) / (-scalar * poles)
+    s = poles / scalar
 
-        return Damping(
-            self.s @ ev * np.linalg.solve(ev, self.m) / (-scalar * poles),
-            poles / scalar,
-        )
+    return ms * s, s
 
-    @staticmethod
-    def map(m, s):
-        m = np.asarray(m, dtype=np.complex128)
-        s = np.asarray(s, dtype=np.complex128)
-        m, s = Damping(-m / s, s).convert().pair()
-        return -m * s, s
 
-print(Damping.map([-2], [10])) # UDD -> UDA
+print(map([-2], [10])) # UDD -> UDA
 ```
 
-Since `UDANewmark` applies to inertial terms, if the mass matrix is constant and/or lumped, it will be more performant than `UDDNewmark`, which is typically computationally more costly.
+Both forms yield a specific damping factor (defined as the ratio between loss stiffness and static stiffness)
+
+$$
+\zeta=\Big|\sum\dfrac{m_j\omega}{s^2_j+\omega^2}\Big|.
+$$
+
+One can customize the specific damping curve using various numerical methods.
