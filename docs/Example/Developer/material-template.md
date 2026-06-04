@@ -1,6 +1,6 @@
 # Material Template
 
-Here we show the build-in material template.
+Here we show the built-in material template.
 
 ```cpp
 /**
@@ -97,12 +97,12 @@ MaterialExample::MaterialExample(const unsigned T, const double E, const double 
  * In general cases, history variables shall be initialised and initial stiffness
  * (and initial damping if appropriate) shall be set to proper value.
  *
- * To enable initial values for history variables, build-in `trial_history` and
+ * To enable initial values for history variables, built-in `trial_history` and
  * `current_history` shall be used, developers can initialise them via method
  * `initialise_history()` so that initial values set by `initial` command will not be
  * overwritten.
  *
- * In this example, instead of using build-in history variables, we manage history
+ * In this example, instead of using built-in history variables, we manage history
  * variables, namely back stress and plastic strain, by ourselves.
  * 
  */

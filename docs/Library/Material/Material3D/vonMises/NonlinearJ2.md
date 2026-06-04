@@ -66,7 +66,7 @@ It is also called J2 plasticity model. A detailed discussion can be seen elsewhe
 
 ## History Layout
 
-| location               | paramater                  |
+| location               | parameter                  |
 |------------------------|----------------------------|
 | `initial_history(0)`   | accumulated plastic strain |
 | `initial_history(1-6)` | back stress                |
@@ -88,7 +88,7 @@ $$
 
 in which $$E_K$$ is the kinematic hardening stiffness.
 
-In this case, user shall override the corresponding two methods with such an implmentation.
+In this case, user shall override the corresponding two methods with such an implementation.
 
 ```cpp
 double SampleJ2::compute_h(const double p_strain) const { return e_kin * p_strain; }

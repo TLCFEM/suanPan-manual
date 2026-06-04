@@ -19,7 +19,7 @@ material AFCN (1) (2) (3) (4) (5) (6) (7) (8) [9] [10]
 # (6) double, compression yield stress
 # (7) double, compression hardening modulus
 # (8) double, compression unloading modulus
-# [9] double, non-negative degradation paramater, default: 0.0
+# [9] double, non-negative degradation parameter, default: 0.0
 # [10] double, density, default: 0.0
 ```
 

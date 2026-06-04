@@ -48,6 +48,6 @@ Please note in practical applications, this value is negative as soil is often i
 
 ## History Layout
 
-| location             | paramater                  |
+| location             | parameter                  |
 |----------------------|----------------------------|
 | `initial_history(0)` | accumulated plastic strain |

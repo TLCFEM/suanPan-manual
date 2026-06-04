@@ -17,7 +17,7 @@ It does not scale well by the nature of its design.
 ## Remote Objects with P2P Communication
 
 An alternative is to create the same object on every process, the actual computation is done on one of the processes, and only the results are sent back to the root process.
-With this approach, there is no need for object 'proxies', as all objects on all processes are complete, fully functional, homogenous objects.
+With this approach, there is no need for object 'proxies', as all objects on all processes are complete, fully functional, homogeneous objects.
 They manage all necessary data internally, locally.
 There is also no need to pack/unpack complex data structure, making the implementation extremely simple and maintainable.
 The only message to communicate is the elemental matrices (stiffness, mass, etc.) and the corresponding resistance vector.

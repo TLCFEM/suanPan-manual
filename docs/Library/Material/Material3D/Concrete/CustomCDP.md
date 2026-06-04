@@ -66,7 +66,7 @@ $$
 
 so that $$d(0)=0$$ and $$d(1)=1$$.
 
-Assume the effective stess is a constant, say $$\bar{f}=10$$. The stress is then
+Assume the effective stress is a constant, say $$\bar{f}=10$$. The stress is then
 
 $$
 f=\bar{f}(1-d)=10(1-\kappa).
