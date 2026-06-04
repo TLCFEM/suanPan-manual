@@ -40,7 +40,7 @@ The most general integrator is the [`GSSSS`](Implicit/GSSSS.md) integrator.
 The optimal performance (in terms of overshoot, energy dissipation/dispersion) can be achieved by using the **U0-V0 Optimal** scheme.
 
 The [`GSSSS`](Implicit/GSSSS.md) integrator requires an additional iteration to synchronise the state of the system.
-Thus, the performance is sightly higher than that of the [`GeneralizedAlpha`](Implicit/GeneralizedAlpha.md) integrator.
+Thus, the performance is slightly higher than that of the [`GeneralizedAlpha`](Implicit/GeneralizedAlpha.md) integrator.
 
 ## Explicit Methods
 

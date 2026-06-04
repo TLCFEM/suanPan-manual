@@ -45,7 +45,7 @@ grouppenaltybc 3 2 1
 Two displacement loads are applied. Two files `h` and `v` are used to define the amplitudes.
 
 ```
-# horizontal dispalcement to generate a 5kN total horizontal tension force
+# horizontal displacement to generate a 5kN total horizontal tension force
 amplitude Tabular 1 h
 groupdisplacement 1 1 -16.5E-3 1 4
 

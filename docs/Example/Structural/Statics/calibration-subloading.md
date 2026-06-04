@@ -449,7 +449,7 @@ exit
 
 ## Caveats
 
-It is not recommanded to define a large linear isotropic hardening.
+It is not recommended to define a large linear isotropic hardening.
 
 Since the loading phase always incurs accumulation of plasticity, stable one sided cycles will accumulate plasticity, which further results in larger yield surface if the linear isotropic hardening is present.
 

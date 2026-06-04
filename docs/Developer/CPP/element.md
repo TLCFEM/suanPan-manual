@@ -8,7 +8,7 @@ overall picture of all methods implemented.
 ## Variables and Methods
 
 The `Element` class manages two states by default: current converged state and trial state. Accordingly, several
-build-in variables are defined, they are grouped in a struct. Some frequently used variables are listed as follows. A
+built-in variables are defined, they are grouped in a struct. Some frequently used variables are listed as follows. A
 complete list can be found in the header of `Element` class.
 
 ```cpp
@@ -58,7 +58,7 @@ struct ElementData {
 };
 ```
 
-There are some build-in methods to get nodal information. The purposes are indicated by method names. These methods are
+There are some built-in methods to get nodal information. The purposes are indicated by method names. These methods are
 implemented through the stored node pointers. The same functionalities can be reimplemented manually otherwise those
 predefined methods are sufficient in most cases.
 
@@ -195,7 +195,7 @@ need to update the trial state in the first method. A general procedure would be
 
 ### If You Decide To Manage States In Your Way
 
-In this case, probably all build-in variables won't be used. To manage states, following additional methods shall be
+In this case, probably all built-in variables won't be used. To manage states, following additional methods shall be
 overridden.
 
 ```cpp

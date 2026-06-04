@@ -1,6 +1,6 @@
 # Element Template
 
-Here we show the build-in element template. Comments explain the template a bit. A detailed guideline could be seen
+Here we show the built-in element template. Comments explain the template a bit. A detailed guideline could be seen
 elsewhere.
 
 ```cpp
@@ -101,7 +101,7 @@ ElementTemplate::ElementTemplate(const unsigned T, uvec&& NT, const unsigned MT,
  * where
  * \f{gather}{C=\begin{bmatrix}1&x_i&y_i\\1&x_j&y_j\\1&x_k&y_k\end{bmatrix}.\f}
  *
- * One can also initialize stiffness matrix and/or other build-in matrices from
+ * One can also initialize stiffness matrix and/or other built-in matrices from
  * Element class (check the definition for details) in the `initialize()` method.
  * However, this it not necessary, as the Solver will always call
  * update_status() method with a zero trial displacement to update current
@@ -165,7 +165,7 @@ void ElementTemplate::initialize(const shared_ptr<DomainBase>& D) {
 
 /**
  * @brief Now we handle the status update method. We get trial displacement via
- * build-in method and pass trial strain to the material model. Then get updated
+ * built-in method and pass trial strain to the material model. Then get updated
  * stiffness and stress back to form element stiffness and resistance.
  *
  * For a static analysis, **stiffness** and **resistance** have to be

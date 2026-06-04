@@ -20,7 +20,7 @@ The [`Cell3DOS`](../../../Library/Section/SectionOS/Cell3DOS.md) section has the
 section Cell3DOS (1) (2) (3) (4) (5) (6) [7] [8]
 # (1) int, unique section tag
 # (2) double, area
-# (3) double, sectional coordiante
+# (3) double, sectional coordinate
 # (4) double, py
 # (5) double, pz
 # (6) int, material tag

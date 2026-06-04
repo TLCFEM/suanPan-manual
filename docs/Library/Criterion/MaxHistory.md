@@ -8,6 +8,6 @@ element is disabled.
 ```
 criterion MaxHisotry (1) (2) (3)
 # (1) int, unique criterion tag
-# (2) string, history vairable type
+# (2) string, history variable type
 # (3) double, limit
 ```
