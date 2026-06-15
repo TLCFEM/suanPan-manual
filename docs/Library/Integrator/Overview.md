@@ -16,7 +16,7 @@ $$
 \bar{\mathbf{K}}\delta\mathbf{u}=\mathbf{R}
 $$
 
-Within this formulation, $\bar{\mathbf{K}}$ represents the effective stiffness matrix.
+Within this formulation, $$\bar{\mathbf{K}}$$ represents the effective stiffness matrix.
 
 ### Newmark
 
@@ -64,8 +64,8 @@ $$
 \bar{\mathbf{M}}\delta\mathbf{a}=\mathbf{R}
 $$
 
-Within this formulation, $\bar{\mathbf{M}}$ represents the effective mass matrix.
-The explicit nature of these methods stems from the fact that this matrix fundamentally excludes the future stiffness matrix $\mathbf{K}_{n+1}$.
+Within this formulation, $$\bar{\mathbf{M}}$$ represents the effective mass matrix.
+The explicit nature of these methods stems from the fact that this matrix fundamentally excludes the future stiffness matrix $$\mathbf{K}_{n+1}$$.
 
 ### Central Difference (Not Available)
 
