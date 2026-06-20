@@ -2,6 +2,19 @@
 
 Newmark Time Integration With Uniform/Universal Damping
 
+This damping formulation is an generalisation of [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016) and the nonviscous damping used in [NonviscousNewmark](NonviscousNewmark.md).
+Both can be expressed in the convolution form.
+
+While [NonviscousNewmark](NonviscousNewmark.md) convolutes velocity vector, [UDDNewmark](UDNewmark.md) and [UDANewmark](UDNewmark.md) convolute hysteresis and inertial forces, respectively.
+
+!!! note "Pros"
+    1. Allows a scalar definition of the specific damping factor.
+    2. Allows customization of damping curve in the frequency space.
+    3. Very cheap to compute, almost trivial, on par with Rayleigh damping.
+
+!!! note "Cons"
+    1. Induces dynamic hardening of the system, this hardening is affected by the damping factor over the whole frequency spectrum.
+
 ## References
 
 1. [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016)
