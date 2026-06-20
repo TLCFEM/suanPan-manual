@@ -5,6 +5,7 @@ Newmark Time Integration With Uniform/Universal Damping
 ## References
 
 1. [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016)
+2. [todo: to be added]()
 
 ## Syntax
 
@@ -43,10 +44,11 @@ integrator UDDNewmark 1 .25 .5 1 9 2 8 3 7 4 6
 It is assumed that the kernel is applied to all DoFs in the system.
 
 These parameters contribute to the energy dissipation action in the system.
+Assuming free vibration and no velocity related forces, the equation of motion can be expressed as follows.
 
 $$
 \left\{\begin{array}{l}
-\mathbf{M}\ddot{\mathbf{u}}+\mathbf{K}\mathbf{u}+\sum\mathbf{f}_j=\mathbf{0},\\
+\mathbf{M}\ddot{\mathbf{u}}+\mathbf{K}\mathbf{u}+\sum\mathbf{f}_j+\cdots=\mathbf{0},\\
 \dot{\mathbf{f}}_j=-s_j\mathbf{f}_j+m_j\mathbf{y}.
 \end{array}\right.
 $$
@@ -54,11 +56,13 @@ $$
 * For `UDDNewmark`, $$\mathbf{y=Ku}$$. The real part of $$m_j$$ shall be negative.
 * For `UDANewmark`, $$\mathbf{y=M\ddot{u}}$$. The real part of $$m_j$$ shall be positive.
 
-The specific damping factor as defined in [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016) can be expressed as
+Using the paremeter set for `UDDNewmark`, the specific damping factor as defined in [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016) can be expressed as
 
 $$
 \zeta(\omega)=-\sum\dfrac{m_j\omega}{s_j^2+\omega^2}.
 $$
+
+One can customize the specific damping curve using various numerical methods.
 
 ## Remarks
 
@@ -89,11 +93,3 @@ def map(m, s):
 
 print(map([-2], [10])) # UDD -> UDA
 ```
-
-Both forms yield a specific damping factor (defined as the ratio between loss stiffness and static stiffness)
-
-$$
-\zeta=\Big|\sum\dfrac{m_j\omega}{s^2_j+\omega^2}\Big|.
-$$
-
-One can customize the specific damping curve using various numerical methods.
