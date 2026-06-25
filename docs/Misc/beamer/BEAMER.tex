@@ -413,11 +413,13 @@ subgraph C_n[name=outer]
 
 \begin{cppcode}[fontsize=\tiny]
 void Domain::assemble_trial_stiffness() const {
-    std::for_each(color_map.begin(), color_map.end(), [&](const vector<unsigned>& color) {
-        tbb::parallel_for_each(color.begin(), color.end(), [&](const unsigned tag) {
-            factory->assemble_stiffness(get_element(tag)->get_trial_stiffness(), get_element(tag)->get_dof_encoding());
+    std::ranges::for_each(color_map, [&](const std::vector<unsigned>& color) {
+        suanpan::for_all(color, [&](const unsigned tag) {
+            if(const auto& I = get_element(tag); I->is_local) factory->assemble_stiffness(I->get_trial_stiffness(), I->get_dof_encoding(), I->get_dof_mapping());
         });
     });
+
+    factory->get_stiffness()->allreduce();
 }
 \end{cppcode}
 \end{frame}
