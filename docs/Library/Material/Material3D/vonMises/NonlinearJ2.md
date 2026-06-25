@@ -134,7 +134,7 @@ double PolyJ2::compute_k(const double p_strain) const {
  vec t_vec(poly_para.n_elem);
 
  t_vec(0) = 1.;
- for(uword I = 1; I < t_vec.n_elem; ++I) t_vec(I) = t_vec(I - 1) * p_strain;
+ for(uword I{1}; I < t_vec.n_elem; ++I) t_vec(I) = t_vec(I - 1) * p_strain;
 
  return yield_stress * dot(poly_para, t_vec);
 }
@@ -144,7 +144,7 @@ double PolyJ2::compute_dk(const double p_strain) const {
 
  t_vec(0) = 0.;
  t_vec(1) = 1.;
- for(uword I = 2; I < t_vec.n_elem; ++I) t_vec(I) = (double(I) + 1.) * pow(p_strain, double(I));
+ for(uword I{2}; I < t_vec.n_elem; ++I) t_vec(I) = (double(I) + 1.) * pow(p_strain, double(I));
 
  return yield_stress * dot(poly_para, t_vec);
 }
