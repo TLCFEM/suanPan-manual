@@ -9,6 +9,9 @@ Note, however, that certain dynamically generated components may be absent in th
 This documentation remains under active development.
 Users are invited to submit issues via GitHub to report gaps in information or seek clarification.
 
+A comprehensive overview of the manual is available via the [table of contents](SUMMARY.md).
+For insights into the software's underlying software engineering paradigms and system architecture, please refer to the technical [slides](ARCH.pdf).
+
 ## Motivation and Core Advantages
 
 The development of [suanPan](https://tlcfem.github.io/suanPan/) is driven by two critical architectural requirements: **flexibility** and **high performance**.
@@ -33,6 +36,20 @@ Consequently, the framework systematically outperforms conventional single-threa
 Built on **modern C++** and powered by the `Armadillo` linear algebra library, [suanPan](https://tlcfem.github.io/suanPan/) offers an expressive API where core structural code closely mirrors the underlying mathematical expressions.
 This significantly lowers the barrier to entry for researchers implementing and validating novel computational mechanics theories.
 
+[suanPan](https://tlcfem.github.io/suanPan/) delivers distinct architectural and operational advantages over alternative finite element packages:
+
+#### Operational Efficiency & Functional Scope (User Perspective)
+
+* **Declarative Workflow:** Eliminates the overhead of complex scripting, streamlining model preparation and execution.
+* **Native Parallelization:** Fully parallelized execution pathways significantly accelerate computational throughput and shorten engineering design cycles.
+* **Extensive Library Ecosystem:** Provides a comprehensive suite of advanced element formulations and constitutive material models absent in conventional packages.
+
+#### Research Agility & Extendability (Developer Perspective)
+
+* **Modular Architecture:** Minimizes data coupling via a highly decoupled, modular design to facilitate rapid prototyping and algorithmic experimentation.
+* **Mathematical Expressiveness:** Leverages high-level abstractions that closely mirror underlying tensor and matrix algebra, simplifying the implementation of complex multiaxial models.
+* **Reduced Cognitive Load:** Employs built-in structural scaffolding to manage low-level internal routines, allowing researchers to focus exclusively on core mechanics.
+
 ## Getting Started
 
 The input file logic in [suanPan](https://tlcfem.github.io/suanPan/) shares syntax paradigms with `ABAQUS`, enabling users familiar with commercial software to transition efficiently.
@@ -49,11 +66,6 @@ Detailed command syntaxes and programmatic entities are catalogued across the `C
 To streamline workflow productivity, a dedicated VS Code [extension](https://marketplace.visualstudio.com/items?itemName=tlc.suanpan) is available, providing syntax highlighting and auto-completion capabilities.
 
 Additionally, the comprehensive test suite in the repository's [Example](https://github.com/TLCFEM/suanPan/tree/dev/Example) directory provides an exhaustive reference of validated input configurations.
-
-## Documentation Architecture
-
-A comprehensive overview of the manual is available via the [table of contents](SUMMARY.md).
-For insights into the software's underlying software engineering paradigms and system architecture, please refer to the technical [slides](ARCH.pdf).
 
 ## Collaborative Contribution
 
