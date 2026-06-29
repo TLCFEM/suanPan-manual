@@ -5,7 +5,7 @@ Newmark Time Integration With Uniform/Universal Damping
 This damping formulation is an generalisation of [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016) and the nonviscous damping used in [NonviscousNewmark](NonviscousNewmark.md).
 Both can be expressed in the convolution form.
 
-While [NonviscousNewmark](NonviscousNewmark.md) convolutes velocity vector, [UDDNewmark](UDNewmark.md) and [UDANewmark](UDNewmark.md) convolute hysteresis and inertial forces, respectively.
+While [NonviscousNewmark](NonviscousNewmark.md) convolutes velocity vector, [UDDNewmark](UDNewmark.md) convolutes hysteresis and inertial forces, respectively.
 
 !!! note "Pros"
     1. Allows a scalar definition of the specific damping factor.
@@ -24,7 +24,6 @@ While [NonviscousNewmark](NonviscousNewmark.md) convolutes velocity vector, [UDD
 
 ```
 integrator UDDNewmark (1) (2) (3) ((4) (5) (6) (7)...)
-integrator UDANewmark (1) (2) (3) ((4) (5) (6) (7)...)
 # (1) int, unique tag
 # (2) double, alpha, typical: 0.25
 # (3) double, beta, typical: 0.5
@@ -45,13 +44,13 @@ $$
 For example, if the kernel contains two exponential functions such that
 
 $$
-g(t)=(1+9i)e^{-(2+8i)t}+(3+7i)e^{-(4+6i)t},
+g(t)=(-4+3i)e^{-(2+1i)t}+(-4-3i)e^{-(2-1i)t},
 $$
 
 then the command shall be defined as
 
 ```text
-integrator UDDNewmark 1 .25 .5 1 9 2 8 3 7 4 6
+integrator UDDNewmark 1 .25 .5 -4 3 2 1 -4 -3 2 -1
 ```
 
 It is assumed that the kernel is applied to all DoFs in the system.
@@ -62,12 +61,12 @@ Assuming free vibration and no velocity related forces, the equation of motion c
 $$
 \left\{\begin{array}{l}
 \mathbf{M}\ddot{\mathbf{u}}+\mathbf{K}\mathbf{u}+\sum\mathbf{f}_j+\cdots=\mathbf{0},\\
-\dot{\mathbf{f}}_j=-s_j\mathbf{f}_j+m_j\mathbf{y}.
+\dot{\mathbf{f}}_j=-s_j\mathbf{f}_j+m_j\mathbf{Ku}.
 \end{array}\right.
 $$
 
-* For `UDDNewmark`, $$\mathbf{y=Ku}$$. The real part of $$m_j$$ shall be negative.
-* For `UDANewmark`, $$\mathbf{y=M\ddot{u}}$$. The real part of $$m_j$$ shall be positive.
+The real part of $$m_j$$ shall be negative.
+The real part of $$s_j$$ shall be positive.
 
 Using the paremeter set for `UDDNewmark`, the specific damping factor as defined in [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016) can be expressed as
 
