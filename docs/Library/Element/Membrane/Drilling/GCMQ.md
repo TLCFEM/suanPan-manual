@@ -26,17 +26,17 @@ element GCMQ (1) (2...5) (6) [7] [8]
 # [7] double, element thickness, default: 1.0
 # [8] string, integration switch, default: "I"
 
-element GCMQI (1) (2...5) (6) [7] [8]
-element GCMQL (1) (2...5) (6) [7] [8]
-element GCMQG (1) (2...5) (6) [7] [8]
+element GCMQI (1) (2...5) (6) [7]
+element GCMQL (1) (2...5) (6) [7]
+element GCMQG (1) (2...5) (6) [7]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l
 # (6) int, material tag
 # [7] double, element thickness, default: 1.0
 
-element SGCMQI (1) (2...5) (6) [7] [8]
-element SGCMQL (1) (2...5) (6) [7] [8]
-element SGCMQG (1) (2...5) (6) [7] [8]
+element SGCMQI (1) (2...5) (6) [7]
+element SGCMQL (1) (2...5) (6) [7]
+element SGCMQG (1) (2...5) (6) [7]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l
 # (6) int, material tag
