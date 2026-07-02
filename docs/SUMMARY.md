@@ -82,6 +82,7 @@
     * [node](Collection/Define/node.md)
     * [recorder](Collection/Define/recorder.md)
     * [section](Collection/Define/section.md)
+    * [variable](Collection/Define/variable.md)
 * Configure
     * [analyze](Collection/Configure/analyze.md)
     * [converger](Collection/Configure/converger.md)
