@@ -27,4 +27,9 @@ This is equivalent to the following.
 element GCMQG 1 1 2 8 7 1 1
 ```
 
+!!! warning "variable must exist"
+    The variable must exist (have been defined) when referenced.
+    Thus the order matters in this situation.
+    This is because the scan and replacement of variables/macros happen during the processing/parsing of the command.
+
 More advanced scripting functionality shall be fulfilled by other tools.
