@@ -19,28 +19,23 @@ Generalised Conforming Mixed Quadrilateral With Drilling DoFs
 ## Syntax
 
 ```
-element GCMQ (1) (2...5) (6) [7] [8]
+element GCMQI (1) (2...5) (6) [7] [8]
+element GCMQL (1) (2...5) (6) [7] [8]
+element GCMQG (1) (2...5) (6) [7] [8]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l
 # (6) int, material tag
 # [7] double, element thickness, default: 1.0
-# [8] string, integration switch, default: "I"
+# [8] double, objective length, default: -1.0 (disabled)
 
-element GCMQI (1) (2...5) (6) [7]
-element GCMQL (1) (2...5) (6) [7]
-element GCMQG (1) (2...5) (6) [7]
+element SGCMQI (1) (2...5) (6) [7] [8]
+element SGCMQL (1) (2...5) (6) [7] [8]
+element SGCMQG (1) (2...5) (6) [7] [8]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l
 # (6) int, material tag
 # [7] double, element thickness, default: 1.0
-
-element SGCMQI (1) (2...5) (6) [7]
-element SGCMQL (1) (2...5) (6) [7]
-element SGCMQG (1) (2...5) (6) [7]
-# (1) int, unique element tag
-# (2...5) int, node i, j, k, l
-# (6) int, material tag
-# [7] double, element thickness, default: 1.0
+# [8] double, objective length, default: -1.0 (disabled)
 ```
 
 ## Remarks
@@ -49,5 +44,9 @@ element SGCMQG (1) (2...5) (6) [7]
   - "I": Five-Point Irons Scheme
   - "L": 3rd Order Lobatto Scheme
   - "G": 3rd Order Gauss Scheme
-* `GCMQ` is the full version described in [1] with enhanced strain, `SGCMQ` is a `PS` like element with no enhanced
+* `GCMQ` is the full version described in [10.1002/nme.6066](https://doi.org/10.1002/nme.6066) with enhanced strain, `SGCMQ` is a `PS` like element with no enhanced
   strain, the direct result of which is less computation is required (less than `CP8R`).
+
+The default approach interpolates translations from drilling rotations using edge length, potentially causing severe mesh dependency for drilling DoFs.
+This is only an issue if the simulation actually uses drilling DoFs, as it can skew the accuracy of connected components.
+To prevent this, providing a positive objective length [8] triggers an alternative formulation that relies on this specific length for interpolation.
