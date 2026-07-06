@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 508;
+var viewHeight = 370;
+var sectionId = &apos;dynsection-2&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Buckle::analyze</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M118-172H0v20h118z"/>
+<text x="59" y="-159.2" font-family="Consolas" font-size="11" text-anchor="middle">Buckle::analyze</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d4/daf/class_static.html#ac94bdc24475e5b8dcfe86152ea2a6184" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M278.5-210h-118v20h118z"/>
+<text x="219.5" y="-197.2" font-family="Consolas" font-size="11" text-anchor="middle">Static::analyze</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M102.06-172.08c19.78-4.75 43.56-10.45 64.46-15.46"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m165.98-191.01 10.54 1.07-8.91 5.74z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d1/dc3/class_step.html#af2f1c548dec9f938dd4c91a32a48e789" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M486.5-362h-152v20h152z"/>
+<text x="410.5" y="-349.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::get_integrator</text>
+</a></g><g id="edge15_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge15_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M71.83-172.12C107.13-201.76 215.78-289.04 321-333c5.48-2.29 11.27-4.32 17.16-6.11"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m337.56-342.58 10.57.67-8.68 6.07z"/>
+</a></g><g id="Node000013" class="node"><title>Node13</title><a xlink:href="../../da/d46/group___utility.html#ga74c0fd691ea92ff7db34edad8d7d93c8" id="a_Node000013" target="_top">
+<path fill="#fff" stroke="#666" d="M258-172h-77v20h77z"/>
+<text x="219.5" y="-159.2" font-family="Consolas" font-size="11" text-anchor="middle">eig_solve</text>
+</a></g><g id="edge12_Node000001_Node000013" class="edge"><title>Node1-&gt;Node13</title><a id="a_edge12_Node000001_Node000013">
+<path fill="none" stroke="#63b8ff" d="M118.12-162h52.05"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m170.62-165.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000014" class="node"><title>Node14</title><a xlink:href="../../d1/dc3/class_step.html#a1258e7fd210bcc61363b7f8178c069f5" id="a_Node000014" target="_top">
+<path fill="#fff" stroke="#666" d="M282-134H157v20h125z"/>
+<text x="219.5" y="-121.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::get_domain</text>
+</a></g><g id="edge13_Node000001_Node000014" class="edge"><title>Node1-&gt;Node14</title><a id="a_edge13_Node000001_Node000014">
+<path fill="none" stroke="#63b8ff" d="M102.06-151.92c19.78 4.75 43.56 10.45 64.46 15.46"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m167.61-139.8 8.91 5.74-10.54 1.07z"/>
+</a></g><g id="Node000015" class="node"><title>Node15</title><a xlink:href="../../d1/dc3/class_step.html#a6b01848e65a6cef1e15f4bc627ddf2bb" id="a_Node000015" target="_top">
+<path fill="#fff" stroke="#666" d="M285-96H154v20h131z"/>
+<text x="219.5" y="-83.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::get_factory</text>
+</a></g><g id="edge14_Node000001_Node000015" class="edge"><title>Node1-&gt;Node15</title><a id="a_edge14_Node000001_Node000015">
+<path fill="none" stroke="#63b8ff" d="M74.02-151.9c17.84 12.47 49.95 33.64 79.98 46.9 4.69 2.07 9.66 3.99 14.69 5.74"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m169.95-102.53 8.4 6.45-10.59.2z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d1/dc3/class_step.html#a5bedd0b3b9f2be985fa74b920abed066" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M496.5-324h-172v20h172z"/>
+<text x="410.5" y="-311.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::get_ini_step_size</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M228.08-210.2c15.24-19.74 51.7-63.11 92.92-84.8 4.02-2.12 8.26-4 12.62-5.67"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m332.72-304.06 10.6.06-8.32 6.56z"/>
+</a></g><g id="edge3_Node000002_Node000004" class="edge"><title>Node2-&gt;Node4</title><a id="a_edge3_Node000002_Node000004">
+<path fill="none" stroke="#63b8ff" d="M228.87-210.06c12.52-15.15 36.72-44.82 56.13-70.94 16.76-22.56 12.62-36.4 36-52 2.6-1.73 5.32-3.31 8.14-4.75"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m327.86-341.01 10.56-.86-7.71 7.26z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d1/dc3/class_step.html#a94f6e9014351a92c5bb6d62f4d292085" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M496.5-286h-172v20h172z"/>
+<text x="410.5" y="-273.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::get_max_step_size</text>
+</a></g><g id="edge4_Node000002_Node000005" class="edge"><title>Node2-&gt;Node5</title><a id="a_edge4_Node000002_Node000005">
+<path fill="none" stroke="#63b8ff" d="M235.12-210.2c18.95-12.76 53.45-34.46 85.88-46.8 6.22-2.37 12.8-4.47 19.45-6.33"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m339.66-266.74 10.56.85-8.79 5.92z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d1/dc3/class_step.html#a564c269a4fa2186424aef143e758c08b" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M489.5-248h-158v20h158z"/>
+<text x="410.5" y="-235.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::get_max_substep</text>
+</a></g><g id="edge5_Node000002_Node000006" class="edge"><title>Node2-&gt;Node6</title><a id="a_edge5_Node000002_Node000006">
+<path fill="none" stroke="#63b8ff" d="M270.65-210.08c24.23-4.88 53.5-10.76 78.9-15.87"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m348.95-229.4 10.49 1.46-9.11 5.41z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d1/dc3/class_step.html#af13e32b88008e7a0f6b229add7a58d11" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M496.5-210h-172v20h172z"/>
+<text x="410.5" y="-197.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::get_min_step_size</text>
+</a></g><g id="edge6_Node000002_Node000007" class="edge"><title>Node2-&gt;Node7</title><a id="a_edge6_Node000002_Node000007">
+<path fill="none" stroke="#63b8ff" d="M278.75-200h35.45"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m314.35-203.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d1/dc3/class_step.html#a1d3ccf248b2da43b0926818cbd40fe55" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M473-172H348v20h125z"/>
+<text x="410.5" y="-159.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::get_solver</text>
+</a></g><g id="edge7_Node000002_Node000008" class="edge"><title>Node2-&gt;Node8</title><a id="a_edge7_Node000002_Node000008">
+<path fill="none" stroke="#63b8ff" d="M270.65-189.92c24.23 4.88 53.5 10.76 78.9 15.87"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m350.33-177.47 9.11 5.41-10.49 1.46z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../d1/dc3/class_step.html#a4fa73e7c6c13a6612e8dbcb2585c269d" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M489.5-134h-158v20h158z"/>
+<text x="410.5" y="-121.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::get_time_period</text>
+</a></g><g id="edge8_Node000002_Node000009" class="edge"><title>Node2-&gt;Node9</title><a id="a_edge8_Node000002_Node000009">
+<path fill="none" stroke="#63b8ff" d="M265.87-189.95c6.66 2.41 13.26 5.35 19.13 8.95 19.84 12.15 15.72 26.6 36 38 3.52 1.98 7.23 3.75 11.05 5.34"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m333.56-140.83 8.17 6.75-10.59-.19z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../d1/dc3/class_step.html#adfd53ec1b9d3abc5422c0da05429cf97" id="a_Node000010" target="_top">
+<path fill="#fff" stroke="#666" d="M500-96H321v20h179z"/>
+<text x="410.5" y="-83.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::is_fixed_step_size</text>
+</a></g><g id="edge9_Node000002_Node000010" class="edge"><title>Node2-&gt;Node10</title><a id="a_edge9_Node000002_Node000010">
+<path fill="none" stroke="#63b8ff" d="M270.61-189.97c5.2 2.38 10.13 5.33 14.39 8.97 28.41 24.29 6.7 52.79 36 76a66 66 0 0 0 5.64 3.99"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m328.44-104.02 7.14 7.82-10.46-1.66z"/>
+</a></g><g id="Node000011" class="node"><title>Node11</title><a xlink:href="../../d1/dc3/class_step.html#a450b48ebd4f475f0166ac24463817a17" id="a_Node000011" target="_top">
+<path fill="#fff" stroke="#666" d="M489.5-58h-158v20h158z"/>
+<text x="410.5" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::set_max_substep</text>
+</a></g><g id="edge10_Node000002_Node000011" class="edge"><title>Node2-&gt;Node11</title><a id="a_edge10_Node000002_Node000011">
+<path fill="none" stroke="#63b8ff" d="M272.39-189.89c4.63 2.37 8.94 5.29 12.61 8.89 37.93 37.2-3.3 78.24 36 114a56 56 0 0 0 4.12 3.4"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m327.15-66.46 6.61 8.27-10.33-2.34z"/>
+</a></g><g id="Node000012" class="node"><title>Node12</title><a xlink:href="../../d1/dc3/class_step.html#afaf7b89eaf4814c23c83f9ff117f31c8" id="a_Node000012" target="_top">
+<path fill="#fff" stroke="#666" d="M483-20H338V0h145z"/>
+<text x="410.5" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">Step::set_time_left</text>
+</a></g><g id="edge11_Node000002_Node000012" class="edge"><title>Node2-&gt;Node12</title><a id="a_edge11_Node000002_Node000012">
+<path fill="none" stroke="#63b8ff" d="M272.98-190c4.46 2.4 8.57 5.36 12.02 9 47.75 50.4-13.61 103.43 36 152 2.41 2.36 5.05 4.46 7.84 6.33"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m330.64-25.67 7.04 7.92-10.44-1.81z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_buckle_ac92dafd820ed83b823f386286ab6fb26_cgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

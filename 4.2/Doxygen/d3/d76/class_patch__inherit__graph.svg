@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 586;
+var viewHeight = 480;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Patch</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="A Patch class." id="a_Node000001">
+<path fill="#999" stroke="transparent" d="M373.5-472h-161v96h161z"/>
+<text x="276.5" y="-459.2" font-family="Consolas" font-size="11">Patch</text>
+<text x="217" y="-443.2" font-family="Consolas" font-size="11">#</text>
+<text x="228" y="-443.2" font-family="Consolas" font-size="11">knot_pool</text>
+<text x="217" y="-427.2" font-family="Consolas" font-size="11">#</text>
+<text x="228" y="-427.2" font-family="Consolas" font-size="11">element_span</text>
+<text x="217" y="-411.2" font-family="Consolas" font-size="11">+</text>
+<text x="228" y="-411.2" font-family="Consolas" font-size="11">Patch()</text>
+<text x="217" y="-395.2" font-family="Consolas" font-size="11">+</text>
+<text x="228" y="-395.2" font-family="Consolas" font-size="11">get_number_of_control</text>
+<text x="228" y="-383.2" font-family="Consolas" font-size="11">_points()</text>
+<path fill="#666" stroke="#666" d="M213-454h161z"/>
+<path fill="#666" stroke="#666" d="M213-422h13z"/>
+<path fill="#666" stroke="#666" d="M226-422h148z"/>
+<path fill="none" stroke="#666" d="M212.5-376v-96h161v96z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d6/dfb/class_material_patch.html" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="transparent" d="M279.5-340h-121v52h121z"/>
+<text x="175.5" y="-327.2" font-family="Consolas" font-size="11">MaterialPatch</text>
+<text x="216" y="-311.2" font-family="Consolas" font-size="11"> </text>
+<text x="163" y="-295.2" font-family="Consolas" font-size="11">+</text>
+<text x="174" y="-295.2" font-family="Consolas" font-size="11">MaterialPatch()</text>
+<path fill="#666" stroke="#666" d="M159-322h121z"/>
+<path fill="#666" stroke="#666" d="M159-306h121z"/>
+<path fill="none" stroke="#666" d="M158.5-288v-52h121v52z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M255.01-367.55c-6.55 9.56-13.07 19.06-18.71 27.31"/>
+<path fill="none" stroke="#63b8ff" d="m252.22-369.67 8.54-6.27-2.77 10.22z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d8/d08/class_section_patch.html" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="transparent" d="M425-340H311v52h114z"/>
+<text x="327" y="-327.2" font-family="Consolas" font-size="11">SectionPatch</text>
+<text x="364.5" y="-311.2" font-family="Consolas" font-size="11"> </text>
+<text x="315" y="-295.2" font-family="Consolas" font-size="11">+</text>
+<text x="326" y="-295.2" font-family="Consolas" font-size="11">SectionPatch()</text>
+<path fill="#666" stroke="#666" d="M311-322h114z"/>
+<path fill="#666" stroke="#666" d="M311-306h114z"/>
+<path fill="none" stroke="#666" d="M311-288v-52h114v52z"/>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M331.5-367.55c6.65 9.56 13.25 19.06 18.97 27.31"/>
+<path fill="none" stroke="#63b8ff" d="m328.51-365.73-2.83-10.21 8.58 6.21z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d0/d97/class_material_patch2_d.html" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="transparent" d="M134-252H0v52h134z"/>
+<text x="16" y="-239.2" font-family="Consolas" font-size="11">MaterialPatch2D</text>
+<text x="63.5" y="-223.2" font-family="Consolas" font-size="11"> </text>
+<text x="4" y="-207.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-207.2" font-family="Consolas" font-size="11">MaterialPatch2D()</text>
+<path fill="#666" stroke="#666" d="M0-234h134z"/>
+<path fill="#666" stroke="#666" d="M0-218h134z"/>
+<path fill="none" stroke="#666" d="M0-200v-52h134v52z"/>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M165.56-282.76c-17.7 10.01-37.19 21.04-54.13 30.62"/>
+<path fill="none" stroke="#63b8ff" d="m164.2-286.02 10.43-1.87-6.98 7.97z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../dd/d7f/class_material_patch3_d.html" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="transparent" d="M286-252H152v52h134z"/>
+<text x="168" y="-239.2" font-family="Consolas" font-size="11">MaterialPatch3D</text>
+<text x="215.5" y="-223.2" font-family="Consolas" font-size="11"> </text>
+<text x="156" y="-207.2" font-family="Consolas" font-size="11">+</text>
+<text x="167" y="-207.2" font-family="Consolas" font-size="11">MaterialPatch3D()</text>
+<path fill="#666" stroke="#666" d="M152-234h134z"/>
+<path fill="#666" stroke="#666" d="M152-218h134z"/>
+<path fill="none" stroke="#666" d="M152-200v-52h134v52z"/>
+</a></g><g id="edge4_Node000002_Node000005" class="edge"><title>Node2-&gt;Node5</title><a id="a_edge4_Node000002_Node000005">
+<path fill="none" stroke="#63b8ff" d="M219-277.56v25.4"/>
+<path fill="none" stroke="#63b8ff" d="m215.5-277.66 3.5-10 3.5 10z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../da/d6e/class_patch_quad.html" xlink:title="The PatchQuad class handles CPS4, CPE4, CPS4R and CPE4R elements. It is a four node constant strain m..." id="a_Node000004" target="_top">
+<path fill="#fff" stroke="transparent" d="M127.5-164H6.5V0h121z"/>
+<text x="37" y="-151.2" font-family="Consolas" font-size="11">PatchQuad</text>
+<text x="64" y="-135.2" font-family="Consolas" font-size="11"> </text>
+<text x="11" y="-119.2" font-family="Consolas" font-size="11">+</text>
+<text x="22" y="-119.2" font-family="Consolas" font-size="11">PatchQuad()</text>
+<text x="11" y="-103.2" font-family="Consolas" font-size="11">+</text>
+<text x="22" y="-103.2" font-family="Consolas" font-size="11">initialize()</text>
+<text x="11" y="-87.2" font-family="Consolas" font-size="11">+</text>
+<text x="22" y="-87.2" font-family="Consolas" font-size="11">update_status()</text>
+<text x="11" y="-71.2" font-family="Consolas" font-size="11">+</text>
+<text x="22" y="-71.2" font-family="Consolas" font-size="11">commit_status()</text>
+<text x="11" y="-55.2" font-family="Consolas" font-size="11">+</text>
+<text x="22" y="-55.2" font-family="Consolas" font-size="11">clear_status()</text>
+<text x="11" y="-39.2" font-family="Consolas" font-size="11">+</text>
+<text x="22" y="-39.2" font-family="Consolas" font-size="11">reset_status()</text>
+<text x="11" y="-23.2" font-family="Consolas" font-size="11">+</text>
+<text x="22" y="-23.2" font-family="Consolas" font-size="11">record()</text>
+<text x="11" y="-7.2" font-family="Consolas" font-size="11">+</text>
+<text x="22" y="-7.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M7-146h121z"/>
+<path fill="#666" stroke="#666" d="M7-130h121z"/>
+<path fill="none" stroke="#666" d="M6.5 0v-164h121V0z"/>
+</a></g><g id="edge3_Node000003_Node000004" class="edge"><title>Node3-&gt;Node4</title><a id="a_edge3_Node000003_Node000004">
+<path fill="none" stroke="#63b8ff" d="M67-189.71v25.54"/>
+<path fill="none" stroke="#63b8ff" d="m63.5-189.94 3.5-10 3.5 10z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d7/d72/class_patch_cube.html" xlink:title="The PatchCube class." id="a_Node000006" target="_top">
+<path fill="#fff" stroke="transparent" d="M279.5-164h-121V0h121z"/>
+<text x="189" y="-151.2" font-family="Consolas" font-size="11">PatchCube</text>
+<text x="216" y="-135.2" font-family="Consolas" font-size="11"> </text>
+<text x="163" y="-119.2" font-family="Consolas" font-size="11">+</text>
+<text x="174" y="-119.2" font-family="Consolas" font-size="11">PatchCube()</text>
+<text x="163" y="-103.2" font-family="Consolas" font-size="11">+</text>
+<text x="174" y="-103.2" font-family="Consolas" font-size="11">initialize()</text>
+<text x="163" y="-87.2" font-family="Consolas" font-size="11">+</text>
+<text x="174" y="-87.2" font-family="Consolas" font-size="11">update_status()</text>
+<text x="163" y="-71.2" font-family="Consolas" font-size="11">+</text>
+<text x="174" y="-71.2" font-family="Consolas" font-size="11">commit_status()</text>
+<text x="163" y="-55.2" font-family="Consolas" font-size="11">+</text>
+<text x="174" y="-55.2" font-family="Consolas" font-size="11">clear_status()</text>
+<text x="163" y="-39.2" font-family="Consolas" font-size="11">+</text>
+<text x="174" y="-39.2" font-family="Consolas" font-size="11">reset_status()</text>
+<text x="163" y="-23.2" font-family="Consolas" font-size="11">+</text>
+<text x="174" y="-23.2" font-family="Consolas" font-size="11">record()</text>
+<text x="163" y="-7.2" font-family="Consolas" font-size="11">+</text>
+<text x="174" y="-7.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M159-146h121z"/>
+<path fill="#666" stroke="#666" d="M159-130h121z"/>
+<path fill="none" stroke="#666" d="M158.5 0v-164h121V0z"/>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node5-&gt;Node6</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M219-189.71v25.54"/>
+<path fill="none" stroke="#63b8ff" d="m215.5-189.94 3.5-10 3.5 10z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d1/d15/class_section_patch2_d.html" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="transparent" d="M432-252H304v52h128z"/>
+<text x="320.5" y="-239.2" font-family="Consolas" font-size="11">SectionPatch2D</text>
+<text x="364.5" y="-223.2" font-family="Consolas" font-size="11"> </text>
+<text x="308" y="-207.2" font-family="Consolas" font-size="11">+</text>
+<text x="319" y="-207.2" font-family="Consolas" font-size="11">SectionPatch2D()</text>
+<path fill="#666" stroke="#666" d="M304-234h128z"/>
+<path fill="#666" stroke="#666" d="M304-218h128z"/>
+<path fill="none" stroke="#666" d="M304-200v-52h128v52z"/>
+</a></g><g id="edge7_Node000007_Node000008" class="edge"><title>Node7-&gt;Node8</title><a id="a_edge7_Node000007_Node000008">
+<path fill="none" stroke="#63b8ff" d="M368-277.56v25.4"/>
+<path fill="none" stroke="#63b8ff" d="m364.5-277.66 3.5-10 3.5 10z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../d5/d14/class_section_patch3_d.html" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="transparent" d="M578-252H450v52h128z"/>
+<text x="466.5" y="-239.2" font-family="Consolas" font-size="11">SectionPatch3D</text>
+<text x="510.5" y="-223.2" font-family="Consolas" font-size="11"> </text>
+<text x="454" y="-207.2" font-family="Consolas" font-size="11">+</text>
+<text x="465" y="-207.2" font-family="Consolas" font-size="11">SectionPatch3D()</text>
+<path fill="#666" stroke="#666" d="M450-234h128z"/>
+<path fill="#666" stroke="#666" d="M450-218h128z"/>
+<path fill="none" stroke="#666" d="M450-200v-52h128v52z"/>
+</a></g><g id="edge8_Node000007_Node000009" class="edge"><title>Node7-&gt;Node9</title><a id="a_edge8_Node000007_Node000009">
+<path fill="none" stroke="#63b8ff" d="M419.33-282.76c17 10.01 35.72 21.04 52 30.62"/>
+<path fill="none" stroke="#63b8ff" d="m417.46-279.8-6.84-8.09 10.39 2.06z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_patch__inherit__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 568;
+var viewHeight = 334;
+var sectionId = &apos;dynsection-7&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Maxwell::update_trial_status</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M158-176H0v32h158z"/>
+<text x="8" y="-163.2" font-family="Consolas" font-size="11">Maxwell::update_trial</text>
+<text x="79" y="-151.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../dc/dee/class_material.html#ade3c7e01d4ba1a2e432e6a678bf796c1" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M355.5-326h-158v32h158z"/>
+<text x="205.5" y="-313.2" font-family="Consolas" font-size="11">Material::get_current</text>
+<text x="276.5" y="-301.2" font-family="Consolas" font-size="11" text-anchor="middle">_strain_rate</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M90.56-176.37C108.58-203.03 147.85-255.77 194-285c2.6-1.65 5.32-3.2 8.12-4.64"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m200.75-292.87 10.54-1.08-7.56 7.42z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../dc/dee/class_material.html#ac0219cdb7612d1b88c64eeddd0b927fb" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M349-276H204v32h145z"/>
+<text x="212" y="-263.2" font-family="Consolas" font-size="11">Material::get_trial</text>
+<text x="276.5" y="-251.2" font-family="Consolas" font-size="11" text-anchor="middle">_damping</text>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M100.78-176.3c22.07-16.67 58.49-42.36 93.22-58.7 4.03-1.89 8.23-3.69 12.52-5.38"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m205.4-243.7 10.59-.22-8.15 6.78z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../dc/dee/class_material.html#ad28136c4cd29daa3b12b0f416ca99910" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M349-226H204v32h145z"/>
+<text x="212" y="-213.2" font-family="Consolas" font-size="11">Material::get_trial</text>
+<text x="276.5" y="-201.2" font-family="Consolas" font-size="11" text-anchor="middle">_stiffness</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M142.66-176.03c19.21-4.91 40.5-10.35 60.3-15.42"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m202.3-194.89 10.56.91-8.83 5.87z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../dc/dee/class_material.html#a73297a8cd5bcef2c652acf1df6418d5b" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M349-176H204v32h145z"/>
+<text x="212" y="-163.2" font-family="Consolas" font-size="11">Material::get_trial</text>
+<text x="276.5" y="-151.2" font-family="Consolas" font-size="11" text-anchor="middle">_stress</text>
+</a></g><g id="edge4_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge4_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M158.11-160h35.51"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m193.85-163.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d6/d9c/namespacesuanpan.html#af65ff889c917db764400e6c72c11a0b7" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M342-126H211v20h131z"/>
+<text x="276.5" y="-113.2" font-family="Consolas" font-size="11" text-anchor="middle">suanpan::inf_norm</text>
+</a></g><g id="edge5_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge5_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M151.13-143.99c23 5.18 48.12 10.83 69.73 15.69"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m221.86-131.66 8.98 5.61-10.52 1.22z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../db/d83/class_maxwell.html#ae564f6d4290e72a2953ffba170ec5469" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M355.5-88h-158v20h158z"/>
+<text x="276.5" y="-75.2" font-family="Consolas" font-size="11" text-anchor="middle">Maxwell::reset_status</text>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M104.39-143.92c22.45 14.17 57.1 34.43 89.61 46.92 5.96 2.29 12.28 4.36 18.66 6.21"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m213.95-94.07 8.73 6-10.57.75z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../dc/dee/class_material.html#ad37f4f5f0b778937ec38f9ea4429eb36" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M359-32H194V0h165z"/>
+<text x="202" y="-19.2" font-family="Consolas" font-size="11">Material::update_incre</text>
+<text x="276.5" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g id="edge8_Node000001_Node000009" class="edge"><title>Node1-&gt;Node9</title><a id="a_edge8_Node000001_Node000009">
+<path fill="none" stroke="#63b8ff" d="M95.59-143.97C116.65-122.86 155.95-85.33 194-59c11.75 8.13 25.22 15.82 37.79 22.39"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m233.42-39.7 7.31 7.67-10.49-1.44z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../dc/dee/class_material.html#a7b974ec9d0b5df5bbc37a9ceaf7173f9" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M560-88H395v20h165z"/>
+<text x="477.5" y="-75.2" font-family="Consolas" font-size="11" text-anchor="middle">Material::reset_status</text>
+</a></g><g id="edge7_Node000007_Node000008" class="edge"><title>Node7-&gt;Node8</title><a id="a_edge7_Node000007_Node000008">
+<path fill="none" stroke="#63b8ff" d="M355.58-78h29.06"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m384.71-81.5 10 3.5-10 3.5z"/>
+</a></g><g id="edge9_Node000009_Node000009" class="edge"><title>Node9-&gt;Node9</title><a id="a_edge9_Node000009_Node000009">
+<path fill="none" stroke="#63b8ff" d="M241.77-32.09C234.68-41.37 246.26-50 276.5-50c18.43 0 29.93 3.21 34.49 7.81"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m314.49-42.17-3.26 10.08-3.73-9.92z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_maxwell_ab7056f092e9a8da26e27cf7f7a389d1d_cgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

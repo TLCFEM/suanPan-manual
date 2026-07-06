@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 662;
+var viewHeight = 198;
+var sectionId = &apos;dynsection-7&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>NonlinearGurson::update_trial_status</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M172-102H0v32h172z"/>
+<text x="8" y="-89.2" font-family="Consolas" font-size="11">NonlinearGurson::update</text>
+<text x="86" y="-77.2" font-family="Consolas" font-size="11" text-anchor="middle">_trial_status</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d6/d9c/namespacesuanpan.html#afb02c541f89a6e2b382da70e71bb6c37" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M356.5-190h-145v20h145z"/>
+<text x="284" y="-177.2" font-family="Consolas" font-size="11" text-anchor="middle">suanpan::clamp_unit</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M108.62-102.27C132-119.16 170.92-145.26 208-161c5.31-2.25 10.94-4.28 16.65-6.11"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m223.69-170.47 10.58.5-8.58 6.21z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../dd/d8c/namespacetensor.html#a82bcab854febeba7c0d66c204ff09052" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M329.5-134h-91v20h91z"/>
+<text x="284" y="-121.2" font-family="Consolas" font-size="11" text-anchor="middle">tensor::dev</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M169.55-102.01c19.95-3.86 40.78-7.9 59.06-11.45"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m228-116.9 10.48 1.53-9.15 5.34z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d6/d9c/namespacesuanpan.html#af65ff889c917db764400e6c72c11a0b7" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M349.5-96h-131v20h131z"/>
+<text x="284" y="-83.2" font-family="Consolas" font-size="11" text-anchor="middle">suanpan::inf_norm</text>
+</a></g><g id="edge5_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge5_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M172.11-86h36.01"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m208.33-89.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../dd/d8c/namespacetensor.html#a735fc96d0b8bcb54fd29f2660d97a2ca" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M336-58H232v20h104z"/>
+<text x="284" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">tensor::mean3</text>
+</a></g><g id="edge6_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge6_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M169.55-69.99c17.5 3.39 35.68 6.91 52.22 10.12"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m222.69-63.26 9.15 5.34-10.49 1.53z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../d7/dfe/namespacetensor_1_1stress.html#abbd4c67ff74e768ef7c8bdaf1ca28011" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M360-20H208V0h152z"/>
+<text x="284" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">tensor::stress::norm</text>
+</a></g><g id="edge9_Node000001_Node000009" class="edge"><title>Node1-&gt;Node9</title><a id="a_edge9_Node000001_Node000009">
+<path fill="none" stroke="#63b8ff" d="M117.15-69.81C141.22-57.37 176.09-40.44 208-29c6.29 2.25 12.96 4.35 19.63 6.26"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m228.65-26.09 8.72 6.02-10.57.73z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d6/d9c/namespacesuanpan.html#aaa74dd352fdf32982bd22f75828432ee" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M507-190H396v20h111z"/>
+<text x="451.5" y="-177.2" font-family="Consolas" font-size="11" text-anchor="middle">suanpan::clamp</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M356.63-180h29.14"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m385.98-183.5 10 3.5-10 3.5z"/>
+</a></g><g id="edge4_Node000004_Node000004" class="edge"><title>Node4-&gt;Node4</title><a id="a_edge4_Node000004_Node000004">
+<path fill="none" stroke="#63b8ff" d="M258.01-134.05C246.16-142.77 254.82-152 284-152c19.15 0 29.46 3.97 30.94 9.17"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m317.95-141.04-7.96 6.99 1.86-10.43z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../dd/d8c/namespacetensor.html#a36216f68489b10fcf90423c293da6e1f" xlink:title="Only accepts 3D tensor!" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M507-58H396v20h111z"/>
+<text x="451.5" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">tensor::trace3</text>
+</a></g><g id="edge7_Node000006_Node000007" class="edge"><title>Node6-&gt;Node7</title><a id="a_edge7_Node000006_Node000007">
+<path fill="none" stroke="#63b8ff" d="M336.01-48h49.79"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m385.93-51.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d8/d8f/suan_pan_8h.html#a1dedfe8914d601833d703818541d3b29" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M654-58H543v20h111z"/>
+<text x="598.5" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">suanpan_assert</text>
+</a></g><g id="edge8_Node000007_Node000008" class="edge"><title>Node7-&gt;Node8</title><a id="a_edge8_Node000007_Node000008">
+<path fill="none" stroke="#63b8ff" d="M507.32-48h25.14"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m532.6-51.5 10 3.5-10 3.5z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_nonlinear_gurson_aa8ae29eca73403329a46ca014b3dd49b_cgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

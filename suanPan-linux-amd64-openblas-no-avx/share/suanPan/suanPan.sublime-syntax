@@ -1,0 +1,502 @@
+%YAML 1.2
+---
+file_extensions:
+- supan
+- sp
+name: suanPan
+scope: source.sp
+contexts:
+  main:
+  - include: comments
+  - include: demo
+  - include: global
+  - include: variables
+  comments:
+  - match: '!.*$'
+    scope: comment
+  - match: ^#.*$
+    scope: comment
+  demo:
+  - match: ^comment$
+    scope: comment
+  - match: ^comment\.block$
+    scope: comment.block
+  - match: ^comment\.block\.documentation$
+    scope: comment.block.documentation
+  - match: ^comment\.line$
+    scope: comment.line
+  - match: ^comment\.line\.double-dash$
+    scope: comment.line.double-dash
+  - match: ^comment\.line\.double-slash$
+    scope: comment.line.double-slash
+  - match: ^comment\.line\.number-sign$
+    scope: comment.line.number-sign
+  - match: ^comment\.line\.percentage$
+    scope: comment.line.percentage
+  - match: ^constant$
+    scope: constant
+  - match: ^constant\.character$
+    scope: constant.character
+  - match: ^constant\.character\.escape$
+    scope: constant.character.escape
+  - match: ^constant\.language$
+    scope: constant.language
+  - match: ^constant\.numeric$
+    scope: constant.numeric
+  - match: ^constant\.other$
+    scope: constant.other
+  - match: ^constant\.regexp$
+    scope: constant.regexp
+  - match: ^constant\.rgb-value$
+    scope: constant.rgb-value
+  - match: ^constant\.sha\.git-rebase$
+    scope: constant.sha.git-rebase
+  - match: ^emphasis$
+    scope: emphasis
+  - match: ^entity$
+    scope: entity
+  - match: ^entity\.name$
+    scope: entity.name
+  - match: ^entity\.name\.class$
+    scope: entity.name.class
+  - match: ^entity\.name\.function$
+    scope: entity.name.function
+  - match: ^entity\.name\.method$
+    scope: entity.name.method
+  - match: ^entity\.name\.section$
+    scope: entity.name.section
+  - match: ^entity\.name\.selector$
+    scope: entity.name.selector
+  - match: ^entity\.name\.tag$
+    scope: entity.name.tag
+  - match: ^entity\.name\.type$
+    scope: entity.name.type
+  - match: ^entity\.other$
+    scope: entity.other
+  - match: ^entity\.other\.attribute-name$
+    scope: entity.other.attribute-name
+  - match: ^entity\.other\.inherited-class$
+    scope: entity.other.inherited-class
+  - match: ^header$
+    scope: header
+  - match: ^invalid$
+    scope: invalid
+  - match: ^invalid\.deprecated$
+    scope: invalid.deprecated
+  - match: ^invalid\.illegal$
+    scope: invalid.illegal
+  - match: ^keyword$
+    scope: keyword
+  - match: ^keyword\.control$
+    scope: keyword.control
+  - match: ^keyword\.control\.less$
+    scope: keyword.control.less
+  - match: ^keyword\.operator$
+    scope: keyword.operator
+  - match: ^keyword\.operator\.new$
+    scope: keyword.operator.new
+  - match: ^keyword\.other$
+    scope: keyword.other
+  - match: ^keyword\.other\.unit$
+    scope: keyword.other.unit
+  - match: ^markup$
+    scope: markup
+  - match: ^markup\.bold$
+    scope: markup.bold
+  - match: ^markup\.changed$
+    scope: markup.changed
+  - match: ^markup\.deleted$
+    scope: markup.deleted
+  - match: ^markup\.heading$
+    scope: markup.heading
+  - match: ^markup\.inline\.raw$
+    scope: markup.inline.raw
+  - match: ^markup\.inserted$
+    scope: markup.inserted
+  - match: ^markup\.italic$
+    scope: markup.italic
+  - match: ^markup\.list$
+    scope: markup.list
+  - match: ^markup\.list\.numbered$
+    scope: markup.list.numbered
+  - match: ^markup\.list\.unnumbered$
+    scope: markup.list.unnumbered
+  - match: ^markup\.other$
+    scope: markup.other
+  - match: ^markup\.punctuation\.list\.beginning$
+    scope: markup.punctuation.list.beginning
+  - match: ^markup\.punctuation\.quote\.beginning$
+    scope: markup.punctuation.quote.beginning
+  - match: ^markup\.quote$
+    scope: markup.quote
+  - match: ^markup\.raw$
+    scope: markup.raw
+  - match: ^markup\.underline$
+    scope: markup.underline
+  - match: ^markup\.underline\.link$
+    scope: markup.underline.link
+  - match: ^meta$
+    scope: meta
+  - match: ^meta\.cast$
+    scope: meta.cast
+  - match: ^meta\.parameter\.type\.variable$
+    scope: meta.parameter.type.variable
+  - match: ^meta\.preprocessor$
+    scope: meta.preprocessor
+  - match: ^meta\.preprocessor\.numeric$
+    scope: meta.preprocessor.numeric
+  - match: ^meta\.preprocessor\.string$
+    scope: meta.preprocessor.string
+  - match: ^meta\.return-type$
+    scope: meta.return-type
+  - match: ^meta\.selector$
+    scope: meta.selector
+  - match: ^meta\.structure\.dictionary\.key\.python$
+    scope: meta.structure.dictionary.key.python
+  - match: ^meta\.tag$
+    scope: meta.tag
+  - match: ^meta\.type\.annotation$
+    scope: meta.type.annotation
+  - match: ^meta\.type\.name$
+    scope: meta.type.name
+  - match: ^metatag\.php$
+    scope: metatag.php
+  - match: ^storage$
+    scope: storage
+  - match: ^storage\.modifier$
+    scope: storage.modifier
+  - match: ^storage\.modifier\.import\.java$
+    scope: storage.modifier.import.java
+  - match: ^storage\.modifier\.package\.java$
+    scope: storage.modifier.package.java
+  - match: ^storage\.type$
+    scope: storage.type
+  - match: ^storage\.type\.cs$
+    scope: storage.type.cs
+  - match: ^storage\.type\.java$
+    scope: storage.type.java
+  - match: ^string$
+    scope: string
+  - match: ^string\.html$
+    scope: string.html
+  - match: ^string\.interpolated$
+    scope: string.interpolated
+  - match: ^string\.jade$
+    scope: string.jade
+  - match: ^string\.other$
+    scope: string.other
+  - match: ^string\.quoted$
+    scope: string.quoted
+  - match: ^string\.quoted\.double$
+    scope: string.quoted.double
+  - match: ^string\.quoted\.other$
+    scope: string.quoted.other
+  - match: ^string\.quoted\.single$
+    scope: string.quoted.single
+  - match: ^string\.quoted\.triple$
+    scope: string.quoted.triple
+  - match: ^string\.regexp$
+    scope: string.regexp
+  - match: ^string\.unquoted$
+    scope: string.unquoted
+  - match: ^string\.xml$
+    scope: string.xml
+  - match: ^string\.yaml$
+    scope: string.yaml
+  - match: ^strong$
+    scope: strong
+  - match: ^support$
+    scope: support
+  - match: ^support\.class$
+    scope: support.class
+  - match: ^support\.constant$
+    scope: support.constant
+  - match: ^support\.function$
+    scope: support.function
+  - match: ^support\.function\.git-rebase$
+    scope: support.function.git-rebase
+  - match: ^support\.other$
+    scope: support.other
+  - match: ^support\.property-value$
+    scope: support.property-value
+  - match: ^support\.type$
+    scope: support.type
+  - match: ^support\.type\.property-name$
+    scope: support.type.property-name
+  - match: ^support\.type\.property-name\.css$
+    scope: support.type.property-name.css
+  - match: ^support\.type\.property-name\.less$
+    scope: support.type.property-name.less
+  - match: ^support\.type\.property-name\.scss$
+    scope: support.type.property-name.scss
+  - match: ^support\.variable$
+    scope: support.variable
+  - match: ^variable$
+    scope: variable
+  - match: ^variable\.language$
+    scope: variable.language
+  - match: ^variable\.name$
+    scope: variable.name
+  - match: ^variable\.other$
+    scope: variable.other
+  - match: ^variable\.parameter$
+    scope: variable.parameter
+  global:
+  - match: (?i)^(?:(constraint)\s+)?(fix|penaltybc|fix2|multiplierbc|groupmultiplierbc|grouppenaltybc|\$\S+)\s+(\d+)\s+(\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+      4: support.type
+  - match: (?i)^(?:(load)\s+)?(acceleration|bodyforce|cload|dispload|disp|displacement|groupbodyforce|groupcload|groupdisp|groupdisplacement|groupdispload|lineudl2d|lineudl3d|referenceload|refload|refforce|supportacceleration|supportdisplacement|supportvelocity|\$\S+)\s+(\d+)\s+(\d+)\s+(\S+)\s+(\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+      4: support.constant
+      5: constant.numeric
+      6: support.type
+  - match: (?i)^(converger)\s+(fixednumber|logicand|logicor|logicxor|\$\S+)\s+(\d+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: support.constant
+      3: variable
+  - match: (?i)^(disable)\s+(amplitude|constraint|converger|criterion|domain|element|expression|group|integrator|load|material|modifier|node|orientation|recorder|section|solver|step|print|\$\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)^(enable)\s+(amplitude|constraint|converger|criterion|domain|element|expression|group|integrator|load|material|modifier|node|orientation|recorder|section|solver|step|all|print|\$\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)^(erase|delete|remove)\s+(amplitude|constraint|converger|criterion|domain|element|expression|group|integrator|load|material|modifier|node|orientation|recorder|section|solver|step|\$\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)^(list)\s+(amplitude|constraint|converger|criterion|element|expression|group|integrator|load|material|modifier|node|orientation|recorder|section|solver|step|\$\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)^(peek)\s+(node|element|material|constraint|recorder|solver|integrator|group|nodegroup|amplitude|expression|eigenvalue|output_folder|num_threads|num_nodes|statistics|stats|\$\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)^(plainrecorder|hdf5recorder)\s+(\d+)\s+(\w+)\s+(\w+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: variable
+      3: entity.name.type
+      4: support.constant
+  - match: (?i)^(protect)\s+(element|node|\$\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)^(recorder)\s+(\d+)\s+(\w+)\s+(\w+)\s+(\w+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: variable
+      3: entity.name.type
+      4: entity.name.type
+      5: support.constant
+  - match: (?i)^(save)\s+(recorder|\$\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)^(suspend)\s+(constraint|load|\$\S+)\b
+    push:
+    - match: $
+      pop: true
+    - match: \d+
+      scope: variable
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)\bWP|MIS|LAPACK|SPIKE|SUPERLU|LIS|MUMPS|CUDA|MAGMA|PARDISO|FGMRES|DOUBLE|FULL|SINGLE|MIXED|\$\S+\b
+    captures:
+      0: variable
+  - match: (?i)^(section)\s+(NZ2D|NZ3D|EU2D|EU3D|US2D|US3D|\$\S+)\s+(\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: entity.name.type
+      4: variable
+  - match: (?i)^(expression)\s+(simplescalar|simplevector|\$\S+)\s+(\d+)\s+(.+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+      4: string
+  - match: (?i)^(?:(constraint)\s+)?(embed2d|embed3d|finiterestitutionwall|finiterestitutionwallpenalty|finiterigidwall|finiterigidwallpenalty|finiterigidwallmultiplier|fixedlength2d|r2d2|fixedlength3d|r3d2|linearspring2d|ljpotential2d|maximumforce2d|maxforce2d|maximumforce3d|maxforce3d|maximumgap2d|maxgap2d|maximumgap3d|maxgap3d|minimumgap2d|mingap2d|minimumgap3d|mingap3d|mpc|nodefacet|nodeline|moleculardynamics2d|moleculardynamics3d|particlecollision2d|particlecollision3d|restitutionwall|restitutionwallpenalty|rigidwall|rigidwallpenalty|rigidwallmultiplier|sleeve2d|sleeve3d|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(amplitude)\s+(constant|ramp|tabular|tabularspline|decay|linear|combine|custom|modulated|sine|cosine|nzstrongmotion|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(converger)\s+(absresidual|relresidual|absincredisp|relincredisp|absincreacc|relincreacc|absdisp|reldisp|abserror|relerror|absincreenergy|relincreenergy|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(criterion)\s+(\w+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(element)\s+(allman|b21|b21eh|b21el|b21h|b31|b31os|c3d20|c3d4|c3d8|c3d8i|c3d8r|cax3|cax4|cax8|cin3d8|cinp4|contact2d|contact3d|cp3|cp4|cp4i|cp4r|cp5|cp6|cp7|cp8|cpe8|cpe8r|cps8|csmq4|csmq5|csmq6|csmq7|csmq8|csmt3|csmt6|damper01|damper02|damper03|damper04|damper05|damper06|dc3d4|dc3d8|dcp3|dcp4|dkt3|dkt4|dkts3|eb21|eb31os|embedded2d|embedded3d|f21|f21h|f31|gcmq|gcmqg|gcmqi|gcmql|gq12|joint|mass|mass2d|mass3d|masspoint2d|masspoint3d|mindlin|mvlem|nmb21|nmb21eh|nmb21el|nmb31|patchcube|patchquad|pcpe4dc|pcpe4uc|pcpe8dc|pcpe8uc|ps|qe2|s4|sgcmqg|sgcmqi|sgcmql|sgcms|singlesection2d|singlesection3d|sphericalparticle2d|sphericalparticle3d|spring01|spring02|t2d2|t2d2s|t3d2|t3d2s|tie|translationconnector2d|translationconnector3d|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(integrator)\s+(newmark|rayleighnewmark|leenewmark|leenewmarkiterative|leelementalnewmark|leenewmarkfulltrial|leenewmarkfullcurrent|leenewmarkfull|leenewmarkfullInitial|wilsonpenziennewmark|nonviscousnewmark|uddnewmark|udanewmark|generalizedalpha|generalisedalpha|gssssu0|gssssv0|gssssoptimal|oalts|bathetwostep|tchamwa|batheexplicit|icl|gsse|wat2|generalizedalphaexplicit|generalisedalphaexplicit|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(material)\s+(afc|afc01|afc02|afcs|afc03|afcn|afco1d|armstrongfrederick|armstrongfrederick1d|asymmelastic1d|axisymmetric|axisymmetricelastic|balloon|balloon1d|bilinear1d|bilinearcc|bilineardp|bilinearelastic1d|bilinearhoffman|bilinearj2|bilinearmises1d|bilinearoo|bilinearperic|bilinearpo|bilineartsaiwu|bilinearviscosity|blatzko|boucwen|bwbn|cdp|cdpm2|cdpm2iso|cdpm2aniso|cdpm2no|concrete21|concrete22|concretecm|concreteexp|concretek4|concretetable|concretetsai|coulombfriction|customcc|customcdp|customdp|customelastic1d|customgurson|customgurson1d|customhoffman|customj2|custommises1d|customstraindegradation|customstressdegradation|customtsaiwu|customviscosity|dafaliasmanzari|dhakal|duncanselig|elastic1d|elastic2d|elastic3d|isotropicelastic3d|elasticos|expcc|expdp|expgurson|expgurson1d|exporthotropic|expj2|expmises1d|exptsaiwu|flag01|flag02|fluid|gap01|kelvin|laminated|lineardamage|maxwell|mooneyrivlin|mpf|multilinearelastic1d|multilinearj2|multilinearmises1d|multilinearoo|multilinearpo|multisubloading1d|nle1d01|nle3d01|nonviscous01|orthotropicelastic3d|os146|os146s|paraboliccc|parallel|planestrain|planestress|planesymmetric13|planesymmetric23|polyelastic1d|polyj2|prestrain|rambergosgood|rebar2d|rebar3d|rotation2d|rotation3d|sequential|simplesand|sinh1d|sliplock|stacked|steelbrb|subloading|subloading1d|subloadingviscous1d|substepping|tablecdp|tablegurson|tanh1d|timberpd|trilinearstraindegradation|trivial|uniaxial|vafcrp|vafcrp1d|viscosity01|viscosity02|yeoh|yld0418p|yld0418piso|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(modifier)\s+(lumpedsimple|lumpedscale|rayleigh|elementallee|linearviscosity|elementalmodal|elementalnonviscous|elementalnonviscousgroup|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(orientation)\s+(B3DL|B3DC|B3DOSL|B3DOSC|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(section)\s+(\w+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(solver)\s+(newton|modifiednewton|mnewton|aicn|bfgs|lbfgs|feast|quadraticfeast|displacementcontrol|mpdc|ramm|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(step)\s+(frequency|(?:buckl(?:ing|e))|(?:optimi[sz]ation)|static|(?:(?:implicit)?dynamic|explicitdynamic)|arclength|\$\S+)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: entity.name.type
+      3: variable
+  - match: (?i)^(save)\s+(stiffness|mass|damping|model|\$\S+)(?:\s+(\S+))?$
+    captures:
+      1: entity.name.tag
+      2: support.constant
+      3: string
+  - match: (?i)^(use)\s+(integrator|solver|converger|\$\S+)\s+(\d+)$
+    captures:
+      1: entity.name.tag
+      2: support.constant
+      3: variable
+  - match: (?i)^(var|variable)\s+(\S+)\s+(\S+)$
+    captures:
+      1: entity.name.tag
+      2: variable
+      3: string
+  - match: (?i)^(analyze|analyse)\s+(.+)?$
+    captures:
+      1: entity.name.tag
+      2: string
+  - match: (?i)^(file)\s+(\$?\S+)$
+    captures:
+      1: entity.name.tag
+      2: string
+  - match: (?i)^(import)\s+(\S+)$
+    captures:
+      1: entity.name.tag
+      2: string
+  - match: (?i)^(t|terminal)\s+(\S+)$
+    captures:
+      1: entity.name.tag
+      2: string
+  - match: (?i)^(initial)\s+(material|displacement|disp|velocity|vel|acceleration|acc|angularvelocity|avel|\$\S+)\b
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)^(set)\s+(output_folder|num_threads|num_nodes|screen_output|verbose_output|color_model|constraint_multiplier|load_multiplier|linear_system|fixed_step_size|symm_mat|band_mat|sparse_mat|iterative_refinement|system_solver|sub_system_solver|precision|tolerance|fgmres_tolerance|ini_step_size|min_step_size|max_step_size|max_iteration|eigen_number|\$\S+)\b
+    captures:
+      1: entity.name.tag
+      2: support.constant
+  - match: (?i)^(domain)\s+(\d+)$
+    captures:
+      1: entity.name.tag
+      2: variable
+  - match: (?i)^(node)\s+(\d+)\b
+    captures:
+      1: entity.name.tag
+      2: variable
+  - match: (?i)^exit|quit|overview|qrcode|command|example|precheck|fullname|benchmark|clear|reset|summary|license|version$
+    scope: entity.name.tag
+  variables:
+  - match: (?i)\b[-+]?[0-9]*\.?[0-9]+([edf][-+]?[0-9]+)?\b
+    scope: constant.numeric
+  - match: (?i)\btrue|false\b
+    scope: string

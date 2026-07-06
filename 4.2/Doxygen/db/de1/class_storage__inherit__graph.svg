@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 147;
+var viewHeight = 604;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Storage&lt; T &gt;</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="A candidate Storage class that stores FEM objects." id="a_Node000001">
+<path fill="#999" stroke="transparent" d="M123-484H16V0h107z"/>
+<text x="29" y="-471.2" font-family="Consolas" font-size="11">Storage&lt; T &gt;</text>
+<text x="66.5" y="-455.2" font-family="Consolas" font-size="11"> </text>
+<text x="20.5" y="-439.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-439.2" font-family="Consolas" font-size="11">Storage()</text>
+<text x="20.5" y="-423.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-423.2" font-family="Consolas" font-size="11">Storage()</text>
+<text x="20.5" y="-407.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-407.2" font-family="Consolas" font-size="11">Storage()</text>
+<text x="20.5" y="-391.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-391.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="20.5" y="-375.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-375.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="20.5" y="-359.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-359.2" font-family="Consolas" font-size="11">~Storage()</text>
+<text x="20.5" y="-343.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-343.2" font-family="Consolas" font-size="11">cbegin()</text>
+<text x="20.5" y="-327.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-327.2" font-family="Consolas" font-size="11">cend()</text>
+<text x="20.5" y="-311.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-311.2" font-family="Consolas" font-size="11">begin()</text>
+<text x="20.5" y="-295.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-295.2" font-family="Consolas" font-size="11">end()</text>
+<text x="20.5" y="-279.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-279.2" font-family="Consolas" font-size="11">insert()</text>
+<text x="20.5" y="-263.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-263.2" font-family="Consolas" font-size="11">operator[]()</text>
+<text x="20.5" y="-247.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-247.2" font-family="Consolas" font-size="11">at()</text>
+<text x="20.5" y="-231.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-231.2" font-family="Consolas" font-size="11">get()</text>
+<text x="20.5" y="-215.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-215.2" font-family="Consolas" font-size="11">find()</text>
+<text x="20.5" y="-199.2" font-family="Consolas" font-size="11">+</text>
+<text x="31.5" y="-199.2" font-family="Consolas" font-size="11">erase()</text>
+<text x="31.5" y="-183.2" font-family="Consolas" font-size="11">and 7 more...</text>
+<text x="20.5" y="-167.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-167.2" font-family="Consolas" font-size="11">cbegin()</text>
+<text x="20.5" y="-151.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-151.2" font-family="Consolas" font-size="11">cend()</text>
+<text x="20.5" y="-135.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-135.2" font-family="Consolas" font-size="11">begin()</text>
+<text x="20.5" y="-119.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-119.2" font-family="Consolas" font-size="11">end()</text>
+<text x="20.5" y="-103.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-103.2" font-family="Consolas" font-size="11">insert()</text>
+<text x="20.5" y="-87.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-87.2" font-family="Consolas" font-size="11">operator[]()</text>
+<text x="20.5" y="-71.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-71.2" font-family="Consolas" font-size="11">at()</text>
+<text x="20.5" y="-55.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-55.2" font-family="Consolas" font-size="11">get()</text>
+<text x="20.5" y="-39.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-39.2" font-family="Consolas" font-size="11">find()</text>
+<text x="20.5" y="-23.2" font-family="Consolas" font-size="11">*</text>
+<text x="31.5" y="-23.2" font-family="Consolas" font-size="11">erase()</text>
+<text x="31.5" y="-7.2" font-family="Consolas" font-size="11">and 7 more...</text>
+<path fill="#666" stroke="#666" d="M16.5-466h107z"/>
+<path fill="#666" stroke="#666" d="M16.5-450h107z"/>
+<path fill="none" stroke="#666" d="M16 0v-484h107V0z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a id="a_Node000002">
+<path fill="#fff" stroke="transparent" d="M139-596H0v76h139z"/>
+<text x="5.5" y="-583.2" font-family="Consolas" font-size="11">std::enable_shared</text>
+<text x="5.5" y="-571.2" font-family="Consolas" font-size="11">_from_this&lt; Storage</text>
+<text x="46" y="-559.2" font-family="Consolas" font-size="11">&lt; T &gt; &gt;</text>
+<text x="66.5" y="-543.2" font-family="Consolas" font-size="11"> </text>
+<text x="66.5" y="-527.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M.5-554h139z"/>
+<path fill="#666" stroke="#666" d="M.5-538h139z"/>
+<path fill="none" stroke="#666" d="M0-520v-76h139v76z"/>
+</a></g><g id="edge1_Node000001_Node000002" style="opacity:.7"><title>Node2-&gt;Node1</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M69.5-509.6v25.31"/>
+<path fill="none" stroke="#63b8ff" d="m66-509.75 3.5-10 3.5 10z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_storage__inherit__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

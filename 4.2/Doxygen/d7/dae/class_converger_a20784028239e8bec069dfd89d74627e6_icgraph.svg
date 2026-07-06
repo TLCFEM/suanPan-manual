@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 415;
+var viewHeight = 470;
+var sectionId = &apos;dynsection-8&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Converger::get_tolerance</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="method to return tolerance." id="a_Node000001">
+<path fill="#999" stroke="#666" d="M407-241H228v20h179z"/>
+<text x="317.5" y="-228.2" font-family="Consolas" font-size="11" text-anchor="middle">Converger::get_tolerance</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../db/d5a/class_abs_disp.html#a9f0e144a8072cee24388b8e741fb7f5c" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M175-462H17v20h158z"/>
+<text x="96" y="-449.2" font-family="Consolas" font-size="11" text-anchor="middle">AbsDisp::is_converged</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M310.21-251.21C296.22-292.55 258.43-386.78 192-433c-5.11-3.55-10.72-6.48-16.59-8.88"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m313.61-252.05-.22 10.59-6.43-8.42z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d8/dab/class_abs_error.html#a06fbf8110bb88ee4793993279e7bb010" xlink:title="Method to return conv_flag." id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M178.5-424h-165v20h165z"/>
+<text x="96" y="-411.2" font-family="Consolas" font-size="11" text-anchor="middle">AbsError::is_converged</text>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M307.72-250.27C290.75-285.21 249.91-358.74 192-395c-5.7-3.57-11.94-6.49-18.41-8.87"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m310.94-251.66 1.11 10.54-7.44-7.55z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../dc/d4d/class_abs_incre_acc.html#ae83df842ca4692e3ca67cde8618b36fd" xlink:title="Method to return conv_flag." id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M188.5-386H3.5v20h185z"/>
+<text x="96" y="-373.2" font-family="Consolas" font-size="11" text-anchor="middle">AbsIncreAcc::is_converged</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M303.78-249.66C283.59-277.74 241.37-330.39 192-357c-6.66-3.59-13.92-6.51-21.35-8.87"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m306.88-251.35 2.89 10.19-8.62-6.16z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d4/d8d/class_abs_incre_disp.html#a9b6ded4f12f8d7a244a42aa47c8215bb" xlink:title="Method to return conv_flag." id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M192-348H0v20h192z"/>
+<text x="96" y="-335.2" font-family="Consolas" font-size="11" text-anchor="middle">AbsIncreDisp::is_converged</text>
+</a></g><g id="edge4_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge4_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M297.83-248.06C274.73-268.2 233.36-301.2 192-319c-8.42-3.62-17.56-6.56-26.73-8.95"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m300.32-250.53 5.16 9.26-9.81-4.02z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d5/d86/class_abs_incre_energy.html#ad51dd0eb393597970ef9d26a0180ece7" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M165-310H27v32h138z"/>
+<text x="35" y="-297.2" font-family="Consolas" font-size="11">AbsIncreEnergy::is</text>
+<text x="96" y="-285.2" font-family="Consolas" font-size="11" text-anchor="middle">_converged</text>
+</a></g><g id="edge5_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge5_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M275.3-244.02c-24.19-7.53-55.4-17.06-83.3-24.98-10.5-2.98-21.69-6.04-32.56-8.94"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m276.37-247.35 8.5 6.33-10.58.35z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../de/dce/class_abs_residual.html#a28820563b7801a0289a2bad2f2ad39d4" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M188.5-260H3.5v20h185z"/>
+<text x="96" y="-247.2" font-family="Consolas" font-size="11" text-anchor="middle">AbsResidual::is_converged</text>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M217.85-239.54c-9.66-.84-19.43-1.68-29.01-2.51"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m218.19-243.02 9.66 4.35-10.26 2.62z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../dc/dee/class_rel_disp.html#a5b4c19edc8f542332f43d4c285fc1b38" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M175-222H17v20h158z"/>
+<text x="96" y="-209.2" font-family="Consolas" font-size="11" text-anchor="middle">RelDisp::is_converged</text>
+</a></g><g id="edge7_Node000001_Node000008" class="edge"><title>Node1-&gt;Node8</title><a id="a_edge7_Node000001_Node000008">
+<path fill="none" stroke="#63b8ff" d="M217.53-222.43c-14.25 1.23-28.74 2.48-42.51 3.68"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m217.59-225.95 10.26 2.62-9.66 4.35z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../dd/d17/class_rel_error.html#a86e8267005c5d58497a9ada573fb7788" xlink:title="Method to return conv_flag." id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M178.5-184h-165v20h165z"/>
+<text x="96" y="-171.2" font-family="Consolas" font-size="11" text-anchor="middle">RelError::is_converged</text>
+</a></g><g id="edge8_Node000001_Node000009" class="edge"><title>Node1-&gt;Node9</title><a id="a_edge8_Node000001_Node000009">
+<path fill="none" stroke="#63b8ff" d="M276.95-217.83c-24.34 7.82-56.25 17.6-84.95 24.83-12.88 3.25-26.86 6.3-40.04 8.97"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m275.95-221.19 10.59.24-8.43 6.42z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../d8/d3b/class_rel_incre_acc.html#a4459aa55412a629bea1caa408282132e" id="a_Node000010" target="_top">
+<path fill="#fff" stroke="#666" d="M188.5-146H3.5v20h185z"/>
+<text x="96" y="-133.2" font-family="Consolas" font-size="11" text-anchor="middle">RelIncreAcc::is_converged</text>
+</a></g><g id="edge9_Node000001_Node000010" class="edge"><title>Node1-&gt;Node10</title><a id="a_edge9_Node000001_Node000010">
+<path fill="none" stroke="#63b8ff" d="M295.21-214.76C271.35-197.37 230.9-170.21 192-155c-9.24 3.61-19.27 6.57-29.23 8.98"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m293.39-217.77 10.11-3.14-5.95 8.77z"/>
+</a></g><g id="Node000011" class="node"><title>Node11</title><a xlink:href="../../d2/d85/class_rel_incre_disp.html#a7d16a8431291cc634a83de9bd5e5d375" id="a_Node000011" target="_top">
+<path fill="#fff" stroke="#666" d="M192-108H0v20h192z"/>
+<text x="96" y="-95.2" font-family="Consolas" font-size="11" text-anchor="middle">RelIncreDisp::is_converged</text>
+</a></g><g id="edge10_Node000001_Node000011" class="edge"><title>Node1-&gt;Node11</title><a id="a_edge10_Node000001_Node000011">
+<path fill="none" stroke="#63b8ff" d="M302.43-213c-21.09 25.63-63.46 72.18-110.43 96-7.2 3.65-15.04 6.6-23.03 8.99"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m299.74-215.24 9-5.59-3.55 9.98z"/>
+</a></g><g id="Node000012" class="node"><title>Node12</title><a xlink:href="../../dd/dec/class_rel_incre_energy.html#a2a2f0cd8fcffbceb6fa15cf290f24bf9" id="a_Node000012" target="_top">
+<path fill="#fff" stroke="#666" d="M165-70H27v32h138z"/>
+<text x="35" y="-57.2" font-family="Consolas" font-size="11">RelIncreEnergy::is</text>
+<text x="96" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">_converged</text>
+</a></g><g id="edge11_Node000001_Node000012" class="edge"><title>Node1-&gt;Node12</title><a id="a_edge11_Node000001_Node000012">
+<path fill="none" stroke="#63b8ff" d="M306.12-211.65C287.63-179.1 245.84-113.58 192-79c-8.18 5.25-17.43 9.41-26.86 12.69"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m303.18-213.57 7.91-7.05-1.79 10.44z"/>
+</a></g><g id="Node000013" class="node"><title>Node13</title><a xlink:href="../../dc/db8/class_rel_residual.html#accf19abd0aa31b3f5d6870e7f5ec17db" id="a_Node000013" target="_top">
+<path fill="#fff" stroke="#666" d="M188.5-20H3.5V0h185z"/>
+<text x="96" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">RelResidual::is_converged</text>
+</a></g><g id="edge12_Node000001_Node000013" class="edge"><title>Node1-&gt;Node13</title><a id="a_edge12_Node000001_Node000013">
+<path fill="none" stroke="#63b8ff" d="M310.21-210.79C296.22-169.45 258.43-75.22 192-29c-5.11 3.55-10.72 6.48-16.59 8.88"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m306.96-212.12 6.43-8.42.22 10.59z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_converger_a20784028239e8bec069dfd89d74627e6_icgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

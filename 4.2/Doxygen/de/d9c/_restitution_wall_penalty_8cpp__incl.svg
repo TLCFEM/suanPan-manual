@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 1025;
+var viewHeight = 488;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Constraint/RestitutionWallPenalty.cpp</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M644.5-480h-192v32h192z"/>
+<text x="460.5" y="-467.2" font-family="Consolas" font-size="11">Constraint/RestitutionWall</text>
+<text x="548.5" y="-455.2" font-family="Consolas" font-size="11" text-anchor="middle">Penalty.cpp</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d4/d55/_restitution_wall_penalty_8h.html" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M488-412H309v20h179z"/>
+<text x="398.5" y="-399.2" font-family="Consolas" font-size="11" text-anchor="middle">RestitutionWallPenalty.h</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M510.65-447.86c-24.61 9.84-56.35 22.54-79.78 31.91"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m431.97-412.62-10.59.47 7.99-6.97z"/>
+</a></g><g id="Node000024" class="node"><title>Node24</title><a xlink:href="../../db/d65/_factory_8hpp.html" id="a_Node000024" target="_top">
+<path fill="#fff" stroke="#666" d="M597.5-188h-138v20h138z"/>
+<text x="528.5" y="-175.2" font-family="Consolas" font-size="11" text-anchor="middle">Domain/Factory.hpp</text>
+</a></g><g id="edge29_Node000001_Node000024" class="edge"><title>Node1-&gt;Node24</title><a id="a_edge29_Node000001_Node000024">
+<path fill="none" stroke="#63b8ff" d="M544.38-447.74c-5.59 22.05-14.88 64.21-14.88 100.74v58c0 31.73-.42 68.61-.72 90.58"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m532.28-198.08-3.64 9.95-3.36-10.04z"/>
+</a></g><g id="Node000027" class="node"><title>Node27</title><a xlink:href="../../dc/d50/_integrator_8h.html" id="a_Node000027" target="_top">
+<path fill="#fff" stroke="#666" d="M1017-356H798v20h219z"/>
+<text x="907.5" y="-343.2" font-family="Consolas" font-size="11" text-anchor="middle">Solver/Integrator/Integrator.h</text>
+</a></g><g id="edge35_Node000001_Node000027" class="edge"><title>Node1-&gt;Node27</title><a id="a_edge35_Node000001_Node000027">
+<path fill="none" stroke="#63b8ff" d="M595.06-447.95c72.01 23.26 208.93 67.5 274.97 88.84"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m871.18-362.41 8.44 6.4-10.59.26z"/>
+</a></g><g id="Node000028" class="node"><title>Node28</title><a xlink:href="../../db/d88/_step_8h.html" id="a_Node000028" target="_top">
+<path fill="#fff" stroke="#666" d="M649-244h-91v20h91z"/>
+<text x="603.5" y="-231.2" font-family="Consolas" font-size="11" text-anchor="middle">Step/Step.h</text>
+</a></g><g id="edge37_Node000001_Node000028" class="edge"><title>Node1-&gt;Node28</title><a id="a_edge37_Node000001_Node000028">
+<path fill="none" stroke="#63b8ff" d="M552.19-447.69c9.73 40.32 36.02 149.33 46.71 193.6"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m602.31-254.85-1.05 10.55-5.75-8.9z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d8/dbb/_rigid_wall_penalty_8h.html" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M467.5-356h-138v20h138z"/>
+<text x="398.5" y="-343.2" font-family="Consolas" font-size="11" text-anchor="middle">RigidWallPenalty.h</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M398.5-391.59v25.02"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m402-366.3-3.5 10-3.5-10z"/>
+</a></g><g id="Node000015" class="node"><title>Node15</title><a xlink:href="../../d4/ddd/container_8h.html" id="a_Node000015" target="_top">
+<path fill="#fff" stroke="#666" d="M381-132H236v20h145z"/>
+<text x="308.5" y="-119.2" font-family="Consolas" font-size="11" text-anchor="middle">Toolbox/container.h</text>
+</a></g><g id="edge28_Node000002_Node000015" class="edge"><title>Node2-&gt;Node15</title><a id="a_edge28_Node000002_Node000015">
+<path fill="none" stroke="#63b8ff" d="M371.04-391.93C332.62-377.3 267.5-344.6 267.5-291v58c0 34.13 17.55 70.68 29.68 91.88"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m300.34-142.66 2.11 10.39-8.12-6.8z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d4/d54/_constraint_8h.html" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M447.5-300h-98v20h98z"/>
+<text x="398.5" y="-287.2" font-family="Consolas" font-size="11" text-anchor="middle">Constraint.h</text>
+</a></g><g id="edge3_Node000003_Node000004" class="edge"><title>Node3-&gt;Node4</title><a id="a_edge3_Node000003_Node000004">
+<path fill="none" stroke="#63b8ff" d="M398.5-335.59v25.02"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m402-310.3-3.5 10-3.5-10z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d1/d78/_conditional_modifier_8h.html" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M501.5-244h-206v20h206z"/>
+<text x="398.5" y="-231.2" font-family="Consolas" font-size="11" text-anchor="middle">Domain/ConditionalModifier.h</text>
+</a></g><g id="edge4_Node000004_Node000005" class="edge"><title>Node4-&gt;Node5</title><a id="a_edge4_Node000004_Node000005">
+<path fill="none" stroke="#63b8ff" d="M398.5-279.59v25.02"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m402-254.3-3.5 10-3.5-10z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../dc/df2/_domain_base_8h.html" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M441-188H296v20h145z"/>
+<text x="368.5" y="-175.2" font-family="Consolas" font-size="11" text-anchor="middle">Domain/DomainBase.h</text>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node5-&gt;Node6</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M393.27-223.59c-4.04 7.27-9.76 17.57-14.69 26.44"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m381.58-195.34-7.91 7.04 1.79-10.44z"/>
+</a></g><g id="Node000017" class="node"><title>Node17</title><a id="a_Node000017">
+<path fill="#e0e0e0" stroke="#999" d="M193-76h-37v20h37z"/>
+<text x="174.5" y="-63.2" font-family="Consolas" font-size="11" text-anchor="middle">set</text>
+</a></g><g id="edge27_Node000005_Node000017" class="edge"><title>Node5-&gt;Node17</title><a id="a_edge27_Node000005_Node000017">
+<path fill="none" stroke="#63b8ff" d="M367.57-224c-23.35 7.59-55.61 19.81-81.07 36-43.88 27.91-81.89 77.15-100.26 103.39"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m188.93-82.34-8.54 6.27 2.76-10.23z"/>
+</a></g><g id="Node000021" class="node"><title>Node21</title><a xlink:href="../../d1/d02/_node_8h.html" id="a_Node000021" target="_top">
+<path fill="#fff" stroke="#666" d="M719.5-188h-104v20h104z"/>
+<text x="667.5" y="-175.2" font-family="Consolas" font-size="11" text-anchor="middle">Domain/Node.h</text>
+</a></g><g id="edge21_Node000005_Node000021" class="edge"><title>Node5-&gt;Node21</title><a id="a_edge21_Node000005_Node000021">
+<path fill="none" stroke="#63b8ff" d="M443.52-223.96c46.46 9.32 118.98 23.88 168.84 33.89"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m613.21-193.47 9.12 5.4-10.49 1.47z"/>
+</a></g><g id="Node000022" class="node"><title>Node22</title><a xlink:href="../../d1/ded/_amplitude_8h.html" id="a_Node000022" target="_top">
+<path fill="#fff" stroke="#666" d="M929.5-188h-192v20h192z"/>
+<text x="833.5" y="-175.2" font-family="Consolas" font-size="11" text-anchor="middle">Load/Amplitude/Amplitude.h</text>
+</a></g><g id="edge23_Node000005_Node000022" class="edge"><title>Node5-&gt;Node22</title><a id="a_edge23_Node000005_Node000022">
+<path fill="none" stroke="#63b8ff" d="M471.31-223.96c77.12 9.57 198.66 24.66 279.38 34.68"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m751.32-192.73 9.5 4.71-10.36 2.24z"/>
+</a></g><g id="Node000023" class="node"><title>Node23</title><a xlink:href="../../d4/da0/_resource_holder_8h.html" id="a_Node000023" target="_top">
+<path fill="#fff" stroke="#666" d="M179-188H0v20h179z"/>
+<text x="89.5" y="-175.2" font-family="Consolas" font-size="11" text-anchor="middle">Toolbox/ResourceHolder.h</text>
+</a></g><g id="edge25_Node000005_Node000023" class="edge"><title>Node5-&gt;Node23</title><a id="a_edge25_Node000005_Node000023">
+<path fill="none" stroke="#63b8ff" d="M346.78-223.96c-53.89 9.42-138.31 24.17-195.63 34.19"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m151.58-186.3-10.45-1.72 9.25-5.17z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d2/d4a/_tag_8h.html" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M926.5-132h-98v20h98z"/>
+<text x="877.5" y="-119.2" font-family="Consolas" font-size="11" text-anchor="middle">Domain/Tag.h</text>
+</a></g><g id="edge6_Node000006_Node000007" class="edge"><title>Node6-&gt;Node7</title><a id="a_edge6_Node000006_Node000007">
+<path fill="none" stroke="#63b8ff" d="M441.37-168.96c3.09.33 6.14.65 9.13.96 160.27 16.63 203.27 15.65 367.79 36.04"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m818.78-135.42 9.49 4.71-10.35 2.23z"/>
+</a></g><g id="edge14_Node000006_Node000015" class="edge"><title>Node6-&gt;Node15</title><a id="a_edge14_Node000006_Node000015">
+<path fill="none" stroke="#63b8ff" d="M358.32-167.84a66328 66328 0 0 1-32.36 29.12"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m328.3-136.11-9.77 4.08 5.09-9.29z"/>
+</a></g><g id="Node000020" class="node"><title>Node20</title><a id="a_Node000020">
+<path fill="#e0e0e0" stroke="#999" d="M456-132h-57v20h57z"/>
+<text x="427.5" y="-119.2" font-family="Consolas" font-size="11" text-anchor="middle">future</text>
+</a></g><g id="edge20_Node000006_Node000020" class="edge"><title>Node6-&gt;Node20</title><a id="a_edge20_Node000006_Node000020">
+<path fill="none" stroke="#63b8ff" d="M378.51-167.84 410.02-139"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m412.63-141.36 5.01 9.33-9.74-4.16z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d8/d8f/suan_pan_8h.html" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M589-76h-77v20h77z"/>
+<text x="550.5" y="-63.2" font-family="Consolas" font-size="11" text-anchor="middle">suanPan.h</text>
+</a></g><g id="edge7_Node000007_Node000008" class="edge"><title>Node7-&gt;Node8</title><a id="a_edge7_Node000007_Node000008">
+<path fill="none" stroke="#63b8ff" d="M828.19-112.86c-61.86 10.22-167.27 27.63-228.89 37.8"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m599.87-71.61-10.44-1.82 9.3-5.08z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a id="a_Node000009">
+<path fill="#e0e0e0" stroke="#999" d="M477-20h-71V0h71z"/>
+<text x="441.5" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">iostream</text>
+</a></g><g id="edge8_Node000008_Node000009" class="edge"><title>Node8-&gt;Node9</title><a id="a_edge8_Node000008_Node000009">
+<path fill="none" stroke="#63b8ff" d="M532.01-55.84c-17.33 8.59-43.45 21.53-63.18 31.3"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m470.23-21.33-10.51 1.3 7.4-7.57z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a id="a_Node000010">
+<path fill="#e0e0e0" stroke="#999" d="M606-20H495V0h111z"/>
+<text x="550.5" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">armadillo/arma</text>
+</a></g><g id="edge9_Node000008_Node000010" class="edge"><title>Node8-&gt;Node10</title><a id="a_edge9_Node000008_Node000010">
+<path fill="none" stroke="#63b8ff" d="M550.5-55.59v25.02"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m554-30.3-3.5 10-3.5-10z"/>
+</a></g><g id="Node000011" class="node"><title>Node11</title><a id="a_Node000011">
+<path fill="#e0e0e0" stroke="#999" d="M708.5-20h-84V0h84z"/>
+<text x="666.5" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">filesystem</text>
+</a></g><g id="edge10_Node000008_Node000011" class="edge"><title>Node8-&gt;Node11</title><a id="a_edge10_Node000008_Node000011">
+<path fill="none" stroke="#63b8ff" d="M569.92-55.96c18.56 8.64 46.79 21.78 67.94 31.63"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m639.43-27.46 7.59 7.39-10.54-1.05z"/>
+</a></g><g id="Node000012" class="node"><title>Node12</title><a id="a_Node000012">
+<path fill="#e0e0e0" stroke="#999" d="M818-20h-91V0h91z"/>
+<text x="772.5" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">fmt/color.h</text>
+</a></g><g id="edge11_Node000008_Node000012" class="edge"><title>Node8-&gt;Node12</title><a id="a_edge11_Node000008_Node000012">
+<path fill="none" stroke="#63b8ff" d="M587.66-55.96c37.86 9.21 96.69 23.52 137.78 33.51"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m726.33-25.83 8.89 5.76-10.54 1.04z"/>
+</a></g><g id="Node000013" class="node"><title>Node13</title><a id="a_Node000013">
+<path fill="#e0e0e0" stroke="#999" d="M387.5-20h-50V0h50z"/>
+<text x="362.5" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">mutex</text>
+</a></g><g id="edge12_Node000008_Node000013" class="edge"><title>Node8-&gt;Node13</title><a id="a_edge12_Node000008_Node000013">
+<path fill="none" stroke="#63b8ff" d="M519.03-55.96c-33.58 9.64-86.65 24.89-121.53 34.91"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m398.31-17.65-10.57-.6 8.64-6.12z"/>
+</a></g><g id="Node000014" class="node"><title>Node14</title><a id="a_Node000014">
+<path fill="#e0e0e0" stroke="#999" d="M238-20h-57V0h57z"/>
+<text x="209.5" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">memory</text>
+</a></g><g id="edge13_Node000008_Node000014" class="edge"><title>Node8-&gt;Node14</title><a id="a_edge13_Node000008_Node000014">
+<path fill="none" stroke="#63b8ff" d="M511.75-57.62c-3.13.56-6.24 1.11-9.25 1.62-90.79 15.48-197.84 31.31-254.04 39.43"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m248.64-13.06-10.39-2.03 9.4-4.9z"/>
+</a></g><g id="edge15_Node000015_Node000008" class="edge"><title>Node15-&gt;Node8</title><a id="a_edge15_Node000015_Node000008">
+<path fill="none" stroke="#63b8ff" d="M349.01-111.96c42.15 9.41 108.16 24.14 153.05 34.15"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m502.87-81.21 8.99 5.59-10.52 1.24z"/>
+</a></g><g id="Node000016" class="node"><title>Node16</title><a id="a_Node000016">
+<path fill="#e0e0e0" stroke="#999" d="M371-76h-37v20h37z"/>
+<text x="352.5" y="-63.2" font-family="Consolas" font-size="11" text-anchor="middle">map</text>
+</a></g><g id="edge16_Node000015_Node000016" class="edge"><title>Node15-&gt;Node16</title><a id="a_edge16_Node000015_Node000016">
+<path fill="none" stroke="#63b8ff" d="M316.16-111.59c6.12 7.51 14.87 18.24 22.24 27.29"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m341.32-86.26 3.6 9.96-9.03-5.54z"/>
+</a></g><g id="edge17_Node000015_Node000017" class="edge"><title>Node15-&gt;Node17</title><a id="a_edge17_Node000015_Node000017">
+<path fill="none" stroke="#63b8ff" d="M286.07-111.96c-22.92 9.23-58.57 23.6-83.38 33.6"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m203.69-74.99-10.58.49 7.97-6.98z"/>
+</a></g><g id="Node000018" class="node"><title>Node18</title><a id="a_Node000018">
+<path fill="#e0e0e0" stroke="#999" d="M493.5-76h-104v20h104z"/>
+<text x="441.5" y="-63.2" font-family="Consolas" font-size="11" text-anchor="middle">unordered_map</text>
+</a></g><g id="edge18_Node000015_Node000018" class="edge"><title>Node15-&gt;Node18</title><a id="a_edge18_Node000015_Node000018">
+<path fill="none" stroke="#63b8ff" d="M330.76-111.96c21.58 8.76 54.53 22.14 78.88 32.03"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m411.22-83.07 7.95 7-10.59-.52z"/>
+</a></g><g id="Node000019" class="node"><title>Node19</title><a id="a_Node000019">
+<path fill="#e0e0e0" stroke="#999" d="M315.5-76h-104v20h104z"/>
+<text x="263.5" y="-63.2" font-family="Consolas" font-size="11" text-anchor="middle">unordered_set</text>
+</a></g><g id="edge19_Node000015_Node000019" class="edge"><title>Node15-&gt;Node19</title><a id="a_edge19_Node000015_Node000019">
+<path fill="none" stroke="#63b8ff" d="M300.66-111.59c-6.32 7.58-15.38 18.46-22.97 27.57"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m280.34-81.74-9.09 5.44 3.71-9.92z"/>
+</a></g><g id="edge22_Node000021_Node000007" class="edge"><title>Node21-&gt;Node7</title><a id="a_edge22_Node000021_Node000007">
+<path fill="none" stroke="#63b8ff" d="M702.65-167.96c35.58 9.15 90.76 23.34 129.59 33.32"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m833.42-137.95 8.82 5.88-10.56.9z"/>
+</a></g><g id="edge24_Node000022_Node000007" class="edge"><title>Node22-&gt;Node7</title><a id="a_edge24_Node000022_Node000007">
+<path fill="none" stroke="#63b8ff" d="M841.16-167.59c6.12 7.51 14.87 18.24 22.24 27.29"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m866.32-142.26 3.6 9.96-9.03-5.54z"/>
+</a></g><g id="edge26_Node000023_Node000014" class="edge"><title>Node23-&gt;Node14</title><a id="a_edge26_Node000023_Node000014">
+<path fill="none" stroke="#63b8ff" d="M92.03-167.93c6.3 21.4 24.42 75.92 54.47 111.93 10.26 12.29 24.6 22.88 37.02 30.7"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m185.37-28.27 6.76 8.16-10.37-2.16z"/>
+</a></g><g id="edge33_Node000024_Node000015" class="edge"><title>Node24-&gt;Node15</title><a id="a_edge33_Node000024_Node000015">
+<path fill="none" stroke="#63b8ff" d="M491.68-167.96c-37.44 9.19-95.58 23.46-136.29 33.45"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m355.99-131.05-10.55-1.02 8.88-5.78z"/>
+</a></g><g id="edge34_Node000024_Node000020" class="edge"><title>Node24-&gt;Node20</title><a id="a_edge34_Node000024_Node000020">
+<path fill="none" stroke="#63b8ff" d="M511.37-167.84c-15.91 8.51-39.83 21.29-58.05 31.04"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m454.85-133.65-10.47 1.62 7.17-7.8z"/>
+</a></g><g id="Node000025" class="node"><title>Node25</title><a id="a_Node000025">
+<path fill="#e0e0e0" stroke="#999" d="M810-132H645v20h165z"/>
+<text x="727.5" y="-119.2" font-family="Consolas" font-size="11" text-anchor="middle">Domain/MetaMat/MetaMat</text>
+</a></g><g id="edge30_Node000024_Node000025" class="edge"><title>Node24-&gt;Node25</title><a id="a_edge30_Node000024_Node000025">
+<path fill="none" stroke="#63b8ff" d="M561.81-167.96c33.58 9.11 85.56 23.22 122.33 33.19"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m685.35-138.06 8.73 5.99-10.56.76z"/>
+</a></g><g id="Node000026" class="node"><title>Node26</title><a xlink:href="../../d6/d94/_mapping_d_o_f_8h.html" id="a_Node000026" target="_top">
+<path fill="#fff" stroke="#666" d="M626.5-132h-152v20h152z"/>
+<text x="550.5" y="-119.2" font-family="Consolas" font-size="11" text-anchor="middle">Element/MappingDOF.h</text>
+</a></g><g id="edge31_Node000024_Node000026" class="edge"><title>Node24-&gt;Node26</title><a id="a_edge31_Node000024_Node000026">
+<path fill="none" stroke="#63b8ff" d="M532.33-167.59c2.9 7.12 6.99 17.14 10.55 25.87"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m546.18-142.88.53 10.58-7.01-7.94z"/>
+</a></g><g id="edge32_Node000026_Node000008" class="edge"><title>Node26-&gt;Node8</title><a id="a_edge32_Node000026_Node000008">
+<path fill="none" stroke="#63b8ff" d="M550.5-111.59v25.02"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m554-86.3-3.5 10-3.5-10z"/>
+</a></g><g id="edge36_Node000027_Node000007" class="edge"><title>Node27-&gt;Node7</title><a id="a_edge36_Node000027_Node000007">
+<path fill="none" stroke="#63b8ff" d="M914.44-335.91C934.31-308.7 987.89-226.19 954.5-168c-8.28 14.43-23.18 24.68-37.68 31.71"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m917.99-132.98-10.56.85 7.72-7.25z"/>
+</a></g><g id="edge39_Node000028_Node000007" class="edge"><title>Node28-&gt;Node7</title><a id="a_edge39_Node000028_Node000007">
+<path fill="none" stroke="#63b8ff" d="M649.21-233.92c82.75-.58 252.25 3.57 289.29 45.92 15.83 18.1-10.03 38.17-32.8 51.16"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m907.36-133.76-10.46 1.69 7.12-7.84z"/>
+</a></g><g id="edge38_Node000028_Node000024" class="edge"><title>Node28-&gt;Node24</title><a id="a_edge38_Node000028_Node000024">
+<path fill="none" stroke="#63b8ff" d="M590.78-223.84c-11.38 8.2-28.28 20.36-41.6 29.95"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m551.2-191.03-10.17 3 6.08-8.68z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="_restitution_wall_penalty_8cpp__incl_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

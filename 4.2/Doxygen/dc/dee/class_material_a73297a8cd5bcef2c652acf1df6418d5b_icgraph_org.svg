@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="361pt" height="940pt" viewBox="0 0 361 940"><g class="graph" transform="translate(4 936)"><title>Material::get_trial_stress</title><g class="node"><title>Node1</title><a>
+<path fill="#999" stroke="#666" d="M353-482H208v32h145z"/>
+<text x="216" y="-469.2" font-family="Consolas" font-size="11">Material::get_trial</text>
+<text x="280.5" y="-457.2" font-family="Consolas" font-size="11" text-anchor="middle">_stress</text>
+</a></g><g class="node"><title>Node2</title><a xlink:href="../../d2/dda/class_substepping.html#a6189972c3353d4860b2ade3f59e9f949" target="_top">
+<path fill="#fff" stroke="#666" d="M168.5-932H3.5v32h165z"/>
+<text x="11.5" y="-919.2" font-family="Consolas" font-size="11">Substepping::get_trial</text>
+<text x="86" y="-907.2" font-family="Consolas" font-size="11" text-anchor="middle">_stress</text>
+</a></g><g class="edge"><title>Node1-&gt;Node2</title><a>
+<path fill="none" stroke="#63b8ff" d="M276.27-492.25C265.52-575.64 228.37-832.42 172-891c-3.31-3.44-7.06-6.41-11.1-8.97"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m279.75-492.68-2.21 10.36-4.74-9.48z"/>
+</a></g><g class="node"><title>Node3</title><a xlink:href="../../dc/d1a/class_axisymmetric_elastic.html#ac1acf46ad2b3568d30dc5f780497b105" target="_top">
+<path fill="#fff" stroke="#666" d="M158.5-882h-145v32h145z"/>
+<text x="21.5" y="-869.2" font-family="Consolas" font-size="11">AxisymmetricElastic</text>
+<text x="86" y="-857.2" font-family="Consolas" font-size="11" text-anchor="middle">::print</text>
+</a></g><g class="edge"><title>Node1-&gt;Node3</title><a>
+<path fill="none" stroke="#63b8ff" d="M280.05-492.44C279.97-560.3 270.1-742.22 172-841c-3.9-3.93-8.39-7.25-13.22-10.05"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m283.55-492.18-3.56 9.98-3.44-10.02z"/>
+</a></g><g class="node"><title>Node4</title><a xlink:href="../../d6/d69/class_strain_degradation.html#aecb7fa16f05a1e3f42cf3c899325dd41" target="_top">
+<path fill="#fff" stroke="#666" d="M158.5-832h-145v32h145z"/>
+<text x="21.5" y="-819.2" font-family="Consolas" font-size="11">StrainDegradation::</text>
+<text x="86" y="-807.2" font-family="Consolas" font-size="11" text-anchor="middle">update_trial_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node4</title><a>
+<path fill="none" stroke="#63b8ff" d="M278.68-492.25C275.32-553.62 258.24-707.59 172-791c-3.98-3.85-8.52-7.11-13.39-9.87"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m282.18-492.39-3.03 10.16-3.96-9.83z"/>
+</a></g><g class="node"><title>Node5</title><a xlink:href="../../d3/ddf/class_stress_degradation.html#a76412a873b69aef1b102dc98c0ea4b81" target="_top">
+<path fill="#fff" stroke="#666" d="M158.5-782h-145v32h145z"/>
+<text x="21.5" y="-769.2" font-family="Consolas" font-size="11">StressDegradation::</text>
+<text x="86" y="-757.2" font-family="Consolas" font-size="11" text-anchor="middle">update_trial_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node5</title><a>
+<path fill="none" stroke="#63b8ff" d="M276.86-492.27C269.95-546.78 246.41-672.77 172-741c-3.97-3.64-8.44-6.75-13.2-9.41"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m280.36-492.4-2.3 10.34-4.65-9.52z"/>
+</a></g><g class="node"><title>Node6</title><a xlink:href="../../d4/d0e/group___material-1_d.html#gac3e266d61da3d26a62e50904eddd11d9" target="_top">
+<path fill="#fff" stroke="#666" d="M172-732H0v32h172z"/>
+<text x="8" y="-719.2" font-family="Consolas" font-size="11">Prestrain::update_trial</text>
+<text x="86" y="-707.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node6</title><a>
+<path fill="none" stroke="#63b8ff" d="M274.34-492.04C263.7-538.89 234.83-637.48 172-691c-3.98-3.39-8.4-6.32-13.08-8.86"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m277.8-492.59-1.29 10.51-5.55-9.03z"/>
+</a></g><g class="node"><title>Node7</title><a xlink:href="../../d0/d1d/class_concrete21.html#a212e30cac7b55543e62cd811c1b019a4" target="_top">
+<path fill="#fff" stroke="#666" d="M155-682H17v32h138z"/>
+<text x="25" y="-669.2" font-family="Consolas" font-size="11">Concrete21::update</text>
+<text x="86" y="-657.2" font-family="Consolas" font-size="11" text-anchor="middle">_trial_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node7</title><a>
+<path fill="none" stroke="#63b8ff" d="M270.53-491.88C255.93-530.2 223.39-601.69 172-641c-5.13-3.93-10.87-7.24-16.87-10.03"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m274-492.6.17 10.59-6.74-8.17z"/>
+</a></g><g class="node"><title>Node8</title><a xlink:href="../../d6/d6e/class_concrete22.html#af99d86fc16a5dc06c2ad2c702e6160de" target="_top">
+<path fill="#fff" stroke="#666" d="M155-632H17v32h138z"/>
+<text x="25" y="-619.2" font-family="Consolas" font-size="11">Concrete22::update</text>
+<text x="86" y="-607.2" font-family="Consolas" font-size="11" text-anchor="middle">_trial_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node8</title><a>
+<path fill="none" stroke="#63b8ff" d="M264.69-490.54C246.37-518.83 212.58-564.8 172-591c-5.3-3.42-11.08-6.39-17.05-8.96"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m267.69-492.34 2.39 10.32-8.31-6.58z"/>
+</a></g><g class="node"><title>Node9</title><a xlink:href="../../db/d80/class_axisymmetric.html#a1aa88c9e6dabbbaca059c99427059112" target="_top">
+<path fill="#fff" stroke="#666" d="M162-582H10v32h152z"/>
+<text x="18" y="-569.2" font-family="Consolas" font-size="11">Axisymmetric::update</text>
+<text x="86" y="-557.2" font-family="Consolas" font-size="11" text-anchor="middle">_trial_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node9</title><a>
+<path fill="none" stroke="#63b8ff" d="M252.42-488.62C231.55-505.08 201.39-526.89 172-541c-6.93-3.33-14.4-6.31-21.93-8.95"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m254.87-491.13 5.62 8.98-10-3.52z"/>
+</a></g><g class="node"><title>Node10</title><a xlink:href="../../d3/d16/class_plane_strain.html#a1dd49c6b1049998ae072d78a04e98f90" target="_top">
+<path fill="#fff" stroke="#666" d="M158.5-532h-145v32h145z"/>
+<text x="21.5" y="-519.2" font-family="Consolas" font-size="11">PlaneStrain::update</text>
+<text x="86" y="-507.2" font-family="Consolas" font-size="11" text-anchor="middle">_trial_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node10</title><a>
+<path fill="none" stroke="#63b8ff" d="M208.05-484.56c-19.5-5.06-40.46-10.51-59.37-15.42"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m209-487.93 8.8 5.9-10.56.88z"/>
+</a></g><g class="node"><title>Node11</title><a xlink:href="../../da/dba/class_rebar2_d.html#a8fd075016149e9be8abf87de40887646" target="_top">
+<path fill="#fff" stroke="#666" d="M165-482H7v32h158z"/>
+<text x="15" y="-469.2" font-family="Consolas" font-size="11">Rebar2D::update_trial</text>
+<text x="86" y="-457.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node11</title><a>
+<path fill="none" stroke="#63b8ff" d="M197.61-466H165.2"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m197.82-469.5 10 3.5-10 3.5z"/>
+</a></g><g class="node"><title>Node12</title><a xlink:href="../../df/dee/class_rotation2_d.html#acfca91a029f078f11819ae71c079ed73" target="_top">
+<path fill="#fff" stroke="#666" d="M155-432H17v32h138z"/>
+<text x="25" y="-419.2" font-family="Consolas" font-size="11">Rotation2D::update</text>
+<text x="86" y="-407.2" font-family="Consolas" font-size="11" text-anchor="middle">_trial_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node12</title><a>
+<path fill="none" stroke="#63b8ff" d="M208.05-447.44c-19.5 5.06-40.46 10.51-59.37 15.42"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m207.24-450.85 10.56.88-8.8 5.9z"/>
+</a></g><g class="node"><title>Node13</title><a xlink:href="../../d5/dbd/class_rebar3_d.html#a038b29c259de1b8303c0c0ef41748692" target="_top">
+<path fill="#fff" stroke="#666" d="M165-382H7v32h158z"/>
+<text x="15" y="-369.2" font-family="Consolas" font-size="11">Rebar3D::update_trial</text>
+<text x="86" y="-357.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node13</title><a>
+<path fill="none" stroke="#63b8ff" d="M252.42-443.38C231.55-426.92 201.39-405.11 172-391c-6.93 3.33-14.4 6.31-21.93 8.95"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m250.49-446.33 10-3.52-5.62 8.98z"/>
+</a></g><g class="node"><title>Node14</title><a xlink:href="../../d8/dff/class_rotation3_d.html#a2299cb720a4b2dba972d6f402f5666eb" target="_top">
+<path fill="#fff" stroke="#666" d="M155-332H17v32h138z"/>
+<text x="25" y="-319.2" font-family="Consolas" font-size="11">Rotation3D::update</text>
+<text x="86" y="-307.2" font-family="Consolas" font-size="11" text-anchor="middle">_trial_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node14</title><a>
+<path fill="none" stroke="#63b8ff" d="M264.69-441.46C246.37-413.17 212.58-367.2 172-341c-5.3 3.42-11.08 6.39-17.05 8.96"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m261.77-443.4 8.31-6.58-2.39 10.32z"/>
+</a></g><g class="node"><title>Node15</title><a xlink:href="../../d7/da6/class_stress_wrapper.html#a709aecccdad95c44801d3f53cec827a6" target="_top">
+<path fill="#fff" stroke="#666" d="M165-282H7v32h158z"/>
+<text x="15" y="-269.2" font-family="Consolas" font-size="11">StressWrapper::update</text>
+<text x="86" y="-257.2" font-family="Consolas" font-size="11" text-anchor="middle">_trial_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node15</title><a>
+<path fill="none" stroke="#63b8ff" d="M270.53-440.12C255.93-401.8 223.39-330.31 172-291c-4.4 3.36-9.24 6.28-14.31 8.8"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m267.43-441.82 6.74-8.17-.17 10.59z"/>
+</a></g><g class="node"><title>Node16</title><a xlink:href="../../d4/d9c/class_o_s146_s.html#abb39abcb884df588c8c1afd7f44d22b5" target="_top">
+<path fill="#fff" stroke="#666" d="M162-232H10v32h152z"/>
+<text x="18" y="-219.2" font-family="Consolas" font-size="11">OS146S::update_trial</text>
+<text x="86" y="-207.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node16</title><a>
+<path fill="none" stroke="#63b8ff" d="M274.34-439.96C263.7-393.11 234.83-294.52 172-241c-3.98 3.39-8.4 6.32-13.08 8.86"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m270.96-440.89 5.55-9.03 1.29 10.51z"/>
+</a></g><g class="node"><title>Node17</title><a xlink:href="../../d0/d55/class_section1_d.html#aab4fe62438f5ccadc94e28e694b1a3bf" target="_top">
+<path fill="#fff" stroke="#666" d="M172-182H0v32h172z"/>
+<text x="8" y="-169.2" font-family="Consolas" font-size="11">Section1D::update_trial</text>
+<text x="86" y="-157.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node17</title><a>
+<path fill="none" stroke="#63b8ff" d="M276.86-439.73C269.95-385.22 246.41-259.23 172-191c-3.74 3.43-7.93 6.39-12.39 8.95"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m273.41-440.42 4.65-9.52 2.3 10.34z"/>
+</a></g><g class="node"><title>Node18</title><a xlink:href="../../d9/d46/class_kelvin.html#a056e6c26bfc03f19a8bb084e6608b47a" target="_top">
+<path fill="#fff" stroke="#666" d="M162-132H10v32h152z"/>
+<text x="18" y="-119.2" font-family="Consolas" font-size="11">Kelvin::update_trial</text>
+<text x="86" y="-107.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node18</title><a>
+<path fill="none" stroke="#63b8ff" d="M278.68-439.75C275.32-378.38 258.24-224.41 172-141c-3.54 3.42-7.52 6.38-11.78 8.93"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m275.19-439.94 3.96-9.83 3.03 10.16z"/>
+</a></g><g class="node"><title>Node19</title><a xlink:href="../../db/d83/class_maxwell.html#ab7056f092e9a8da26e27cf7f7a389d1d" target="_top">
+<path fill="#fff" stroke="#666" d="M165-82H7v32h158z"/>
+<text x="15" y="-69.2" font-family="Consolas" font-size="11">Maxwell::update_trial</text>
+<text x="86" y="-57.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node19</title><a>
+<path fill="none" stroke="#63b8ff" d="M280.05-439.56C279.97-371.7 270.1-189.78 172-91c-3.36 3.38-7.15 6.31-11.22 8.85"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m276.55-439.78 3.44-10.02 3.56 9.98z"/>
+</a></g><g class="node"><title>Node20</title><a xlink:href="../../d4/d0e/group___material-1_d.html#gad2343144df89eea44cc0fd9cd0845b35" target="_top">
+<path fill="#fff" stroke="#666" d="M172-32H0V0h172z"/>
+<text x="8" y="-19.2" font-family="Consolas" font-size="11">Prestrain::update_trial</text>
+<text x="86" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g class="edge"><title>Node1-&gt;Node20</title><a>
+<path fill="none" stroke="#63b8ff" d="M276.27-439.75C265.52-356.36 228.37-99.58 172-41c-3.31 3.44-7.06 6.41-11.1 8.97"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m272.8-440.2 4.74-9.48 2.21 10.36z"/>
+</a></g></g></svg>

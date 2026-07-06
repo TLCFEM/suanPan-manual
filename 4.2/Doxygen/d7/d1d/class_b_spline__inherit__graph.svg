@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 736;
+var viewHeight = 552;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>BSpline</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="transparent" d="M363.5-544h-161v260h161z"/>
+<text x="259.5" y="-531.2" font-family="Consolas" font-size="11">BSpline</text>
+<text x="207" y="-515.2" font-family="Consolas" font-size="11">#</text>
+<text x="218" y="-515.2" font-family="Consolas" font-size="11">dimension</text>
+<text x="207" y="-499.2" font-family="Consolas" font-size="11">#</text>
+<text x="218" y="-499.2" font-family="Consolas" font-size="11">knot</text>
+<text x="207" y="-483.2" font-family="Consolas" font-size="11">#</text>
+<text x="218" y="-483.2" font-family="Consolas" font-size="11">net</text>
+<text x="207" y="-467.2" font-family="Consolas" font-size="11">#</text>
+<text x="218" y="-467.2" font-family="Consolas" font-size="11">order</text>
+<text x="207" y="-451.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-451.2" font-family="Consolas" font-size="11">BSpline()</text>
+<text x="207" y="-435.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-435.2" font-family="Consolas" font-size="11">BSpline()</text>
+<text x="207" y="-419.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-419.2" font-family="Consolas" font-size="11">BSpline()</text>
+<text x="207" y="-403.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-403.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="207" y="-387.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-387.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="207" y="-371.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-371.2" font-family="Consolas" font-size="11">~BSpline()</text>
+<text x="207" y="-355.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-355.2" font-family="Consolas" font-size="11">set_control_polygon()</text>
+<text x="207" y="-339.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-339.2" font-family="Consolas" font-size="11">set_control_polygon()</text>
+<text x="207" y="-323.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-323.2" font-family="Consolas" font-size="11">get_knot()</text>
+<text x="207" y="-307.2" font-family="Consolas" font-size="11">+</text>
+<text x="218" y="-307.2" font-family="Consolas" font-size="11">get_order()</text>
+<text x="218" y="-291.2" font-family="Consolas" font-size="11">and 13 more...</text>
+<path fill="#666" stroke="#666" d="M203-526h161z"/>
+<path fill="#666" stroke="#666" d="M203-462h13z"/>
+<path fill="#666" stroke="#666" d="M216-462h148z"/>
+<path fill="none" stroke="#666" d="M202.5-284v-260h161v260z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d5/d91/class_b_spline_curve2_d.html" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="transparent" d="M128-194H0v52h128z"/>
+<text x="16.5" y="-181.2" font-family="Consolas" font-size="11">BSplineCurve2D</text>
+<text x="60.5" y="-165.2" font-family="Consolas" font-size="11"> </text>
+<text x="4" y="-149.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-149.2" font-family="Consolas" font-size="11">BSplineCurve2D()</text>
+<path fill="#666" stroke="#666" d="M0-176h128z"/>
+<path fill="#666" stroke="#666" d="M0-160h128z"/>
+<path fill="none" stroke="#666" d="M0-142v-52h128v52z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M195.55-315.57c-39.62 44.14-83.26 92.77-108.99 121.43"/>
+<path fill="none" stroke="#63b8ff" d="m193.1-318.08 9.29-5.1-4.08 9.78z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../dc/dd2/class_b_spline_curve3_d.html" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="transparent" d="M274-194H146v52h128z"/>
+<text x="162.5" y="-181.2" font-family="Consolas" font-size="11">BSplineCurve3D</text>
+<text x="206.5" y="-165.2" font-family="Consolas" font-size="11"> </text>
+<text x="150" y="-149.2" font-family="Consolas" font-size="11">+</text>
+<text x="161" y="-149.2" font-family="Consolas" font-size="11">BSplineCurve3D()</text>
+<path fill="#666" stroke="#666" d="M146-176h128z"/>
+<path fill="#666" stroke="#666" d="M146-160h128z"/>
+<path fill="none" stroke="#666" d="M146-142v-52h128v52z"/>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M241.49-274.24c-9.24 30.86-18.04 60.27-23.97 80.11"/>
+<path fill="none" stroke="#63b8ff" d="m238.14-275.28 6.22-8.58.49 10.59z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d5/da9/class_b_spline_curve4_d.html" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="transparent" d="M420-194H292v52h128z"/>
+<text x="308.5" y="-181.2" font-family="Consolas" font-size="11">BSplineCurve4D</text>
+<text x="352.5" y="-165.2" font-family="Consolas" font-size="11"> </text>
+<text x="296" y="-149.2" font-family="Consolas" font-size="11">+</text>
+<text x="307" y="-149.2" font-family="Consolas" font-size="11">BSplineCurve4D()</text>
+<path fill="#666" stroke="#666" d="M292-176h128z"/>
+<path fill="#666" stroke="#666" d="M292-160h128z"/>
+<path fill="none" stroke="#666" d="M292-142v-52h128v52z"/>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M324.51-274.24c9.24 30.86 18.04 60.27 23.97 80.11"/>
+<path fill="none" stroke="#63b8ff" d="m321.15-273.27.49-10.59 6.22 8.58z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d2/d7d/class_n_u_r_b_s.html" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="transparent" d="M640-248H438v160h202z"/>
+<text x="522" y="-235.2" font-family="Consolas" font-size="11">NURBS</text>
+<text x="535.5" y="-219.2" font-family="Consolas" font-size="11"> </text>
+<text x="442" y="-203.2" font-family="Consolas" font-size="11">+</text>
+<text x="453" y="-203.2" font-family="Consolas" font-size="11">evaluate_point()</text>
+<text x="442" y="-187.2" font-family="Consolas" font-size="11">+</text>
+<text x="453" y="-187.2" font-family="Consolas" font-size="11">evaluate_point_derivative()</text>
+<text x="442" y="-171.2" font-family="Consolas" font-size="11">+</text>
+<text x="453" y="-171.2" font-family="Consolas" font-size="11">evaluate_shape_function()</text>
+<text x="442" y="-155.2" font-family="Consolas" font-size="11">+</text>
+<text x="453" y="-155.2" font-family="Consolas" font-size="11">evaluate_shape_function</text>
+<text x="453" y="-143.2" font-family="Consolas" font-size="11">_derivative()</text>
+<text x="442" y="-127.2" font-family="Consolas" font-size="11">+</text>
+<text x="453" y="-127.2" font-family="Consolas" font-size="11">BSpline()</text>
+<text x="442" y="-111.2" font-family="Consolas" font-size="11">+</text>
+<text x="453" y="-111.2" font-family="Consolas" font-size="11">BSpline()</text>
+<text x="442" y="-95.2" font-family="Consolas" font-size="11">+</text>
+<text x="453" y="-95.2" font-family="Consolas" font-size="11">BSpline()</text>
+<path fill="#666" stroke="#666" d="M438-230h202z"/>
+<path fill="#666" stroke="#666" d="M438-214h202z"/>
+<path fill="none" stroke="#666" d="M438-88v-160h202v160z"/>
+</a></g><g id="edge4_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge4_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M370.97-329.15c27.58 26.29 57.92 55.2 85.14 81.15"/>
+<path fill="none" stroke="#63b8ff" d="m368.47-326.7-4.82-9.43 9.65 4.36z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../dd/d21/class_n_u_r_b_s_curve2_d.html" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="transparent" d="M464-52H350V0h114z"/>
+<text x="366" y="-39.2" font-family="Consolas" font-size="11">NURBSCurve2D</text>
+<text x="403.5" y="-23.2" font-family="Consolas" font-size="11"> </text>
+<text x="354" y="-7.2" font-family="Consolas" font-size="11">+</text>
+<text x="365" y="-7.2" font-family="Consolas" font-size="11">NURBSCurve2D()</text>
+<path fill="#666" stroke="#666" d="M350-34h114z"/>
+<path fill="#666" stroke="#666" d="M350-18h114z"/>
+<path fill="none" stroke="#666" d="M350 0v-52h114V0z"/>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node5-&gt;Node6</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M457.38-80.43c-9.71 10.29-18.93 20.08-26.77 28.39"/>
+<path fill="none" stroke="#63b8ff" d="m455.11-83.12 9.4-4.88-4.31 9.68z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d5/d89/class_n_u_r_b_s_curve3_d.html" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="transparent" d="M596-52H482V0h114z"/>
+<text x="498" y="-39.2" font-family="Consolas" font-size="11">NURBSCurve3D</text>
+<text x="535.5" y="-23.2" font-family="Consolas" font-size="11"> </text>
+<text x="486" y="-7.2" font-family="Consolas" font-size="11">+</text>
+<text x="497" y="-7.2" font-family="Consolas" font-size="11">NURBSCurve3D()</text>
+<path fill="#666" stroke="#666" d="M482-34h114z"/>
+<path fill="#666" stroke="#666" d="M482-18h114z"/>
+<path fill="none" stroke="#666" d="M482 0v-52h114V0z"/>
+</a></g><g id="edge6_Node000005_Node000007" class="edge"><title>Node5-&gt;Node7</title><a id="a_edge6_Node000005_Node000007">
+<path fill="none" stroke="#63b8ff" d="M539-77.74v25.7"/>
+<path fill="none" stroke="#63b8ff" d="m535.5-78 3.5-10 3.5 10z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../da/df9/class_n_u_r_b_s_curve4_d.html" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="transparent" d="M728-52H614V0h114z"/>
+<text x="630" y="-39.2" font-family="Consolas" font-size="11">NURBSCurve4D</text>
+<text x="667.5" y="-23.2" font-family="Consolas" font-size="11"> </text>
+<text x="618" y="-7.2" font-family="Consolas" font-size="11">+</text>
+<text x="629" y="-7.2" font-family="Consolas" font-size="11">NURBSCurve4D()</text>
+<path fill="#666" stroke="#666" d="M614-34h114z"/>
+<path fill="#666" stroke="#666" d="M614-18h114z"/>
+<path fill="none" stroke="#666" d="M614 0v-52h114V0z"/>
+</a></g><g id="edge7_Node000005_Node000008" class="edge"><title>Node5-&gt;Node8</title><a id="a_edge7_Node000005_Node000008">
+<path fill="none" stroke="#63b8ff" d="M620.62-80.43c9.71 10.29 18.93 20.08 26.77 28.39"/>
+<path fill="none" stroke="#63b8ff" d="M617.8-78.32 613.49-88l9.4 4.88z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_b_spline__inherit__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

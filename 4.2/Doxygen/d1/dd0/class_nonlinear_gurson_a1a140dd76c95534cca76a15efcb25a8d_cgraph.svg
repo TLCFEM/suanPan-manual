@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 836;
+var viewHeight = 298;
+var sectionId = &apos;dynsection-5&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>NonlinearGurson::record</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M172-158H0v20h172z"/>
+<text x="86" y="-145.2" font-family="Consolas" font-size="11" text-anchor="middle">NonlinearGurson::record</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d7/d42/class_material3_d.html#a94ad9cc2c14bdc9d3d6f262fe2146bcd" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M346-158H208v20h138z"/>
+<text x="277" y="-145.2" font-family="Consolas" font-size="11" text-anchor="middle">Material3D::record</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M172.1-148h25.52"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m197.79-151.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../dd/d8c/namespacetensor.html#a82bcab854febeba7c0d66c204ff09052" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M503.5-272h-91v20h91z"/>
+<text x="458" y="-259.2" font-family="Consolas" font-size="11" text-anchor="middle">tensor::dev</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M286-158.06c16.04-19.48 54.23-62.44 96-84.94 6.42-3.46 13.5-6.31 20.65-8.65"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m401.83-255.05 10.59.52-8.6 6.19z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../dd/d8c/namespacetensor.html#a735fc96d0b8bcb54fd29f2660d97a2ca" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M510-234H406v20h104z"/>
+<text x="458" y="-221.2" font-family="Consolas" font-size="11" text-anchor="middle">tensor::mean3</text>
+</a></g><g id="edge4_Node000002_Node000004" class="edge"><title>Node2-&gt;Node4</title><a id="a_edge4_Node000002_Node000004">
+<path fill="none" stroke="#63b8ff" d="M293.6-158.2c19.83-12.56 55.44-33.84 88.4-46.8 5.74-2.26 11.84-4.32 17.98-6.18"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m399.04-214.55 10.57.61-8.65 6.12z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d2/dfc/namespacetensor_1_1strain.html#a86200e5f690b2fe54ca08f6a2a721ab0" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M534-196H382v20h152z"/>
+<text x="458" y="-183.2" font-family="Consolas" font-size="11" text-anchor="middle">tensor::strain::norm</text>
+</a></g><g id="edge7_Node000002_Node000007" class="edge"><title>Node2-&gt;Node7</title><a id="a_edge7_Node000002_Node000007">
+<path fill="none" stroke="#63b8ff" d="M325.5-158.08c22.75-4.83 50.17-10.66 74.08-15.73"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m399.08-177.28 10.51 1.34-9.06 5.51z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d7/dfe/namespacetensor_1_1stress.html#abbd4c67ff74e768ef7c8bdaf1ca28011" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M534-158H382v20h152z"/>
+<text x="458" y="-145.2" font-family="Consolas" font-size="11" text-anchor="middle">tensor::stress::norm</text>
+</a></g><g id="edge8_Node000002_Node000008" class="edge"><title>Node2-&gt;Node8</title><a id="a_edge8_Node000002_Node000008">
+<path fill="none" stroke="#63b8ff" d="M346.18-148h25.62"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m371.84-151.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../dc/dee/class_material.html#a6d28c872a661fe837896ad4cbe005cd1" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M520.5-120h-125v20h125z"/>
+<text x="458" y="-107.2" font-family="Consolas" font-size="11" text-anchor="middle">Material::record</text>
+</a></g><g id="edge9_Node000002_Node000009" class="edge"><title>Node2-&gt;Node9</title><a id="a_edge9_Node000002_Node000009">
+<path fill="none" stroke="#63b8ff" d="M325.5-137.92c22.75 4.83 50.17 10.66 74.08 15.73"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m400.53-125.57 9.06 5.51-10.51 1.34z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../d2/dfc/namespacetensor_1_1strain.html#a5a0f4eef8d0d4b7ff04bf01f44b225d1" id="a_Node000010" target="_top">
+<path fill="#fff" stroke="#666" d="M527-82H389v32h138z"/>
+<text x="397" y="-69.2" font-family="Consolas" font-size="11">tensor::strain::to</text>
+<text x="458" y="-57.2" font-family="Consolas" font-size="11" text-anchor="middle">_tensor</text>
+</a></g><g id="edge10_Node000002_Node000010" class="edge"><title>Node2-&gt;Node10</title><a id="a_edge10_Node000002_Node000010">
+<path fill="none" stroke="#63b8ff" d="M294.11-137.98c20.06 12.19 55.62 32.9 87.89 46.98 4.33 1.89 8.86 3.73 13.44 5.48"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m396.73-88.77 8.17 6.75-10.59-.18z"/>
+</a></g><g id="Node000011" class="node"><title>Node11</title><a xlink:href="../../d7/dfe/namespacetensor_1_1stress.html#ad3a054d06d715bd691992ddd9556df25" id="a_Node000011" target="_top">
+<path fill="#fff" stroke="#666" d="M527-32H389V0h138z"/>
+<text x="397" y="-19.2" font-family="Consolas" font-size="11">tensor::stress::to</text>
+<text x="458" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">_tensor</text>
+</a></g><g id="edge11_Node000002_Node000011" class="edge"><title>Node2-&gt;Node11</title><a id="a_edge11_Node000002_Node000011">
+<path fill="none" stroke="#63b8ff" d="M285.14-137.89C300.49-116.87 338.78-68.14 382-41c2.59 1.63 5.3 3.16 8.08 4.6"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m391.65-39.53 7.54 7.44-10.54-1.11z"/>
+</a></g><g id="edge3_Node000003_Node000003" class="edge"><title>Node3-&gt;Node3</title><a id="a_edge3_Node000003_Node000003">
+<path fill="none" stroke="#63b8ff" d="M432.01-272.05C420.16-280.77 428.82-290 458-290c19.15 0 29.46 3.97 30.94 9.17"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m491.95-279.04-7.96 6.99 1.86-10.43z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../dd/d8c/namespacetensor.html#a36216f68489b10fcf90423c293da6e1f" xlink:title="Only accepts 3D tensor!" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M681-234H570v20h111z"/>
+<text x="625.5" y="-221.2" font-family="Consolas" font-size="11" text-anchor="middle">tensor::trace3</text>
+</a></g><g id="edge5_Node000004_Node000005" class="edge"><title>Node4-&gt;Node5</title><a id="a_edge5_Node000004_Node000005">
+<path fill="none" stroke="#63b8ff" d="M510.01-224h49.79"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m559.93-227.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d8/d8f/suan_pan_8h.html#a1dedfe8914d601833d703818541d3b29" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M828-234H717v20h111z"/>
+<text x="772.5" y="-221.2" font-family="Consolas" font-size="11" text-anchor="middle">suanpan_assert</text>
+</a></g><g id="edge6_Node000005_Node000006" class="edge"><title>Node5-&gt;Node6</title><a id="a_edge6_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M681.32-224h25.14"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m706.6-227.5 10 3.5-10 3.5z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_nonlinear_gurson_a1a140dd76c95534cca76a15efcb25a8d_cgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

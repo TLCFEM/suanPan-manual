@@ -1,0 +1,16 @@
+\documentclass[tikz,12pt,border=2mm]{standalone}
+\usepackage{mathpazo,structmech}
+\begin{document}
+\begin{tikzpicture}
+\setstructmech{linewidth=.8pt}
+\begin{scope}[line width=1.2pt,every node/.style={inner sep=0,circle,fill=black,minimum size=1.5mm}]
+\draw(0,0)node{}--++(0,1)node{}--++(0,1)node{}--++(0,1)node{}--++(0,1)node{}--++(0,1)node{}--++(1,0)node{}--++(1,0)node{}--++(1,0)node{}--++(1,0)node{}--++(1,0)node{};
+\HingeSupport{0,0}
+\HingeSupport[90]{5,5}
+\end{scope}
+\draw[<-](1,5.2)--++(0,1)node[right=1mm]{$P$};
+\draw[|<->|](6,0)--++(0,5)node[midway,fill=white]{$5$};
+\draw[|<->|](0,-1)--++(5,0)node[midway,fill=white]{$5$};
+\node[align=left]at(3,2.5){$EI=10$};
+\end{tikzpicture}
+\end{document}

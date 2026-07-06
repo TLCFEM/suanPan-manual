@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 1037;
+var viewHeight = 66;
+var sectionId = &apos;dynsection-3&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>SparseMat::allreduce</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M152-39H0v20h152z"/>
+<text x="76" y="-26.2" font-family="Consolas" font-size="11" text-anchor="middle">SparseMat::allreduce</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d5/d13/class_sparse_mat.html#a5eb8819b784e577c91210135351393f4" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M360-58H188v20h172z"/>
+<text x="274" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">SparseMat::csc_condense</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M152.22-36.29c8.38-.81 16.99-1.65 25.58-2.48"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m177.56-42.26 10.29 2.51-9.61 4.45z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../db/d78/classtriplet__form.html#a3d09fbf63be9a00c69f45899f31a4958" xlink:title="Adjusts the size of the container by reserving space and updating the element count." id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M360-20H188V0h172z"/>
+<text x="274" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">triplet_form::hack_size</text>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M152.22-21.71c8.38.81 16.99 1.65 25.58 2.48"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m178.24-22.7 9.61 4.45-10.29 2.51z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../db/d78/classtriplet__form.html#a46f09843fa6176b36ab03275382450be" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M588-58H396v20h192z"/>
+<text x="492" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">triplet_form::csc_condense</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M360.06-48h25.57"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m385.67-51.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../db/d78/classtriplet__form.html#a4a8b05419cff1a0951ea72679985e3af" xlink:title="Sorts the COO format into the CSC (Compressed Sparse Column) order." id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M789-58H624v20h165z"/>
+<text x="706.5" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">triplet_form::csc_sort</text>
+</a></g><g id="edge3_Node000003_Node000004" class="edge"><title>Node3-&gt;Node4</title><a id="a_edge3_Node000003_Node000004">
+<path fill="none" stroke="#63b8ff" d="M588.06-48h25.53"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m613.83-51.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d6/d9c/namespacesuanpan.html#adef8082401dbf9d86ce230ad2b9b618d" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M956-58H825v20h131z"/>
+<text x="890.5" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">suanpan::for_each</text>
+</a></g><g id="edge4_Node000004_Node000005" class="edge"><title>Node4-&gt;Node5</title><a id="a_edge4_Node000004_Node000005">
+<path fill="none" stroke="#63b8ff" d="M789.18-48h25.63"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m815-51.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d4/d48/_storage_8hpp.html#a45bf90d3e5b89fc6c46f15cc58c1c60c" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M1029-58h-37v20h37z"/>
+<text x="1010.5" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">end</text>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node5-&gt;Node6</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M956.02-48h25.44"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m981.67-51.5 10 3.5-10 3.5z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_sparse_mat_a1198712bc64b65166b9282bdabe441b7_cgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

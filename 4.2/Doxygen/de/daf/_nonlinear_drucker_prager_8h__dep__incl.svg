@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 858;
+var viewHeight = 200;
+var sectionId = &apos;dynsection-1&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Material/Material3D/DruckerPrager/NonlinearDruckerPrager.h</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M539-192H313v44h226z"/>
+<text x="321" y="-179.2" font-family="Consolas" font-size="11">Material/Material3D</text>
+<text x="321" y="-167.2" font-family="Consolas" font-size="11">/DruckerPrager/NonlinearDrucker</text>
+<text x="426" y="-155.2" font-family="Consolas" font-size="11" text-anchor="middle">Prager.h</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../df/d27/_bilinear_d_p_8h.html" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M212.5-106h-199v32h199z"/>
+<text x="21.5" y="-93.2" font-family="Consolas" font-size="11">Material/Material3D</text>
+<text x="113" y="-81.2" font-family="Consolas" font-size="11" text-anchor="middle">/DruckerPrager/BilinearDP.h</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M331.93-145.56c-51.34 12.8-113.4 28.26-158.31 39.45"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m331.16-148.97 10.55.98-8.86 5.81z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../df/db0/_custom_d_p_8h.html" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M422.5-106h-185v32h185z"/>
+<text x="245.5" y="-93.2" font-family="Consolas" font-size="11">Material/Material3D</text>
+<text x="330" y="-81.2" font-family="Consolas" font-size="11" text-anchor="middle">/DruckerPrager/CustomDP.h</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M392.15-141.49c-14.6 11.86-31.12 25.28-43.46 35.3"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m390.05-144.3 9.97-3.59-5.55 9.02z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d1/d54/_exp_d_p_8h.html" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M605.5-106h-165v32h165z"/>
+<text x="448.5" y="-93.2" font-family="Consolas" font-size="11">Material/Material3D</text>
+<text x="523" y="-81.2" font-family="Consolas" font-size="11" text-anchor="middle">/DruckerPrager/ExpDP.h</text>
+</a></g><g id="edge5_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge5_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="m460.21-141.49 43.9 35.3"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m457.85-138.9-5.6-8.99 9.99 3.54z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d8/db5/_nonlinear_drucker_prager_8cpp.html" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M850-112H624v44h226z"/>
+<text x="632" y="-99.2" font-family="Consolas" font-size="11">Material/Material3D</text>
+<text x="632" y="-87.2" font-family="Consolas" font-size="11">/DruckerPrager/NonlinearDrucker</text>
+<text x="737" y="-75.2" font-family="Consolas" font-size="11" text-anchor="middle">Prager.cpp</text>
+</a></g><g id="edge7_Node000001_Node000008" class="edge"><title>Node1-&gt;Node8</title><a id="a_edge7_Node000001_Node000008">
+<path fill="none" stroke="#63b8ff" d="M519.53-145.54c42.48 10.65 92.32 23.15 133.57 33.5"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m518.6-142.17-8.85-5.82 10.55-.97z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d3/d4d/_bilinear_d_p_8cpp.html" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M212-32H0V0h212z"/>
+<text x="8" y="-19.2" font-family="Consolas" font-size="11">Material/Material3D</text>
+<text x="106" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">/DruckerPrager/BilinearDP.cpp</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M110.52-63.48c-1.02 10.44-2.16 22.17-3.04 31.23"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m107.06-64.12 4.46-9.61 2.51 10.29z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d6/de5/_custom_d_p_8cpp.html" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M429.5-32h-199V0h199z"/>
+<text x="238.5" y="-19.2" font-family="Consolas" font-size="11">Material/Material3D</text>
+<text x="330" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">/DruckerPrager/CustomDP.cpp</text>
+</a></g><g id="edge4_Node000004_Node000005" class="edge"><title>Node4-&gt;Node5</title><a id="a_edge4_Node000004_Node000005">
+<path fill="none" stroke="#63b8ff" d="M330-63.48v31.23"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m326.5-63.73 3.5-10 3.5 10z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d5/db5/_exp_d_p_8cpp.html" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M626.5-32h-179V0h179z"/>
+<text x="455.5" y="-19.2" font-family="Consolas" font-size="11">Material/Material3D</text>
+<text x="537" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">/DruckerPrager/ExpDP.cpp</text>
+</a></g><g id="edge6_Node000006_Node000007" class="edge"><title>Node6-&gt;Node7</title><a id="a_edge6_Node000006_Node000007">
+<path fill="none" stroke="#63b8ff" d="M527.9-63.81c2.04 10.52 4.35 22.4 6.14 31.56"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m524.44-63.25 1.53-10.48 5.34 9.15z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="_nonlinear_drucker_prager_8h__dep__incl_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

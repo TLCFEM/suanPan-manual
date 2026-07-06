@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 763;
+var viewHeight = 259;
+var sectionId = &apos;dynsection-4&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Degradation::compute_positive_degradation</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M755-132H597v32h158z"/>
+<text x="605" y="-119.2" font-family="Consolas" font-size="11">Degradation::compute</text>
+<text x="676" y="-107.2" font-family="Consolas" font-size="11" text-anchor="middle">_positive_degradation</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../db/d75/class_degradation.html#a73445eadeb483399a496e45d025f40ba" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M561-220H389v20h172z"/>
+<text x="475" y="-207.2" font-family="Consolas" font-size="11" text-anchor="middle">Degradation::initialize</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M647.32-138.37c-22.13-16.81-54.6-39.19-86.32-52.63-8.49-3.6-17.76-6.56-26.96-8.99"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m649.5-141.11 5.77 8.89-10.05-3.35z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d6/d69/class_strain_degradation.html#a3c9bbeb319f3e9d3ebebebf9640da16f" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M547.5-182h-145v32h145z"/>
+<text x="410.5" y="-169.2" font-family="Consolas" font-size="11">StrainDegradation::</text>
+<text x="475" y="-157.2" font-family="Consolas" font-size="11" text-anchor="middle">record</text>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M601.42-134.49c-20.24-5.08-42.02-10.55-61.65-15.49"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m602.37-137.86 8.84 5.83-10.55.96z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d3/ddf/class_stress_degradation.html#ad3aca8480678e71bde5c1456de6f6880" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M547.5-132h-145v32h145z"/>
+<text x="410.5" y="-119.2" font-family="Consolas" font-size="11">StressDegradation::</text>
+<text x="475" y="-107.2" font-family="Consolas" font-size="11" text-anchor="middle">record</text>
+</a></g><g id="edge7_Node000001_Node000008" class="edge"><title>Node1-&gt;Node8</title><a id="a_edge7_Node000001_Node000008">
+<path fill="none" stroke="#63b8ff" d="M586.56-116h-38.87"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m586.92-119.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../d6/d69/class_strain_degradation.html#aecb7fa16f05a1e3f42cf3c899325dd41" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M547.5-82h-145v32h145z"/>
+<text x="410.5" y="-69.2" font-family="Consolas" font-size="11">StrainDegradation::</text>
+<text x="475" y="-57.2" font-family="Consolas" font-size="11" text-anchor="middle">update_trial_status</text>
+</a></g><g id="edge8_Node000001_Node000009" class="edge"><title>Node1-&gt;Node9</title><a id="a_edge8_Node000001_Node000009">
+<path fill="none" stroke="#63b8ff" d="M601.42-97.51c-20.24 5.08-42.02 10.55-61.65 15.49"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m600.66-100.93 10.55.96-8.84 5.83z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../d3/ddf/class_stress_degradation.html#a76412a873b69aef1b102dc98c0ea4b81" id="a_Node000010" target="_top">
+<path fill="#fff" stroke="#666" d="M547.5-32h-145V0h145z"/>
+<text x="410.5" y="-19.2" font-family="Consolas" font-size="11">StressDegradation::</text>
+<text x="475" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">update_trial_status</text>
+</a></g><g id="edge9_Node000001_Node000010" class="edge"><title>Node1-&gt;Node10</title><a id="a_edge9_Node000001_Node000010">
+<path fill="none" stroke="#63b8ff" d="M646.65-93.91C624.39-77.45 592.07-55.4 561-41c-7.12 3.3-14.77 6.28-22.47 8.93"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m644.57-96.73 10.1-3.2-5.9 8.8z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d6/d69/class_strain_degradation.html#aea749df041c73fdafe0b8b4192c408d9" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M353-251H208v32h145z"/>
+<text x="216" y="-238.2" font-family="Consolas" font-size="11">StrainDegradation::</text>
+<text x="280.5" y="-226.2" font-family="Consolas" font-size="11" text-anchor="middle">initialize</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M386.58-221.35c-11.21-1.46-22.57-2.94-33.49-4.35"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m387.35-224.78 9.46 4.76-10.37 2.18z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d3/ddf/class_stress_degradation.html#a24d4c1a76b21c01329137cbadf3e1591" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M353-201H208v32h145z"/>
+<text x="216" y="-188.2" font-family="Consolas" font-size="11">StressDegradation::</text>
+<text x="280.5" y="-176.2" font-family="Consolas" font-size="11" text-anchor="middle">initialize</text>
+</a></g><g id="edge4_Node000002_Node000005" class="edge"><title>Node2-&gt;Node5</title><a id="a_edge4_Node000002_Node000005">
+<path fill="none" stroke="#63b8ff" d="M386.58-198.65c-11.21 1.46-22.57 2.94-33.49 4.35"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m386.44-202.16 10.37 2.18-9.46 4.76z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../da/d82/class_custom_strain_degradation.html#a46caf7e28069cd21c4a99c45193f5797" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M172-251H0v32h172z"/>
+<text x="8" y="-238.2" font-family="Consolas" font-size="11">CustomStrainDegradation</text>
+<text x="86" y="-226.2" font-family="Consolas" font-size="11" text-anchor="middle">::initialize</text>
+</a></g><g id="edge3_Node000003_Node000004" class="edge"><title>Node3-&gt;Node4</title><a id="a_edge3_Node000003_Node000004">
+<path fill="none" stroke="#63b8ff" d="M197.6-235h-25.53"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m197.82-238.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../da/d67/class_custom_stress_degradation.html#a49cc22eb60712ebe12302d1c17b31cb6" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M172-201H0v32h172z"/>
+<text x="8" y="-188.2" font-family="Consolas" font-size="11">CustomStressDegradation</text>
+<text x="86" y="-176.2" font-family="Consolas" font-size="11" text-anchor="middle">::initialize</text>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node5-&gt;Node6</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M197.6-185h-25.53"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m197.82-188.5 10 3.5-10 3.5z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_degradation_a5b8dbc19598a84b9276ce8b018a15e58_icgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>
