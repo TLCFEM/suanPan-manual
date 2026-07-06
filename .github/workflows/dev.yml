@@ -9,6 +9,8 @@ jobs:
     secrets: inherit
     uses: ./.github/workflows/delete.yml
   deploy:
+    env:
+      SP_VERSION: "4.2"
     if: ${{ !contains(github.event.head_commit.message, 'Bump') }}
     runs-on: ubuntu-latest
     steps:
@@ -18,7 +20,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           cache: pip
-          python-version: '3.12'
+          python-version: "3.12"
       - name: Node
         uses: actions/setup-node@v6
         with:
@@ -43,9 +45,9 @@ jobs:
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
-          mike deploy 4.1
+          mike deploy $SP_VERSION
           git clean -fd && git reset --hard && git checkout gh-pages
-          svgo -rf 4.1 --exclude inherit_graph.* -o 4.1
+          svgo -rf $SP_VERSION --exclude inherit_graph.* -o $SP_VERSION
           git add -A
           git commit --amend --no-edit
           git push origin gh-pages
@@ -83,7 +85,7 @@ jobs:
             ghcr.io/tlcfem/suanpan-manual:latest
     timeout-minutes: 100
 name: Latest
-'on':
+"on":
   pull_request:
     branches:
       - dev

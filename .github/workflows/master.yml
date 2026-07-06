@@ -1,5 +1,7 @@
 jobs:
   deploy:
+    env:
+      SP_VERSION: "4.2"
     runs-on: ubuntu-latest
     steps:
       - name: Clone
@@ -8,7 +10,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           cache: pip
-          python-version: '3.12'
+          python-version: "3.12"
       - name: Publish
         run: |
           sudo apt-get install doxygen graphviz pngquant
@@ -20,10 +22,10 @@ jobs:
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
-          mike deploy 4.1 -u latest
+          mike deploy $SP_VERSION -u latest
           git push origin gh-pages
 name: Stable
-'on':
+"on":
   push:
     branches:
       - master
