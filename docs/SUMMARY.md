@@ -82,6 +82,7 @@
     * [node](Collection/Define/node.md)
     * [recorder](Collection/Define/recorder.md)
     * [section](Collection/Define/section.md)
+    * [variable](Collection/Define/variable.md)
 * Configure
     * [analyze](Collection/Configure/analyze.md)
     * [converger](Collection/Configure/converger.md)
@@ -296,6 +297,7 @@
         * [LeeNewmarkIterative](Library/Integrator/Implicit/Newmark/LeeNewmarkIterative.md)
         * [Newmark](Library/Integrator/Implicit/Newmark/Newmark.md)
         * [NonviscousNewmark](Library/Integrator/Implicit/Newmark/NonviscousNewmark.md)
+        * [UDNewmark](Library/Integrator/Implicit/Newmark/UDNewmark.md)
         * [RayleighNewmark](Library/Integrator/Implicit/Newmark/RayleighNewmark.md)
         * [WilsonPenzienNewmark](Library/Integrator/Implicit/Newmark/WilsonPenzienNewmark.md)
 * Explicit

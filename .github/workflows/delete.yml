@@ -1,22 +1,23 @@
-name: Delete Deployments
-on:
-  workflow_dispatch:
 jobs:
   delete:
     runs-on: ubuntu-latest
     steps:
       - name: Delete All
-        uses: strumwolf/delete-deployment-environment@v3
+        uses: strumwolf/delete-deployment-environment@v4
         with:
-          token: ${{ secrets.ALL }}
           environment: github-pages
+          token: ${{ secrets.ALL }}
   package:
     runs-on: ubuntu-latest
     steps:
       - name: Delete Package
         uses: Chizkiyahu/delete-untagged-ghcr-action@v6
         with:
-          token: ${{ secrets.ALL }}
+          owner_type: user
           package_name: suanpan-manual
+          token: ${{ secrets.ALL }}
           untagged_only: true
-          owner_type: "user"
+name: Delete
+'on':
+  workflow_call: null
+  workflow_dispatch: null

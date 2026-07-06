@@ -1,92 +1,81 @@
 # Introduction
 
-This repository provides the user manual for [suanPan](https://tlcfem.github.io/suanPan/).
-If you are browsing the GitHub repository,
-please visit [documentation](https://tlcfem.github.io/suanPan-manual/latest/)
-for a better presentation.
+This repository contains the official user documentation for [suanPan](https://tlcfem.github.io/suanPan/).
+For an optimized reading experience, users browsing this GitHub repository are encouraged to visit the web-based [documentation](https://tlcfem.github.io/suanPan-manual/latest/).
 
-The manual is also hosted on [gitbook](https://tlcfem.gitbook.io/suanpan-manual/),
-which always contains the latest version.
-This serves as an alternative if the `mkdocs` theme is not preferred.
-Since `gitbook` does not allow conversion of jupyter notebook, some dynamically generated contents will be missing.
+As an alternative, a continuously updated version is hosted on [gitbook](https://tlcfem.gitbook.io/suanpan-manual/).
+Note, however, that certain dynamically generated components may be absent in the GitBook version due to platform limitations regarding Jupyter Notebook conversions.
 
-I'm still working on this site from time to time.
-Some information may still be missing.
-For any potential doubts, please feel free to create issues.
+This documentation remains under active development.
+Users are invited to submit issues via GitHub to report gaps in information or seek clarification.
 
-## Why to use?
+A comprehensive overview of the manual is available via the [table of contents](SUMMARY.md).
+For insights into the software's underlying software engineering paradigms and system architecture, please refer to the technical [slides](ARCH.pdf).
 
-In short, two points: **flexibility** and **performance**.
+## Motivation and Core Advantages
 
-Commercial packages are powerful, I personally have used `ABAQUS` and `ANSYS` extensively, and tried a few others.
-With the trend of SaaS, those commercial packages may charge thousands per month/year.
-It is probably too expensive.
-Unless your organization has already purchased a licence, it is not likely for individuals to get access to them.
-Developing new elements, materials, etc., is also not easy, due to various limitations, including ones from the programming language itself.
-Imaging writing a 3D material model in C/Fortran, since it involves heavy tensor algebra, the implementation must be laborious and hard to maintain.
-It is not going to be a pleasant experience (at least for me).
+The development of [suanPan](https://tlcfem.github.io/suanPan/) is driven by two critical architectural requirements: **flexibility** and **high performance**.
 
-Existing open source packages often focus on specific domains, such as heat transfer, wave propagation, etc.
-Not many provide a wide collection of elements of different types, nonlinear material models, time integration methods, etc.
-For example, `OpenSees` is mainly a uniaxial package with frame elements and uniaxial material models, its 2D/3D capability is limited.
+While commercial finite element analysis (FEA) software packages offer robust capabilities, they are often constrained by prohibitive licensing costs, limiting access for individual researchers and smaller institutions.
+Furthermore, implementing novel constitutive models or element formulations in traditional commercial environments (e.g., via C/Fortran user subroutines) is frequently hindered by legacy programming constraints and laborious tensor algebra implementations.
+Conversely, many open-source alternatives are tailored to narrow domains or lack comprehensive multi-dimensional modelling capabilities.
+For instance, packages like `OpenSEES` primarily optimize for uniaxial frame structures, offering limited support for complex 2D and 3D continuum mechanics.
 
-[suanPan](https://tlcfem.github.io/suanPan/) is striving to integrate the latest research into a universal platform.
-It aims to provide a wide collection of
+[suanPan](https://tlcfem.github.io/suanPan/) addresses these challenges by integrating cutting-edge research into a unified, high-performance platform.
+The framework provides an extensive, multi-domain library comprising:
 
-1. elements, including common 1D/2D/3D elements with modern element techniques;
-2. materials, including advanced uniaxial and 3D nonlinear material models for metals, concrete, timber, geomaterials, etc.;
-3. advanced solving techniques and modern time integration methods;
-4. and many more.
+1. **Advanced Element Formulations:** A comprehensive suite of 1D, 2D, and 3D elements incorporating modern finite element techniques;
+2. **Constitutive Models:** High-fidelity uniaxial and multiaxial nonlinear material models for metals, concrete, timber, geomaterials, etc.;
+3. **Advanced Numerical Solvers:** State-of-the-art solution routines and modern time-integration schemes;
+4. **Extended Domain Capabilities:** Additional specialized modelling features.
 
-[suanPan](https://tlcfem.github.io/suanPan/) also fully utilises the multicore architecture of today's PCs.
-From element/material state determination to global matrix assembly and handling of constraints, almost all parts of FEA are parallelised, meaning the computational capacity provided by the hardware is fully used.
-For the same analysis task, it is typically faster than other single-threaded or MPI based packages.
+To maximize computational efficiency, [suanPan](https://tlcfem.github.io/suanPan/) natively exploits modern multi-core processor architectures with ***hybrid parallelization***.
+Key pipeline operations, including element/material state determination, global matrix assembly, and constraint enforcement, are fully parallelized.
+Consequently, the framework systematically outperforms conventional single-threaded or distributed-memory MPI-based packages on modern workstation hardware.
 
-[suanPan](https://tlcfem.github.io/suanPan/) is written in **modern** CPP, with the assist of the fabulous `Armadillo` library, which offers full linear algebra support.
-For developers/researchers, it is relatively easy to implement new elements, materials, etc., and try out new ideas since the core implementation would be very expressive and highly resembles the corresponding mathematics expressions.
+Built on **modern C++** and powered by the `Armadillo` linear algebra library, [suanPan](https://tlcfem.github.io/suanPan/) offers an expressive API where core structural code closely mirrors the underlying mathematical expressions.
+This significantly lowers the barrier to entry for researchers implementing and validating novel computational mechanics theories.
 
-## Where to start?
+[suanPan](https://tlcfem.github.io/suanPan/) delivers distinct architectural and operational advantages over alternative finite element packages:
 
-It is not easy to pick up a new finite element analysis tool, but it is not impossible.
-The logic of input files resembles that of `ABAQUS`.
-If you have some experience with `ABAQUS`, it shall be easy to create a simple model by hand.
+#### Operational Efficiency & Functional Scope (User Perspective)
 
-After a simple demo presented in [Analyze](Basic/Analyze.md), you are recommended to check
-out [Syntax](Basic/Syntax.md) and [Structure](Basic/Structure.md) to gain an overall picture of what an input file
-would look like.
+* **Declarative Workflow:** Eliminates the overhead of complex scripting, streamlining model preparation and execution.
+* **Native Parallelization:** Fully parallelized execution pathways significantly accelerate computational throughput and shorten engineering design cycles.
+* **Extensive Library Ecosystem:** Provides a comprehensive suite of advanced element formulations and constitutive material models absent in conventional packages.
 
-The `Example` section includes a number of examples with various degrees of complexity, check the ones you are familiar
-with, or simple ones such as [>Linear Analysis of A Truss Roof<](Example/Structural/Statics/truss-roof.md)
-and [>Dynamic Analysis of A Portal Frame<](Example/Structural/Dynamics/dynamic-analysis-of-a-portal-frame.md), as the
-starting point.
+#### Research Agility & Extendability (Developer Perspective)
 
-The `Collection` section includes the top level commands used to develop finite element models.
+* **Modular Architecture:** Minimizes data coupling via a highly decoupled, modular design to facilitate rapid prototyping and algorithmic experimentation.
+* **Mathematical Expressiveness:** Leverages high-level abstractions that closely mirror underlying tensor and matrix algebra, simplifying the implementation of complex multiaxial models.
+* **Reduced Cognitive Load:** Employs built-in structural scaffolding to manage low-level internal routines, allowing researchers to focus exclusively on core mechanics.
 
-The `Library` section contains all specific elements, materials, etc., that are available.
+## Getting Started
 
-To develop a specific model, you may need to have this manual at hand to check the syntax of the corresponding commands.
-You can also install the VS Code [extension](https://marketplace.visualstudio.com/items?itemName=tlc.suanpan) to get syntax highlighting and auto-completion.
+The input file logic in [suanPan](https://tlcfem.github.io/suanPan/) shares syntax paradigms with `ABAQUS`, enabling users familiar with commercial software to transition efficiently.
 
-You are also strongly recommended to check the [Example](https://github.com/TLCFEM/suanPan/tree/dev/Example) folder in the source code repository.
-As those examples are used to provide coverage report, almost all commands are used in those examples.
-You shall be able to have a better understanding of the syntax by checking those examples.
+To establish a baseline understanding, users should review the initial demonstration in [Analyze](Basic/Analyze.md), followed by the foundational architectural overviews in [Syntax](Basic/Syntax.md) and [Structure](Basic/Structure.md).
 
-## Summary
+For practical applications, the `Example` section offers a tiered learning path ranging from introductory benchmarks to complex simulations.
+Recommended entry points include:
 
-Here is a complete [table of contents](SUMMARY.md).
-If you are interested in the architecture of the program, you can check the [slides](ARCH.pdf) I prepared for a talk.
+* [>Linear Analysis of A Truss Roof<](Example/Structural/Statics/truss-roof.md)
+* [>Dynamic Analysis of A Portal Frame<](Example/Structural/Dynamics/dynamic-analysis-of-a-portal-frame.md)
 
-## Contribution
+Detailed command syntaxes and programmatic entities are catalogued across the `Collection` and `Library` sections.
+To streamline workflow productivity, a dedicated VS Code [extension](https://marketplace.visualstudio.com/items?itemName=tlc.suanpan) is available, providing syntax highlighting and auto-completion capabilities.
 
-You are very welcome to contribute to the application.
-Please feel free to create feature requests or directly contact me if you wish to have a new element, material model, etc., implemented.
+Additionally, the comprehensive test suite in the repository's [Example](https://github.com/TLCFEM/suanPan/tree/dev/Example) directory provides an exhaustive reference of validated input configurations.
 
-To contribute to this manual, please create pull requests. Besides, if you find any typos, please also feel free to create issues.
+## Collaborative Contribution
 
-All third party libraries must provide a single markdown file to explain how to use the library and if possible with some theories.
+Contributions to the [suanPan](https://tlcfem.github.io/suanPan/) ecosystem are highly encouraged.
+Feature requests or inquiries regarding the implementation of specific elements or material models can be directed to the core development team.
 
-It may be convenient to build the manual locally, please check [Build](Basic/Build.md) for more details.
+Documentation improvements, including errata and clarifications, should be submitted as pull requests or tracking issues.
+Documentation contributions for third-party libraries must consist of a self-contained markdown file outlining usage guidelines and relevant theoretical foundations.
+Detailed instructions for local compilation of this manual are provided in [Build](Basic/Build.md).
 
 ## Citation
 
-If `suanPan` has offered some convenience to your research work, please consider visiting [10.5281/zenodo.1285221](https://doi.org/10.5281/zenodo.1285221) and citing any version appropriate.
+If [suanPan](https://tlcfem.github.io/suanPan/) facilitates or supports your research publications, please cite the framework via its registered DOI at [10.5281/zenodo.1285221](https://doi.org/10.5281/zenodo.1285221), selecting the version appropriate to your work.

@@ -30,7 +30,7 @@ load displacement (1) (2) (3) (4) (5...)
 # (1) int, unique tag
 # (2) int, amplitude tag, 0 to use a default `Ramp` amplitude
 # (3) double, nominal magnitude
-# (4) int, dof tag
+# (4) string, dof identifier
 # (5...) int, node tags
 
 # to apply nodal acceleration
@@ -39,7 +39,7 @@ load acceleration (1) (2) (3) (4) [5...]
 # (1) int, unique tag
 # (2) int, amplitude tag, 0 to use a default `Ramp` amplitude
 # (3) double, nominal magnitude
-# (4) int, dof tag
+# (4) string, dof identifier
 # [5...] int, node tags
 ```
 
@@ -55,7 +55,7 @@ load bodyforce (1) (2) (3) (4) (5...)
 # (1) int, unique tag
 # (2) int, amplitude tag, 0 to use a default `Ramp` amplitude
 # (3) double, nominal magnitude
-# (4) int, dof tag
+# (4) string, dof identifier
 # (5...) int, element tags
 ```
 
@@ -77,7 +77,7 @@ load groupbodyforce (1) (2) (3) (4) (5...)
 # (1) int, unique tag
 # (2) int, amplitude tag, 0 to use a default `Ramp` amplitude
 # (3) double, nominal magnitude
-# (4) int, dof tag
+# (4) string, dof identifier
 # (5...) int, group tags
 ```
 
@@ -96,7 +96,7 @@ load supportacceleration (1) (2) (3) (4) (5...)
 # (1) int, unique tag
 # (2) int, amplitude tag, 0 to use a default `Ramp` amplitude
 # (3) double, nominal magnitude
-# (4) int, dof tag
+# (4) string, dof identifier
 # (5...) int, node tags
 ```
 
@@ -142,7 +142,7 @@ load lineudl3d (1) (2) (3) (4) (5...)
 # (1) int, unique tag
 # (2) int, amplitude tag, 0 to use a default `Ramp` amplitude
 # (3) double, nominal magnitude
-# (4) int, dof tag
+# (4) string, dof identifier
 # (5...) int, node tags
 ```
 
@@ -161,7 +161,7 @@ load refload (1) (2) (3) (4) (5...)
 # (1) int, unique tag
 # (2) int, amplitude tag, has no effect in arc-length analysis, just a placeholder, can be set to 0
 # (3) double, reference magnitude
-# (4) int, dof tag
+# (4) string, dof identifier
 # (5...) int, node tags
 ```
 
@@ -176,7 +176,38 @@ load refload (1) (2) (3) (4) (5...)
 6.  The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if
     a `supportdisplacement`, `supportvelocity` and/or `supportacceleration` are used.
 
-**It must be noted that nodal displacement loads are only valid for one single step.** This means, if a displacement 
-load is defined within a step, it will be activated for that step only.
+**It must be noted that nodal displacement loads are only valid for one single step.**
+This means, if a displacement load is defined within a step, it will be activated for that step only.
 
 All other load types will stay active once they are activated.
+
+The DoF identifier may take the following.
+Accepted inputs vary with the selected element type(s) and the problem type.
+
+| identifier       | implies                                                             | of type                          |
+|------------------|---------------------------------------------------------------------|----------------------------------|
+| `PINNED`, `P`    | `DOF::U1`, `DOF::U2`, `DOF::U3`                                     | displacement                     |
+| `ENCASTRE`, `E`  | `DOF::U1`, `DOF::U2`, `DOF::U3`, `DOF::UR1`, `DOF::UR2`, `DOF::UR3` |                                  |
+| `XSYMM`, `X`     | `DOF::U1`, `DOF::UR2`, `DOF::UR3`                                   |                                  |
+| `YSYMM`, `Y`     | `DOF::UR1`, `DOF::U2`, `DOF::UR3`                                   |                                  |
+| `ZSYMM`, `Z`     | `DOF::UR1`, `DOF::UR2`, `DOF::U3`                                   |                                  |
+| `1`, `U1`        | `DOF::U1`                                                           |                                  |
+| `2`, `U2`        | `DOF::U2`                                                           |                                  |
+| `3`, `U3`        | `DOF::U3`                                                           |                                  |
+| `4`, `U4`, `UR1` | `DOF::UR1`                                                          |                                  |
+| `5`, `U5`, `UR2` | `DOF::UR2`                                                          |                                  |
+| `6`, `U6`, `UR3` | `DOF::UR3`                                                          |                                  |
+| `FU1`            | `DOF::FU1`                                                          | fluid                            |
+| `FU2`            | `DOF::FU2`                                                          |                                  |
+| `FU3`            | `DOF::FU3`                                                          |                                  |
+| `FUR1`           | `DOF::FUR1`                                                         |                                  |
+| `FUR2`           | `DOF::FUR2`                                                         |                                  |
+| `FUR3`           | `DOF::FUR3`                                                         |                                  |
+| `RADIAL`         | `DOF::RADIAL`                                                       | axisymmetric                     |
+| `AXIAL`          | `DOF::AXIAL`                                                        | axisymmetric, rod/beam like      |
+| `RS`             | `DOF::RS`                                                           | beam                             |
+| `RW`             | `DOF::RW`                                                           | 3D beam                          |
+| `DAMAGE`         | `DOF::DAMAGE`                                                       | special damage DoF               |
+| `PRESSURE`       | `DOF::PRESSURE`                                                     | special pressure DoF             |
+| `TEMPERATURE`    | `DOF::TEMPERATURE`                                                  | thermal DOF                      |
+| `WARP`           | `DOF::WARP`                                                         | special warp DoF (in some beams) |

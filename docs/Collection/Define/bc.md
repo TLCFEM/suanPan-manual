@@ -38,12 +38,36 @@ grouppenaltybc (1) (2) (3...)
 3.  The `fix2` and `multiplierbc` commands requires more operations but the final matrix is well conditioned.
 4.  The performance difference is almost negligible. Either one can be used with direct solvers. The error won't
     accumulate as there is a special mechanism to prevent it.
-5.  The DoF identifier `(2)` takes the following string input: `1`, `2`, `3`, `4`, `5`, `6`, `pinned`, `encastre`,
-    `xsymm`, `ysymm`, `zsymm` and the corresponding initials `p`, `e`, `x`, `y`, `z`. The names do not actually reflect
-    their meaning, instead, following DoFs would be restrained when string input is given.
-    1.  `pinned`: U1 U2 U3
-    2.  `encastre`: U1 U2 U3 UR1 UR2 UR3
-    3.  `xsymm`: U1 UR2 UR3
-    4.  `ysymm`: UR1 U2 UR3
-    5.  `zsymm`: UR1 UR2 U3
-6.  The nontrivial Dirichlet boundary condition is treated as displacement load.
+5.  The nontrivial Dirichlet boundary condition is treated as displacement load.
+
+The DoF identifier `(2)` may take the following.
+Accepted inputs vary with the selected element type(s) and the problem type.
+
+| identifier       | implies                                                             | of type                          |
+|------------------|---------------------------------------------------------------------|----------------------------------|
+| `PINNED`, `P`    | `DOF::U1`, `DOF::U2`, `DOF::U3`                                     | displacement                     |
+| `ENCASTRE`, `E`  | `DOF::U1`, `DOF::U2`, `DOF::U3`, `DOF::UR1`, `DOF::UR2`, `DOF::UR3` |                                  |
+| `XSYMM`, `X`     | `DOF::U1`, `DOF::UR2`, `DOF::UR3`                                   |                                  |
+| `YSYMM`, `Y`     | `DOF::UR1`, `DOF::U2`, `DOF::UR3`                                   |                                  |
+| `ZSYMM`, `Z`     | `DOF::UR1`, `DOF::UR2`, `DOF::U3`                                   |                                  |
+| `1`, `U1`        | `DOF::U1`                                                           |                                  |
+| `2`, `U2`        | `DOF::U2`                                                           |                                  |
+| `3`, `U3`        | `DOF::U3`                                                           |                                  |
+| `4`, `U4`, `UR1` | `DOF::UR1`                                                          |                                  |
+| `5`, `U5`, `UR2` | `DOF::UR2`                                                          |                                  |
+| `6`, `U6`, `UR3` | `DOF::UR3`                                                          |                                  |
+| `FU1`            | `DOF::FU1`                                                          | fluid                            |
+| `FU2`            | `DOF::FU2`                                                          |                                  |
+| `FU3`            | `DOF::FU3`                                                          |                                  |
+| `FUR1`           | `DOF::FUR1`                                                         |                                  |
+| `FUR2`           | `DOF::FUR2`                                                         |                                  |
+| `FUR3`           | `DOF::FUR3`                                                         |                                  |
+| `RADIAL`         | `DOF::RADIAL`                                                       | axisymmetric                     |
+| `AXIAL`          | `DOF::AXIAL`                                                        | axisymmetric, rod/beam like      |
+| `RS`             | `DOF::RS`                                                           | beam                             |
+| `RW`             | `DOF::RW`                                                           | 3D beam                          |
+| `DAMAGE`         | `DOF::DAMAGE`                                                       | special damage DoF               |
+| `PRESSURE`       | `DOF::PRESSURE`                                                     | special pressure DoF             |
+| `TEMPERATURE`    | `DOF::TEMPERATURE`                                                  | thermal DOF                      |
+| `WARP`           | `DOF::WARP`                                                         | special warp DoF (in some beams) |
+

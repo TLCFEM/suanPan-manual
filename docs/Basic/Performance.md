@@ -154,5 +154,42 @@ general purpose allocator like [mimalloc](https://github.com/microsoft/mimalloc)
 On Linux, it is fairly easy to replace the default memory allocator. For example,
 
 ```bash
-LD_PRELOAD=/path/to/libmimalloc.so  suanpan -f input.sp
+LD_PRELOAD=/path/to/libmimalloc.so suanpan -f input.sp
+```
+
+### Smaller Memory Footprint
+
+By default, [Armadillo](https://arma.sourceforge.net/download.html) uses 64-bit indexing and embeds small fixed-size local arrays within matrix objects to avoid frequent small heap allocations.
+As a consequence, these objects become relatively large, on the order of roughly 100 bytes each.
+
+Enabling the CMake option `SP_ENABLE_ARMA_SMALL_MEMORY=ON` removes these embedded local buffers and switches indexing to 32-bit.
+This optimization is considered safe because `arma::vec` and `arma::mat` are primarily used for nodal and elemental data, where large-index support is unnecessary.
+In practice, element objects are already large enough that cache inefficiencies dominate, so avoiding heap overhead does not materially degrade performance.
+
+With `SP_ENABLE_ARMA_SMALL_MEMORY=ON`, the size of `arma::mat` can be reduced to around 50 bytes.
+
+As a result, running the same DKTS3 example with this flag enabled reduces memory consumption by about $$25\%$$, from 3.7 GB down to 2.7 GB compared to the default configuration.
+
+This is particularly useful if the target platform has memory constraints.
+
+#### `SP_ENABLE_ARMA_SMALL_MEMORY=OFF`
+
+```bash
+/usr/bin/time ../RelWithDebInfo/bin/suanPan-nm -np -f DKTS3.supan
+```
+
+```text
+31.79user 4.44system 0:05.48elapsed 660%CPU (0avgtext+0avgdata 3880996maxresident)k
+0inputs+8outputs (0major+758234minor)pagefaults 0swaps
+```
+
+#### `SP_ENABLE_ARMA_SMALL_MEMORY=ON`
+
+```bash
+/usr/bin/time ../RelWithDebInfo/bin/suanPan-sm -np -f DKTS3.supan
+```
+
+```text
+32.53user 2.52system 0:05.27elapsed 665%CPU (0avgtext+0avgdata 2887796maxresident)k
+0inputs+16outputs (0major+468057minor)pagefaults 0swaps
 ```

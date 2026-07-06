@@ -1,21 +1,14 @@
-name: stable
-on:
-  push:
-    branches:
-      - master
-permissions:
-  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Clone
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
-          cache: "pip"
+          cache: pip
+          python-version: '3.12'
       - name: Publish
         run: |
           sudo apt-get install doxygen graphviz pngquant
@@ -27,5 +20,12 @@ jobs:
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
-          mike deploy 4.0 -u latest
+          mike deploy 4.1 -u latest
           git push origin gh-pages
+name: Stable
+'on':
+  push:
+    branches:
+      - master
+permissions:
+  contents: write

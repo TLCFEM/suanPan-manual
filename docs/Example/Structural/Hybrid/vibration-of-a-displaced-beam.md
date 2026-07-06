@@ -3,7 +3,7 @@
 We consider an analysis that combines both static and dynamic steps. A simple cantilever beam with point mass is
 displaced in the static step and released in the dynamic step.
 
-The model can be [dowloaded](vibration-of-a-displaced-beam.supan).
+The model can be [downloaded](vibration-of-a-displaced-beam.supan).
 
 ## Model Definition
 

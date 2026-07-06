@@ -1,6 +1,6 @@
 # Element Template
 
-Here we show the build-in element template. Comments explain the template a bit. A detailed guideline could be seen
+Here we show the built-in element template. Comments explain the template a bit. A detailed guideline could be seen
 elsewhere.
 
 ```cpp
@@ -101,7 +101,7 @@ ElementTemplate::ElementTemplate(const unsigned T, uvec&& NT, const unsigned MT,
  * where
  * \f{gather}{C=\begin{bmatrix}1&x_i&y_i\\1&x_j&y_j\\1&x_k&y_k\end{bmatrix}.\f}
  *
- * One can also initialize stiffness matrix and/or other build-in matrices from
+ * One can also initialize stiffness matrix and/or other built-in matrices from
  * Element class (check the definition for details) in the `initialize()` method.
  * However, this it not necessary, as the Solver will always call
  * update_status() method with a zero trial displacement to update current
@@ -123,9 +123,9 @@ void ElementTemplate::initialize(const shared_ptr<DomainBase>& D) {
  //! to FEM textbooks for theories. This will be used for the computation of
  //! the shape function.
  mat ele_coor(m_node, m_node, fill::ones);
- for(unsigned i = 0; i < m_node; ++i) {
+ for(unsignedi{0}; i < m_node; ++i) {
   auto& tmp_coor = node_ptr[i].lock()->get_coordinate();
-  for(unsigned j = 0; j < m_dof; ++j) ele_coor(i, j + 1llu) = tmp_coor(j);
+  for(unsignedj{0}; j < m_dof; ++j) ele_coor(i, j + 1u) = tmp_coor(j);
  }
 
  //! The area is half of the determinant of the above matrix.
@@ -139,7 +139,7 @@ void ElementTemplate::initialize(const shared_ptr<DomainBase>& D) {
  //! stress/strain element, the derivatives are constants which can be directly
  //! obtained from above matrix.
  strain_mat.zeros(3, m_node * m_dof);
- for(unsigned i = 0, j = 0, k = 1; i < 3; ++i, j += m_dof, k += m_dof) {
+ for(unsigned i{0}, j{0}, k{1}; i < 3; ++i, j += m_dof, k += m_dof) {
   strain_mat(2, k) = strain_mat(0, j) = inv_coor(1, i);
   strain_mat(2, j) = strain_mat(1, k) = inv_coor(2, i);
  }
@@ -165,7 +165,7 @@ void ElementTemplate::initialize(const shared_ptr<DomainBase>& D) {
 
 /**
  * @brief Now we handle the status update method. We get trial displacement via
- * build-in method and pass trial strain to the material model. Then get updated
+ * built-in method and pass trial strain to the material model. Then get updated
  * stiffness and stress back to form element stiffness and resistance.
  *
  * For a static analysis, **stiffness** and **resistance** have to be

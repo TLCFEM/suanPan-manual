@@ -352,7 +352,7 @@ suanpan -nc -f model_file.supan
 
 A batch file named as `AddAssociation.bat` is provided in the archive. It associates `*.sp` and `*.supan` files with the
 program and copies configuration files to default folder if Sublime Text is installed. If the package is installed via
-package managers, pleas manually search for and execute this file.
+package managers, please manually search for and execute this file.
 
 Admin privilege is required.
 

@@ -11,8 +11,8 @@ Plane Strain Duncan-Selig Soil Model
 ```
 material DuncanSelig (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) [11]
 # (1) int, unique material tag
-# (2) double, reference atmospheric pressure, postive, p_a
-# (3) double, reference elatic modulus, E_r
+# (2) double, reference atmospheric pressure, positive, p_a
+# (3) double, reference elastic modulus, E_r
 # (4) double, elastic modulus exponent, n
 # (5) double, reference bulk modulus, B_r
 # (6) double, bulk modulus exponent, m

@@ -21,7 +21,7 @@ as `void new_elementexample()`. To define a `ElementExample` element, one can si
 element ElementExample !... element definition goes here
 ```
 
-The program will look up build-in element library to see if `ElementExample` exists. If not, it tries to find a function
+The program will look up built-in element library to see if `ElementExample` exists. If not, it tries to find a function
 with signature `void new_elementexample()` in the currently loaded external libraries. If still not found, the program
 tries to load `ElementExample.dll`.
 
