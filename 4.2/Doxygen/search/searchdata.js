@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "123_abcdefghijklmnopqrstuvwxyz~",
   1: "abcdefghijklmnopqrstuvwy",
-  2: "acdeistu",
+  2: "aceistu",
   3: "abcdefghijklmnopqrstuvwy",
   4: "abcdefghijklmnopqrstuvwyz~",
   5: "abcdefghijklmnopqrstuvwxyz",

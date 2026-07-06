@@ -1,7 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"d0/d9a/struct_data_v_a_f_c_r_p1_d.html#ada8979b715056c3871695dce2c4b543a":[2,13,0,103,5],
-"d0/d9c/_d_c_p4_8h.html":[6,0,6,2,5,3],
 "d0/d9c/_d_c_p4_8h_source.html":[6,0,6,2,5,3],
 "d0/d9c/_rotation3_d_8cpp.html":[6,0,9,2,8,0],
 "d0/da2/_translation_connector_8cpp.html":[6,0,6,8,23],
@@ -32,7 +30,7 @@ var NAVTREEINDEX1 =
 "d0/db0/_min_displacement_8h_source.html":[6,0,1,0,15],
 "d0/db6/_slip_lock_8h.html":[6,0,9,0,3,33],
 "d0/db6/_slip_lock_8h_source.html":[6,0,9,0,3,33],
-"d0/db7/structsuanpan_1_1damping_1_1rayleigh.html":[3,0,7,0,1],
+"d0/db7/structsuanpan_1_1damping_1_1rayleigh.html":[3,0,6,0,1],
 "d0/db7/structsuanpan_1_1damping_1_1rayleigh.html":[5,0,1,0,1],
 "d0/db8/_element_8h.html":[6,0,6,14],
 "d0/db8/_element_8h_source.html":[6,0,6,14],
@@ -181,11 +179,11 @@ var NAVTREEINDEX1 =
 "d1/d02/_node_8h.html#a775d31f1abbd8dbe72826e74956b20fd":[6,0,5,13,1],
 "d1/d02/_node_8h.html#abdef483d6815bc57f84f2041ae5dcd49":[6,0,5,13,0],
 "d1/d02/_node_8h_source.html":[6,0,5,13],
-"d1/d02/namespacetransform_1_1stress.html":[3,0,9,2],
-"d1/d02/namespacetransform_1_1stress.html#a51a199d2f57b742ab33f8df86ab7a759":[3,0,9,2,1],
-"d1/d02/namespacetransform_1_1stress.html#a54459a494ea0779213b53694a753e75c":[3,0,9,2,3],
-"d1/d02/namespacetransform_1_1stress.html#ac5015a59d9fd5bfbcc3d6035e195e5d5":[3,0,9,2,0],
-"d1/d02/namespacetransform_1_1stress.html#aeb7db3b9196e15fa4d408ee5329f2ad3":[3,0,9,2,2],
+"d1/d02/namespacetransform_1_1stress.html":[3,0,8,2],
+"d1/d02/namespacetransform_1_1stress.html#a51a199d2f57b742ab33f8df86ab7a759":[3,0,8,2,1],
+"d1/d02/namespacetransform_1_1stress.html#a54459a494ea0779213b53694a753e75c":[3,0,8,2,3],
+"d1/d02/namespacetransform_1_1stress.html#ac5015a59d9fd5bfbcc3d6035e195e5d5":[3,0,8,2,0],
+"d1/d02/namespacetransform_1_1stress.html#aeb7db3b9196e15fa4d408ee5329f2ad3":[3,0,8,2,2],
 "d1/d0a/class_material2_d.html":[2,13,1,5],
 "d1/d0a/class_material2_d.html#aaadbc7cf059eb71d4da53ef096c857fa":[2,13,1,5,0],
 "d1/d0a/class_material2_d.html#ac6cdd1bb5968cc1062e9a3a00e5aae67":[2,13,1,5,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX1 =
 "d1/d30/_v_a_f_c_r_p_8h.html":[6,0,9,2,7,33],
 "d1/d30/_v_a_f_c_r_p_8h_source.html":[6,0,9,2,7,33],
 "d1/d38/_t2_d2_s_8cpp.html":[6,0,6,9,2],
-"d1/d38/class_quadratic.html":[5,0,523]
+"d1/d38/class_quadratic.html":[5,0,523],
+"d1/d3d/class_armstrong_frederick1_d.html":[2,13,0,84],
+"d1/d3d/class_armstrong_frederick1_d.html#a2147acb83134ec0ec2ad826f257010b0":[2,13,0,84,2]
 };

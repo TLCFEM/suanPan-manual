@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['diff_0',['diff',['../d0/d34/namespacediff.html',1,'']]]
+  ['external_5fmodule_0',['external_module',['../d9/df4/namespaceexternal__module.html',1,'']]]
 ];

@@ -1,9 +1,5 @@
 var NAVTREEINDEX33 =
 {
-"dd/dac/_patch_quad_8cpp.html":[6,0,6,5,4],
-"dd/dac/class_n_l_e3_d01.html":[2,13,2,36],
-"dd/dac/class_n_l_e3_d01.html#a9c001ca819f56d23bccc4958c1d8f890":[2,13,2,36,1],
-"dd/dac/class_n_l_e3_d01.html#adbd9157da1a7e18f7f2307de67ee3118":[2,13,2,36,0],
 "dd/db3/_b3_d_o_s_l_8cpp.html":[6,0,6,10,11],
 "dd/db4/_energy_evolution_8h.html":[6,0,1,0,5],
 "dd/db4/_energy_evolution_8h_source.html":[6,0,1,0,5],
@@ -249,5 +245,9 @@ var NAVTREEINDEX33 =
 "de/d38/struct_data_dafalias_manzari.html#a88f3b82621a00a8c879228637b295061":[2,13,2,59,11],
 "de/d38/struct_data_dafalias_manzari.html#a976afaec741486d09f249aa76f072a37":[2,13,2,59,12],
 "de/d38/struct_data_dafalias_manzari.html#a9c53a38dd5d6f7313cc851f84528bbfc":[2,13,2,59,7],
-"de/d38/struct_data_dafalias_manzari.html#aa630a511cb8c4fa8919f23bf10b9c677":[2,13,2,59,16]
+"de/d38/struct_data_dafalias_manzari.html#aa630a511cb8c4fa8919f23bf10b9c677":[2,13,2,59,16],
+"de/d38/struct_data_dafalias_manzari.html#aa66e56dd1512763c72367ad513ea7492":[2,13,2,59,5],
+"de/d38/struct_data_dafalias_manzari.html#aa87f3ca4972cc34952f4076c8bc0cb7d":[2,13,2,59,1],
+"de/d38/struct_data_dafalias_manzari.html#aa97bedef9fac762dcbc530fba19037aa":[2,13,2,59,10],
+"de/d38/struct_data_dafalias_manzari.html#ac5a0c7b91c409c0c7b720360fd37c609":[2,13,2,59,15]
 };

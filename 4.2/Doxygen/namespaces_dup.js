@@ -11,9 +11,6 @@ var namespaces_dup =
       [ "skip", "d5/da8/namespacecompare.html#a25cbe356cd2edcb211bc5f3cd2589645", null ],
       [ "skip_files", "d5/da8/namespacecompare.html#a2bf6b8cb45d97e669bd64c1e238eeb8b", null ]
     ] ],
-    [ "diff", "d0/d34/namespacediff.html", [
-      [ "compare", "d0/d34/namespacediff.html#a219bb2254e4aee568264466b1bda2c4b", null ]
-    ] ],
     [ "external_module", "d9/df4/namespaceexternal__module.html", [
       [ "object", "da/d46/group___utility.html#gabd767ffd3857c5ff3306421f11902484", null ]
     ] ],
