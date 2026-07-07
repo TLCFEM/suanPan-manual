@@ -3,8 +3,8 @@
 This repository contains the official user documentation for [suanPan](https://tlcfem.github.io/suanPan/).
 For an optimized reading experience, users browsing this GitHub repository are encouraged to visit the web-based [documentation](https://tlcfem.github.io/suanPan-manual/latest/).
 
-As an alternative, a continuously updated version is hosted on [gitbook](https://tlcfem.gitbook.io/suanpan-manual/).
-Note, however, that certain dynamically generated components may be absent in the GitBook version due to platform limitations regarding Jupyter Notebook conversions.
+<!-- As an alternative, a continuously updated version is hosted on [gitbook](https://tlcfem.gitbook.io/suanpan-manual/).
+Note, however, that certain dynamically generated components may be absent in the GitBook version due to platform limitations regarding Jupyter Notebook conversions. -->
 
 This documentation remains under active development.
 Users are invited to submit issues via GitHub to report gaps in information or seek clarification.
