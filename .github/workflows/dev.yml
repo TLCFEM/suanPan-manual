@@ -1,6 +1,8 @@
 concurrency:
   cancel-in-progress: true
   group: ${{ github.workflow }}-${{ github.ref }}
+env:
+  SP_VERSION: "4.2"
 jobs:
   delete:
     needs:
@@ -9,8 +11,6 @@ jobs:
     secrets: inherit
     uses: ./.github/workflows/delete.yml
   deploy:
-    env:
-      SP_VERSION: "4.2"
     if: ${{ !contains(github.event.head_commit.message, 'Bump') }}
     runs-on: ubuntu-latest
     steps:
@@ -45,9 +45,9 @@ jobs:
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
-          mike deploy $SP_VERSION
+          mike deploy ${{ env.SP_VERSION }}
           git clean -fd && git reset --hard && git checkout gh-pages
-          svgo -rf $SP_VERSION --exclude inherit_graph.* -o $SP_VERSION
+          svgo -rf ${{ env.SP_VERSION }} --exclude inherit_graph.* -o ${{ env.SP_VERSION }}
           git add -A
           git commit --amend --no-edit
           git push origin gh-pages
@@ -83,6 +83,8 @@ jobs:
           tags: |
             tlcfem/suanpan-manual:latest
             ghcr.io/tlcfem/suanpan-manual:latest
+            tlcfem/suanpan-manual:${{ env.SP_VERSION }}
+            ghcr.io/tlcfem/suanpan-manual:${{ env.SP_VERSION }}
     timeout-minutes: 100
 name: Latest
 "on":
