@@ -32,8 +32,8 @@ material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 # (7) double, normalized crush energy g_c
 # (8) double, initial tension hardening a_t<1
 # (9) double, initial compression hardening a_c>1
-# (10) double, damage factor at half crack stress d_t
-# (11) double, damage factor at peak crush stress d_c
+# (10) double, ratio between degraded stiffness at half crack stress over initial stiffness, 1-d_t
+# (11) double, ratio between degraded stiffness at crush stress over initial stiffness, 1-d_c
 # (12) double, dilatancy parameter
 # (13) double, biaxial compression ratio
 # (14) double, initial stiffness recovery factor
