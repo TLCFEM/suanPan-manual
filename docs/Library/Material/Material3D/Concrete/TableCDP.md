@@ -26,9 +26,14 @@ material TableCDP (1) (2) (3) (4) (5) (6) (7) [8] [9] [10] [11]
 # [11] double, density, default: 0
 ```
 
-## Restrictions
+## Remarks
 
-1. For backbone tables, the slope between the last two points **cannot** be zero. The last stress value shall be as
-   close to zero as possible.
-2. For damage tables, the first point must be $$(0,0)$$, the last point does not have to be $$(1,1)$$ but shall stay in
-   the unit square.
+1. The backbone tables define curves between plastic strain $$\varepsilon_p$$ (first column) and stress backbone $$f$$ or $$\sigma$$ (second column).
+2. The damage tables define curves between plastic strain $$\varepsilon_p$$ (first column) and damage variable $$D$$ (second column).
+3. The first point of plastic strain $$\varepsilon_p$$ shall be zero.
+4. For backbone tables, the last point shall have a sufficiently small (close to zero) stress value at a sufficiently large plastic strain.
+5. For damage tables, the first point must be $$(0,0)$$, the last damage value shall not exceed one.
+
+The backbone tables represent the functions illustrated in Fig. 1 of [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4).
+To maintain consistency, the damage tables shall share the same primary column as their corresponding backbone tables.
+Consequently, the backbone stress and the corresponding damage index are evaluated at identical plastic strain samplings $\varepsilon_p$ and consolidated into two tables.
