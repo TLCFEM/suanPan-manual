@@ -9,6 +9,11 @@ Concrete Damage Plasticity Model
 3. [10.1002/1097-0207(20010120)50:2<487::AID-NME44>3.0.CO;2-N](https://doi.org/10.1002/1097-0207(20010120)50:2%3C487::AID-NME44%3E3.0.CO;2-N)
 4. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)
 
+!!! warning "automatic regularization"
+    The `CDP` model automatically regularizes the input arguments to avoid ill-shaped backbones.
+    This may not always be desirable.
+    If it is not possible to obtain desired backbone, use [`TableCDP`](TableCDP.md) instead.
+
 ## Outline
 
 The CDP model supports stiffness degradation. The backbone envelops are defined as exponential functions in terms of
