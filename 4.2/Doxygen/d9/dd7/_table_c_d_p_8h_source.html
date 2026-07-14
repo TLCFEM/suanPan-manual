@@ -145,22 +145,24 @@ $(document).ready(function(){initNavTree('d9/dd7/_table_c_d_p_8h_source.html','.
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        mat&amp;&amp;,            <span class="comment">// compression table</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        mat&amp;&amp;,            <span class="comment">// tension damage table</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        mat&amp;&amp;,            <span class="comment">// compression damage table</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">double</span> = .2,      <span class="comment">// dilatancy parameter</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">double</span> = 1.16,    <span class="comment">// biaxial compression strength ratio</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">double</span> = .5,      <span class="comment">// stiffness recovery</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">double</span> = 2400<a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca3a3ea00cfc35332cedf6e5e9a32e94da">E</a>-12 <span class="comment">// density</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    );</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    unique_ptr&lt;Material&gt; <a class="code hl_function" href="../../d6/d61/class_table_c_d_p.html#ae3ad6a733c84939303fe1b3a47a40578">unique_copy</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">double</span>,           <span class="comment">// g_t</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">double</span>,           <span class="comment">// g_c</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">double</span> = .2,      <span class="comment">// dilatancy parameter</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">double</span> = 1.16,    <span class="comment">// biaxial compression strength ratio</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">double</span> = .5,      <span class="comment">// stiffness recovery</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">double</span> = 2400<a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca3a3ea00cfc35332cedf6e5e9a32e94da">E</a>-12 <span class="comment">// density</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    );</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    unique_ptr&lt;Material&gt; <a class="code hl_function" href="../../d6/d61/class_table_c_d_p.html#ae3ad6a733c84939303fe1b3a47a40578">unique_copy</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="ttc" id="a_nonlinear_c_d_p_8h_html"><div class="ttname"><a href="../../d6/d38/_nonlinear_c_d_p_8h.html">NonlinearCDP.h</a></div></div>
 <div class="ttc" id="aclass_nonlinear_c_d_p_html"><div class="ttname"><a href="../../de/d9e/class_nonlinear_c_d_p.html">NonlinearCDP</a></div><div class="ttdoc">The NonlinearCDP class.</div><div class="ttdef"><b>Definition</b> NonlinearCDP.h:54</div></div>
 <div class="ttc" id="aclass_table_c_d_p_html"><div class="ttname"><a href="../../d6/d61/class_table_c_d_p.html">TableCDP</a></div><div class="ttdoc">The TableCDP class.</div><div class="ttdef"><b>Definition</b> TableCDP.h:36</div></div>
-<div class="ttc" id="aclass_table_c_d_p_html_ae3ad6a733c84939303fe1b3a47a40578"><div class="ttname"><a href="../../d6/d61/class_table_c_d_p.html#ae3ad6a733c84939303fe1b3a47a40578">TableCDP::unique_copy</a></div><div class="ttdeci">unique_ptr&lt; Material &gt; unique_copy() override</div><div class="ttdef"><b>Definition</b> TableCDP.cpp:119</div></div>
+<div class="ttc" id="aclass_table_c_d_p_html_ae3ad6a733c84939303fe1b3a47a40578"><div class="ttname"><a href="../../d6/d61/class_table_c_d_p.html#ae3ad6a733c84939303fe1b3a47a40578">TableCDP::unique_copy</a></div><div class="ttdeci">unique_ptr&lt; Material &gt; unique_copy() override</div><div class="ttdef"><b>Definition</b> TableCDP.cpp:97</div></div>
 <div class="ttc" id="agroup___material_html_ga9cb67a98266a51708d20674ae5ee071e"><div class="ttname"><a href="../../de/db5/group___material.html#ga9cb67a98266a51708d20674ae5ee071e">pod6</a></div><div class="ttdeci">std::array&lt; double, 6 &gt; pod6</div><div class="ttdef"><b>Definition</b> Material.h:35</div></div>
 <div class="ttc" id="agroup___material_html_ggab64cf36e331cfb4f1d2ebc9803ae725ca3a3ea00cfc35332cedf6e5e9a32e94da"><div class="ttname"><a href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca3a3ea00cfc35332cedf6e5e9a32e94da">PlaneType::E</a></div><div class="ttdeci">@ E</div></div>
 </div><!-- fragment --></div><!-- contents -->

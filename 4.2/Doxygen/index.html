@@ -219,7 +219,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <p>The portable binary archives are provided for macOS 14 and 15 with both <code>amd64</code> and <code>arm64</code> architectures. The archives themselves are self-contained. They can be successfully executed on earlier versions of macOS.</p>
 <blockquote class="doxtable">
 <p>&zwj;[!CAUTION] The binaries are <b>not</b> signed. It is necessary to run <code>sudo xattr -dr com.apple.quarantine &lt;downloaded/archive/folder&gt;</code> to remove extra attribute.</p>
-<div class="fragment"><div class="line">DOWNLOAD_URL=&quot;https://github.com/TLCFEM/suanPan/releases/download/suanPan-v3.9.3/suanPan-macos-14-amd64-openblas-avx.tar.gz&quot;</div>
+<div class="fragment"><div class="line">DOWNLOAD_URL=&quot;https://github.com/TLCFEM/suanPan/releases/download/suanPan-v3.9.3/suanPan-macos-15-amd64-openblas-avx.tar.gz&quot;</div>
 <div class="line">curl -L &quot;$DOWNLOAD_URL&quot; -o suanPan-latest.tar.gz</div>
 <div class="line">mkdir -p suanPan &amp;&amp; tar -xzf suanPan-latest.tar.gz -C suanPan &amp;&amp; cd suanPan</div>
 <div class="line">sudo xattr -dr com.apple.quarantine .</div>
