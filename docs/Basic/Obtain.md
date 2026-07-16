@@ -57,9 +57,9 @@ precompiled binaries are compiled on the following OS versions.
 
 | Platform | Version             |
 |----------|---------------------|
-| Windows  | Windows Server 2022 |
-| Linux    | Ubuntu 22.04        |
-| macOS    | Sonoma 14           |
+| Windows  | Windows Server 2025 |
+| Linux    | Ubuntu 24.04        |
+| macOS    | Sequoia 15          |
 
 For older versions or other flavours of Linux, successful execution is not guaranteed.
 Please consider compiling the binaries manually.
