@@ -206,7 +206,7 @@ var searchData=
   ['exponent_203',['exponent',['../d2/d8e/struct_data_y_l_d0418_p.html#a22e7d0d6fac5a74540a715fb8f0c5c08',1,'DataYLD0418P']]],
   ['exporthotropic_204',['exporthotropic',['../da/d82/class_exp_orthotropic.html',1,'ExpOrthotropic'],['../da/d82/class_exp_orthotropic.html#a543a89905ac99b604fa545f06b3a6c53',1,'ExpOrthotropic::ExpOrthotropic()']]],
   ['exporthotropic_2eh_205',['ExpOrthotropic.h',['../db/d02/_exp_orthotropic_8h.html',1,'']]],
-  ['expression_206',['expression',['../df/d03/class_expression.html',1,'Expression'],['../df/d03/class_expression.html#a7279eb843a5230fa3cdeb4a41a415fe7',1,'Expression::Expression(unsigned, std::vector&lt; std::string &gt; &amp;&amp;)'],['../df/d03/class_expression.html#a1bb0d16f8177e9c39d96f3e47f2cc0c6',1,'Expression::expression']]],
+  ['expression_206',['expression',['../df/d03/class_expression.html',1,'Expression'],['../df/d03/class_expression.html#a1bb0d16f8177e9c39d96f3e47f2cc0c6',1,'Expression::expression'],['../df/d03/class_expression.html#a7279eb843a5230fa3cdeb4a41a415fe7',1,'Expression::Expression(unsigned, std::vector&lt; std::string &gt; &amp;&amp;)']]],
   ['expression_2ecpp_207',['Expression.cpp',['../da/dc9/_expression_8cpp.html',1,'']]],
   ['expression_2eh_208',['Expression.h',['../d6/d99/_expression_8h.html',1,'']]],
   ['expression_5ftext_209',['expression_text',['../df/d03/class_expression.html#a88bfd86204bdfe37751fc9283aa88e3f',1,'Expression']]],
