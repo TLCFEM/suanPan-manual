@@ -9,6 +9,6 @@ analysis is terminated.
 criterion MaxDisplacement (1) (2) (3) (4)
 # (1) int, unique criterion tag
 # (2) int, node
-# (3) int, dof
+# (3) string, dof token
 # (4) double, limit
 ```
