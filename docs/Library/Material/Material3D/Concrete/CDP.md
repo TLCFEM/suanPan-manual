@@ -62,6 +62,14 @@ material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 8. Theoretically, $$g_t$$ and $$g_c$$ shall be scaled according to the size of mesh grid. Practically, they cannot be
    arbitrarily small due to numerical stability issues, meaning that the mesh grid cannot be arbitrarily large.
 
+The parameter `(10)` represents the ratio of unloading stiffness at half crack stress to initial stiffness.
+Evaluated on the softening branch, an estimated baseline value around $$0.5$$ corresponds to negligible plastic strain accumulation.
+Values between $$0.6$$ and $$0.8$$ (or higher) reflect reduced damage and greater plasticity, whereas smaller values risk non-physical negative plasticity development.
+
+Similarly, parameter `(11)` denotes the ratio of unloading stiffness at ultimate compressive (peak) stress to initial stiffness.
+This value shall be close to unity as the peak is often not too far away from the elastic branch.
+Smaller values likewise risk non-physical negative plasticity development.
+
 ## History Layout
 
 | location               | parameter      |
