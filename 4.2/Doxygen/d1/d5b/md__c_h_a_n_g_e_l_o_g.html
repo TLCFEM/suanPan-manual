@@ -107,6 +107,10 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 <ol type="1">
 <li>Arc-length analysis is limited on both SMP and DMP, mainly due to the lack of determinant computation.</li>
 </ol>
+<h1>version 4.2</h1>
+<ol type="1">
+<li>(<b>breaking</b>) change the behaviour of criterion DoF tokens, similar to the change made in v4.0, use explicit tokens for unconventional DoFs <a href="https://github.com/TLCFEM/suanPan/pull/368">#368</a></li>
+</ol>
 <h1>version 4.1.1</h1>
 <ol type="1">
 <li>update <code>MinGW-w64</code> with UCRT and GCC 15.3.0, see SDK <a href="https://github.com/brechtsanders/winlibs_mingw/releases/download/15.3.0posix-14.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-15.3.0-mingw-w64ucrt-14.0.0-r1.7z">link</a></li>
@@ -127,7 +131,7 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 </ol>
 <h1>version 4.0</h1>
 <ol type="1">
-<li>(breaking) change the behaviour of constraint tokens, natural ordering (1, 2, 3, etc.) may break in this version, use more explicit tokens for unconventional DoFs</li>
+<li>(<b>breaking</b>) change the behaviour of constraint DoF tokens, natural ordering (1, 2, 3, etc.) may break in this version, use explicit tokens for unconventional DoFs</li>
 <li>fix implementation of UDL <a href="https://github.com/TLCFEM/suanPan/pull/317">#317</a></li>
 <li>bump up various dependencies</li>
 <li>add <code><a class="el" href="../../d2/d24/class_balloon.html" title="A Balloon material class.">Balloon</a></code> models for metals</li>
@@ -156,11 +160,11 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 <h1>version 3.7</h1>
 <ol type="1">
 <li>update <code>Armadillo</code> to version <code>14.4.1</code></li>
-<li>(breaking) remove general iterative solvers <a href="https://github.com/TLCFEM/suanPan/pull/250">#250</a></li>
+<li>(<b>breaking</b>) remove general iterative solvers <a href="https://github.com/TLCFEM/suanPan/pull/250">#250</a></li>
 <li>remove <code>MUMPS</code> and <code>lis</code> solvers for single-node binaries</li>
 <li>update <code>MinGW-w64</code> with UCRT and GCC 13.3.0, see SDK <a href="https://github.com/brechtsanders/winlibs_mingw/releases/download/13.3.0posix-11.0.1-ucrt-r1/winlibs-x86_64-posix-seh-gcc-13.3.0-mingw-w64ucrt-11.0.1-r1.7z">link</a></li>
 <li>add cluster support <a href="https://github.com/TLCFEM/suanPan/pull/253">#253</a></li>
-<li>(breaking) refactor argument parser, some arguments are changed <a href="https://github.com/TLCFEM/suanPan/pull/257">#257</a></li>
+<li>(<b>breaking</b>) refactor argument parser, some arguments are changed <a href="https://github.com/TLCFEM/suanPan/pull/257">#257</a></li>
 </ol>
 <h1>version 3.6</h1>
 <ol type="1">
@@ -196,7 +200,7 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 </ol>
 <h1>version 3.3</h1>
 <ol type="1">
-<li>(breaking) revise syntax for <code><a class="el" href="../../d6/dbf/class_concrete_tsai.html" title="A ConcreteTsai material class.">ConcreteTsai</a></code>, <code><a class="el" href="../../d0/d1d/class_concrete21.html" title="A Concrete21 material class.">Concrete21</a></code> and <code><a class="el" href="../../d6/d6e/class_concrete22.html" title="A Concrete22 material class.">Concrete22</a></code> using a more consistent definition</li>
+<li>(<b>breaking</b>) revise syntax for <code><a class="el" href="../../d6/dbf/class_concrete_tsai.html" title="A ConcreteTsai material class.">ConcreteTsai</a></code>, <code><a class="el" href="../../d0/d1d/class_concrete21.html" title="A Concrete21 material class.">Concrete21</a></code> and <code><a class="el" href="../../d6/d6e/class_concrete22.html" title="A Concrete22 material class.">Concrete22</a></code> using a more consistent definition</li>
 <li>fix tangent stiffness in <code><a class="el" href="../../d7/d14/class_concrete_k4.html">ConcreteK4</a></code> model <a href="https://github.com/TLCFEM/suanPan/pull/171">#171</a></li>
 <li>update <code>OpenBLAS</code> to version <code>0.3.25</code></li>
 <li>update <code>SuperLU</code> to version <code>6.0.1</code></li>
@@ -338,7 +342,7 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 <li>add porous media plane strain elements <code><a class="el" href="../../db/d53/class_p_c_p_e4_u_c.html" title="The PCPE4 class handles CPE4 elements with pore pressure.">PCPE4UC</a></code>, <code><a class="el" href="../../d4/ddd/class_p_c_p_e8_u_c.html" title="The PCPE8 class handles CPE8 elements with pore pressure.">PCPE8UC</a></code>, <code><a class="el" href="../../d1/db2/class_p_c_p_e4_d_c.html" title="The PCPE4 class handles CPE4 elements with pore pressure.">PCPE4DC</a></code>, <code><a class="el" href="../../d9/d88/class_p_c_p_e8_d_c.html" title="The PCPE8 class handles CPE8 elements with pore pressure.">PCPE8DC</a></code></li>
 <li>add N-M interaction enabled beam element <code><a class="el" href="../../d5/db6/class_n_m_b31.html" title="The NMB31 class.">NMB31</a></code> and <code><a class="el" href="../../d5/d6d/class_n_m_b21.html" title="The NMB21 class.">NMB21</a></code></li>
 <li>add N-M interaction enabled section <code><a class="el" href="../../db/d83/class_n_m2_d1.html" title="A NM2D1 class.">NM2D1</a></code>, <code><a class="el" href="../../df/d3d/class_n_m3_d1.html" title="A NM3D1 class.">NM3D1</a></code> (elastic) and <code><a class="el" href="../../dd/d7a/class_n_m2_d2.html" title="A NM2D2 class.">NM2D2</a></code>, <code><a class="el" href="../../df/d9a/class_n_m3_d2.html" title="A NM3D2 class.">NM3D2</a></code> (inelastic)</li>
-<li>(breaking) change <a class="el" href="../../d2/d7d/class_rayleigh.html" title="A Rayleigh damping class.">Rayleigh</a> damping related syntax to include tangent stiffness term</li>
+<li>(<b>breaking</b>) change <a class="el" href="../../d2/d7d/class_rayleigh.html" title="A Rayleigh damping class.">Rayleigh</a> damping related syntax to include tangent stiffness term</li>
 <li>add different stiffness types to <code><a class="el" href="../../d4/d3c/class_lee_newmark_full.html" title="A LeeNewmarkFull class defines a solver using Newmark algorithm with Lee damping model.">LeeNewmarkFull</a></code>, add support of geometry nonlinearity</li>
 <li>revise section definition</li>
 <li>add <code><a class="el" href="../../df/dcf/class_b3_d_c.html" title="A B3DC class.">B3DC</a></code> corotational formulation support to 3D beams</li>

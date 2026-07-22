@@ -35,7 +35,7 @@ var group___criterion =
       [ "unique_copy", "d6/d76/class_logic_criterion_o_r.html#abb2d9036bb1a4dc69537f6b57b14978f", null ]
     ] ],
     [ "MaxDisplacement", "dc/df3/class_max_displacement.html", [
-      [ "NodeBasedCriterion", "dc/df3/class_max_displacement.html#aff0bb7305ddb3e42a32daaf1db66ccc3", null ],
+      [ "NodeBasedCriterion", "dc/df3/class_max_displacement.html#a1426067211203b5ae08f0b3979bc5c25", null ],
       [ "process", "dc/df3/class_max_displacement.html#ad431f0f513f260317600f1ba60d1476c", null ],
       [ "unique_copy", "dc/df3/class_max_displacement.html#aba8f7dd72f169ac8215477891eb96777", null ]
     ] ],
@@ -45,24 +45,25 @@ var group___criterion =
       [ "unique_copy", "dc/d95/class_max_history.html#a04dc08c7819738e14261eb4382f9415e", null ]
     ] ],
     [ "MaxResistance", "df/ddd/class_max_resistance.html", [
-      [ "NodeBasedCriterion", "df/ddd/class_max_resistance.html#aff0bb7305ddb3e42a32daaf1db66ccc3", null ],
+      [ "NodeBasedCriterion", "df/ddd/class_max_resistance.html#a1426067211203b5ae08f0b3979bc5c25", null ],
       [ "process", "df/ddd/class_max_resistance.html#ab3c674fd140d6ddcee0d02916ebf6944", null ],
       [ "unique_copy", "df/ddd/class_max_resistance.html#ab870b20aaa71ae176f623f86968570dd", null ]
     ] ],
     [ "MinDisplacement", "df/db4/class_min_displacement.html", [
-      [ "NodeBasedCriterion", "df/db4/class_min_displacement.html#aff0bb7305ddb3e42a32daaf1db66ccc3", null ],
+      [ "NodeBasedCriterion", "df/db4/class_min_displacement.html#a1426067211203b5ae08f0b3979bc5c25", null ],
       [ "process", "df/db4/class_min_displacement.html#ad5e67ba10df171c40d319cd3339bad15", null ],
       [ "unique_copy", "df/db4/class_min_displacement.html#acf0834e388f8d50b57f6995d409d709a", null ]
     ] ],
     [ "MinResistance", "d4/da5/class_min_resistance.html", [
-      [ "NodeBasedCriterion", "d4/da5/class_min_resistance.html#aff0bb7305ddb3e42a32daaf1db66ccc3", null ],
+      [ "NodeBasedCriterion", "d4/da5/class_min_resistance.html#a1426067211203b5ae08f0b3979bc5c25", null ],
       [ "process", "d4/da5/class_min_resistance.html#aecffe23bd99ce9dbf2b2a55cf3b14483", null ],
       [ "unique_copy", "d4/da5/class_min_resistance.html#ad9220e200004ba6dc552ea408f5334dd", null ]
     ] ],
     [ "NodeBasedCriterion", "df/da9/class_node_based_criterion.html", [
-      [ "NodeBasedCriterion", "df/da9/class_node_based_criterion.html#aff0bb7305ddb3e42a32daaf1db66ccc3", null ],
+      [ "NodeBasedCriterion", "df/da9/class_node_based_criterion.html#a1426067211203b5ae08f0b3979bc5c25", null ],
+      [ "get_dof", "df/da9/class_node_based_criterion.html#aea7f8cdfe37231b3fcd7ac210cb335b2", null ],
       [ "initialize", "df/da9/class_node_based_criterion.html#abc4984c6981a7c8066c71d24a8e0e70c", null ],
-      [ "dof", "df/da9/class_node_based_criterion.html#afa9470cd682108012872aa04accf2243", null ],
+      [ "dof", "df/da9/class_node_based_criterion.html#a7db1a9e7479304290b17259aa947a72f", null ],
       [ "limit", "df/da9/class_node_based_criterion.html#aae10b88ed88ebf3c25a2a21a10d3f056", null ],
       [ "node", "df/da9/class_node_based_criterion.html#aa237cab798c8a4eef1cfd46c348a4415", null ]
     ] ],
