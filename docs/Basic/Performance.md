@@ -157,6 +157,10 @@ On Linux, it is fairly easy to replace the default memory allocator. For example
 LD_PRELOAD=/path/to/libmimalloc.so suanpan -f input.sp
 ```
 
+!!! note "easy integration"
+    With **portable archives** in POSIX systems, it is possible to place `libmimalloc.so` file under the `lib` folder and invoke `suanPan.sh` directly.
+    The script [`suanPan.sh`](https://github.com/TLCFEM/suanPan/blob/dev/Enhancement/suanPan.sh) automatically checks the presence of `libmamalloc.so` file and loads it if found.
+
 ### Smaller Memory Footprint
 
 By default, [Armadillo](https://arma.sourceforge.net/download.html) uses 64-bit indexing and embeds small fixed-size local arrays within matrix objects to avoid frequent small heap allocations.
