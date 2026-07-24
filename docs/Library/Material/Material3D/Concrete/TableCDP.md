@@ -59,7 +59,7 @@ The green curve represents the actual stress backbone, yielding several key prop
 The red curve depicts the damage index evolution:
 
 1. It initiates at zero and rises to $$0.2$$ at $$0.005$$.
-2. Beyond $$0.005$$, it asymptotically approaches unity at infinite plastic strain ($$\kappa_\aleph=1$$).
+2. Beyond $$0.005$$, it asymptotically approaches unity at infinite plastic strain, that is $$\kappa_\aleph=1$$.
 
 !!! warning "shape distortion"
     Because the mapping from $$\kappa_\aleph$$ to plastic strain is non-linear and includes an appended exponential tail, the actual material response slightly deviates from the defined curve.
@@ -73,7 +73,7 @@ material TableCDP 1 3e4 .2 backbone backbone damage damage
 
 The `backbone` file shall contain the following lines.
 
-```text
+```text title="backbone"
 0 1
 0.001 1.5
 0.002 1.3
@@ -84,7 +84,7 @@ The `backbone` file shall contain the following lines.
 
 The `damage` file shall contain the following lines.
 
-```text
+```text title="damage"
 0 0
 0.001 0.04
 0.002 0.08
@@ -95,7 +95,7 @@ The `damage` file shall contain the following lines.
 
 It can be tested via the following simple uniaxial loading setup.
 
-```text
+```text title="tablecdp.sp"
 # A TEST MODEL FOR TABLECDP MATERIAL
 
 node 1 .5 -.5 0
