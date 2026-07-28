@@ -127,8 +127,21 @@ $(document).ready(function(){initNavTree('d6/dcd/md__c_o_n_t_r_i_b_u_t_i_n_g.htm
 <li>Provide <a href="https://github.com/catchorg/Catch2">Catch2</a> tests if applicable, otherwise provide example models that cover the implementation as much as possible.</li>
 <li>Check similar existing implemented code first.</li>
 <li>Apply early return if possible, avoid deep nesting of code.</li>
-<li>Branch-free code is preferred. </li>
+<li>Branch-free code is preferred.</li>
 </ol>
+<h1>Project structure</h1>
+<p>The repository uses the following top-level layout:</p>
+<ul>
+<li>CMakeLists.txt — top-level CMake build file.</li>
+<li>Include/ — public header files.</li>
+<li>Libs/ — third-party or internal libraries.</li>
+<li>UnitTest/ — unit tests and test harnesses.</li>
+<li>Example/ — example models and usage samples.</li>
+<li>Script/ — helper scripts for build/run/test tasks.</li>
+<li>Resource/ — data and resource files used by examples/tests.</li>
+<li>Solver/, Converger/, Constraint/, Element/, Material/, Checker/, Recorder/, Toolbox/, Step/, Load/ — core modules grouped by functionality (see the matching directory for implementation details).</li>
+</ul>
+<p>When contributing, add or modify code in the appropriate module directory, update <code>CMakeLists.txt</code> as needed, and include tests or example models to demonstrate behavior. For large changes, open an issue first to discuss design. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
