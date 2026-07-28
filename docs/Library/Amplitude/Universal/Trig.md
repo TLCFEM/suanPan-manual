@@ -19,7 +19,7 @@ $$t_0$$ is the (pseudo) start time of the step in which the amplitude is defined
 
 ## Syntax
 
-```
+```text title="Trig"
 amplitude Sine (1) (2) (3) [(4)...]
 amplitude Cosine (1) (2) (3) [(4)...]
 # (1) int, unique tag
@@ -30,7 +30,7 @@ amplitude Cosine (1) (2) (3) [(4)...]
 
 ## Example
 
-```
+```text
 amplitude Sine 1 10. 2.
 ```
 
@@ -38,7 +38,7 @@ $$
 A(t)=2\sin(\dfrac{\pi}{5}(t-t_0)).
 $$
 
-```
+```text
 amplitude Sine 1 10. 2. 4.
 ```
 

@@ -4,7 +4,7 @@ Fixed Crack Concrete Model
 
 ## Syntax
 
-```
+```text title="Concrete22"
 material Concrete22 (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) [12]
 # (1) int, unique material tag
 # (2) double, elastic modulus

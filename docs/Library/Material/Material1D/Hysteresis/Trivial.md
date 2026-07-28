@@ -6,7 +6,7 @@ The `Trivial` material defines 1D zero response. The stress and stiffness output
 
 ## Syntax
 
-```
+```text title="Trivial"
 material Trivial (1)
 # (1) int, unique material tag
 ```

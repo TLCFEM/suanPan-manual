@@ -10,7 +10,7 @@ other applications.
 
 ## Syntax
 
-```
+```text title="AFC"
 material AFCS (1) (2) (3) (4) (5)
 material AFC02 (1) (2) (3) (4) (5)
 # (1) int, unique tag

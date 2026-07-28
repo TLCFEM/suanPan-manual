@@ -35,7 +35,7 @@ $$
 
 ## Syntax
 
-```
+```text title="Viscosity02"
 material Viscosity02 (1) (2) (3) [4] [5] [6] [7] [8]
 # (1) int, unique tag
 # (2) double, alpha

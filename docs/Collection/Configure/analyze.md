@@ -7,7 +7,7 @@ All steps will be analysed. It is possible to define subsequent steps after perf
 
 ## Syntax
 
-```
+```text title="analyze"
 analyze
 analyse
 ```
@@ -24,7 +24,7 @@ Use the following syntax to ignore warnings and errors.
 
 ## Syntax
 
-```
+```text title="analyze"
 analyze [--ignore-warnings] [--ignore-errors]
 analyse [--ignore-warnings] [--ignore-errors]
 ```

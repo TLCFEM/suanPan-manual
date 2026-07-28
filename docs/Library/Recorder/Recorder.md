@@ -20,7 +20,7 @@ stiffness/mass, global kinetic energy, etc.
 Two types of format are supported. The output file can be either plain text or HDF5 file if the program is compiled with
 HDF5 support. The general form to define a record is as follows.
 
-```
+```text title="Recorder"
 recorder (1) plain (2) (3) [every 4] [5...]
 recorder (1) hdf5 (2) (3) [every 4] [5...]
 # (1) int, unique recorder tag

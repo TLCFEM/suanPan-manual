@@ -7,7 +7,7 @@ the strain history.
 
 ## Syntax
 
-```
+```text title="CustomStrainDegradation"
 material CustomStrainDegradation (1) (2) (3) [4]
 # (1) int, unique material tag
 # (2) int, host intact material tag

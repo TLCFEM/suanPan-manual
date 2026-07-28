@@ -7,7 +7,7 @@ of convergers together.
 
 ## Syntax
 
-```
+```text title="Logic"
 converger LogicAND (1) (2) (3)
 converger LogicOR (1) (2) (3)
 converger LogicXOR (1) (2) (3)

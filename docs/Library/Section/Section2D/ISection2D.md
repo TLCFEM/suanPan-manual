@@ -6,7 +6,7 @@
 
 ## Syntax
 
-```
+```text title="ISection2D"
 section ISection2D (1) (2...7) (8) [9] [10]
 # (1) int, unique tag
 # (2...7) double, section dimensions

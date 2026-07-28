@@ -11,7 +11,7 @@ assigned automatically.
 
 ## Syntax
 
-```
+```text title="MPC"
 mpc (1) (2) (3) [(4) (5) (6)...]
 constraint mpc (1) (2) (3) [(4) (5) (6)...]
 # (1) int, unique constraint tag

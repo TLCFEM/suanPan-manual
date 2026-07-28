@@ -6,7 +6,7 @@
 
 ## Syntax
 
-```
+```text title="Circle2D"
 section Circle2D (1) (2) (3) [4] [5]
 # (1) int, unique section tag
 # (2) double, radius

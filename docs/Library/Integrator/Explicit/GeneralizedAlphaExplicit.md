@@ -8,7 +8,7 @@ References:
 
 ## Syntax
 
-```text
+```text title="GeneralizedAlphaExplicit"
 integrator GeneralizedAlphaExplicit (1) [2]
 integrator GeneralisedAlphaExplicit (1) [2]
 # (1) int, unique integrator tag

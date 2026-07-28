@@ -10,7 +10,7 @@ Mindlin Plate Element
 
 ## Syntax
 
-```
+```text title="Mindlin"
 element Mindlin (1) (2...5) (6) (7) [8]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l

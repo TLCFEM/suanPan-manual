@@ -7,7 +7,7 @@ Multipoint Constraint Implemented As Element
 
 ## Syntax
 
-```
+```text title="Tie"
 element Tie (1) (2) (3) [(4) (5) (6)...]
 # (1) int, unique element tag
 # (2) double, right hand side of the constraint equation, the constraint is homogeneous if this parameter is zero

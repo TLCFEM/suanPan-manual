@@ -7,7 +7,7 @@ kinematic hardening is disabled.
 
 ## Syntax
 
-```
+```text title="PolyJ2"
 material PolyJ2 (1) (2) (3) (4) [(5)...]
 # (1) int, unique material tag
 # (2) double, elastic modulus

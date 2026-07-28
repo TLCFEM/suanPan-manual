@@ -9,7 +9,7 @@ CDPM2 Model for Concrete Material
 
 ## Syntax
 
-```text
+```text title="CDPM2"
 material CDPM2 (1) [2-16]
 material CDPM2ISO (1) [2-16]
 material CDPM2ANISO (1) [2-16]

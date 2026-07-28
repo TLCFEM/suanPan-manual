@@ -8,7 +8,7 @@ Dhakal Degradation
 
 ## Syntax
 
-```text
+```text title="Dhakal"
 material Dhakal (1) (2) (3) (4)
 # (1) int, unique material tag
 # (2) int, host material tag

@@ -10,7 +10,7 @@ The Blatz-Ko material can be used to simulate foam rubber.
 
 ## Syntax
 
-```
+```text title="BlatzKo"
 material BlatzKo (1) (2) (3) [4]
 # (1) int, unique tag
 # (2) double, elastic modulus

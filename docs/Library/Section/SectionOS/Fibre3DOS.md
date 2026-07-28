@@ -9,7 +9,7 @@
 
 ## Syntax
 
-```
+```text title="Fibre3DOS"
 section Fibre3DOS (1) [(2)...]
 # (1) int, unique section tag
 # [(2)...] int, associated section tags

@@ -8,7 +8,7 @@ The radius should be the outer radius, which shall be half of the overall diamet
 
 ## Syntax
 
-```
+```text title="CircularHollow2D"
 section CircularHollow2D (1) (2) (3) (4) [5] [6]
 # (1) int, unique section tag
 # (2) double, radius

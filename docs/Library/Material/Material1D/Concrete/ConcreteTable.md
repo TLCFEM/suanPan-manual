@@ -4,7 +4,7 @@ Concrete Material With Table Input
 
 ## Syntax
 
-```text
+```text title="ConcreteTable"
 material ConcreteTable (1) (2) (3) [4] [5]
 # (1) int, unique material tag
 # (2) string, tension backbone file name

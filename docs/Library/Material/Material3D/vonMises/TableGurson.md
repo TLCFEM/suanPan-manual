@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```text title="TableGurson"
 material TableGurson (1) (2) (3) (4) (5) (6) (7) (8) (9) [10]
 # (1) int, unique material tag
 # (2) double, elastic modulus

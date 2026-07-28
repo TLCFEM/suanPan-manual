@@ -5,7 +5,7 @@ a FE model. Some wrappers and material models that rely on other material models
 
 ## Syntax
 
-```
+```text title="materialtestbyload"
 materialTestByLoad1D (1) (2) (3) [4...]
 # (1) int, unique tag of the material model to use
 # (2) double, size of per stress increment

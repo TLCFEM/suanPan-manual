@@ -10,7 +10,7 @@ References:
 
 ## Syntax
 
-```text
+```text title="BatheExplicit"
 integrator BatheExplicit (1) [2]
 # (1) int, unique integrator tag
 # [2] double, spectral radius, \rho_\infty, default: 0.5

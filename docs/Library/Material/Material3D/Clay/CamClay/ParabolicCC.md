@@ -19,7 +19,7 @@ The hardening modulus could be either positive or negative.
 
 ## Syntax
 
-```
+```text title="ParabolicCC"
 material ParabolicCC (1) (2) (3) (4) (5) (6) (7) (8) [9]
 # (1) int, unique material tag
 # (2) double, elastic modulus

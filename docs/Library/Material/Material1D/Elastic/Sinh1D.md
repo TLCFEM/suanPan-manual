@@ -4,7 +4,7 @@ Uniaxial Elastic Material Using $$\sinh$$
 
 ## Syntax
 
-```
+```text title="Sinh1D"
 material Elastic1D (1) (2) [3]
 # (1) int, unique material tag
 # (2) double, elastic modulus

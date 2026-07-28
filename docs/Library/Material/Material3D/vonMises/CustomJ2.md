@@ -8,7 +8,7 @@ This model is an implementation of the [`NonlinearJ2`](NonlinearJ2.md) abstract 
 
 ## Syntax
 
-```
+```text title="CustomJ2"
 material CustomJ2 (1) (2) (3) (4) (5) [6]
 # (1) int, unique material tag
 # (2) double, elastic modulus

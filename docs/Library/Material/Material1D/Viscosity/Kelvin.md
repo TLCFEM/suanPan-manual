@@ -7,7 +7,7 @@ and velocity.
 
 ## Syntax
 
-```
+```text title="Kelvin"
 material Kelvin (1) (2) (3)
 # (1) int, unique material tag
 # (2) int, damper tag

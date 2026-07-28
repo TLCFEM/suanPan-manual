@@ -20,7 +20,7 @@ The modifications can be summaries as follows.
 
 ## Syntax
 
-```
+```text title="DafaliasManzari"
 material DafaliasMazanri (1) (2-18) [19]
 # (1) int, unique material tag
 # (2) double, reference shear modulus G_0 ==> 125

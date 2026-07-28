@@ -6,7 +6,7 @@ Bilinear Origin Oriented Model
 
 For symmetric response between compression and tension,
 
-```
+```text title="BilinearOO"
 material BilinearOO (1) (2) (3) (4) [5]
 # (1) int, unique material tag
 # (2) double, elastic modulus

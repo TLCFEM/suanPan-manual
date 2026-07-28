@@ -7,7 +7,7 @@ Point Mass
 
 ## Syntax
 
-```
+```text title="Mass"
 Mass (1) (2) (3) (4...)
 element Mass (1) (2) (3) (4...)
 # (1) int, unique element tag

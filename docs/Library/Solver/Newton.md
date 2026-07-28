@@ -4,7 +4,7 @@ The `Newton` solver defines a classic (modified) Newton-Raphson solver.
 
 ## Syntax
 
-```
+```text title="Newton"
 solver Newton (1)
 solver modifiedNewton (1)
 solver mNewton (1)

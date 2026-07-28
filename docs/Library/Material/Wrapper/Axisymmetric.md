@@ -7,7 +7,7 @@ Wraps a 3D host material model into a 2D axisymmetric model that can be used wit
 
 ## Syntax
 
-```
+```text title="Axisymmetric"
 material Axisymmetric (1) (2)
 # (1) int, unique tag
 # (2) int, 3D material tag

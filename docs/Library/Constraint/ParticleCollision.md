@@ -5,7 +5,7 @@ uniform size.
 
 ## Syntax
 
-```
+```text title="ParticleCollision"
 ParticleCollision2D (1) (2) (3)
 ParticleCollision3D (1) (2) (3)
 constraint ParticleCollision2D (1) (2) (3)

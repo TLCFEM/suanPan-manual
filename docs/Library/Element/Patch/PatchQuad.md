@@ -12,7 +12,7 @@ Patch of Quadrilateral Elements
 
 A key-value style is used.
 
-```
+```text title="PatchQuad"
 element PatchQuad (1) -node (2...) -knotx (3...) -knoty (4...) -material (5) [-thickness (6)]
 # (1) int, unique element (patch) tag
 # (2...) int, node tags of control node polygon

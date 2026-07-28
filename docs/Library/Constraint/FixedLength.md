@@ -25,7 +25,7 @@ Only damping models that do not depend on system properties can be used.
 
 ## Syntax
 
-```
+```text title="FixedLength"
 fixedlength2d (1) (2) (3)
 fixedlength3d (1) (2) (3)
 constraint fixedlength2d (1) (2) (3)

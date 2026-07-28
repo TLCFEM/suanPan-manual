@@ -6,7 +6,7 @@
 
 ## Syntax
 
-```
+```text title="TSection3D"
 section TSection3D (1) (2) (3) (4) (5) (6) [7] [8] [9]
 # (1) int, unique section tag
 # (2) double, top flange width

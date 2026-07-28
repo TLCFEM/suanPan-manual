@@ -8,7 +8,7 @@ Reference:
 
 ## Syntax
 
-```
+```text title="CustomViscosity"
 material CustomViscosity (1) (2)
 # (1) int, unique material tag
 # (2) int, expression tag

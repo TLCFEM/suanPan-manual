@@ -7,7 +7,7 @@ the increasing strain/displacement, the stiffness becomes larger. The upper boun
 
 ## Syntax
 
-```
+```text title="SlipLock"
 material SlipLock (1) (2) (3) (4) [5] [6]
 # (1) int, unique material tag
 # (2) double, elastic modulus

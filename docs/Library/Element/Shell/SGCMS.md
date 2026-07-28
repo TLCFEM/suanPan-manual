@@ -14,7 +14,7 @@ A planar shell element uses SGCMQ for membrane action and DKT4 element for plate
 
 ## Syntax
 
-```
+```text title="SGCMS"
 element SGCMS (1) (2...5) (6) (7) [8]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l

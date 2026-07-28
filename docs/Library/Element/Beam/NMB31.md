@@ -12,7 +12,7 @@
 
 ## Syntax
 
-```
+```text title="NMB31"
 element NMB31 (1) (2) (3) (4) (5)
 # (1) int, unique element tag
 # (2) int, node i

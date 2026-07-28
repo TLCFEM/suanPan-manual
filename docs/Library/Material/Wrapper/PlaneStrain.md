@@ -6,7 +6,7 @@ Wraps a 3D host material model into a 2D plane strain model that can be used wit
 
 ## Syntax
 
-```
+```text title="PlaneStrain"
 material PlainStrain (1) (2)
 # (1) int, unique tag
 # (2) int, 3D material tag

@@ -10,7 +10,7 @@ $$N$$-$$M$$ Interaction Inelastic Section (Linear Hardening)
 
 ### Option One
 
-```
+```text title="NM3D2"
 section NM3D2 (1) (2...11)
 # (1) int, unique section tag
 # (2) double, EA

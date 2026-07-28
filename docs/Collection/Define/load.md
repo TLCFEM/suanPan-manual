@@ -12,7 +12,7 @@ All loads are initialised and processed in **parallel** via global mutexes.
 
 All loads share a similar syntax:
 
-```text
+```text title="load"
 load <load_type> <unique_tag> <arguments that define the specific load...>
 ```
 
@@ -20,7 +20,7 @@ load <load_type> <unique_tag> <arguments that define the specific load...>
 
 To apply loads on nodes,
 
-```text
+```text title="nodalload"
 # to apply nodal concentrated force
 cload (1) (2) (3) (4) (5...)
 load cload (1) (2) (3) (4) (5...)
@@ -49,7 +49,7 @@ The keyword `cload` is the abbreviation for **c**oncentrated **load**.
 
 Some elements support body force. Indications are given for elements that support body force in the corresponding pages.
 
-```text
+```text title="bodyforce"
 bodyforce (1) (2) (3) (4) (5...)
 load bodyforce (1) (2) (3) (4) (5...)
 # (1) int, unique tag
@@ -63,7 +63,7 @@ load bodyforce (1) (2) (3) (4) (5...)
 
 To apply loads on groups,
 
-```text
+```text title="groupload"
 # on node groups
 groupcload (1) (2) (3) (4) (5...)
 groupdisplacement (1) (2) (3) (4) (5...)
@@ -86,7 +86,7 @@ load groupbodyforce (1) (2) (3) (4) (5...)
 For response history analysis, sometimes it is necessary to apply excitations on supports.
 The multi-support excitation is automatically supported if analysts assign different excitations to different supports.
 
-```text
+```text title="support"
 supportdisplacement (1) (2) (3) (4) (5...)
 supportvelocity (1) (2) (3) (4) (5...)
 supportacceleration (1) (2) (3) (4) (5...)
@@ -134,7 +134,7 @@ This problem is discussed in [this](https://doi.org/10.1080/13632469.2024.237281
 
 ### Uniformly Distributed Load (UDL)
 
-```text
+```text title="lineudl"
 lineudl2d (1) (2) (3) (4) (5...)
 lineudl3d (1) (2) (3) (4) (5...)
 load lineudl2d (1) (2) (3) (4) (5...)
@@ -153,7 +153,7 @@ Only translational DoFs are supported, thus, use `1`, `2`, `3`, `U1`, `U2`, `U3`
 
 For arc-length analysis, reference load can be defined via the `RefForce` command.
 
-```text
+```text title="refload"
 refforce (1) (2) (3) (4) (5...)
 refload (1) (2) (3) (4) (5...)
 load refforce (1) (2) (3) (4) (5...)

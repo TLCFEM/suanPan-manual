@@ -4,7 +4,7 @@ Multilinear Hardening J2 Model
 
 ## Syntax
 
-```text
+```text title="MultilinearJ2"
 material MultilinearJ2 (1) (2) (3) (4) ((5) (6)...)
 # (1) int, unique material tag
 # (2) double, elastic modulus

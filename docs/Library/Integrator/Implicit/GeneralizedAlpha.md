@@ -7,7 +7,7 @@ response.
 
 Two forms are available.
 
-```
+```text title="GeneralizedAlpha"
 integrator GeneralisedAlpha (1) [2]
 integrator GeneralizedAlpha (1) [2]
 # (1) int, unique tag

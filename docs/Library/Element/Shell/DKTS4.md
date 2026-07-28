@@ -10,7 +10,7 @@ DKT Quadrilateral Shell
 
 ## Syntax
 
-```
+```text title="DKTS4"
 element DKTS4 (1) (2...5) (6) (7) [8] [9]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l

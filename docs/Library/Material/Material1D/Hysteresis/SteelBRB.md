@@ -14,7 +14,7 @@ References are available:
 
 If tension response is identical to compression response, users can use the following command to define the material.
 
-```
+```text title="SteelBRB"
 material SteelBRB (1) (2) (3) (4) (5) (6) (7) [8]
 # (1) int, unique material tag
 # (2) double, elastic modulus

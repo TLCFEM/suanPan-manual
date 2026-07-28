@@ -4,7 +4,7 @@ Structural Optimization Step
 
 ## Syntax
 
-```
+```text title="Optimization"
 step Optimization (1)
 # (1) int, unique step tag
 ```

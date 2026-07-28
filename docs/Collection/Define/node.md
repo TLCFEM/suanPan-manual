@@ -4,7 +4,7 @@ Nodes are basic components in FE models. The `node` command is used to construct
 
 ## Syntax
 
-```
+```text title="node"
 node (1) [2...]
 # (1) int, unique tag
 # [2...] double, coordinates

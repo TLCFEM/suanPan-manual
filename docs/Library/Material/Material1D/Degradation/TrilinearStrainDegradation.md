@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```text title="TrilinearStrainDegradation"
 material TrilinearStrainDegradation (1) (2) (3) (4) (5)
 # (1) int, unique material tag
 # (2) int, host material tag

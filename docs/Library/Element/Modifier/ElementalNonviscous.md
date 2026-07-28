@@ -16,7 +16,7 @@ The parameters $$m_i$$ and $$s_i$$ are complex numbers.
 
 ## Syntax
 
-```text
+```text title="ElementalNonviscous"
 modifier ElementalNonviscous (1) (2) ((3) (4) (5) (6)...)
 # (1) int, unique modifier tag
 # (2) int, element tag

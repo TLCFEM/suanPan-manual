@@ -8,7 +8,7 @@ Basic Building Block for 3D OS Section
 
 ## Syntax
 
-```
+```text title="Cell3DOS"
 section Cell3DOS (1) (2) (3) (4) (5) (6) [7] [8]
 # (1) int, unique section tag
 # (2) double, area

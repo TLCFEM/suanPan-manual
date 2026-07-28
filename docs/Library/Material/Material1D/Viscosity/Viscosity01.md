@@ -19,7 +19,7 @@ The damping coefficient is constant.
 
 ## Syntax
 
-```
+```text title="Viscosity01"
 material Viscosity01 (1) (2) (3)
 # (1) int, unique tag
 # (2) double, alpha

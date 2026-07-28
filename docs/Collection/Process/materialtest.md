@@ -5,7 +5,7 @@ model. Some wrappers and material models that rely on other material models cann
 
 ## Syntax
 
-```
+```text title="materialtest"
 materialTest1D (1) (2) (3) [4...]
 # (1) int, unique tag of the material model to use
 # (2) double, size of per strain increment

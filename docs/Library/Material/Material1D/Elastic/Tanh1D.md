@@ -4,7 +4,7 @@ Uniaxial Elastic Material Using $$\tanh$$
 
 ## Syntax
 
-```
+```text title="Tanh1D"
 material Elastic1D (1) (2) [3]
 # (1) int, unique material tag
 # (2) double, elastic modulus

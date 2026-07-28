@@ -9,7 +9,7 @@ case of this model.
 
 ## Syntax
 
-```
+```text title="MultilinearElastic1D"
 material MultilinearElastic1D (1) (2 3...) [4]
 # (1) int, unique material tag
 # (2) double, strain of the data point

@@ -4,7 +4,7 @@ Select and collect nodes into a group based on a custom criterion.
 
 ## Syntax
 
-```
+```text title="CustomNodeGroup"
 CustomNodeGroup (1) (2)
 # (1) int, unique group tag
 # (2) int, expression tag

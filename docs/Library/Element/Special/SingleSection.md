@@ -16,7 +16,7 @@ To use the element, a proper section shall be defined.
 
 ## Syntax
 
-```
+```text title="SingleSection"
 element SingleSection2D (1) (2) (3)
 element SingleSection3D (1) (2) (3)
 # (1) int, unique tag

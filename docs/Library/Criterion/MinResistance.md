@@ -5,7 +5,7 @@ the analysis is terminated.
 
 ## Syntax
 
-```
+```text title="MinResistance"
 criterion MinDisplacement (1) (2) (3) (4)
 # (1) int, unique criterion tag
 # (2) int, node

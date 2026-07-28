@@ -7,7 +7,7 @@ the amplitude.
 
 ## Syntax
 
-```
+```text title="Tabular"
 amplitude Tabular (1) (2)
 # (1) int, unique amplitude tag
 # (2) string, external file name

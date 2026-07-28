@@ -12,7 +12,7 @@ Bilinear Quadrilateral With Crack Phase
 
 ## Syntax
 
-```
+```text title="DCP4"
 element DCP4 (1) (2...5) (6) (7) (8) [9]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l

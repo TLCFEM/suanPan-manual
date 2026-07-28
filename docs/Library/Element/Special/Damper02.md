@@ -30,7 +30,7 @@ The `Damper04` is the 3D version.
 
 ## Syntax
 
-```
+```text title="Damper02"
 element Damper02 (1) (2) (3) (4) (5) [6] [7] [8]
 element Damper04 (1) (2) (3) (4) (5) [6] [7] [8]
 # (1) int, unique tag

@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```text title="MaximumGap3D"
 constraint MaximumGap3D (1) (2) (3) (4)
 # (1) int, unique constraint tag
 # (2) int, node tag

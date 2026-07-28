@@ -4,7 +4,7 @@ The `NodeLine` constraint implements 2D node-line contact via Lagrangian multipl
 
 ## Syntax
 
-```
+```text title="NodeLine"
 constraint NodeLine (1) (2) (3) (4)
 # (1) int, unique constraint tag
 # (2) int, master node i tag

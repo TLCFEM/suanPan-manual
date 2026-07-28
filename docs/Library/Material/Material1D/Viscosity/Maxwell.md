@@ -10,7 +10,7 @@ This material model does respond to both displacement and velocity.
 
 ## Syntax
 
-```
+```text title="Maxwell"
 material Maxwell (1) (2) (3) [4] [5] [6]
 # (1) int, unique tag
 # (2) int, damper tag

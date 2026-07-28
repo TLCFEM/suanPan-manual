@@ -4,7 +4,7 @@ Orthotropic Elastic Material
 
 ## Syntax
 
-```
+```text title="OrthotropicElastic3D"
 material OrthotropicElastic3D (1) (2...7) (8...10) [11]
 # (1) int, unique tag
 # (2..7) double, six moduli

@@ -4,7 +4,7 @@ The `Embed2D` constraint implements the embedded constraint in 2D space via mult
 
 ## Syntax
 
-```
+```text title="Embed2D"
 constraint Embed2D (1) (2) (3)
 # (1) int, unique constraint tag
 # (2) int, host element tag

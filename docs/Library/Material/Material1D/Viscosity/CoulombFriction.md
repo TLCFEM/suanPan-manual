@@ -5,7 +5,7 @@ example [`Damper01`](../../../Element/Special/Damper01.md) element.
 
 ## Syntax
 
-```
+```text title="CoulombFriction"
 material CoulombFriction (1) (2) (3)
 # (1) int, unique material tag
 # (2) double, C

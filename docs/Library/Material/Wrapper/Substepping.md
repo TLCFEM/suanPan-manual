@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```
+```text title="Substepping"
 material Substepping (1) (2) [3]
 # (1) int, unique material tag
 # (2) int, associated material tag

@@ -5,7 +5,7 @@ The constraint is only active when the force is below a specified threshold.
 
 ## Syntax
 
-```
+```text title="MaxForce"
 maxforce2d (1) (2) (3) (4)
 maxforce3d (1) (2) (3) (4)
 constraint maxforce2d (1) (2) (3) (4)

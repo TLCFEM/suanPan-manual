@@ -4,7 +4,7 @@ Isotropic Elastic Material
 
 ## Syntax
 
-```
+```text title="IsotropicElastic3D"
 material IsotropicElastic3D (1) (2) (3) [4]
 # (1) int, unique tag
 # (2) double, elastic modulus

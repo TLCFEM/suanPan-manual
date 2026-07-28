@@ -6,7 +6,7 @@ Combines multiple 3D material models into a single one.
 
 ## Syntax
 
-```
+```text title="Stacked"
 material Stacked (1) (2...)
 # (1) int, unique material tag
 # (2...) int, material tags of 3D models need to be contained

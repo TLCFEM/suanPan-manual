@@ -6,7 +6,7 @@ Although called boundary condition, here we only deal with trivial Dirichlet bou
 
 There are currently several commands to define boundary conditions.
 
-```
+```text title="bc"
 fix (1) (2) (3...)
 fix2 (1) (2) (3...)
 multiplierbc (1) (2) (3...)

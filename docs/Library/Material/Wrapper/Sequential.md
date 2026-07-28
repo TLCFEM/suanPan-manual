@@ -6,7 +6,7 @@ Combines multiple 1D material models into a single one.
 
 ## Syntax
 
-```
+```text title="Sequential"
 material Sequential (1) (2...)
 # (1) int, unique material tag
 # (2...) int, material tags of 1D models need to be contained

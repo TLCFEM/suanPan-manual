@@ -4,7 +4,7 @@ Uniaxial Bilinear Elastic Material
 
 ## Syntax
 
-```
+```text title="BilinearElastic1D"
 material BilinearElastic1D (1) (2) (3) (4) [5]
 # (1) int, unique material tag
 # (2) double, elastic modulus

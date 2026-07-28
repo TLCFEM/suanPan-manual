@@ -12,7 +12,7 @@ Bilinear Incompatible Quadrilateral
 
 ## Syntax
 
-```
+```text title="CP4I"
 element CP4I (1) (2...5) (6) [7]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l

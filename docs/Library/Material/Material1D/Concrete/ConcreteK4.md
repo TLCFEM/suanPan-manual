@@ -9,7 +9,7 @@ A Uniaxial Plastic-Damage Concrete Model
 
 ## Syntax
 
-```
+```text title="ConcreteK4"
 material ConcreteK4 (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) [12]
 # (1) int, unique material tag
 # (2) double, elastic modulus (+), typical: 30000 (in MPa)

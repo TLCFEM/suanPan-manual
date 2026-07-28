@@ -9,7 +9,7 @@ Bilinear Hardening Tsai-Wu Model
 
 ## Syntax
 
-```
+```text title="BilinearTsaiWu"
 material BilinearTsaiWu (1) (2...7) (8...10) (11...19) [20] [21]
 # (1) int, unique material tag
 # (2...7) double, six moduli: E_{xx}, E_{yy}, E_{zz}, G_{xy}, G_{yz}, G_{zx}

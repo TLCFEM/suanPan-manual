@@ -25,7 +25,7 @@ This `Damper03` is a simple 3D viscous/nonviscous damper.
 
 ## Syntax
 
-```
+```text title="Damper01"
 element Damper01 (1) (2) (3) (4)
 element Damper03 (1) (2) (3) (4)
 # (1) int, unique tag

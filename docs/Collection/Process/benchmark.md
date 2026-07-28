@@ -8,7 +8,7 @@ matrices rather than multiplying matrices.
 
 ## Syntax
 
-```text
+```text title="benchmark"
 benchmark
 ```
 

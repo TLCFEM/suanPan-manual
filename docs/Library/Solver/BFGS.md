@@ -11,7 +11,7 @@ The implementation is based on Algorithm 7.4.
 
 ## Syntax
 
-```
+```text title="BFGS"
 solver BFGS (1)
 solver LBFGS (1) [2]
 # (1) int, unique solver tag

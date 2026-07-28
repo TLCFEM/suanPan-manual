@@ -5,7 +5,7 @@ working path.
 
 ## Syntax
 
-```
+```text title="file"
 file (1)
 # (1) string, external file name
 ```

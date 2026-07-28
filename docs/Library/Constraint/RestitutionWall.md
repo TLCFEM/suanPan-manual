@@ -16,7 +16,7 @@ other direction is permitted.
 
 The 1D version takes the origin and the side of the wall as the inputs.
 
-```
+```text title="RestitutionWall"
 ! infinite rigid wall by penalty
 restitutionwall (1) (2) (3) (4) [5]
 constraint restitutionwall (1) (2) (3) (4) [5]

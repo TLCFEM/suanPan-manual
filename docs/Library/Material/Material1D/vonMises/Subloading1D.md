@@ -103,7 +103,7 @@ in which $$c_e$$ and $$z_e<1$$ are two constants.
 
 ## Syntax
 
-```text
+```text title="Subloading1D"
 material Subloading1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 # (1) int, unique material tag
 # (2) double, elastic modulus

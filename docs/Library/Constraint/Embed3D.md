@@ -4,7 +4,7 @@ The `Embed3D` constraint implements the embedded constraint in 3D space via mult
 
 ## Syntax
 
-```
+```text title="Embed3D"
 constraint Embed3D (1) (2) (3)
 # (1) int, unique constraint tag
 # (2) int, host element tag

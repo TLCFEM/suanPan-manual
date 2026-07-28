@@ -4,7 +4,7 @@ Uniaxial Multilinear Material Using J2 Plasticity
 
 ## Syntax
 
-```
+```text title="Multilinear1D"
 material MultilinearMises1D (1) (2) (3) ((4) (5)...)
 # (1) int, unique material tag
 # (2) double, elastic modulus

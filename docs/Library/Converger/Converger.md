@@ -7,7 +7,7 @@ system converges.
 
 All convergers, except for [`Logic`](Other/Logic.md) and [`FixedNumber`](Other/FixedNumber.md), share the same definition.
 
-```
+```text title="Converger"
 converger (1) (2) (3) (4) [5]
 # (1) string, converger type
 # (2) int, unique tag

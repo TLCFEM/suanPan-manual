@@ -33,7 +33,7 @@ other direction is permitted.
 
 The 1D version takes the origin and the side of the wall as the inputs.
 
-```
+```text title="RigidWall"
 ! infinite rigid wall by penalty
 rigidwall (1) (2) (3) [4]
 constraint rigidwall (1) (2) (3) [4]
