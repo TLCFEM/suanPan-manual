@@ -34,29 +34,37 @@ var group___criterion =
       [ "process", "d6/d76/class_logic_criterion_o_r.html#adbdb22d023ab2e5f0871a01dcd3f6f01", null ],
       [ "unique_copy", "d6/d76/class_logic_criterion_o_r.html#abb2d9036bb1a4dc69537f6b57b14978f", null ]
     ] ],
+    [ "DisplacementCriterion", "db/de9/class_displacement_criterion.html", [
+      [ "NodeBasedCriterion", "db/de9/class_displacement_criterion.html#a1426067211203b5ae08f0b3979bc5c25", null ],
+      [ "process", "db/de9/class_displacement_criterion.html#aa28df0af0bc0c1414be74b860e25fe2a", null ]
+    ] ],
     [ "MaxDisplacement", "dc/df3/class_max_displacement.html", [
-      [ "NodeBasedCriterion", "dc/df3/class_max_displacement.html#a1426067211203b5ae08f0b3979bc5c25", null ],
-      [ "process", "dc/df3/class_max_displacement.html#ad431f0f513f260317600f1ba60d1476c", null ],
       [ "unique_copy", "dc/df3/class_max_displacement.html#aba8f7dd72f169ac8215477891eb96777", null ]
     ] ],
-    [ "MaxHistory", "dc/d95/class_max_history.html", [
-      [ "MaxHistory", "dc/d95/class_max_history.html#ae4cbddcfbd8997ac18915d0237689ce7", null ],
-      [ "process", "dc/d95/class_max_history.html#a7191ec85188499e4d3f4b0c816cd649b", null ],
-      [ "unique_copy", "dc/d95/class_max_history.html#a04dc08c7819738e14261eb4382f9415e", null ]
-    ] ],
-    [ "MaxResistance", "df/ddd/class_max_resistance.html", [
-      [ "NodeBasedCriterion", "df/ddd/class_max_resistance.html#a1426067211203b5ae08f0b3979bc5c25", null ],
-      [ "process", "df/ddd/class_max_resistance.html#ab3c674fd140d6ddcee0d02916ebf6944", null ],
-      [ "unique_copy", "df/ddd/class_max_resistance.html#ab870b20aaa71ae176f623f86968570dd", null ]
-    ] ],
     [ "MinDisplacement", "df/db4/class_min_displacement.html", [
-      [ "NodeBasedCriterion", "df/db4/class_min_displacement.html#a1426067211203b5ae08f0b3979bc5c25", null ],
-      [ "process", "df/db4/class_min_displacement.html#ad5e67ba10df171c40d319cd3339bad15", null ],
       [ "unique_copy", "df/db4/class_min_displacement.html#acf0834e388f8d50b57f6995d409d709a", null ]
     ] ],
+    [ "HistoryCriterion", "d8/d78/class_history_criterion.html", [
+      [ "HistoryCriterion", "d8/d78/class_history_criterion.html#a4614910501a8027aa171bff6ba619891", null ],
+      [ "process", "d8/d78/class_history_criterion.html#aaaaa7d915f4cbacee09b3807173e7151", null ],
+      [ "limit", "d8/d78/class_history_criterion.html#af1316c4ea46aca4f08cc31e1d01cd953", null ]
+    ] ],
+    [ "MaxHistory", "dc/d95/class_max_history.html", [
+      [ "HistoryCriterion", "dc/d95/class_max_history.html#a4614910501a8027aa171bff6ba619891", null ],
+      [ "unique_copy", "dc/d95/class_max_history.html#a04dc08c7819738e14261eb4382f9415e", null ]
+    ] ],
+    [ "MinHistory", "db/d48/class_min_history.html", [
+      [ "HistoryCriterion", "db/d48/class_min_history.html#a4614910501a8027aa171bff6ba619891", null ],
+      [ "unique_copy", "db/d48/class_min_history.html#a3fc18135f8c28a243c9d20b9e073728b", null ]
+    ] ],
+    [ "ResistanceCriterion", "d9/d74/class_resistance_criterion.html", [
+      [ "NodeBasedCriterion", "d9/d74/class_resistance_criterion.html#a1426067211203b5ae08f0b3979bc5c25", null ],
+      [ "process", "d9/d74/class_resistance_criterion.html#a649a345b664d476dc1c193650a897642", null ]
+    ] ],
+    [ "MaxResistance", "df/ddd/class_max_resistance.html", [
+      [ "unique_copy", "df/ddd/class_max_resistance.html#ab870b20aaa71ae176f623f86968570dd", null ]
+    ] ],
     [ "MinResistance", "d4/da5/class_min_resistance.html", [
-      [ "NodeBasedCriterion", "d4/da5/class_min_resistance.html#a1426067211203b5ae08f0b3979bc5c25", null ],
-      [ "process", "d4/da5/class_min_resistance.html#aecffe23bd99ce9dbf2b2a55cf3b14483", null ],
       [ "unique_copy", "d4/da5/class_min_resistance.html#ad9220e200004ba6dc552ea408f5334dd", null ]
     ] ],
     [ "NodeBasedCriterion", "df/da9/class_node_based_criterion.html", [

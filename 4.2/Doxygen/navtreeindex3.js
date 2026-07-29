@@ -1,8 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"d1/dc3/class_step.html#ac05f2b609bccc9551db46d38855635ea":[2,19,6,43],
-"d1/dc3/class_step.html#ac8c97360f7bfe80e3b67109a0084df8d":[2,19,6,2],
-"d1/dc3/class_step.html#ad315df4cebe223e9b2629079aaa8a873":[2,19,6,17],
 "d1/dc3/class_step.html#adae528d4dabb1054128f81ea124ba3ee":[2,19,6,47],
 "d1/dc3/class_step.html#adaff31a7ca34abad5af87857e653559b":[2,19,6,48],
 "d1/dc3/class_step.html#adfd53ec1b9d3abc5422c0da05429cf97":[2,19,6,16],
@@ -108,6 +105,7 @@ var NAVTREEINDEX3 =
 "d2/d0d/struct_bounding_box.html#ad6c08e774906cf23812610f92a8ce05f":[5,0,64,2],
 "d2/d0e/_b2_d_c_8h.html":[6,0,6,10,2],
 "d2/d0e/_b2_d_c_8h_source.html":[6,0,6,10,2],
+"d2/d1b/_min_max_history_8cpp.html":[6,0,1,0,10],
 "d2/d1d/class_t3_d2_s.html":[2,10,8,3],
 "d2/d1d/class_t3_d2_s.html#a1861f8bca23e9bcac476f797a0ceb40f":[2,10,8,3,5],
 "d2/d1d/class_t3_d2_s.html#a2b0bc38bbb675d359bc1361dfa90de43":[2,10,8,3,3],
@@ -153,8 +151,8 @@ var NAVTREEINDEX3 =
 "d2/d22/class_lee_newmark_base.html#af219a71f5be76af2cbac4b5de1cfd7dc":[2,18,15,8],
 "d2/d22/class_lee_newmark_base.html#af260f147f3fe085c539dacff6af213c3":[2,18,15,14],
 "d2/d22/class_lee_newmark_base.html#af9e432666696dcf88900f8207ac7d3ad":[2,18,15,23],
-"d2/d23/_strain_energy_evolution_8h.html":[6,0,1,0,21],
-"d2/d23/_strain_energy_evolution_8h_source.html":[6,0,1,0,21],
+"d2/d23/_strain_energy_evolution_8h.html":[6,0,1,0,17],
+"d2/d23/_strain_energy_evolution_8h_source.html":[6,0,1,0,17],
 "d2/d23/class_concrete_exp.html":[2,13,0,4],
 "d2/d23/class_concrete_exp.html#a19d45e748f97e33b1c45703f77da1391":[2,13,0,4,1],
 "d2/d23/class_concrete_exp.html#a4e28086bbe53e8ce0990c0540c436569":[2,13,0,4,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX3 =
 "d2/d3d/tensor_8h.html#a86f89d6f7333dd229377cb756bb272f4":[6,0,16,33,25],
 "d2/d3d/tensor_8h.html#a9b745c523d879ee9f08ab33cb9239629":[6,0,16,33,65],
 "d2/d3d/tensor_8h.html#aa32a31a9292354d44052b8f5351669ce":[6,0,16,33,32],
-"d2/d3d/tensor_8h.html#aa364f90f707a9daeb68ba567b83351a5":[6,0,16,33,2]
+"d2/d3d/tensor_8h.html#aa364f90f707a9daeb68ba567b83351a5":[6,0,16,33,2],
+"d2/d3d/tensor_8h.html#aa4ddb7413b351807353d5f29c458a6b4":[6,0,16,33,48],
+"d2/d3d/tensor_8h.html#aa6e4a3bdb53419a6de313568d9c3e7f2":[6,0,16,33,33]
 };

@@ -866,16 +866,23 @@ var hierarchy =
             [ "ComplementaryEnergyEvolution", "de/ddd/class_complementary_energy_evolution.html", null ],
             [ "StrainEnergyEvolution", "de/d88/class_strain_energy_evolution.html", null ]
           ] ],
+          [ "HistoryCriterion", "d8/d78/class_history_criterion.html", [
+            [ "MaxHistory", "dc/d95/class_max_history.html", null ],
+            [ "MinHistory", "db/d48/class_min_history.html", null ]
+          ] ],
           [ "LogicCriterion", "d4/ddd/class_logic_criterion.html", [
             [ "LogicCriterionAND", "d7/d4e/class_logic_criterion_a_n_d.html", null ],
             [ "LogicCriterionOR", "d6/d76/class_logic_criterion_o_r.html", null ]
           ] ],
-          [ "MaxHistory", "dc/d95/class_max_history.html", null ],
           [ "NodeBasedCriterion", "df/da9/class_node_based_criterion.html", [
-            [ "MaxDisplacement", "dc/df3/class_max_displacement.html", null ],
-            [ "MaxResistance", "df/ddd/class_max_resistance.html", null ],
-            [ "MinDisplacement", "df/db4/class_min_displacement.html", null ],
-            [ "MinResistance", "d4/da5/class_min_resistance.html", null ]
+            [ "DisplacementCriterion", "db/de9/class_displacement_criterion.html", [
+              [ "MaxDisplacement", "dc/df3/class_max_displacement.html", null ],
+              [ "MinDisplacement", "df/db4/class_min_displacement.html", null ]
+            ] ],
+            [ "ResistanceCriterion", "d9/d74/class_resistance_criterion.html", [
+              [ "MaxResistance", "df/ddd/class_max_resistance.html", null ],
+              [ "MinResistance", "d4/da5/class_min_resistance.html", null ]
+            ] ]
           ] ]
         ] ],
         [ "Database", "dc/d83/class_database.html", null ],

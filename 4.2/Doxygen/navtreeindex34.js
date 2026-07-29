@@ -1,5 +1,9 @@
 var NAVTREEINDEX34 =
 {
+"de/d38/struct_data_dafalias_manzari.html#aa66e56dd1512763c72367ad513ea7492":[2,13,2,59,5],
+"de/d38/struct_data_dafalias_manzari.html#aa87f3ca4972cc34952f4076c8bc0cb7d":[2,13,2,59,1],
+"de/d38/struct_data_dafalias_manzari.html#aa97bedef9fac762dcbc530fba19037aa":[2,13,2,59,10],
+"de/d38/struct_data_dafalias_manzari.html#ac5a0c7b91c409c0c7b720360fd37c609":[2,13,2,59,15],
 "de/d38/struct_data_dafalias_manzari.html#ac817231fbb24732c9391deab57124220":[2,13,2,59,3],
 "de/d38/struct_data_dafalias_manzari.html#aeaea38224f52a198a5fa33f668bdb9d3":[2,13,2,59,8],
 "de/d39/_d_k_t_s3_8h.html":[6,0,6,7,1],
@@ -15,6 +19,8 @@ var NAVTREEINDEX34 =
 "de/d44/_simple_hysteresis_8h_source.html":[6,0,9,0,3,31],
 "de/d45/_c_p6_8h.html":[6,0,6,2,6,9],
 "de/d45/_c_p6_8h_source.html":[6,0,6,2,6,9],
+"de/d4a/_min_max_displacement_8h.html":[6,0,1,0,9],
+"de/d4a/_min_max_displacement_8h_source.html":[6,0,1,0,9],
 "de/d4b/class_custom_gurson.html":[2,13,2,71],
 "de/d4b/class_custom_gurson.html#a920c25899bd62292d3a24ec71a6ac5d3":[2,13,2,71,0],
 "de/d4b/class_custom_gurson.html#a9b4569f74f0f7f647df391164c952cbe":[2,13,2,71,1],
@@ -185,9 +191,9 @@ var NAVTREEINDEX34 =
 "de/d87/class_u_d_newmark.html#ad0ef60f71123efbbbea9faaa69ae75ae":[2,18,22,9],
 "de/d87/class_u_d_newmark.html#adce9b7ffa2daaf496686c1795809d22c":[2,18,22,3],
 "de/d87/class_u_d_newmark.html#ae19dda809a7993f84a970aacca92bbd3":[2,18,22,8],
-"de/d88/class_strain_energy_evolution.html":[2,1,12],
-"de/d88/class_strain_energy_evolution.html#a0a43b4d01d5260a04cf96f147322f929":[2,1,12,1],
-"de/d88/class_strain_energy_evolution.html#a9f48ccc16f831aa31be1cb6ad62296e1":[2,1,12,0],
+"de/d88/class_strain_energy_evolution.html":[2,1,16],
+"de/d88/class_strain_energy_evolution.html#a0a43b4d01d5260a04cf96f147322f929":[2,1,16,1],
+"de/d88/class_strain_energy_evolution.html#a9f48ccc16f831aa31be1cb6ad62296e1":[2,1,16,0],
 "de/d89/_p_s_8h.html":[6,0,6,2,4,1],
 "de/d89/_p_s_8h_source.html":[6,0,6,2,4,1],
 "de/d8a/_lumped_scale_8h.html":[6,0,6,3,9],
@@ -243,11 +249,5 @@ var NAVTREEINDEX34 =
 "de/d8b/group___meta_mat.html#gab9e3f887d1ca4ca8cb24b1917b7cb76d":[2,9,39],
 "de/d8b/group___meta_mat.html#gabd58ba3b4f5b0fbafcddec92293c3525":[2,9,34],
 "de/d8b/group___meta_mat.html#gac1268cb881ccdefc6fb6da2d015ab5c7":[2,9,58],
-"de/d8b/group___meta_mat.html#gac3a05ba1bc64b31a372fc0807c3ad612":[2,9,73],
-"de/d8b/group___meta_mat.html#gac93c500e053621db368cb74f42ffb7b1":[2,9,37],
-"de/d8b/group___meta_mat.html#gad32093437cc860d9d2b45f9a6d448f05":[2,9,65],
-"de/d8b/group___meta_mat.html#gad5d6187cfe58f5992835dc6e68db3b48":[2,9,41],
-"de/d8b/group___meta_mat.html#gaee4f01ccadd7662bbab186c692ec1e4d":[2,9,66],
-"de/d8b/group___meta_mat.html#gaf189e4d7dd607129f87bde8dd35d921e":[2,9,48],
-"de/d8b/group___meta_mat.html#gafa7e9d8364c940b98ba5f8374fb0080c":[2,9,70]
+"de/d8b/group___meta_mat.html#gac3a05ba1bc64b31a372fc0807c3ad612":[2,9,73]
 };

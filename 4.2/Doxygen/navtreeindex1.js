@@ -26,8 +26,6 @@ var NAVTREEINDEX1 =
 "d0/dae/group___load.html":[2,12],
 "d0/dae/group___load.html#gaf634afa2b8d06254d2908c608b65fc66":[2,12,16],
 "d0/daf/_section1_d_8cpp.html":[6,0,13,0,6],
-"d0/db0/_min_displacement_8h.html":[6,0,1,0,15],
-"d0/db0/_min_displacement_8h_source.html":[6,0,1,0,15],
 "d0/db6/_slip_lock_8h.html":[6,0,9,0,3,33],
 "d0/db6/_slip_lock_8h_source.html":[6,0,9,0,3,33],
 "d0/db7/structsuanpan_1_1damping_1_1rayleigh.html":[5,0,1,0,1],
@@ -242,12 +240,14 @@ var NAVTREEINDEX1 =
 "d1/d22/_frequency_8h_source.html":[6,0,15,9],
 "d1/d24/_nodal_displacement_8h.html":[6,0,8,12],
 "d1/d24/_nodal_displacement_8h_source.html":[6,0,8,12],
-"d1/d27/_min_displacement_8cpp.html":[6,0,1,0,14],
 "d1/d2a/_poly_j2_8cpp.html":[6,0,9,2,7,25],
 "d1/d30/_v_a_f_c_r_p_8h.html":[6,0,9,2,7,33],
 "d1/d30/_v_a_f_c_r_p_8h_source.html":[6,0,9,2,7,33],
 "d1/d38/_t2_d2_s_8cpp.html":[6,0,6,9,2],
-"d1/d38/class_quadratic.html":[5,0,523],
+"d1/d38/class_quadratic.html":[5,0,526],
 "d1/d3d/class_armstrong_frederick1_d.html":[2,13,0,84],
-"d1/d3d/class_armstrong_frederick1_d.html#a2147acb83134ec0ec2ad826f257010b0":[2,13,0,84,2]
+"d1/d3d/class_armstrong_frederick1_d.html#a2147acb83134ec0ec2ad826f257010b0":[2,13,0,84,2],
+"d1/d3d/class_armstrong_frederick1_d.html#a3a774031f992f43a5ed5ae3f2a2ad0d7":[2,13,0,84,1],
+"d1/d3d/class_armstrong_frederick1_d.html#a50164ab4dce849a251e52ac8f491e58b":[2,13,0,84,4],
+"d1/d3d/class_armstrong_frederick1_d.html#a6132eb4e013e5d89ef3b59897ce670e1":[2,13,0,84,5]
 };

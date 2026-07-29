@@ -1,10 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"d7/da6/class_stress_wrapper.html#affdd3bc943e2e5cfc0e5909e45d2e7df":[2,13,2,93,6],
-"d7/da7/class_sparse_mat_cluster_l_i_s.html":[2,9,18],
-"d7/da7/class_sparse_mat_cluster_l_i_s.html#a6666bfb20f4bdde55024d48c5c69f507":[2,9,18,0],
-"d7/da7/class_sparse_mat_cluster_l_i_s.html#a994782e87324171ebde5727bd0a78a04":[2,9,18,2],
-"d7/da7/class_sparse_mat_cluster_l_i_s.html#ad20535bc168a3710f70d6e112d11ea1a":[2,9,18,1],
 "d7/da8/class_b3_d_l.html":[2,10,9,11],
 "d7/da8/class_b3_d_l.html#a2150b29ff407c68dd20210798d589d67":[2,10,9,11,1],
 "d7/da8/class_b3_d_l.html#a21c2d3195533cbadcba008e2190f6e59":[2,10,9,11,3],
@@ -80,7 +75,7 @@ var NAVTREEINDEX18 =
 "d7/dc8/class_v_a_f_n_m.html#aa9bb47a67bea17e2af29cc7345f49ee1":[2,15,3,17,1],
 "d7/dc8/class_v_a_f_n_m.html#ac0c1db452b943c97baf22ed466db52a9":[2,15,3,17,2],
 "d7/dc8/class_v_a_f_n_m.html#adab6a13f0e291ead301c3d9f63216164":[2,15,3,17,0],
-"d7/dc9/class_full_mat_cluster.html":[5,0,315],
+"d7/dc9/class_full_mat_cluster.html":[5,0,316],
 "d7/dce/class_max_force.html":[2,0,10],
 "d7/dce/class_max_force.html#a413143c2f46c0d90187165c1c21613fc":[2,0,10,2],
 "d7/dce/class_max_force.html#a5fdf355ebd7b9d2504225d252d58216a":[2,0,10,3],
@@ -239,6 +234,8 @@ var NAVTREEINDEX18 =
 "d8/d26/_section_example_8h.html":[6,0,4,3,1],
 "d8/d26/_section_example_8h_source.html":[6,0,4,3,1],
 "d8/d28/_armstrong_frederick1_d_8cpp.html":[6,0,9,0,5,0],
+"d8/d28/_min_max_history_8h.html":[6,0,1,0,11],
+"d8/d28/_min_max_history_8h_source.html":[6,0,1,0,11],
 "d8/d29/_frame_recorder_8cpp.html":[6,0,10,6],
 "d8/d29/_frame_recorder_8cpp.html#a01160b59c8bb53c23fc8fa743307deef":[6,0,10,6,0],
 "d8/d2e/_band_symm_mat_8hpp.html":[6,0,5,1,1,3],
@@ -249,5 +246,8 @@ var NAVTREEINDEX18 =
 "d8/d33/class_arc_length.html#af35f2886a205e58341b6ce84bae36f88":[2,19,0,0],
 "d8/d37/_converger_parser_8cpp.html":[6,0,2,14],
 "d8/d37/_converger_parser_8cpp.html#a8b080d73b37818924bda9769f0e88c04":[6,0,2,14,0],
-"d8/d39/struct_data_bilinear_j2.html":[2,13,2,67]
+"d8/d39/struct_data_bilinear_j2.html":[2,13,2,67],
+"d8/d39/struct_data_bilinear_j2.html#a62067850f25110b2099e4871e4958ffa":[2,13,2,67,0],
+"d8/d39/struct_data_bilinear_j2.html#a6a3746e03bd175791ea94c6f44ad81fe":[2,13,2,67,2],
+"d8/d39/struct_data_bilinear_j2.html#a821020d16f14d13b5c6604d426cbe641":[2,13,2,67,3]
 };

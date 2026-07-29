@@ -99,12 +99,13 @@ var searchData=
   ['degradation_96',['Degradation',['../db/d75/class_degradation.html',1,'']]],
   ['densemat_97',['DenseMat',['../d0/de9/class_dense_mat.html',1,'']]],
   ['dhakal_98',['Dhakal',['../d7/d01/class_dhakal.html',1,'']]],
-  ['distributed_99',['Distributed',['../dd/d45/class_distributed.html',1,'']]],
-  ['dkt3_100',['DKT3',['../d3/dfd/class_d_k_t3.html',1,'']]],
-  ['dkt4_101',['DKT4',['../d8/da3/class_d_k_t4.html',1,'']]],
-  ['dkts3_102',['DKTS3',['../db/dea/class_d_k_t_s3.html',1,'']]],
-  ['domain_103',['Domain',['../d4/df4/class_domain.html',1,'']]],
-  ['domainbase_104',['DomainBase',['../d4/d83/class_domain_base.html',1,'']]],
-  ['duncanselig_105',['DuncanSelig',['../de/d0b/class_duncan_selig.html',1,'']]],
-  ['dynamic_106',['Dynamic',['../db/d7f/class_dynamic.html',1,'']]]
+  ['displacementcriterion_99',['DisplacementCriterion',['../db/de9/class_displacement_criterion.html',1,'']]],
+  ['distributed_100',['Distributed',['../dd/d45/class_distributed.html',1,'']]],
+  ['dkt3_101',['DKT3',['../d3/dfd/class_d_k_t3.html',1,'']]],
+  ['dkt4_102',['DKT4',['../d8/da3/class_d_k_t4.html',1,'']]],
+  ['dkts3_103',['DKTS3',['../db/dea/class_d_k_t_s3.html',1,'']]],
+  ['domain_104',['Domain',['../d4/df4/class_domain.html',1,'']]],
+  ['domainbase_105',['DomainBase',['../d4/d83/class_domain_base.html',1,'']]],
+  ['duncanselig_106',['DuncanSelig',['../de/d0b/class_duncan_selig.html',1,'']]],
+  ['dynamic_107',['Dynamic',['../db/d7f/class_dynamic.html',1,'']]]
 ];

@@ -1,7 +1,5 @@
 var NAVTREEINDEX21 =
 {
-"d8/dd1/class_cell2_d.html#a1a2207b6420ae66f59b09a8ff00206e3":[2,15,0,2,1],
-"d8/dd1/class_cell2_d.html#a52e5e1c4170080fb7f1644b104c4057c":[2,15,0,2,3],
 "d8/dd1/class_cell2_d.html#a859433ccdc01f4feccc70203114f1782":[2,15,0,2,0],
 "d8/dd1/class_cell2_d.html#a9530ab4b4ffcd3251b36d7354c7a7779":[2,15,0,2,2],
 "d8/dd3/class_c_s_m_q6.html":[2,10,2,5],
@@ -9,6 +7,8 @@ var NAVTREEINDEX21 =
 "d8/dd4/_b3_d_c_8cpp.html":[6,0,6,10,5],
 "d8/dd7/_custom_gurson1_d_8h.html":[6,0,9,0,5,9],
 "d8/dd7/_custom_gurson1_d_8h_source.html":[6,0,9,0,5,9],
+"d8/dd9/_min_max_resistance_8h.html":[6,0,1,0,13],
+"d8/dd9/_min_max_resistance_8h_source.html":[6,0,1,0,13],
 "d8/ddb/class_lumped_simple.html":[2,4,7],
 "d8/ddb/class_lumped_simple.html#a49fd13703e4961c37e5a1b485e96f24a":[2,4,7,1],
 "d8/ddb/class_lumped_simple.html#a944cb7bc0a37c0dc7a79b7c2a69cbaa4":[2,4,7,0],
@@ -130,9 +130,9 @@ var NAVTREEINDEX21 =
 "d9/d2d/_custom_viscosity_8h_source.html":[6,0,9,0,4,3],
 "d9/d34/_multilinear_mises1_d_8h.html":[6,0,9,0,5,17],
 "d9/d34/_multilinear_mises1_d_8h_source.html":[6,0,9,0,5,17],
-"d9/d36/struct_vector2_d.html":[5,0,674],
-"d9/d36/struct_vector2_d.html#a4824c9b6a9eb9a60cb23be5e57fd061e":[5,0,674,0],
-"d9/d36/struct_vector2_d.html#a8d2763f6cc88f084cb2c6ab1ef10c81d":[5,0,674,1],
+"d9/d36/struct_vector2_d.html":[5,0,678],
+"d9/d36/struct_vector2_d.html#a4824c9b6a9eb9a60cb23be5e57fd061e":[5,0,678,0],
+"d9/d36/struct_vector2_d.html#a8d2763f6cc88f084cb2c6ab1ef10c81d":[5,0,678,1],
 "d9/d3a/_converter_8cpp.html":[6,0,16,9],
 "d9/d3f/struct_data_simple_sand.html":[2,13,2,61],
 "d9/d3f/struct_data_simple_sand.html#a132572f7178da2e2e709de375635b047":[2,13,2,61,10],
@@ -231,6 +231,9 @@ var NAVTREEINDEX21 =
 "d9/d6d/class_v_a_f_c_r_p.html#aa593292147af72228afe2e0b78694773":[2,13,2,90,4],
 "d9/d6d/class_v_a_f_c_r_p.html#ad8c4c31ba91a7c56677ff3bdfd016517":[2,13,2,90,6],
 "d9/d6d/class_v_a_f_c_r_p.html#adae27a481b2e2d1e00dabdf3aba617c4":[2,13,2,90,2],
+"d9/d74/class_resistance_criterion.html":[2,1,12],
+"d9/d74/class_resistance_criterion.html#a1426067211203b5ae08f0b3979bc5c25":[2,1,12,0],
+"d9/d74/class_resistance_criterion.html#a649a345b664d476dc1c193650a897642":[2,1,12,1],
 "d9/d75/_h_d_f_8h.html":[6,0,3,3],
 "d9/d75/_h_d_f_8h_source.html":[6,0,3,3],
 "d9/d75/class_nonviscous_newmark.html":[2,18,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX21 =
 "d9/d76/class_sparse_mat_super_l_u.html#adc7d935699e9c97324881466cc3dfaf2":[2,9,25,5],
 "d9/d7b/_particle_collision_8cpp.html":[6,0,1,21],
 "d9/d7c/_maxwell_8cpp.html":[6,0,9,0,4,6],
-"d9/d80/_kelvin_8h.html":[6,0,9,0,4,5],
-"d9/d80/_kelvin_8h_source.html":[6,0,9,0,4,5],
-"d9/d80/_section_n_m2_d_8h.html":[6,0,13,3,19],
-"d9/d80/_section_n_m2_d_8h_source.html":[6,0,13,3,19]
+"d9/d80/_kelvin_8h.html":[6,0,9,0,4,5]
 };
