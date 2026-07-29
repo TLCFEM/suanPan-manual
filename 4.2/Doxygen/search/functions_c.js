@@ -24,7 +24,7 @@ var searchData=
   ['max_21',['max',['../db/d78/classtriplet__form.html#a39557d90bd47706927a4a6c0a5d2a0a3',1,'triplet_form::max()'],['../d5/d13/class_sparse_mat.html#a3631957e59f3ed698b19fbf1adf518ef',1,'SparseMat::max()'],['../d0/de9/class_dense_mat.html#a830f536b21692b819176128d9524176e',1,'DenseMat::max()'],['../df/dad/classcsr__form.html#a05ee23c4e2a884c2383e27da74635041',1,'csr_form::max()'],['../dc/d3c/classcsc__form.html#a9f2b53fd2de0fb7aed09f7eae0b81465',1,'csc_form::max()'],['../d8/d79/class_meta_mat.html#a27c941f6f663ebce5efd95eb53b9bd1a',1,'MetaMat::max()']]],
   ['max_5felement_22',['max_element',['../d6/d9c/namespacesuanpan.html#ac160cee0ccc3a40e50ff1d8f128f3d70',1,'suanpan']]],
   ['maxforce_23',['MaxForce',['../d7/dce/class_max_force.html#a63cef120557f26b7b30574eaff211838',1,'MaxForce']]],
-  ['maxhistory_24',['MaxHistory',['../dc/d95/class_max_history.html#a519a3af9da4c5b265ea9195a0cb79523',1,'MaxHistory']]],
+  ['maxhistory_24',['MaxHistory',['../dc/d95/class_max_history.html#ae4cbddcfbd8997ac18915d0237689ce7',1,'MaxHistory']]],
   ['maximumgap_25',['MaximumGap',['../d7/d3b/class_maximum_gap.html#a32f4abc8c0ab5031d787ba08b2e5712e',1,'MaximumGap']]],
   ['maxwell_26',['Maxwell',['../db/d83/class_maxwell.html#a5714891eb01f44c3bbc0b05f755f7fd2',1,'Maxwell']]],
   ['mean3_27',['mean3',['../dd/d8c/namespacetensor.html#a735fc96d0b8bcb54fd29f2660d97a2ca',1,'tensor']]],
