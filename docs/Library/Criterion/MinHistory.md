@@ -1,12 +1,12 @@
-# MaxHistory
+# MinHistory
 
-The `MaxHistory` criterion tests the specified historical variable, if it **exceeds** (be greater than) the given value, the corresponding
+The `MinHistory` criterion tests the specified historical variable, if it **exceeds** (be smaller than) the given value, the corresponding
 element is disabled.
 
 ## Syntax
 
-```text title="MaxHistory"
-criterion MaxHistory (1) (2) (3) [(4)...]
+```text title="MinHistory"
+criterion MinHistory (1) (2) (3) [(4)...]
 # (1) int, unique criterion tag
 # (2) string, history variable type
 # (3) double, limit
