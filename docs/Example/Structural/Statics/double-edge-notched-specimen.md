@@ -34,7 +34,7 @@ The boundary conditions are explicitly assigned to the corresponding node groups
 
 ```
 # for all four edges, the drilling DoFs are constrained
-grouppenaltybc 1 3 1 2 3 4
+grouppenaltybc 1 ur3 1 2 3 4
 
 # constrain horizontal movement of edge 2
 grouppenaltybc 2 1 2
@@ -88,7 +88,7 @@ It is possible to further define a criterion so that for elements that exceed a 
 removed from the model. This is an approach adopted widely to simulate crack propagation.
 
 ```
-criterion MaxHistory 1 DT .8
+criterion MaxHistory 1 DT .9
 ```
 
 The animation of crack development is shown as follows.
