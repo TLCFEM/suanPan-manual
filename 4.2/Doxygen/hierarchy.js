@@ -850,9 +850,9 @@ var hierarchy =
           [ "AbsResidual", "de/dce/class_abs_residual.html", null ],
           [ "FixedNumber", "dd/d07/class_fixed_number.html", null ],
           [ "LogicConverger", "de/d65/class_logic_converger.html", [
-            [ "LogicAND", "dc/d0d/class_logic_a_n_d.html", null ],
-            [ "LogicOR", "dc/d41/class_logic_o_r.html", null ],
-            [ "LogicXOR", "da/d98/class_logic_x_o_r.html", null ]
+            [ "LogicConvergerAND", "d0/d8b/class_logic_converger_a_n_d.html", null ],
+            [ "LogicConvergerOR", "d6/d59/class_logic_converger_o_r.html", null ],
+            [ "LogicConvergerXOR", "d0/d94/class_logic_converger_x_o_r.html", null ]
           ] ],
           [ "RelDisp", "dc/dee/class_rel_disp.html", null ],
           [ "RelError", "dd/d17/class_rel_error.html", null ],

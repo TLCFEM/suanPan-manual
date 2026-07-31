@@ -1,9 +1,11 @@
 var class_criterion =
 [
-    [ "Criterion", "d3/d46/class_criterion.html#a7960546d8d965d334f1a910ee2ad5b7e", null ],
-    [ "get_step_tag", "d3/d46/class_criterion.html#ac78e24b69f1a3c733f3414aeaebba7a7", null ],
+    [ "CopyableTag", "d3/d46/class_criterion.html#a94003714911d6a699b1269fda31296e9", null ],
+    [ "CopyableTag", "d3/d46/class_criterion.html#a8af101a244a1e108ea95e973862aebeb", null ],
+    [ "if_apply", "d3/d46/class_criterion.html#a8160ab8a14249f35674fca49e1941c07", null ],
     [ "initialize", "d3/d46/class_criterion.html#a6c102120971a41f89c3834faa6d23e6a", null ],
     [ "process", "d3/d46/class_criterion.html#adde6eba07b2e25183815ad7737d55a41", null ],
-    [ "set_step_tag", "d3/d46/class_criterion.html#a392d50f586c0eaa8ac03d064e5976c65", null ],
+    [ "set_end_step", "d3/d46/class_criterion.html#ab47dd98bbb36461175c877989ca87383", null ],
+    [ "set_start_step", "d3/d46/class_criterion.html#ad14ec12e4dac7dc03fb78f9572dfb70c", null ],
     [ "unique_copy", "d3/d46/class_criterion.html#af50a39b6bb4ea7d14311a991baf7b267", null ]
 ];

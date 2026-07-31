@@ -159,24 +159,23 @@ $(document).ready(function(){initNavTree('dd/db4/_energy_evolution_8h_source.htm
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_class" href="../../d1/d87/class_energy_evolution.html">EnergyEvolution</a>(</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">unsigned</span>,      <span class="comment">// tag</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">unsigned</span>,      <span class="comment">// step tag</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">unsigned</span>,      <span class="comment">// incre level</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">unsigned</span>,      <span class="comment">// final level</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">double</span> = 1.,   <span class="comment">// centre weight</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">unsigned</span> = 2,  <span class="comment">// propagation iteration</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">unsigned</span> = 10, <span class="comment">// reactivation ratio</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">double</span> = .5,   <span class="comment">// propagation weight</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">double</span> = 1<a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca3a3ea00cfc35332cedf6e5e9a32e94da">E</a>-5  <span class="comment">// tolerance</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    );</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/d87/class_energy_evolution.html#a0c913c95b841505f1fa0927fd66813eb">initialize</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/d87/class_energy_evolution.html#a0efb01810295b18311e78e2d4289d42d">process</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">unsigned</span>,      <span class="comment">// incre level</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">unsigned</span>,      <span class="comment">// final level</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">double</span> = 1.,   <span class="comment">// centre weight</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">unsigned</span> = 2,  <span class="comment">// propagation iteration</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">unsigned</span> = 10, <span class="comment">// reactivation ratio</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">double</span> = .5,   <span class="comment">// propagation weight</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">double</span> = 1<a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca3a3ea00cfc35332cedf6e5e9a32e94da">E</a>-5  <span class="comment">// tolerance</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    );</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/d87/class_energy_evolution.html#a0c913c95b841505f1fa0927fd66813eb">initialize</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/d87/class_energy_evolution.html#a0efb01810295b18311e78e2d4289d42d">process</a>(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
 </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="ttc" id="a_criterion_8h_html"><div class="ttname"><a href="../../d0/d63/_criterion_8h.html">Criterion.h</a></div></div>
 <div class="ttc" id="aclass_criterion_html"><div class="ttname"><a href="../../d3/d46/class_criterion.html">Criterion</a></div><div class="ttdoc">A Criterion class.</div><div class="ttdef"><b>Definition</b> Criterion.h:38</div></div>
 <div class="ttc" id="aclass_element_html"><div class="ttname"><a href="../../d5/d50/class_element.html">Element</a></div><div class="ttdoc">A Element class.</div><div class="ttdef"><b>Definition</b> Element.h:120</div></div>

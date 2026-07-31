@@ -59,20 +59,20 @@ var group___converger =
       [ "converger_a", "de/d65/class_logic_converger.html#a4714d6b8d969a4ffce8ef59ff329cb31", null ],
       [ "converger_b", "de/d65/class_logic_converger.html#a7f035472899143d120ba990527304dd1", null ]
     ] ],
-    [ "LogicAND", "dc/d0d/class_logic_a_n_d.html", [
-      [ "is_converged", "dc/d0d/class_logic_a_n_d.html#a6c59ce2b994d5eae308380f85c4e0275", null ],
-      [ "LogicConverger", "dc/d0d/class_logic_a_n_d.html#a612c4e4df2e958a0e0bafb9fa46951ce", null ],
-      [ "unique_copy", "dc/d0d/class_logic_a_n_d.html#a44355a90fd9a0c9c213cc9d71470de3d", null ]
+    [ "LogicConvergerAND", "d0/d8b/class_logic_converger_a_n_d.html", [
+      [ "is_converged", "d0/d8b/class_logic_converger_a_n_d.html#a12f163ef60841dbf7540371936c800ea", null ],
+      [ "LogicConverger", "d0/d8b/class_logic_converger_a_n_d.html#a612c4e4df2e958a0e0bafb9fa46951ce", null ],
+      [ "unique_copy", "d0/d8b/class_logic_converger_a_n_d.html#a4cddef35c93d72fcb1a1de099db6d2d5", null ]
     ] ],
-    [ "LogicOR", "dc/d41/class_logic_o_r.html", [
-      [ "is_converged", "dc/d41/class_logic_o_r.html#a54b81336a3a1495e962032c335740370", null ],
-      [ "LogicConverger", "dc/d41/class_logic_o_r.html#a612c4e4df2e958a0e0bafb9fa46951ce", null ],
-      [ "unique_copy", "dc/d41/class_logic_o_r.html#a034961809c10c17d8fd870986b7a24bc", null ]
+    [ "LogicConvergerOR", "d6/d59/class_logic_converger_o_r.html", [
+      [ "is_converged", "d6/d59/class_logic_converger_o_r.html#aaf5cd81699c5b1cbff54342c2402afbc", null ],
+      [ "LogicConverger", "d6/d59/class_logic_converger_o_r.html#a612c4e4df2e958a0e0bafb9fa46951ce", null ],
+      [ "unique_copy", "d6/d59/class_logic_converger_o_r.html#affea7964369ab6d1ef7c6847f81525fb", null ]
     ] ],
-    [ "LogicXOR", "da/d98/class_logic_x_o_r.html", [
-      [ "is_converged", "da/d98/class_logic_x_o_r.html#a083c12ee829e96551f1cc73d675669c6", null ],
-      [ "LogicConverger", "da/d98/class_logic_x_o_r.html#a612c4e4df2e958a0e0bafb9fa46951ce", null ],
-      [ "unique_copy", "da/d98/class_logic_x_o_r.html#abec535782c322cadb9b6132886693570", null ]
+    [ "LogicConvergerXOR", "d0/d94/class_logic_converger_x_o_r.html", [
+      [ "is_converged", "d0/d94/class_logic_converger_x_o_r.html#a0cb0ff2aebc75697c544dd5aec364ea3", null ],
+      [ "LogicConverger", "d0/d94/class_logic_converger_x_o_r.html#a612c4e4df2e958a0e0bafb9fa46951ce", null ],
+      [ "unique_copy", "d0/d94/class_logic_converger_x_o_r.html#a47bb1a8104113c30053d56c763fd2701", null ]
     ] ],
     [ "RelDisp", "dc/dee/class_rel_disp.html", [
       [ "RelDisp", "dc/dee/class_rel_disp.html#a5a076ce7eaa5fce3dde7f59c13018255", null ],

@@ -1,5 +1,15 @@
 var NAVTREEINDEX13 =
 {
+"d5/d13/class_sparse_mat.html#aa1c0c26f42a24c5aa31af509552a3f46":[2,9,26,4],
+"d5/d13/class_sparse_mat.html#aab10f3a2fcdbef0fefe225f587631562":[2,9,26,14],
+"d5/d13/class_sparse_mat.html#ab04e6cc121675060e3c381a4b680f711":[2,9,26,5],
+"d5/d13/class_sparse_mat.html#ae2167580b521fd8079301afd3a3a33ec":[2,9,26,6],
+"d5/d13/class_sparse_mat.html#aeb08d339d19ddfc79d499685f0f326e0":[2,9,26,13],
+"d5/d13/struct_data_section_n_m2_d.html":[2,15,3,11],
+"d5/d13/struct_data_section_n_m2_d.html#a0607785dcec3043a52ae2f68315425f6":[2,15,3,11,0],
+"d5/d13/struct_data_section_n_m2_d.html#adfd99a1108534451844aced066825fec":[2,15,3,11,1],
+"d5/d14/class_section_patch3_d.html":[2,10,4,6],
+"d5/d14/class_section_patch3_d.html#af251a8d8c12f0a0ac20b039a323117b2":[2,10,4,6,0],
 "d5/d15/_c_a_x4_8cpp.html":[6,0,6,2,0,2],
 "d5/d15/_particle_collision2_d_8h.html":[6,0,1,24],
 "d5/d15/_particle_collision2_d_8h_source.html":[6,0,1,24],
@@ -239,15 +249,5 @@ var NAVTREEINDEX13 =
 "d5/d60/class_armstrong_frederick.html#a9d2cba265e319553768a1fd9ab29afec":[2,13,2,64,3],
 "d5/d60/class_armstrong_frederick.html#aa46638ca3797ae560de7b2209b00fc27":[2,13,2,64,1],
 "d5/d60/class_armstrong_frederick.html#ad4dc25b465d0e37835bdb69fef7ff727":[2,13,2,64,2],
-"d5/d60/class_armstrong_frederick.html#aeff41b136117c1f01d41ff427e102e65":[2,13,2,64,8],
-"d5/d63/_laminated_8cpp.html":[6,0,9,1,1,2],
-"d5/d67/_f21_8h.html":[6,0,6,0,15],
-"d5/d67/_f21_8h_source.html":[6,0,6,0,15],
-"d5/d67/_lee_newmark_iterative_8h.html":[6,0,14,0,1,0,7],
-"d5/d67/_lee_newmark_iterative_8h_source.html":[6,0,14,0,1,0,7],
-"d5/d68/class_bead.html":[5,0,46],
-"d5/d68/class_bead.html#a00ed51d3ca3b4ffa812b6fcf5662b630":[5,0,46,1],
-"d5/d68/class_bead.html#a10749b686757d72d420df64f84a35f57":[5,0,46,4],
-"d5/d68/class_bead.html#a1ec591f783a5f4eae891ac5e76833f7f":[5,0,46,3],
-"d5/d68/class_bead.html#a25999b7262de0d4064925d3ffd7a6ed4":[5,0,46,6]
+"d5/d60/class_armstrong_frederick.html#aeff41b136117c1f01d41ff427e102e65":[2,13,2,64,8]
 };
