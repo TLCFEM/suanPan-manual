@@ -170,6 +170,7 @@
 ### Criterion
 
 * [Criterion](Library/Criterion/Criterion.md)
+* [Logic](Library/Criterion/Logic.md)
 * [MaxDisplacement](Library/Criterion/MaxDisplacement.md)
 * [MaxHistory](Library/Criterion/MaxHistory.md)
 * [MaxResistance](Library/Criterion/MaxResistance.md)
