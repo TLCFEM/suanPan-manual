@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('d4/ddd/class_logic_criterion.html','..
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d4/d11/class_logic_criterion-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">LogicCriterion Class Reference<div class="ingroups"><a class="el" href="../../d2/ded/group___criterion.html">Criterion</a></div></div></div>
+  <div class="headertitle"><div class="title">LogicCriterion Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="../../d2/ded/group___criterion.html">Criterion</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -125,10 +125,12 @@ Collaboration diagram for LogicCriterion:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab4355038bb60ad7f6c2fc5c8ca331f26" id="r_ab4355038bb60ad7f6c2fc5c8ca331f26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddd/class_logic_criterion.html#ab4355038bb60ad7f6c2fc5c8ca331f26">LogicCriterion</a> (unsigned, unsigned, unsigned)</td></tr>
-<tr class="separator:ab4355038bb60ad7f6c2fc5c8ca331f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e69f233fe9a47662a1bf3655c7406e" id="r_ad1e69f233fe9a47662a1bf3655c7406e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddd/class_logic_criterion.html#ad1e69f233fe9a47662a1bf3655c7406e">LogicCriterion</a> (unsigned, std::vector&lt; unsigned &gt; &amp;&amp;)</td></tr>
+<tr class="separator:ad1e69f233fe9a47662a1bf3655c7406e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fdae38f8af8c4aee49df8b9fc73d567" id="r_a2fdae38f8af8c4aee49df8b9fc73d567"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddd/class_logic_criterion.html#a2fdae38f8af8c4aee49df8b9fc73d567">initialize</a> (const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;) override</td></tr>
 <tr class="separator:a2fdae38f8af8c4aee49df8b9fc73d567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0223a840d97f2c006eb53424a4e39943" id="r_a0223a840d97f2c006eb53424a4e39943"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddd/class_logic_criterion.html#a0223a840d97f2c006eb53424a4e39943">process</a> (const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;) final</td></tr>
+<tr class="separator:a0223a840d97f2c006eb53424a4e39943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_criterion"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_criterion')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d3/d46/class_criterion.html">Criterion</a></td></tr>
 <tr class="memitem:ad14ec12e4dac7dc03fb78f9572dfb70c inherit pub_methods_class_criterion" id="r_ad14ec12e4dac7dc03fb78f9572dfb70c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/class_criterion.html#ad14ec12e4dac7dc03fb78f9572dfb70c">set_start_step</a> (unsigned)</td></tr>
 <tr class="separator:ad14ec12e4dac7dc03fb78f9572dfb70c inherit pub_methods_class_criterion"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,8 +140,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8160ab8a14249f35674fca49e1941c07 inherit pub_methods_class_criterion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af50a39b6bb4ea7d14311a991baf7b267 inherit pub_methods_class_criterion" id="r_af50a39b6bb4ea7d14311a991baf7b267"><td class="memItemLeft" align="right" valign="top">virtual unique_ptr&lt; <a class="el" href="../../d3/d46/class_criterion.html">Criterion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/class_criterion.html#af50a39b6bb4ea7d14311a991baf7b267">unique_copy</a> ()=0</td></tr>
 <tr class="separator:af50a39b6bb4ea7d14311a991baf7b267 inherit pub_methods_class_criterion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adde6eba07b2e25183815ad7737d55a41 inherit pub_methods_class_criterion" id="r_adde6eba07b2e25183815ad7737d55a41"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/class_criterion.html#adde6eba07b2e25183815ad7737d55a41">process</a> (const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;)=0</td></tr>
-<tr class="separator:adde6eba07b2e25183815ad7737d55a41 inherit pub_methods_class_criterion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94003714911d6a699b1269fda31296e9 inherit pub_methods_class_criterion" id="r_a94003714911d6a699b1269fda31296e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/class_criterion.html#a94003714911d6a699b1269fda31296e9">CopyableTag</a> (const <a class="el" href="../../d7/d1d/class_copyable_tag.html">CopyableTag</a> &amp;)=default</td></tr>
 <tr class="separator:a94003714911d6a699b1269fda31296e9 inherit pub_methods_class_criterion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8af101a244a1e108ea95e973862aebeb inherit pub_methods_class_criterion" id="r_a8af101a244a1e108ea95e973862aebeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/class_criterion.html#a8af101a244a1e108ea95e973862aebeb">CopyableTag</a> (<a class="el" href="../../d7/d1d/class_copyable_tag.html">CopyableTag</a> &amp;&amp;)=default</td></tr>
@@ -195,10 +195,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:afec620cae2c4d676471a05ca68018331" id="r_afec620cae2c4d676471a05ca68018331"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="../../d3/d46/class_criterion.html">Criterion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddd/class_logic_criterion.html#afec620cae2c4d676471a05ca68018331">criterion_a</a></td></tr>
-<tr class="separator:afec620cae2c4d676471a05ca68018331"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb504f27e8c789acc4e60b6b130f23c7" id="r_adb504f27e8c789acc4e60b6b130f23c7"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="../../d3/d46/class_criterion.html">Criterion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddd/class_logic_criterion.html#adb504f27e8c789acc4e60b6b130f23c7">criterion_b</a></td></tr>
-<tr class="separator:adb504f27e8c789acc4e60b6b130f23c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fcf2a443079fbb790abb48082d02be7" id="r_a2fcf2a443079fbb790abb48082d02be7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; shared_ptr&lt; <a class="el" href="../../d3/d46/class_criterion.html">Criterion</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddd/class_logic_criterion.html#a2fcf2a443079fbb790abb48082d02be7">criteria</a></td></tr>
+<tr class="separator:a2fcf2a443079fbb790abb48082d02be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <a class="el" href="../../d4/ddd/class_logic_criterion.html" title="A LogicCriterion class.">LogicCriterion</a> class. </p>
@@ -207,8 +205,8 @@ Protected Attributes</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>08/04/2022 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab4355038bb60ad7f6c2fc5c8ca331f26" name="ab4355038bb60ad7f6c2fc5c8ca331f26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4355038bb60ad7f6c2fc5c8ca331f26">&#9670;&#160;</a></span>LogicCriterion()</h2>
+<a id="ad1e69f233fe9a47662a1bf3655c7406e" name="ad1e69f233fe9a47662a1bf3655c7406e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e69f233fe9a47662a1bf3655c7406e">&#9670;&#160;</a></span>LogicCriterion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,14 +220,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>TA</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>TB</em>&#160;</td>
+          <td class="paramtype">std::vector&lt; unsigned &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>TT</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -270,14 +262,13 @@ Protected Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/ddd/class_logic_criterion_a2fdae38f8af8c4aee49df8b9fc73d567_cgraph.svg" width="535" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/ddd/class_logic_criterion_a2fdae38f8af8c4aee49df8b9fc73d567_cgraph.svg" width="446" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="afec620cae2c4d676471a05ca68018331" name="afec620cae2c4d676471a05ca68018331"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afec620cae2c4d676471a05ca68018331">&#9670;&#160;</a></span>criterion_a</h2>
+<a id="a0223a840d97f2c006eb53424a4e39943" name="a0223a840d97f2c006eb53424a4e39943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0223a840d97f2c006eb53424a4e39943">&#9670;&#160;</a></span>process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,20 +277,27 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">shared_ptr&lt;<a class="el" href="../../d3/d46/class_criterion.html">Criterion</a>&gt; LogicCriterion::criterion_a</td>
+          <td class="memname">int LogicCriterion::process </td>
+          <td>(</td>
+          <td class="paramtype">const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>D</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Implements <a class="el" href="../../d3/d46/class_criterion.html#adde6eba07b2e25183815ad7737d55a41">Criterion</a>.</p>
+
 </div>
 </div>
-<a id="adb504f27e8c789acc4e60b6b130f23c7" name="adb504f27e8c789acc4e60b6b130f23c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb504f27e8c789acc4e60b6b130f23c7">&#9670;&#160;</a></span>criterion_b</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2fcf2a443079fbb790abb48082d02be7" name="a2fcf2a443079fbb790abb48082d02be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fcf2a443079fbb790abb48082d02be7">&#9670;&#160;</a></span>criteria</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +306,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">shared_ptr&lt;<a class="el" href="../../d3/d46/class_criterion.html">Criterion</a>&gt; LogicCriterion::criterion_b</td>
+          <td class="memname">std::vector&lt;shared_ptr&lt;<a class="el" href="../../d3/d46/class_criterion.html">Criterion</a>&gt; &gt; LogicCriterion::criteria</td>
         </tr>
       </table>
   </td>

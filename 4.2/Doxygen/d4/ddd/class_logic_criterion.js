@@ -1,7 +1,7 @@
 var class_logic_criterion =
 [
-    [ "LogicCriterion", "d4/ddd/class_logic_criterion.html#ab4355038bb60ad7f6c2fc5c8ca331f26", null ],
+    [ "LogicCriterion", "d4/ddd/class_logic_criterion.html#ad1e69f233fe9a47662a1bf3655c7406e", null ],
     [ "initialize", "d4/ddd/class_logic_criterion.html#a2fdae38f8af8c4aee49df8b9fc73d567", null ],
-    [ "criterion_a", "d4/ddd/class_logic_criterion.html#afec620cae2c4d676471a05ca68018331", null ],
-    [ "criterion_b", "d4/ddd/class_logic_criterion.html#adb504f27e8c789acc4e60b6b130f23c7", null ]
+    [ "process", "d4/ddd/class_logic_criterion.html#a0223a840d97f2c006eb53424a4e39943", null ],
+    [ "criteria", "d4/ddd/class_logic_criterion.html#a2fcf2a443079fbb790abb48082d02be7", null ]
 ];

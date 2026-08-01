@@ -1,5 +1,8 @@
 var NAVTREEINDEX14 =
 {
+"d5/d60/class_armstrong_frederick.html#aa46638ca3797ae560de7b2209b00fc27":[2,13,2,64,1],
+"d5/d60/class_armstrong_frederick.html#ad4dc25b465d0e37835bdb69fef7ff727":[2,13,2,64,2],
+"d5/d60/class_armstrong_frederick.html#aeff41b136117c1f01d41ff427e102e65":[2,13,2,64,8],
 "d5/d63/_laminated_8cpp.html":[6,0,9,1,1,2],
 "d5/d67/_f21_8h.html":[6,0,6,0,15],
 "d5/d67/_f21_8h_source.html":[6,0,6,0,15],
@@ -178,20 +181,20 @@ var NAVTREEINDEX14 =
 "d6/d11/class_global_mass_recorder.html#aa11f0bc09aeb8768bf46a07529df49c7":[2,14,7,0],
 "d6/d1f/class_spring02.html":[2,10,7,12],
 "d6/d1f/class_spring02.html":[2,13,4,12],
-"d6/d1f/class_spring02.html#a19432afc765300a0841d489e9214943a":[2,13,4,12,3],
 "d6/d1f/class_spring02.html#a19432afc765300a0841d489e9214943a":[2,10,7,12,3],
-"d6/d1f/class_spring02.html#a40be5e7286a67bff5b1f1d040e2f07bb":[2,13,4,12,0],
+"d6/d1f/class_spring02.html#a19432afc765300a0841d489e9214943a":[2,13,4,12,3],
 "d6/d1f/class_spring02.html#a40be5e7286a67bff5b1f1d040e2f07bb":[2,10,7,12,0],
+"d6/d1f/class_spring02.html#a40be5e7286a67bff5b1f1d040e2f07bb":[2,13,4,12,0],
 "d6/d1f/class_spring02.html#a4ad6b4bb1bdd0a60327093fb6e8f2bfd":[2,10,7,12,1],
 "d6/d1f/class_spring02.html#a4ad6b4bb1bdd0a60327093fb6e8f2bfd":[2,13,4,12,1],
 "d6/d1f/class_spring02.html#a4d505df0e46c8629fbbd4fc4e907c0e9":[2,13,4,12,6],
 "d6/d1f/class_spring02.html#a4d505df0e46c8629fbbd4fc4e907c0e9":[2,10,7,12,6],
 "d6/d1f/class_spring02.html#aa62126a58edcb7e0487c3345a349d6c0":[2,13,4,12,5],
 "d6/d1f/class_spring02.html#aa62126a58edcb7e0487c3345a349d6c0":[2,10,7,12,5],
-"d6/d1f/class_spring02.html#ab9c2acd864808617dc8bf8420f6a7cb0":[2,10,7,12,2],
 "d6/d1f/class_spring02.html#ab9c2acd864808617dc8bf8420f6a7cb0":[2,13,4,12,2],
-"d6/d1f/class_spring02.html#ac681b8e607575b0b75c6286adf0a9216":[2,10,7,12,7],
+"d6/d1f/class_spring02.html#ab9c2acd864808617dc8bf8420f6a7cb0":[2,10,7,12,2],
 "d6/d1f/class_spring02.html#ac681b8e607575b0b75c6286adf0a9216":[2,13,4,12,7],
+"d6/d1f/class_spring02.html#ac681b8e607575b0b75c6286adf0a9216":[2,10,7,12,7],
 "d6/d1f/class_spring02.html#af67d5608451c8cafbbf0486768735ba2":[2,13,4,12,4],
 "d6/d1f/class_spring02.html#af67d5608451c8cafbbf0486768735ba2":[2,10,7,12,4],
 "d6/d22/_f31_8h.html":[6,0,6,0,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX14 =
 "d6/d42/_quaternion_8hpp.html":[6,0,16,21],
 "d6/d42/_quaternion_8hpp_source.html":[6,0,16,21],
 "d6/d43/_rigid_wall_multiplier_8cpp.html":[6,0,1,29],
-"d6/d47/_p_c_p_e8_u_c_8h.html":[6,0,6,2,7,7],
-"d6/d47/_p_c_p_e8_u_c_8h_source.html":[6,0,6,2,7,7],
-"d6/d47/structmagic__enum_1_1customize_1_1enum__range_3_01_output_type_01_4.html":[5,0,0,0,0],
-"d6/d4e/class_bilinear_elastic1_d.html":[2,13,0,23]
+"d6/d47/_p_c_p_e8_u_c_8h.html":[6,0,6,2,7,7]
 };

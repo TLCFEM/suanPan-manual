@@ -1,7 +1,5 @@
 var NAVTREEINDEX34 =
 {
-"de/d38/struct_data_dafalias_manzari.html#a9c53a38dd5d6f7313cc851f84528bbfc":[2,13,2,59,7],
-"de/d38/struct_data_dafalias_manzari.html#aa630a511cb8c4fa8919f23bf10b9c677":[2,13,2,59,16],
 "de/d38/struct_data_dafalias_manzari.html#aa66e56dd1512763c72367ad513ea7492":[2,13,2,59,5],
 "de/d38/struct_data_dafalias_manzari.html#aa87f3ca4972cc34952f4076c8bc0cb7d":[2,13,2,59,1],
 "de/d38/struct_data_dafalias_manzari.html#aa97bedef9fac762dcbc530fba19037aa":[2,13,2,59,10],
@@ -249,5 +247,7 @@ var NAVTREEINDEX34 =
 "de/d8b/group___meta_mat.html#gab5d36192e9601d07f00eb57060dafc72":[2,9,81],
 "de/d8b/group___meta_mat.html#gab74f7e482fd0000eb261054992c572a0":[2,9,63],
 "de/d8b/group___meta_mat.html#gab9e3f887d1ca4ca8cb24b1917b7cb76d":[2,9,39],
-"de/d8b/group___meta_mat.html#gabd58ba3b4f5b0fbafcddec92293c3525":[2,9,34]
+"de/d8b/group___meta_mat.html#gabd58ba3b4f5b0fbafcddec92293c3525":[2,9,34],
+"de/d8b/group___meta_mat.html#gac1268cb881ccdefc6fb6da2d015ab5c7":[2,9,58],
+"de/d8b/group___meta_mat.html#gac3a05ba1bc64b31a372fc0807c3ad612":[2,9,73]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX13 =
 {
+"d5/d13/class_sparse_mat.html#a5eb8819b784e577c91210135351393f4":[2,9,26,3],
+"d5/d13/class_sparse_mat.html#a624962ea31b8050c77f2e9eddc4427a0":[2,9,26,10],
+"d5/d13/class_sparse_mat.html#a92bbb45f7d8f8a9ccfcd0cb5c4a7b9aa":[2,9,26,2],
 "d5/d13/class_sparse_mat.html#aa1c0c26f42a24c5aa31af509552a3f46":[2,9,26,4],
 "d5/d13/class_sparse_mat.html#aab10f3a2fcdbef0fefe225f587631562":[2,9,26,14],
 "d5/d13/class_sparse_mat.html#ab04e6cc121675060e3c381a4b680f711":[2,9,26,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX13 =
 "d5/d60/class_armstrong_frederick.html#a5ba4eb48c084b7ebf7857c85aeaf30bb":[2,13,2,64,4],
 "d5/d60/class_armstrong_frederick.html#a70186f92ec7126327e1d5c9a98df0eb9":[2,13,2,64,5],
 "d5/d60/class_armstrong_frederick.html#a7a7bec37a4dec1fa55ef3ec9dcef7946":[2,13,2,64,0],
-"d5/d60/class_armstrong_frederick.html#a9d2cba265e319553768a1fd9ab29afec":[2,13,2,64,3],
-"d5/d60/class_armstrong_frederick.html#aa46638ca3797ae560de7b2209b00fc27":[2,13,2,64,1],
-"d5/d60/class_armstrong_frederick.html#ad4dc25b465d0e37835bdb69fef7ff727":[2,13,2,64,2],
-"d5/d60/class_armstrong_frederick.html#aeff41b136117c1f01d41ff427e102e65":[2,13,2,64,8]
+"d5/d60/class_armstrong_frederick.html#a9d2cba265e319553768a1fd9ab29afec":[2,13,2,64,3]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"df/d63/class_custom_tsai_wu.html#a390169023955eab780ea56f6c5fcb0fe":[2,13,2,47,0],
-"df/d63/class_custom_tsai_wu.html#acf9d11d14ffcb20570d47c78c0123b35":[2,13,2,47,1],
 "df/d66/class_multilinear_j2.html":[2,13,2,77],
 "df/d66/class_multilinear_j2.html#a147c6adf862ca8e21c59fc7d3f569451":[2,13,2,77,2],
 "df/d66/class_multilinear_j2.html#ab011c3bd7afad23664f8068141d6c606":[2,13,2,77,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX37 =
 "df/dee/class_rotation2_d.html#acefc31d53b5f7e8fe5e05e6cb5950c15":[2,13,1,11,8],
 "df/dee/class_rotation2_d.html#acfca91a029f078f11819ae71c079ed73":[2,13,1,11,9],
 "df/dee/class_rotation2_d.html#add42b80133cd4395e4e87572d02110d4":[2,13,1,11,6],
-"df/dee/class_rotation2_d.html#afe069969d1b0dc576564ef676a7e2fd6":[2,13,1,11,4]
+"df/dee/class_rotation2_d.html#afe069969d1b0dc576564ef676a7e2fd6":[2,13,1,11,4],
+"df/df1/triplet__form_8hpp.html":[6,0,5,1,12],
+"df/df1/triplet__form_8hpp.html#a1887ceb5885d4fd50f8d24e519fa1787":[6,0,5,1,12,3]
 };

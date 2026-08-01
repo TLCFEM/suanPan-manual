@@ -5,7 +5,7 @@ var searchData=
   ['ra_2',['ra',['../d9/d0f/struct_data_c_d_p_m2.html#a45b49d17e782aadbea88c8310dbb4251',1,'DataCDPM2']]],
   ['radau_3',['RADAU',['../dd/d31/class_integration_plan.html#a9914a83a63ed8466bd44c2cc4c98e91fab93953921960ef86dab95dd170cd016d',1,'IntegrationPlan']]],
   ['radial_4',['RADIAL',['../dc/d8f/class_node.html#a1747748a6d54ff3eb2f8f9b579d17849adcc72e2cbeadb84b595687bc3edba0f2',1,'Node']]],
-  ['radius_5',['radius',['../dd/d62/struct_data_bilinear_elastic1_d.html#a154cece5c08cc3f62640fa0fa7291806',1,'DataBilinearElastic1D::radius'],['../d4/d6b/class_element_base.html#a31e3a07f0d0d378aef25b1c31c97dbe1a5c6d0ec312d680ed011756648c9e96ea',1,'ElementBase::RADIUS'],['../d2/dea/class_spherical_particle.html#a2f1284ea4c56cbeea89aafdd951be150',1,'SphericalParticle::radius']]],
+  ['radius_5',['radius',['../d4/d6b/class_element_base.html#a31e3a07f0d0d378aef25b1c31c97dbe1a5c6d0ec312d680ed011756648c9e96ea',1,'ElementBase::RADIUS'],['../d2/dea/class_spherical_particle.html#a2f1284ea4c56cbeea89aafdd951be150',1,'SphericalParticle::radius'],['../dd/d62/struct_data_bilinear_elastic1_d.html#a154cece5c08cc3f62640fa0fa7291806',1,'DataBilinearElastic1D::radius']]],
   ['rambergosgood_6',['rambergosgood',['../da/d42/class_ramberg_osgood.html#aa5da129ec1a89e9465d22ea8ab189f5e',1,'RambergOsgood::RambergOsgood()'],['../da/d42/class_ramberg_osgood.html',1,'RambergOsgood']]],
   ['rambergosgood_2ecpp_7',['RambergOsgood.cpp',['../d1/dce/_ramberg_osgood_8cpp.html',1,'']]],
   ['rambergosgood_2eh_8',['RambergOsgood.h',['../d1/d1b/_ramberg_osgood_8h.html',1,'']]],

@@ -871,8 +871,8 @@ var hierarchy =
             [ "MinHistory", "db/d48/class_min_history.html", null ]
           ] ],
           [ "LogicCriterion", "d4/ddd/class_logic_criterion.html", [
-            [ "LogicCriterionAND", "d7/d4e/class_logic_criterion_a_n_d.html", null ],
-            [ "LogicCriterionOR", "d6/d76/class_logic_criterion_o_r.html", null ]
+            [ "LogicCriterionAll", "db/d20/class_logic_criterion_all.html", null ],
+            [ "LogicCriterionAny", "d3/d3e/class_logic_criterion_any.html", null ]
           ] ],
           [ "NodeBasedCriterion", "df/da9/class_node_based_criterion.html", [
             [ "DisplacementCriterion", "db/de9/class_displacement_criterion.html", [

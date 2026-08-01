@@ -1,10 +1,5 @@
 var NAVTREEINDEX21 =
 {
-"d8/dc8/class_nonlinear_n_m.html#ac26794ae651168548c80862ea6ce4405":[2,15,3,8,2],
-"d8/dc8/class_nonlinear_n_m.html#ac5abc8e697fce5837f59759fb85f26d5":[2,15,3,8,20],
-"d8/dc8/class_nonlinear_n_m.html#ae28d6d1d3126f26aa101681be45415cd":[2,15,3,8,14],
-"d8/dc8/class_nonlinear_n_m.html#af0ddd2cf6d786178ff4dc3a423757e38":[2,15,3,8,18],
-"d8/dc8/class_nonlinear_n_m.html#af89d63bf932353f4f0a281140bee7b33":[2,15,3,8,16],
 "d8/dd0/_custom_c_d_p_8h.html":[6,0,9,2,1,5],
 "d8/dd0/_custom_c_d_p_8h_source.html":[6,0,9,2,1,5],
 "d8/dd0/class_custom_orthotropic.html":[2,13,2,45],
@@ -249,5 +244,10 @@ var NAVTREEINDEX21 =
 "d9/d74/class_resistance_criterion.html#a1621ec1464b02bf43cc56cd4bf38045f":[2,1,12,0],
 "d9/d74/class_resistance_criterion.html#a649a345b664d476dc1c193650a897642":[2,1,12,1],
 "d9/d75/_h_d_f_8h.html":[6,0,3,3],
-"d9/d75/_h_d_f_8h_source.html":[6,0,3,3]
+"d9/d75/_h_d_f_8h_source.html":[6,0,3,3],
+"d9/d75/class_nonviscous_newmark.html":[2,18,19],
+"d9/d75/class_nonviscous_newmark.html#a113238bc6230e4de5ebba8a80c455cc7":[2,18,19,4],
+"d9/d75/class_nonviscous_newmark.html#a19f41e8861f97e31c703263ca9a15da4":[2,18,19,0],
+"d9/d75/class_nonviscous_newmark.html#a66486f3eec6094e6a6248b6f58e7d20f":[2,18,19,2],
+"d9/d75/class_nonviscous_newmark.html#a799af8d01d8ea0a61302bc73f669c183":[2,18,19,1]
 };

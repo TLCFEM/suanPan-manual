@@ -21,20 +21,18 @@ var group___criterion =
       [ "get_energy", "d1/d87/class_energy_evolution.html#acb31be999866990924724379b8fba647", null ]
     ] ],
     [ "LogicCriterion", "d4/ddd/class_logic_criterion.html", [
-      [ "LogicCriterion", "d4/ddd/class_logic_criterion.html#ab4355038bb60ad7f6c2fc5c8ca331f26", null ],
+      [ "LogicCriterion", "d4/ddd/class_logic_criterion.html#ad1e69f233fe9a47662a1bf3655c7406e", null ],
       [ "initialize", "d4/ddd/class_logic_criterion.html#a2fdae38f8af8c4aee49df8b9fc73d567", null ],
-      [ "criterion_a", "d4/ddd/class_logic_criterion.html#afec620cae2c4d676471a05ca68018331", null ],
-      [ "criterion_b", "d4/ddd/class_logic_criterion.html#adb504f27e8c789acc4e60b6b130f23c7", null ]
+      [ "process", "d4/ddd/class_logic_criterion.html#a0223a840d97f2c006eb53424a4e39943", null ],
+      [ "criteria", "d4/ddd/class_logic_criterion.html#a2fcf2a443079fbb790abb48082d02be7", null ]
     ] ],
-    [ "LogicCriterionAND", "d7/d4e/class_logic_criterion_a_n_d.html", [
-      [ "LogicCriterion", "d7/d4e/class_logic_criterion_a_n_d.html#ab4355038bb60ad7f6c2fc5c8ca331f26", null ],
-      [ "process", "d7/d4e/class_logic_criterion_a_n_d.html#a2190a8fe37249884c459d8568231ab8b", null ],
-      [ "unique_copy", "d7/d4e/class_logic_criterion_a_n_d.html#a56de83fdfc67444e4c66fab6d776e35a", null ]
+    [ "LogicCriterionAll", "db/d20/class_logic_criterion_all.html", [
+      [ "LogicCriterion", "db/d20/class_logic_criterion_all.html#ad1e69f233fe9a47662a1bf3655c7406e", null ],
+      [ "unique_copy", "db/d20/class_logic_criterion_all.html#ab422aee394dae0a54067ab6f4db67d0e", null ]
     ] ],
-    [ "LogicCriterionOR", "d6/d76/class_logic_criterion_o_r.html", [
-      [ "LogicCriterion", "d6/d76/class_logic_criterion_o_r.html#ab4355038bb60ad7f6c2fc5c8ca331f26", null ],
-      [ "process", "d6/d76/class_logic_criterion_o_r.html#adbdb22d023ab2e5f0871a01dcd3f6f01", null ],
-      [ "unique_copy", "d6/d76/class_logic_criterion_o_r.html#abb2d9036bb1a4dc69537f6b57b14978f", null ]
+    [ "LogicCriterionAny", "d3/d3e/class_logic_criterion_any.html", [
+      [ "LogicCriterion", "d3/d3e/class_logic_criterion_any.html#ad1e69f233fe9a47662a1bf3655c7406e", null ],
+      [ "unique_copy", "d3/d3e/class_logic_criterion_any.html#afaeb6a35f31567dd97b8ffb8c3c7ab05", null ]
     ] ],
     [ "DisplacementCriterion", "db/de9/class_displacement_criterion.html", [
       [ "NodeBasedCriterion", "db/de9/class_displacement_criterion.html#a1621ec1464b02bf43cc56cd4bf38045f", null ],
