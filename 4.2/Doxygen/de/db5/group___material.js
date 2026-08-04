@@ -90,9 +90,9 @@ var group___material =
       [ "trial_stress", "de/de9/struct_data_material.html#a96fe3a4834c603ff1d57e80dd0749aa2", null ]
     ] ],
     [ "Material", "dc/dee/class_material.html", [
-      [ "prop", "dd/d99/class_material_1_1prop.html", [
-        [ "prop", "dd/d99/class_material_1_1prop.html#a4c6e2d28018013c30a97a4310bf3d42c", null ],
-        [ "operator()", "dd/d99/class_material_1_1prop.html#aa0665e23b737654085093575e511e8eb", null ]
+      [ "MaterialProperty", "d3/d70/class_material_1_1_material_property.html", [
+        [ "MaterialProperty", "d3/d70/class_material_1_1_material_property.html#a4a6dd89f1c270a5732464df9949c432f", null ],
+        [ "operator()", "d3/d70/class_material_1_1_material_property.html#ae948370ebb668fc758e793b52c92c71e", null ]
       ] ],
       [ "Parameter", "dc/dee/class_material.html#aee528d0231227177295979000659d5ef", [
         [ "ELASTIC", "dc/dee/class_material.html#aee528d0231227177295979000659d5efa61a085f4807a9157f9381a9b543efda2", null ],

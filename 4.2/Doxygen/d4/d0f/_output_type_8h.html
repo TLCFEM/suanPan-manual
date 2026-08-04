@@ -107,11 +107,12 @@ $(document).ready(function(){initNavTree('d4/d0f/_output_type_8h.html','../../')
   <div class="headertitle"><div class="title">OutputType.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;magic_enum/magic_enum.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;magic_enum/magic_enum.hpp&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for OutputType.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/dff/_output_type_8h__incl.svg" width="258" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/dff/_output_type_8h__incl.svg" width="384" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -340,8 +341,8 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a6530acf35f8e3e29c15499d66c545924" id="r_a6530acf35f8e3e29c15499d66c545924"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0f/_output_type_8h.html#a6530acf35f8e3e29c15499d66c545924">to_name</a> (const <a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a> L)</td></tr>
 <tr class="separator:a6530acf35f8e3e29c15499d66c545924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade3ec902619abfe564d12ac663ccb6ec" id="r_ade3ec902619abfe564d12ac663ccb6ec"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0f/_output_type_8h.html#ade3ec902619abfe564d12ac663ccb6ec">to_token</a> (const std::string_view L)</td></tr>
-<tr class="separator:ade3ec902619abfe564d12ac663ccb6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96325a2e184753c1626c665766318e9" id="r_af96325a2e184753c1626c665766318e9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0f/_output_type_8h.html#af96325a2e184753c1626c665766318e9">to_token</a> (std::string &amp;&amp;L)</td></tr>
+<tr class="separator:af96325a2e184753c1626c665766318e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a338500b10542843995639c865680550b" id="r_a338500b10542843995639c865680550b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0f/_output_type_8h.html#a338500b10542843995639c865680550b">to_category</a> (<a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>)</td></tr>
 <tr class="separator:a338500b10542843995639c865680550b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bff9e28b981f67c7a06587c8e45fc6e" id="r_a3bff9e28b981f67c7a06587c8e45fc6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0f/_output_type_8h.html#a3bff9e28b981f67c7a06587c8e45fc6e">to_index</a> (<a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>)</td></tr>
@@ -608,8 +609,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ade3ec902619abfe564d12ac663ccb6ec" name="ade3ec902619abfe564d12ac663ccb6ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade3ec902619abfe564d12ac663ccb6ec">&#9670;&#160;</a></span>to_token()</h2>
+<a id="af96325a2e184753c1626c665766318e9" name="af96325a2e184753c1626c665766318e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96325a2e184753c1626c665766318e9">&#9670;&#160;</a></span>to_token()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -620,7 +621,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">constexpr <a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a> to_token </td>
           <td>(</td>
-          <td class="paramtype">const std::string_view&#160;</td>
+          <td class="paramtype">std::string &amp;&amp;&#160;</td>
           <td class="paramname"><em>L</em></td><td>)</td>
           <td></td>
         </tr>
@@ -634,7 +635,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d0f/_output_type_8h_ade3ec902619abfe564d12ac663ccb6ec_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d0f/_output_type_8h_af96325a2e184753c1626c665766318e9_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

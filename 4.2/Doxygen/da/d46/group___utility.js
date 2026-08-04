@@ -316,21 +316,6 @@ var group___utility =
       [ "length", "d2/dcd/class_orientation.html#aa2f00e1bfb368d899d8465a67d90bba8", null ],
       [ "z_axis", "d2/dcd/class_orientation.html#a47b34369443b3865c85c18dc8936d615", null ]
     ] ],
-    [ "PhaseFieldData", "da/d8a/struct_phase_field_data.html", [
-      [ "c_dev_strain_energy", "da/d8a/struct_phase_field_data.html#a14d015d273252f5d4a5c80d17ad58150", null ],
-      [ "c_strain_energy", "da/d8a/struct_phase_field_data.html#abd37ee2037141a1e5ae7a8c3c0958ff2", null ],
-      [ "c_vol_strain_energy", "da/d8a/struct_phase_field_data.html#af1921b19c1cd09c5a8435e22612e6bc8", null ],
-      [ "dev_strain_energy", "da/d8a/struct_phase_field_data.html#ad30edb8970071b16bde3897845d36a1c", null ],
-      [ "strain_energy", "da/d8a/struct_phase_field_data.html#a89068485e96b6bed058cc922428f338d", null ],
-      [ "t_dev_strain_energy", "da/d8a/struct_phase_field_data.html#a8f7dc2f205a4afd0a8739e6e7c792bad", null ],
-      [ "t_strain_energy", "da/d8a/struct_phase_field_data.html#adbdbeb056815e40771fbc450e168c32c", null ],
-      [ "t_vol_strain_energy", "da/d8a/struct_phase_field_data.html#ac67138baea7ac1a33b8cc0064f212c10", null ],
-      [ "vol_strain_energy", "da/d8a/struct_phase_field_data.html#af38678d77427b4a37db06af8b621af9a", null ]
-    ] ],
-    [ "PhaseField", "df/d6f/struct_phase_field.html", [
-      [ "clear_status", "df/d6f/struct_phase_field.html#aad37186000342c47465844d247a05231", null ],
-      [ "commit_status", "df/d6f/struct_phase_field.html#a02cdb3dec6014eaf9f7a70a728a11140", null ]
-    ] ],
     [ "T2DC", "d7/d39/class_t2_d_c.html", [
       [ "is_nlgeom", "d7/d39/class_t2_d_c.html#ad9a40f5f0ce1a69a15f2aa419f1fbccc", null ],
       [ "to_global_geometry_mat", "d7/d39/class_t2_d_c.html#a0509351ad73cd6dd5662a8baff90ecc5", null ],

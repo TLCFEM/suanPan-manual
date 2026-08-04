@@ -18,13 +18,10 @@ var searchData=
   ['pcpe8uc_15',['PCPE8UC',['../d4/ddd/class_p_c_p_e8_u_c.html',1,'']]],
   ['peakoriented_16',['PeakOriented',['../dc/d8b/class_peak_oriented.html',1,'']]],
   ['penaltybc_17',['PenaltyBC',['../dd/d1e/class_penalty_b_c.html',1,'']]],
-  ['phasefield_18',['PhaseField',['../df/d6f/struct_phase_field.html',1,'']]],
-  ['phasefielddata_19',['PhaseFieldData',['../da/d8a/struct_phase_field_data.html',1,'']]],
-  ['planestrain_20',['PlaneStrain',['../d3/d16/class_plane_strain.html',1,'']]],
-  ['planestress_21',['PlaneStress',['../d4/dac/class_plane_stress.html',1,'']]],
-  ['polyelastic1d_22',['PolyElastic1D',['../d0/d5c/class_poly_elastic1_d.html',1,'']]],
-  ['polyj2_23',['PolyJ2',['../dd/d53/class_poly_j2.html',1,'']]],
-  ['prestrain_24',['Prestrain',['../dd/dd2/class_prestrain.html',1,'']]],
-  ['prop_25',['prop',['../dd/d99/class_material_1_1prop.html',1,'Material']]],
-  ['ps_26',['PS',['../db/d61/class_p_s.html',1,'']]]
+  ['planestrain_18',['PlaneStrain',['../d3/d16/class_plane_strain.html',1,'']]],
+  ['planestress_19',['PlaneStress',['../d4/dac/class_plane_stress.html',1,'']]],
+  ['polyelastic1d_20',['PolyElastic1D',['../d0/d5c/class_poly_elastic1_d.html',1,'']]],
+  ['polyj2_21',['PolyJ2',['../dd/d53/class_poly_j2.html',1,'']]],
+  ['prestrain_22',['Prestrain',['../dd/dd2/class_prestrain.html',1,'']]],
+  ['ps_23',['PS',['../db/d61/class_p_s.html',1,'']]]
 ];

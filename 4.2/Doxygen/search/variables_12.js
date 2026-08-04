@@ -35,7 +35,7 @@ var searchData=
   ['stiffness_32',['stiffness',['../d8/d71/class_constraint.html#a65cb42d2dce92118a02e2b0e9ce69940',1,'Constraint::stiffness'],['../d2/d22/class_lee_newmark_base.html#a3b5be2818ccc5e2fee9b21b2b8360714',1,'LeeNewmarkBase::stiffness']]],
   ['stiffness_5fcontainer_33',['stiffness_container',['../d2/db9/struct_data_element.html#a6d2a69b675e9957ca60abef3c7d18679',1,'DataElement']]],
   ['stiffness_5ftype_34',['stiffness_type',['../d2/d22/class_lee_newmark_base.html#ac9ae7b83e7db9f2e45ca94e7dc287594',1,'LeeNewmarkBase']]],
-  ['strain_5fenergy_35',['strain_energy',['../d2/db9/struct_data_element.html#aad01de3a9eca6796bcc72a63e900f0e9',1,'DataElement::strain_energy'],['../da/d8a/struct_phase_field_data.html#a89068485e96b6bed058cc922428f338d',1,'PhaseFieldData::strain_energy']]],
+  ['strain_5fenergy_35',['strain_energy',['../d2/db9/struct_data_element.html#aad01de3a9eca6796bcc72a63e900f0e9',1,'DataElement']]],
   ['suanpan_5fcerr_36',['SUANPAN_CERR',['../d8/d8f/suan_pan_8h.html#aef385502de1b2643faa339db46d53405',1,'suanPan.h']]],
   ['suanpan_5fcftl_37',['SUANPAN_CFTL',['../d8/d8f/suan_pan_8h.html#a8e2dd370cee7f50cb22a2a79e9aa5264',1,'suanPan.h']]],
   ['suanpan_5fcode_38',['SUANPAN_CODE',['../da/d46/group___utility.html#gaaa2aed39338bb25ba5d759ca94e7463b',1,'command.h']]],

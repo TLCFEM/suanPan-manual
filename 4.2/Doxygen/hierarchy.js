@@ -733,6 +733,7 @@ var hierarchy =
     [ "MaterialExampleData", "d7/d7a/struct_material_example_data.html", [
       [ "MaterialExample", "d3/d50/class_material_example.html", null ]
     ] ],
+    [ "Material::MaterialProperty", "d3/d70/class_material_1_1_material_property.html", null ],
     [ "MetaMat< T >", "d8/d79/class_meta_mat.html", [
       [ "DenseMat< T >", "d0/de9/class_dense_mat.html", [
         [ "BandMat< T >", "d9/dac/class_band_mat.html", [
@@ -779,10 +780,6 @@ var hierarchy =
       [ "MaterialPatch", "d6/dfb/class_material_patch.html", null ],
       [ "SectionPatch", "d8/d08/class_section_patch.html", null ]
     ] ],
-    [ "PhaseFieldData", "da/d8a/struct_phase_field_data.html", [
-      [ "PhaseField", "df/d6f/struct_phase_field.html", null ]
-    ] ],
-    [ "Material::prop", "dd/d99/class_material_1_1prop.html", null ],
     [ "Quadratic", "d1/d38/class_quadratic.html", null ],
     [ "QuadTree< T, BUCKET_SIZE >", "df/d96/class_quad_tree.html", null ],
     [ "QuadTree< double, 1 >", "df/d96/class_quad_tree.html", null ],

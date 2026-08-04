@@ -16,8 +16,6 @@ var dir_055c5b0870108e291f3d4e283ef32ec8 =
     [ "MatrixModifier.hpp", "d3/dff/_matrix_modifier_8hpp.html", "d3/dff/_matrix_modifier_8hpp" ],
     [ "Orientation.cpp", "d3/df3/_orientation_8cpp.html", null ],
     [ "Orientation.h", "dc/db8/_orientation_8h.html", null ],
-    [ "PhaseField.cpp", "d1/d80/_phase_field_8cpp.html", null ],
-    [ "PhaseField.h", "d1/dd1/_phase_field_8h.html", null ],
     [ "T2DC.cpp", "d8/de1/_t2_d_c_8cpp.html", null ],
     [ "T2DC.h", "d3/d6a/_t2_d_c_8h.html", null ],
     [ "T2DL.cpp", "dd/dd2/_t2_d_l_8cpp.html", null ],

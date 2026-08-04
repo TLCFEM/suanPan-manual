@@ -541,8 +541,6 @@ var annotated_dup =
     [ "PCPE8UC", "d4/ddd/class_p_c_p_e8_u_c.html", "d4/ddd/class_p_c_p_e8_u_c" ],
     [ "PeakOriented", "dc/d8b/class_peak_oriented.html", "dc/d8b/class_peak_oriented" ],
     [ "PenaltyBC", "dd/d1e/class_penalty_b_c.html", "dd/d1e/class_penalty_b_c" ],
-    [ "PhaseField", "df/d6f/struct_phase_field.html", "df/d6f/struct_phase_field" ],
-    [ "PhaseFieldData", "da/d8a/struct_phase_field_data.html", "da/d8a/struct_phase_field_data" ],
     [ "PlaneStrain", "d3/d16/class_plane_strain.html", "d3/d16/class_plane_strain" ],
     [ "PlaneStress", "d4/dac/class_plane_stress.html", "d4/dac/class_plane_stress" ],
     [ "PolyElastic1D", "d0/d5c/class_poly_elastic1_d.html", "d0/d5c/class_poly_elastic1_d" ],

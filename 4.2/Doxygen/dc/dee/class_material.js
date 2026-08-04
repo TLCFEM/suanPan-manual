@@ -1,6 +1,6 @@
 var class_material =
 [
-    [ "prop", "dd/d99/class_material_1_1prop.html", "dd/d99/class_material_1_1prop" ],
+    [ "MaterialProperty", "d3/d70/class_material_1_1_material_property.html", "d3/d70/class_material_1_1_material_property" ],
     [ "Parameter", "dc/dee/class_material.html#aee528d0231227177295979000659d5ef", [
       [ "ELASTIC", "dc/dee/class_material.html#aee528d0231227177295979000659d5efa61a085f4807a9157f9381a9b543efda2", null ],
       [ "POISSON", "dc/dee/class_material.html#aee528d0231227177295979000659d5efa92a9a9519a6a4f5edd0b2694fe1c9122", null ],

@@ -1,6 +1,6 @@
 var _material_8h =
 [
-    [ "Material::prop", "dd/d99/class_material_1_1prop.html", "dd/d99/class_material_1_1prop" ],
+    [ "Material::MaterialProperty", "d3/d70/class_material_1_1_material_property.html", "d3/d70/class_material_1_1_material_property" ],
     [ "pod2", "de/db5/group___material.html#ga80f3071508c2e5d5a97a113a1050cf6a", null ],
     [ "pod6", "de/db5/group___material.html#ga9cb67a98266a51708d20674ae5ee071e", null ],
     [ "MaterialType", "de/db5/group___material.html#gaa21d290305b112c1288671b0139ddd8f", [

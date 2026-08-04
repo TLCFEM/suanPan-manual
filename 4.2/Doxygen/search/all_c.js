@@ -49,7 +49,7 @@ var searchData=
   ['incre_5fvelocity_46',['incre_velocity',['../df/dbd/struct_node_data.html#acfef162b599b7f645904717d32898f14',1,'NodeData']]],
   ['index_5fof_47',['index_of',['../d5/d50/class_element.html#a0f79ec45d525aa4b60a15b68bbd77ace',1,'Element::index_of()'],['../d4/d6b/class_element_base.html#aa30d8f6192096229dfbe07786043b50d',1,'ElementBase::index_of()']]],
   ['index_5ftype_48',['index_type',['../db/d78/classtriplet__form.html#af9426a3a5d0258ec3f736026c89a0df2',1,'triplet_form']]],
-  ['inertia_49',['inertia',['../d2/dea/class_spherical_particle.html#a1294af8a097296ffda6dc5ad478dc0e1',1,'SphericalParticle::inertia'],['../d4/d6b/class_element_base.html#a31e3a07f0d0d378aef25b1c31c97dbe1abd55967bff1e9c2815ced266c2079eb3',1,'ElementBase::INERTIA']]],
+  ['inertia_49',['inertia',['../d4/d6b/class_element_base.html#a31e3a07f0d0d378aef25b1c31c97dbe1abd55967bff1e9c2815ced266c2079eb3',1,'ElementBase::INERTIA'],['../d2/dea/class_spherical_particle.html#a1294af8a097296ffda6dc5ad478dc0e1',1,'SphericalParticle::inertia']]],
   ['inertialsphericalparticle2d_50',['inertialsphericalparticle2d',['../db/da8/class_inertial_spherical_particle2_d.html#a11ea009e3dc65fd3ab5d093be434aebf',1,'InertialSphericalParticle2D::InertialSphericalParticle2D()'],['../db/da8/class_inertial_spherical_particle2_d.html',1,'InertialSphericalParticle2D']]],
   ['inertialsphericalparticle3d_51',['inertialsphericalparticle3d',['../d2/dc4/class_inertial_spherical_particle3_d.html',1,'InertialSphericalParticle3D'],['../d2/dc4/class_inertial_spherical_particle3_d.html#ab96ef8afd746b17a2630adb82e2f737c',1,'InertialSphericalParticle3D::InertialSphericalParticle3D()']]],
   ['inf_5fnorm_52',['inf_norm',['../d6/d9c/namespacesuanpan.html#af65ff889c917db764400e6c72c11a0b7',1,'suanpan']]],
