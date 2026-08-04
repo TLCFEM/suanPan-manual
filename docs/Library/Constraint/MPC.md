@@ -18,6 +18,6 @@ constraint mpc (1) (2) (3) [(4) (5) (6)...]
 # (2) int, amplitude tag, can be zero
 # (3) double, right hand side of the constraint equation, the constraint is homogeneous if this parameter is zero
 # (4) int, node tag
-# (5) int, dof tag
+# (5) string, dof token
 # (6) double, weight
 ```
