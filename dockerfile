@@ -1,6 +1,7 @@
-FROM python:3.12-slim AS dependency
+FROM tlcfem/suanpan:latest AS dependency
 
-RUN apt-get update && apt-get install -y --no-install-recommends doxygen graphviz pngquant && rm -rf /var/lib/apt/lists/*
+RUN dnf install -y python3-pip doxygen graphviz wget bzip2 && dnf clean all
+RUN wget -qO- https://pngquant.org/pngquant-linux.tar.bz2 | tar -xj -C /usr/local/bin --strip-components=1
 
 COPY docs /manual/docs
 COPY plugins /manual/plugins
@@ -12,8 +13,6 @@ WORKDIR /manual
 RUN pip install --no-cache-dir --no-compile --upgrade .
 
 RUN sed -i '/^extra:/,+2d' mkdocs.yml
-
-RUN ln -s "$(find /manual/suanPan* -type f -name suanPan.sh | head -n1)" /usr/local/bin/suanpan
 
 RUN mkdocs build --site-dir site
 
