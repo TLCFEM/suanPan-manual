@@ -70,7 +70,7 @@ $$
 $$
 
 where $$\psi$$ ranges from five to fifty/sixty degrees.
-According to [10.1016/j.acme.2019.07.003](https://doi.org/10.1016/j.acme.2019.07.003), it is recommended that $$\psi\leqslant35\degree$$, but other work may adopt $$\psi\approx40\degree$$ for reinforced concrete.
+According to [10.1016/j.acme.2019.07.003](https://doi.org/10.1016/j.acme.2019.07.003), it is recommended that $$\psi\leqslant35\text{\textdegree}$$, but other work may adopt $$\psi\approx40\text{\textdegree}$$ for reinforced concrete.
 All in all, a reasonable value shall fall between $$0<\alpha_p<1$$.
 
 The parameter `(10)` represents the ratio of unloading stiffness at half crack stress to initial stiffness.
