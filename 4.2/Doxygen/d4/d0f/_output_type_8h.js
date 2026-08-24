@@ -156,6 +156,7 @@ var _output_type_8h =
       [ "DAMAGE", "d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a806bb06d54f268f1d2ce74bde5b48f34", null ],
       [ "DT", "d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a4d63ec1aa4c46738107033714adf7189", null ],
       [ "DC", "d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3acf75e54791dd1f49f918345fdfe2430b", null ],
+      [ "NONLOCAL", "d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a42698f9b19d13262bdd83f4aa6fa135d", null ],
       [ "PP", "d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a4baee84af7a92177c9064ddc2fc010ce", null ],
       [ "VF", "d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3af7418a2d329fe5b71c39192049094cf9", null ],
       [ "HIST", "d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a883f629b9ddb1c7038c82064f3aefd82", null ],

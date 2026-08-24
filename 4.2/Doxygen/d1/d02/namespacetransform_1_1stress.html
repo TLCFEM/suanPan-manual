@@ -116,6 +116,12 @@ Functions</h2></td></tr>
 <tr class="separator:a51a199d2f57b742ab33f8df86ab7a759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb7db3b9196e15fa4d408ee5329f2ad3" id="r_aeb7db3b9196e15fa4d408ee5329f2ad3"><td class="memItemLeft" align="right" valign="top">vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d02/namespacetransform_1_1stress.html#aeb7db3b9196e15fa4d408ee5329f2ad3">rotate</a> (const vec &amp;, <a class="el" href="../../df/de6/classdouble.html">double</a>)</td></tr>
 <tr class="separator:aeb7db3b9196e15fa4d408ee5329f2ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf661c638ff8bea8149d984594e886b" id="r_a6bf661c638ff8bea8149d984594e886b"><td class="memItemLeft" align="right" valign="top">mat66&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d02/namespacetransform_1_1stress.html#a6bf661c638ff8bea8149d984594e886b">eigen_to_tensor_base</a> (const mat &amp;)</td></tr>
+<tr class="separator:a6bf661c638ff8bea8149d984594e886b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0fdd9e184f5eae993ba59245879e161" id="r_af0fdd9e184f5eae993ba59245879e161"><td class="memItemLeft" align="right" valign="top">vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d02/namespacetransform_1_1stress.html#af0fdd9e184f5eae993ba59245879e161">eigen_to_tensile_stress</a> (const vec &amp;, const mat &amp;)</td></tr>
+<tr class="separator:af0fdd9e184f5eae993ba59245879e161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051b6ec46ffac1368f14523bb3059dc0" id="r_a051b6ec46ffac1368f14523bb3059dc0"><td class="memItemLeft" align="right" valign="top">std::pair&lt; mat, mat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d02/namespacetransform_1_1stress.html#a051b6ec46ffac1368f14523bb3059dc0">eigen_to_tensile_derivative</a> (const vec &amp;, const mat &amp;)</td></tr>
+<tr class="separator:a051b6ec46ffac1368f14523bb3059dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac5015a59d9fd5bfbcc3d6035e195e5d5" name="ac5015a59d9fd5bfbcc3d6035e195e5d5"></a>
@@ -133,6 +139,110 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a051b6ec46ffac1368f14523bb3059dc0" name="a051b6ec46ffac1368f14523bb3059dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051b6ec46ffac1368f14523bb3059dc0">&#9670;&#160;</a></span>eigen_to_tensile_derivative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; mat, mat &gt; transform::stress::eigen_to_tensile_derivative </td>
+          <td>(</td>
+          <td class="paramtype">const vec &amp;&#160;</td>
+          <td class="paramname"><em>principal_stress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const mat &amp;&#160;</td>
+          <td class="paramname"><em>principal_direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d1/d02/namespacetransform_1_1stress_a051b6ec46ffac1368f14523bb3059dc0_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d02/namespacetransform_1_1stress_a051b6ec46ffac1368f14523bb3059dc0_icgraph.svg" width="571" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af0fdd9e184f5eae993ba59245879e161" name="af0fdd9e184f5eae993ba59245879e161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0fdd9e184f5eae993ba59245879e161">&#9670;&#160;</a></span>eigen_to_tensile_stress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vec transform::stress::eigen_to_tensile_stress </td>
+          <td>(</td>
+          <td class="paramtype">const vec &amp;&#160;</td>
+          <td class="paramname"><em>principal_stress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const mat &amp;&#160;</td>
+          <td class="paramname"><em>principal_direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d02/namespacetransform_1_1stress_af0fdd9e184f5eae993ba59245879e161_cgraph.svg" width="482" height="70"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d02/namespacetransform_1_1stress_af0fdd9e184f5eae993ba59245879e161_icgraph.svg" width="508" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6bf661c638ff8bea8149d984594e886b" name="a6bf661c638ff8bea8149d984594e886b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bf661c638ff8bea8149d984594e886b">&#9670;&#160;</a></span>eigen_to_tensor_base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mat66 transform::stress::eigen_to_tensor_base </td>
+          <td>(</td>
+          <td class="paramtype">const mat &amp;&#160;</td>
+          <td class="paramname"><em>eig_vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d02/namespacetransform_1_1stress_a6bf661c638ff8bea8149d984594e886b_cgraph.svg" width="446" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d1/d02/namespacetransform_1_1stress_a6bf661c638ff8bea8149d984594e886b_icgraph.svg" width="100%" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 
 </div>
 </div>

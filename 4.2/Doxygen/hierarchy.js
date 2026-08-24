@@ -40,7 +40,6 @@ var hierarchy =
         [ "NURBSVolume4D", "da/d4a/class_n_u_r_b_s_volume4_d.html", null ]
       ] ]
     ] ],
-    [ "Converter", "db/dda/struct_converter.html", null ],
     [ "csc_comparator< index_t >", "d3/d1a/classcsc__comparator.html", null ],
     [ "csc_form< data_t, index_t >", "dc/d3c/classcsc__form.html", null ],
     [ "csr_comparator< index_t >", "d5/dac/classcsr__comparator.html", null ],
@@ -127,6 +126,203 @@ var hierarchy =
       [ "CoulombFriction", "de/d6b/class_coulomb_friction.html", null ]
     ] ],
     [ "DataCoupleMaterial", "da/de4/struct_data_couple_material.html", [
+      [ "CoupleMaterial", "d7/dc2/class_couple_material.html", [
+        [ "IsotropicCouple", "d3/d6f/class_isotropic_couple.html", null ]
+      ] ]
+    ] ],
+    [ "DataDafaliasManzari", "de/d38/struct_data_dafalias_manzari.html", [
+      [ "DafaliasManzari", "d6/de0/class_dafalias_manzari.html", null ]
+    ] ],
+    [ "DataDhakal", "db/d0a/struct_data_dhakal.html", [
+      [ "Dhakal", "d7/d01/class_dhakal.html", null ]
+    ] ],
+    [ "DataElastic1D", "d0/de6/struct_data_elastic1_d.html", [
+      [ "Elastic1D", "d2/d55/class_elastic1_d.html", null ]
+    ] ],
+    [ "DataElasticOS", "d0/d7c/struct_data_elastic_o_s.html", [
+      [ "ElasticOS", "df/d38/class_elastic_o_s.html", null ]
+    ] ],
+    [ "DataElement", "d2/db9/struct_data_element.html", [
+      [ "Element", "d5/d50/class_element.html", [
+        [ "Contact2D", "d4/da1/class_contact2_d.html", null ],
+        [ "Contact3D", "d8/d1c/class_contact3_d.html", null ],
+        [ "ElementExample", "de/dec/class_element_example.html", null ],
+        [ "Embedded< DIM >", "db/dcd/class_embedded.html", null ],
+        [ "MassBase", "dc/d3f/class_mass_base.html", [
+          [ "Mass2D", "dc/d58/class_mass2_d.html", null ],
+          [ "Mass3D", "d1/d61/class_mass3_d.html", null ],
+          [ "MassPoint2D", "db/df9/class_mass_point2_d.html", null ],
+          [ "MassPoint3D", "db/dd4/class_mass_point3_d.html", null ]
+        ] ],
+        [ "MaterialElement", "d0/d07/class_material_element.html", [
+          [ "MaterialElement1D", "d6/dbb/class_material_element1_d.html", [
+            [ "Damper01", "d6/dd5/class_damper01.html", [
+              [ "Damper05", "db/d0a/class_damper05.html", null ]
+            ] ],
+            [ "Damper02", "dd/d8d/class_damper02.html", null ],
+            [ "EB21", "d7/d36/class_e_b21.html", null ],
+            [ "Joint", "d6/dd7/class_joint.html", null ],
+            [ "MVLEM", "dd/dfa/class_m_v_l_e_m.html", null ],
+            [ "Spring01", "d2/d40/class_spring01.html", null ],
+            [ "Spring02", "d6/d1f/class_spring02.html", null ],
+            [ "T2D2", "d6/d59/class_t2_d2.html", null ],
+            [ "T3D2", "d7/da1/class_t3_d2.html", null ]
+          ] ],
+          [ "MaterialElement2D", "d8/df9/class_material_element2_d.html", [
+            [ "Allman", "d1/db2/class_allman.html", null ],
+            [ "CAX3", "d3/de5/class_c_a_x3.html", null ],
+            [ "CAX4", "d8/d0a/class_c_a_x4.html", null ],
+            [ "CAX8", "d3/d72/class_c_a_x8.html", null ],
+            [ "CINP4", "da/d39/class_c_i_n_p4.html", null ],
+            [ "CP3", "dd/d49/class_c_p3.html", null ],
+            [ "CP4", "d8/d8f/class_c_p4.html", null ],
+            [ "CP4I", "d8/d42/class_c_p4_i.html", null ],
+            [ "CP5", "dd/df3/class_c_p5.html", null ],
+            [ "CP6", "d2/db0/class_c_p6.html", null ],
+            [ "CP7", "d6/dc6/class_c_p7.html", null ],
+            [ "CP8", "d0/de0/class_c_p8.html", null ],
+            [ "CSMQ", "db/dcf/class_c_s_m_q.html", [
+              [ "CSMQ5", "db/dd2/class_c_s_m_q5.html", null ],
+              [ "CSMQ6", "d8/dd3/class_c_s_m_q6.html", null ],
+              [ "CSMQ7", "de/dd8/class_c_s_m_q7.html", null ]
+            ] ],
+            [ "CSMQ4", "d6/d4f/class_c_s_m_q4.html", null ],
+            [ "CSMQ8", "de/da1/class_c_s_m_q8.html", null ],
+            [ "CSMT3", "da/d59/class_c_s_m_t3.html", null ],
+            [ "CSMT6", "d0/d2a/class_c_s_m_t6.html", null ],
+            [ "DCP3", "d1/d82/class_d_c_p3.html", null ],
+            [ "DCP4", "dd/d4f/class_d_c_p4.html", null ],
+            [ "DKT3", "d3/dfd/class_d_k_t3.html", null ],
+            [ "DKT4", "d8/da3/class_d_k_t4.html", null ],
+            [ "ElementTemplate", "d0/d1a/class_element_template.html", null ],
+            [ "GQ12", "d4/da8/class_g_q12.html", null ],
+            [ "Mindlin", "d3/dff/class_mindlin.html", null ],
+            [ "NonlocalCP4", "d5/d3c/class_nonlocal_c_p4.html", null ],
+            [ "PCPE4DC", "d1/db2/class_p_c_p_e4_d_c.html", null ],
+            [ "PCPE4UC", "db/d53/class_p_c_p_e4_u_c.html", null ],
+            [ "PCPE8DC", "d9/d88/class_p_c_p_e8_d_c.html", null ],
+            [ "PCPE8UC", "d4/ddd/class_p_c_p_e8_u_c.html", null ],
+            [ "PS", "db/d61/class_p_s.html", null ],
+            [ "QE2", "dd/d4b/class_q_e2.html", null ],
+            [ "SGCMQ", "d2/daf/class_s_g_c_m_q.html", [
+              [ "GCMQ", "d7/d86/class_g_c_m_q.html", null ]
+            ] ],
+            [ "ShellBase", "d7/d11/class_shell_base.html", [
+              [ "DKTS3", "db/dea/class_d_k_t_s3.html", null ],
+              [ "S4", "d2/d2f/class_s4.html", null ],
+              [ "SGCMS", "d8/de9/class_s_g_c_m_s.html", null ]
+            ] ]
+          ] ],
+          [ "MaterialElement3D", "d7/df2/class_material_element3_d.html", [
+            [ "C3D20", "de/dba/class_c3_d20.html", null ],
+            [ "C3D4", "d6/d66/class_c3_d4.html", null ],
+            [ "C3D8", "d4/d8c/class_c3_d8.html", null ],
+            [ "C3D8I", "d8/d52/class_c3_d8_i.html", null ],
+            [ "CIN3D8", "d9/d51/class_c_i_n3_d8.html", null ],
+            [ "DC3D4", "d7/da1/class_d_c3_d4.html", null ],
+            [ "DC3D8", "d1/d82/class_d_c3_d8.html", null ],
+            [ "NonlocalC3D8", "de/d51/class_nonlocal_c3_d8.html", null ]
+          ] ],
+          [ "MaterialPatch", "d6/dfb/class_material_patch.html", [
+            [ "MaterialPatch2D", "d0/d97/class_material_patch2_d.html", [
+              [ "PatchQuad", "da/d6e/class_patch_quad.html", null ]
+            ] ],
+            [ "MaterialPatch3D", "dd/d7f/class_material_patch3_d.html", [
+              [ "PatchCube", "d7/d72/class_patch_cube.html", null ]
+            ] ]
+          ] ]
+        ] ],
+        [ "Particle", "de/d85/class_particle.html", [
+          [ "SphericalParticle< 2u >", "d2/dea/class_spherical_particle.html", [
+            [ "InertialSphericalParticle2D", "db/da8/class_inertial_spherical_particle2_d.html", null ],
+            [ "SphericalParticle2D", "d8/dff/class_spherical_particle2_d.html", null ]
+          ] ],
+          [ "SphericalParticle< 3u >", "d2/dea/class_spherical_particle.html", [
+            [ "InertialSphericalParticle3D", "d2/dc4/class_inertial_spherical_particle3_d.html", null ],
+            [ "SphericalParticle3D", "d5/dfc/class_spherical_particle3_d.html", null ]
+          ] ],
+          [ "SphericalParticle< DIM >", "d2/dea/class_spherical_particle.html", null ]
+        ] ],
+        [ "SectionElement", "d4/d10/class_section_element.html", [
+          [ "SectionElement1D", "da/dd2/class_section_element1_d.html", [
+            [ "T2D2S", "d0/dc4/class_t2_d2_s.html", null ],
+            [ "T3D2S", "d2/d1d/class_t3_d2_s.html", null ]
+          ] ],
+          [ "SectionElement2D", "d9/d88/class_section_element2_d.html", [
+            [ "B21", "da/d74/class_b21.html", [
+              [ "B21E", "d7/d7e/class_b21_e.html", null ]
+            ] ],
+            [ "B21H", "d8/d3d/class_b21_h.html", null ],
+            [ "F21", "db/d7d/class_f21.html", null ],
+            [ "F21H", "d1/dd4/class_f21_h.html", null ],
+            [ "SingleSection2D", "de/dd2/class_single_section2_d.html", null ]
+          ] ],
+          [ "SectionElement3D", "da/d1c/class_section_element3_d.html", [
+            [ "B31", "df/daa/class_b31.html", null ],
+            [ "F31", "de/d6c/class_f31.html", null ],
+            [ "SingleSection3D", "d7/d8d/class_single_section3_d.html", null ]
+          ] ],
+          [ "SectionNMElement2D", "d5/d31/class_section_n_m_element2_d.html", [
+            [ "NMB21", "d5/d6d/class_n_m_b21.html", [
+              [ "NMB21E", "d2/dcd/class_n_m_b21_e.html", null ]
+            ] ]
+          ] ],
+          [ "SectionNMElement3D", "d3/d91/class_section_n_m_element3_d.html", [
+            [ "NMB31", "d5/db6/class_n_m_b31.html", null ]
+          ] ],
+          [ "SectionOSElement3D", "df/d5c/class_section_o_s_element3_d.html", [
+            [ "B31OS", "db/d7c/class_b31_o_s.html", null ],
+            [ "EB31OS", "dc/dff/class_e_b31_o_s.html", null ]
+          ] ],
+          [ "SectionPatch", "d8/d08/class_section_patch.html", [
+            [ "SectionPatch2D", "d1/d15/class_section_patch2_d.html", null ],
+            [ "SectionPatch3D", "d5/d14/class_section_patch3_d.html", null ]
+          ] ]
+        ] ],
+        [ "Tie", "df/d7e/class_tie.html", null ],
+        [ "TranslationConnector", "db/d13/class_translation_connector.html", [
+          [ "TranslationConnector2D", "d0/d6d/class_translation_connector2_d.html", null ],
+          [ "TranslationConnector3D", "da/dcb/class_translation_connector3_d.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "DataExpCC", "d9/d43/struct_data_exp_c_c.html", [
+      [ "ExpCC", "d8/d3d/class_exp_c_c.html", null ]
+    ] ],
+    [ "DataExpDP", "d4/d4d/struct_data_exp_d_p.html", [
+      [ "ExpDP", "d0/d64/class_exp_d_p.html", null ]
+    ] ],
+    [ "DataExpGurson", "d3/d8f/struct_data_exp_gurson.html", [
+      [ "ExpGurson", "dd/d26/class_exp_gurson.html", null ]
+    ] ],
+    [ "DataExpGurson1D", "dd/d55/struct_data_exp_gurson1_d.html", [
+      [ "ExpGurson1D", "da/d9a/class_exp_gurson1_d.html", null ]
+    ] ],
+    [ "DataExpJ2", "dd/dba/struct_data_exp_j2.html", [
+      [ "ExpJ2", "d8/df1/class_exp_j2.html", null ]
+    ] ],
+    [ "DataExpMises1D", "d6/d2a/struct_data_exp_mises1_d.html", [
+      [ "ExpMises1D", "d0/d1f/class_exp_mises1_d.html", null ]
+    ] ],
+    [ "DataExpOrthotropic", "d9/de0/struct_data_exp_orthotropic.html", [
+      [ "ExpOrthotropic", "da/d82/class_exp_orthotropic.html", [
+        [ "ExpHoffman", "db/d1b/class_exp_hoffman.html", null ],
+        [ "ExpTsaiWu", "dd/d02/class_exp_tsai_wu.html", null ]
+      ] ]
+    ] ],
+    [ "DataFlag", "d8/dc6/struct_data_flag.html", [
+      [ "Flag", "d6/d71/class_flag.html", null ]
+    ] ],
+    [ "DataFluid", "db/daf/struct_data_fluid.html", [
+      [ "Fluid", "d8/db3/class_fluid.html", null ]
+    ] ],
+    [ "DataGap01", "d1/d10/struct_data_gap01.html", [
+      [ "Gap01", "dd/dd1/class_gap01.html", null ]
+    ] ],
+    [ "DataIsotropicElastic3D", "d3/d0e/struct_data_isotropic_elastic3_d.html", [
+      [ "IsotropicElastic3D", "d2/dcf/class_isotropic_elastic3_d.html", null ]
+    ] ],
+    [ "DataMaterial", "de/de9/struct_data_material.html", [
       [ "Material", "dc/dee/class_material.html", [
         [ "ExternalMaterial", "db/d58/class_external_material.html", null ],
         [ "Fluid", "d8/db3/class_fluid.html", null ],
@@ -267,15 +463,13 @@ var hierarchy =
               [ "CustomHoffman", "d9/d84/class_custom_hoffman.html", null ],
               [ "CustomTsaiWu", "df/d63/class_custom_tsai_wu.html", null ]
             ] ],
-            [ "ExpOrthotropic", "da/d82/class_exp_orthotropic.html", [
-              [ "ExpHoffman", "db/d1b/class_exp_hoffman.html", null ],
-              [ "ExpTsaiWu", "dd/d02/class_exp_tsai_wu.html", null ]
-            ] ],
+            [ "ExpOrthotropic", "da/d82/class_exp_orthotropic.html", null ],
             [ "NonlinearHill", "d8/d67/class_nonlinear_hill.html", null ]
           ] ],
           [ "NonlinearPeric", "d0/d51/class_nonlinear_peric.html", [
             [ "BilinearPeric", "d7/dc8/class_bilinear_peric.html", null ]
           ] ],
+          [ "NonlocalBilinearJ2", "d8/d1b/class_nonlocal_bilinear_j2.html", null ],
           [ "OrthotropicElastic3D", "da/d73/class_orthotropic_elastic3_d.html", null ],
           [ "Rebar3D", "d5/dbd/class_rebar3_d.html", null ],
           [ "Rotation3D", "d8/dff/class_rotation3_d.html", null ],
@@ -291,6 +485,9 @@ var hierarchy =
           [ "ElasticOS", "df/d38/class_elastic_o_s.html", null ]
         ] ],
         [ "MaterialTemplate", "d0/df4/class_material_template.html", null ],
+        [ "NonlocalMaterial3D", "d2/da2/class_nonlocal_material3_d.html", [
+          [ "NonlocalIsotropicElastic3D", "d7/d21/class_nonlocal_isotropic_elastic3_d.html", null ]
+        ] ],
         [ "OS146S", "d4/d9c/class_o_s146_s.html", null ],
         [ "StressWrapper", "d7/da6/class_stress_wrapper.html", [
           [ "PlaneStress", "d4/dac/class_plane_stress.html", null ],
@@ -301,196 +498,6 @@ var hierarchy =
         ] ],
         [ "Substepping", "d2/dda/class_substepping.html", null ]
       ] ]
-    ] ],
-    [ "DataDafaliasManzari", "de/d38/struct_data_dafalias_manzari.html", [
-      [ "DafaliasManzari", "d6/de0/class_dafalias_manzari.html", null ]
-    ] ],
-    [ "DataDhakal", "db/d0a/struct_data_dhakal.html", [
-      [ "Dhakal", "d7/d01/class_dhakal.html", null ]
-    ] ],
-    [ "DataElastic1D", "d0/de6/struct_data_elastic1_d.html", [
-      [ "Elastic1D", "d2/d55/class_elastic1_d.html", null ]
-    ] ],
-    [ "DataElasticOS", "d0/d7c/struct_data_elastic_o_s.html", [
-      [ "ElasticOS", "df/d38/class_elastic_o_s.html", null ]
-    ] ],
-    [ "DataElement", "d2/db9/struct_data_element.html", [
-      [ "Element", "d5/d50/class_element.html", [
-        [ "Contact2D", "d4/da1/class_contact2_d.html", null ],
-        [ "Contact3D", "d8/d1c/class_contact3_d.html", null ],
-        [ "ElementExample", "de/dec/class_element_example.html", null ],
-        [ "Embedded< DIM >", "db/dcd/class_embedded.html", null ],
-        [ "MassBase", "dc/d3f/class_mass_base.html", [
-          [ "Mass2D", "dc/d58/class_mass2_d.html", null ],
-          [ "Mass3D", "d1/d61/class_mass3_d.html", null ],
-          [ "MassPoint2D", "db/df9/class_mass_point2_d.html", null ],
-          [ "MassPoint3D", "db/dd4/class_mass_point3_d.html", null ]
-        ] ],
-        [ "MaterialElement", "d0/d07/class_material_element.html", [
-          [ "MaterialElement1D", "d6/dbb/class_material_element1_d.html", [
-            [ "Damper01", "d6/dd5/class_damper01.html", [
-              [ "Damper05", "db/d0a/class_damper05.html", null ]
-            ] ],
-            [ "Damper02", "dd/d8d/class_damper02.html", null ],
-            [ "EB21", "d7/d36/class_e_b21.html", null ],
-            [ "Joint", "d6/dd7/class_joint.html", null ],
-            [ "MVLEM", "dd/dfa/class_m_v_l_e_m.html", null ],
-            [ "Spring01", "d2/d40/class_spring01.html", null ],
-            [ "Spring02", "d6/d1f/class_spring02.html", null ],
-            [ "T2D2", "d6/d59/class_t2_d2.html", null ],
-            [ "T3D2", "d7/da1/class_t3_d2.html", null ]
-          ] ],
-          [ "MaterialElement2D", "d8/df9/class_material_element2_d.html", [
-            [ "Allman", "d1/db2/class_allman.html", null ],
-            [ "CAX3", "d3/de5/class_c_a_x3.html", null ],
-            [ "CAX4", "d8/d0a/class_c_a_x4.html", null ],
-            [ "CAX8", "d3/d72/class_c_a_x8.html", null ],
-            [ "CINP4", "da/d39/class_c_i_n_p4.html", null ],
-            [ "CP3", "dd/d49/class_c_p3.html", null ],
-            [ "CP4", "d8/d8f/class_c_p4.html", null ],
-            [ "CP4I", "d8/d42/class_c_p4_i.html", null ],
-            [ "CP5", "dd/df3/class_c_p5.html", null ],
-            [ "CP6", "d2/db0/class_c_p6.html", null ],
-            [ "CP7", "d6/dc6/class_c_p7.html", null ],
-            [ "CP8", "d0/de0/class_c_p8.html", null ],
-            [ "CSMQ", "db/dcf/class_c_s_m_q.html", [
-              [ "CSMQ5", "db/dd2/class_c_s_m_q5.html", null ],
-              [ "CSMQ6", "d8/dd3/class_c_s_m_q6.html", null ],
-              [ "CSMQ7", "de/dd8/class_c_s_m_q7.html", null ]
-            ] ],
-            [ "CSMQ4", "d6/d4f/class_c_s_m_q4.html", null ],
-            [ "CSMQ8", "de/da1/class_c_s_m_q8.html", null ],
-            [ "CSMT3", "da/d59/class_c_s_m_t3.html", null ],
-            [ "CSMT6", "d0/d2a/class_c_s_m_t6.html", null ],
-            [ "DCP3", "d1/d82/class_d_c_p3.html", null ],
-            [ "DCP4", "dd/d4f/class_d_c_p4.html", null ],
-            [ "DKT3", "d3/dfd/class_d_k_t3.html", null ],
-            [ "DKT4", "d8/da3/class_d_k_t4.html", null ],
-            [ "ElementTemplate", "d0/d1a/class_element_template.html", null ],
-            [ "GQ12", "d4/da8/class_g_q12.html", null ],
-            [ "Mindlin", "d3/dff/class_mindlin.html", null ],
-            [ "PCPE4DC", "d1/db2/class_p_c_p_e4_d_c.html", null ],
-            [ "PCPE4UC", "db/d53/class_p_c_p_e4_u_c.html", null ],
-            [ "PCPE8DC", "d9/d88/class_p_c_p_e8_d_c.html", null ],
-            [ "PCPE8UC", "d4/ddd/class_p_c_p_e8_u_c.html", null ],
-            [ "PS", "db/d61/class_p_s.html", null ],
-            [ "QE2", "dd/d4b/class_q_e2.html", null ],
-            [ "SGCMQ", "d2/daf/class_s_g_c_m_q.html", [
-              [ "GCMQ", "d7/d86/class_g_c_m_q.html", null ]
-            ] ],
-            [ "ShellBase", "d7/d11/class_shell_base.html", [
-              [ "DKTS3", "db/dea/class_d_k_t_s3.html", null ],
-              [ "S4", "d2/d2f/class_s4.html", null ],
-              [ "SGCMS", "d8/de9/class_s_g_c_m_s.html", null ]
-            ] ]
-          ] ],
-          [ "MaterialElement3D", "d7/df2/class_material_element3_d.html", [
-            [ "C3D20", "de/dba/class_c3_d20.html", null ],
-            [ "C3D4", "d6/d66/class_c3_d4.html", null ],
-            [ "C3D8", "d4/d8c/class_c3_d8.html", null ],
-            [ "C3D8I", "d8/d52/class_c3_d8_i.html", null ],
-            [ "CIN3D8", "d9/d51/class_c_i_n3_d8.html", null ],
-            [ "DC3D4", "d7/da1/class_d_c3_d4.html", null ],
-            [ "DC3D8", "d1/d82/class_d_c3_d8.html", null ]
-          ] ],
-          [ "MaterialPatch", "d6/dfb/class_material_patch.html", [
-            [ "MaterialPatch2D", "d0/d97/class_material_patch2_d.html", [
-              [ "PatchQuad", "da/d6e/class_patch_quad.html", null ]
-            ] ],
-            [ "MaterialPatch3D", "dd/d7f/class_material_patch3_d.html", [
-              [ "PatchCube", "d7/d72/class_patch_cube.html", null ]
-            ] ]
-          ] ]
-        ] ],
-        [ "Particle", "de/d85/class_particle.html", [
-          [ "SphericalParticle< 2u >", "d2/dea/class_spherical_particle.html", [
-            [ "InertialSphericalParticle2D", "db/da8/class_inertial_spherical_particle2_d.html", null ],
-            [ "SphericalParticle2D", "d8/dff/class_spherical_particle2_d.html", null ]
-          ] ],
-          [ "SphericalParticle< 3u >", "d2/dea/class_spherical_particle.html", [
-            [ "InertialSphericalParticle3D", "d2/dc4/class_inertial_spherical_particle3_d.html", null ],
-            [ "SphericalParticle3D", "d5/dfc/class_spherical_particle3_d.html", null ]
-          ] ],
-          [ "SphericalParticle< DIM >", "d2/dea/class_spherical_particle.html", null ]
-        ] ],
-        [ "SectionElement", "d4/d10/class_section_element.html", [
-          [ "SectionElement1D", "da/dd2/class_section_element1_d.html", [
-            [ "T2D2S", "d0/dc4/class_t2_d2_s.html", null ],
-            [ "T3D2S", "d2/d1d/class_t3_d2_s.html", null ]
-          ] ],
-          [ "SectionElement2D", "d9/d88/class_section_element2_d.html", [
-            [ "B21", "da/d74/class_b21.html", [
-              [ "B21E", "d7/d7e/class_b21_e.html", null ]
-            ] ],
-            [ "B21H", "d8/d3d/class_b21_h.html", null ],
-            [ "F21", "db/d7d/class_f21.html", null ],
-            [ "F21H", "d1/dd4/class_f21_h.html", null ],
-            [ "SingleSection2D", "de/dd2/class_single_section2_d.html", null ]
-          ] ],
-          [ "SectionElement3D", "da/d1c/class_section_element3_d.html", [
-            [ "B31", "df/daa/class_b31.html", null ],
-            [ "F31", "de/d6c/class_f31.html", null ],
-            [ "SingleSection3D", "d7/d8d/class_single_section3_d.html", null ]
-          ] ],
-          [ "SectionNMElement2D", "d5/d31/class_section_n_m_element2_d.html", [
-            [ "NMB21", "d5/d6d/class_n_m_b21.html", [
-              [ "NMB21E", "d2/dcd/class_n_m_b21_e.html", null ]
-            ] ]
-          ] ],
-          [ "SectionNMElement3D", "d3/d91/class_section_n_m_element3_d.html", [
-            [ "NMB31", "d5/db6/class_n_m_b31.html", null ]
-          ] ],
-          [ "SectionOSElement3D", "df/d5c/class_section_o_s_element3_d.html", [
-            [ "B31OS", "db/d7c/class_b31_o_s.html", null ],
-            [ "EB31OS", "dc/dff/class_e_b31_o_s.html", null ]
-          ] ],
-          [ "SectionPatch", "d8/d08/class_section_patch.html", [
-            [ "SectionPatch2D", "d1/d15/class_section_patch2_d.html", null ],
-            [ "SectionPatch3D", "d5/d14/class_section_patch3_d.html", null ]
-          ] ]
-        ] ],
-        [ "Tie", "df/d7e/class_tie.html", null ],
-        [ "TranslationConnector", "db/d13/class_translation_connector.html", [
-          [ "TranslationConnector2D", "d0/d6d/class_translation_connector2_d.html", null ],
-          [ "TranslationConnector3D", "da/dcb/class_translation_connector3_d.html", null ]
-        ] ]
-      ] ]
-    ] ],
-    [ "DataExpCC", "d9/d43/struct_data_exp_c_c.html", [
-      [ "ExpCC", "d8/d3d/class_exp_c_c.html", null ]
-    ] ],
-    [ "DataExpDP", "d4/d4d/struct_data_exp_d_p.html", [
-      [ "ExpDP", "d0/d64/class_exp_d_p.html", null ]
-    ] ],
-    [ "DataExpGurson", "d3/d8f/struct_data_exp_gurson.html", [
-      [ "ExpGurson", "dd/d26/class_exp_gurson.html", null ]
-    ] ],
-    [ "DataExpGurson1D", "dd/d55/struct_data_exp_gurson1_d.html", [
-      [ "ExpGurson1D", "da/d9a/class_exp_gurson1_d.html", null ]
-    ] ],
-    [ "DataExpJ2", "dd/dba/struct_data_exp_j2.html", [
-      [ "ExpJ2", "d8/df1/class_exp_j2.html", null ]
-    ] ],
-    [ "DataExpMises1D", "d6/d2a/struct_data_exp_mises1_d.html", [
-      [ "ExpMises1D", "d0/d1f/class_exp_mises1_d.html", null ]
-    ] ],
-    [ "DataExpOrthotropic", "d9/de0/struct_data_exp_orthotropic.html", [
-      [ "ExpOrthotropic", "da/d82/class_exp_orthotropic.html", null ]
-    ] ],
-    [ "DataFlag", "d8/dc6/struct_data_flag.html", [
-      [ "Flag", "d6/d71/class_flag.html", null ]
-    ] ],
-    [ "DataFluid", "db/daf/struct_data_fluid.html", [
-      [ "Fluid", "d8/db3/class_fluid.html", null ]
-    ] ],
-    [ "DataGap01", "d1/d10/struct_data_gap01.html", [
-      [ "Gap01", "dd/dd1/class_gap01.html", null ]
-    ] ],
-    [ "DataIsotropicElastic3D", "d3/d0e/struct_data_isotropic_elastic3_d.html", [
-      [ "IsotropicElastic3D", "d2/dcf/class_isotropic_elastic3_d.html", null ]
-    ] ],
-    [ "DataMaterial", "de/de9/struct_data_material.html", [
-      [ "Material", "dc/dee/class_material.html", null ]
     ] ],
     [ "DataMises1D", "d0/de1/struct_data_mises1_d.html", [
       [ "NonlinearMises1D", "db/d14/class_nonlinear_mises1_d.html", null ]
@@ -557,6 +564,12 @@ var hierarchy =
     ] ],
     [ "DataNonlinearViscosity", "d0/dd3/struct_data_nonlinear_viscosity.html", [
       [ "NonlinearViscosity", "df/db0/class_nonlinear_viscosity.html", null ]
+    ] ],
+    [ "DataNonlocalBilinearJ2", "d4/d4c/struct_data_nonlocal_bilinear_j2.html", [
+      [ "NonlocalBilinearJ2", "d8/d1b/class_nonlocal_bilinear_j2.html", null ]
+    ] ],
+    [ "DataNonlocalIsotropicElastic3D", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html", [
+      [ "NonlocalIsotropicElastic3D", "d7/d21/class_nonlocal_isotropic_elastic3_d.html", null ]
     ] ],
     [ "DataNonviscous01", "da/d18/struct_data_nonviscous01.html", [
       [ "Nonviscous01", "dc/d77/class_nonviscous01.html", null ]
@@ -717,7 +730,8 @@ var hierarchy =
       [ "GroupNodalForce", "d2/d3a/class_group_nodal_force.html", null ],
       [ "GroupPenaltyBC", "d1/d4a/class_group_penalty_b_c.html", [
         [ "GroupMultiplierBC", "db/dfd/class_group_multiplier_b_c.html", null ]
-      ] ]
+      ] ],
+      [ "GroupReferenceForce", "dc/d51/class_group_reference_force.html", null ]
     ] ],
     [ "IGA", "df/d93/struct_i_g_a.html", null ],
     [ "IntegrationPlan", "dd/d31/class_integration_plan.html", null ],
@@ -971,7 +985,9 @@ var hierarchy =
             [ "NodalForce", "d2/d05/class_nodal_force.html", [
               [ "GroupNodalForce", "d2/d3a/class_group_nodal_force.html", null ]
             ] ],
-            [ "ReferenceForce", "d3/dca/class_reference_force.html", null ],
+            [ "ReferenceForce", "d3/dca/class_reference_force.html", [
+              [ "GroupReferenceForce", "dc/d51/class_group_reference_force.html", null ]
+            ] ],
             [ "SupportMotion", "da/dbb/class_support_motion.html", [
               [ "SupportAcceleration", "d1/d73/class_support_acceleration.html", null ],
               [ "SupportDisplacement", "da/d11/class_support_displacement.html", null ],

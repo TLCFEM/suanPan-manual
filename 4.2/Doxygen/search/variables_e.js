@@ -9,6 +9,5 @@ var searchData=
   ['origin_6',['origin',['../de/d24/class_rigid_wall_penalty.html#a5a7ede689667985531e9c00ffc4e82d0',1,'RigidWallPenalty']]],
   ['original_5fdof_7',['original_dof',['../df/dbd/struct_node_data.html#acb9f7c4cf683627093cceef3583e960c',1,'NodeData']]],
   ['original_5ftype_8',['original_type',['../d3/d1a/class_recorder.html#a64348fb873da89d497cdb25a18ed0f66',1,'Recorder']]],
-  ['outer_5fnorm_9',['outer_norm',['../de/d24/class_rigid_wall_penalty.html#ad95fb79f80f5989986c2a9c3ce8fdf4d',1,'RigidWallPenalty']]],
-  ['output_5fpath_10',['output_path',['../db/dda/struct_converter.html#a3f7e084a797ad672bab8f282f2c04863',1,'Converter']]]
+  ['outer_5fnorm_9',['outer_norm',['../de/d24/class_rigid_wall_penalty.html#ad95fb79f80f5989986c2a9c3ce8fdf4d',1,'RigidWallPenalty']]]
 ];

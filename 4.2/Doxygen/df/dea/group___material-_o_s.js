@@ -19,7 +19,7 @@ var group___material__o_s =
       [ "MaterialOS", "d2/d95/class_material_o_s.html#ab1a814db2e5b2975678f482df7412a61", null ]
     ] ],
     [ "UniversalOS", "da/d4f/class_universal_o_s.html", [
-      [ "UniversalOS", "da/d4f/class_universal_o_s.html#af7ef3cf85b2aa134bd4c70115252cd59", null ],
+      [ "UniversalOS", "da/d4f/class_universal_o_s.html#a9f1f24538ac514827fd0c07a2ba5bf39", null ],
       [ "print", "da/d4f/class_universal_o_s.html#a71594c13dd17b3f0087f9f2ea8d0fccd", null ]
     ] ],
     [ "OS146", "d5/da7/class_o_s146.html", [

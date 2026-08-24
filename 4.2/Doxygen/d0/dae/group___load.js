@@ -60,7 +60,11 @@ var group___load =
     [ "ReferenceForce", "d3/dca/class_reference_force.html", [
       [ "ReferenceForce", "d3/dca/class_reference_force.html#adcfdd9c2ccec9c157ccebcfd446e51fa", null ],
       [ "initialize", "d3/dca/class_reference_force.html#a774e6ba3e843146aa33ec0d7165362b7", null ],
-      [ "process", "d3/dca/class_reference_force.html#a0c9b738a04cb421f1c3fc62da0500404", null ]
+      [ "process", "d3/dca/class_reference_force.html#a2071b3a59b8d85b2a903ab3ad85c2442", null ]
+    ] ],
+    [ "GroupReferenceForce", "dc/d51/class_group_reference_force.html", [
+      [ "GroupReferenceForce", "dc/d51/class_group_reference_force.html#adc1ee6a7a2c17e526dbfbbc84c252896", null ],
+      [ "initialize", "dc/d51/class_group_reference_force.html#aeb5aba1b13ee3c41fb53b7cb598fc3ef", null ]
     ] ],
     [ "SupportMotion", "da/dbb/class_support_motion.html", [
       [ "SupportMotion", "da/dbb/class_support_motion.html#af9a95392ffe42b1b9325095872daa4aa", null ],

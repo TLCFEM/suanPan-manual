@@ -5,6 +5,8 @@ var dir_5dc3d2744d9e16e6dc5313fdb2ea1510 =
     [ "Material3D", "dir_32ae260e71ac145f4ad9ccf9f4b6f83d.html", "dir_32ae260e71ac145f4ad9ccf9f4b6f83d" ],
     [ "MaterialOS", "dir_183f451a0ef72f3ffe29612ec85f5580.html", "dir_183f451a0ef72f3ffe29612ec85f5580" ],
     [ "Special", "dir_882a0b68ab304bbb433d2a114d9f5431.html", "dir_882a0b68ab304bbb433d2a114d9f5431" ],
+    [ "CoupleMaterial.cpp", "d8/d89/_couple_material_8cpp.html", "d8/d89/_couple_material_8cpp" ],
+    [ "CoupleMaterial.h", "d5/dd5/_couple_material_8h.html", null ],
     [ "ExternalMaterial.cpp", "de/d06/_external_material_8cpp.html", null ],
     [ "ExternalMaterial.h", "d2/d67/_external_material_8h.html", null ],
     [ "ExternalMaterialData.h", "d3/d8a/_external_material_data_8h.html", "d3/d8a/_external_material_data_8h" ],

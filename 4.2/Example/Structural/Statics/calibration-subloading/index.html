@@ -42,13 +42,13 @@
 <a id=__codelineno-0-12 name=__codelineno-0-12></a>
 <a id=__codelineno-0-13 name=__codelineno-0-13></a>
 <a id=__codelineno-0-14 name=__codelineno-0-14></a><span class=k>def</span><span class=w> </span><span class=nf>execute</span><span class=p>(</span><span class=n>name</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>content</span><span class=p>:</span> <span class=nb>str</span><span class=p>):</span>
-<a id=__codelineno-0-15 name=__codelineno-0-15></a>    <span class=k>with</span> <span class=nb>open</span><span class=p>(</span><span class=s2>&quot;example.sp&quot;</span><span class=p>,</span> <span class=s2>&quot;w&quot;</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span>
+<a id=__codelineno-0-15 name=__codelineno-0-15></a>    <span class=k>with</span> <span class=nb>open</span><span class=p>(</span><span class=s2>"example.sp"</span><span class=p>,</span> <span class=s2>"w"</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span>
 <a id=__codelineno-0-16 name=__codelineno-0-16></a>        <span class=n>f</span><span class=o>.</span><span class=n>write</span><span class=p>(</span><span class=n>content</span><span class=p>)</span>
 <a id=__codelineno-0-17 name=__codelineno-0-17></a>
-<a id=__codelineno-0-18 name=__codelineno-0-18></a>    <span class=n>system</span><span class=p>(</span><span class=s2>&quot;suanpan -np -f example.sp&quot;</span><span class=p>)</span>
+<a id=__codelineno-0-18 name=__codelineno-0-18></a>    <span class=n>system</span><span class=p>(</span><span class=s2>"suanpan -np -f example.sp"</span><span class=p>)</span>
 <a id=__codelineno-0-19 name=__codelineno-0-19></a>
-<a id=__codelineno-0-20 name=__codelineno-0-20></a>    <span class=k>with</span> <span class=n>File</span><span class=p>(</span><span class=s2>&quot;RESULT.h5&quot;</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span>
-<a id=__codelineno-0-21 name=__codelineno-0-21></a>        <span class=k>return</span> <span class=n>Curve</span><span class=p>(</span><span class=n>name</span><span class=p>,</span> <span class=n>f</span><span class=p>[</span><span class=s2>&quot;dataset&quot;</span><span class=p>][:,</span> <span class=mi>0</span><span class=p>],</span> <span class=n>f</span><span class=p>[</span><span class=s2>&quot;dataset&quot;</span><span class=p>][:,</span> <span class=mi>1</span><span class=p>])</span>
+<a id=__codelineno-0-20 name=__codelineno-0-20></a>    <span class=k>with</span> <span class=n>File</span><span class=p>(</span><span class=s2>"RESULT.h5"</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span>
+<a id=__codelineno-0-21 name=__codelineno-0-21></a>        <span class=k>return</span> <span class=n>Curve</span><span class=p>(</span><span class=n>name</span><span class=p>,</span> <span class=n>f</span><span class=p>[</span><span class=s2>"dataset"</span><span class=p>][:,</span> <span class=mi>0</span><span class=p>],</span> <span class=n>f</span><span class=p>[</span><span class=s2>"dataset"</span><span class=p>][:,</span> <span class=mi>1</span><span class=p>])</span>
 <a id=__codelineno-0-22 name=__codelineno-0-22></a>
 <a id=__codelineno-0-23 name=__codelineno-0-23></a>
 <a id=__codelineno-0-24 name=__codelineno-0-24></a><span class=k>def</span><span class=w> </span><span class=nf>plot</span><span class=p>(</span><span class=n>title</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>curves</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>Curve</span><span class=p>]):</span>
@@ -142,11 +142,11 @@
 <span class=normal><a href=#__codelineno-1-81>81</a></span>
 <span class=normal><a href=#__codelineno-1-82>82</a></span>
 <span class=normal><a href=#__codelineno-1-83>83</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-1-1 name=__codelineno-1-1></a><span class=n>plot</span><span class=p>(</span>
-<a id=__codelineno-1-2 name=__codelineno-1-2></a>    <span class=s2>&quot;$u$ controls smooth transition&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-2 name=__codelineno-1-2></a>    <span class=s2>"$u$ controls smooth transition"</span><span class=p>,</span>
 <a id=__codelineno-1-3 name=__codelineno-1-3></a>    <span class=p>[</span>
 <a id=__codelineno-1-4 name=__codelineno-1-4></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-1-5 name=__codelineno-1-5></a>            <span class=s2>&quot;$u=200$&quot;</span><span class=p>,</span>
-<a id=__codelineno-1-6 name=__codelineno-1-6></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-1-5 name=__codelineno-1-5></a>            <span class=s2>"$u=200$"</span><span class=p>,</span>
+<a id=__codelineno-1-6 name=__codelineno-1-6></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-1-7 name=__codelineno-1-7></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-1-8 name=__codelineno-1-8></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-1-9 name=__codelineno-1-9></a><span class=sd>0 0 0 0 \</span>
@@ -155,11 +155,11 @@
 <a id=__codelineno-1-12 name=__codelineno-1-12></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-1-13 name=__codelineno-1-13></a>
 <a id=__codelineno-1-14 name=__codelineno-1-14></a><span class=sd>exit</span>
-<a id=__codelineno-1-15 name=__codelineno-1-15></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-15 name=__codelineno-1-15></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-1-16 name=__codelineno-1-16></a>        <span class=p>),</span>
 <a id=__codelineno-1-17 name=__codelineno-1-17></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-1-18 name=__codelineno-1-18></a>            <span class=s2>&quot;$u=500$&quot;</span><span class=p>,</span>
-<a id=__codelineno-1-19 name=__codelineno-1-19></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-1-18 name=__codelineno-1-18></a>            <span class=s2>"$u=500$"</span><span class=p>,</span>
+<a id=__codelineno-1-19 name=__codelineno-1-19></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-1-20 name=__codelineno-1-20></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-1-21 name=__codelineno-1-21></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-1-22 name=__codelineno-1-22></a><span class=sd>0 0 0 0 \</span>
@@ -168,11 +168,11 @@
 <a id=__codelineno-1-25 name=__codelineno-1-25></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-1-26 name=__codelineno-1-26></a>
 <a id=__codelineno-1-27 name=__codelineno-1-27></a><span class=sd>exit</span>
-<a id=__codelineno-1-28 name=__codelineno-1-28></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-28 name=__codelineno-1-28></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-1-29 name=__codelineno-1-29></a>        <span class=p>),</span>
 <a id=__codelineno-1-30 name=__codelineno-1-30></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-1-31 name=__codelineno-1-31></a>            <span class=s2>&quot;$u=1000$&quot;</span><span class=p>,</span>
-<a id=__codelineno-1-32 name=__codelineno-1-32></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-1-31 name=__codelineno-1-31></a>            <span class=s2>"$u=1000$"</span><span class=p>,</span>
+<a id=__codelineno-1-32 name=__codelineno-1-32></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-1-33 name=__codelineno-1-33></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-1-34 name=__codelineno-1-34></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-1-35 name=__codelineno-1-35></a><span class=sd>0 0 0 0 \</span>
@@ -181,11 +181,11 @@
 <a id=__codelineno-1-38 name=__codelineno-1-38></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-1-39 name=__codelineno-1-39></a>
 <a id=__codelineno-1-40 name=__codelineno-1-40></a><span class=sd>exit</span>
-<a id=__codelineno-1-41 name=__codelineno-1-41></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-41 name=__codelineno-1-41></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-1-42 name=__codelineno-1-42></a>        <span class=p>),</span>
 <a id=__codelineno-1-43 name=__codelineno-1-43></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-1-44 name=__codelineno-1-44></a>            <span class=s2>&quot;$u=2000$&quot;</span><span class=p>,</span>
-<a id=__codelineno-1-45 name=__codelineno-1-45></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-1-44 name=__codelineno-1-44></a>            <span class=s2>"$u=2000$"</span><span class=p>,</span>
+<a id=__codelineno-1-45 name=__codelineno-1-45></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-1-46 name=__codelineno-1-46></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-1-47 name=__codelineno-1-47></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-1-48 name=__codelineno-1-48></a><span class=sd>0 0 0 0 \</span>
@@ -194,11 +194,11 @@
 <a id=__codelineno-1-51 name=__codelineno-1-51></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-1-52 name=__codelineno-1-52></a>
 <a id=__codelineno-1-53 name=__codelineno-1-53></a><span class=sd>exit</span>
-<a id=__codelineno-1-54 name=__codelineno-1-54></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-54 name=__codelineno-1-54></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-1-55 name=__codelineno-1-55></a>        <span class=p>),</span>
 <a id=__codelineno-1-56 name=__codelineno-1-56></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-1-57 name=__codelineno-1-57></a>            <span class=s2>&quot;$u=5000$&quot;</span><span class=p>,</span>
-<a id=__codelineno-1-58 name=__codelineno-1-58></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-1-57 name=__codelineno-1-57></a>            <span class=s2>"$u=5000$"</span><span class=p>,</span>
+<a id=__codelineno-1-58 name=__codelineno-1-58></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-1-59 name=__codelineno-1-59></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-1-60 name=__codelineno-1-60></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-1-61 name=__codelineno-1-61></a><span class=sd>0 0 0 0 \</span>
@@ -207,11 +207,11 @@
 <a id=__codelineno-1-64 name=__codelineno-1-64></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-1-65 name=__codelineno-1-65></a>
 <a id=__codelineno-1-66 name=__codelineno-1-66></a><span class=sd>exit</span>
-<a id=__codelineno-1-67 name=__codelineno-1-67></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-67 name=__codelineno-1-67></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-1-68 name=__codelineno-1-68></a>        <span class=p>),</span>
 <a id=__codelineno-1-69 name=__codelineno-1-69></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-1-70 name=__codelineno-1-70></a>            <span class=s2>&quot;$u=10000$&quot;</span><span class=p>,</span>
-<a id=__codelineno-1-71 name=__codelineno-1-71></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-1-70 name=__codelineno-1-70></a>            <span class=s2>"$u=10000$"</span><span class=p>,</span>
+<a id=__codelineno-1-71 name=__codelineno-1-71></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-1-72 name=__codelineno-1-72></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-1-73 name=__codelineno-1-73></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-1-74 name=__codelineno-1-74></a><span class=sd>0 0 0 0 \</span>
@@ -220,7 +220,7 @@
 <a id=__codelineno-1-77 name=__codelineno-1-77></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-1-78 name=__codelineno-1-78></a>
 <a id=__codelineno-1-79 name=__codelineno-1-79></a><span class=sd>exit</span>
-<a id=__codelineno-1-80 name=__codelineno-1-80></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-1-80 name=__codelineno-1-80></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-1-81 name=__codelineno-1-81></a>        <span class=p>),</span>
 <a id=__codelineno-1-82 name=__codelineno-1-82></a>    <span class=p>],</span>
 <a id=__codelineno-1-83 name=__codelineno-1-83></a><span class=p>)</span>
@@ -294,11 +294,11 @@
 <span class=normal><a href=#__codelineno-2-68>68</a></span>
 <span class=normal><a href=#__codelineno-2-69>69</a></span>
 <span class=normal><a href=#__codelineno-2-70>70</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-2-1 name=__codelineno-2-1></a><span class=n>plot</span><span class=p>(</span>
-<a id=__codelineno-2-2 name=__codelineno-2-2></a>    <span class=s2>&quot;isotropic hardening&quot;</span><span class=p>,</span>
+<a id=__codelineno-2-2 name=__codelineno-2-2></a>    <span class=s2>"isotropic hardening"</span><span class=p>,</span>
 <a id=__codelineno-2-3 name=__codelineno-2-3></a>    <span class=p>[</span>
 <a id=__codelineno-2-4 name=__codelineno-2-4></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-2-5 name=__codelineno-2-5></a>            <span class=s2>&quot;without linear hardening&quot;</span><span class=p>,</span>
-<a id=__codelineno-2-6 name=__codelineno-2-6></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-2-5 name=__codelineno-2-5></a>            <span class=s2>"without linear hardening"</span><span class=p>,</span>
+<a id=__codelineno-2-6 name=__codelineno-2-6></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-2-7 name=__codelineno-2-7></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-2-8 name=__codelineno-2-8></a><span class=sd>400 0 200 50 \</span>
 <a id=__codelineno-2-9 name=__codelineno-2-9></a><span class=sd>0 0 0 0 \</span>
@@ -307,11 +307,11 @@
 <a id=__codelineno-2-12 name=__codelineno-2-12></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-2-13 name=__codelineno-2-13></a>
 <a id=__codelineno-2-14 name=__codelineno-2-14></a><span class=sd>exit</span>
-<a id=__codelineno-2-15 name=__codelineno-2-15></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-2-15 name=__codelineno-2-15></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-2-16 name=__codelineno-2-16></a>        <span class=p>),</span>
 <a id=__codelineno-2-17 name=__codelineno-2-17></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-2-18 name=__codelineno-2-18></a>            <span class=s2>&quot;with linear hardening&quot;</span><span class=p>,</span>
-<a id=__codelineno-2-19 name=__codelineno-2-19></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-2-18 name=__codelineno-2-18></a>            <span class=s2>"with linear hardening"</span><span class=p>,</span>
+<a id=__codelineno-2-19 name=__codelineno-2-19></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-2-20 name=__codelineno-2-20></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-2-21 name=__codelineno-2-21></a><span class=sd>400 2000 200 50 \</span>
 <a id=__codelineno-2-22 name=__codelineno-2-22></a><span class=sd>0 0 0 0 \</span>
@@ -320,11 +320,11 @@
 <a id=__codelineno-2-25 name=__codelineno-2-25></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-2-26 name=__codelineno-2-26></a>
 <a id=__codelineno-2-27 name=__codelineno-2-27></a><span class=sd>exit</span>
-<a id=__codelineno-2-28 name=__codelineno-2-28></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-2-28 name=__codelineno-2-28></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-2-29 name=__codelineno-2-29></a>        <span class=p>),</span>
 <a id=__codelineno-2-30 name=__codelineno-2-30></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-2-31 name=__codelineno-2-31></a>            <span class=s2>&quot;only linear hardening&quot;</span><span class=p>,</span>
-<a id=__codelineno-2-32 name=__codelineno-2-32></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-2-31 name=__codelineno-2-31></a>            <span class=s2>"only linear hardening"</span><span class=p>,</span>
+<a id=__codelineno-2-32 name=__codelineno-2-32></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-2-33 name=__codelineno-2-33></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-2-34 name=__codelineno-2-34></a><span class=sd>400 2000 0 0 \</span>
 <a id=__codelineno-2-35 name=__codelineno-2-35></a><span class=sd>0 0 0 0 \</span>
@@ -333,11 +333,11 @@
 <a id=__codelineno-2-38 name=__codelineno-2-38></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-2-39 name=__codelineno-2-39></a>
 <a id=__codelineno-2-40 name=__codelineno-2-40></a><span class=sd>exit</span>
-<a id=__codelineno-2-41 name=__codelineno-2-41></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-2-41 name=__codelineno-2-41></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-2-42 name=__codelineno-2-42></a>        <span class=p>),</span>
 <a id=__codelineno-2-43 name=__codelineno-2-43></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-2-44 name=__codelineno-2-44></a>            <span class=s2>&quot;$m^s_</span><span class=si>{iso}</span><span class=s2>=250$&quot;</span><span class=p>,</span>
-<a id=__codelineno-2-45 name=__codelineno-2-45></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-2-44 name=__codelineno-2-44></a>            <span class=s2>"$m^s_</span><span class=si>{iso}</span><span class=s2>=250$"</span><span class=p>,</span>
+<a id=__codelineno-2-45 name=__codelineno-2-45></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-2-46 name=__codelineno-2-46></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-2-47 name=__codelineno-2-47></a><span class=sd>400 0 200 250 \</span>
 <a id=__codelineno-2-48 name=__codelineno-2-48></a><span class=sd>0 0 0 0 \</span>
@@ -346,11 +346,11 @@
 <a id=__codelineno-2-51 name=__codelineno-2-51></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-2-52 name=__codelineno-2-52></a>
 <a id=__codelineno-2-53 name=__codelineno-2-53></a><span class=sd>exit</span>
-<a id=__codelineno-2-54 name=__codelineno-2-54></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-2-54 name=__codelineno-2-54></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-2-55 name=__codelineno-2-55></a>        <span class=p>),</span>
 <a id=__codelineno-2-56 name=__codelineno-2-56></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-2-57 name=__codelineno-2-57></a>            <span class=s2>&quot;$m^s_</span><span class=si>{iso}</span><span class=s2>=500$&quot;</span><span class=p>,</span>
-<a id=__codelineno-2-58 name=__codelineno-2-58></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-2-57 name=__codelineno-2-57></a>            <span class=s2>"$m^s_</span><span class=si>{iso}</span><span class=s2>=500$"</span><span class=p>,</span>
+<a id=__codelineno-2-58 name=__codelineno-2-58></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-2-59 name=__codelineno-2-59></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-2-60 name=__codelineno-2-60></a><span class=sd>400 0 200 500 \</span>
 <a id=__codelineno-2-61 name=__codelineno-2-61></a><span class=sd>0 0 0 0 \</span>
@@ -359,7 +359,7 @@
 <a id=__codelineno-2-64 name=__codelineno-2-64></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-2-65 name=__codelineno-2-65></a>
 <a id=__codelineno-2-66 name=__codelineno-2-66></a><span class=sd>exit</span>
-<a id=__codelineno-2-67 name=__codelineno-2-67></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-2-67 name=__codelineno-2-67></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-2-68 name=__codelineno-2-68></a>        <span class=p>),</span>
 <a id=__codelineno-2-69 name=__codelineno-2-69></a>    <span class=p>],</span>
 <a id=__codelineno-2-70 name=__codelineno-2-70></a><span class=p>)</span>
@@ -433,11 +433,11 @@
 <span class=normal><a href=#__codelineno-3-68>68</a></span>
 <span class=normal><a href=#__codelineno-3-69>69</a></span>
 <span class=normal><a href=#__codelineno-3-70>70</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-3-1 name=__codelineno-3-1></a><span class=n>plot</span><span class=p>(</span>
-<a id=__codelineno-3-2 name=__codelineno-3-2></a>    <span class=s2>&quot;kinematic hardening&quot;</span><span class=p>,</span>
+<a id=__codelineno-3-2 name=__codelineno-3-2></a>    <span class=s2>"kinematic hardening"</span><span class=p>,</span>
 <a id=__codelineno-3-3 name=__codelineno-3-3></a>    <span class=p>[</span>
 <a id=__codelineno-3-4 name=__codelineno-3-4></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-3-5 name=__codelineno-3-5></a>            <span class=s2>&quot;without linear hardening&quot;</span><span class=p>,</span>
-<a id=__codelineno-3-6 name=__codelineno-3-6></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-3-5 name=__codelineno-3-5></a>            <span class=s2>"without linear hardening"</span><span class=p>,</span>
+<a id=__codelineno-3-6 name=__codelineno-3-6></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-3-7 name=__codelineno-3-7></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-3-8 name=__codelineno-3-8></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-3-9 name=__codelineno-3-9></a><span class=sd>100 0 0 0 \</span>
@@ -446,11 +446,11 @@
 <a id=__codelineno-3-12 name=__codelineno-3-12></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-3-13 name=__codelineno-3-13></a>
 <a id=__codelineno-3-14 name=__codelineno-3-14></a><span class=sd>exit</span>
-<a id=__codelineno-3-15 name=__codelineno-3-15></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-3-15 name=__codelineno-3-15></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-3-16 name=__codelineno-3-16></a>        <span class=p>),</span>
 <a id=__codelineno-3-17 name=__codelineno-3-17></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-3-18 name=__codelineno-3-18></a>            <span class=s2>&quot;only linear hardening&quot;</span><span class=p>,</span>
-<a id=__codelineno-3-19 name=__codelineno-3-19></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-3-18 name=__codelineno-3-18></a>            <span class=s2>"only linear hardening"</span><span class=p>,</span>
+<a id=__codelineno-3-19 name=__codelineno-3-19></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-3-20 name=__codelineno-3-20></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-3-21 name=__codelineno-3-21></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-3-22 name=__codelineno-3-22></a><span class=sd>0 2000 0 0 \</span>
@@ -459,11 +459,11 @@
 <a id=__codelineno-3-25 name=__codelineno-3-25></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-3-26 name=__codelineno-3-26></a>
 <a id=__codelineno-3-27 name=__codelineno-3-27></a><span class=sd>exit</span>
-<a id=__codelineno-3-28 name=__codelineno-3-28></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-3-28 name=__codelineno-3-28></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-3-29 name=__codelineno-3-29></a>        <span class=p>),</span>
 <a id=__codelineno-3-30 name=__codelineno-3-30></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-3-31 name=__codelineno-3-31></a>            <span class=s2>&quot;with linear hardening&quot;</span><span class=p>,</span>
-<a id=__codelineno-3-32 name=__codelineno-3-32></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-3-31 name=__codelineno-3-31></a>            <span class=s2>"with linear hardening"</span><span class=p>,</span>
+<a id=__codelineno-3-32 name=__codelineno-3-32></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-3-33 name=__codelineno-3-33></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-3-34 name=__codelineno-3-34></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-3-35 name=__codelineno-3-35></a><span class=sd>100 2000 0 0 \</span>
@@ -472,11 +472,11 @@
 <a id=__codelineno-3-38 name=__codelineno-3-38></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-3-39 name=__codelineno-3-39></a>
 <a id=__codelineno-3-40 name=__codelineno-3-40></a><span class=sd>exit</span>
-<a id=__codelineno-3-41 name=__codelineno-3-41></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-3-41 name=__codelineno-3-41></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-3-42 name=__codelineno-3-42></a>        <span class=p>),</span>
 <a id=__codelineno-3-43 name=__codelineno-3-43></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-3-44 name=__codelineno-3-44></a>            <span class=s2>&quot;further saturation&quot;</span><span class=p>,</span>
-<a id=__codelineno-3-45 name=__codelineno-3-45></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-3-44 name=__codelineno-3-44></a>            <span class=s2>"further saturation"</span><span class=p>,</span>
+<a id=__codelineno-3-45 name=__codelineno-3-45></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-3-46 name=__codelineno-3-46></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-3-47 name=__codelineno-3-47></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-3-48 name=__codelineno-3-48></a><span class=sd>100 0 150 100 \</span>
@@ -485,11 +485,11 @@
 <a id=__codelineno-3-51 name=__codelineno-3-51></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-3-52 name=__codelineno-3-52></a>
 <a id=__codelineno-3-53 name=__codelineno-3-53></a><span class=sd>exit</span>
-<a id=__codelineno-3-54 name=__codelineno-3-54></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-3-54 name=__codelineno-3-54></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-3-55 name=__codelineno-3-55></a>        <span class=p>),</span>
 <a id=__codelineno-3-56 name=__codelineno-3-56></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-3-57 name=__codelineno-3-57></a>            <span class=s2>&quot;faster further saturation&quot;</span><span class=p>,</span>
-<a id=__codelineno-3-58 name=__codelineno-3-58></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-3-57 name=__codelineno-3-57></a>            <span class=s2>"faster further saturation"</span><span class=p>,</span>
+<a id=__codelineno-3-58 name=__codelineno-3-58></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-3-59 name=__codelineno-3-59></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-3-60 name=__codelineno-3-60></a><span class=sd>400 0 0 0 \</span>
 <a id=__codelineno-3-61 name=__codelineno-3-61></a><span class=sd>100 0 150 500 \</span>
@@ -498,7 +498,7 @@
 <a id=__codelineno-3-64 name=__codelineno-3-64></a><span class=sd>materialTest1D 1 1E-4 200</span>
 <a id=__codelineno-3-65 name=__codelineno-3-65></a>
 <a id=__codelineno-3-66 name=__codelineno-3-66></a><span class=sd>exit</span>
-<a id=__codelineno-3-67 name=__codelineno-3-67></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-3-67 name=__codelineno-3-67></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-3-68 name=__codelineno-3-68></a>        <span class=p>),</span>
 <a id=__codelineno-3-69 name=__codelineno-3-69></a>    <span class=p>],</span>
 <a id=__codelineno-3-70 name=__codelineno-3-70></a><span class=p>)</span>
@@ -546,11 +546,11 @@
 <span class=normal><a href=#__codelineno-4-42>42</a></span>
 <span class=normal><a href=#__codelineno-4-43>43</a></span>
 <span class=normal><a href=#__codelineno-4-44>44</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-4-1 name=__codelineno-4-1></a><span class=n>plot</span><span class=p>(</span>
-<a id=__codelineno-4-2 name=__codelineno-4-2></a>    <span class=s2>&quot;ratcheting, plastic strain accumulation&quot;</span><span class=p>,</span>
+<a id=__codelineno-4-2 name=__codelineno-4-2></a>    <span class=s2>"ratcheting, plastic strain accumulation"</span><span class=p>,</span>
 <a id=__codelineno-4-3 name=__codelineno-4-3></a>    <span class=p>[</span>
 <a id=__codelineno-4-4 name=__codelineno-4-4></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-4-5 name=__codelineno-4-5></a>            <span class=s2>&quot;without elastic core, no closed hysteresis loop&quot;</span><span class=p>,</span>
-<a id=__codelineno-4-6 name=__codelineno-4-6></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-4-5 name=__codelineno-4-5></a>            <span class=s2>"without elastic core, no closed hysteresis loop"</span><span class=p>,</span>
+<a id=__codelineno-4-6 name=__codelineno-4-6></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-4-7 name=__codelineno-4-7></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-4-8 name=__codelineno-4-8></a><span class=sd>400 8000 0 0 \</span>
 <a id=__codelineno-4-9 name=__codelineno-4-9></a><span class=sd>0 0 0 0 \</span>
@@ -559,11 +559,11 @@
 <a id=__codelineno-4-12 name=__codelineno-4-12></a><span class=sd>materialTestByLoad1D 1 10 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50</span>
 <a id=__codelineno-4-13 name=__codelineno-4-13></a>
 <a id=__codelineno-4-14 name=__codelineno-4-14></a><span class=sd>exit</span>
-<a id=__codelineno-4-15 name=__codelineno-4-15></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-4-15 name=__codelineno-4-15></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-4-16 name=__codelineno-4-16></a>        <span class=p>),</span>
 <a id=__codelineno-4-17 name=__codelineno-4-17></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-4-18 name=__codelineno-4-18></a>            <span class=s2>&quot;with elastic core, smaller plastic strain accumulation&quot;</span><span class=p>,</span>
-<a id=__codelineno-4-19 name=__codelineno-4-19></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-4-18 name=__codelineno-4-18></a>            <span class=s2>"with elastic core, smaller plastic strain accumulation"</span><span class=p>,</span>
+<a id=__codelineno-4-19 name=__codelineno-4-19></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-4-20 name=__codelineno-4-20></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-4-21 name=__codelineno-4-21></a><span class=sd>400 8000 0 0 \</span>
 <a id=__codelineno-4-22 name=__codelineno-4-22></a><span class=sd>0 0 0 0 \</span>
@@ -572,11 +572,11 @@
 <a id=__codelineno-4-25 name=__codelineno-4-25></a><span class=sd>materialTestByLoad1D 1 10 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50</span>
 <a id=__codelineno-4-26 name=__codelineno-4-26></a>
 <a id=__codelineno-4-27 name=__codelineno-4-27></a><span class=sd>exit</span>
-<a id=__codelineno-4-28 name=__codelineno-4-28></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-4-28 name=__codelineno-4-28></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-4-29 name=__codelineno-4-29></a>        <span class=p>),</span>
 <a id=__codelineno-4-30 name=__codelineno-4-30></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-4-31 name=__codelineno-4-31></a>            <span class=s2>&quot;with elastic core, even smaller&quot;</span><span class=p>,</span>
-<a id=__codelineno-4-32 name=__codelineno-4-32></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-4-31 name=__codelineno-4-31></a>            <span class=s2>"with elastic core, even smaller"</span><span class=p>,</span>
+<a id=__codelineno-4-32 name=__codelineno-4-32></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-4-33 name=__codelineno-4-33></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-4-34 name=__codelineno-4-34></a><span class=sd>400 8000 0 0 \</span>
 <a id=__codelineno-4-35 name=__codelineno-4-35></a><span class=sd>0 0 0 0 \</span>
@@ -585,7 +585,7 @@
 <a id=__codelineno-4-38 name=__codelineno-4-38></a><span class=sd>materialTestByLoad1D 1 10 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50</span>
 <a id=__codelineno-4-39 name=__codelineno-4-39></a>
 <a id=__codelineno-4-40 name=__codelineno-4-40></a><span class=sd>exit</span>
-<a id=__codelineno-4-41 name=__codelineno-4-41></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-4-41 name=__codelineno-4-41></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-4-42 name=__codelineno-4-42></a>        <span class=p>),</span>
 <a id=__codelineno-4-43 name=__codelineno-4-43></a>    <span class=p>],</span>
 <a id=__codelineno-4-44 name=__codelineno-4-44></a><span class=p>)</span>
@@ -607,11 +607,11 @@
 <span class=normal><a href=#__codelineno-5-16>16</a></span>
 <span class=normal><a href=#__codelineno-5-17>17</a></span>
 <span class=normal><a href=#__codelineno-5-18>18</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-5-1 name=__codelineno-5-1></a><span class=n>plot</span><span class=p>(</span>
-<a id=__codelineno-5-2 name=__codelineno-5-2></a>    <span class=s2>&quot;example calibration&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-2 name=__codelineno-5-2></a>    <span class=s2>"example calibration"</span><span class=p>,</span>
 <a id=__codelineno-5-3 name=__codelineno-5-3></a>    <span class=p>[</span>
 <a id=__codelineno-5-4 name=__codelineno-5-4></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-5-5 name=__codelineno-5-5></a>            <span class=s2>&quot;Fig. 12.3 10.1007/978-3-030-93138-4&quot;</span><span class=p>,</span>
-<a id=__codelineno-5-6 name=__codelineno-5-6></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-5-5 name=__codelineno-5-5></a>            <span class=s2>"Fig. 12.3 10.1007/978-3-030-93138-4"</span><span class=p>,</span>
+<a id=__codelineno-5-6 name=__codelineno-5-6></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-5-7 name=__codelineno-5-7></a><span class=sd>material Subloading1D 1 1.6E5 \</span>
 <a id=__codelineno-5-8 name=__codelineno-5-8></a><span class=sd>507 0 294 170 \</span>
 <a id=__codelineno-5-9 name=__codelineno-5-9></a><span class=sd>254 0 147 170 \</span>
@@ -620,7 +620,7 @@
 <a id=__codelineno-5-12 name=__codelineno-5-12></a><span class=sd>materialTestByLoad1D 1 8.3 100 100 100 100 100 100 100 100 100 100 100</span>
 <a id=__codelineno-5-13 name=__codelineno-5-13></a>
 <a id=__codelineno-5-14 name=__codelineno-5-14></a><span class=sd>exit</span>
-<a id=__codelineno-5-15 name=__codelineno-5-15></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-5-15 name=__codelineno-5-15></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-5-16 name=__codelineno-5-16></a>        <span class=p>),</span>
 <a id=__codelineno-5-17 name=__codelineno-5-17></a>    <span class=p>],</span>
 <a id=__codelineno-5-18 name=__codelineno-5-18></a><span class=p>)</span>
@@ -642,11 +642,11 @@
 <span class=normal><a href=#__codelineno-6-16>16</a></span>
 <span class=normal><a href=#__codelineno-6-17>17</a></span>
 <span class=normal><a href=#__codelineno-6-18>18</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-6-1 name=__codelineno-6-1></a><span class=n>plot</span><span class=p>(</span>
-<a id=__codelineno-6-2 name=__codelineno-6-2></a>    <span class=s2>&quot;example calibration&quot;</span><span class=p>,</span>
+<a id=__codelineno-6-2 name=__codelineno-6-2></a>    <span class=s2>"example calibration"</span><span class=p>,</span>
 <a id=__codelineno-6-3 name=__codelineno-6-3></a>    <span class=p>[</span>
 <a id=__codelineno-6-4 name=__codelineno-6-4></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-6-5 name=__codelineno-6-5></a>            <span class=s2>&quot;Fig. 12.4 10.1007/978-3-030-93138-4&quot;</span><span class=p>,</span>
-<a id=__codelineno-6-6 name=__codelineno-6-6></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-6-5 name=__codelineno-6-5></a>            <span class=s2>"Fig. 12.4 10.1007/978-3-030-93138-4"</span><span class=p>,</span>
+<a id=__codelineno-6-6 name=__codelineno-6-6></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-6-7 name=__codelineno-6-7></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-6-8 name=__codelineno-6-8></a><span class=sd>232 0 70 30 \</span>
 <a id=__codelineno-6-9 name=__codelineno-6-9></a><span class=sd>209 0 63 30 \</span>
@@ -655,7 +655,7 @@
 <a id=__codelineno-6-12 name=__codelineno-6-12></a><span class=sd>materialTestByLoad1D 1 5 50 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80</span>
 <a id=__codelineno-6-13 name=__codelineno-6-13></a>
 <a id=__codelineno-6-14 name=__codelineno-6-14></a><span class=sd>exit</span>
-<a id=__codelineno-6-15 name=__codelineno-6-15></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-6-15 name=__codelineno-6-15></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-6-16 name=__codelineno-6-16></a>        <span class=p>),</span>
 <a id=__codelineno-6-17 name=__codelineno-6-17></a>    <span class=p>],</span>
 <a id=__codelineno-6-18 name=__codelineno-6-18></a><span class=p>)</span>
@@ -703,11 +703,11 @@
 <span class=normal><a href=#__codelineno-7-42>42</a></span>
 <span class=normal><a href=#__codelineno-7-43>43</a></span>
 <span class=normal><a href=#__codelineno-7-44>44</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-7-1 name=__codelineno-7-1></a><span class=n>plot</span><span class=p>(</span>
-<a id=__codelineno-7-2 name=__codelineno-7-2></a>    <span class=s2>&quot;linear isotropic hardening&quot;</span><span class=p>,</span>
+<a id=__codelineno-7-2 name=__codelineno-7-2></a>    <span class=s2>"linear isotropic hardening"</span><span class=p>,</span>
 <a id=__codelineno-7-3 name=__codelineno-7-3></a>    <span class=p>[</span>
 <a id=__codelineno-7-4 name=__codelineno-7-4></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-7-5 name=__codelineno-7-5></a>            <span class=s2>&quot;slight linear isotropic hardening, many cycles&quot;</span><span class=p>,</span>
-<a id=__codelineno-7-6 name=__codelineno-7-6></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-7-5 name=__codelineno-7-5></a>            <span class=s2>"slight linear isotropic hardening, many cycles"</span><span class=p>,</span>
+<a id=__codelineno-7-6 name=__codelineno-7-6></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-7-7 name=__codelineno-7-7></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-7-8 name=__codelineno-7-8></a><span class=sd>200 2E2 0 0 \</span>
 <a id=__codelineno-7-9 name=__codelineno-7-9></a><span class=sd>0 0 0 0 \</span>
@@ -716,11 +716,11 @@
 <a id=__codelineno-7-12 name=__codelineno-7-12></a><span class=sd>materialTest1D 1 1E-4 50 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 50</span>
 <a id=__codelineno-7-13 name=__codelineno-7-13></a>
 <a id=__codelineno-7-14 name=__codelineno-7-14></a><span class=sd>exit</span>
-<a id=__codelineno-7-15 name=__codelineno-7-15></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-7-15 name=__codelineno-7-15></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-7-16 name=__codelineno-7-16></a>        <span class=p>),</span>
 <a id=__codelineno-7-17 name=__codelineno-7-17></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-7-18 name=__codelineno-7-18></a>            <span class=s2>&quot;slight linear isotropic hardening, few cycles&quot;</span><span class=p>,</span>
-<a id=__codelineno-7-19 name=__codelineno-7-19></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-7-18 name=__codelineno-7-18></a>            <span class=s2>"slight linear isotropic hardening, few cycles"</span><span class=p>,</span>
+<a id=__codelineno-7-19 name=__codelineno-7-19></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-7-20 name=__codelineno-7-20></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-7-21 name=__codelineno-7-21></a><span class=sd>200 2E2 0 0 \</span>
 <a id=__codelineno-7-22 name=__codelineno-7-22></a><span class=sd>0 0 0 0 \</span>
@@ -729,11 +729,11 @@
 <a id=__codelineno-7-25 name=__codelineno-7-25></a><span class=sd>materialTest1D 1 1E-4 50 20 20 20 20 20 50</span>
 <a id=__codelineno-7-26 name=__codelineno-7-26></a>
 <a id=__codelineno-7-27 name=__codelineno-7-27></a><span class=sd>exit</span>
-<a id=__codelineno-7-28 name=__codelineno-7-28></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-7-28 name=__codelineno-7-28></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-7-29 name=__codelineno-7-29></a>        <span class=p>),</span>
 <a id=__codelineno-7-30 name=__codelineno-7-30></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-7-31 name=__codelineno-7-31></a>            <span class=s2>&quot;no linear isotropic hardening&quot;</span><span class=p>,</span>
-<a id=__codelineno-7-32 name=__codelineno-7-32></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-7-31 name=__codelineno-7-31></a>            <span class=s2>"no linear isotropic hardening"</span><span class=p>,</span>
+<a id=__codelineno-7-32 name=__codelineno-7-32></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-7-33 name=__codelineno-7-33></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-7-34 name=__codelineno-7-34></a><span class=sd>200 0 0 0 \</span>
 <a id=__codelineno-7-35 name=__codelineno-7-35></a><span class=sd>0 0 0 0 \</span>
@@ -742,7 +742,7 @@
 <a id=__codelineno-7-38 name=__codelineno-7-38></a><span class=sd>materialTest1D 1 1E-4 50 20 20 20 20 20 50</span>
 <a id=__codelineno-7-39 name=__codelineno-7-39></a>
 <a id=__codelineno-7-40 name=__codelineno-7-40></a><span class=sd>exit</span>
-<a id=__codelineno-7-41 name=__codelineno-7-41></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-7-41 name=__codelineno-7-41></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-7-42 name=__codelineno-7-42></a>        <span class=p>),</span>
 <a id=__codelineno-7-43 name=__codelineno-7-43></a>    <span class=p>],</span>
 <a id=__codelineno-7-44 name=__codelineno-7-44></a><span class=p>)</span>
@@ -790,11 +790,11 @@
 <span class=normal><a href=#__codelineno-8-42>42</a></span>
 <span class=normal><a href=#__codelineno-8-43>43</a></span>
 <span class=normal><a href=#__codelineno-8-44>44</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-8-1 name=__codelineno-8-1></a><span class=n>plot</span><span class=p>(</span>
-<a id=__codelineno-8-2 name=__codelineno-8-2></a>    <span class=s2>&quot;linear isotropic hardening&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-2 name=__codelineno-8-2></a>    <span class=s2>"linear isotropic hardening"</span><span class=p>,</span>
 <a id=__codelineno-8-3 name=__codelineno-8-3></a>    <span class=p>[</span>
 <a id=__codelineno-8-4 name=__codelineno-8-4></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-8-5 name=__codelineno-8-5></a>            <span class=s2>&quot;some linear isotropic hardening, many cycles&quot;</span><span class=p>,</span>
-<a id=__codelineno-8-6 name=__codelineno-8-6></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-8-5 name=__codelineno-8-5></a>            <span class=s2>"some linear isotropic hardening, many cycles"</span><span class=p>,</span>
+<a id=__codelineno-8-6 name=__codelineno-8-6></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-8-7 name=__codelineno-8-7></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-8-8 name=__codelineno-8-8></a><span class=sd>200 5E3 0 0 \</span>
 <a id=__codelineno-8-9 name=__codelineno-8-9></a><span class=sd>0 0 0 0 \</span>
@@ -803,11 +803,11 @@
 <a id=__codelineno-8-12 name=__codelineno-8-12></a><span class=sd>materialTest1D 1 1E-4 50 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 50</span>
 <a id=__codelineno-8-13 name=__codelineno-8-13></a>
 <a id=__codelineno-8-14 name=__codelineno-8-14></a><span class=sd>exit</span>
-<a id=__codelineno-8-15 name=__codelineno-8-15></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-15 name=__codelineno-8-15></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-8-16 name=__codelineno-8-16></a>        <span class=p>),</span>
 <a id=__codelineno-8-17 name=__codelineno-8-17></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-8-18 name=__codelineno-8-18></a>            <span class=s2>&quot;some linear isotropic hardening, few cycles&quot;</span><span class=p>,</span>
-<a id=__codelineno-8-19 name=__codelineno-8-19></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-8-18 name=__codelineno-8-18></a>            <span class=s2>"some linear isotropic hardening, few cycles"</span><span class=p>,</span>
+<a id=__codelineno-8-19 name=__codelineno-8-19></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-8-20 name=__codelineno-8-20></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-8-21 name=__codelineno-8-21></a><span class=sd>200 5E3 0 0 \</span>
 <a id=__codelineno-8-22 name=__codelineno-8-22></a><span class=sd>0 0 0 0 \</span>
@@ -816,11 +816,11 @@
 <a id=__codelineno-8-25 name=__codelineno-8-25></a><span class=sd>materialTest1D 1 1E-4 50 20 20 20 20 20 50</span>
 <a id=__codelineno-8-26 name=__codelineno-8-26></a>
 <a id=__codelineno-8-27 name=__codelineno-8-27></a><span class=sd>exit</span>
-<a id=__codelineno-8-28 name=__codelineno-8-28></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-28 name=__codelineno-8-28></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-8-29 name=__codelineno-8-29></a>        <span class=p>),</span>
 <a id=__codelineno-8-30 name=__codelineno-8-30></a>        <span class=n>execute</span><span class=p>(</span>
-<a id=__codelineno-8-31 name=__codelineno-8-31></a>            <span class=s2>&quot;no linear isotropic hardening&quot;</span><span class=p>,</span>
-<a id=__codelineno-8-32 name=__codelineno-8-32></a><span class=w>            </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-8-31 name=__codelineno-8-31></a>            <span class=s2>"no linear isotropic hardening"</span><span class=p>,</span>
+<a id=__codelineno-8-32 name=__codelineno-8-32></a><span class=w>            </span><span class=sd>"""</span>
 <a id=__codelineno-8-33 name=__codelineno-8-33></a><span class=sd>material Subloading1D 1 2E5 \</span>
 <a id=__codelineno-8-34 name=__codelineno-8-34></a><span class=sd>200 0 0 0 \</span>
 <a id=__codelineno-8-35 name=__codelineno-8-35></a><span class=sd>0 0 0 0 \</span>
@@ -829,7 +829,7 @@
 <a id=__codelineno-8-38 name=__codelineno-8-38></a><span class=sd>materialTest1D 1 1E-4 50 20 20 20 20 20 50</span>
 <a id=__codelineno-8-39 name=__codelineno-8-39></a>
 <a id=__codelineno-8-40 name=__codelineno-8-40></a><span class=sd>exit</span>
-<a id=__codelineno-8-41 name=__codelineno-8-41></a><span class=sd>&quot;&quot;&quot;</span><span class=p>,</span>
+<a id=__codelineno-8-41 name=__codelineno-8-41></a><span class=sd>"""</span><span class=p>,</span>
 <a id=__codelineno-8-42 name=__codelineno-8-42></a>        <span class=p>),</span>
 <a id=__codelineno-8-43 name=__codelineno-8-43></a>    <span class=p>],</span>
 <a id=__codelineno-8-44 name=__codelineno-8-44></a><span class=p>)</span>

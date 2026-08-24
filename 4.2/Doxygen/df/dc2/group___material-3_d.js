@@ -312,6 +312,54 @@ var group___material_3_d =
       [ "Material3D", "d7/d42/class_material3_d.html#a28c774a901d8aa7b71fccc6f6a431602", null ],
       [ "record", "d7/d42/class_material3_d.html#a94ad9cc2c14bdc9d3d6f262fe2146bcd", null ]
     ] ],
+    [ "NonlocalMaterial3D", "d2/da2/class_nonlocal_material3_d.html", [
+      [ "NonlocalMaterial3D", "d2/da2/class_nonlocal_material3_d.html#ab1761bbdce57b6716833aa162d6cc2e0", null ],
+      [ "record", "d2/da2/class_nonlocal_material3_d.html#ad2d4a9785a75558afcb4ef4aa5f8b6af", null ]
+    ] ],
+    [ "DataNonlocalBilinearJ2", "d4/d4c/struct_data_nonlocal_bilinear_j2.html", [
+      [ "beta", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#af1888bc0e6377266da9493ff641fdb86", null ],
+      [ "elastic_modulus", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#a1471a411b59999b7cfe78e393ec419f3", null ],
+      [ "evolution_rate", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#af9b66bfe88417ddfc1ecd4f1069da5a2", null ],
+      [ "hardening_ratio", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#ae1eb06d2c7f457662cc23b6541ed2455", null ],
+      [ "plastic_strain_threshold", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#ac9c7d4f5acb22afab8ecf4a81c823504", null ],
+      [ "poissons_ratio", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#ae27aa87bef99f327d276e3cb9734f357", null ],
+      [ "yield_stress", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#a8c4c5e00f553024eafbb0da5ba0ac753", null ]
+    ] ],
+    [ "NonlocalBilinearJ2", "d8/d1b/class_nonlocal_bilinear_j2.html", [
+      [ "NonlocalBilinearJ2", "d8/d1b/class_nonlocal_bilinear_j2.html#a5ed470e0a1c878d6dae23fe6182dee4d", null ],
+      [ "clear_status", "d8/d1b/class_nonlocal_bilinear_j2.html#a362830b550d3dced658f92a6d76ee1e6", null ],
+      [ "commit_status", "d8/d1b/class_nonlocal_bilinear_j2.html#a0ec02285f269145784c1ab50af2ebfa1", null ],
+      [ "get", "d8/d1b/class_nonlocal_bilinear_j2.html#ac32417363b2981c560738e30bad83604", null ],
+      [ "initialize", "d8/d1b/class_nonlocal_bilinear_j2.html#aa6ed4b2a24454f1f0735468b65a58293", null ],
+      [ "nonlocal_size", "d8/d1b/class_nonlocal_bilinear_j2.html#a72c8dc7ad96446d54eb8ecf1713f4d6d", null ],
+      [ "print", "d8/d1b/class_nonlocal_bilinear_j2.html#a8379ff6519c364e5ef13d779982bef24", null ],
+      [ "reset_status", "d8/d1b/class_nonlocal_bilinear_j2.html#ae90dff9963bc8f0ae564f1141049bc6c", null ],
+      [ "unique_copy", "d8/d1b/class_nonlocal_bilinear_j2.html#ab7f235ca8510acbda29d38af8d53f5ea", null ],
+      [ "update_trial_status", "d8/d1b/class_nonlocal_bilinear_j2.html#ad5aa632eb1dcfea572bb801dc45184b2", null ]
+    ] ],
+    [ "DataNonlocalIsotropicElastic3D", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html", [
+      [ "elastic_modulus", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#ae98436b0049ece370da126ad02c3e610", null ],
+      [ "evolution_rate", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#aa6fdc09546b67d312ef06c631ac197bd", null ],
+      [ "maximum_energy", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#ad83f236de6a764ef3641294730ba2b0c", null ],
+      [ "poissons_ratio", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#ab03b51b92c0c3bb742e7963b6ef496e1", null ]
+    ] ],
+    [ "NonlocalIsotropicElastic3D", "d7/d21/class_nonlocal_isotropic_elastic3_d.html", [
+      [ "EnergyType", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#aa025508d044ab04dd7cd09727e8c749c", [
+        [ "TOTAL", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#aa025508d044ab04dd7cd09727e8c749ca3af22b59f4641bc5501998297f9ac70d", null ],
+        [ "TENSILE", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#aa025508d044ab04dd7cd09727e8c749ca46c2bbc1dffdb2f8087dcf9431066bbe", null ],
+        [ "DEV_TENSILE", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#aa025508d044ab04dd7cd09727e8c749caab058c560f2d6458ef2940fb0f30ef6e", null ]
+      ] ],
+      [ "NonlocalIsotropicElastic3D", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#aaad5c05b79835eee290a56409b453a64", null ],
+      [ "clear_status", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a1a8f564f520173adaddf02b0aee7c206", null ],
+      [ "commit_status", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#acb96364d490f22adc46e1798af960c45", null ],
+      [ "get", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a611c880a953428cfc89774badf427f95", null ],
+      [ "initialize", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a4953407f6897283819d58152b5fd809a", null ],
+      [ "nonlocal_size", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a2197e2aa478e6af1332761c887c435e0", null ],
+      [ "print", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a1f339a121b33c3c88cbc80a29ba1ad95", null ],
+      [ "reset_status", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a3c767a204aea15583434382ec88a714b", null ],
+      [ "unique_copy", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a0e03558dd19b9b862b3a35c0c2bc0994", null ],
+      [ "update_trial_status", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a032da7ec20f9a56bf09b89857dca1f6c", null ]
+    ] ],
     [ "DataBilinearOrthotropic", "dd/d09/struct_data_bilinear_orthotropic.html", [
       [ "hardening_modulus", "dd/d09/struct_data_bilinear_orthotropic.html#a09197998fd825cad0ffc6f664ac35a59", null ]
     ] ],
@@ -707,11 +755,13 @@ var group___material_3_d =
       [ "update_trial_status", "d7/de9/class_stacked.html#af15410f5c001dbb2fc39fa68de687c42", null ]
     ] ],
     [ "StressWrapper", "d7/da6/class_stress_wrapper.html", [
-      [ "StressWrapper", "d7/da6/class_stress_wrapper.html#ac5e0c46a66cd797c5b466e6d6b51b5f6", null ],
+      [ "StressWrapper", "d7/da6/class_stress_wrapper.html#a79fea8f0a398f7940db2cee336e12357", null ],
       [ "clear_status", "d7/da6/class_stress_wrapper.html#ad6b64e29256bea75f847a7e88d7c2ec9", null ],
       [ "commit_status", "d7/da6/class_stress_wrapper.html#a4f18f53630aafb3fa2485359800b41af", null ],
       [ "get", "d7/da6/class_stress_wrapper.html#abcb591723ba7a969dbc0966a747c3149", null ],
       [ "initialize", "d7/da6/class_stress_wrapper.html#a51fa1d6e8340bc1a802c2c6df69a6251", null ],
+      [ "initialize_base", "d7/da6/class_stress_wrapper.html#a66182b7243a1e21eff7f0917bbdeb835", null ],
+      [ "nonlocal_size", "d7/da6/class_stress_wrapper.html#aa44bdd568079bec2a12abae53c680557", null ],
       [ "record", "d7/da6/class_stress_wrapper.html#a82f4882d8dd8d45c1656735371057a03", null ],
       [ "reset_status", "d7/da6/class_stress_wrapper.html#affdd3bc943e2e5cfc0e5909e45d2e7df", null ],
       [ "update_trial_status", "d7/da6/class_stress_wrapper.html#a709aecccdad95c44801d3f53cec827a6", null ],
