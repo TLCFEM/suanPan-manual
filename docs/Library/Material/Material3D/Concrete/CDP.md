@@ -81,6 +81,17 @@ Similarly, parameter `(11)` denotes the ratio of unloading stiffness at ultimate
 This value shall be close to unity as the peak is often not too far away from the elastic branch.
 Smaller values likewise risk non-physical negative plasticity development.
 
+!!! info "robustness"
+    To avoid numerical robustness issues, it is recommended to impose the following constraints.
+
+    $$
+    1-d_t<\dfrac{1+a_t-\sqrt{1+a_t^2}}{2a_t},\qquad
+    1-d_c<\dfrac{a_c+1}{2a_c}
+    $$
+
+!!! warning "trade-off"
+    If $$g_c$$ and/or $$g_t$$ is too small, it may be impossible to obtain both physically valid while numerically robust response.
+
 ## History Layout
 
 | location               | parameter      |
