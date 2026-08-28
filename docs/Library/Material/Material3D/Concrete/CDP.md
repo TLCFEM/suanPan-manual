@@ -92,6 +92,10 @@ Smaller values likewise risk non-physical negative plasticity development.
 !!! warning "trade-off"
     If $$g_c$$ and/or $$g_t$$ is too small, it may be impossible to obtain both physically valid while numerically robust response.
 
+!!! warning "maximum element size"
+    Based on physical material limits, finite element dimensions for typical concrete cannot exceed half a meter (plain) to one meter (reinforced) if **strict** energy scaling is considered.
+    The numbers are only indicative.
+
 ## History Layout
 
 | location               | parameter      |
