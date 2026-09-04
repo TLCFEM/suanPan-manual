@@ -10,9 +10,10 @@ var searchData=
   ['reduction_7',['reduction',['../d8/d8b/struct_data_armstrong_frederick1_d.html#a41e42e54285d6be22b10a899db0159b1',1,'DataArmstrongFrederick1D']]],
   ['ref_5fstrain_8',['ref_strain',['../d4/dca/struct_data_n_l_e3_d01.html#a98669adeefcaffe8c96419a7ebb43aa8',1,'DataNLE3D01']]],
   ['ref_5fstress_9',['ref_stress',['../d4/dca/struct_data_n_l_e3_d01.html#a1808b18bccebbab5231bcbb6a225c304',1,'DataNLE3D01::ref_stress'],['../d2/d8e/struct_data_y_l_d0418_p.html#abc883ff8ba5f0907dc2ddad58806048e',1,'DataYLD0418P::ref_stress']]],
-  ['reference_5fload_10',['reference_load',['../df/d07/class_load.html#a4a508c44946d95da26fb3a0b4f588da8',1,'Load']]],
-  ['reference_5ftag_11',['reference_tag',['../d3/d1a/class_recorder.html#a65cb1887159e8c50ff52350fa0f1d549',1,'Recorder']]],
-  ['reordered_5fdof_12',['reordered_dof',['../df/dbd/struct_node_data.html#af581b60be2ea3719277fa8a346e28391',1,'NodeData']]],
-  ['residual_13',['residual',['../d2/d22/class_lee_newmark_base.html#aac4613ca7b7ff6b792d9dab9849967d8',1,'LeeNewmarkBase']]],
-  ['resistance_14',['resistance',['../d8/d71/class_constraint.html#a743c6d2cb881e5d5aaa6941061ce84a9',1,'Constraint']]]
+  ['reference_5flength_10',['reference_length',['../d4/d4c/struct_data_nonlocal_bilinear_j2.html#a6fc73f982a74531b685d9561087b0251',1,'DataNonlocalBilinearJ2::reference_length'],['../d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#ab3c4a92d53efc58c2d29b88cadd93928',1,'DataNonlocalIsotropicElastic3D::reference_length']]],
+  ['reference_5fload_11',['reference_load',['../df/d07/class_load.html#a4a508c44946d95da26fb3a0b4f588da8',1,'Load']]],
+  ['reference_5ftag_12',['reference_tag',['../d3/d1a/class_recorder.html#a65cb1887159e8c50ff52350fa0f1d549',1,'Recorder']]],
+  ['reordered_5fdof_13',['reordered_dof',['../df/dbd/struct_node_data.html#af581b60be2ea3719277fa8a346e28391',1,'NodeData']]],
+  ['residual_14',['residual',['../d2/d22/class_lee_newmark_base.html#aac4613ca7b7ff6b792d9dab9849967d8',1,'LeeNewmarkBase']]],
+  ['resistance_15',['resistance',['../d8/d71/class_constraint.html#a743c6d2cb881e5d5aaa6941061ce84a9',1,'Constraint']]]
 ];

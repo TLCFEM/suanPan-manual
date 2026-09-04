@@ -469,7 +469,6 @@ var hierarchy =
           [ "NonlinearPeric", "d0/d51/class_nonlinear_peric.html", [
             [ "BilinearPeric", "d7/dc8/class_bilinear_peric.html", null ]
           ] ],
-          [ "NonlocalBilinearJ2", "d8/d1b/class_nonlocal_bilinear_j2.html", null ],
           [ "OrthotropicElastic3D", "da/d73/class_orthotropic_elastic3_d.html", null ],
           [ "Rebar3D", "d5/dbd/class_rebar3_d.html", null ],
           [ "Rotation3D", "d8/dff/class_rotation3_d.html", null ],
@@ -486,6 +485,7 @@ var hierarchy =
         ] ],
         [ "MaterialTemplate", "d0/df4/class_material_template.html", null ],
         [ "NonlocalMaterial3D", "d2/da2/class_nonlocal_material3_d.html", [
+          [ "NonlocalBilinearJ2", "d8/d1b/class_nonlocal_bilinear_j2.html", null ],
           [ "NonlocalIsotropicElastic3D", "d7/d21/class_nonlocal_isotropic_elastic3_d.html", null ]
         ] ],
         [ "OS146S", "d4/d9c/class_o_s146_s.html", null ],

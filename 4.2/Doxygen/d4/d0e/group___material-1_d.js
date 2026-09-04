@@ -56,13 +56,10 @@ var group___material_1_d =
     ] ],
     [ "NonlinearK4", "dc/d16/class_nonlinear_k4.html", [
       [ "NonlinearK4", "dc/d16/class_nonlinear_k4.html#ac2a44c4dbcb9e725ab60f6004a19d8a8", null ],
-      [ "clear_status", "dc/d16/class_nonlinear_k4.html#afdccd65869f4968a90f91558024e7d4e", null ],
-      [ "commit_status", "dc/d16/class_nonlinear_k4.html#a9c1450d2f16ee3d56ffa2c1cbb95f43a", null ],
       [ "get", "dc/d16/class_nonlinear_k4.html#a341c1d433caca7332ceac5f309017bea", null ],
       [ "initialize", "dc/d16/class_nonlinear_k4.html#af67c1548dc1e49934a01824800a9a9f1", null ],
       [ "objective_scale", "dc/d16/class_nonlinear_k4.html#af2c709268ea02356ba367283a80dc85c", null ],
       [ "print", "dc/d16/class_nonlinear_k4.html#a3742a457b2aa98d57f829bd4901d92ce", null ],
-      [ "reset_status", "dc/d16/class_nonlinear_k4.html#a65d6d805650ace028ad9ee7126eb6872", null ],
       [ "update_trial_status", "dc/d16/class_nonlinear_k4.html#a4f0d34c1cd3674483548ae65590ec8c7", null ]
     ] ],
     [ "DataConcreteK4", "d9/d5f/struct_data_concrete_k4.html", [
@@ -139,11 +136,8 @@ var group___material_1_d =
     ] ],
     [ "AsymmElastic1D", "d3/d32/class_asymm_elastic1_d.html", [
       [ "AsymmElastic1D", "d3/d32/class_asymm_elastic1_d.html#a044de80f8bb343ca32bb09d3a57b4524", null ],
-      [ "clear_status", "d3/d32/class_asymm_elastic1_d.html#ad7ce3df11249b72652b91be2f7200b7b", null ],
-      [ "commit_status", "d3/d32/class_asymm_elastic1_d.html#aa3888d6c3d267323098dad7941de9db7", null ],
       [ "initialize", "d3/d32/class_asymm_elastic1_d.html#aa29d4f65639242957a762e7e044458eb", null ],
       [ "print", "d3/d32/class_asymm_elastic1_d.html#a33de6103e525db8fd44a452122f38d6a", null ],
-      [ "reset_status", "d3/d32/class_asymm_elastic1_d.html#ada14b457bcda1b23e0128f8b0c7050a8", null ],
       [ "unique_copy", "d3/d32/class_asymm_elastic1_d.html#a8ba922f2c29b7906fee39a843ca8d69d", null ],
       [ "update_trial_status", "d3/d32/class_asymm_elastic1_d.html#a2d5c1e14d06659180d6a8e7ff753c674", null ]
     ] ],
@@ -155,21 +149,15 @@ var group___material_1_d =
     ] ],
     [ "BilinearElastic1D", "d6/d4e/class_bilinear_elastic1_d.html", [
       [ "BilinearElastic1D", "d6/d4e/class_bilinear_elastic1_d.html#a6a868ca61b8e7a9a74e1a306e9fb726a", null ],
-      [ "clear_status", "d6/d4e/class_bilinear_elastic1_d.html#af7cf807e9b2ec86143ef29d5b4ffd51a", null ],
-      [ "commit_status", "d6/d4e/class_bilinear_elastic1_d.html#a2ebdb6306333b747e5b5cae368805230", null ],
       [ "initialize", "d6/d4e/class_bilinear_elastic1_d.html#a47aea63c29703f14f7c94b076654fb98", null ],
       [ "print", "d6/d4e/class_bilinear_elastic1_d.html#a72dfda27676b23b8933d4b40219fc71f", null ],
-      [ "reset_status", "d6/d4e/class_bilinear_elastic1_d.html#a3267554030a0448e4b7c8b0aded96a7d", null ],
       [ "unique_copy", "d6/d4e/class_bilinear_elastic1_d.html#a2099e70d9fa3b9c40357147934fc03f4", null ],
       [ "update_trial_status", "d6/d4e/class_bilinear_elastic1_d.html#a5eb757b94e43eb7a6a7bde2560d5d9a7", null ]
     ] ],
     [ "CustomElastic1D", "d1/dae/class_custom_elastic1_d.html", [
       [ "CustomElastic1D", "d1/dae/class_custom_elastic1_d.html#ab453ec8f8dcbd04adfd423f3853b5d90", null ],
-      [ "clear_status", "d1/dae/class_custom_elastic1_d.html#adedb9b21f0986032f8d22ed1d487cd90", null ],
-      [ "commit_status", "d1/dae/class_custom_elastic1_d.html#adc81a651f0ac8c5e7e44bce5bc2a60a6", null ],
       [ "initialize", "d1/dae/class_custom_elastic1_d.html#a5bd393f608e539edeaad3e0dc9ddfdd5", null ],
       [ "print", "d1/dae/class_custom_elastic1_d.html#a17366f89ed1c2bebe41aab6c1c638092", null ],
-      [ "reset_status", "d1/dae/class_custom_elastic1_d.html#a5dfa084e1085719459e4888b051535a2", null ],
       [ "unique_copy", "d1/dae/class_custom_elastic1_d.html#a9aabef5325173fbaa4d79f8cba37ee8f", null ],
       [ "update_trial_status", "d1/dae/class_custom_elastic1_d.html#a98851e3eb5cb70cb33be204a221f0385", null ]
     ] ],
@@ -191,11 +179,8 @@ var group___material_1_d =
     ] ],
     [ "MultilinearElastic1D", "de/d67/class_multilinear_elastic1_d.html", [
       [ "MultilinearElastic1D", "de/d67/class_multilinear_elastic1_d.html#a4624aeb1d887eccbf94f5b9e821c5db8", null ],
-      [ "clear_status", "de/d67/class_multilinear_elastic1_d.html#af5d92c34abe117a1c50e99ddb385171d", null ],
-      [ "commit_status", "de/d67/class_multilinear_elastic1_d.html#afd9c2257daff763e6bcc969ef5adf7f4", null ],
       [ "initialize", "de/d67/class_multilinear_elastic1_d.html#afcb76bdca6f737ce3e742de7f7ee196f", null ],
       [ "print", "de/d67/class_multilinear_elastic1_d.html#a1ab7727346826e9bda4f8d2bdff4100d", null ],
-      [ "reset_status", "de/d67/class_multilinear_elastic1_d.html#ad0afb0d69ba71eec65054c7d70d9a2a9", null ],
       [ "unique_copy", "de/d67/class_multilinear_elastic1_d.html#aa4e175d960e9e660a6867991de1a168f", null ],
       [ "update_trial_status", "de/d67/class_multilinear_elastic1_d.html#a8567cc02680b284ecdda34731d8ce756", null ]
     ] ],
@@ -204,11 +189,8 @@ var group___material_1_d =
     ] ],
     [ "PolyElastic1D", "d0/d5c/class_poly_elastic1_d.html", [
       [ "PolyElastic1D", "d0/d5c/class_poly_elastic1_d.html#ac0017b6ee21501310a921480623fba3b", null ],
-      [ "clear_status", "d0/d5c/class_poly_elastic1_d.html#a7aceab424c05231ff205dca5fccde57d", null ],
-      [ "commit_status", "d0/d5c/class_poly_elastic1_d.html#a1d913653e408a3c49ec515439b07e2d0", null ],
       [ "initialize", "d0/d5c/class_poly_elastic1_d.html#a081f7faabcc8a0c853e7866b7e4c1d8f", null ],
       [ "print", "d0/d5c/class_poly_elastic1_d.html#a091b309878c761a7e160f70e87d67a20", null ],
-      [ "reset_status", "d0/d5c/class_poly_elastic1_d.html#accf04efd28e7e147cb5850976989a458", null ],
       [ "unique_copy", "d0/d5c/class_poly_elastic1_d.html#aac897536bac575ab7ce7d3d119f3c7d3", null ],
       [ "update_trial_status", "d0/d5c/class_poly_elastic1_d.html#ab576865f601434c2682813b49473c0b4", null ]
     ] ],
@@ -217,11 +199,8 @@ var group___material_1_d =
     ] ],
     [ "Sinh1D", "dd/d36/class_sinh1_d.html", [
       [ "Sinh1D", "dd/d36/class_sinh1_d.html#a5bc73a3a6cefe95d5598062ac746fbeb", null ],
-      [ "clear_status", "dd/d36/class_sinh1_d.html#ab52a354cc5271ab271ae9a1ffcd04198", null ],
-      [ "commit_status", "dd/d36/class_sinh1_d.html#ae4934af15a3adfe25ce5997352f2697b", null ],
       [ "initialize", "dd/d36/class_sinh1_d.html#a7f205db6c212ad64390f3c0f03422a9f", null ],
       [ "print", "dd/d36/class_sinh1_d.html#a2a293cf35a9a714f5e3e327992b9e866", null ],
-      [ "reset_status", "dd/d36/class_sinh1_d.html#afa8a82ae4ac7d36833d6e715b23f7dcc", null ],
       [ "unique_copy", "dd/d36/class_sinh1_d.html#a281fe0c8a67015e36916aad3b7c26b3f", null ],
       [ "update_trial_status", "dd/d36/class_sinh1_d.html#ab62330de2ef241bfdf3aca0afe911444", null ]
     ] ],
@@ -230,11 +209,8 @@ var group___material_1_d =
     ] ],
     [ "Tanh1D", "d7/d37/class_tanh1_d.html", [
       [ "Tanh1D", "d7/d37/class_tanh1_d.html#aaec61288f95d5b8ac90665dc53b07199", null ],
-      [ "clear_status", "d7/d37/class_tanh1_d.html#a69624500b35c018a88fbbe36bfca5ab3", null ],
-      [ "commit_status", "d7/d37/class_tanh1_d.html#ad7e033b65ae292314433adc9ed3a90b9", null ],
       [ "initialize", "d7/d37/class_tanh1_d.html#aa27746cfc14e2c4dd9d2c7d478a56970", null ],
       [ "print", "d7/d37/class_tanh1_d.html#a2e0ba9dcf2990213cec58e295627919f", null ],
-      [ "reset_status", "d7/d37/class_tanh1_d.html#a728f29975ae1aae5ab38c43d1031d637", null ],
       [ "unique_copy", "d7/d37/class_tanh1_d.html#a4d0f901f199cb48244fe42d36385c97e", null ],
       [ "update_trial_status", "d7/d37/class_tanh1_d.html#ac033cf80a082806f836a7ab87632397c", null ]
     ] ],
@@ -252,11 +228,8 @@ var group___material_1_d =
     ] ],
     [ "AFC", "dd/d46/class_a_f_c.html", [
       [ "AFC", "dd/d46/class_a_f_c.html#a2d92c365c9ac84ed4509c88c77d38820", null ],
-      [ "clear_status", "dd/d46/class_a_f_c.html#aa83e0858f63933e2aa13b182c1e231bf", null ],
-      [ "commit_status", "dd/d46/class_a_f_c.html#a76a7983c65eae71e3dddfa67de8b4180", null ],
       [ "initialize", "dd/d46/class_a_f_c.html#ae97f8e534efe9e2b92d3718a94f564f6", null ],
       [ "print", "dd/d46/class_a_f_c.html#adae2de8de076cdfd5cbc63f8d4cfe791", null ],
-      [ "reset_status", "dd/d46/class_a_f_c.html#a9094d489c4168d10fa1b3e52e9bc8790", null ],
       [ "unique_copy", "dd/d46/class_a_f_c.html#af8b4eebebf499bfaeb2b03eeed773d53", null ],
       [ "update_trial_status", "dd/d46/class_a_f_c.html#a0bcbf8ef8f4a8031009c91ec82206238", null ]
     ] ],
@@ -295,11 +268,8 @@ var group___material_1_d =
     ] ],
     [ "BoucWen", "d4/dc2/class_bouc_wen.html", [
       [ "BoucWen", "d4/dc2/class_bouc_wen.html#abafb07d64eb9bb5eafad067cd297ad45", null ],
-      [ "clear_status", "d4/dc2/class_bouc_wen.html#adca6a6eb1012b775da79588e54b38b12", null ],
-      [ "commit_status", "d4/dc2/class_bouc_wen.html#a92330453f1f0ac5e304715562a10ab98", null ],
       [ "initialize", "d4/dc2/class_bouc_wen.html#ab3d55a04f9cfe025927fa446b9f23a69", null ],
       [ "print", "d4/dc2/class_bouc_wen.html#ac98d648a4147e8f7838c3db882b35b9a", null ],
-      [ "reset_status", "d4/dc2/class_bouc_wen.html#a4eab3078fb372e20335c3fea2ab2db88", null ],
       [ "unique_copy", "d4/dc2/class_bouc_wen.html#a33dc4e745759000d4402f72a13b4482e", null ],
       [ "update_trial_status", "d4/dc2/class_bouc_wen.html#a8579cf5129f91c406badf50e551d4709", null ]
     ] ],
@@ -308,11 +278,8 @@ var group___material_1_d =
     ] ],
     [ "BWBN", "db/d5b/class_b_w_b_n.html", [
       [ "BWBN", "db/d5b/class_b_w_b_n.html#aaf89c57915ed7ce92602d8322821fbbb", null ],
-      [ "clear_status", "db/d5b/class_b_w_b_n.html#a75760bdac02fd349cc4cd62715135736", null ],
-      [ "commit_status", "db/d5b/class_b_w_b_n.html#aba5377881a64b4c8748f879cde7a1857", null ],
       [ "initialize", "db/d5b/class_b_w_b_n.html#a1d8a738a44c13c245e07829c373cd14a", null ],
       [ "print", "db/d5b/class_b_w_b_n.html#ac7d06f6bf34bfbc885ee5285b585775d", null ],
-      [ "reset_status", "db/d5b/class_b_w_b_n.html#af53e0c9490db8218e156ba594a4e439e", null ],
       [ "unique_copy", "db/d5b/class_b_w_b_n.html#a64849577272f32b137d515bbf367bf02", null ],
       [ "update_trial_status", "db/d5b/class_b_w_b_n.html#a3c52a796814edd03e2fc4035fcf53ca1", null ]
     ] ],
@@ -386,11 +353,8 @@ var group___material_1_d =
     ] ],
     [ "Gap01", "dd/dd1/class_gap01.html", [
       [ "Gap01", "dd/dd1/class_gap01.html#ae405dfdf2d22c11061a1e36ef3695726", null ],
-      [ "clear_status", "dd/dd1/class_gap01.html#a75352cc3375b7c6d51827057d286f5d4", null ],
-      [ "commit_status", "dd/dd1/class_gap01.html#ad464ac657b82179bb98ead77c8955da3", null ],
       [ "initialize", "dd/dd1/class_gap01.html#a3d571578fd3b6b06b5999faacdc50f49", null ],
       [ "print", "dd/dd1/class_gap01.html#a1551237c3c3f71249a3c3946274292d6", null ],
-      [ "reset_status", "dd/dd1/class_gap01.html#ae9d8b0a8c6597559c77fc67d07104cff", null ],
       [ "unique_copy", "dd/dd1/class_gap01.html#a3d1c1acbb6cfcdbb1ec27c83b488d8e7", null ],
       [ "update_trial_status", "dd/dd1/class_gap01.html#a17f9c59a465b60a8d1d643980c261af1", null ]
     ] ],
@@ -409,11 +373,8 @@ var group___material_1_d =
     ] ],
     [ "MPF", "d9/d1b/class_m_p_f.html", [
       [ "MPF", "d9/d1b/class_m_p_f.html#ab2ab0ce7c975e98bac578adaa542d29a", null ],
-      [ "clear_status", "d9/d1b/class_m_p_f.html#a6de766fbed7295a93b5c683fba7ee91b", null ],
-      [ "commit_status", "d9/d1b/class_m_p_f.html#a60d2605ac136d8d51f74cbd8757a1d96", null ],
       [ "initialize", "d9/d1b/class_m_p_f.html#aa238f80d013c41976cc28b497c09d285", null ],
       [ "print", "d9/d1b/class_m_p_f.html#a9e8d6985a920b23a76db11addb62bb62", null ],
-      [ "reset_status", "d9/d1b/class_m_p_f.html#a1ff80feccf4001bc00a560311add8fb2", null ],
       [ "unique_copy", "d9/d1b/class_m_p_f.html#a4a5ed00cbde6f71be0162978bb8943e1", null ],
       [ "update_trial_status", "d9/d1b/class_m_p_f.html#acb4d6f78cc2d9545e849334d11036a3b", null ]
     ] ],
@@ -441,8 +402,7 @@ var group___material_1_d =
       [ "OriginOriented", "df/d4f/class_origin_oriented.html#acf17804eb357970f561c7ed51d4b1279", null ]
     ] ],
     [ "PeakOriented", "dc/d8b/class_peak_oriented.html", [
-      [ "PeakOriented", "dc/d8b/class_peak_oriented.html#a32c9402ea860fc9b713a79699ece416b", null ],
-      [ "print", "dc/d8b/class_peak_oriented.html#af1099cb739b9ca73412ffb370f40923a", null ]
+      [ "PeakOriented", "dc/d8b/class_peak_oriented.html#a32c9402ea860fc9b713a79699ece416b", null ]
     ] ],
     [ "DataRambergOsgood", "d0/d18/struct_data_ramberg_osgood.html", [
       [ "elastic_modulus", "d0/d18/struct_data_ramberg_osgood.html#adca03b622f22d4220e6608613f39ee03", null ],
@@ -452,11 +412,8 @@ var group___material_1_d =
     ] ],
     [ "RambergOsgood", "da/d42/class_ramberg_osgood.html", [
       [ "RambergOsgood", "da/d42/class_ramberg_osgood.html#aa5da129ec1a89e9465d22ea8ab189f5e", null ],
-      [ "clear_status", "da/d42/class_ramberg_osgood.html#a740cd543723398b5c7eae1c90881757c", null ],
-      [ "commit_status", "da/d42/class_ramberg_osgood.html#a273ed7cc7a6d2243437dc031389166af", null ],
       [ "initialize", "da/d42/class_ramberg_osgood.html#ab26ec90775c0417305954ae666af91f4", null ],
       [ "print", "da/d42/class_ramberg_osgood.html#ae3b931b38fd6e8b3564b61373106053d", null ],
-      [ "reset_status", "da/d42/class_ramberg_osgood.html#a8050ffcf448345338a069d34df907ddc", null ],
       [ "unique_copy", "da/d42/class_ramberg_osgood.html#a17a84666741df7a7783ffb498d62d0b0", null ],
       [ "update_trial_status", "da/d42/class_ramberg_osgood.html#a1298f0ac55e820cdcb85b5fc3bdda056", null ]
     ] ],
@@ -467,6 +424,7 @@ var group___material_1_d =
       [ "SimpleHysteresis", "d8/d70/class_simple_hysteresis.html#a6fdb2f1366f06ba065fbb4b4057b2cdd", null ],
       [ "clear_status", "d8/d70/class_simple_hysteresis.html#acaeee826a5e0ec183a59ccfca692ed2b", null ],
       [ "commit_status", "d8/d70/class_simple_hysteresis.html#aa2a80aaee06f9be31fd28fd964a75f45", null ],
+      [ "initialize", "d8/d70/class_simple_hysteresis.html#a65de64d04d48c13c17e97861fdd4534b", null ],
       [ "reset_status", "d8/d70/class_simple_hysteresis.html#a9f25966ebdf0e4ddc7dbcfb8f83bf006", null ],
       [ "update_trial_status", "d8/d70/class_simple_hysteresis.html#a81fdb1869e458a7db983e53dce78f10b", null ]
     ] ],
@@ -478,11 +436,8 @@ var group___material_1_d =
     ] ],
     [ "SlipLock", "dd/deb/class_slip_lock.html", [
       [ "SlipLock", "dd/deb/class_slip_lock.html#a69cd18f21a74efca8a107a4f5afc44f6", null ],
-      [ "clear_status", "dd/deb/class_slip_lock.html#a02a583932fafe497a04aad8e4632e757", null ],
-      [ "commit_status", "dd/deb/class_slip_lock.html#a5b43f54154903bbf3ba239c52654b161", null ],
       [ "initialize", "dd/deb/class_slip_lock.html#aa9b402139e43979f7c69cbe44092bc88", null ],
       [ "print", "dd/deb/class_slip_lock.html#acb3643ce5c3dcacd2829cd3bb73c1612", null ],
-      [ "reset_status", "dd/deb/class_slip_lock.html#ad19b38da70e65baae5f079a49000661a", null ],
       [ "unique_copy", "dd/deb/class_slip_lock.html#a88277b83972d9f0d36a7793fbd284b80", null ],
       [ "update_trial_status", "dd/deb/class_slip_lock.html#a69be9b40189b1c62792091910c0191e9", null ]
     ] ],
@@ -499,11 +454,8 @@ var group___material_1_d =
     ] ],
     [ "SteelBRB", "d3/d8f/class_steel_b_r_b.html", [
       [ "SteelBRB", "d3/d8f/class_steel_b_r_b.html#aad5630fe130a23f5e5b2173b92e95243", null ],
-      [ "clear_status", "d3/d8f/class_steel_b_r_b.html#af5557e282160f3a2d9fc072f0f9a25b2", null ],
-      [ "commit_status", "d3/d8f/class_steel_b_r_b.html#abb7b45b5acf376d771a8a8ba793fcbe4", null ],
       [ "initialize", "d3/d8f/class_steel_b_r_b.html#a21df1050f06d35dc8a572af2858aed23", null ],
       [ "print", "d3/d8f/class_steel_b_r_b.html#ac1a35306c995ba8d3dd88868d789f33b", null ],
-      [ "reset_status", "d3/d8f/class_steel_b_r_b.html#a2b728351caaa2115ff03af19c131fbad", null ],
       [ "unique_copy", "d3/d8f/class_steel_b_r_b.html#aee6214612c8418717e8bac1cb3d70b86", null ],
       [ "update_trial_status", "d3/d8f/class_steel_b_r_b.html#a613c5156f5156e7e497dcdb4cdb8138c", null ]
     ] ],
@@ -519,8 +471,11 @@ var group___material_1_d =
     ] ],
     [ "Material1D", "d9/d97/class_material1_d.html", [
       [ "Material1D", "d9/d97/class_material1_d.html#a6954ada81c4d717ecd0963da77251463", null ],
+      [ "clear_status", "d9/d97/class_material1_d.html#ab3812afd329b9f933a6f294ea8452fdf", null ],
+      [ "commit_status", "d9/d97/class_material1_d.html#af9c67047d3c652d9593a547488f02f17", null ],
       [ "print", "d9/d97/class_material1_d.html#a56592fab91c2670aa4cd230369aa61e8", null ],
-      [ "record", "d9/d97/class_material1_d.html#a14fe4472c517fbbeac66d059b22d1f59", null ]
+      [ "record", "d9/d97/class_material1_d.html#a14fe4472c517fbbeac66d059b22d1f59", null ],
+      [ "reset_status", "d9/d97/class_material1_d.html#ac37a3df20ba900f6dbfa64b689144e41", null ]
     ] ],
     [ "DataBilinearViscosity", "d5/d08/struct_data_bilinear_viscosity.html", [
       [ "damping", "d5/d08/struct_data_bilinear_viscosity.html#acb877fdab6e390019e0350980677a46e", null ],
@@ -624,12 +579,9 @@ var group___material_1_d =
     ] ],
     [ "ArmstrongFrederick1D", "d1/d3d/class_armstrong_frederick1_d.html", [
       [ "ArmstrongFrederick1D", "d1/d3d/class_armstrong_frederick1_d.html#ab08532c3ce27fb8fba6faa4a7a58aea9", null ],
-      [ "clear_status", "d1/d3d/class_armstrong_frederick1_d.html#a3a774031f992f43a5ed5ae3f2a2ad0d7", null ],
-      [ "commit_status", "d1/d3d/class_armstrong_frederick1_d.html#a2147acb83134ec0ec2ad826f257010b0", null ],
       [ "get", "d1/d3d/class_armstrong_frederick1_d.html#af1427307c6c2d9abfe02c11d481def74", null ],
       [ "initialize", "d1/d3d/class_armstrong_frederick1_d.html#a50164ab4dce849a251e52ac8f491e58b", null ],
       [ "print", "d1/d3d/class_armstrong_frederick1_d.html#a6132eb4e013e5d89ef3b59897ce670e1", null ],
-      [ "reset_status", "d1/d3d/class_armstrong_frederick1_d.html#add0889c991d181bea53c9ef9bf66a7af", null ],
       [ "unique_copy", "d1/d3d/class_armstrong_frederick1_d.html#acb08ddae66a78e6cff87024a688976e8", null ],
       [ "update_trial_status", "d1/d3d/class_armstrong_frederick1_d.html#a8ec75060eddb4f45ec8b0f000ec0d8c8", null ]
     ] ],
@@ -667,11 +619,8 @@ var group___material_1_d =
     ] ],
     [ "Bilinear1D", "d8/dc4/class_bilinear1_d.html", [
       [ "Bilinear1D", "d8/dc4/class_bilinear1_d.html#a947b865f2aa464ac274909acb52ffc2b", null ],
-      [ "clear_status", "d8/dc4/class_bilinear1_d.html#acf173aa5362fc9dfdb55322c52eeaf25", null ],
-      [ "commit_status", "d8/dc4/class_bilinear1_d.html#ab188fcf2fefc1ea7ed7c406dbef63fbc", null ],
       [ "initialize", "d8/dc4/class_bilinear1_d.html#ae6f0743c0caf0160d6d94c4bb0fe9a7c", null ],
       [ "print", "d8/dc4/class_bilinear1_d.html#a61028bf6197b306688b70eeb1d9cab41", null ],
-      [ "reset_status", "d8/dc4/class_bilinear1_d.html#afc9c74ab38272cad411c5d997d003093", null ],
       [ "unique_copy", "d8/dc4/class_bilinear1_d.html#a00d5880f0d44acf50a5978112249f092", null ],
       [ "update_trial_status", "d8/dc4/class_bilinear1_d.html#a43599c1317894b222a99231fab6a6408", null ]
     ] ],
@@ -726,10 +675,7 @@ var group___material_1_d =
     ] ],
     [ "NonlinearMises1D", "db/d14/class_nonlinear_mises1_d.html", [
       [ "NonlinearMises1D", "db/d14/class_nonlinear_mises1_d.html#a59868518457adc8ec3cde2b4e6b25760", null ],
-      [ "clear_status", "db/d14/class_nonlinear_mises1_d.html#a58a4ee9cd99fc058fd963c5978771ebf", null ],
-      [ "commit_status", "db/d14/class_nonlinear_mises1_d.html#a3203cd62610dd983c52d67c712a27c3d", null ],
       [ "initialize", "db/d14/class_nonlinear_mises1_d.html#a4b629b1ae654f73470cc075995e298bc", null ],
-      [ "reset_status", "db/d14/class_nonlinear_mises1_d.html#a6668b2c96bddf9a0aa1f58577de5625b", null ],
       [ "update_trial_status", "db/d14/class_nonlinear_mises1_d.html#a3c1ff226f98111302fb45bf5724853d3", null ]
     ] ],
     [ "DataSubloading1D", "da/dcb/struct_data_subloading1_d.html", [
@@ -745,11 +691,8 @@ var group___material_1_d =
     ] ],
     [ "Subloading1D", "df/d28/class_subloading1_d.html", [
       [ "Subloading1D", "df/d28/class_subloading1_d.html#a69eea6266a83cfa6e221fc8bdd2c2dbe", null ],
-      [ "clear_status", "df/d28/class_subloading1_d.html#a2f46190bd21e8743dfbad76203681723", null ],
-      [ "commit_status", "df/d28/class_subloading1_d.html#a166fc77ffbd70313ae3435327dda6091", null ],
       [ "initialize", "df/d28/class_subloading1_d.html#aa9b3adf41d90ee6890dba0b0b71aa7ee", null ],
       [ "print", "df/d28/class_subloading1_d.html#a101f3513c3df503044262b317d4abf69", null ],
-      [ "reset_status", "df/d28/class_subloading1_d.html#ae67b98a74779219a9dea8865c9eb30b2", null ],
       [ "unique_copy", "df/d28/class_subloading1_d.html#a36e21693a9725f260b36305984087799", null ],
       [ "update_trial_status", "df/d28/class_subloading1_d.html#ae80b3a75c2445b0876bb07f5cf83c44e", null ]
     ] ],
@@ -766,12 +709,9 @@ var group___material_1_d =
     ] ],
     [ "VAFCRP1D", "d4/d28/class_v_a_f_c_r_p1_d.html", [
       [ "VAFCRP1D", "d4/d28/class_v_a_f_c_r_p1_d.html#a9adc6165c135e83ac801c42fab2b8188", null ],
-      [ "clear_status", "d4/d28/class_v_a_f_c_r_p1_d.html#a47e5ac8c8e32b155c5469ed1a192503f", null ],
-      [ "commit_status", "d4/d28/class_v_a_f_c_r_p1_d.html#aec79331190287358ccd080bebe76d868", null ],
       [ "get", "d4/d28/class_v_a_f_c_r_p1_d.html#a81af5a7c247c96b97a70199eb9d0a419", null ],
       [ "initialize", "d4/d28/class_v_a_f_c_r_p1_d.html#a5db931bbc455378bddba84892ea0ee6c", null ],
       [ "print", "d4/d28/class_v_a_f_c_r_p1_d.html#ad1b2341b045cf37094e58201aac7321c", null ],
-      [ "reset_status", "d4/d28/class_v_a_f_c_r_p1_d.html#a71762612c7560f841fe7ff83416be1c5", null ],
       [ "unique_copy", "d4/d28/class_v_a_f_c_r_p1_d.html#ae96aa53101c3018d89c8e43b8ab9eba1", null ],
       [ "update_trial_status", "d4/d28/class_v_a_f_c_r_p1_d.html#ae39bcde56a9db29d76ea7208abb96ccc", null ]
     ] ],

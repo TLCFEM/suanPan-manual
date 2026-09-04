@@ -13,11 +13,12 @@ var searchData=
   ['density_10',['density',['../d2/d59/struct_external_material_data.html#a64aadae71b6e7a01c855a41a4894f19a',1,'ExternalMaterialData::density'],['../de/de9/struct_data_material.html#a2dc45a4953d960410b4042c94a7756de',1,'DataMaterial::density']]],
   ['df_11',['df',['../d9/d0f/struct_data_c_d_p_m2.html#a7f421e1f906cdd846d218dac9f43b8c7',1,'DataCDPM2']]],
   ['dh_12',['dh',['../d9/d0f/struct_data_c_d_p_m2.html#a6474ffbc2a8f5183882e402b66259b6e',1,'DataCDPM2']]],
-  ['dimension_13',['dimension',['../d0/de2/class_particle_collision.html#aced1c09d455cc4961effc95beb78ecd2',1,'ParticleCollision::dimension'],['../dd/dd9/class_b_spline.html#a5d263aeb21621079e01cbc3edc4dd9b4',1,'BSpline::dimension'],['../db/d57/class_b_spline_surface.html#a16a07bff0deb07ef5709bff7463d6c02',1,'BSplineSurface::dimension'],['../d1/d16/class_b_spline_volume.html#aaef9212a7ca27dc6ed3ba6f444d1b03e',1,'BSplineVolume::dimension'],['../de/de9/class_line_u_d_l.html#a802abea2ad27daaeb57f049e475099f0',1,'LineUDL::dimension'],['../d2/d0d/struct_bounding_box.html#ad6c08e774906cf23812610f92a8ce05f',1,'BoundingBox::dimension']]],
-  ['direction_5fcosine_14',['direction_cosine',['../d6/dd5/class_damper01.html#ae6ff8e134991385ae20df8e1a82346dd',1,'Damper01::direction_cosine'],['../d2/dcd/class_orientation.html#a7581a1e6060a79c575d3ef6d4072a681',1,'Orientation::direction_cosine']]],
-  ['dof_15',['dof',['../df/da9/class_node_based_criterion.html#a7db1a9e7479304290b17259aa947a72f',1,'NodeBasedCriterion']]],
-  ['dof_5fencoding_16',['dof_encoding',['../d2/db9/struct_data_element.html#a168a5544e918b7b360bcff0a67021fc4',1,'DataElement']]],
-  ['dof_5forder_17',['dof_order',['../da/d44/class_conditional_modifier.html#a8b9196f64c3eb46fe3f8c21577cad8ec',1,'ConditionalModifier']]],
-  ['domain_18',['domain',['../d3/d8e/class_interaction.html#a82ba3b19c3907b4b91f45bd9842c7fbc',1,'Interaction']]],
-  ['dt_19',['DT',['../d8/da3/class_g_s_s_s_s.html#ace755c7702a4444e963250379755fbde',1,'GSSSS']]]
+  ['diffusion_5frate_13',['diffusion_rate',['../d4/d4c/struct_data_nonlocal_bilinear_j2.html#a93ea7846a21a09336ae10d4a16acff2c',1,'DataNonlocalBilinearJ2::diffusion_rate'],['../d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#a2c4fb2724f968655762648c2b9c65eeb',1,'DataNonlocalIsotropicElastic3D::diffusion_rate']]],
+  ['dimension_14',['dimension',['../d0/de2/class_particle_collision.html#aced1c09d455cc4961effc95beb78ecd2',1,'ParticleCollision::dimension'],['../dd/dd9/class_b_spline.html#a5d263aeb21621079e01cbc3edc4dd9b4',1,'BSpline::dimension'],['../db/d57/class_b_spline_surface.html#a16a07bff0deb07ef5709bff7463d6c02',1,'BSplineSurface::dimension'],['../d1/d16/class_b_spline_volume.html#aaef9212a7ca27dc6ed3ba6f444d1b03e',1,'BSplineVolume::dimension'],['../de/de9/class_line_u_d_l.html#a802abea2ad27daaeb57f049e475099f0',1,'LineUDL::dimension'],['../d2/d0d/struct_bounding_box.html#ad6c08e774906cf23812610f92a8ce05f',1,'BoundingBox::dimension']]],
+  ['direction_5fcosine_15',['direction_cosine',['../d6/dd5/class_damper01.html#ae6ff8e134991385ae20df8e1a82346dd',1,'Damper01::direction_cosine'],['../d2/dcd/class_orientation.html#a7581a1e6060a79c575d3ef6d4072a681',1,'Orientation::direction_cosine']]],
+  ['dof_16',['dof',['../df/da9/class_node_based_criterion.html#a7db1a9e7479304290b17259aa947a72f',1,'NodeBasedCriterion']]],
+  ['dof_5fencoding_17',['dof_encoding',['../d2/db9/struct_data_element.html#a168a5544e918b7b360bcff0a67021fc4',1,'DataElement']]],
+  ['dof_5forder_18',['dof_order',['../da/d44/class_conditional_modifier.html#a8b9196f64c3eb46fe3f8c21577cad8ec',1,'ConditionalModifier']]],
+  ['domain_19',['domain',['../d3/d8e/class_interaction.html#a82ba3b19c3907b4b91f45bd9842c7fbc',1,'Interaction']]],
+  ['dt_20',['DT',['../d8/da3/class_g_s_s_s_s.html#ace755c7702a4444e963250379755fbde',1,'GSSSS']]]
 ];

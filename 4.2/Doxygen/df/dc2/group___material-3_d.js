@@ -11,12 +11,9 @@ var group___material_3_d =
     ] ],
     [ "NonlinearGurson1D", "d7/d44/class_nonlinear_gurson1_d.html", [
       [ "NonlinearGurson1D", "d7/d44/class_nonlinear_gurson1_d.html#a57e90987ebbb1393fe8bea3273d56a8c", null ],
-      [ "clear_status", "d7/d44/class_nonlinear_gurson1_d.html#a37f037c2c4b82ab5729886c3cdd82de4", null ],
-      [ "commit_status", "d7/d44/class_nonlinear_gurson1_d.html#a3defe8817de54932da7192a49b8f5be9", null ],
       [ "get", "d7/d44/class_nonlinear_gurson1_d.html#aeec67071d91ca9413467dc4f517afad1", null ],
       [ "initialize", "d7/d44/class_nonlinear_gurson1_d.html#a59d953220542e06095d141e154c71a86", null ],
       [ "record", "d7/d44/class_nonlinear_gurson1_d.html#a02e11f8c709008c204ab43d6a28c79af", null ],
-      [ "reset_status", "d7/d44/class_nonlinear_gurson1_d.html#a14fa9a3ca39df6b25b35d726de0e62c4", null ],
       [ "update_trial_status", "d7/d44/class_nonlinear_gurson1_d.html#a0bb512db0cbb943b056e5ac15a9c5178", null ]
     ] ],
     [ "DataBilinearCC", "db/df8/struct_data_bilinear_c_c.html", [
@@ -55,11 +52,8 @@ var group___material_3_d =
     ] ],
     [ "NonlinearCamClay", "d7/df3/class_nonlinear_cam_clay.html", [
       [ "NonlinearCamClay", "d7/df3/class_nonlinear_cam_clay.html#a4528d3fc204712bb668ef6293c6b8bcd", null ],
-      [ "clear_status", "d7/df3/class_nonlinear_cam_clay.html#a15ceab75295e4d313ab639c06bdd5fc9", null ],
-      [ "commit_status", "d7/df3/class_nonlinear_cam_clay.html#ad2c87743e867298a127c6b69d4fca886", null ],
       [ "get", "d7/df3/class_nonlinear_cam_clay.html#a119b85cb6762c260c061eb7d2c3338a1", null ],
       [ "initialize", "d7/df3/class_nonlinear_cam_clay.html#aaad561c45be5ccc060cf9255e99b2a5b", null ],
-      [ "reset_status", "d7/df3/class_nonlinear_cam_clay.html#a47d28a7298368585e32ad55ea0e973c7", null ],
       [ "update_trial_status", "d7/df3/class_nonlinear_cam_clay.html#ac2fe74eb958ed400a2dcb2c2864bc327", null ]
     ] ],
     [ "DataParabolicCC", "d4/df5/struct_data_parabolic_c_c.html", [
@@ -110,13 +104,10 @@ var group___material_3_d =
         [ "ANISOTROPIC", "dc/dfb/class_c_d_p_m2.html#a2ea43373c066ae1370cd45131f34c5aea5c56bb1e22b336ee67d2b1612b46dd1d", null ]
       ] ],
       [ "CDPM2", "dc/dfb/class_c_d_p_m2.html#a24becab9f22682849b0cdf3ce4e009ee", null ],
-      [ "clear_status", "dc/dfb/class_c_d_p_m2.html#aa0462c6c06f310d81bd217d94e7cf7c4", null ],
-      [ "commit_status", "dc/dfb/class_c_d_p_m2.html#abe76073fee3c04bf08f4d21a5b63e747", null ],
       [ "get", "dc/dfb/class_c_d_p_m2.html#a0569c1a1428db34cd3b9ec0fa67a149b", null ],
       [ "initialize", "dc/dfb/class_c_d_p_m2.html#a0e9e8ea0201fc25b4bd7a67419275824", null ],
       [ "print", "dc/dfb/class_c_d_p_m2.html#a86ca94e3ddfb962ec64bdf18d5a2484e", null ],
       [ "record", "dc/dfb/class_c_d_p_m2.html#a8d2e1d89f8abc22f80687b87a2e2d9a9", null ],
-      [ "reset_status", "dc/dfb/class_c_d_p_m2.html#a99182b2f489a3f6868e2355628edaa45", null ],
       [ "unique_copy", "dc/dfb/class_c_d_p_m2.html#adc8f5cbd713551de5f594734d93bde15", null ],
       [ "update_trial_status", "dc/dfb/class_c_d_p_m2.html#a1f77ec22f18b90dd568fe6964f8ce91a", null ]
     ] ],
@@ -136,13 +127,10 @@ var group___material_3_d =
     ] ],
     [ "NonlinearCDP", "de/d9e/class_nonlinear_c_d_p.html", [
       [ "NonlinearCDP", "de/d9e/class_nonlinear_c_d_p.html#acdf404f383f2588b33080e63e3e8fad0", null ],
-      [ "clear_status", "de/d9e/class_nonlinear_c_d_p.html#a3e81c83b40779d165cd8a80a4d86dfe6", null ],
-      [ "commit_status", "de/d9e/class_nonlinear_c_d_p.html#a26084e162abc7f35ef6ceae7142e8c35", null ],
       [ "get", "de/d9e/class_nonlinear_c_d_p.html#aabb6c18206207ce3b0b66bf2248efb89", null ],
       [ "initialize", "de/d9e/class_nonlinear_c_d_p.html#a18692bfa73ecde973b2d3c67bc6d679d", null ],
       [ "print", "de/d9e/class_nonlinear_c_d_p.html#a9655cfc3fc128c65e43ea7ffa2c11d0b", null ],
       [ "record", "de/d9e/class_nonlinear_c_d_p.html#a9dfa978ac7506eaf0b8db6993d4a0f82", null ],
-      [ "reset_status", "de/d9e/class_nonlinear_c_d_p.html#aa600b897f9cfefdaa3d0258c76f38d37", null ],
       [ "update_trial_status", "de/d9e/class_nonlinear_c_d_p.html#ada50f0816b64f9d897504e17674bb550", null ]
     ] ],
     [ "Rebar3D", "d5/dbd/class_rebar3_d.html", [
@@ -210,12 +198,9 @@ var group___material_3_d =
     ] ],
     [ "NonlinearDruckerPrager", "d2/dbe/class_nonlinear_drucker_prager.html", [
       [ "NonlinearDruckerPrager", "d2/dbe/class_nonlinear_drucker_prager.html#aca158d79d09225f34c80f5396a1b1761", null ],
-      [ "clear_status", "d2/dbe/class_nonlinear_drucker_prager.html#ac5b1847134f2d07472fe65162a38ecc9", null ],
-      [ "commit_status", "d2/dbe/class_nonlinear_drucker_prager.html#a33253a7988e3af6fa394234fa9f8247a", null ],
       [ "get", "d2/dbe/class_nonlinear_drucker_prager.html#a389a46bed3deaab0ced65c55a0c85395", null ],
       [ "initialize", "d2/dbe/class_nonlinear_drucker_prager.html#aa529a8a73830fdae9ecc501f30f258e4", null ],
       [ "print", "d2/dbe/class_nonlinear_drucker_prager.html#a5ebac496aad043f5fd0fe95a09d9e19d", null ],
-      [ "reset_status", "d2/dbe/class_nonlinear_drucker_prager.html#a953146cb9bbedf5066be8c1e90d00f1f", null ],
       [ "update_trial_status", "d2/dbe/class_nonlinear_drucker_prager.html#a612a17df054c7955919f5088f98d11a9", null ]
     ] ],
     [ "DataBlatzKo", "df/da7/struct_data_blatz_ko.html", [
@@ -226,12 +211,9 @@ var group___material_3_d =
     ] ],
     [ "BlatzKo", "d0/dad/class_blatz_ko.html", [
       [ "BlatzKo", "d0/dad/class_blatz_ko.html#abdc0e2c71872f54e599e98a6d3f5bae8", null ],
-      [ "clear_status", "d0/dad/class_blatz_ko.html#a4fc7df2147a4be1f726ab24585177317", null ],
-      [ "commit_status", "d0/dad/class_blatz_ko.html#a952c7529b91e2f1e2a2abe060185c6a4", null ],
       [ "get", "d0/dad/class_blatz_ko.html#a7496f4280fb5a00e901d798d676ec71d", null ],
       [ "initialize", "d0/dad/class_blatz_ko.html#ae697deef745454a1dbb14a57173b527f", null ],
       [ "print", "d0/dad/class_blatz_ko.html#ab21c5c8d0b85ac0d04edaf76d49d3155", null ],
-      [ "reset_status", "d0/dad/class_blatz_ko.html#afa25525f35bb6dd39f3ffe34243e8704", null ],
       [ "unique_copy", "d0/dad/class_blatz_ko.html#a1d984442d1d22a81024207d174379ae4", null ],
       [ "update_trial_status", "d0/dad/class_blatz_ko.html#ab0358470a997a472af8ad602604195a0", null ]
     ] ],
@@ -252,11 +234,8 @@ var group___material_3_d =
     ] ],
     [ "IsotropicNonlinearElastic3D", "d8/d75/class_isotropic_nonlinear_elastic3_d.html", [
       [ "IsotropicNonlinearElastic3D", "d8/d75/class_isotropic_nonlinear_elastic3_d.html#a2b4c69f0cd5b9075599bfcf5dd7cf933", null ],
-      [ "clear_status", "d8/d75/class_isotropic_nonlinear_elastic3_d.html#a2c96f2c34d17be31b04c43b1e1c3dc6f", null ],
-      [ "commit_status", "d8/d75/class_isotropic_nonlinear_elastic3_d.html#ad6bdcf71233059f8712e08703fc2847f", null ],
       [ "initialize", "d8/d75/class_isotropic_nonlinear_elastic3_d.html#a7e82da8bbc7d697eff6c1cebabb09578", null ],
       [ "print", "d8/d75/class_isotropic_nonlinear_elastic3_d.html#ae2ea7aadada769985ca28b3a49458254", null ],
-      [ "reset_status", "d8/d75/class_isotropic_nonlinear_elastic3_d.html#a7014761f2b4a0ced1c0f7579a966df5b", null ],
       [ "update_trial_status", "d8/d75/class_isotropic_nonlinear_elastic3_d.html#a1865cdf7c00a06365771aeda4c635d66", null ]
     ] ],
     [ "DataMooneyRivlin", "db/d84/struct_data_mooney_rivlin.html", [
@@ -266,11 +245,8 @@ var group___material_3_d =
     ] ],
     [ "MooneyRivlin", "de/da3/class_mooney_rivlin.html", [
       [ "MooneyRivlin", "de/da3/class_mooney_rivlin.html#aa467f4b168e98ba9d4d18c9f21077020", null ],
-      [ "clear_status", "de/da3/class_mooney_rivlin.html#a7384185628bde6347bda3451b8a35a6f", null ],
-      [ "commit_status", "de/da3/class_mooney_rivlin.html#a36c017e4690617fdd3e44166f63850ee", null ],
       [ "initialize", "de/da3/class_mooney_rivlin.html#a1b06e496fbc32879fe17f8006839d3d4", null ],
       [ "print", "de/da3/class_mooney_rivlin.html#ad5a1b5c6cee248ce0c5c3c209f2ffd4e", null ],
-      [ "reset_status", "de/da3/class_mooney_rivlin.html#a9b47bdccdc7ac09a66f8fb972667bf59", null ],
       [ "unique_copy", "de/da3/class_mooney_rivlin.html#a99168e1fa385d2c2c8544cb633a2f749", null ],
       [ "update_trial_status", "de/da3/class_mooney_rivlin.html#a6c9b06557f71d8b8f74387fa6e53ed0a", null ]
     ] ],
@@ -300,48 +276,52 @@ var group___material_3_d =
     ] ],
     [ "Yeoh", "d1/db3/class_yeoh.html", [
       [ "Yeoh", "d1/db3/class_yeoh.html#a539778590c96ee712e72569b2b337cce", null ],
-      [ "clear_status", "d1/db3/class_yeoh.html#a5f387e7a3d79942d54a73fc7d5ce00c4", null ],
-      [ "commit_status", "d1/db3/class_yeoh.html#a8d8d93d7cf7e83c4ecb1e4f9944ef77e", null ],
       [ "initialize", "d1/db3/class_yeoh.html#aec2eed31105b2ae6af40a90d8c299fd1", null ],
       [ "print", "d1/db3/class_yeoh.html#a617e8ca768084c0e8a21177002828622", null ],
-      [ "reset_status", "d1/db3/class_yeoh.html#ac19ab30b24a45d70628753631e0b3d9c", null ],
       [ "unique_copy", "d1/db3/class_yeoh.html#a9724cc3124aef6d8297e063579aa15c2", null ],
       [ "update_trial_status", "d1/db3/class_yeoh.html#a616625bcba3385ebe25557a1557c5291", null ]
     ] ],
     [ "Material3D", "d7/d42/class_material3_d.html", [
       [ "Material3D", "d7/d42/class_material3_d.html#a28c774a901d8aa7b71fccc6f6a431602", null ],
-      [ "record", "d7/d42/class_material3_d.html#a94ad9cc2c14bdc9d3d6f262fe2146bcd", null ]
+      [ "clear_status", "d7/d42/class_material3_d.html#a9d1ebb1ce961972970e832e745443fdd", null ],
+      [ "commit_status", "d7/d42/class_material3_d.html#aa170bbfdba4975048da0138fd3e31df4", null ],
+      [ "record", "d7/d42/class_material3_d.html#a94ad9cc2c14bdc9d3d6f262fe2146bcd", null ],
+      [ "reset_status", "d7/d42/class_material3_d.html#a3a580226862694b58af3b7cd181f70f1", null ]
     ] ],
     [ "NonlocalMaterial3D", "d2/da2/class_nonlocal_material3_d.html", [
       [ "NonlocalMaterial3D", "d2/da2/class_nonlocal_material3_d.html#ab1761bbdce57b6716833aa162d6cc2e0", null ],
-      [ "record", "d2/da2/class_nonlocal_material3_d.html#ad2d4a9785a75558afcb4ef4aa5f8b6af", null ]
+      [ "clear_status", "d2/da2/class_nonlocal_material3_d.html#a735db7d6f0780090253b606c27750a95", null ],
+      [ "commit_status", "d2/da2/class_nonlocal_material3_d.html#a2f7350bca1055e6055f2b9a8accfb51f", null ],
+      [ "record", "d2/da2/class_nonlocal_material3_d.html#ad2d4a9785a75558afcb4ef4aa5f8b6af", null ],
+      [ "reset_status", "d2/da2/class_nonlocal_material3_d.html#a9b9632b20afee4919322936da3376c80", null ]
     ] ],
     [ "DataNonlocalBilinearJ2", "d4/d4c/struct_data_nonlocal_bilinear_j2.html", [
       [ "beta", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#af1888bc0e6377266da9493ff641fdb86", null ],
+      [ "diffusion_rate", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#a93ea7846a21a09336ae10d4a16acff2c", null ],
       [ "elastic_modulus", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#a1471a411b59999b7cfe78e393ec419f3", null ],
       [ "evolution_rate", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#af9b66bfe88417ddfc1ecd4f1069da5a2", null ],
       [ "hardening_ratio", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#ae1eb06d2c7f457662cc23b6541ed2455", null ],
       [ "plastic_strain_threshold", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#ac9c7d4f5acb22afab8ecf4a81c823504", null ],
       [ "poissons_ratio", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#ae27aa87bef99f327d276e3cb9734f357", null ],
+      [ "reference_length", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#a6fc73f982a74531b685d9561087b0251", null ],
       [ "yield_stress", "d4/d4c/struct_data_nonlocal_bilinear_j2.html#a8c4c5e00f553024eafbb0da5ba0ac753", null ]
     ] ],
     [ "NonlocalBilinearJ2", "d8/d1b/class_nonlocal_bilinear_j2.html", [
-      [ "NonlocalBilinearJ2", "d8/d1b/class_nonlocal_bilinear_j2.html#a5ed470e0a1c878d6dae23fe6182dee4d", null ],
-      [ "clear_status", "d8/d1b/class_nonlocal_bilinear_j2.html#a362830b550d3dced658f92a6d76ee1e6", null ],
-      [ "commit_status", "d8/d1b/class_nonlocal_bilinear_j2.html#a0ec02285f269145784c1ab50af2ebfa1", null ],
+      [ "NonlocalBilinearJ2", "d8/d1b/class_nonlocal_bilinear_j2.html#a539b368a2b20cecab9d278540f66074c", null ],
       [ "get", "d8/d1b/class_nonlocal_bilinear_j2.html#ac32417363b2981c560738e30bad83604", null ],
       [ "initialize", "d8/d1b/class_nonlocal_bilinear_j2.html#aa6ed4b2a24454f1f0735468b65a58293", null ],
       [ "nonlocal_size", "d8/d1b/class_nonlocal_bilinear_j2.html#a72c8dc7ad96446d54eb8ecf1713f4d6d", null ],
       [ "print", "d8/d1b/class_nonlocal_bilinear_j2.html#a8379ff6519c364e5ef13d779982bef24", null ],
-      [ "reset_status", "d8/d1b/class_nonlocal_bilinear_j2.html#ae90dff9963bc8f0ae564f1141049bc6c", null ],
       [ "unique_copy", "d8/d1b/class_nonlocal_bilinear_j2.html#ab7f235ca8510acbda29d38af8d53f5ea", null ],
       [ "update_trial_status", "d8/d1b/class_nonlocal_bilinear_j2.html#ad5aa632eb1dcfea572bb801dc45184b2", null ]
     ] ],
     [ "DataNonlocalIsotropicElastic3D", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html", [
+      [ "diffusion_rate", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#a2c4fb2724f968655762648c2b9c65eeb", null ],
       [ "elastic_modulus", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#ae98436b0049ece370da126ad02c3e610", null ],
       [ "evolution_rate", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#aa6fdc09546b67d312ef06c631ac197bd", null ],
       [ "maximum_energy", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#ad83f236de6a764ef3641294730ba2b0c", null ],
-      [ "poissons_ratio", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#ab03b51b92c0c3bb742e7963b6ef496e1", null ]
+      [ "poissons_ratio", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#ab03b51b92c0c3bb742e7963b6ef496e1", null ],
+      [ "reference_length", "d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html#ab3c4a92d53efc58c2d29b88cadd93928", null ]
     ] ],
     [ "NonlocalIsotropicElastic3D", "d7/d21/class_nonlocal_isotropic_elastic3_d.html", [
       [ "EnergyType", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#aa025508d044ab04dd7cd09727e8c749c", [
@@ -349,14 +329,11 @@ var group___material_3_d =
         [ "TENSILE", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#aa025508d044ab04dd7cd09727e8c749ca46c2bbc1dffdb2f8087dcf9431066bbe", null ],
         [ "DEV_TENSILE", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#aa025508d044ab04dd7cd09727e8c749caab058c560f2d6458ef2940fb0f30ef6e", null ]
       ] ],
-      [ "NonlocalIsotropicElastic3D", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#aaad5c05b79835eee290a56409b453a64", null ],
-      [ "clear_status", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a1a8f564f520173adaddf02b0aee7c206", null ],
-      [ "commit_status", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#acb96364d490f22adc46e1798af960c45", null ],
+      [ "NonlocalIsotropicElastic3D", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a016e552384183b1c2368d789db381029", null ],
       [ "get", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a611c880a953428cfc89774badf427f95", null ],
       [ "initialize", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a4953407f6897283819d58152b5fd809a", null ],
       [ "nonlocal_size", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a2197e2aa478e6af1332761c887c435e0", null ],
       [ "print", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a1f339a121b33c3c88cbc80a29ba1ad95", null ],
-      [ "reset_status", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a3c767a204aea15583434382ec88a714b", null ],
       [ "unique_copy", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a0e03558dd19b9b862b3a35c0c2bc0994", null ],
       [ "update_trial_status", "d7/d21/class_nonlocal_isotropic_elastic3_d.html#a032da7ec20f9a56bf09b89857dca1f6c", null ]
     ] ],
@@ -413,11 +390,8 @@ var group___material_3_d =
         [ "TsaiWu", "d1/d6e/class_nonlinear_orthotropic.html#a65e402431b52b3095926cd806cb17cd7a8b97e9bc49d985c3c7742ccb7eb26010", null ]
       ] ],
       [ "NonlinearOrthotropic", "d1/d6e/class_nonlinear_orthotropic.html#a2f252f818a2026131dfc0ff8461168b1", null ],
-      [ "clear_status", "d1/d6e/class_nonlinear_orthotropic.html#af368ffb7494fff4bc24e15ce191e4384", null ],
-      [ "commit_status", "d1/d6e/class_nonlinear_orthotropic.html#a6690359e34ff3368b42ab810c36a00c2", null ],
       [ "initialize", "d1/d6e/class_nonlinear_orthotropic.html#a3e9bedc94010634435f32e07e2afeb01", null ],
       [ "print", "d1/d6e/class_nonlinear_orthotropic.html#ad1a36296a9e328499c8a0785046dfc15", null ],
-      [ "reset_status", "d1/d6e/class_nonlinear_orthotropic.html#af2c6a9439216d9bbaafc2c32a7d738c0", null ],
       [ "update_trial_status", "d1/d6e/class_nonlinear_orthotropic.html#ae627e8defc32f369c68ed010a3d0a7dc", null ]
     ] ],
     [ "NonlinearHill", "d8/d67/class_nonlinear_hill.html", [
@@ -455,11 +429,8 @@ var group___material_3_d =
     ] ],
     [ "YLD0418P", "d2/d69/class_y_l_d0418_p.html", [
       [ "YLD0418P", "d2/d69/class_y_l_d0418_p.html#af777dba18ebabd4007c6ea07b4501db4", null ],
-      [ "clear_status", "d2/d69/class_y_l_d0418_p.html#aaca019a88994a74088a1249d5fffd04e", null ],
-      [ "commit_status", "d2/d69/class_y_l_d0418_p.html#a76f23dca0da459132f05f1f59d0b0eb8", null ],
       [ "initialize", "d2/d69/class_y_l_d0418_p.html#a02fc8bc5acd1ec5dea5a25341c1c2af3", null ],
       [ "print", "d2/d69/class_y_l_d0418_p.html#a2cb6a17815ce85c5bc5497c30905edf2", null ],
-      [ "reset_status", "d2/d69/class_y_l_d0418_p.html#a52f54f68c0c021a42f7bc98a774fc45e", null ],
       [ "unique_copy", "d2/d69/class_y_l_d0418_p.html#ab18c724f08c4fab803e1b2ad07b1085c", null ],
       [ "update_trial_status", "d2/d69/class_y_l_d0418_p.html#aa6db9eec17341b07891e4286decafd75", null ]
     ] ],
@@ -484,12 +455,9 @@ var group___material_3_d =
     ] ],
     [ "DafaliasManzari", "d6/de0/class_dafalias_manzari.html", [
       [ "DafaliasManzari", "d6/de0/class_dafalias_manzari.html#a90ab335f9584043a08312f91f659a4d7", null ],
-      [ "clear_status", "d6/de0/class_dafalias_manzari.html#aa8606b4a3587485ca106e59b0a8d7b97", null ],
-      [ "commit_status", "d6/de0/class_dafalias_manzari.html#af8b013a55ccfdfcbd3495b0be04f90e7", null ],
       [ "get", "d6/de0/class_dafalias_manzari.html#a1de17b8bde634552117fa80a510b5f1c", null ],
       [ "initialize", "d6/de0/class_dafalias_manzari.html#af9247c5d4bce957a5a417dfe286c1866", null ],
       [ "print", "d6/de0/class_dafalias_manzari.html#a1a686449be13e056093e5ba33a81836a", null ],
-      [ "reset_status", "d6/de0/class_dafalias_manzari.html#ab9c980d3f35716054932b6eb1dd48193", null ],
       [ "unique_copy", "d6/de0/class_dafalias_manzari.html#a466ceaf3eb3c5ba651149e00b7354986", null ],
       [ "update_trial_status", "d6/de0/class_dafalias_manzari.html#a77a82b737eafab2859941e22cad015a7", null ]
     ] ],
@@ -509,12 +477,9 @@ var group___material_3_d =
     ] ],
     [ "SimpleSand", "de/d26/class_simple_sand.html", [
       [ "SimpleSand", "de/d26/class_simple_sand.html#afad992453520cf8ad65d1234638b6ea5", null ],
-      [ "clear_status", "de/d26/class_simple_sand.html#abf3e277643d42fe110cf1bac7fc1021a", null ],
-      [ "commit_status", "de/d26/class_simple_sand.html#afb580c61d46f575cdb56c0a72a6ee53a", null ],
       [ "get", "de/d26/class_simple_sand.html#af255e0e431e86f04860fa7fb52077977", null ],
       [ "initialize", "de/d26/class_simple_sand.html#a9d1743cf5d13131793521e3fa2524327", null ],
       [ "print", "de/d26/class_simple_sand.html#a017e5c022fb37c4f80904c208c55dfab", null ],
-      [ "reset_status", "de/d26/class_simple_sand.html#ae73feb95187f81532d2f9b65350bfc71", null ],
       [ "unique_copy", "de/d26/class_simple_sand.html#a97ec1d4a835704a5bebfaed32fd51a10", null ],
       [ "update_trial_status", "de/d26/class_simple_sand.html#a8157e10cf03876250514d822ff8afe12", null ]
     ] ],
@@ -530,12 +495,9 @@ var group___material_3_d =
     ] ],
     [ "ArmstrongFrederick", "d5/d60/class_armstrong_frederick.html", [
       [ "ArmstrongFrederick", "d5/d60/class_armstrong_frederick.html#a7a7bec37a4dec1fa55ef3ec9dcef7946", null ],
-      [ "clear_status", "d5/d60/class_armstrong_frederick.html#aa46638ca3797ae560de7b2209b00fc27", null ],
-      [ "commit_status", "d5/d60/class_armstrong_frederick.html#ad4dc25b465d0e37835bdb69fef7ff727", null ],
       [ "get", "d5/d60/class_armstrong_frederick.html#a9d2cba265e319553768a1fd9ab29afec", null ],
       [ "initialize", "d5/d60/class_armstrong_frederick.html#a5ba4eb48c084b7ebf7857c85aeaf30bb", null ],
       [ "print", "d5/d60/class_armstrong_frederick.html#a70186f92ec7126327e1d5c9a98df0eb9", null ],
-      [ "reset_status", "d5/d60/class_armstrong_frederick.html#a405d11c43d929766a457131e5f7aec90", null ],
       [ "unique_copy", "d5/d60/class_armstrong_frederick.html#a41b8678bcdfba16e895efd1843799ff0", null ],
       [ "update_trial_status", "d5/d60/class_armstrong_frederick.html#aeff41b136117c1f01d41ff427e102e65", null ]
     ] ],
@@ -557,11 +519,8 @@ var group___material_3_d =
     ] ],
     [ "Balloon", "d2/d24/class_balloon.html", [
       [ "Balloon", "d2/d24/class_balloon.html#a594f5a314f9188369daeb1d59ac29a67", null ],
-      [ "clear_status", "d2/d24/class_balloon.html#a1e197238464715071643724fb3751dde", null ],
-      [ "commit_status", "d2/d24/class_balloon.html#a0673014c8b97e30d1356894e23b677bb", null ],
       [ "initialize", "d2/d24/class_balloon.html#ad8f231e2f86268936ea9145083fa9bf9", null ],
       [ "print", "d2/d24/class_balloon.html#a70d183b6f386f03e353241d1781a43a7", null ],
-      [ "reset_status", "d2/d24/class_balloon.html#a87f08a0e997e83d7fc57d6ec3a2b0abe", null ],
       [ "unique_copy", "d2/d24/class_balloon.html#a095b9dce3b797e9b011d891fd4c4c2ba", null ],
       [ "update_trial_status", "d2/d24/class_balloon.html#a69486045a4ff514e5150933d7b6c7103", null ]
     ] ],
@@ -574,12 +533,9 @@ var group___material_3_d =
     ] ],
     [ "BilinearJ2", "d3/d0e/class_bilinear_j2.html", [
       [ "BilinearJ2", "d3/d0e/class_bilinear_j2.html#a572b7fbca112f3b25f0b7780cb1dc7ac", null ],
-      [ "clear_status", "d3/d0e/class_bilinear_j2.html#a8f47a043b754cd5357c0163755f64814", null ],
-      [ "commit_status", "d3/d0e/class_bilinear_j2.html#a7c2eed145f1c263ae2daaa61d8b6f7ec", null ],
       [ "get", "d3/d0e/class_bilinear_j2.html#abf4dbbecde4d1de3373780484355ca7d", null ],
       [ "initialize", "d3/d0e/class_bilinear_j2.html#a7916b9fa904719b25d549f8c79a66a65", null ],
       [ "print", "d3/d0e/class_bilinear_j2.html#a6537ea7375c60b1fb901ed5f5c12ae79", null ],
-      [ "reset_status", "d3/d0e/class_bilinear_j2.html#aa54595001d5007f57ea2f9ab6efae14a", null ],
       [ "unique_copy", "d3/d0e/class_bilinear_j2.html#a569c5a2643eff843ff6b1f9dd64d8408", null ],
       [ "update_trial_status", "d3/d0e/class_bilinear_j2.html#a26c8f7298bf8cd7ae0acc7e712264c0d", null ]
     ] ],
@@ -638,13 +594,10 @@ var group___material_3_d =
     ] ],
     [ "NonlinearGurson", "d1/dd0/class_nonlinear_gurson.html", [
       [ "NonlinearGurson", "d1/dd0/class_nonlinear_gurson.html#a7d41be101a1d0effeaa85a7d05f9ffaf", null ],
-      [ "clear_status", "d1/dd0/class_nonlinear_gurson.html#a9151645f78634b7c2a859f76c153806b", null ],
-      [ "commit_status", "d1/dd0/class_nonlinear_gurson.html#ac352cb04df6b57ce81a00ebe1c65e19a", null ],
       [ "get", "d1/dd0/class_nonlinear_gurson.html#a4c1a75ec027edf0ad56e4f39b1218c79", null ],
       [ "initialize", "d1/dd0/class_nonlinear_gurson.html#acdd9b51bc5902bf6045affc48abd4251", null ],
       [ "print", "d1/dd0/class_nonlinear_gurson.html#a521d223c8a8e449b0696d6a3163f8581", null ],
       [ "record", "d1/dd0/class_nonlinear_gurson.html#a1a140dd76c95534cca76a15efcb25a8d", null ],
-      [ "reset_status", "d1/dd0/class_nonlinear_gurson.html#a1c41def612dc9fb9da2ab374df9bebd7", null ],
       [ "update_trial_status", "d1/dd0/class_nonlinear_gurson.html#aa8ae29eca73403329a46ca014b3dd49b", null ]
     ] ],
     [ "DataNonlinearJ2", "d3/ddc/struct_data_nonlinear_j2.html", [
@@ -653,12 +606,9 @@ var group___material_3_d =
     ] ],
     [ "NonlinearJ2", "de/d54/class_nonlinear_j2.html", [
       [ "NonlinearJ2", "de/d54/class_nonlinear_j2.html#ad96b38fa600cb823cc16189516695a7f", null ],
-      [ "clear_status", "de/d54/class_nonlinear_j2.html#a0baa13624c08f5d22ad3b4ed2566b2ab", null ],
-      [ "commit_status", "de/d54/class_nonlinear_j2.html#a232e92d2b41d189803f03356cb91a2a0", null ],
       [ "get", "de/d54/class_nonlinear_j2.html#a1c37ab17829edfd6e7f3a3213071fdcc", null ],
       [ "initialize", "de/d54/class_nonlinear_j2.html#ab3bd52be8a4c60f5906aa76b1efaa4bf", null ],
       [ "print", "de/d54/class_nonlinear_j2.html#adcfb1182ddd6426aa0b2cd6c3db115a2", null ],
-      [ "reset_status", "de/d54/class_nonlinear_j2.html#a1aadeec4cecbe23262703d5f753ede1e", null ],
       [ "update_trial_status", "de/d54/class_nonlinear_j2.html#a749314362a5b29f4e3b9d420fab90542", null ]
     ] ],
     [ "DataNonlinearPeric", "de/dd1/struct_data_nonlinear_peric.html", [
@@ -669,12 +619,9 @@ var group___material_3_d =
     ] ],
     [ "NonlinearPeric", "d0/d51/class_nonlinear_peric.html", [
       [ "NonlinearPeric", "d0/d51/class_nonlinear_peric.html#a6c1df71b6381d0e735b477f0fb740095", null ],
-      [ "clear_status", "d0/d51/class_nonlinear_peric.html#a34bb1fea0d5aeab7f079f98dca3d5c4a", null ],
-      [ "commit_status", "d0/d51/class_nonlinear_peric.html#aa0216cbecb80eff799a0d5df605c083d", null ],
       [ "get", "d0/d51/class_nonlinear_peric.html#a136099286ab4321b1d0811d7787ac1e0", null ],
       [ "initialize", "d0/d51/class_nonlinear_peric.html#a3a16129fe74862e60b6481e4d8f30b91", null ],
       [ "print", "d0/d51/class_nonlinear_peric.html#aaa2b92b7a0672bd18c9cb9f61d260f11", null ],
-      [ "reset_status", "d0/d51/class_nonlinear_peric.html#ad67e7652ce0c6f59864a1f9b652c1f10", null ],
       [ "update_trial_status", "d0/d51/class_nonlinear_peric.html#ac22da48a502e269022b0933ac4a4a2c6", null ]
     ] ],
     [ "DataPolyJ2", "d3/d91/struct_data_poly_j2.html", [
@@ -696,11 +643,8 @@ var group___material_3_d =
     ] ],
     [ "Subloading", "d2/d04/class_subloading.html", [
       [ "Subloading", "d2/d04/class_subloading.html#a4c9c1d138a24d0a374096e47ea290f74", null ],
-      [ "clear_status", "d2/d04/class_subloading.html#a5e4acdb4c7298d96a2a226717dfcf693", null ],
-      [ "commit_status", "d2/d04/class_subloading.html#a04eafacc08f574dea9eb77677c93bc4f", null ],
       [ "initialize", "d2/d04/class_subloading.html#a21095d0e8853ca33f3b1d6459e361d4b", null ],
       [ "print", "d2/d04/class_subloading.html#a642a4ac7ca78cca4b59c4465fa8dd9af", null ],
-      [ "reset_status", "d2/d04/class_subloading.html#ab9e406fa1a7dc59dbb6dbf002806c48e", null ],
       [ "unique_copy", "d2/d04/class_subloading.html#a31f87734f25ebd0f43ce66a6ca4d363b", null ],
       [ "update_trial_status", "d2/d04/class_subloading.html#acc8fb0991147717c69e8ba0e6b9cbdb5", null ]
     ] ],
@@ -722,12 +666,9 @@ var group___material_3_d =
     ] ],
     [ "VAFCRP", "d9/d6d/class_v_a_f_c_r_p.html", [
       [ "VAFCRP", "d9/d6d/class_v_a_f_c_r_p.html#a779d53618efcbe23e54174cd45c65fcf", null ],
-      [ "clear_status", "d9/d6d/class_v_a_f_c_r_p.html#a937689f6de31b709a95cf8f4e8dda566", null ],
-      [ "commit_status", "d9/d6d/class_v_a_f_c_r_p.html#adae27a481b2e2d1e00dabdf3aba617c4", null ],
       [ "get", "d9/d6d/class_v_a_f_c_r_p.html#a38521ff2dbf6f69b4162eb9de21b66a6", null ],
       [ "initialize", "d9/d6d/class_v_a_f_c_r_p.html#aa593292147af72228afe2e0b78694773", null ],
       [ "print", "d9/d6d/class_v_a_f_c_r_p.html#a0cd185b3036dafbca4ff481bee451504", null ],
-      [ "reset_status", "d9/d6d/class_v_a_f_c_r_p.html#ad8c4c31ba91a7c56677ff3bdfd016517", null ],
       [ "unique_copy", "d9/d6d/class_v_a_f_c_r_p.html#a349a7f5f9909f538a7fbf4908869ba1d", null ],
       [ "update_trial_status", "d9/d6d/class_v_a_f_c_r_p.html#a3af6d79e775a611c8a9dc3cb2ad8084f", null ]
     ] ],

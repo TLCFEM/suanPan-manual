@@ -1,32 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 916;
 var viewHeight = 1254;
 var sectionId = &apos;dynsection-1&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>NonlocalIsotropicElastic3D</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="The NonlocalIsotropicElastic3D class defines a isotropic elastic material for 3-D problems." id="a_Node000001">
-<path fill="#999" stroke="transparent" d="M378.41-196h-209V0h209z"/>
-<text x="186.41" y="-183.2" font-family="Consolas" font-size="11">NonlocalIsotropicElastic3D</text>
-<text x="270.91" y="-167.2" font-family="Consolas" font-size="11"> </text>
-<text x="173.91" y="-151.2" font-family="Consolas" font-size="11">+</text>
-<text x="184.91" y="-151.2" font-family="Consolas" font-size="11">NonlocalIsotropicElastic3D()</text>
-<text x="173.91" y="-135.2" font-family="Consolas" font-size="11">+</text>
-<text x="184.91" y="-135.2" font-family="Consolas" font-size="11">initialize()</text>
-<text x="173.91" y="-119.2" font-family="Consolas" font-size="11">+</text>
-<text x="184.91" y="-119.2" font-family="Consolas" font-size="11">get()</text>
+<path fill="#999" stroke="transparent" d="M378.41-148h-209V0h209z"/>
+<text x="186.41" y="-135.2" font-family="Consolas" font-size="11">NonlocalIsotropicElastic3D</text>
+<text x="270.91" y="-119.2" font-family="Consolas" font-size="11"> </text>
 <text x="173.91" y="-103.2" font-family="Consolas" font-size="11">+</text>
-<text x="184.91" y="-103.2" font-family="Consolas" font-size="11">unique_copy()</text>
+<text x="184.91" y="-103.2" font-family="Consolas" font-size="11">NonlocalIsotropicElastic3D()</text>
 <text x="173.91" y="-87.2" font-family="Consolas" font-size="11">+</text>
-<text x="184.91" y="-87.2" font-family="Consolas" font-size="11">nonlocal_size()</text>
+<text x="184.91" y="-87.2" font-family="Consolas" font-size="11">initialize()</text>
 <text x="173.91" y="-71.2" font-family="Consolas" font-size="11">+</text>
-<text x="184.91" y="-71.2" font-family="Consolas" font-size="11">update_trial_status()</text>
+<text x="184.91" y="-71.2" font-family="Consolas" font-size="11">get()</text>
 <text x="173.91" y="-55.2" font-family="Consolas" font-size="11">+</text>
-<text x="184.91" y="-55.2" font-family="Consolas" font-size="11">clear_status()</text>
+<text x="184.91" y="-55.2" font-family="Consolas" font-size="11">unique_copy()</text>
 <text x="173.91" y="-39.2" font-family="Consolas" font-size="11">+</text>
-<text x="184.91" y="-39.2" font-family="Consolas" font-size="11">commit_status()</text>
+<text x="184.91" y="-39.2" font-family="Consolas" font-size="11">nonlocal_size()</text>
 <text x="173.91" y="-23.2" font-family="Consolas" font-size="11">+</text>
-<text x="184.91" y="-23.2" font-family="Consolas" font-size="11">reset_status()</text>
+<text x="184.91" y="-23.2" font-family="Consolas" font-size="11">update_trial_status()</text>
 <text x="173.91" y="-7.2" font-family="Consolas" font-size="11">+</text>
 <text x="184.91" y="-7.2" font-family="Consolas" font-size="11">print()</text>
-<path fill="#666" stroke="#666" d="M169.91-178h209z"/>
-<path fill="#666" stroke="#666" d="M169.91-162h209z"/>
-<path fill="none" stroke="#666" d="M169.41 0v-196h209V0z"/>
+<path fill="#666" stroke="#666" d="M169.91-130h209z"/>
+<path fill="#666" stroke="#666" d="M169.91-114h209z"/>
+<path fill="none" stroke="#666" d="M169.41 0v-148h209V0z"/>
 </a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d4/df7/struct_data_nonlocal_isotropic_elastic3_d.html" id="a_Node000002" target="_top">
 <path fill="#fff" stroke="transparent" d="M282.41-620h-213v52h213z"/>
 <text x="74.91" y="-607.2" font-family="Consolas" font-size="11">DataNonlocalIsotropicElastic3D</text>
@@ -36,8 +30,8 @@ var sectionId = &apos;dynsection-1&apos;;</script><script xlink:href="../../svg.
 <path fill="#666" stroke="#666" d="M69.91-586h213z"/>
 <path fill="none" stroke="#666" d="M69.41-568v-52h213v52z"/>
 </a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node2-&gt;Node1</title><a id="a_edge1_Node000001_Node000002">
-<path fill="none" stroke="#006400" d="M182.94-557.56c14.81 74.67 49.67 250.39 71.68 361.34"/>
-<path fill="none" stroke="#006400" d="m179.41-557.33 1.49-10.49 5.38 9.12z"/>
+<path fill="none" stroke="#006400" d="M182.6-557.63c15.86 83.87 56.03 296.2 77.42 409.22"/>
+<path fill="none" stroke="#006400" d="m179.12-557.19 1.58-10.48 5.3 9.18z"/>
 </a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../df/de6/classdouble.html" id="a_Node000003" target="_top">
 <path fill="#fff" stroke="transparent" d="M109.41-1134h-51v52h51z"/>
 <text x="63.91" y="-1121.2" font-family="Consolas" font-size="11">double</text>
@@ -49,7 +43,7 @@ var sectionId = &apos;dynsection-1&apos;;</script><script xlink:href="../../svg.
 </a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node3-&gt;Node2</title><a id="a_edge2_Node000002_Node000003">
 <path fill="none" stroke="#63b8ff" d="M68.04-1081.9c-17.73 29.68-45.38 81.23-56.13 129.9-12.66 57.29-18.18 76.22 0 132 25.19 77.34 88.12 150.22 128.29 191.09"/>
 <path fill="none" stroke="#63b8ff" d="m140.42-628.69 1.41 7.07 7.07 1.42-1.41-7.07z"/>
-</a><text x="69.41" y="-901.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +elastic_modulus</text><text x="69.41" y="-889.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+evolution_rate</text><text x="69.41" y="-877.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+maximum_energy</text><text x="69.41" y="-865.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+poissons_ratio</text></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../de/de9/struct_data_material.html" id="a_Node000006" target="_top">
+</a><text x="69.41" y="-913.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +diffusion_rate</text><text x="69.41" y="-901.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+elastic_modulus</text><text x="69.41" y="-889.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+evolution_rate</text><text x="69.41" y="-877.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+maximum_energy</text><text x="69.41" y="-865.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+poissons_ratio</text><text x="69.41" y="-853.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+reference_length</text></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../de/de9/struct_data_material.html" id="a_Node000006" target="_top">
 <path fill="#fff" stroke="transparent" d="M523.91-778h-134v116h134z"/>
 <text x="415.91" y="-765.2" font-family="Consolas" font-size="11">DataMaterial</text>
 <text x="393.91" y="-749.2" font-family="Consolas" font-size="11">+</text>
@@ -71,19 +65,25 @@ var sectionId = &apos;dynsection-1&apos;;</script><script xlink:href="../../svg.
 <path fill="none" stroke="#63b8ff" d="M92.28-1081.96c10.01 30.47 26.89 83.62 38.63 129.96 14.7 58.05-12.78 87.23 27 132 55.58 62.57 151.59 85.71 219.8 94.2"/>
 <path fill="none" stroke="#63b8ff" d="m377.76-725.79 5.51 4.66 6.42-3.29-5.51-4.66z"/>
 </a><text x="235.91" y="-895.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +characteristic_length</text><text x="235.91" y="-883.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+density</text><text x="235.91" y="-871.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+tolerance</text></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d2/da2/class_nonlocal_material3_d.html" id="a_Node000004" target="_top">
-<path fill="#fff" stroke="transparent" d="M489.41-301h-155v68h155z"/>
+<path fill="#fff" stroke="transparent" d="M489.41-301h-155v116h155z"/>
 <text x="351.41" y="-288.2" font-family="Consolas" font-size="11">NonlocalMaterial3D</text>
 <text x="408.91" y="-272.2" font-family="Consolas" font-size="11"> </text>
 <text x="338.91" y="-256.2" font-family="Consolas" font-size="11">+</text>
 <text x="349.91" y="-256.2" font-family="Consolas" font-size="11">NonlocalMaterial3D()</text>
 <text x="338.91" y="-240.2" font-family="Consolas" font-size="11">+</text>
-<text x="349.91" y="-240.2" font-family="Consolas" font-size="11">record()</text>
+<text x="349.91" y="-240.2" font-family="Consolas" font-size="11">clear_status()</text>
+<text x="338.91" y="-224.2" font-family="Consolas" font-size="11">+</text>
+<text x="349.91" y="-224.2" font-family="Consolas" font-size="11">commit_status()</text>
+<text x="338.91" y="-208.2" font-family="Consolas" font-size="11">+</text>
+<text x="349.91" y="-208.2" font-family="Consolas" font-size="11">reset_status()</text>
+<text x="338.91" y="-192.2" font-family="Consolas" font-size="11">+</text>
+<text x="349.91" y="-192.2" font-family="Consolas" font-size="11">record()</text>
 <path fill="#666" stroke="#666" d="M334.91-283h155z"/>
 <path fill="#666" stroke="#666" d="M334.91-267h155z"/>
-<path fill="none" stroke="#666" d="M334.41-233v-68h155v68z"/>
+<path fill="none" stroke="#666" d="M334.41-185v-116h155v116z"/>
 </a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node4-&gt;Node1</title><a id="a_edge3_Node000001_Node000004">
-<path fill="none" stroke="#63b8ff" d="M377.78-224.7c-7.35 8.9-15.42 18.66-23.71 28.69"/>
-<path fill="none" stroke="#63b8ff" d="m375.24-227.13 9.07-5.48-3.67 9.94z"/>
+<path fill="none" stroke="#63b8ff" d="M358.31-177.14c-7.81 9.45-15.91 19.25-23.85 28.86"/>
+<path fill="none" stroke="#63b8ff" d="m355.73-179.52 9.07-5.48-3.67 9.94z"/>
 </a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../dc/dee/class_material.html" xlink:title="A Material abstract base class." id="a_Node000005" target="_top">
 <path fill="#fff" stroke="transparent" d="M537.41-550h-161v212h161z"/>
 <text x="429.91" y="-537.2" font-family="Consolas" font-size="11">Material</text>
@@ -113,8 +113,8 @@ var sectionId = &apos;dynsection-1&apos;;</script><script xlink:href="../../svg.
 <path fill="#666" stroke="#666" d="M376.91-516h161z"/>
 <path fill="none" stroke="#666" d="M376.41-338v-212h161v212z"/>
 </a></g><g id="edge4_Node000004_Node000005" class="edge"><title>Node5-&gt;Node4</title><a id="a_edge4_Node000004_Node000005">
-<path fill="none" stroke="#63b8ff" d="M427.37-328.13c-2.48 9.63-4.83 18.78-6.92 26.9"/>
-<path fill="none" stroke="#63b8ff" d="m424-329.11 5.88-8.81.9 10.56z"/>
+<path fill="none" stroke="#63b8ff" d="M430.94-328.17c-2.11 9.34-4.18 18.5-6.14 27.13"/>
+<path fill="none" stroke="#63b8ff" d="m427.53-328.98 5.62-8.98 1.21 10.52z"/>
 </a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node6-&gt;Node5</title><a id="a_edge5_Node000005_Node000006">
 <path fill="none" stroke="#006400" d="M456.91-651.78v101.59"/>
 <path fill="none" stroke="#006400" d="m453.41-651.89 3.5-10 3.5 10z"/>

@@ -126,6 +126,8 @@ Collaboration diagram for SimpleHysteresis:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6fdb2f1366f06ba065fbb4b4057b2cdd" id="r_a6fdb2f1366f06ba065fbb4b4057b2cdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d70/class_simple_hysteresis.html#a6fdb2f1366f06ba065fbb4b4057b2cdd">SimpleHysteresis</a> (unsigned, <a class="el" href="../../df/de6/classdouble.html">double</a>, <a class="el" href="../../df/de6/classdouble.html">double</a>=0.)</td></tr>
 <tr class="separator:a6fdb2f1366f06ba065fbb4b4057b2cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65de64d04d48c13c17e97861fdd4534b" id="r_a65de64d04d48c13c17e97861fdd4534b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d70/class_simple_hysteresis.html#a65de64d04d48c13c17e97861fdd4534b">initialize</a> (const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;) override</td></tr>
+<tr class="separator:a65de64d04d48c13c17e97861fdd4534b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81fdb1869e458a7db983e53dce78f10b" id="r_a81fdb1869e458a7db983e53dce78f10b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d70/class_simple_hysteresis.html#a81fdb1869e458a7db983e53dce78f10b">update_trial_status</a> (const vec &amp;) override</td></tr>
 <tr class="separator:a81fdb1869e458a7db983e53dce78f10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaeee826a5e0ec183a59ccfca692ed2b" id="r_acaeee826a5e0ec183a59ccfca692ed2b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d70/class_simple_hysteresis.html#acaeee826a5e0ec183a59ccfca692ed2b">clear_status</a> () override</td></tr>
@@ -152,8 +154,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a41d0a91b7cd0344d418b8052b97b325d inherit pub_methods_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae83e4ad2e3f43ddf80838c507e484126 inherit pub_methods_class_material" id="r_ae83e4ad2e3f43ddf80838c507e484126"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dee/class_material.html#ae83e4ad2e3f43ddf80838c507e484126">initialize_base</a> (const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;)</td></tr>
 <tr class="separator:ae83e4ad2e3f43ddf80838c507e484126 inherit pub_methods_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a469301281cb6fbd4b23b17727149c5d2 inherit pub_methods_class_material" id="r_a469301281cb6fbd4b23b17727149c5d2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dee/class_material.html#a469301281cb6fbd4b23b17727149c5d2">initialize</a> (const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;)=0</td></tr>
-<tr class="separator:a469301281cb6fbd4b23b17727149c5d2 inherit pub_methods_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac62c67f984ab44bbf36375e1a0ddfb35 inherit pub_methods_class_material" id="r_ac62c67f984ab44bbf36375e1a0ddfb35"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dee/class_material.html#ac62c67f984ab44bbf36375e1a0ddfb35">initialize_history</a> (unsigned)</td></tr>
 <tr class="separator:ac62c67f984ab44bbf36375e1a0ddfb35 inherit pub_methods_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc938c86731caafb18e925d998dbeb81 inherit pub_methods_class_material" id="r_adc938c86731caafb18e925d998dbeb81"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dee/class_material.html#adc938c86731caafb18e925d998dbeb81">set_initial_history</a> (const vec &amp;)</td></tr>
@@ -327,8 +327,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a41d0a91b7cd0344d418b8052b97b325d inherit pro_methods_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae83e4ad2e3f43ddf80838c507e484126 inherit pro_methods_class_material" id="r_ae83e4ad2e3f43ddf80838c507e484126"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dee/class_material.html#ae83e4ad2e3f43ddf80838c507e484126">initialize_base</a> (const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;)</td></tr>
 <tr class="separator:ae83e4ad2e3f43ddf80838c507e484126 inherit pro_methods_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a469301281cb6fbd4b23b17727149c5d2 inherit pro_methods_class_material" id="r_a469301281cb6fbd4b23b17727149c5d2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dee/class_material.html#a469301281cb6fbd4b23b17727149c5d2">initialize</a> (const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;)=0</td></tr>
-<tr class="separator:a469301281cb6fbd4b23b17727149c5d2 inherit pro_methods_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac62c67f984ab44bbf36375e1a0ddfb35 inherit pro_methods_class_material" id="r_ac62c67f984ab44bbf36375e1a0ddfb35"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dee/class_material.html#ac62c67f984ab44bbf36375e1a0ddfb35">initialize_history</a> (unsigned)</td></tr>
 <tr class="separator:ac62c67f984ab44bbf36375e1a0ddfb35 inherit pro_methods_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc938c86731caafb18e925d998dbeb81 inherit pro_methods_class_material" id="r_adc938c86731caafb18e925d998dbeb81"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dee/class_material.html#adc938c86731caafb18e925d998dbeb81">set_initial_history</a> (const vec &amp;)</td></tr>
@@ -585,7 +583,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../dc/dee/class_material.html#a49534cc5898d5e3033806510402239ae">Material</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d9/d97/class_material1_d.html#ab3812afd329b9f933a6f294ea8452fdf">Material1D</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -622,11 +620,49 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../dc/dee/class_material.html#a1d5d1d660c5e661042d41e8d9881c511">Material</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d9/d97/class_material1_d.html#af9c67047d3c652d9593a547488f02f17">Material1D</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d70/class_simple_hysteresis_aa2a80aaee06f9be31fd28fd964a75f45_icgraph.svg" width="482" height="120"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a65de64d04d48c13c17e97861fdd4534b" name="a65de64d04d48c13c17e97861fdd4534b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65de64d04d48c13c17e97861fdd4534b">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SimpleHysteresis::initialize </td>
+          <td>(</td>
+          <td class="paramtype">const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../dc/dee/class_material.html#a469301281cb6fbd4b23b17727149c5d2">Material</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d70/class_simple_hysteresis_a65de64d04d48c13c17e97861fdd4534b_cgraph.svg" width="536" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d70/class_simple_hysteresis_a65de64d04d48c13c17e97861fdd4534b_icgraph.svg" width="100%" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -654,7 +690,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../dc/dee/class_material.html#a7b974ec9d0b5df5bbc37a9ceaf7173f9">Material</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d9/d97/class_material1_d.html#ac37a3df20ba900f6dbfa64b689144e41">Material1D</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

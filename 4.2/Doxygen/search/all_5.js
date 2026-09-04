@@ -186,7 +186,7 @@ var searchData=
   ['buckle_183',['buckle',['../d3/d86/class_buckle.html#a156ceda5c33393235366f719685682ea',1,'Buckle::Buckle()'],['../d3/d86/class_buckle.html',1,'Buckle'],['../dc/d56/group___storage.html#gga7d90861a140b3b6cf1087c5662cf4223a4ad6ccf74852b8e333489a4b2b3e1f0f',1,'BUCKLE:&#160;Factory.hpp']]],
   ['buckle_2ecpp_184',['Buckle.cpp',['../d7/d46/_buckle_8cpp.html',1,'']]],
   ['buckle_2eh_185',['Buckle.h',['../db/d22/_buckle_8h.html',1,'']]],
-  ['bulk_186',['bulk',['../d4/dca/struct_data_n_l_e3_d01.html#ac0cf8cae6201dc3909f01f310ad972aa',1,'DataNLE3D01::bulk'],['../dc/dee/class_material.html#aee528d0231227177295979000659d5efa6d5b457ed4205e7f1144ef21b944e552',1,'Material::BULK']]],
+  ['bulk_186',['bulk',['../dc/dee/class_material.html#aee528d0231227177295979000659d5efa6d5b457ed4205e7f1144ef21b944e552',1,'Material::BULK'],['../d4/dca/struct_data_n_l_e3_d01.html#ac0cf8cae6201dc3909f01f310ad972aa',1,'DataNLE3D01::bulk']]],
   ['bulk_5fmodulus_187',['bulk_modulus',['../db/daf/struct_data_fluid.html#a371c6900a66654b4eab554c6fc94e231',1,'DataFluid']]],
   ['bwbn_188',['bwbn',['../db/d5b/class_b_w_b_n.html',1,'BWBN'],['../db/d5b/class_b_w_b_n.html#aaf89c57915ed7ce92602d8322821fbbb',1,'BWBN::BWBN()']]],
   ['bwbn_2ecpp_189',['BWBN.cpp',['../d8/dea/_b_w_b_n_8cpp.html',1,'']]],
