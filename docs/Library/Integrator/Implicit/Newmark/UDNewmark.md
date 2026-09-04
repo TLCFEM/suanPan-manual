@@ -18,7 +18,7 @@ While [NonviscousNewmark](NonviscousNewmark.md) convolutes velocity vector, [UDD
 ## References
 
 1. [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016)
-2. [todo: to be added]()
+2. [10.31224/8137](https://doi.org/10.31224/8137)
 
 ## Syntax
 
