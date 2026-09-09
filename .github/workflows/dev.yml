@@ -2,7 +2,7 @@ concurrency:
   cancel-in-progress: true
   group: ${{ github.workflow }}-${{ github.ref }}
 env:
-  SP_VERSION: '4.2'
+  SP_VERSION: '4.3'
 jobs:
   delete:
     needs:
