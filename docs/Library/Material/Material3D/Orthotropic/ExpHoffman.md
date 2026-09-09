@@ -12,7 +12,7 @@ $$
 
 ## Syntax
 
-```
+```text title="ExpHoffman"
 material ExpHoffman (1) (2...7) (8...10) (11...19) (20) (21) [22]
 # (1) int, unique material tag
 # (2...7) double, six moduli: E_{xx}, E_{yy}, E_{zz}, G_{xy}, G_{yz}, G_{zx}

@@ -22,7 +22,7 @@ For 2D beam elements, the local $$z$$-axis is defined to be the global $$z$$-axi
 
 ## Syntax
 
-```
+```text title="Orientation"
 orientation (1) (2) (3) (4) (5)
 # (1) int, unique orientation tag
 # (2) string, orientation type

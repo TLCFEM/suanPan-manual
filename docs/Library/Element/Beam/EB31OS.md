@@ -8,7 +8,7 @@ Elastic 3D Beam With Open Section
 
 ## Syntax
 
-```
+```text title="EB31OS"
 element EB31OS (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) [12]
 # (1) int, unique element tag
 # (2) int, node i

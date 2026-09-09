@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```text title="LinearViscosity"
 modifier LinearViscosity (1) (2) [(3)...]
 # (1) int, unique modifier tag
 # (2) double, \mu

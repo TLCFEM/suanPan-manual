@@ -4,7 +4,7 @@ Drucker-Prager model With Custom Hardening
 
 ## Syntax
 
-```
+```text title="CustomDP"
 material CustomDP (1) (2) (3) (4) (5) (6) (7) [8]
 # (1) int, unique material tag
 # (2) double, elastic modulus

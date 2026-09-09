@@ -1,11 +1,11 @@
 # MaxForce
 
 The `MaxForce` constraint applies a [`FixedLength`](FixedLength.md) constraint to a pair of nodes.
-The constraint is only active when the force is below a specified threshold.
+The constraint is only active when the **magnitude** of the connecting force is below a specified threshold.
 
 ## Syntax
 
-```
+```text title="MaxForce"
 maxforce2d (1) (2) (3) (4)
 maxforce3d (1) (2) (3) (4)
 constraint maxforce2d (1) (2) (3) (4)

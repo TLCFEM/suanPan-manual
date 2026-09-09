@@ -8,7 +8,7 @@ For versions prior to v3.2.0, the syntax is as follows.
 Only one single DoF is permitted to be controlled.
 It is directly defined in the step command.
 
-```text
+```text title="ArcLength"
 step ArcLength (1) (2) (3) (4)
 # (1) int, unique step tag
 # (2) int, reference node tag

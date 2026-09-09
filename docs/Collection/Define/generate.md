@@ -4,6 +4,10 @@ The `generate` command is used to generate node/element groups according to pred
 
 For custom rules, please refer to [`CustomNodeGroup`](../../Library/Group/CustomNodeGroup.md).
 
+!!! warning "precision"
+    For all forms, whenever floating-point operations are involved, the criterion is evaluated within machine precision (machine epsilon).
+    Therefore, coordinates should be specified as accurately as possible, with at least 16 significant digits.
+
 ## form one: generate based on a fixed interval
 
 ```

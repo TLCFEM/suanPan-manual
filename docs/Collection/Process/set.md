@@ -184,34 +184,40 @@ Some empirical guidance can be concluded as follows.
 
 ## Parallel Matrix Assembling
 
-For dense matrix storage schemes, the global matrix is stored in a consecutive chunk of memory. Assembling global matrix
-needs to fill in the corresponding memory location with potentially several values contributed by different elements.
-Often in-place atomic summation is involved. To assign each memory location a mutex lock is not cost-efficient. Instead,
-a $$k$$-coloring concept can be adopted to divide the whole model into several groups. Each group contains elements that
-do not share common nodes with others in the same group. By such, no atomic operations are required. Elements in the
-same group can be updated simultaneously so the matrix assembling is lock free.
+For dense matrix storage schemes, the global matrix is stored in a consecutive chunk of memory.
+Assembling global matrix needs to fill in the corresponding memory location with potentially several values contributed by different elements.
+Often in-place atomic summation is involved.
+To assign each memory location a mutex lock is not cost-efficient.
+Instead, a $$k$$-coloring concept can be adopted to divide the whole model into several groups.
+Each group contains elements that do not share common nodes with others in the same group.
+By such, no atomic operations are required.
+Elements in the same group can be updated simultaneously so the matrix assembling is lock free.
 
-By default, the coloring algorithm is enabled. To disable it, users can use the following command.
+By default, the coloring algorithm is enabled.
+To disable it, users can use the following command.
 
 ```
 set color_model false
 set color_model none
 ```
 
-As a NP hard problem, there is no optimal algorithm to find the minimum chromatic number. The Welsh-Powell algorithm is
-implemented in `suanPan`. The maximum independent set algorithm is also available, it may outperform the
-Welsh-Powell algorithm on large models. To switch, users can use the following command.
+As a NP hard problem, there is no optimal algorithm to find the **minimum** chromatic number.
+The target, however, is to find a small enough number to better utilize parallelism.
+The [Welsh-Powell](https://doi.org/10.1093/comjnl/10.1.85) algorithm is implemented.
+It is a sequential algorithm that may be slow on large problems.
+The [maximum independent set](https://en.wikipedia.org/wiki/Maximal_independent_set) algorithm is also available, it would outperform the Welsh-Powell algorithm on large models since it is parallelized.
+To switch, users can use the following command.
 
 ```
-# default to WP algorithm
-set color_model WP
-# switch to MIS algorithm
+# default to MIS algorithm
 set color_model MIS
+# switch to WP algorithm
+set color_model WP
 ```
 
-Also, depending on the problem setup, such a coloring may or may not help to improve the performance. If there are not a
-large number of matrix assembling, the time saved may not be significant. Thus, for problems of small sizes, users may
-consider disabling coloring.
+Also, depending on the problem setup, such a coloring may or may not help improving the performance.
+If there are not a large number of matrix assembling, the time saved may not be significant.
+Thus, for problems of small sizes, users may consider disabling coloring.
 
 This option has no effect if a sparse storage is used.
 

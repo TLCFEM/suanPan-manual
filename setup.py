@@ -15,12 +15,12 @@
 
 import json
 import os
-from pathlib import Path
 import re
 import shutil
 import sys
 import tarfile
 import zipfile
+from pathlib import Path
 from urllib.request import urlopen
 
 from setuptools import setup

@@ -4,7 +4,7 @@ The `Custom` amplitude uses a custom function defined by the user.
 
 ## Syntax
 
-```
+```text title="Custom"
 amplitude Custom (1) (2)
 # (1) int, unique amplitude tag
 # (2) int, expression tag

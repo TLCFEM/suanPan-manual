@@ -45,7 +45,7 @@ where $$a_i$$ and $$b_i$$ are material constants.
 The following applies to `v3.6` and later.
 Check the older syntax in the older version of the documentation.
 
-```
+```text title="ArmstrongFrederick1D"
 material ArmstrongFrederick1D (1) (2) (3) (4) (5) (6) [(7) (8)...] [9]
 # (1) int, unique material tag
 # (2) double, elastic modulus

@@ -9,7 +9,7 @@ The `Joint` is a joint element that uses **displacement** as inputs.
 
 ## Syntax
 
-```
+```text title="Joint"
 element Joint (1) (2) (3) (4...)
 # (1) int, unique element tag
 # (2) int, node i

@@ -12,7 +12,7 @@ for details on the theory.
 
 ## Syntax
 
-```
+```text title="SimpleSand"
 material SimpleSand (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) [14]
 # (1) int, unique material tag
 # (2) double, elastic modulus

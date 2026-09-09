@@ -13,7 +13,7 @@ Quadratic Triangle
 
 ## Syntax
 
-```
+```text title="CP6"
 element CP6 (1) (2...7) (8) [9] [10]
 # (1) int, unique element tag
 # (2...7) int, node tags that define the element

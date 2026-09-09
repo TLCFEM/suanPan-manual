@@ -4,7 +4,7 @@ $$N$$-$$M$$ Interaction Elastic Section
 
 ## Syntax
 
-```
+```text title="NM3D1"
 section NM3D1 (1) (2) (3) (4)
 # (1) int, unique section tag
 # (2) double, EA

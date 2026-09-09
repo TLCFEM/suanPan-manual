@@ -7,7 +7,7 @@
 
 ## Syntax
 
-```
+```text title="Contact2D"
 element Contact2D (1) (2) (3) [4]
 # (1) int, unique element tag
 # (2) int, master group tag

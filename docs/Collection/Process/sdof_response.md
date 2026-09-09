@@ -24,7 +24,7 @@ second (rad/s).
 
 For accelerogram record stored in single column plain text file. The following syntax can be used.
 
-```text
+```text title="sdof_response"
 sdof_response (1) (2) (3) (4)
 # (1) string, file path of the accelerogram file
 # (2) double, sampling interval

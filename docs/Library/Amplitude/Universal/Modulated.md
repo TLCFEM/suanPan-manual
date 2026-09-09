@@ -11,7 +11,7 @@ is the circular frequency.
 
 ## Syntax
 
-```
+```text title="Modulated"
 amplitude Modulated (1) (2) (3) [(4)...]
 # (1) int, unique tag
 # (2) double, base amplitude A_0

@@ -10,7 +10,7 @@ In the above definition, $$t_0$$ is the (pseudo) start time of the step in which
 
 ## Syntax
 
-```
+```text title="Constant"
 amplitude Constant (1)
 # (1) int, unique amplitude tag
 ```

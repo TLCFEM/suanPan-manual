@@ -10,7 +10,7 @@ Sections in accordance with AS/NZ standards are available in both 2D and 3D appl
 
 To define a section, analysts can use the following commands.
 
-```
+```text title="NZ"
 section NZ2D (1) (2) (3) [4] [5] [6]
 # (1) string, designation
 # (2) int, unique tag

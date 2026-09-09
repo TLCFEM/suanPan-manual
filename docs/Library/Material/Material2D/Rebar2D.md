@@ -4,7 +4,7 @@ Orthotropic Material
 
 ## Syntax
 
-```
+```text title="Rebar2D"
 material Rebar2D (1) (2) (3) (4) (5)
 # (1) int, unique material tag
 # (2) int, x direction steel material tag

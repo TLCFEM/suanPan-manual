@@ -12,7 +12,7 @@ using the `output_folder` attribute.
 
 ## Syntax
 
-```text
+```text title="OutputFolder"
 # check current output folder
 peek output_folder
 

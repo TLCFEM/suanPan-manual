@@ -8,7 +8,7 @@
 
 ## Syntax
 
-```
+```text title="T2D2S"
 element T2D2S (1) (2) (3) (4) [6] [7] [8]
 # (1) int, unique element tag
 # (2) int, node i

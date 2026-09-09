@@ -7,7 +7,7 @@ effect.
 
 ## Syntax
 
-```
+```text title="BWBN"
 material BWBN (1) [2...18]
 # (1) int, unique material tag
 # [2] double, elastic modulus, default: 2E5

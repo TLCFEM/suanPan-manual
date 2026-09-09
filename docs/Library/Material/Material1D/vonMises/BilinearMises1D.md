@@ -12,7 +12,7 @@ There is no other significant difference.
 
 ## Syntax
 
-```
+```text title="BilinearMises1D"
 material BilinearMises1D (1) (2) (3) [4] [5]
 # (1) int, unique material tag
 # (2) double, elastic modulus

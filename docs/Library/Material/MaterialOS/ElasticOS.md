@@ -4,7 +4,7 @@ Isotropic Elastic Material For Open Sections
 
 ## Syntax
 
-```
+```text title="ElasticOS"
 material ElasticOS (1) (2) (3) [4]
 # (1) int, unique tag
 # (2) double, elastic modulus

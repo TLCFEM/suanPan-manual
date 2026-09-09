@@ -4,7 +4,7 @@ Gurson Model With Custom Hardening
 
 ## Syntax
 
-```
+```text title="CustomGurson"
 material CustomGurson (1) (2) (3) (4) [5] [6] [7] [8] [9] [10]
 # (1) int, unique material tag
 # (2) int, expression tag

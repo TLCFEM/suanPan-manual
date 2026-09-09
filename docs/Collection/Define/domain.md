@@ -4,7 +4,7 @@ The `domain` command can be used to create new problem domains or switch from on
 
 ## Syntax
 
-```
+```text title="domain"
 domain (1)
 # (1) int, domain tag
 ```

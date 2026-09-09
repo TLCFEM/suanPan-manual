@@ -4,7 +4,7 @@ Uniaxial Elastic Material
 
 ## Syntax
 
-```
+```text title="Elastic1D"
 material Elastic1D (1) (2) [3]
 # (1) int, unique material tag
 # (2) double, elastic modulus

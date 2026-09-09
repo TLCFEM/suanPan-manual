@@ -12,7 +12,7 @@ Quadratic Quadrilateral With Pore Pressure (Drained)
 
 ## Syntax
 
-```
+```text title="PCPE8DC"
 element PCPE8DC (1) (2...9) (10) (11) (12) (13) (14)
 # (1) int, unique element tag
 # (2...9) int, node i, j, k, l

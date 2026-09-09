@@ -18,11 +18,11 @@ While [NonviscousNewmark](NonviscousNewmark.md) convolutes velocity vector, [UDD
 ## References
 
 1. [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016)
-2. [todo: to be added]()
+2. [10.31224/8137](https://doi.org/10.31224/8137)
 
 ## Syntax
 
-```
+```text title="UDNewmark"
 integrator UDDNewmark (1) (2) (3) ((4) (5) (6) (7)...)
 # (1) int, unique tag
 # (2) double, alpha, typical: 0.25

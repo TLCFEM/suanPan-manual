@@ -7,7 +7,7 @@ the stress history.
 
 ## Syntax
 
-```
+```text title="CustomStressDegradation"
 material CustomStressDegradation (1) (2) (3) [4]
 # (1) int, unique material tag
 # (2) int, host intact material tag

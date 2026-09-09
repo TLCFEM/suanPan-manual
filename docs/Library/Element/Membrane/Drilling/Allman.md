@@ -11,7 +11,7 @@ Allman's Triangle With Drilling DoFs
 
 ## Syntax
 
-```
+```text title="Allman"
 element Allman (1) (2...4) (5) [6]
 # (1) int, unique element tag
 # (2...4) int, node i, j, k

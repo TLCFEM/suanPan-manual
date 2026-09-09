@@ -1,6 +1,8 @@
 concurrency:
   cancel-in-progress: true
   group: ${{ github.workflow }}-${{ github.ref }}
+env:
+  SP_VERSION: '4.2'
 jobs:
   delete:
     needs:
@@ -15,12 +17,12 @@ jobs:
       - name: Clone
         uses: actions/checkout@v7
       - name: Setup
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           cache: pip
           python-version: '3.12'
       - name: Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
       - name: Dependency
@@ -43,9 +45,9 @@ jobs:
           git config --global user.name "Theodore Chang"
           git config --global user.email "tlcfem@gmail.com"
           git pull
-          mike deploy 4.1
+          mike deploy ${{ env.SP_VERSION }}
           git clean -fd && git reset --hard && git checkout gh-pages
-          svgo -rf 4.1 --exclude inherit_graph.* -o 4.1
+          svgo -rf ${{ env.SP_VERSION }} --exclude inherit_graph.* -o ${{ env.SP_VERSION }}
           git add -A
           git commit --amend --no-edit
           git push origin gh-pages
@@ -81,6 +83,8 @@ jobs:
           tags: |
             tlcfem/suanpan-manual:latest
             ghcr.io/tlcfem/suanpan-manual:latest
+            tlcfem/suanpan-manual:${{ env.SP_VERSION }}
+            ghcr.io/tlcfem/suanpan-manual:${{ env.SP_VERSION }}
     timeout-minutes: 100
 name: Latest
 'on':

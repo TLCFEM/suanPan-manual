@@ -6,7 +6,7 @@
 
 ## Syntax
 
-```
+```text title="Box2D"
 section Box2D (1) (2) (3) (4) (5) [6] [7]
 # (1) int, unique section tag
 # (2) double, width

@@ -10,7 +10,7 @@ DKT Quadrilateral Plate
 
 ## Syntax
 
-```
+```text title="DKT4"
 element DKT4 (1) (2...5) (6) (7) [8]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l

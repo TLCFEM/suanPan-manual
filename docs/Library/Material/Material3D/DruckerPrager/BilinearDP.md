@@ -4,7 +4,7 @@ Bilinear Drucker-Prager Model
 
 ## Syntax
 
-```
+```text title="BilinearDP"
 material BilinearDP (1) (2) (3) (4) (5) (6) (7) (8) [9]
 # (1) int, unique material tag
 # (2) double, elastic modulus

@@ -13,7 +13,7 @@ Cauchy-Green deformation tensor.
 
 ## Syntax
 
-```
+```text title="Yeoh"
 material Yeoh (1) (2...)
 # (1) int, unique material tag
 # (2...) double, material constants with possible density

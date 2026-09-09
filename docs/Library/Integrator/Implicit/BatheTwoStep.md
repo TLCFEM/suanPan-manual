@@ -17,7 +17,7 @@ For further discussions on this type of algorithm, one can check the following r
 
 ## Syntax
 
-```
+```text title="BatheTwoStep"
 integrator BatheTwoStep (1) [2] [3]
 # (1) int, unique integrator tag
 # [2] double, spectral radius, \rho_\infty, default: 0

@@ -6,7 +6,7 @@ Wraps a 3D host material model into a 2D plane symmetric model that can be used 
 
 ## Syntax
 
-```
+```text title="PlaneSymmetric"
 material PlaneSymmetric13 (1) (2)
 material PlaneSymmetric23 (1) (2)
 # (1) int, unique material tag

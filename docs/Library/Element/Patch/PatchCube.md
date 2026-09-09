@@ -12,7 +12,7 @@ Patch of Hexahedron Elements
 
 A key-value style is used.
 
-```
+```text title="PatchCube"
 element PatchCube (1) -node (2...) -knotx (3...) -knoty (4...) -knotz (5...) -material (6) [-thickness (7)]
 # (1) int, unique element (patch) tag
 # (2...) int, node tags of control node polygon

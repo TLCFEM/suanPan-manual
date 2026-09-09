@@ -14,7 +14,7 @@ But a customisable expression allows for more flexibility and it is easier to ex
 
 ### Simple Scalar-valued Expression
 
-```text
+```text title="SimpleScalar"
 expression SimpleScalar (1) (2) (3)
 # (1) int, unique expression tag
 # (2) string, input variable list
@@ -32,7 +32,7 @@ Thus, it can be used in models that require automatic computation of derivatives
 
 ### Simple Vector-valued Expression
 
-```text
+```text title="SimpleVector"
 expression SimpleVector (1) (2) (3) (4)
 # (1) int, unique expression tag
 # (2) string, input variable list

@@ -64,10 +64,10 @@ It mainly targets the `amd64` architecture.
 
 ### Toolsets
 
-A number of new features from new standards are utilized. To compile the binary, a compiler that supports **C++20** is
-required.
+A number of new features from new standards are utilized.
+To compile the binary, a compiler that supports **C++20** is required.
 
-GCC 11, Clang 13, MSVC 14.3, Intel compilers and later version of those compilers are tested with the source code.
+GCC 13, Clang 18, VS 2026, Intel compilers and later version of those compilers are tested with the source code.
 
 On Windows, Visual Studio with Intel oneAPI toolkit is recommended.
 Alternatively, [WinLibs](http://winlibs.com/) can be used if GCC compilers are preferred.

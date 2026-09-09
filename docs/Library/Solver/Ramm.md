@@ -7,7 +7,7 @@ This solver can only be used in solving static problems.
 
 ## Syntax
 
-```
+```text title="Ramm"
 solver Ramm (1)
 # (1) int, unique solver tag
 ```

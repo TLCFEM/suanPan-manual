@@ -9,7 +9,7 @@ CDPM2 Model for Concrete Material
 
 ## Syntax
 
-```text
+```text title="CDPM2"
 material CDPM2 (1) [2-16]
 material CDPM2ISO (1) [2-16]
 material CDPM2ANISO (1) [2-16]
@@ -44,6 +44,10 @@ material CDPM2ANISO (1) [2-16]
 
 Details of implementation can be seen in the corresponding section
 in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
+
+!!! warning "maximum element size"
+    Based on physical material limits, finite element dimensions for typical concrete cannot exceed half a meter (plain) to one meter (reinforced) if **strict** energy scaling is considered.
+    The numbers are only indicative.
 
 ## Recording
 

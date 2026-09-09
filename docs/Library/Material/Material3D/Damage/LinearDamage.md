@@ -4,7 +4,7 @@ Linear Damage Degradation With Cut-offs
 
 ## Syntax
 
-```
+```text title="LinearDamage"
 material LinearDamage (1) (2) (3) (4) [5]
 # (1) int, unique material tag
 # (2) int, associated material tag

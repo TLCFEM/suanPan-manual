@@ -10,7 +10,7 @@ DKT Triangle Plate
 
 ## Syntax
 
-```
+```text title="DKT3"
 element DKT3 (1) (2...4) (5) (6) [7]
 # (1) int, unique element tag
 # (2...4) int, node i, j, k

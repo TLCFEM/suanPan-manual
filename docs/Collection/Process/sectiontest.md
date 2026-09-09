@@ -4,7 +4,7 @@ This command category can be used to test sections without establishing a FE mod
 
 ## Syntax
 
-```text
+```text title="sectiontest"
 sectionTest1D (1) (2) (3) [4...]
 # (1) int, unique tag of the section model to use
 # (2) double, size of per deformation increment

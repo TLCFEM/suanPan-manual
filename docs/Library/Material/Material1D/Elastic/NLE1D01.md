@@ -7,7 +7,7 @@ the bilinear backbone.
 
 ## Syntax
 
-```
+```text title="NLE1D01"
 material NLE1D01 (1) (2) (3) (4) [5] [6]
 # (1) int, unique material tag
 # (2) double, elastic modulus

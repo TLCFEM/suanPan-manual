@@ -6,7 +6,7 @@ Alters the inclination of the 2D host material model, it is typically used with 
 
 ## Syntax
 
-```
+```text title="Rotation2D"
 material Rotation2D (1) (2) (3)
 # (1) int, unique material tag
 # (2) int, associated material tag

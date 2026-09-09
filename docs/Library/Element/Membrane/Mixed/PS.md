@@ -18,7 +18,7 @@ Pian-Sumihara Quadrilateral Element
 
 ## Syntax
 
-```
+```text title="PS"
 element PS (1) (2...5) (6) [7]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l

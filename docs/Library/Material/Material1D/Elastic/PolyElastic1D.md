@@ -4,7 +4,7 @@ Polynomial Based Uniaxial Nonlinear Elastic
 
 ## Syntax
 
-```
+```text title="PolyElastic1D"
 material PolyElastic1D (1) [(2)...]
 # (1) int, unique material tag
 # (2) double, polynomial parameters, a_n

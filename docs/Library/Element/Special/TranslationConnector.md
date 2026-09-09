@@ -9,7 +9,7 @@ Translation Connector Implemented via Penalty Method
 * Number of Nodes: 3
 * Number of DoFs: 2 (Translation: UX, Translation: UY)
 
-```text
+```text title="TranslationConnector"
 element TranslationConnector2D (1) (2) (3) (4) [5]
 # (1) int, unique element tag
 # (2) int, node i

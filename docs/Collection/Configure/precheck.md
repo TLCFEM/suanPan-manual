@@ -5,6 +5,6 @@ analysis. To perform the analysis, please use the [`analyze`](analyze.md) comman
 
 ## Syntax
 
-```
+```text title="precheck"
 precheck
 ```

@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```text title="MinimumGap3D"
 constraint MinimumGap3D (1) (2) (3) (4)
 # (1) int, unique constraint tag
 # (2) int, node tag

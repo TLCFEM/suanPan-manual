@@ -8,7 +8,7 @@ Axisymmetric Linear Triangle
 
 ## Syntax
 
-```
+```text title="CAX3"
 element CAX3 (1) (2...4) (5) [6]
 # (1) int, unique element tag
 # (2...4) int, node tags

@@ -6,7 +6,7 @@ Although the parser is not intended to function as a scripting language interpre
 
 One can use `var` or `variable` to define variables (macros).
 
-```text
+```text title="variable"
 variable (1) (2)
 # (1) string, name
 # (2) any read as string, value

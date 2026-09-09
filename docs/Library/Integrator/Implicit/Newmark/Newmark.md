@@ -4,7 +4,7 @@ Newmark Time Integration
 
 ## Syntax
 
-```
+```text title="Newmark"
 integrator Newmark (1) [2] [3]
 # (1) int, unique tag
 # [2] double, alpha, default: 0.25

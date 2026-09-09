@@ -5,7 +5,7 @@ switched off.
 
 ## Syntax
 
-```
+```text title="peek"
 peek node (1)
 peek element (1)
 peek material (1)

@@ -16,7 +16,7 @@ The parameters $$m_i$$ and $$s_i$$ are complex numbers.
 
 ## Syntax
 
-```text
+```text title="Nonviscous01"
 material Nonviscous01 (1) ((2) (3) (4) (5)...)
 # (1) int, unique material tag
 # (2) double, real part of `m_i`

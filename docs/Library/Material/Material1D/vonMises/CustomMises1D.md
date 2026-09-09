@@ -8,7 +8,7 @@ This model is an implementation of the [`Mises1D`](Mises1D.md) abstract model.
 
 ## Syntax
 
-```
+```text title="CustomMises1D"
 material CustomMises1D (1) (2) (3) (4) [5]
 # (1) int, unique material tag
 # (2) double, elastic modulus

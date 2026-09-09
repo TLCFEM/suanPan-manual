@@ -4,7 +4,7 @@ Bilinear J2 Plasticity
 
 ## Syntax
 
-```
+```text title="BilinearJ2"
 material BilinearJ2 (1) (2) (3) (4) [5] [6] [7]
 # (1) int, unique material tag
 # (2) double, elastic modulus

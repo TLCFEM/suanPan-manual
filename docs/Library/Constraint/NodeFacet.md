@@ -7,7 +7,7 @@ document.
 
 ## Syntax
 
-```
+```text title="NodeFacet"
 constraint NodeFacet (1) (2) (3) (4) (5)
 # (1) int, unique constraint tag
 # (2) int, master node i tag

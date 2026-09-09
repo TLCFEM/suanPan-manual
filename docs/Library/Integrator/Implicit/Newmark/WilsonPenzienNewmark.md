@@ -6,7 +6,7 @@ The `WilsonPenzienNewmark` incorporates the Wilson-Penzien damping model.
 
 ## Syntax
 
-```
+```text title="WilsonPenzienNewmark"
 integrator WilsonPenzienNewmark (1) (2) (3) [4...]
 # (1) int, unique integrator tag
 # (2) double, alpha (beta in some references) in Newmark method, normally 0.25

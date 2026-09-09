@@ -36,7 +36,7 @@ in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-mode
 
 ## Syntax
 
-```
+```text title="AFCO1D"
 material AFCO1D (1) (2) (3) (4) (5) (6) (7) (8) (9) [(10) (11)...] [12]
 # (1) int, unique material tag
 # (2) double, elastic modulus

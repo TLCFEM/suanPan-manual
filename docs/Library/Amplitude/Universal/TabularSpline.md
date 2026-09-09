@@ -14,7 +14,7 @@ zero. See [this page](https://en.wikiversity.org/wiki/Cubic_Spline_Interpolation
 
 ## Syntax
 
-```text
+```text title="TabularSpline"
 amplitude TabularSpline (1) (2)
 # (1) int, unique amplitude tag
 # (2) string, external file name

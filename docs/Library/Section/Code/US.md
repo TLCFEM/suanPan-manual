@@ -8,7 +8,7 @@ A collection of `W`, `M`, `S`, `HP`, `WT`, `MT`, `ST` sections are predefined us
 
 To define a section, users can use the following commands.
 
-```
+```text title="US"
 section US2D (1) (2) (3) [4] [5] [6]
 # (1) string, designation
 # (2) int, unique tag

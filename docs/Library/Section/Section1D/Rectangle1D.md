@@ -4,7 +4,7 @@
 
 ## Syntax
 
-```
+```text title="Rectangle1D"
 section Rectangle1D (1) (2) (3) (4)
 # (1) int, unique section tag
 # (2) double, section width

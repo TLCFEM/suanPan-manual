@@ -14,7 +14,7 @@ The backbone is governed by a normalized function which is controlled by two par
 
 ## Syntax
 
-```
+```text title="ConcreteTsai"
 material ConcreteTsai (1) (2) (3) (4) (5) (6) (7) (8) (9) [10]
 # (1) int, unique material tag
 # (2) double, elastic modulus, E

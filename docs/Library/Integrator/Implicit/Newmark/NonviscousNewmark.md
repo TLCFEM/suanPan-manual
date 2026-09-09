@@ -8,7 +8,7 @@ Newmark Time Integration With Nonviscous Damping
 
 ## Syntax
 
-```
+```text title="NonviscousNewmark"
 integrator NonviscousNewmark (1) (2) (3) ((4) (5) (6) (7)...)
 # (1) int, unique tag
 # (2) double, alpha, typical: 0.25

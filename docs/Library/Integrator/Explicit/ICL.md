@@ -10,7 +10,7 @@ References:
 
 ## Syntax
 
-```text
+```text title="ICL"
 integrator ICL (1) [2]
 # (1) int, unique integrator tag
 # [2] double, spectral radius, \rho_b, default: 0.5

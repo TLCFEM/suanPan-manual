@@ -8,7 +8,7 @@ $$N$$-$$M$$ Interaction Inelastic Section (Nonlinear Hardening)
 
 ## Syntax
 
-```text
+```text title="NM2D3"
 section NM2D3 (1) (2...12) [(13) (14) (15) ...]
 # (1) int, unique section tag
 # (2) double, EA

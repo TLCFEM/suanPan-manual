@@ -7,7 +7,7 @@ Spring Using Strain
 
 ## Syntax
 
-```
+```text title="Spring02"
 element Spring02 (1) (2) (3) (4)
 # (1) int, unique tag
 # (2) int, node i

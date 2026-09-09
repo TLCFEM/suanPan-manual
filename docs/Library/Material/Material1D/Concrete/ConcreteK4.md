@@ -9,7 +9,7 @@ A Uniaxial Plastic-Damage Concrete Model
 
 ## Syntax
 
-```
+```text title="ConcreteK4"
 material ConcreteK4 (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) [12]
 # (1) int, unique material tag
 # (2) double, elastic modulus (+), typical: 30000 (in MPa)
@@ -24,6 +24,10 @@ material ConcreteK4 (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) [12]
 # (11) double, reference compressive zeta
 # [12] double, density, default: 0.0
 ```
+
+!!! warning "maximum element size"
+    Based on physical material limits, finite element dimensions for typical concrete cannot exceed half a meter (plain) to one meter (reinforced) if **strict** energy scaling is considered.
+    The numbers are only indicative.
 
 ## Theory
 
@@ -101,7 +105,6 @@ e_{r,c}=\dfrac{f_c}{\zeta_cE},
 $$
 
 in which $$\zeta_t$$ and $$\zeta_c$$ are `(10)` and `(11)` respectively.
-
 
 ## Examples
 

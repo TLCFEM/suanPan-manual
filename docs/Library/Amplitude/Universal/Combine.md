@@ -8,7 +8,7 @@ $$
 
 ## Syntax
 
-```
+```text title="Combine"
 amplitude Combine (1) [(2)...]
 # (1) int, unique amplitude tag
 # [(2)...] int, tags of amplitude that need to be combined

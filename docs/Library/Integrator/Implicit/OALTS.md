@@ -9,7 +9,7 @@ References:
 
 ## Syntax
 
-```text
+```text title="OALTS"
 integrator OALTS (1) [2]
 # (1) int, unique integrator tag
 # [2] double, spectral radius, default: 0.5

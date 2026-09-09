@@ -4,7 +4,7 @@ Ramberg-Osgood Steel Model
 
 ## Syntax
 
-```
+```text title="RambergOsgood"
 material RambergOsgood (1) (2) (3) [4] [5] [6]
 # (1) int, unique material tag
 # (2) double, elastic modulus

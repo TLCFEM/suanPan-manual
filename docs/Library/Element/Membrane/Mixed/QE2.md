@@ -17,7 +17,7 @@ Mixed Four-Node Quadrilateral Element
 
 ## Syntax
 
-```
+```text title="QE2"
 element QE2 (1) (2...5) (6) [7]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l

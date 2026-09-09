@@ -19,7 +19,7 @@ illustration of implementation.
 
 ## Syntax
 
-```
+```text title="DCP3"
 element DCP3 (1) (2...4) (5) (6) (7) [8]
 # (1) int, unique element tag
 # (2...4) int, node i, j, k

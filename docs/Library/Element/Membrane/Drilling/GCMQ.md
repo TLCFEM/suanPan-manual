@@ -18,7 +18,7 @@ Generalised Conforming Mixed Quadrilateral With Drilling DoFs
 
 ## Syntax
 
-```
+```text title="GCMQ"
 element GCMQI (1) (2...5) (6) [7] [8]
 element GCMQL (1) (2...5) (6) [7] [8]
 element GCMQG (1) (2...5) (6) [7] [8]

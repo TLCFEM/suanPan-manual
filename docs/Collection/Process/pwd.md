@@ -9,7 +9,7 @@ folder contains the desired modal script first.
 
 To check the current working path, please use
 
-```
+```text title="pwd"
 pwd
 ```
 

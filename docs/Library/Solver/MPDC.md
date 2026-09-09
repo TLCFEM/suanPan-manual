@@ -4,7 +4,7 @@ Multiple Points Displacement Control
 
 ## Syntax
 
-```
+```text title="MPDC"
 solver MPDC (1)
 solver DisplacementControl (1)
 # (1) int, unique solver tag

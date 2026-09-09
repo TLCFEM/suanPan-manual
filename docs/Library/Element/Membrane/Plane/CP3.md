@@ -13,7 +13,7 @@ Constant Strain Triangle
 
 ## Syntax
 
-```
+```text title="CP3"
 element CP3 (1) (2...4) (5) [6] [7]
 # (1) int, unique element tag
 # (2...4) int, node i, j, k

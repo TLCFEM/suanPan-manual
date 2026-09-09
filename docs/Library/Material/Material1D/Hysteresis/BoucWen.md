@@ -27,7 +27,7 @@ For state determination, $$z$$ is solved by using the Newton method.
 
 ## Syntax
 
-```
+```text title="BoucWen"
 material BoucWen (1) (2) (3) (4) (5) (6)
 # (1) int, unique material tag
 # (2) double, elastic modulus

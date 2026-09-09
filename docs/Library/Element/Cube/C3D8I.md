@@ -11,7 +11,7 @@ Linear Cube/Brick With Incompatible Modes
 
 ## Syntax
 
-```
+```text title="C3D8I"
 element C3D8I (1) (2...9) (10)
 # (1) int, unique element tag
 # (2...9) int, eight corner nodes with conventional order

@@ -8,7 +8,7 @@ $$
 
 ## Syntax
 
-```
+```text title="Decay"
 amplitude Decay (1) (2) (3)
 # (1) int, unique amplitude tag
 # (2) double, initial amplitude A_0

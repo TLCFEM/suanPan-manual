@@ -6,7 +6,7 @@ The `initial` command can be used to define initial conditions for nodes, materi
 
 For nodal properties:
 
-```
+```text title="initial"
 initial displacement (1) (2) [3...]
 initial velocity (1) (2) [3...]
 initial acceleration (1) (2) [3...]

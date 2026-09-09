@@ -12,7 +12,7 @@ Bilinear Infinite Quadrilateral
 
 ## Syntax
 
-```
+```text title="CINP4"
 element CINP4 (1) (2...5) (6) [7]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l

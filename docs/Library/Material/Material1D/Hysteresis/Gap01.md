@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```text title="Gap01"
 material Gap01 (1) (2) (3) [4] [5]
 # (1) int, unique material tag
 # (2) double, elastic modulus

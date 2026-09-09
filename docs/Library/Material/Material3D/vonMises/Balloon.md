@@ -13,7 +13,7 @@ Both models shall yield the same uniaxial behaviour if the same parameter set is
 
 ## Syntax
 
-```text
+```text title="Balloon"
 material Balloon ${1:(1)} ${2:(2)} ${3:(3)} ${4:(4)} ${5:(5)} ${6:(6 7 8 9)} ${7:(10 11 12 13)} ${8:(14 15 16 17)} ${9:(18 19 20 21)} ${10:(22 23 24 25)} ${11:(26)} ${12:[(27) (28) (29)...]}
 # (1) int, unique material tag
 # (2) double, elastic modulus

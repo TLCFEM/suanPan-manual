@@ -17,7 +17,7 @@ where $$a$$ and $$b$$ are two constants that control the shape of the backbone. 
 
 ## Syntax
 
-```
+```text title="ExpJ2"
 material ExpJ2 (1) (2) (3) (4) (5) (6) [7]
 # (1) int, unique material tag
 # (2) double, elastic modulus

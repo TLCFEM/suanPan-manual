@@ -6,7 +6,7 @@ Minimum version: v2.6
 
 ## Syntax
 
-```text
+```text title="upsampling"
 upsampling (1) (2) [3] [4]
 # (1) string, file path of the seismogram file
 # (2) integer, upsampling rate

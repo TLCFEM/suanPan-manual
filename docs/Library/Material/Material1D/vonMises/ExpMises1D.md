@@ -23,7 +23,7 @@ It can be identified that
 
 ## Syntax
 
-```
+```text title="ExpMises1D"
 material ExpMises1D (1) (2) (3) (4) (5) (6) [7]
 # (1) int, unique tag
 # (2) double, elastic modulus

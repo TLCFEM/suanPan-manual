@@ -6,7 +6,7 @@ The `AICN` solver implements a damped Newton method.
 
 ## Syntax
 
-```
+```text title="AICN"
 solver AICN (1) [2]
 # (1) int, unique solver tag
 # [2] double, approx. length, default: 1.0

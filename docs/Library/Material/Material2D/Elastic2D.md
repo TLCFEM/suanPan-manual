@@ -4,7 +4,7 @@
 
 ## Syntax
 
-```
+```text title="Elastic2D"
 material Elastic2D (1) (2) (3) [4] [5]
 # (1) int, unique material tag
 # (2) double, elastic modulus

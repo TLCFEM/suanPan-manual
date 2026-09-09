@@ -4,7 +4,7 @@ Multilinear Peak Oriented Hysteresis Model
 
 ## Syntax
 
-```
+```text title="MultilinearPO"
 material MultilinearPO (1) (2) (3) [4]
 # (1) int, unique material tag
 # (2) string, file name of tension backbone

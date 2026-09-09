@@ -13,7 +13,7 @@ Please check the references for theory.
 
 ## Syntax
 
-```
+```text title="LeeNewmarkFull"
 integrator LeeNewmarkFull (1) (2) (3) ((4) (5) (6) [7...]...)
 # (1) int, unique integrator tag
 # (2) double, alpha in Newmark method

@@ -13,7 +13,7 @@ For more complex behaviour, one shall use other models.
 
 ## Syntax
 
-```
+```text title="Bilinear1D"
 material Bilinear1D (1) (2) (3) [4] [5] [6]
 # (1) int, unique material tag
 # (2) double, elastic modulus

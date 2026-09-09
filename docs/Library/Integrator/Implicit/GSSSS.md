@@ -22,7 +22,7 @@ about the advances in computational dynamics.
 
 Both U0 and V0 families are available.
 
-```
+```text title="GSSSS"
 integrator GSSSSU0 (1) (2) (3) (4)
 integrator GSSSSV0 (1) (2) (3) (4)
 # (1) int, unique integrator tag

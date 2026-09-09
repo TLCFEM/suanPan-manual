@@ -4,7 +4,7 @@ Axisymmetric Elastic Model
 
 ## Syntax
 
-```
+```text title="AxisymmetricElastic"
 material AxisymmetricElastic (1) (2) (3) [4]
 # (1) int, unique material tag
 # (2) double, elastic modulus

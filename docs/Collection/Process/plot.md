@@ -11,7 +11,7 @@ visualisation support.
 
 The `plot` command uses a different parsing mechanism.
 
-```
+```text title="plot"
 plot [-keyword [-parameters]...]
 ```
 

@@ -4,7 +4,7 @@ The `MassPoint` element is used to represent a mass point with translational mas
 
 ## Syntax
 
-```text
+```text title="MassPoint"
 element MassPoint2D (1) (2) (3) [4]
 element MassPoint3D (1) (2) (3) [4]
 # (1) int, unique element tag

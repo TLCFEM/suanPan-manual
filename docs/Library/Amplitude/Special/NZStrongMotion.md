@@ -19,7 +19,7 @@ The script used to process the original data is available [here](ProcessNZSM.py)
 
 ## Syntax
 
-```
+```text title="NZStrongMotion"
 amplitude NZStrongMotion (1) (2)
 # (1) int, unique amplitude tag
 # (2) string, record name
@@ -36,7 +36,7 @@ the program can locate, for example, the current working folder.
 
 To define such an amplitude, one can use
 
-```
+```text
 amplitude NZStrongMotion 1 20110221_235142_CSHS_N76W_A
 ```
 

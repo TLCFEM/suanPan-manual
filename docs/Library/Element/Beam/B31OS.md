@@ -12,7 +12,7 @@
 
 ## Syntax
 
-```
+```text title="B31OS"
 element B31OS (1) (2) (3) (4) (5) [6] [7]
 # (1) int, unique element tag
 # (2) int, node i

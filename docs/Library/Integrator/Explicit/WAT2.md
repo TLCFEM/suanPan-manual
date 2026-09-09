@@ -9,7 +9,7 @@ References:
 
 ## Syntax
 
-```text
+```text title="WAT2"
 integrator WAT2 (1) [2]
 # (1) int, unique integrator tag
 # [2] double, parameter, default: 1/3

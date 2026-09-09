@@ -4,7 +4,7 @@ General Uniaxial Elastic Material Model Using Custom Expression
 
 ## Syntax
 
-```text
+```text title="CustomElastic1D"
 material CustomElastic1D (1) (2) [3]
 # (1) int, unique material tag
 # (2) int, associated expression tag

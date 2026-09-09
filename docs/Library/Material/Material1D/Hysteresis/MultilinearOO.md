@@ -4,7 +4,7 @@ Multilinear Origin Oriented Hysteresis Model
 
 ## Syntax
 
-```
+```text title="MultilinearOO"
 material MultilinearOO (1) (2) (3) [4]
 # (1) int, unique material tag
 # (2) string, file name of tension backbone

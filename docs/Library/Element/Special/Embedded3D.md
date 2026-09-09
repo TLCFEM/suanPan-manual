@@ -7,7 +7,7 @@
 
 ## Syntax
 
-```
+```text title="Embedded3D"
 element Embedded3D (1) (2) (3) [4]
 # (1) int, unique element tag
 # (2) int, host element tag

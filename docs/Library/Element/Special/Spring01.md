@@ -7,7 +7,7 @@ Spring Using Displacement
 
 ## Syntax
 
-```
+```text title="Spring01"
 element Spring01 (1) (2) (3) (4)
 # (1) int, unique tag
 # (2) int, node i
