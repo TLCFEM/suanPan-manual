@@ -101,11 +101,12 @@ def install(run_doxygen: bool):
             shutil.copyfileobj(response, archive)
 
         if sys.platform.startswith("linux"):
-            with tarfile.open(binary_file, "r:gz") as archive:
-                archive.extractall(binary_file_name)
+            target = tarfile.open(binary_file, "r:gz")
         else:
-            with zipfile.ZipFile(binary_file, "r") as archive:
-                archive.extractall(binary_file_name)
+            target = zipfile.ZipFile(binary_file, "r")
+
+        with target as archive:
+            archive.extractall(binary_file_name)
 
         os.remove(binary_file)
 
