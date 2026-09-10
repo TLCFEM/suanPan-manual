@@ -1,0 +1,50 @@
+\begin{tikzpicture}
+\begin{axis}[
+width=1.5in,
+height=1.5in,
+scale only axis,
+xmin=0,
+xmax=11,
+y dir=reverse,
+ymin=0,
+ymax=11,
+hide axis,
+xtick=\empty,
+ytick=\empty
+]
+\addplot[color=0066cc, draw=none, mark size=2.3pt, mark=*, mark options={solid, 0066cc}]
+table[row sep=crcr]{
+1	1\\
+1	2\\
+2	1\\
+2	2\\
+2	3\\
+3	2\\
+3	3\\
+3	4\\
+4	3\\
+4	4\\
+4	5\\
+5	4\\
+5	5\\
+5	6\\
+6	5\\
+6	6\\
+6	7\\
+7	6\\
+7	7\\
+7	8\\
+8	7\\
+8	8\\
+8	9\\
+9	8\\
+9	9\\
+9	10\\
+10	9\\
+10	10\\
+};
+\draw(axis cs:.5,.5)rectangle(axis cs:10.5,10.5);
+\draw(axis cs:1.5,3.5)rectangle(axis cs:3.5,1.5)node[right=1mm]{\color{cc0066}$\mathbold{K}_e^2$};
+\draw(axis cs:4.5,6.5)rectangle(axis cs:6.5,4.5)node[right=1mm]{\color{cc0066}$\mathbold{K}_e^5$};
+\end{axis}
+\end{tikzpicture}

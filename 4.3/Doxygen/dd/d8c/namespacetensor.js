@@ -1,0 +1,46 @@
+var namespacetensor =
+[
+    [ "base", "d1/df0/namespacetensor_1_1base.html", "d1/df0/namespacetensor_1_1base" ],
+    [ "strain", "d2/dfc/namespacetensor_1_1strain.html", [
+      [ "double_contraction", "d2/dfc/namespacetensor_1_1strain.html#acf3dfaa366c59740f0a75b052297c80a", null ],
+      [ "double_contraction", "d2/dfc/namespacetensor_1_1strain.html#aeb54d0398d03f9dbee5b81f20ca5db41", null ],
+      [ "double_contraction", "d2/dfc/namespacetensor_1_1strain.html#ae89229487a1cf3271bc7ccdc569211f4", null ],
+      [ "invariant1", "d2/dfc/namespacetensor_1_1strain.html#ac308eebda5dfb8a7bea23549fea9e76c", null ],
+      [ "invariant2", "d2/dfc/namespacetensor_1_1strain.html#aad6eb13df81da0a9ed50428e2035f929", null ],
+      [ "invariant3", "d2/dfc/namespacetensor_1_1strain.html#a608639888be17c30800b2a294770f8f3", null ],
+      [ "lode", "d2/dfc/namespacetensor_1_1strain.html#af56c6f5609ced7d9236358d0f6e30971", null ],
+      [ "norm", "d2/dfc/namespacetensor_1_1strain.html#a86200e5f690b2fe54ca08f6a2a721ab0", null ],
+      [ "to_green", "d2/dfc/namespacetensor_1_1strain.html#a437027f21782690b313ddd92498d2bcc", null ],
+      [ "to_green", "d2/dfc/namespacetensor_1_1strain.html#a41b98f82355752e596e118b1081d0619", null ],
+      [ "to_tensor", "d2/dfc/namespacetensor_1_1strain.html#a5a0f4eef8d0d4b7ff04bf01f44b225d1", null ],
+      [ "to_voigt", "d2/dfc/namespacetensor_1_1strain.html#af3f8b2df1b66f74a2b585406c655e7c1", null ]
+    ] ],
+    [ "stress", "d7/dfe/namespacetensor_1_1stress.html", [
+      [ "double_contraction", "d7/dfe/namespacetensor_1_1stress.html#af1b7616c9f3199750cd0c3c2a2b04912", null ],
+      [ "double_contraction", "d7/dfe/namespacetensor_1_1stress.html#a6bbb04d56cbe73f01e7748767838ce9b", null ],
+      [ "double_contraction", "d7/dfe/namespacetensor_1_1stress.html#ade9781fb5ee8d03291f1fda7fceb5b15", null ],
+      [ "invariant1", "d7/dfe/namespacetensor_1_1stress.html#aad6a7215d3d8fd13adb14d23c97dc8c3", null ],
+      [ "invariant2", "d7/dfe/namespacetensor_1_1stress.html#a4f8dc846af1597d5905d6f07c40f829e", null ],
+      [ "invariant3", "d7/dfe/namespacetensor_1_1stress.html#aab51548cbe7a1083bdba6ddc1792137e", null ],
+      [ "lode", "d7/dfe/namespacetensor_1_1stress.html#aa6e4a3bdb53419a6de313568d9c3e7f2", null ],
+      [ "lode_der", "d7/dfe/namespacetensor_1_1stress.html#a71e8ece47bcda6c85e7593b0e86c975d", null ],
+      [ "norm", "d7/dfe/namespacetensor_1_1stress.html#abbd4c67ff74e768ef7c8bdaf1ca28011", null ],
+      [ "to_tensor", "d7/dfe/namespacetensor_1_1stress.html#ad3a054d06d715bd691992ddd9556df25", null ],
+      [ "to_voigt", "d7/dfe/namespacetensor_1_1stress.html#a28d8ef497d9118201e00918a1767c548", null ]
+    ] ],
+    [ "is_arma_vec", "dc/d42/concepttensor_1_1is__arma__vec.html", null ],
+    [ "is_convertible_to_arma_vec", "de/def/concepttensor_1_1is__convertible__to__arma__vec.html", null ],
+    [ "dev", "dd/d8c/namespacetensor.html#a38e77aec3bac5ffba6a4a5428315be26", null ],
+    [ "dev", "dd/d8c/namespacetensor.html#a5cb14f181481104060abd4a70d43dcde", null ],
+    [ "diff_triad", "dd/d8c/namespacetensor.html#a7be943547c2d9eaf0c126619f4305a12", null ],
+    [ "diff_unit", "dd/d8c/namespacetensor.html#a4f774e4d8619c260580a3b79e1afaa42", null ],
+    [ "isotropic_stiffness", "dd/d8c/namespacetensor.html#a65ece19f029c931918db1a727a7ccee2", null ],
+    [ "mean", "dd/d8c/namespacetensor.html#a2149b5a9ca0aa6ab23e2ebf62a3ca049", null ],
+    [ "mean", "dd/d8c/namespacetensor.html#a4523a42cee554edf9cc854d77b6978f4", null ],
+    [ "orthotropic_stiffness", "dd/d8c/namespacetensor.html#ad47ad1ef1c08fcedee20412a8d6f1440", null ],
+    [ "trace", "dd/d8c/namespacetensor.html#af767ed06a41079f69e74e6e4463b1e94", null ],
+    [ "trace", "dd/d8c/namespacetensor.html#a77bebc26d1e3d85c37c459dc964109b7", null ],
+    [ "unit_deviatoric_tensor4", "dd/d8c/namespacetensor.html#a6aefeed8be4b3493b8238fb6a103f822", null ],
+    [ "unit_deviatoric_tensor4v2", "dd/d8c/namespacetensor.html#a5d6bf20c099b5ab6067238c68596e01b", null ],
+    [ "unit_symmetric_tensor4", "dd/d8c/namespacetensor.html#a9b745c523d879ee9f08ab33cb9239629", null ]
+];

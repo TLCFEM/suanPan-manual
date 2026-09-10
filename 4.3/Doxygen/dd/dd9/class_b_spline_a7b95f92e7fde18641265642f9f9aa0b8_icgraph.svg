@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 602;
+var viewHeight = 440;
+var sectionId = &apos;dynsection-5&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>BSpline::evaluate_basis_derivative</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="Algorithm A2.3." id="a_Node000001">
+<path fill="#999" stroke="#666" d="M594-232H422v32h172z"/>
+<text x="430" y="-219.2" font-family="Consolas" font-size="11">BSpline::evaluate_basis</text>
+<text x="508" y="-207.2" font-family="Consolas" font-size="11" text-anchor="middle">_derivative</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../dd/dd9/class_b_spline.html#a86ab238a4c3bc3b695bc5013ad2a84c3" xlink:title="Algorithm A3.2." id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M376-432H204v32h172z"/>
+<text x="212" y="-419.2" font-family="Consolas" font-size="11">BSpline::evaluate_point</text>
+<text x="290" y="-407.2" font-family="Consolas" font-size="11" text-anchor="middle">_derivative</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M496.37-241.6C479.07-280.06 441.11-352.36 386-391c-4.89-3.43-10.21-6.38-15.77-8.94"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m499.71-242.71.8 10.56-7.21-7.75z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../db/d57/class_b_spline_surface.html#a7b2eea61778850b8037da6c9ae12f958" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M379.5-382h-179v32h179z"/>
+<text x="208.5" y="-369.2" font-family="Consolas" font-size="11">BSplineSurface::evaluate</text>
+<text x="290" y="-357.2" font-family="Consolas" font-size="11" text-anchor="middle">_point_derivative</text>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M490.01-240.33C468.89-268.74 430.18-315.15 386-341c-5.89-3.45-12.25-6.42-18.81-9"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m492.93-242.27 3.06 10.14-8.72-6.02z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d1/d16/class_b_spline_volume.html#aa560d8ba7e722bfe6e9e1004222f27eb" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M376-332H204v32h172z"/>
+<text x="212" y="-319.2" font-family="Consolas" font-size="11">BSplineVolume::evaluate</text>
+<text x="290" y="-307.2" font-family="Consolas" font-size="11" text-anchor="middle">_point_derivative</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M477.13-238.03c-23.68-16.58-58.17-38.8-91.13-52.97-7.76-3.33-16.06-6.31-24.42-8.95"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m479.22-240.84 6.13 8.64-10.18-2.93z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../dd/dd9/class_b_spline.html#ace83c24efc98f2afdf2f1227e9973d5a" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M376-282H204v32h172z"/>
+<text x="212" y="-269.2" font-family="Consolas" font-size="11">BSpline::evaluate_shape</text>
+<text x="290" y="-257.2" font-family="Consolas" font-size="11" text-anchor="middle">_function_derivative</text>
+</a></g><g id="edge4_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge4_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M427.73-234.35c-22.14-5.12-46.01-10.65-67.52-15.63"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m428.81-237.69 8.95 5.66-10.53 1.16z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d2/d7d/class_n_u_r_b_s.html#a8bed20d52dbf123af5f255b6e06b2301" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M369-232H211v32h158z"/>
+<text x="219" y="-219.2" font-family="Consolas" font-size="11">NURBS::evaluate_shape</text>
+<text x="290" y="-207.2" font-family="Consolas" font-size="11" text-anchor="middle">_function_derivative</text>
+</a></g><g id="edge5_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge5_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M411.69-216H369.3"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m411.94-219.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../db/d57/class_b_spline_surface.html#af5d61a6f0a73e165011b1fdf318c4787" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M386-182H194v32h192z"/>
+<text x="202" y="-169.2" font-family="Consolas" font-size="11">BSplineSurface::evaluate</text>
+<text x="290" y="-157.2" font-family="Consolas" font-size="11" text-anchor="middle">_shape_function_derivative</text>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M427.73-197.65c-22.14 5.12-46.01 10.65-67.52 15.63"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m427.23-201.13 10.53 1.16-8.95 5.66z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d8/d1b/class_n_u_r_b_s_surface.html#af6133c378281a3b6b208d9787e2f68da" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M386-132H194v32h192z"/>
+<text x="202" y="-119.2" font-family="Consolas" font-size="11">NURBSSurface::evaluate</text>
+<text x="290" y="-107.2" font-family="Consolas" font-size="11" text-anchor="middle">_shape_function_derivative</text>
+</a></g><g id="edge7_Node000001_Node000008" class="edge"><title>Node1-&gt;Node8</title><a id="a_edge7_Node000001_Node000008">
+<path fill="none" stroke="#63b8ff" d="M477.13-193.97c-23.68 16.58-58.17 38.8-91.13 52.97-7.76 3.33-16.06 6.31-24.42 8.95"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m475.17-196.87 10.18-2.93-6.13 8.64z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../d1/d16/class_b_spline_volume.html#aa89e29d8ff3c00a39d9c777101f8f0a8" id="a_Node000010" target="_top">
+<path fill="#fff" stroke="#666" d="M386-82H194v32h192z"/>
+<text x="202" y="-69.2" font-family="Consolas" font-size="11">BSplineVolume::evaluate</text>
+<text x="290" y="-57.2" font-family="Consolas" font-size="11" text-anchor="middle">_shape_function_derivative</text>
+</a></g><g id="edge9_Node000001_Node000010" class="edge"><title>Node1-&gt;Node10</title><a id="a_edge9_Node000001_Node000010">
+<path fill="none" stroke="#63b8ff" d="M490.01-191.67C468.89-163.26 430.18-116.85 386-91c-5.89 3.45-12.25 6.42-18.81 9"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m487.27-193.85 8.72-6.02-3.06 10.14z"/>
+</a></g><g id="Node000011" class="node"><title>Node11</title><a xlink:href="../../dd/dc6/class_n_u_r_b_s_volume.html#a018d1690d5c358e3df37c616b09ce697" id="a_Node000011" target="_top">
+<path fill="#fff" stroke="#666" d="M386-32H194V0h192z"/>
+<text x="202" y="-19.2" font-family="Consolas" font-size="11">NURBSVolume::evaluate</text>
+<text x="290" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">_shape_function_derivative</text>
+</a></g><g id="edge10_Node000001_Node000011" class="edge"><title>Node1-&gt;Node11</title><a id="a_edge10_Node000001_Node000011">
+<path fill="none" stroke="#63b8ff" d="M496.37-190.4C479.07-151.94 441.11-79.64 386-41c-4.89 3.43-10.21 6.38-15.77 8.94"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m493.3-192.1 7.21-7.75-.8 10.56z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../da/d6e/class_patch_quad.html#a428caccd29b82675c6e4c8fc684e5eaf" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M158-126H0v20h158z"/>
+<text x="79" y="-113.2" font-family="Consolas" font-size="11" text-anchor="middle">PatchQuad::initialize</text>
+</a></g><g id="edge8_Node000008_Node000009" class="edge"><title>Node8-&gt;Node9</title><a id="a_edge8_Node000008_Node000009">
+<path fill="none" stroke="#63b8ff" d="M183.85-116H158.2"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m183.98-119.5 10 3.5-10 3.5z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_b_spline_a7b95f92e7fde18641265642f9f9aa0b8_icgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 555;
+var viewHeight = 128;
+var sectionId = &apos;dynsection-2&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>StrainDegradation::initialize</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M145-54H0v32h145z"/>
+<text x="8" y="-41.2" font-family="Consolas" font-size="11">StrainDegradation::</text>
+<text x="72.5" y="-29.2" font-family="Consolas" font-size="11" text-anchor="middle">initialize</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../db/d75/class_degradation.html#a73445eadeb483399a496e45d025f40ba" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M353-70H181v20h172z"/>
+<text x="267" y="-57.2" font-family="Consolas" font-size="11" text-anchor="middle">Degradation::initialize</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M145.18-46.19c8.37-.96 17.02-1.95 25.64-2.93"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m170.6-52.62 10.33 2.34-9.54 4.61z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../dc/dee/class_material.html#ac62c67f984ab44bbf36375e1a0ddfb35" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M343-32H191V0h152z"/>
+<text x="199" y="-19.2" font-family="Consolas" font-size="11">Material::initialize</text>
+<text x="267" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">_history</text>
+</a></g><g id="edge5_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge5_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M145.18-29.81c11.49 1.32 23.48 2.69 35.26 4.03"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m181.18-29.22 9.54 4.62-10.34 2.34z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../db/d75/class_degradation.html#a5b8dbc19598a84b9276ce8b018a15e58" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M547-120H389v32h158z"/>
+<text x="397" y="-107.2" font-family="Consolas" font-size="11">Degradation::compute</text>
+<text x="468" y="-95.2" font-family="Consolas" font-size="11" text-anchor="middle">_positive_degradation</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M313.65-70.09c20.98-4.64 46.53-10.29 70.71-15.64"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m383.74-89.18 10.52 1.26-9.01 5.58z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../dc/dee/class_material.html#aede2f9427250c8560ac6547b16d6110a" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M547-70H389v20h158z"/>
+<text x="468" y="-57.2" font-family="Consolas" font-size="11" text-anchor="middle">Material::get_density</text>
+</a></g><g id="edge3_Node000002_Node000004" class="edge"><title>Node2-&gt;Node4</title><a id="a_edge3_Node000002_Node000004">
+<path fill="none" stroke="#63b8ff" d="M353.26-60h25.37"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m378.84-63.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../dc/dee/class_material.html#a7ee1a5e060b0dd313f95d1afa6a71db8" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M547-32H389V0h158z"/>
+<text x="397" y="-19.2" font-family="Consolas" font-size="11">Material::get_initial</text>
+<text x="468" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">_stiffness</text>
+</a></g><g id="edge4_Node000002_Node000005" class="edge"><title>Node2-&gt;Node5</title><a id="a_edge4_Node000002_Node000005">
+<path fill="none" stroke="#63b8ff" d="M313.65-49.91c20.98 4.64 46.53 10.29 70.71 15.64"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m385.25-37.66 9.01 5.58-10.52 1.26z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_strain_degradation_aea749df041c73fdafe0b8b4192c408d9_cgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

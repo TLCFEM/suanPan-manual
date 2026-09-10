@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 552;
+var viewHeight = 348;
+var sectionId = &apos;dynsection-1&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>SectionShellData</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="transparent" d="M238-84H63V0h175z"/>
+<text x="96.5" y="-71.2" font-family="Consolas" font-size="11">SectionShellData</text>
+<text x="67.5" y="-55.2" font-family="Consolas" font-size="11">+</text>
+<text x="78.5" y="-55.2" font-family="Consolas" font-size="11">trial_plate_strain</text>
+<text x="67.5" y="-39.2" font-family="Consolas" font-size="11">+</text>
+<text x="78.5" y="-39.2" font-family="Consolas" font-size="11">trial_plate_strain_rate</text>
+<text x="67.5" y="-23.2" font-family="Consolas" font-size="11">+</text>
+<text x="78.5" y="-23.2" font-family="Consolas" font-size="11">trial_plate_stress</text>
+<text x="147.5" y="-7.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M63.5-66h175z"/>
+<path fill="#666" stroke="#666" d="M63.5-18h13z"/>
+<path fill="#666" stroke="#666" d="M76.5-18h162z"/>
+<path fill="none" stroke="#666" d="M63 0v-84h175V0z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a id="a_Node000002">
+<path fill="#fff" stroke="transparent" d="M65-340H0v52h65z"/>
+<text x="5.5" y="-327.2" font-family="Consolas" font-size="11">unsigned</text>
+<text x="29.5" y="-311.2" font-family="Consolas" font-size="11"> </text>
+<text x="29.5" y="-295.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M.5-322h65z"/>
+<path fill="#666" stroke="#666" d="M.5-306h65z"/>
+<path fill="none" stroke="#666" d="M0-288v-52h65v52z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node2-&gt;Node1</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M27.91-287.96C21.62-245.97 14.87-160.22 51.5-102a81 81 0 0 0 6.72 9.15"/>
+<path fill="none" stroke="#63b8ff" d="m58.34-92.73 1.27 7.1 7.04 1.56-1.27-7.1z"/>
+</a><text x="99" y="-183.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +material_tag</text></g><g id="Node000003" class="node"><title>Node3</title><a id="a_Node000003">
+<path fill="#fff" stroke="transparent" d="M166-340h-31v52h31z"/>
+<text x="140.5" y="-327.2" font-family="Consolas" font-size="11">vec</text>
+<text x="147.5" y="-311.2" font-family="Consolas" font-size="11"> </text>
+<text x="147.5" y="-295.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M135.5-322h31z"/>
+<path fill="#666" stroke="#666" d="M135.5-306h31z"/>
+<path fill="none" stroke="#666" d="M135-288v-52h31v52z"/>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node3-&gt;Node1</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M150.5-287.6v191.15"/>
+<path fill="none" stroke="#63b8ff" d="m150.5-96.27-4 6 4 6 4-6z"/>
+</a><text x="235" y="-261.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +current_membrane_strain</text><text x="150.5" y="-249.2" fill="gray" font-family="Consolas" font-size="11">+current_membrane_strain</text><text x="235" y="-237.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">_rate</text><text x="235" y="-225.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_membrane_stress</text><text x="235" y="-213.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_plate_strain</text><text x="150.5" y="-201.2" fill="gray" font-family="Consolas" font-size="11">+current_plate_strain</text><text x="235" y="-189.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">_rate</text><text x="235" y="-177.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_plate_stress</text><text x="235" y="-165.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+eccentricity</text><text x="235" y="-153.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+trial_membrane_strain</text><text x="150.5" y="-141.2" fill="gray" font-family="Consolas" font-size="11">+trial_membrane_strain</text><text x="235" y="-129.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">_rate</text><text x="235" y="-117.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+trial_membrane_stress</text><text x="235" y="-105.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">...</text></g><g id="Node000004" class="node"><title>Node4</title><a id="a_Node000004">
+<path fill="#fff" stroke="transparent" d="M358-340h-31v52h31z"/>
+<text x="332.5" y="-327.2" font-family="Consolas" font-size="11">mat</text>
+<text x="339.5" y="-311.2" font-family="Consolas" font-size="11"> </text>
+<text x="339.5" y="-295.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M327.5-322h31z"/>
+<path fill="#666" stroke="#666" d="M327.5-306h31z"/>
+<path fill="none" stroke="#666" d="M327-288v-52h31v52z"/>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node4-&gt;Node1</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M347.77-287.73c7.45 43.11 15.75 131.47-27.27 185.73-17.5 22.07-43.76 35.91-70.43 44.59"/>
+<path fill="none" stroke="#63b8ff" d="m249.72-57.31-6.89-2.13-4.61 5.55 6.89 2.12z"/>
+</a><text x="448.5" y="-213.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +current_membrane_stiffness</text><text x="448.5" y="-201.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_plate_stiffness</text><text x="448.5" y="-189.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+initial_membrane_stiffness</text><text x="448.5" y="-177.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+initial_plate_stiffness</text><text x="448.5" y="-165.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+trial_membrane_stiffness</text><text x="448.5" y="-153.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+trial_plate_stiffness</text></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="struct_section_shell_data__coll__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

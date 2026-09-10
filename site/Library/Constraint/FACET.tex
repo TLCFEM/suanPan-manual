@@ -1,0 +1,96 @@
+\documentclass[10pt,fleqn,3p]{elsarticle}
+\usepackage{amsmath,amsfonts,amssymb,mathpazo,indentfirst}
+\newcommand*{\md}[1]{\mathrm{d}#1}
+\newcommand*{\mT}{\mathrm{T}}
+\newcommand*{\tr}[1]{\mathrm{tr}#1}
+\newcommand*{\skewsymm}[1]{\left[#1\right]_\times}
+\newcommand*{\ddfrac}[2]{\dfrac{\md#1}{\md#2}}
+\newcommand*{\pfrac}[2]{\dfrac{\partial#1}{\partial#2}}
+\title{Transformation of A Triangular Facet}\date{}\author{tlc}
+\begin{document}\pagestyle{empty}
+\section*{Facet}
+The 3D facet is defined by three nodes, with positions denoted as $\mathbold{x}_i$, $\mathbold{x}_j$ and $\mathbold{x}_k$.
+
+The outer normal vector can be expressed as the cross product of two edges.
+\begin{gather*}
+\mathbold{w}=\left(\mathbold{x}_j-\mathbold{x}_i\right)\times\left(\mathbold{x}_k-\mathbold{x}_i\right).
+\end{gather*}
+By using the first edge as the reference axis, it is possible to define the local triad to be
+\begin{gather*}
+\mathbold{u}=\mathbold{x}_j-\mathbold{x}_i,\qquad
+\mathbold{v}=\mathbold{u}\times\mathbold{w},\qquad
+\mathbold{w}=\left(\mathbold{x}_j-\mathbold{x}_i\right)\times\left(\mathbold{x}_k-\mathbold{x}_i\right).
+\end{gather*}
+The normalised version would be
+\begin{gather*}
+\mathbold{U}=\dfrac{\mathbold{u}}{|\mathbold{u}|},\qquad
+\mathbold{V}=\mathbold{U}\times\mathbold{W},\qquad
+\mathbold{W}=\dfrac{\mathbold{w}}{|\mathbold{w}|}.
+\end{gather*}
+
+The position vectors $\mathbold{x}$ can be functions of deformation which can be functions of time. Thus $\mathbold{x}$ are treated as variables. For linear transformation/mapping only, $\mathbold{x}$ contain coordinates of nodes which are constant.
+
+It is interesting to note that the derivative of outer normal vector against any of three nodes is the edge opposite to that node in skew symmetric matrix form.
+\begin{gather*}
+\pfrac{\mathbold{w}}{\mathbold{x}_i}=\skewsymm{\mathbold{x}_k-\mathbold{x}_j},\qquad
+\pfrac{\mathbold{w}}{\mathbold{x}_j}=\skewsymm{\mathbold{x}_i-\mathbold{x}_k},\qquad
+\pfrac{\mathbold{w}}{\mathbold{x}_k}=\skewsymm{\mathbold{x}_j-\mathbold{x}_i}.
+\end{gather*}
+
+Thus,
+\begin{gather*}
+\pfrac{\mathbold{W}}{}=\dfrac{\mathbold{\mathrm{I}}-\mathbold{W}\otimes\mathbold{W}}{|\mathbold{w}|}\pfrac{\mathbold{w}}{}.
+\end{gather*}
+
+The derivatives of $\mathbold{U}$ are
+\begin{gather*}
+\pfrac{\mathbold{U}}{\mathbold{x}_i}=-\dfrac{\mathbold{\mathrm{I}}-\mathbold{U}\otimes\mathbold{U}}{|\mathbold{u}|},\qquad
+\pfrac{\mathbold{U}}{\mathbold{x}_j}=\dfrac{\mathbold{\mathrm{I}}-\mathbold{U}\otimes\mathbold{U}}{|\mathbold{u}|},\qquad
+\pfrac{\mathbold{U}}{\mathbold{x}_k}=\mathbold{0}.
+\end{gather*}
+
+For $\mathbold{V}$,
+\begin{gather*}
+\pfrac{\mathbold{V}}{}=\skewsymm{\mathbold{U}}\pfrac{\mathbold{W}}{}-\skewsymm{\mathbold{W}}\pfrac{\mathbold{U}}{}.
+\end{gather*}
+\section*{Contact}
+For any node $\mathbold{x}_l$, to detect if it penetrates the target facet, the projection on $\mathbold{W}$ can be used. Penetration occurs when
+\begin{gather*}
+P=\left(\mathbold{x}_l-\mathbold{x}_i\right)\cdot\mathbold{W}\le0.
+\end{gather*}
+\section*{Constraint Via Multiplier}
+The implementation of Lagrangian multiplier method is relatively simpler, as it only requires the above contact detection be zero when penetration occurs. Thus the constraint equation is
+\begin{gather*}
+c=\left(\mathbold{x}_l-\mathbold{x}_i\right)\cdot\mathbold{W}=0.
+\end{gather*}
+The corresponding Jacobian can be computed accordingly.
+\section*{Constraint Via Penalty}
+The penalty method needs to compute shape functions so that the resistance on each node can be computed. The inner norm of each edge can be obtained by cross product between facet norm and each edge. Please note we label the inner norm of the edge opposite to node $\mathbold{x}_i$ to be $\mathbold{n}_i$.
+\begin{gather*}
+\mathbold{n}_i=\mathbold{W}\times\left(\mathbold{x}_k-\mathbold{x}_j\right),\qquad
+\mathbold{n}_j=\mathbold{W}\times\left(\mathbold{x}_i-\mathbold{x}_k\right),\qquad
+\mathbold{n}_k=\mathbold{W}\times\left(\mathbold{x}_j-\mathbold{x}_i\right).
+\end{gather*}
+We do not normalise them.
+
+The barycentric coordinates can be computed simply by computing the area $A$ of each triangle.
+\begin{gather*}
+2A_i=\left(\mathbold{x}_l-\mathbold{x}_j\right)\cdot\mathbold{n}_i,\qquad
+2A_j=\left(\mathbold{x}_l-\mathbold{x}_k\right)\cdot\mathbold{n}_j,\qquad
+2A_k=\left(\mathbold{x}_l-\mathbold{x}_i\right)\cdot\mathbold{n}_k.
+\end{gather*}
+
+The corresponding shape function $N_i$ is then
+\begin{gather*}
+N_i=\dfrac{\left(\mathbold{x}_l-\mathbold{x}_j\right)\cdot\mathbold{n}_i}{|\mathbold{w}|},\qquad
+N_j=\dfrac{\left(\mathbold{x}_l-\mathbold{x}_k\right)\cdot\mathbold{n}_j}{|\mathbold{w}|},\qquad
+N_k=\dfrac{\left(\mathbold{x}_l-\mathbold{x}_i\right)\cdot\mathbold{n}_k}{|\mathbold{w}|}.
+\end{gather*}
+The derivatives can be computed accordingly.
+
+With $N_l=-1$, the resistance of each node shall be
+\begin{gather*}
+R_a=\alpha{}N_aP,
+\end{gather*}
+where $a=i,j,k,l$ and $\alpha$ is the penalty factor.
+\end{document}

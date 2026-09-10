@@ -1,0 +1,25 @@
+var class_b_spline_surface =
+[
+    [ "BSplineSurface", "db/d57/class_b_spline_surface.html#a1604709d31383daeac99b877862405ec", null ],
+    [ "BSplineSurface", "db/d57/class_b_spline_surface.html#a8e49366c670fc68ea678579d2c61eb9e", null ],
+    [ "BSplineSurface", "db/d57/class_b_spline_surface.html#ac9d8e6f32c268607a5e0de7fe3f9d8ee", null ],
+    [ "~BSplineSurface", "db/d57/class_b_spline_surface.html#a6371aeb21847077a4092df250b434154", null ],
+    [ "evaluate_point", "db/d57/class_b_spline_surface.html#a78dbe2f7c730adea9caae029edf4369e", null ],
+    [ "evaluate_point", "db/d57/class_b_spline_surface.html#a941ce15f147c6474a40ff65d42d1cefe", null ],
+    [ "evaluate_point_derivative", "db/d57/class_b_spline_surface.html#a7b2eea61778850b8037da6c9ae12f958", null ],
+    [ "evaluate_point_derivative", "db/d57/class_b_spline_surface.html#a7c89046f2cbf1bd85667c3bffbd55ba9", null ],
+    [ "evaluate_shape_function", "db/d57/class_b_spline_surface.html#a7bfd2277396c4e87a2f99591671168d0", null ],
+    [ "evaluate_shape_function", "db/d57/class_b_spline_surface.html#addf9f4e055722d2a590f7bfe2df8b4a0", null ],
+    [ "evaluate_shape_function_derivative", "db/d57/class_b_spline_surface.html#af5d61a6f0a73e165011b1fdf318c4787", null ],
+    [ "evaluate_shape_function_derivative", "db/d57/class_b_spline_surface.html#aea8a52e84f5956d115b9ec8fa9ff3af6", null ],
+    [ "get_all_element_span", "db/d57/class_b_spline_surface.html#aebe70824c9f7d69b9c2b8289b9beb39b", null ],
+    [ "get_number_of_control_points", "db/d57/class_b_spline_surface.html#a81dcfa6bfb77972ee6882d9345189281", null ],
+    [ "operator=", "db/d57/class_b_spline_surface.html#a9bea426c514cb65a92d8a81661aa8773", null ],
+    [ "operator=", "db/d57/class_b_spline_surface.html#a2d99bc8e1d44375811bc52588fa79231", null ],
+    [ "set_control_polygon", "db/d57/class_b_spline_surface.html#ad41d5002fed8c27c5be05f3437e8784e", null ],
+    [ "set_control_polygon", "db/d57/class_b_spline_surface.html#ae2befba884e778832266f457a489f337", null ],
+    [ "dimension", "db/d57/class_b_spline_surface.html#a16a07bff0deb07ef5709bff7463d6c02", null ],
+    [ "line_u", "db/d57/class_b_spline_surface.html#ab3283d982f699ef7d27f806d0e92d8ff", null ],
+    [ "line_v", "db/d57/class_b_spline_surface.html#a19b02f936e01bcdca152b52f5f3ecb6a", null ],
+    [ "net", "db/d57/class_b_spline_surface.html#a45d89c56f3fb98bc99fbebd8e9ec41c4", null ]
+];

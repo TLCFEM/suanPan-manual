@@ -1,0 +1,24 @@
+node 1 0 5
+mass 1 1 1 1 2
+initial velocity -1 1 1
+initial velocity -.025 2 1
+
+plainrecorder 1 Global KE
+
+restitutionwall 2 5 0 -1 0 1. 1E5
+restitutionwall 4 -5 0 1 0 1. 1E5
+
+step dynamic 1 100
+set ini_step_size 1E-2
+set fixed_step_size 1
+set band_mat false
+set symm_mat false
+
+converger AbsIncreDisp 1 1E-12 10 1
+
+analyze
+
+save recorder 1
+
+exit
+
