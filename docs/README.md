@@ -1,3 +1,5 @@
+<img src="suanPan-qr-ua.svg" width="150" align="middle"/><img src="suanPan.svg" width="150" align="middle"/>
+
 # Introduction
 
 This repository contains the official user documentation for [suanPan](https://tlcfem.github.io/suanPan/).
