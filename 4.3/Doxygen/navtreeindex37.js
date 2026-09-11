@@ -1,6 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"df/da9/class_node_based_criterion.html#aea7f8cdfe37231b3fcd7ac210cb335b2":[2,1,15,1],
 "df/daa/class_b31.html":[2,10,0,3],
 "df/daa/class_b31.html#a0b695a6ee7aa8dd8e7ff7c7e00047dd3":[2,10,0,3,2],
 "df/daa/class_b31.html#a18f9b7213c25448ca26c746e60107171":[2,10,0,3,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX37 =
 "dir_826de540b6d78e64e17227cf4a6542c1.html":[6,0,9,2,5],
 "dir_828e93bf13c3daaa6dd11506bab6fc70.html":[6,0,5,1,2],
 "dir_876e7e3f08a4ebfd9036bf7f05f54af4.html":[6,0,1,0],
-"dir_882a0b68ab304bbb433d2a114d9f5431.html":[6,0,9,4]
+"dir_882a0b68ab304bbb433d2a114d9f5431.html":[6,0,9,4],
+"dir_891d5752cff7e55537d646b94c489f4d.html":[6,0,13,2]
 };

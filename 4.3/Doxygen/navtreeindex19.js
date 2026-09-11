@@ -1,6 +1,5 @@
 var NAVTREEINDEX19 =
 {
-"d8/d1b/class_n_u_r_b_s_surface.html#a8e49366c670fc68ea678579d2c61eb9e":[2,10,9,31,1],
 "d8/d1b/class_n_u_r_b_s_surface.html#aad02eaaa8a265f6039a6dde24bb371a0":[2,10,9,31,5],
 "d8/d1b/class_n_u_r_b_s_surface.html#ac9d8e6f32c268607a5e0de7fe3f9d8ee":[2,10,9,31,0],
 "d8/d1b/class_n_u_r_b_s_surface.html#af03839906fb90d79b65be36abe9a6426":[2,10,9,31,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX19 =
 "d8/d8b/struct_data_armstrong_frederick1_d.html#a9114f6c0ae339281c49314a921d4356c":[2,13,0,83,2],
 "d8/d8b/struct_data_armstrong_frederick1_d.html#a93647f004474121affd7dcd67a4f3e8f":[2,13,0,83,3],
 "d8/d8b/struct_data_armstrong_frederick1_d.html#aae637b49bca0a2f95bf5c76b5f8b414a":[2,13,0,83,5],
-"d8/d8b/struct_data_armstrong_frederick1_d.html#ab3ee0ea6753625b35a53707d492c9704":[2,13,0,83,9]
+"d8/d8b/struct_data_armstrong_frederick1_d.html#ab3ee0ea6753625b35a53707d492c9704":[2,13,0,83,9],
+"d8/d8b/struct_data_armstrong_frederick1_d.html#ac4b73e6645aeac9e659b4457b9d1d038":[2,13,0,83,6]
 };
