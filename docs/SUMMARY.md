@@ -398,6 +398,7 @@
         * [CDPM2](Library/Material/Material3D/Concrete/CDPM2.md)
         * [Rebar3D](Library/Material/Material3D/Concrete/Rebar3D.md)
         * [TableCDP](Library/Material/Material3D/Concrete/TableCDP.md)
+        * [AbaqusCDP](Library/Material/Material3D/Concrete/AbaqusCDP.md)
         * [CustomCDP](Library/Material/Material3D/Concrete/CustomCDP.md)
     * Damage
         * [IsotropicDamage](Library/Material/Material3D/Damage/IsotropicDamage.md)
