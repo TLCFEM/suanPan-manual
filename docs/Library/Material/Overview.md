@@ -1,5 +1,9 @@
 This section contains all available material models.
 
+!!! info "reference book"
+    The theoretical formulations of most models are provided in the reference book [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook).
+    The book may be consulted for further details and insights.
+
 There are mainly two categories: 1D and 3D material models.
 
 Wrappers of various types are provided to allow one to wrap one material model into another that can be used
