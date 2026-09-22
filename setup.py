@@ -15,103 +15,119 @@
 
 import json
 import os
+import platform
 import re
 import shutil
+import subprocess
 import sys
 import tarfile
 import zipfile
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from urllib.request import urlopen
 
 from setuptools import setup
 
-
-def remove(path: str):
-    if os.path.exists(path):
-        shutil.rmtree(path)
+ROOT_FOLDER = Path(__file__).parent
 
 
-def install(run_doxygen: bool):
-    # root directory
-    remove("docs/Doxygen")
-    remove("site")
-
-    # 1. download source code
-    archive_name = "suanPan-dev"
-
-    url = "https://github.com/TLCFEM/suanPan/archive/refs/heads/dev.zip"
-    with urlopen(url) as response, open(f"{archive_name}.zip", "wb") as archive:
-        shutil.copyfileobj(response, archive)
-    with zipfile.ZipFile(f"{archive_name}.zip", "r") as archive:
-        archive.extractall(".")
-    os.remove(f"{archive_name}.zip")
+def prepare_doxygen(archive_path: Path):
+    if shutil.which("doxygen") is None:
+        return
 
     # 2. generate doxygen documentation
-    os.chdir(archive_name)
-
-    with urlopen("https://api.github.com/repos/TLCFEM/suanPan/commits/dev") as response:
-        revision = json.load(response)["sha"]
-
-    doxyfile = Path("Doxyfile").read_text()
-    Path("Doxyfile").write_text(
-        re.sub(
-            r"^PROJECT_NUMBER\s+=.*$",
-            f"PROJECT_NUMBER = {revision[:7]}",
-            doxyfile,
+    url = "https://api.github.com/repos/TLCFEM/suanPan/commits/dev"
+    with urlopen(url) as response:
+        (doxyfile := archive_path / "Doxyfile").write_text(
+            re.sub(
+                r"^PROJECT_NUMBER\s+=.*$",
+                f"PROJECT_NUMBER = {json.load(response)['sha'][:7]}",
+                doxyfile.read_text(),
+            )
         )
+
+    subprocess.run(["doxygen"], cwd=archive_path, check=True)
+
+    shutil.copytree(archive_path / "Document/html", ROOT_FOLDER / "docs/Doxygen")
+    shutil.copytree(archive_path / "Resource", ROOT_FOLDER / "docs/Doxygen/Resource")
+    shutil.copy(
+        ROOT_FOLDER / "docs/favicon.ico",
+        ROOT_FOLDER / "docs/Doxygen/favicon.ico",
     )
 
-    if shutil.which(doxygen_bin := "doxygen") is not None and run_doxygen:
-        os.system(doxygen_bin)
 
-        target_path = "../docs/Doxygen"
-        shutil.copytree("Document/html", target_path)
-        shutil.copytree("Resource", f"{target_path}/Resource/")
-        shutil.copy("../docs/favicon.ico", f"{target_path}/favicon.ico")
+def prepare_binary():
+    if shutil.which("suanpan") is not None or shutil.which("sp") is not None:
+        return
 
-    with open("Toolbox/command.h") as f:
-        version_file = f.read()
+    # skip arm64
+    if platform.machine().lower() in ("arm64", "aarch64", "arm"):
+        return
 
-    major = re.search(r"constexpr auto SUANPAN_MAJOR = (\d);", version_file).group(1)
-    minor = re.search(r"constexpr auto SUANPAN_MINOR = (\d);", version_file).group(1)
-    patch = re.search(r"constexpr auto SUANPAN_PATCH = (\d);", version_file).group(1)
+    system = platform.system().lower()
 
-    os.chdir("..")
+    # 3. download binary file
+    if system.startswith("linux"):
+        binary_file_name = "suanPan-linux-amd64-openblas-no-avx"
+        binary_file = f"{binary_file_name}.tar.gz"
+    elif system.startswith("windows"):
+        binary_file_name = "suanPan-win-mkl-vtk"
+        binary_file = f"{binary_file_name}.zip"
+    elif system.startswith("darwin"):
+        binary_file_name = "suanPan-macos-15-amd64-openblas-vtk-avx"
+        binary_file = f"{binary_file_name}.tar.gz"
+    else:
+        return
 
-    remove(archive_name)
+    shutil.rmtree(binary_file_name, True)
 
-    if shutil.which("suanpan") is None and shutil.which("sp") is None:
-        # 3. download binary file
-        if sys.platform.startswith("linux"):
-            binary_file_name = "suanPan-linux-amd64-openblas-no-avx"
-            binary_file = f"{binary_file_name}.tar.gz"
-        else:
-            binary_file_name = "suanPan-win-mkl-vtk"
-            binary_file = f"{binary_file_name}.zip"
-        remove(binary_file_name)
+    with urlopen("https://api.github.com/repos/TLCFEM/suanPan/releases") as response:
+        releases = json.load(response)
 
-        with urlopen(
-            "https://api.github.com/repos/TLCFEM/suanPan/releases"
-        ) as response:
-            releases = json.load(response)
-            latest_tag = next((r["tag_name"] for r in releases if r["assets"]), None)
+    latest_tag = next((r["tag_name"] for r in releases if r["assets"]), None)
+    url = f"https://github.com/TLCFEM/suanPan/releases/download/{latest_tag}/{binary_file}"
 
-        url = f"https://github.com/TLCFEM/suanPan/releases/download/{latest_tag}/{binary_file}"
-        with urlopen(url) as response, open(binary_file, "wb") as archive:
+    with TemporaryDirectory() as tmp_dir:
+        archive_path = Path(tmp_dir) / binary_file
+
+        with urlopen(url) as response, archive_path.open("wb") as archive:
             shutil.copyfileobj(response, archive)
 
-        if sys.platform.startswith("linux"):
-            target = tarfile.open(binary_file, "r:gz")
+        if binary_file.endswith(".tar.gz"):
+            target = tarfile.open(archive_path, "r:gz")
         else:
-            target = zipfile.ZipFile(binary_file, "r")
+            target = zipfile.ZipFile(archive_path, "r")
 
         with target as archive:
             archive.extractall(binary_file_name)
 
-        os.remove(binary_file)
 
-    with open("requirements.txt") as f:
-        required = f.read().splitlines()
+def install(run_doxygen: bool):
+    # root directory
+    shutil.rmtree(ROOT_FOLDER / "docs/Doxygen", True)
+    shutil.rmtree(ROOT_FOLDER / "site", True)
+
+    # 1. download source code
+    with TemporaryDirectory() as tmp_dir:
+        archive_name = "suanPan-dev"
+        archive_zip = Path(tmp_dir) / f"{archive_name}.zip"
+        archive_path = Path(tmp_dir) / archive_name
+
+        url = "https://github.com/TLCFEM/suanPan/archive/refs/heads/dev.zip"
+        with urlopen(url) as response, archive_zip.open("wb") as archive:
+            shutil.copyfileobj(response, archive)
+        with zipfile.ZipFile(archive_zip, "r") as archive:
+            archive.extractall(tmp_dir)
+
+        version = (archive_path / "Toolbox/command.h").read_text()
+        major = re.search(r"constexpr auto SUANPAN_MAJOR = (\d);", version).group(1)
+        minor = re.search(r"constexpr auto SUANPAN_MINOR = (\d);", version).group(1)
+        patch = re.search(r"constexpr auto SUANPAN_PATCH = (\d);", version).group(1)
+
+        if run_doxygen:
+            prepare_doxygen(archive_path)
+
+    prepare_binary()
 
     setup(
         name="suanPan-manual",
@@ -119,7 +135,7 @@ def install(run_doxygen: bool):
         description="suanPan-manual",
         author="Theodore Chang",
         author_email="tlcfem@gmail.com",
-        install_requires=required,
+        install_requires=Path("requirements.txt").read_text().splitlines(),
         entry_points={
             "mkdocs.plugins": [
                 "overwrite_math = plugins.overwrite.overwrite:OverwriteMath",
@@ -129,4 +145,6 @@ def install(run_doxygen: bool):
 
 
 if __name__ == "__main__":
+    os.chdir(ROOT_FOLDER)
+
     install("egg_info" not in sys.argv)

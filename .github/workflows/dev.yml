@@ -46,7 +46,7 @@ jobs:
           git config --global user.email "tlcfem@gmail.com"
           git pull
           mike deploy ${{ env.SP_VERSION }}
-          git clean -fd && git reset --hard && git checkout gh-pages
+          git clean -fdx && git reset --hard && git checkout gh-pages
           svgo -rf ${{ env.SP_VERSION }} --exclude inherit_graph.* -o ${{ env.SP_VERSION }}
           git add -A
           git commit --amend --no-edit
