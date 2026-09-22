@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="251pt" height="1360pt" viewBox="0 0 251 1360"><g class="graph" transform="translate(4 1356)"><title>RayleighNewmark</title><g class="node"><title>Node1</title><a xlink:title="A RayleighNewmark class defines a solver using Newmark algorithm with Rayleigh damping model.">
+<path fill="#999" stroke="transparent" d="M229.5-68h-161V0h161z"/>
+<text x="98.5" y="-55.2" font-family="Consolas" font-size="11">RayleighNewmark</text>
+<text x="146" y="-39.2" font-family="Consolas" font-size="11"> </text>
+<text x="73" y="-23.2" font-family="Consolas" font-size="11">+</text>
+<text x="84" y="-23.2" font-family="Consolas" font-size="11">RayleighNewmark()</text>
+<text x="73" y="-7.2" font-family="Consolas" font-size="11">+</text>
+<text x="84" y="-7.2" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<path fill="#666" stroke="#666" d="M69-50h161z"/>
+<path fill="#666" stroke="#666" d="M69-34h161z"/>
+<path fill="none" stroke="#666" d="M68.5 0v-68h161V0z"/>
+</a></g><g class="node"><title>Node2</title><a xlink:href="../../dd/d8e/class_newmark.html" xlink:title="A Newmark class defines a solver using Newmark algorithm." target="_top">
+<path fill="#fff" stroke="transparent" d="M243-281H55v176h188z"/>
+<text x="125" y="-268.2" font-family="Consolas" font-size="11">Newmark</text>
+<text x="145.5" y="-252.2" font-family="Consolas" font-size="11"> </text>
+<text x="59" y="-236.2" font-family="Consolas" font-size="11">+</text>
+<text x="70" y="-236.2" font-family="Consolas" font-size="11">Newmark()</text>
+<text x="59" y="-220.2" font-family="Consolas" font-size="11">+</text>
+<text x="70" y="-220.2" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text x="59" y="-204.2" font-family="Consolas" font-size="11">+</text>
+<text x="70" y="-204.2" font-family="Consolas" font-size="11">assemble_effective</text>
+<text x="70" y="-192.2" font-family="Consolas" font-size="11">_matrix()</text>
+<text x="59" y="-176.2" font-family="Consolas" font-size="11">+</text>
+<text x="70" y="-176.2" font-family="Consolas" font-size="11">update_trial_status()</text>
+<text x="59" y="-160.2" font-family="Consolas" font-size="11">+</text>
+<text x="70" y="-160.2" font-family="Consolas" font-size="11">from_incre_velocity()</text>
+<text x="59" y="-144.2" font-family="Consolas" font-size="11">+</text>
+<text x="70" y="-144.2" font-family="Consolas" font-size="11">from_incre_acceleration()</text>
+<text x="59" y="-128.2" font-family="Consolas" font-size="11">+</text>
+<text x="70" y="-128.2" font-family="Consolas" font-size="11">print()</text>
+<text x="59" y="-112.2" font-family="Consolas" font-size="11">#</text>
+<text x="70" y="-112.2" font-family="Consolas" font-size="11">update_parameter()</text>
+<path fill="#666" stroke="#666" d="M55-263h188z"/>
+<path fill="#666" stroke="#666" d="M55-247h188z"/>
+<path fill="none" stroke="#666" d="M55-105v-176h188v176z"/>
+</a></g><g class="edge"><title>Node2-&gt;Node1</title><a>
+<path fill="none" stroke="#63b8ff" d="M149-94.52v26.29"/>
+<path fill="none" stroke="#63b8ff" d="m145.5-94.78 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node3</title><a xlink:href="../../d2/df8/class_implicit_integrator.html" target="_top">
+<path fill="#fff" stroke="transparent" d="M161-473H27v84h134z"/>
+<text x="33" y="-460.2" font-family="Consolas" font-size="11">ImplicitIntegrator</text>
+<text x="90.5" y="-444.2" font-family="Consolas" font-size="11"> </text>
+<text x="31" y="-428.2" font-family="Consolas" font-size="11">+</text>
+<text x="42" y="-428.2" font-family="Consolas" font-size="11">type()</text>
+<text x="31" y="-412.2" font-family="Consolas" font-size="11">+</text>
+<text x="42" y="-412.2" font-family="Consolas" font-size="11">assemble_matrix()</text>
+<text x="31" y="-396.2" font-family="Consolas" font-size="11">+</text>
+<text x="42" y="-396.2" font-family="Consolas" font-size="11">Integrator()</text>
+<path fill="#666" stroke="#666" d="M27-455h134z"/>
+<path fill="#666" stroke="#666" d="M27-439h134z"/>
+<path fill="none" stroke="#666" d="M27-389v-84h134v84z"/>
+</a></g><g class="edge"><title>Node3-&gt;Node2</title><a>
+<path fill="none" stroke="#63b8ff" d="M105.86-379.12c6.66 28.59 15.16 65.07 22.85 98.07"/>
+<path fill="none" stroke="#63b8ff" d="m102.44-378.36 1.14-10.53 5.68 8.94z"/>
+</a></g><g class="node"><title>Node4</title><a xlink:href="../../d6/d55/class_integrator.html" xlink:title="The Integrator class is basically a wrapper of the DomainBase class with regard to some status changi..." target="_top">
+<path fill="#fff" stroke="transparent" d="M188-838H0v328h188z"/>
+<text x="60" y="-825.2" font-family="Consolas" font-size="11">Integrator</text>
+<text x="90.5" y="-809.2" font-family="Consolas" font-size="11"> </text>
+<text x="4" y="-793.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-793.2" font-family="Consolas" font-size="11">Integrator()</text>
+<text x="4" y="-777.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-777.2" font-family="Consolas" font-size="11">set_domain()</text>
+<text x="4" y="-761.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-761.2" font-family="Consolas" font-size="11">get_domain()</text>
+<text x="4" y="-745.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-745.2" font-family="Consolas" font-size="11">initialize()</text>
+<text x="4" y="-729.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-729.2" font-family="Consolas" font-size="11">type()</text>
+<text x="4" y="-713.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-713.2" font-family="Consolas" font-size="11">set_time_step_switch()</text>
+<text x="4" y="-697.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-697.2" font-family="Consolas" font-size="11">allow_to_change_time</text>
+<text x="15" y="-685.2" font-family="Consolas" font-size="11">_step()</text>
+<text x="4" y="-669.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-669.2" font-family="Consolas" font-size="11">set_matrix_assembled</text>
+<text x="15" y="-657.2" font-family="Consolas" font-size="11">_switch()</text>
+<text x="4" y="-641.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-641.2" font-family="Consolas" font-size="11">matrix_is_assembled()</text>
+<text x="4" y="-625.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-625.2" font-family="Consolas" font-size="11">time_independent_matrix()</text>
+<text x="15" y="-609.2" font-family="Consolas" font-size="11">and 49 more...</text>
+<text x="4" y="-593.2" font-family="Consolas" font-size="11">#</text>
+<text x="15" y="-593.2" font-family="Consolas" font-size="11">update_parameter()</text>
+<text x="4" y="-577.2" font-family="Consolas" font-size="11">#</text>
+<text x="15" y="-577.2" font-family="Consolas" font-size="11">process_load_impl()</text>
+<text x="4" y="-561.2" font-family="Consolas" font-size="11">#</text>
+<text x="15" y="-561.2" font-family="Consolas" font-size="11">process_constraint</text>
+<text x="15" y="-549.2" font-family="Consolas" font-size="11">_impl()</text>
+<text x="4" y="-533.2" font-family="Consolas" font-size="11">#</text>
+<text x="15" y="-533.2" font-family="Consolas" font-size="11">has_corrector()</text>
+<text x="4" y="-517.2" font-family="Consolas" font-size="11">#</text>
+<text x="15" y="-517.2" font-family="Consolas" font-size="11">correct_trial_status()</text>
+<path fill="#666" stroke="#666" d="M0-820h188z"/>
+<path fill="#666" stroke="#666" d="M0-804h188z"/>
+<path fill="none" stroke="#666" d="M0-510v-328h188v328z"/>
+</a></g><g class="edge"><title>Node4-&gt;Node3</title><a>
+<path fill="none" stroke="#63b8ff" d="M94-499.79v26.65"/>
+<path fill="none" stroke="#63b8ff" d="m90.5-499.91 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node5</title><a xlink:href="../../db/db8/class_unique_tag.html" xlink:title="Label objects that cannot be copied." target="_top">
+<path fill="#fff" stroke="transparent" d="M144.5-1039h-101v164h101z"/>
+<text x="64" y="-1026.2" font-family="Consolas" font-size="11">UniqueTag</text>
+<text x="91" y="-1010.2" font-family="Consolas" font-size="11"> </text>
+<text x="48" y="-994.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-994.2" font-family="Consolas" font-size="11">UniqueTag()</text>
+<text x="48" y="-978.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-978.2" font-family="Consolas" font-size="11">UniqueTag()</text>
+<text x="48" y="-962.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-962.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="48" y="-946.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-946.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="48" y="-930.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-930.2" font-family="Consolas" font-size="11">~UniqueTag()</text>
+<text x="48" y="-914.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-914.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="48" y="-898.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-898.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="48" y="-882.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-882.2" font-family="Consolas" font-size="11">Tag()</text>
+<path fill="#666" stroke="#666" d="M44-1021h101z"/>
+<path fill="#666" stroke="#666" d="M44-1005h101z"/>
+<path fill="none" stroke="#666" d="M43.5-875v-164h101v164z"/>
+</a></g><g class="edge"><title>Node5-&gt;Node4</title><a>
+<path fill="none" stroke="#63b8ff" d="M94-864.45v26.32"/>
+<path fill="none" stroke="#63b8ff" d="m90.5-864.72 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node6</title><a xlink:href="../../d0/d57/class_tag.html" xlink:title="A base Tag class." target="_top">
+<path fill="#fff" stroke="transparent" d="M144.5-1352h-101v276h101z"/>
+<text x="84" y="-1339.2" font-family="Consolas" font-size="11">Tag</text>
+<text x="91" y="-1323.2" font-family="Consolas" font-size="11"> </text>
+<text x="48" y="-1307.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1307.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="48" y="-1291.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1291.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="48" y="-1275.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1275.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="48" y="-1259.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1259.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="48" y="-1243.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1243.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="48" y="-1227.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1227.2" font-family="Consolas" font-size="11">~Tag()</text>
+<text x="48" y="-1211.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1211.2" font-family="Consolas" font-size="11">set_tag()</text>
+<text x="48" y="-1195.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1195.2" font-family="Consolas" font-size="11">get_tag()</text>
+<text x="48" y="-1179.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1179.2" font-family="Consolas" font-size="11">enable()</text>
+<text x="48" y="-1163.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1163.2" font-family="Consolas" font-size="11">disable()</text>
+<text x="48" y="-1147.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1147.2" font-family="Consolas" font-size="11">guard()</text>
+<text x="48" y="-1131.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1131.2" font-family="Consolas" font-size="11">unguard()</text>
+<text x="48" y="-1115.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1115.2" font-family="Consolas" font-size="11">is_active()</text>
+<text x="48" y="-1099.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1099.2" font-family="Consolas" font-size="11">is_guarded()</text>
+<text x="48" y="-1083.2" font-family="Consolas" font-size="11">+</text>
+<text x="59" y="-1083.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M44-1334h101z"/>
+<path fill="#666" stroke="#666" d="M44-1318h101z"/>
+<path fill="none" stroke="#666" d="M43.5-1076v-276h101v276z"/>
+</a></g><g class="edge"><title>Node6-&gt;Node5</title><a>
+<path fill="none" stroke="#63b8ff" d="M94-1065.58v26.41"/>
+<path fill="none" stroke="#63b8ff" d="m90.5-1065.8 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node7</title><a xlink:href="../../df/de6/classdouble.html" target="_top">
+<path fill="#fff" stroke="transparent" d="M230.5-457h-51v52h51z"/>
+<text x="185" y="-444.2" font-family="Consolas" font-size="11">double</text>
+<text x="202" y="-428.2" font-family="Consolas" font-size="11"> </text>
+<text x="202" y="-412.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M180-439h51z"/>
+<path fill="#666" stroke="#666" d="M180-423h51z"/>
+<path fill="none" stroke="#666" d="M179.5-405v-52h51v52z"/>
+</a></g><g class="edge"><title>Node7-&gt;Node2</title><a>
+<path fill="none" stroke="#63b8ff" d="M199.01-404.74c-6.37 26.84-16.85 70.98-26.57 111.95"/>
+<path fill="none" stroke="#63b8ff" d="m172.43-292.73-5.28 4.91 2.51 6.76 5.27-4.91z"/>
+</a><text x="203" y="-362.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> #C0</text><text x="203" y="-350.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">#C1</text><text x="203" y="-338.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">#C2</text><text x="203" y="-326.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">#C3</text><text x="203" y="-314.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">#C4</text><text x="203" y="-302.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">#C5</text></g></g></svg>

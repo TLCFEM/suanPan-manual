@@ -1,0 +1,330 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 1132;
+var viewHeight = 1164;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Recorder</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="A Recorder class." id="a_Node000001">
+<path fill="#999" stroke="transparent" d="M614.5-644h-128v340h128z"/>
+<text x="523" y="-631.2" font-family="Consolas" font-size="11">Recorder</text>
+<text x="490.5" y="-615.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-615.2" font-family="Consolas" font-size="11">original_type</text>
+<text x="490.5" y="-599.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-599.2" font-family="Consolas" font-size="11">variable_type</text>
+<text x="490.5" y="-583.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-583.2" font-family="Consolas" font-size="11">component</text>
+<text x="490.5" y="-567.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-567.2" font-family="Consolas" font-size="11">interval</text>
+<text x="490.5" y="-551.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-551.2" font-family="Consolas" font-size="11">reference_tag</text>
+<text x="490.5" y="-535.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-535.2" font-family="Consolas" font-size="11">object_tag</text>
+<text x="490.5" y="-519.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-519.2" font-family="Consolas" font-size="11">time_pool</text>
+<text x="490.5" y="-503.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-503.2" font-family="Consolas" font-size="11">data_pool</text>
+<text x="490.5" y="-487.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-487.2" font-family="Consolas" font-size="11">counter</text>
+<text x="490.5" y="-471.2" font-family="Consolas" font-size="11">+</text>
+<text x="501.5" y="-471.2" font-family="Consolas" font-size="11">Recorder()</text>
+<text x="490.5" y="-455.2" font-family="Consolas" font-size="11">+</text>
+<text x="501.5" y="-455.2" font-family="Consolas" font-size="11">initialize()</text>
+<text x="490.5" y="-439.2" font-family="Consolas" font-size="11">+</text>
+<text x="501.5" y="-439.2" font-family="Consolas" font-size="11">insert()</text>
+<text x="490.5" y="-423.2" font-family="Consolas" font-size="11">+</text>
+<text x="501.5" y="-423.2" font-family="Consolas" font-size="11">insert()</text>
+<text x="490.5" y="-407.2" font-family="Consolas" font-size="11">+</text>
+<text x="501.5" y="-407.2" font-family="Consolas" font-size="11">record()</text>
+<text x="490.5" y="-391.2" font-family="Consolas" font-size="11">+</text>
+<text x="501.5" y="-391.2" font-family="Consolas" font-size="11">clear_status()</text>
+<text x="490.5" y="-375.2" font-family="Consolas" font-size="11">+</text>
+<text x="501.5" y="-375.2" font-family="Consolas" font-size="11">save()</text>
+<text x="490.5" y="-359.2" font-family="Consolas" font-size="11">+</text>
+<text x="501.5" y="-359.2" font-family="Consolas" font-size="11">print()</text>
+<text x="490.5" y="-343.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-343.2" font-family="Consolas" font-size="11">update_tag()</text>
+<text x="490.5" y="-327.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-327.2" font-family="Consolas" font-size="11">record_impl()</text>
+<text x="490.5" y="-311.2" font-family="Consolas" font-size="11">#</text>
+<text x="501.5" y="-311.2" font-family="Consolas" font-size="11">normalise_size()</text>
+<path fill="#666" stroke="#666" d="M486.5-626h128z"/>
+<path fill="#666" stroke="#666" d="M486.5-482h13z"/>
+<path fill="#666" stroke="#666" d="M499.5-482h115z"/>
+<path fill="none" stroke="#666" d="M486.5-304v-340h128v340z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d7/dd6/class_amplitude_recorder.html" xlink:title="A AmplitudeRecorder class." id="a_Node000004" target="_top">
+<path fill="#fff" stroke="transparent" d="M125-228H0v84h125z"/>
+<text x="5.5" y="-215.2" font-family="Consolas" font-size="11">AmplitudeRecorder</text>
+<text x="59.5" y="-199.2" font-family="Consolas" font-size="11"> </text>
+<text x="10.5" y="-183.2" font-family="Consolas" font-size="11">+</text>
+<text x="27.5" y="-183.2" font-family="Consolas" font-size="11">initialize()</text>
+<text x="10.5" y="-167.2" font-family="Consolas" font-size="11">+</text>
+<text x="27.5" y="-167.2" font-family="Consolas" font-size="11">print()</text>
+<text x="10.5" y="-151.2" font-family="Consolas" font-size="11">+</text>
+<text x="27.5" y="-151.2" font-family="Consolas" font-size="11">Recorder()</text>
+<path fill="#666" stroke="#666" d="M.5-210h125z"/>
+<path fill="#666" stroke="#666" d="M.5-194h125z"/>
+<path fill="none" stroke="#666" d="M0-144v-84h125v84z"/>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M476.86-447.04c-87.39 33.03-234.9 95.9-343.36 179.04-14.69 11.26-28.64 25.93-40.22 39.68"/>
+<path fill="none" stroke="#63b8ff" d="m475.84-450.39 10.59-.23-8.13 6.78z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d6/d32/class_eigen_recorder.html" xlink:title="A EigenRecorder class." id="a_Node000005" target="_top">
+<path fill="#fff" stroke="transparent" d="M264-228H143v84h121z"/>
+<text x="160" y="-215.2" font-family="Consolas" font-size="11">EigenRecorder</text>
+<text x="200.5" y="-199.2" font-family="Consolas" font-size="11"> </text>
+<text x="147.5" y="-183.2" font-family="Consolas" font-size="11">+</text>
+<text x="158.5" y="-183.2" font-family="Consolas" font-size="11">EigenRecorder()</text>
+<text x="147.5" y="-167.2" font-family="Consolas" font-size="11">+</text>
+<text x="158.5" y="-167.2" font-family="Consolas" font-size="11">save()</text>
+<text x="147.5" y="-151.2" font-family="Consolas" font-size="11">+</text>
+<text x="158.5" y="-151.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M143.5-210h121z"/>
+<path fill="#666" stroke="#666" d="M143.5-194h121z"/>
+<path fill="none" stroke="#666" d="M143-144v-84h121v84z"/>
+</a></g><g id="edge4_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge4_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M477.99-425.88C420.04-386.72 338.11-327.9 273.5-268c-13.08 12.13-26.2 26.55-37.48 39.85"/>
+<path fill="none" stroke="#63b8ff" d="m476.11-428.83 10.25-2.68-6.34 8.48z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d2/da4/class_element_recorder.html" xlink:title="A ElementRecorder class." id="a_Node000006" target="_top">
+<path fill="#fff" stroke="transparent" d="M394.5-228h-112v84h112z"/>
+<text x="287.5" y="-215.2" font-family="Consolas" font-size="11">ElementRecorder</text>
+<text x="335" y="-199.2" font-family="Consolas" font-size="11"> </text>
+<text x="289" y="-183.2" font-family="Consolas" font-size="11">+</text>
+<text x="302.5" y="-183.2" font-family="Consolas" font-size="11">initialize()</text>
+<text x="289" y="-167.2" font-family="Consolas" font-size="11">+</text>
+<text x="302.5" y="-167.2" font-family="Consolas" font-size="11">print()</text>
+<text x="289" y="-151.2" font-family="Consolas" font-size="11">+</text>
+<text x="302.5" y="-151.2" font-family="Consolas" font-size="11">Recorder()</text>
+<path fill="#666" stroke="#666" d="M282.5-210h112z"/>
+<path fill="#666" stroke="#666" d="M282.5-194h112z"/>
+<path fill="none" stroke="#666" d="M282.5-144v-84h112v84z"/>
+</a></g><g id="edge5_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge5_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M480.33-378.34c-37.7 50.86-82.25 110.97-111.23 150.05"/>
+<path fill="none" stroke="#63b8ff" d="m477.55-380.47 8.77-5.94-3.15 10.11z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../da/d11/class_frame_recorder.html" xlink:title="A FrameRecorder class." id="a_Node000008" target="_top">
+<path fill="#fff" stroke="transparent" d="M540.5-268h-128v164h128z"/>
+<text x="432.5" y="-255.2" font-family="Consolas" font-size="11">FrameRecorder</text>
+<text x="473" y="-239.2" font-family="Consolas" font-size="11"> </text>
+<text x="416.5" y="-223.2" font-family="Consolas" font-size="11">+</text>
+<text x="427.5" y="-223.2" font-family="Consolas" font-size="11">FrameRecorder()</text>
+<text x="416.5" y="-207.2" font-family="Consolas" font-size="11">+</text>
+<text x="427.5" y="-207.2" font-family="Consolas" font-size="11">FrameRecorder()</text>
+<text x="416.5" y="-191.2" font-family="Consolas" font-size="11">+</text>
+<text x="427.5" y="-191.2" font-family="Consolas" font-size="11">FrameRecorder()</text>
+<text x="416.5" y="-175.2" font-family="Consolas" font-size="11">+</text>
+<text x="427.5" y="-175.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="416.5" y="-159.2" font-family="Consolas" font-size="11">+</text>
+<text x="427.5" y="-159.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="416.5" y="-143.2" font-family="Consolas" font-size="11">+</text>
+<text x="427.5" y="-143.2" font-family="Consolas" font-size="11">~FrameRecorder()</text>
+<text x="416.5" y="-127.2" font-family="Consolas" font-size="11">+</text>
+<text x="427.5" y="-127.2" font-family="Consolas" font-size="11">save()</text>
+<text x="416.5" y="-111.2" font-family="Consolas" font-size="11">+</text>
+<text x="427.5" y="-111.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M412.5-250h128z"/>
+<path fill="#666" stroke="#666" d="M412.5-234h128z"/>
+<path fill="none" stroke="#666" d="M412.5-104v-164h128v164z"/>
+</a></g><g id="edge7_Node000001_Node000008" class="edge"><title>Node1-&gt;Node8</title><a id="a_edge7_Node000001_Node000008">
+<path fill="none" stroke="#63b8ff" d="M504.19-294c-2.31 8.91-4.56 17.62-6.73 25.98"/>
+<path fill="none" stroke="#63b8ff" d="m500.81-294.94 5.9-8.8.88 10.56z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../d8/d66/class_global_recorder.html" xlink:title="A GlobalRecorder class." id="a_Node000009" target="_top">
+<path fill="#fff" stroke="transparent" d="M692.5-236h-134v100h134z"/>
+<text x="578" y="-223.2" font-family="Consolas" font-size="11">GlobalRecorder</text>
+<text x="622" y="-207.2" font-family="Consolas" font-size="11"> </text>
+<text x="562.5" y="-191.2" font-family="Consolas" font-size="11">+</text>
+<text x="573.5" y="-191.2" font-family="Consolas" font-size="11">GlobalRecorder()</text>
+<text x="562.5" y="-175.2" font-family="Consolas" font-size="11">+</text>
+<text x="573.5" y="-175.2" font-family="Consolas" font-size="11">print()</text>
+<text x="562.5" y="-159.2" font-family="Consolas" font-size="11">#</text>
+<text x="573.5" y="-159.2" font-family="Consolas" font-size="11">record_impl()</text>
+<text x="562.5" y="-143.2" font-family="Consolas" font-size="11">#</text>
+<text x="573.5" y="-143.2" font-family="Consolas" font-size="11">assemble_matrix()</text>
+<path fill="#666" stroke="#666" d="M558.5-218h134z"/>
+<path fill="#666" stroke="#666" d="M558.5-202h134z"/>
+<path fill="none" stroke="#666" d="M558.5-136v-100h134v100z"/>
+</a></g><g id="edge8_Node000001_Node000009" class="edge"><title>Node1-&gt;Node9</title><a id="a_edge8_Node000001_Node000009">
+<path fill="none" stroke="#63b8ff" d="M597.44-294c5.52 21.04 10.75 40.97 15.16 57.8"/>
+<path fill="none" stroke="#63b8ff" d="m594.04-293.18.85-10.56 5.92 8.79z"/>
+</a></g><g id="Node000012" class="node"><title>Node12</title><a xlink:href="../../de/d66/class_node_recorder.html" xlink:title="A NodeRecorder class." id="a_Node000012" target="_top">
+<path fill="#fff" stroke="transparent" d="M812-228H711v84h101z"/>
+<text x="721" y="-215.2" font-family="Consolas" font-size="11">NodeRecorder</text>
+<text x="758.5" y="-199.2" font-family="Consolas" font-size="11"> </text>
+<text x="715.5" y="-183.2" font-family="Consolas" font-size="11">+</text>
+<text x="726.5" y="-183.2" font-family="Consolas" font-size="11">initialize()</text>
+<text x="715.5" y="-167.2" font-family="Consolas" font-size="11">+</text>
+<text x="726.5" y="-167.2" font-family="Consolas" font-size="11">print()</text>
+<text x="715.5" y="-151.2" font-family="Consolas" font-size="11">+</text>
+<text x="726.5" y="-151.2" font-family="Consolas" font-size="11">Recorder()</text>
+<path fill="#666" stroke="#666" d="M711.5-210h101z"/>
+<path fill="#666" stroke="#666" d="M711.5-194h101z"/>
+<path fill="none" stroke="#666" d="M711-144v-84h101v84z"/>
+</a></g><g id="edge11_Node000001_Node000012" class="edge"><title>Node1-&gt;Node12</title><a id="a_edge11_Node000001_Node000012">
+<path fill="none" stroke="#63b8ff" d="M620.62-377.95c37.5 50.83 81.74 110.79 110.5 149.78"/>
+<path fill="none" stroke="#63b8ff" d="m617.79-375.9-3.12-10.13 8.75 5.97z"/>
+</a></g><g id="Node000014" class="node"><title>Node14</title><a xlink:href="../../d4/d62/class_sum_recorder.html" xlink:title="A SumRecorder class." id="a_Node000014" target="_top">
+<path fill="#fff" stroke="transparent" d="M931-228H830v84h101z"/>
+<text x="843.5" y="-215.2" font-family="Consolas" font-size="11">SumRecorder</text>
+<text x="877.5" y="-199.2" font-family="Consolas" font-size="11"> </text>
+<text x="834.5" y="-183.2" font-family="Consolas" font-size="11">+</text>
+<text x="845.5" y="-183.2" font-family="Consolas" font-size="11">initialize()</text>
+<text x="834.5" y="-167.2" font-family="Consolas" font-size="11">+</text>
+<text x="845.5" y="-167.2" font-family="Consolas" font-size="11">print()</text>
+<text x="834.5" y="-151.2" font-family="Consolas" font-size="11">+</text>
+<text x="845.5" y="-151.2" font-family="Consolas" font-size="11">Recorder()</text>
+<path fill="#666" stroke="#666" d="M830.5-210h101z"/>
+<path fill="#666" stroke="#666" d="M830.5-194h101z"/>
+<path fill="none" stroke="#666" d="M830-144v-84h101v84z"/>
+</a></g><g id="edge13_Node000001_Node000014" class="edge"><title>Node1-&gt;Node14</title><a id="a_edge13_Node000001_Node000014">
+<path fill="none" stroke="#63b8ff" d="M623.19-426.21C680.25-387.58 759.9-329.32 820.5-268c11.81 11.95 23.2 26.33 32.82 39.63"/>
+<path fill="none" stroke="#63b8ff" d="m620.93-423.52-6.34-8.48 10.25 2.68z"/>
+</a></g><g id="Node000016" class="node"><title>Node16</title><a xlink:href="../../d6/df5/class_visualisation_recorder.html" xlink:title="A VisualisationRecorder class." id="a_Node000016" target="_top">
+<path fill="#fff" stroke="transparent" d="M1124-236H949v100h175z"/>
+<text x="966" y="-223.2" font-family="Consolas" font-size="11">VisualisationRecorder</text>
+<text x="1033.5" y="-207.2" font-family="Consolas" font-size="11"> </text>
+<text x="953.5" y="-191.2" font-family="Consolas" font-size="11">+</text>
+<text x="964.5" y="-191.2" font-family="Consolas" font-size="11">VisualisationRecorder()</text>
+<text x="953.5" y="-175.2" font-family="Consolas" font-size="11">+</text>
+<text x="964.5" y="-175.2" font-family="Consolas" font-size="11">clear_status()</text>
+<text x="953.5" y="-159.2" font-family="Consolas" font-size="11">+</text>
+<text x="964.5" y="-159.2" font-family="Consolas" font-size="11">save()</text>
+<text x="953.5" y="-143.2" font-family="Consolas" font-size="11">+</text>
+<text x="964.5" y="-143.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M949.5-218h175z"/>
+<path fill="#666" stroke="#666" d="M949.5-202h175z"/>
+<path fill="none" stroke="#666" d="M949-136v-100h175v100z"/>
+</a></g><g id="edge15_Node000001_Node000016" class="edge"><title>Node1-&gt;Node16</title><a id="a_edge15_Node000001_Node000016">
+<path fill="none" stroke="#63b8ff" d="M624.34-439.82C704.59-402.48 835.29-337.83 939.5-268c14.22 9.53 28.77 20.77 42.15 31.79"/>
+<path fill="none" stroke="#63b8ff" d="m622.41-436.86-7.6-7.38 10.55 1.03z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../db/db8/class_unique_tag.html" xlink:title="Label objects that cannot be copied." id="a_Node000002" target="_top">
+<path fill="#fff" stroke="transparent" d="M601-844H500v164h101z"/>
+<text x="520.5" y="-831.2" font-family="Consolas" font-size="11">UniqueTag</text>
+<text x="547.5" y="-815.2" font-family="Consolas" font-size="11"> </text>
+<text x="504.5" y="-799.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-799.2" font-family="Consolas" font-size="11">UniqueTag()</text>
+<text x="504.5" y="-783.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-783.2" font-family="Consolas" font-size="11">UniqueTag()</text>
+<text x="504.5" y="-767.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-767.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="504.5" y="-751.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-751.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="504.5" y="-735.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-735.2" font-family="Consolas" font-size="11">~UniqueTag()</text>
+<text x="504.5" y="-719.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-719.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="504.5" y="-703.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-703.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="504.5" y="-687.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-687.2" font-family="Consolas" font-size="11">Tag()</text>
+<path fill="#666" stroke="#666" d="M500.5-826h101z"/>
+<path fill="#666" stroke="#666" d="M500.5-810h101z"/>
+<path fill="none" stroke="#666" d="M500-680v-164h101v164z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node2-&gt;Node1</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M550.5-669.77v25.71"/>
+<path fill="none" stroke="#63b8ff" d="m547-669.81 3.5-10 3.5 10z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d0/d57/class_tag.html" xlink:title="A base Tag class." id="a_Node000003" target="_top">
+<path fill="#fff" stroke="transparent" d="M601-1156H500v276h101z"/>
+<text x="540.5" y="-1143.2" font-family="Consolas" font-size="11">Tag</text>
+<text x="547.5" y="-1127.2" font-family="Consolas" font-size="11"> </text>
+<text x="504.5" y="-1111.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-1111.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="504.5" y="-1095.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-1095.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="504.5" y="-1079.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-1079.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="504.5" y="-1063.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-1063.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="504.5" y="-1047.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-1047.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="504.5" y="-1031.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-1031.2" font-family="Consolas" font-size="11">~Tag()</text>
+<text x="504.5" y="-1015.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-1015.2" font-family="Consolas" font-size="11">set_tag()</text>
+<text x="504.5" y="-999.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-999.2" font-family="Consolas" font-size="11">get_tag()</text>
+<text x="504.5" y="-983.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-983.2" font-family="Consolas" font-size="11">enable()</text>
+<text x="504.5" y="-967.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-967.2" font-family="Consolas" font-size="11">disable()</text>
+<text x="504.5" y="-951.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-951.2" font-family="Consolas" font-size="11">guard()</text>
+<text x="504.5" y="-935.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-935.2" font-family="Consolas" font-size="11">unguard()</text>
+<text x="504.5" y="-919.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-919.2" font-family="Consolas" font-size="11">is_active()</text>
+<text x="504.5" y="-903.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-903.2" font-family="Consolas" font-size="11">is_guarded()</text>
+<text x="504.5" y="-887.2" font-family="Consolas" font-size="11">+</text>
+<text x="515.5" y="-887.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M500.5-1138h101z"/>
+<path fill="#666" stroke="#666" d="M500.5-1122h101z"/>
+<path fill="none" stroke="#666" d="M500-880v-276h101v276z"/>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node3-&gt;Node2</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M550.5-869.72v25.49"/>
+<path fill="none" stroke="#63b8ff" d="m547-869.96 3.5-10 3.5 10z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d9/d00/class_group_element_recorder.html" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="transparent" d="M339.5-60h-146v52h146z"/>
+<text x="198.5" y="-47.2" font-family="Consolas" font-size="11">GroupElementRecorder</text>
+<text x="263" y="-31.2" font-family="Consolas" font-size="11"> </text>
+<text x="217" y="-15.2" font-family="Consolas" font-size="11">+</text>
+<text x="247.5" y="-15.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M193.5-42h146z"/>
+<path fill="#666" stroke="#666" d="M193.5-26h146z"/>
+<path fill="none" stroke="#666" d="M193.5-8v-52h146v52z"/>
+</a></g><g id="edge6_Node000006_Node000007" class="edge"><title>Node6-&gt;Node7</title><a id="a_edge6_Node000006_Node000007">
+<path fill="none" stroke="#63b8ff" d="M314.16-134.29c-11.96 24.92-25.85 53.84-35.53 74.02"/>
+<path fill="none" stroke="#63b8ff" d="m311.15-136.11 7.49-7.5-1.18 10.53z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../d6/d11/class_global_mass_recorder.html" id="a_Node000010" target="_top">
+<path fill="#fff" stroke="transparent" d="M513-68H358V0h155z"/>
+<text x="375" y="-55.2" font-family="Consolas" font-size="11">GlobalMassRecorder</text>
+<text x="432.5" y="-39.2" font-family="Consolas" font-size="11"> </text>
+<text x="362.5" y="-23.2" font-family="Consolas" font-size="11">+</text>
+<text x="373.5" y="-23.2" font-family="Consolas" font-size="11">GlobalMassRecorder()</text>
+<text x="362.5" y="-7.2" font-family="Consolas" font-size="11">+</text>
+<text x="373.5" y="-7.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M358.5-50h155z"/>
+<path fill="#666" stroke="#666" d="M358.5-34h155z"/>
+<path fill="none" stroke="#666" d="M358 0v-68h155V0z"/>
+</a></g><g id="edge9_Node000009_Node000010" class="edge"><title>Node9-&gt;Node10</title><a id="a_edge9_Node000009_Node000010">
+<path fill="none" stroke="#63b8ff" d="M576.27-128.47c-8.55 8.61-17.64 17.07-26.77 24.47-16.09 13.03-34.86 25.38-52.48 35.94"/>
+<path fill="none" stroke="#63b8ff" d="m573.84-130.98 9.48-4.73-4.47 9.61z"/>
+</a></g><g id="Node000011" class="node"><title>Node11</title><a xlink:href="../../d8/d7d/class_global_stiffness_recorder.html" id="a_Node000011" target="_top">
+<path fill="#fff" stroke="transparent" d="M719.5-68h-188V0h188z"/>
+<text x="547.5" y="-55.2" font-family="Consolas" font-size="11">GlobalStiffnessRecorder</text>
+<text x="622" y="-39.2" font-family="Consolas" font-size="11"> </text>
+<text x="535.5" y="-23.2" font-family="Consolas" font-size="11">+</text>
+<text x="546.5" y="-23.2" font-family="Consolas" font-size="11">GlobalStiffnessRecorder()</text>
+<text x="535.5" y="-7.2" font-family="Consolas" font-size="11">+</text>
+<text x="546.5" y="-7.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M531.5-50h188z"/>
+<path fill="#666" stroke="#666" d="M531.5-34h188z"/>
+<path fill="none" stroke="#666" d="M531.5 0v-68h188V0z"/>
+</a></g><g id="edge10_Node000009_Node000011" class="edge"><title>Node9-&gt;Node11</title><a id="a_edge10_Node000009_Node000011">
+<path fill="none" stroke="#63b8ff" d="M625.5-125.79v57.67"/>
+<path fill="none" stroke="#63b8ff" d="m622-125.88 3.5-10 3.5 10z"/>
+</a></g><g id="Node000013" class="node"><title>Node13</title><a xlink:href="../../d1/dcb/class_group_node_recorder.html" id="a_Node000013" target="_top">
+<path fill="#fff" stroke="transparent" d="M863-60H738v52h125z"/>
+<text x="743.5" y="-47.2" font-family="Consolas" font-size="11">GroupNodeRecorder</text>
+<text x="797.5" y="-31.2" font-family="Consolas" font-size="11"> </text>
+<text x="757" y="-15.2" font-family="Consolas" font-size="11">+</text>
+<text x="782.5" y="-15.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M738.5-42h125z"/>
+<path fill="#666" stroke="#666" d="M738.5-26h125z"/>
+<path fill="none" stroke="#666" d="M738-8v-52h125v52z"/>
+</a></g><g id="edge12_Node000012_Node000013" class="edge"><title>Node12-&gt;Node13</title><a id="a_edge12_Node000012_Node000013">
+<path fill="none" stroke="#63b8ff" d="m774.86-133.63 19.07 73.36"/>
+<path fill="none" stroke="#63b8ff" d="m771.39-133.06.87-10.55 5.9 8.79z"/>
+</a></g><g id="Node000015" class="node"><title>Node15</title><a xlink:href="../../d8/d73/class_group_sum_recorder.html" id="a_Node000015" target="_top">
+<path fill="#fff" stroke="transparent" d="M1000-60H881v52h119z"/>
+<text x="886.5" y="-47.2" font-family="Consolas" font-size="11">GroupSumRecorder</text>
+<text x="937.5" y="-31.2" font-family="Consolas" font-size="11"> </text>
+<text x="898.5" y="-15.2" font-family="Consolas" font-size="11">+</text>
+<text x="922.5" y="-15.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M881.5-42h119z"/>
+<path fill="#666" stroke="#666" d="M881.5-26h119z"/>
+<path fill="none" stroke="#666" d="M881-8v-52h119v52z"/>
+</a></g><g id="edge14_Node000014_Node000015" class="edge"><title>Node14-&gt;Node15</title><a id="a_edge14_Node000014_Node000015">
+<path fill="none" stroke="#63b8ff" d="M900.78-134.29c9.97 24.92 21.54 53.84 29.61 74.02"/>
+<path fill="none" stroke="#63b8ff" d="m897.52-133.03-.47-10.58 6.97 7.98z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_recorder__inherit__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

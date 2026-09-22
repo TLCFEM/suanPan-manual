@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 521;
+var viewHeight = 62;
+var sectionId = &apos;dynsection-7&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>BatheTwoStep::from_incre_velocity</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M138-32H0V0h138z"/>
+<text x="8" y="-19.2" font-family="Consolas" font-size="11">BatheTwoStep::from</text>
+<text x="69" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">_incre_velocity</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d9/dd7/class_bathe_two_step.html#a955cd0bc6156f958528833ec23f02325" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M312-54H174v32h138z"/>
+<text x="182" y="-41.2" font-family="Consolas" font-size="11">BatheTwoStep::from</text>
+<text x="243" y="-29.2" font-family="Consolas" font-size="11" text-anchor="middle">_total_velocity</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M138.47-24.76c8.26-1.05 16.75-2.14 25.13-3.21"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m163.4-31.47 10.36 2.2-9.47 4.74z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d6/d55/class_integrator.html#a9a18b162e89034cc0ee5efb3b19ca5dc" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M513-26H348v20h165z"/>
+<text x="430.5" y="-13.2" font-family="Consolas" font-size="11" text-anchor="middle">Integrator::get_domain</text>
+</a></g><g id="edge3_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge3_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M138.24-13.75c11.92.31 24.2.58 35.76.75 61.33.88 76.67.78 138 0 8.36-.11 17.05-.26 25.76-.43"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m337.89-16.94 10.08 3.29-9.93 3.71z"/>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M312.02-29.93c8.4.99 17.09 2.02 25.77 3.05"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m338.43-30.33 9.52 4.66-10.34 2.3z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_bathe_two_step_ac71e580b70b8f114f8a717a726031d69_cgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

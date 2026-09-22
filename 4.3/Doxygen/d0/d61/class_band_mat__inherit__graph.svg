@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 163;
+var viewHeight = 1204;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>BandMat&lt; T &gt;</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="A BandMat class that holds matrices." id="a_Node000001">
+<path fill="#999" stroke="transparent" d="M134.5-412h-114v212h114z"/>
+<text x="36.5" y="-399.2" font-family="Consolas" font-size="11">BandMat&lt; T &gt;</text>
+<text x="24.5" y="-383.2" font-family="Consolas" font-size="11">#</text>
+<text x="35.5" y="-383.2" font-family="Consolas" font-size="11">m_rows</text>
+<text x="24.5" y="-367.2" font-family="Consolas" font-size="11">#</text>
+<text x="35.5" y="-367.2" font-family="Consolas" font-size="11">l_band</text>
+<text x="24.5" y="-351.2" font-family="Consolas" font-size="11">#</text>
+<text x="35.5" y="-351.2" font-family="Consolas" font-size="11">u_band</text>
+<text x="24.5" y="-335.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-335.2" font-family="Consolas" font-size="11">BandMat()</text>
+<text x="24.5" y="-319.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-319.2" font-family="Consolas" font-size="11">unique_copy()</text>
+<text x="24.5" y="-303.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-303.2" font-family="Consolas" font-size="11">nullify()</text>
+<text x="24.5" y="-287.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-287.2" font-family="Consolas" font-size="11">operator()()</text>
+<text x="24.5" y="-271.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-271.2" font-family="Consolas" font-size="11">unsafe_at()</text>
+<text x="24.5" y="-255.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-255.2" font-family="Consolas" font-size="11">at()</text>
+<text x="24.5" y="-239.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-239.2" font-family="Consolas" font-size="11">operator*()</text>
+<text x="24.5" y="-223.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-223.2" font-family="Consolas" font-size="11">sign_det()</text>
+<text x="24.5" y="-207.2" font-family="Consolas" font-size="11">#</text>
+<text x="35.5" y="-207.2" font-family="Consolas" font-size="11">direct_solve()</text>
+<path fill="#666" stroke="#666" d="M20.5-394h114z"/>
+<path fill="#666" stroke="#666" d="M20.5-346h13z"/>
+<path fill="#666" stroke="#666" d="M33.5-346h101z"/>
+<path fill="none" stroke="#666" d="M20.5-200v-212h114v212z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../de/d54/class_band_mat_m_a_g_m_a.html" xlink:title="A BandMatMAGMA class that holds matrices." id="a_Node000004" target="_top">
+<path fill="#fff" stroke="transparent" d="M140-164H15V0h125z"/>
+<text x="20.5" y="-151.2" font-family="Consolas" font-size="11">BandMatMAGMA&lt; T &gt;</text>
+<text x="74.5" y="-135.2" font-family="Consolas" font-size="11"> </text>
+<text x="20.5" y="-119.2" font-family="Consolas" font-size="11">+</text>
+<text x="32.5" y="-119.2" font-family="Consolas" font-size="11">BandMatMAGMA()</text>
+<text x="20.5" y="-103.2" font-family="Consolas" font-size="11">+</text>
+<text x="32.5" y="-103.2" font-family="Consolas" font-size="11">BandMatMAGMA()</text>
+<text x="20.5" y="-87.2" font-family="Consolas" font-size="11">+</text>
+<text x="32.5" y="-87.2" font-family="Consolas" font-size="11">BandMatMAGMA()</text>
+<text x="20.5" y="-71.2" font-family="Consolas" font-size="11">+</text>
+<text x="32.5" y="-71.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="20.5" y="-55.2" font-family="Consolas" font-size="11">+</text>
+<text x="32.5" y="-55.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="20.5" y="-39.2" font-family="Consolas" font-size="11">+</text>
+<text x="32.5" y="-39.2" font-family="Consolas" font-size="11">~BandMatMAGMA()</text>
+<text x="20.5" y="-23.2" font-family="Consolas" font-size="11">+</text>
+<text x="32.5" y="-23.2" font-family="Consolas" font-size="11">unique_copy()</text>
+<text x="20.5" y="-7.2" font-family="Consolas" font-size="11">#</text>
+<text x="32.5" y="-7.2" font-family="Consolas" font-size="11">direct_solve()</text>
+<path fill="#666" stroke="#666" d="M15.5-146h125z"/>
+<path fill="#666" stroke="#666" d="M15.5-130h125z"/>
+<path fill="none" stroke="#666" d="M15 0v-164h125V0z"/>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M77.5-189.72v25.56"/>
+<path fill="none" stroke="#63b8ff" d="m74-189.85 3.5-10 3.5 10z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d0/de9/class_dense_mat.html" xlink:title="A DenseMat class that holds matrices." id="a_Node000002" target="_top">
+<path fill="#fff" stroke="transparent" d="M134.5-788h-114v340h114z"/>
+<text x="33.5" y="-775.2" font-family="Consolas" font-size="11">DenseMat&lt; T &gt;</text>
+<text x="24.5" y="-759.2" font-family="Consolas" font-size="11">#</text>
+<text x="35.5" y="-759.2" font-family="Consolas" font-size="11">pivot</text>
+<text x="24.5" y="-743.2" font-family="Consolas" font-size="11">#</text>
+<text x="35.5" y="-743.2" font-family="Consolas" font-size="11">s_memory</text>
+<text x="24.5" y="-727.2" font-family="Consolas" font-size="11">#</text>
+<text x="35.5" y="-727.2" font-family="Consolas" font-size="11">memory</text>
+<text x="24.5" y="-711.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-711.2" font-family="Consolas" font-size="11">DenseMat()</text>
+<text x="24.5" y="-695.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-695.2" font-family="Consolas" font-size="11">DenseMat()</text>
+<text x="24.5" y="-679.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-679.2" font-family="Consolas" font-size="11">DenseMat()</text>
+<text x="24.5" y="-663.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-663.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="24.5" y="-647.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-647.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="24.5" y="-631.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-631.2" font-family="Consolas" font-size="11">~DenseMat()</text>
+<text x="24.5" y="-615.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-615.2" font-family="Consolas" font-size="11">is_empty()</text>
+<text x="24.5" y="-599.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-599.2" font-family="Consolas" font-size="11">zeros()</text>
+<text x="24.5" y="-583.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-583.2" font-family="Consolas" font-size="11">max()</text>
+<text x="24.5" y="-567.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-567.2" font-family="Consolas" font-size="11">memptr()</text>
+<text x="24.5" y="-551.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-551.2" font-family="Consolas" font-size="11">memptr()</text>
+<text x="24.5" y="-535.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-535.2" font-family="Consolas" font-size="11">scale_accu()</text>
+<text x="24.5" y="-519.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-519.2" font-family="Consolas" font-size="11">scale_accu()</text>
+<text x="24.5" y="-503.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-503.2" font-family="Consolas" font-size="11">operator*=()</text>
+<text x="24.5" y="-487.2" font-family="Consolas" font-size="11">+</text>
+<text x="35.5" y="-487.2" font-family="Consolas" font-size="11">allreduce()</text>
+<text x="24.5" y="-471.2" font-family="Consolas" font-size="11">#</text>
+<text x="35.5" y="-471.2" font-family="Consolas" font-size="11">direct_solve()</text>
+<text x="24.5" y="-455.2" font-family="Consolas" font-size="11">#</text>
+<text x="35.5" y="-455.2" font-family="Consolas" font-size="11">to_float()</text>
+<path fill="#666" stroke="#666" d="M20.5-770h114z"/>
+<path fill="#666" stroke="#666" d="M20.5-722h13z"/>
+<path fill="#666" stroke="#666" d="M33.5-722h101z"/>
+<path fill="none" stroke="#666" d="M20.5-448v-340h114v340z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node2-&gt;Node1</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M77.5-437.69v25.65"/>
+<path fill="none" stroke="#63b8ff" d="m74-437.94 3.5-10 3.5 10z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d8/d79/class_meta_mat.html" xlink:title="A MetaMat class that holds matrices." id="a_Node000003" target="_top">
+<path fill="#fff" stroke="transparent" d="M155-1196H0v372h155z"/>
+<text x="37" y="-1183.2" font-family="Consolas" font-size="11">MetaMat&lt; T &gt;</text>
+<text x="4.5" y="-1167.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-1167.2" font-family="Consolas" font-size="11">triplet_mat</text>
+<text x="4.5" y="-1151.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-1151.2" font-family="Consolas" font-size="11">n_rows</text>
+<text x="4.5" y="-1135.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-1135.2" font-family="Consolas" font-size="11">n_cols</text>
+<text x="4.5" y="-1119.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-1119.2" font-family="Consolas" font-size="11">n_elem</text>
+<text x="4.5" y="-1103.2" font-family="Consolas" font-size="11">#</text>
+<text x="15.5" y="-1103.2" font-family="Consolas" font-size="11">factored</text>
+<text x="4.5" y="-1087.2" font-family="Consolas" font-size="11">#</text>
+<text x="15.5" y="-1087.2" font-family="Consolas" font-size="11">setting</text>
+<text x="4.5" y="-1071.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-1071.2" font-family="Consolas" font-size="11">MetaMat()</text>
+<text x="4.5" y="-1055.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-1055.2" font-family="Consolas" font-size="11">MetaMat()</text>
+<text x="4.5" y="-1039.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-1039.2" font-family="Consolas" font-size="11">MetaMat()</text>
+<text x="4.5" y="-1023.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-1023.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="4.5" y="-1007.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-1007.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="4.5" y="-991.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-991.2" font-family="Consolas" font-size="11">~MetaMat()</text>
+<text x="4.5" y="-975.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-975.2" font-family="Consolas" font-size="11">set_solver_setting()</text>
+<text x="4.5" y="-959.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-959.2" font-family="Consolas" font-size="11">get_solver_setting()</text>
+<text x="4.5" y="-943.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-943.2" font-family="Consolas" font-size="11">set_factored()</text>
+<text x="4.5" y="-927.2" font-family="Consolas" font-size="11">+</text>
+<text x="15.5" y="-927.2" font-family="Consolas" font-size="11">is_empty()</text>
+<text x="15.5" y="-911.2" font-family="Consolas" font-size="11">and 29 more...</text>
+<text x="4.5" y="-895.2" font-family="Consolas" font-size="11">#</text>
+<text x="15.5" y="-895.2" font-family="Consolas" font-size="11">direct_solve()</text>
+<text x="4.5" y="-879.2" font-family="Consolas" font-size="11">#</text>
+<text x="15.5" y="-879.2" font-family="Consolas" font-size="11">direct_solve()</text>
+<text x="4.5" y="-863.2" font-family="Consolas" font-size="11">#</text>
+<text x="15.5" y="-863.2" font-family="Consolas" font-size="11">direct_solve()</text>
+<text x="4.5" y="-847.2" font-family="Consolas" font-size="11">#</text>
+<text x="15.5" y="-847.2" font-family="Consolas" font-size="11">direct_solve()</text>
+<text x="4.5" y="-831.2" font-family="Consolas" font-size="11">#</text>
+<text x="15.5" y="-831.2" font-family="Consolas" font-size="11">mixed_trs()</text>
+<path fill="#666" stroke="#666" d="M.5-1178h155z"/>
+<path fill="#666" stroke="#666" d="M.5-1082h13z"/>
+<path fill="#666" stroke="#666" d="M13.5-1082h142z"/>
+<path fill="none" stroke="#666" d="M0-824v-372h155v372z"/>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node3-&gt;Node2</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M77.5-813.86v25.83"/>
+<path fill="none" stroke="#63b8ff" d="m74-813.99 3.5-10 3.5 10z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_band_mat__inherit__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

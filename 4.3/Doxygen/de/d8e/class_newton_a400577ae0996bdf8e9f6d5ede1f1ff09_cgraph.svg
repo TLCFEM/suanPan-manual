@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 555;
+var viewHeight = 180;
+var sectionId = &apos;dynsection-2&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Newton::analyze</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M118-96H0v20h118z"/>
+<text x="59" y="-83.2" font-family="Consolas" font-size="11" text-anchor="middle">Newton::analyze</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d6/d8d/class_solver.html#a8ce1e18b86c036ea3f282e587f6aa1b5" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M336-172H164v20h172z"/>
+<text x="250" y="-159.2" font-family="Consolas" font-size="11" text-anchor="middle">Solver::constant_matrix</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M75.36-96.13c18.12-11.56 49.5-30.35 78.64-41.87 11.12-4.4 23.3-8.19 35.12-11.38"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m188.37-152.8 10.56.89-8.81 5.89z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d6/d8d/class_solver.html#a482410d3c1723d28f84b53ba7564fe24" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M547-153H382v20h165z"/>
+<text x="464.5" y="-140.2" font-family="Consolas" font-size="11" text-anchor="middle">Solver::get_integrator</text>
+</a></g><g id="edge4_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge4_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M106.25-96.09c15.17-3.11 32.14-6.38 47.75-8.91 72.89-11.82 155.98-21.84 217.7-28.61"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m371.48-137.11 10.32 2.4-9.56 4.56z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d6/d8d/class_solver.html#a575498b87ff20cc24659ca1732687c46" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M329-96H171v20h158z"/>
+<text x="250" y="-83.2" font-family="Consolas" font-size="11" text-anchor="middle">Solver::get_converger</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M118.25-86h42.15"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m160.77-89.5 10 3.5-10 3.5z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d6/d8d/class_solver.html#a6a7817e8e60ebd975550c6a2a4e0e842" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M346-58H154v20h192z"/>
+<text x="250" y="-45.2" font-family="Consolas" font-size="11" text-anchor="middle">Solver::set_step_amplifier</text>
+</a></g><g id="edge5_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge5_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M109.76-75.92c14.28 2.88 29.88 6.03 44.24 8.92 11.22 2.26 23.19 4.66 34.72 6.96"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m189.59-63.43 9.12 5.39-10.5 1.47z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d8/d8f/suan_pan_8h.html#a1dedfe8914d601833d703818541d3b29" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M305.5-20h-111V0h111z"/>
+<text x="250" y="-7.2" font-family="Consolas" font-size="11" text-anchor="middle">suanpan_assert</text>
+</a></g><g id="edge6_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge6_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M73.23-75.91C90.75-63.05 123.05-41.05 154-29c9.62 3.75 20.09 6.79 30.45 9.25"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m185.31-23.15 9 5.58-10.52 1.26z"/>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M336.21-154.38c11.61 1.04 23.57 2.11 35.29 3.15"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m372.08-154.69 9.65 4.38-10.28 2.59z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_newton_a400577ae0996bdf8e9f6d5ede1f1ff09_cgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

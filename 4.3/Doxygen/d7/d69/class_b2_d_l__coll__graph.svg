@@ -1,0 +1,406 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 1394;
+var viewHeight = 1850;
+var sectionId = &apos;dynsection-1&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>B2DL</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="A B2DL class." id="a_Node000001">
+<path fill="#999" stroke="transparent" d="M920.5-192h-175V0h175z"/>
+<text x="819.5" y="-179.2" font-family="Consolas" font-size="11">B2DL</text>
+<text x="830" y="-163.2" font-family="Consolas" font-size="11"> </text>
+<text x="750" y="-147.2" font-family="Consolas" font-size="11">+</text>
+<text x="761" y="-147.2" font-family="Consolas" font-size="11">type()</text>
+<text x="750" y="-131.2" font-family="Consolas" font-size="11">+</text>
+<text x="761" y="-131.2" font-family="Consolas" font-size="11">unique_copy()</text>
+<text x="750" y="-115.2" font-family="Consolas" font-size="11">+</text>
+<text x="761" y="-115.2" font-family="Consolas" font-size="11">to_local_vec()</text>
+<text x="750" y="-99.2" font-family="Consolas" font-size="11">+</text>
+<text x="761" y="-99.2" font-family="Consolas" font-size="11">to_global_vec()</text>
+<text x="750" y="-83.2" font-family="Consolas" font-size="11">+</text>
+<text x="761" y="-83.2" font-family="Consolas" font-size="11">to_global_mass_mat()</text>
+<text x="750" y="-67.2" font-family="Consolas" font-size="11">+</text>
+<text x="761" y="-67.2" font-family="Consolas" font-size="11">to_global_stiffness</text>
+<text x="761" y="-55.2" font-family="Consolas" font-size="11">_mat()</text>
+<text x="750" y="-39.2" font-family="Consolas" font-size="11">+</text>
+<text x="761" y="-39.2" font-family="Consolas" font-size="11">Orientation()</text>
+<text x="750" y="-23.2" font-family="Consolas" font-size="11">#</text>
+<text x="761" y="-23.2" font-family="Consolas" font-size="11">form_trans_mat()</text>
+<text x="750" y="-7.2" font-family="Consolas" font-size="11">#</text>
+<text x="761" y="-7.2" font-family="Consolas" font-size="11">update_transformation()</text>
+<path fill="#666" stroke="#666" d="M746-174h175z"/>
+<path fill="#666" stroke="#666" d="M746-158h175z"/>
+<path fill="none" stroke="#666" d="M745.5 0v-192h175V0z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d2/dcd/class_orientation.html" xlink:title="A Orientation class." id="a_Node000002" target="_top">
+<path fill="#fff" stroke="transparent" d="M443.5-473h-175v244h175z"/>
+<text x="319" y="-460.2" font-family="Consolas" font-size="11">Orientation</text>
+<text x="353" y="-444.2" font-family="Consolas" font-size="11"> </text>
+<text x="273" y="-428.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-428.2" font-family="Consolas" font-size="11">Orientation()</text>
+<text x="273" y="-412.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-412.2" font-family="Consolas" font-size="11">update_axis()</text>
+<text x="273" y="-396.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-396.2" font-family="Consolas" font-size="11">set_element_ptr()</text>
+<text x="273" y="-380.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-380.2" font-family="Consolas" font-size="11">is_nlgeom()</text>
+<text x="273" y="-364.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-364.2" font-family="Consolas" font-size="11">type()</text>
+<text x="273" y="-348.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-348.2" font-family="Consolas" font-size="11">get_length()</text>
+<text x="273" y="-332.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-332.2" font-family="Consolas" font-size="11">get_inclination()</text>
+<text x="273" y="-316.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-316.2" font-family="Consolas" font-size="11">get_transformation()</text>
+<text x="273" y="-300.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-300.2" font-family="Consolas" font-size="11">unique_copy()</text>
+<text x="273" y="-284.2" font-family="Consolas" font-size="11">+</text>
+<text x="284" y="-284.2" font-family="Consolas" font-size="11">update_status()</text>
+<text x="284" y="-268.2" font-family="Consolas" font-size="11">and 18 more...</text>
+<text x="273" y="-252.2" font-family="Consolas" font-size="11">#</text>
+<text x="284" y="-252.2" font-family="Consolas" font-size="11">check_element_ptr()</text>
+<text x="273" y="-236.2" font-family="Consolas" font-size="11">#</text>
+<text x="284" y="-236.2" font-family="Consolas" font-size="11">update_transformation()</text>
+<path fill="#666" stroke="#666" d="M269-455h175z"/>
+<path fill="#666" stroke="#666" d="M269-439h175z"/>
+<path fill="none" stroke="#666" d="M268.5-229v-244h175v244z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node2-&gt;Node1</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M452.72-298.7c85.72 45.46 209.79 111.27 292.64 155.22"/>
+<path fill="none" stroke="#63b8ff" d="m450.96-295.67-7.19-7.78 10.47 1.6z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d7/d1d/class_copyable_tag.html" xlink:title="Label objects that can be copied." id="a_Node000003" target="_top">
+<path fill="#fff" stroke="transparent" d="M114-1347H0v164h114z"/>
+<text x="19.5" y="-1334.2" font-family="Consolas" font-size="11">CopyableTag</text>
+<text x="53.5" y="-1318.2" font-family="Consolas" font-size="11"> </text>
+<text x="4" y="-1302.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-1302.2" font-family="Consolas" font-size="11">CopyableTag()</text>
+<text x="4" y="-1286.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-1286.2" font-family="Consolas" font-size="11">CopyableTag()</text>
+<text x="4" y="-1270.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-1270.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="4" y="-1254.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-1254.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="4" y="-1238.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-1238.2" font-family="Consolas" font-size="11">~CopyableTag()</text>
+<text x="4" y="-1222.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-1222.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="4" y="-1206.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-1206.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="4" y="-1190.2" font-family="Consolas" font-size="11">+</text>
+<text x="15" y="-1190.2" font-family="Consolas" font-size="11">Tag()</text>
+<path fill="#666" stroke="#666" d="M0-1329h114z"/>
+<path fill="#666" stroke="#666" d="M0-1313h114z"/>
+<path fill="none" stroke="#666" d="M0-1183v-164h114v164z"/>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node3-&gt;Node2</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M38.29-1172.89C11.93-1019.2-19.14-704.35 115-491c34.64 55.1 99.59 90.71 153.34 112.07"/>
+<path fill="none" stroke="#63b8ff" d="m34.85-1173.52 5.16-9.25 1.73 10.45z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d0/d57/class_tag.html" xlink:title="A base Tag class." id="a_Node000004" target="_top">
+<path fill="#fff" stroke="transparent" d="M190.5-1842h-101v276h101z"/>
+<text x="130" y="-1829.2" font-family="Consolas" font-size="11">Tag</text>
+<text x="137" y="-1813.2" font-family="Consolas" font-size="11"> </text>
+<text x="94" y="-1797.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1797.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="94" y="-1781.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1781.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="94" y="-1765.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1765.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="94" y="-1749.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1749.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="94" y="-1733.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1733.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="94" y="-1717.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1717.2" font-family="Consolas" font-size="11">~Tag()</text>
+<text x="94" y="-1701.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1701.2" font-family="Consolas" font-size="11">set_tag()</text>
+<text x="94" y="-1685.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1685.2" font-family="Consolas" font-size="11">get_tag()</text>
+<text x="94" y="-1669.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1669.2" font-family="Consolas" font-size="11">enable()</text>
+<text x="94" y="-1653.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1653.2" font-family="Consolas" font-size="11">disable()</text>
+<text x="94" y="-1637.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1637.2" font-family="Consolas" font-size="11">guard()</text>
+<text x="94" y="-1621.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1621.2" font-family="Consolas" font-size="11">unguard()</text>
+<text x="94" y="-1605.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1605.2" font-family="Consolas" font-size="11">is_active()</text>
+<text x="94" y="-1589.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1589.2" font-family="Consolas" font-size="11">is_guarded()</text>
+<text x="94" y="-1573.2" font-family="Consolas" font-size="11">+</text>
+<text x="105" y="-1573.2" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M90-1824h101z"/>
+<path fill="#666" stroke="#666" d="M90-1808h101z"/>
+<path fill="none" stroke="#666" d="M89.5-1566v-276h101v276z"/>
+</a></g><g id="edge3_Node000003_Node000004" class="edge"><title>Node4-&gt;Node3</title><a id="a_edge3_Node000003_Node000004">
+<path fill="none" stroke="#63b8ff" d="M112.03-1555.74c-13.22 69.62-28.5 150.07-39.6 208.5"/>
+<path fill="none" stroke="#63b8ff" d="m108.66-1556.76 5.31-9.17 1.57 10.48z"/>
+</a></g><g id="Node000014" class="node"><title>Node14</title><a xlink:href="../../db/db8/class_unique_tag.html" xlink:title="Label objects that cannot be copied." id="a_Node000014" target="_top">
+<path fill="#fff" stroke="transparent" d="M1277.5-1529h-101v164h101z"/>
+<text x="1197" y="-1516.2" font-family="Consolas" font-size="11">UniqueTag</text>
+<text x="1224" y="-1500.2" font-family="Consolas" font-size="11"> </text>
+<text x="1181" y="-1484.2" font-family="Consolas" font-size="11">+</text>
+<text x="1192" y="-1484.2" font-family="Consolas" font-size="11">UniqueTag()</text>
+<text x="1181" y="-1468.2" font-family="Consolas" font-size="11">+</text>
+<text x="1192" y="-1468.2" font-family="Consolas" font-size="11">UniqueTag()</text>
+<text x="1181" y="-1452.2" font-family="Consolas" font-size="11">+</text>
+<text x="1192" y="-1452.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="1181" y="-1436.2" font-family="Consolas" font-size="11">+</text>
+<text x="1192" y="-1436.2" font-family="Consolas" font-size="11">operator=()</text>
+<text x="1181" y="-1420.2" font-family="Consolas" font-size="11">+</text>
+<text x="1192" y="-1420.2" font-family="Consolas" font-size="11">~UniqueTag()</text>
+<text x="1181" y="-1404.2" font-family="Consolas" font-size="11">+</text>
+<text x="1192" y="-1404.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="1181" y="-1388.2" font-family="Consolas" font-size="11">+</text>
+<text x="1192" y="-1388.2" font-family="Consolas" font-size="11">Tag()</text>
+<text x="1181" y="-1372.2" font-family="Consolas" font-size="11">+</text>
+<text x="1192" y="-1372.2" font-family="Consolas" font-size="11">Tag()</text>
+<path fill="#666" stroke="#666" d="M1177-1511h101z"/>
+<path fill="#666" stroke="#666" d="M1177-1495h101z"/>
+<path fill="none" stroke="#666" d="M1176.5-1365v-164h101v164z"/>
+</a></g><g id="edge14_Node000014_Node000004" class="edge"><title>Node4-&gt;Node14</title><a id="a_edge14_Node000014_Node000004">
+<path fill="none" stroke="#63b8ff" d="M200.76-1698.64c194.91 14.87 801.39 68.45 966.24 169.64 3.28 2.01 6.44 4.28 9.48 6.74"/>
+<path fill="none" stroke="#63b8ff" d="m200.4-1695.16-9.71-4.25 10.24-2.73z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d5/d50/class_element.html" xlink:title="A Element class." id="a_Node000005" target="_top">
+<path fill="#fff" stroke="transparent" d="M709.5-813h-215v292h215z"/>
+<text x="578.5" y="-800.2" font-family="Consolas" font-size="11">Element</text>
+<text x="599" y="-784.2" font-family="Consolas" font-size="11"> </text>
+<text x="499" y="-768.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-768.2" font-family="Consolas" font-size="11">Element()</text>
+<text x="499" y="-752.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-752.2" font-family="Consolas" font-size="11">Element()</text>
+<text x="499" y="-736.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-736.2" font-family="Consolas" font-size="11">Element()</text>
+<text x="499" y="-720.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-720.2" font-family="Consolas" font-size="11">Element()</text>
+<text x="499" y="-704.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-704.2" font-family="Consolas" font-size="11">Element()</text>
+<text x="499" y="-688.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-688.2" font-family="Consolas" font-size="11">initialize_base()</text>
+<text x="499" y="-672.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-672.2" font-family="Consolas" font-size="11">set_initialized()</text>
+<text x="499" y="-656.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-656.2" font-family="Consolas" font-size="11">set_symmetric()</text>
+<text x="499" y="-640.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-640.2" font-family="Consolas" font-size="11">is_initialized()</text>
+<text x="499" y="-624.2" font-family="Consolas" font-size="11">+</text>
+<text x="510" y="-624.2" font-family="Consolas" font-size="11">is_symmetric()</text>
+<text x="510" y="-608.2" font-family="Consolas" font-size="11">and 82 more...</text>
+<text x="499" y="-592.2" font-family="Consolas" font-size="11">#</text>
+<text x="510" y="-592.2" font-family="Consolas" font-size="11">get_node_incre_resistance()</text>
+<text x="499" y="-576.2" font-family="Consolas" font-size="11">#</text>
+<text x="510" y="-576.2" font-family="Consolas" font-size="11">get_node_trial_resistance()</text>
+<text x="499" y="-560.2" font-family="Consolas" font-size="11">#</text>
+<text x="510" y="-560.2" font-family="Consolas" font-size="11">get_node_current_resistance()</text>
+<text x="499" y="-544.2" font-family="Consolas" font-size="11">#</text>
+<text x="510" y="-544.2" font-family="Consolas" font-size="11">get_material()</text>
+<text x="499" y="-528.2" font-family="Consolas" font-size="11">#</text>
+<text x="510" y="-528.2" font-family="Consolas" font-size="11">get_section()</text>
+<path fill="#666" stroke="#666" d="M495-795h215z"/>
+<path fill="#666" stroke="#666" d="M495-779h215z"/>
+<path fill="none" stroke="#666" d="M494.5-521v-292h215v292z"/>
+</a></g><g id="edge4_Node000002_Node000005" class="edge"><title>Node5-&gt;Node2</title><a id="a_edge4_Node000002_Node000005">
+<path fill="none" stroke="#63b8ff" d="m494.46-528.73-42.93 54.8"/>
+<path fill="none" stroke="#63b8ff" d="m451.17-473.48-6.85 2.26-.55 7.19 6.85-2.26z"/>
+</a><text x="515" y="-494.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> #element_ptr</text></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d2/db9/struct_data_element.html" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="transparent" d="M676-1117H528v196h148z"/>
+<text x="564.5" y="-1104.2" font-family="Consolas" font-size="11">DataElement</text>
+<text x="532" y="-1088.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-1088.2" font-family="Consolas" font-size="11">trial_mass</text>
+<text x="532" y="-1072.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-1072.2" font-family="Consolas" font-size="11">initial_viscous</text>
+<text x="532" y="-1056.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-1056.2" font-family="Consolas" font-size="11">trial_viscous</text>
+<text x="532" y="-1040.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-1040.2" font-family="Consolas" font-size="11">trial_nonviscous</text>
+<text x="532" y="-1024.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-1024.2" font-family="Consolas" font-size="11">trial_stiffness</text>
+<text x="532" y="-1008.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-1008.2" font-family="Consolas" font-size="11">trial_geometry</text>
+<text x="532" y="-992.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-992.2" font-family="Consolas" font-size="11">trial_viscous_force</text>
+<text x="532" y="-976.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-976.2" font-family="Consolas" font-size="11">traction</text>
+<text x="532" y="-960.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-960.2" font-family="Consolas" font-size="11">stiffness_container</text>
+<text x="532" y="-944.2" font-family="Consolas" font-size="11">+</text>
+<text x="543" y="-944.2" font-family="Consolas" font-size="11">mass_container</text>
+<text x="598.5" y="-928.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M528-1099h148z"/>
+<path fill="#666" stroke="#666" d="M528-939h13z"/>
+<path fill="#666" stroke="#666" d="M541-939h135z"/>
+<path fill="none" stroke="#666" d="M528-921v-196h148v196z"/>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node6-&gt;Node5</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#006400" d="M602-910.66v97.57"/>
+<path fill="none" stroke="#006400" d="m598.5-910.97 3.5-10 3.5 10z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../dd/d59/classuvec.html" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="transparent" d="M800-1473h-38v52h38z"/>
+<text x="767" y="-1460.2" font-family="Consolas" font-size="11">uvec</text>
+<text x="777.5" y="-1444.2" font-family="Consolas" font-size="11"> </text>
+<text x="777.5" y="-1428.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M762-1455h38z"/>
+<path fill="#666" stroke="#666" d="M762-1439h38z"/>
+<path fill="none" stroke="#666" d="M762-1421v-52h38v52z"/>
+</a></g><g id="edge6_Node000006_Node000007" class="edge"><title>Node7-&gt;Node6</title><a id="a_edge6_Node000006_Node000007">
+<path fill="none" stroke="#63b8ff" d="M780.55-1420.97c-1.36 62.21-6.28 220.13-21.55 237.97-22.01 25.72-46.95-2.34-74 18-13.66 10.27-25.42 23.49-35.45 37.76"/>
+<path fill="none" stroke="#63b8ff" d="m649.54-1127.21-6.66 2.78.01 7.21 6.66-2.78z"/>
+</a><text x="825.5" y="-1280.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +dof_encoding</text><text x="825.5" y="-1268.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+material_tag</text><text x="825.5" y="-1256.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+node_encoding</text><text x="825.5" y="-1244.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+section_tag</text></g><g id="Node000008" class="node"><title>Node8</title><a id="a_Node000008">
+<path fill="#fff" stroke="transparent" d="M388-1473h-38v52h38z"/>
+<text x="355" y="-1460.2" font-family="Consolas" font-size="11">bool</text>
+<text x="365.5" y="-1444.2" font-family="Consolas" font-size="11"> </text>
+<text x="365.5" y="-1428.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M350-1455h38z"/>
+<path fill="#666" stroke="#666" d="M350-1439h38z"/>
+<path fill="none" stroke="#666" d="M350-1421v-52h38v52z"/>
+</a></g><g id="edge7_Node000006_Node000008" class="edge"><title>Node8-&gt;Node6</title><a id="a_edge7_Node000006_Node000008">
+<path fill="none" stroke="#63b8ff" d="M381.64-1420.85c9.54 19.73 22.48 48.06 31.36 73.85 24.46 71.04 5.57 97.75 41 164 16.85 31.51 41.13 61.74 65.16 87.42"/>
+<path fill="none" stroke="#63b8ff" d="m519.36-1095.37 1.25 7.1 7.03 1.59-1.24-7.11z"/>
+</a><text x="515" y="-1310.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +modify_mass</text><text x="515" y="-1298.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+modify_nonviscous</text><text x="515" y="-1286.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+modify_viscous</text><text x="515" y="-1274.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+nlgeom</text><text x="515" y="-1262.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+update_geometry</text><text x="515" y="-1250.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+update_mass</text><text x="515" y="-1238.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+update_nonviscous</text><text x="515" y="-1226.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+update_stiffness</text><text x="515" y="-1214.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+update_viscous</text></g><g id="Node000016" class="node"><title>Node16</title><a xlink:href="../../dd/d45/class_distributed.html" id="a_Node000016" target="_top">
+<path fill="#fff" stroke="transparent" d="M330.5-1053h-107v68h107z"/>
+<text x="240" y="-1040.2" font-family="Consolas" font-size="11">Distributed</text>
+<text x="274" y="-1024.2" font-family="Consolas" font-size="11"> </text>
+<text x="228" y="-1008.2" font-family="Consolas" font-size="11">+</text>
+<text x="239" y="-1008.2" font-family="Consolas" font-size="11">Distributed()</text>
+<text x="228" y="-992.2" font-family="Consolas" font-size="11">+</text>
+<text x="239" y="-992.2" font-family="Consolas" font-size="11">gather()</text>
+<path fill="#666" stroke="#666" d="M224-1035h107z"/>
+<path fill="#666" stroke="#666" d="M224-1019h107z"/>
+<path fill="none" stroke="#666" d="M223.5-985v-68h107v68z"/>
+</a></g><g id="edge17_Node000016_Node000008" class="edge"><title>Node8-&gt;Node16</title><a id="a_edge17_Node000016_Node000008">
+<path fill="none" stroke="#63b8ff" d="M349.7-1433.23c-26.97 17.38-77.89 48.58-124.7 68.23-26.46 11.11-44.77-4.94-62 18-21.88 29.14-10.95 129.24 0 164 14.43 45.82 46.84 89.97 73.43 120.74"/>
+<path fill="none" stroke="#63b8ff" d="m236.53-1062.15.97 7.15 6.97 1.85-.97-7.15z"/>
+</a><text x="197" y="-1262.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +is_local</text></g><g id="Node000009" class="node"><title>Node9</title><a id="a_Node000009">
+<path fill="#fff" stroke="transparent" d="M1326.5-1473h-31v52h31z"/>
+<text x="1301" y="-1460.2" font-family="Consolas" font-size="11">mat</text>
+<text x="1308" y="-1444.2" font-family="Consolas" font-size="11"> </text>
+<text x="1308" y="-1428.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M1296-1455h31z"/>
+<path fill="#666" stroke="#666" d="M1296-1439h31z"/>
+<path fill="none" stroke="#666" d="M1295.5-1421v-52h31v52z"/>
+</a></g><g id="edge22_Node000001_Node000009" class="edge"><title>Node9-&gt;Node1</title><a id="a_edge22_Node000001_Node000009">
+<path fill="none" stroke="#63b8ff" d="M1311-1420.55V-350c0 169.7-238.24 225.89-378.34 244.26"/>
+<path fill="none" stroke="#63b8ff" d="m932.58-105.73-6.45-3.22-5.46 4.72 6.46 3.22z"/>
+</a><text x="1348.5" y="-664.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> #trans_mat</text></g><g id="edge8_Node000006_Node000009" class="edge"><title>Node9-&gt;Node6</title><a id="a_edge8_Node000006_Node000009">
+<path fill="none" stroke="#63b8ff" d="M1310.35-1420.64c-1.9 18.21-7.53 41.87-23.35 55.64-40.34 35.13-72.62-8.65-119 18-81.12 46.62-48.67 121.45-132 164-69.56 35.52-284.46-22.89-351 18-15.41 9.47-28.23 22.92-38.82 37.87"/>
+<path fill="none" stroke="#63b8ff" d="m646.18-1127.13-6.65 2.79.01 7.21 6.65-2.79z"/>
+</a><text x="1232.5" y="-1322.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +body_force</text><text x="1232.5" y="-1310.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_geometry</text><text x="1232.5" y="-1298.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_mass</text><text x="1232.5" y="-1286.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_nonviscous</text><text x="1232.5" y="-1274.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_stiffness</text><text x="1232.5" y="-1262.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_viscous</text><text x="1232.5" y="-1250.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+initial_geometry</text><text x="1232.5" y="-1238.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+initial_mass</text><text x="1232.5" y="-1226.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+initial_nonviscous</text><text x="1232.5" y="-1214.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+initial_stiffness</text><text x="1232.5" y="-1202.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">...</text></g><g id="Node000010" class="node"><title>Node10</title><a id="a_Node000010">
+<path fill="#fff" stroke="transparent" d="M526.5-1473h-31v52h31z"/>
+<text x="501" y="-1460.2" font-family="Consolas" font-size="11">vec</text>
+<text x="508" y="-1444.2" font-family="Consolas" font-size="11"> </text>
+<text x="508" y="-1428.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M496-1455h31z"/>
+<path fill="#666" stroke="#666" d="M496-1439h31z"/>
+<path fill="none" stroke="#666" d="M495.5-1421v-52h31v52z"/>
+</a></g><g id="edge19_Node000002_Node000010" class="edge"><title>Node10-&gt;Node2</title><a id="a_edge19_Node000002_Node000010">
+<path fill="none" stroke="#63b8ff" d="M495.22-1430.96c-17.69 18.02-45.46 50.07-57.22 83.96-62.4 179.8 10.11 669.53-28 856-.39 1.91-.81 3.84-1.24 5.76"/>
+<path fill="none" stroke="#63b8ff" d="m408.69-484.99-5.32 4.87 2.44 6.78 5.32-4.86z"/>
+</a><text x="444.5" y="-840.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> #z_axis</text></g><g id="edge9_Node000006_Node000010" class="edge"><title>Node10-&gt;Node6</title><a id="a_edge9_Node000006_Node000010">
+<path fill="none" stroke="#63b8ff" d="M526.61-1429.73c16.58 18.42 41.93 50.12 53.39 82.73 13.68 38.93 18.92 138.73 20.89 217.92"/>
+<path fill="none" stroke="#63b8ff" d="m600.89-1129.06-3.85 6.1 4.13 5.9 3.86-6.09z"/>
+</a><text x="677" y="-1322.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +current_body_force</text><text x="677" y="-1310.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_inertial_force</text><text x="677" y="-1298.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_resistance</text><text x="677" y="-1286.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_traction</text><text x="677" y="-1274.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+current_viscous_force</text><text x="677" y="-1262.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+momentum</text><text x="677" y="-1250.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+trial_body_force</text><text x="677" y="-1238.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+trial_inertial_force</text><text x="677" y="-1226.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+trial_resistance</text><text x="677" y="-1214.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+trial_traction</text><text x="677" y="-1202.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">...</text></g><g id="Node000011" class="node"><title>Node11</title><a id="a_Node000011">
+<path fill="#fff" stroke="transparent" d="M924.5-1473h-51v52h51z"/>
+<text x="879" y="-1460.2" font-family="Consolas" font-size="11">cx_mat</text>
+<text x="896" y="-1444.2" font-family="Consolas" font-size="11"> </text>
+<text x="896" y="-1428.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M874-1455h51z"/>
+<path fill="#666" stroke="#666" d="M874-1439h51z"/>
+<path fill="none" stroke="#666" d="M873.5-1421v-52h51v52z"/>
+</a></g><g id="edge10_Node000006_Node000011" class="edge"><title>Node11-&gt;Node6</title><a id="a_edge10_Node000006_Node000011">
+<path fill="none" stroke="#63b8ff" d="M898.7-1420.83c-1.01 62.53-5.18 221.14-21.7 237.83-30.15 30.45-155.97-5.2-192 18-14.86 9.57-27.35 22.8-37.75 37.41"/>
+<path fill="none" stroke="#63b8ff" d="m647.03-1127.27-6.65 2.77-.01 7.21 6.66-2.77z"/>
+</a><text x="896" y="-1280.2" fill="gray" font-family="Consolas" font-size="11"> +current_nonviscous</text><text x="964" y="-1268.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">_force</text><text x="896" y="-1256.2" fill="gray" font-family="Consolas" font-size="11">+trial_nonviscous</text><text x="964" y="-1244.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">_force</text></g><g id="Node000012" class="node"><title>Node12</title><a xlink:href="../../df/de6/classdouble.html" id="a_Node000012" target="_top">
+<path fill="#fff" stroke="transparent" d="M216.5-1473h-51v52h51z"/>
+<text x="171" y="-1460.2" font-family="Consolas" font-size="11">double</text>
+<text x="188" y="-1444.2" font-family="Consolas" font-size="11"> </text>
+<text x="188" y="-1428.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M166-1455h51z"/>
+<path fill="#666" stroke="#666" d="M166-1439h51z"/>
+<path fill="none" stroke="#666" d="M165.5-1421v-52h51v52z"/>
+</a></g><g id="edge20_Node000002_Node000012" class="edge"><title>Node12-&gt;Node2</title><a id="a_edge20_Node000002_Node000012">
+<path fill="none" stroke="#63b8ff" d="M176.33-1420.95c-10.49 19.44-23.71 47.46-29.33 73.95-15.13 71.3-6.31 91.39 0 164 25.88 297.58 16.87 380.22 116 662 4.3 12.21 9.42 24.59 15.01 36.81"/>
+<path fill="none" stroke="#63b8ff" d="m278.16-483.88-1.06 7.13 6.18 3.73 1.06-7.14z"/>
+</a><text x="224" y="-846.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> #inclination</text><text x="224" y="-834.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">#length</text></g><g id="edge11_Node000006_Node000012" class="edge"><title>Node12-&gt;Node6</title><a id="a_edge11_Node000006_Node000012">
+<path fill="none" stroke="#63b8ff" d="M203.16-1420.96c9.05 19.67 20.96 47.97 27.84 73.96 9.41 35.55-3.07 137.1 22 164 26.92 28.89 49.97 4.28 87 18 62.24 23.05 127.56 59.18 177.41 89.6"/>
+<path fill="none" stroke="#63b8ff" d="m517.59-1075.29 3.01 6.55 7.21-.26-3.01-6.55z"/>
+</a><text x="331" y="-1292.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> +characteristic_length</text><text x="331" y="-1280.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+complementary_energy</text><text x="331" y="-1268.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+kinetic_energy</text><text x="331" y="-1256.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+nonviscous_energy</text><text x="331" y="-1244.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+strain_energy</text><text x="331" y="-1232.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle">+viscous_energy</text></g><g id="Node000013" class="node"><title>Node13</title><a xlink:href="../../d4/d6b/class_element_base.html" xlink:title="A ElementBase class." id="a_Node000013" target="_top">
+<path fill="#fff" stroke="transparent" d="M1282.5-1165h-215v292h215z"/>
+<text x="1138" y="-1152.2" font-family="Consolas" font-size="11">ElementBase</text>
+<text x="1172" y="-1136.2" font-family="Consolas" font-size="11"> </text>
+<text x="1072" y="-1120.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-1120.2" font-family="Consolas" font-size="11">ElementBase()</text>
+<text x="1072" y="-1104.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-1104.2" font-family="Consolas" font-size="11">initialize_base()</text>
+<text x="1072" y="-1088.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-1088.2" font-family="Consolas" font-size="11">initialize()</text>
+<text x="1072" y="-1072.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-1072.2" font-family="Consolas" font-size="11">set_initialized()</text>
+<text x="1072" y="-1056.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-1056.2" font-family="Consolas" font-size="11">set_symmetric()</text>
+<text x="1072" y="-1040.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-1040.2" font-family="Consolas" font-size="11">is_initialized()</text>
+<text x="1072" y="-1024.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-1024.2" font-family="Consolas" font-size="11">is_symmetric()</text>
+<text x="1072" y="-1008.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-1008.2" font-family="Consolas" font-size="11">is_nlgeom()</text>
+<text x="1072" y="-992.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-992.2" font-family="Consolas" font-size="11">type()</text>
+<text x="1072" y="-976.2" font-family="Consolas" font-size="11">+</text>
+<text x="1083" y="-976.2" font-family="Consolas" font-size="11">update_dof_encoding()</text>
+<text x="1083" y="-960.2" font-family="Consolas" font-size="11">and 80 more...</text>
+<text x="1072" y="-944.2" font-family="Consolas" font-size="11">#</text>
+<text x="1083" y="-944.2" font-family="Consolas" font-size="11">get_node_incre_resistance()</text>
+<text x="1072" y="-928.2" font-family="Consolas" font-size="11">#</text>
+<text x="1083" y="-928.2" font-family="Consolas" font-size="11">get_node_trial_resistance()</text>
+<text x="1072" y="-912.2" font-family="Consolas" font-size="11">#</text>
+<text x="1083" y="-912.2" font-family="Consolas" font-size="11">get_node_current_resistance()</text>
+<text x="1072" y="-896.2" font-family="Consolas" font-size="11">#</text>
+<text x="1083" y="-896.2" font-family="Consolas" font-size="11">get_material()</text>
+<text x="1072" y="-880.2" font-family="Consolas" font-size="11">#</text>
+<text x="1083" y="-880.2" font-family="Consolas" font-size="11">get_section()</text>
+<path fill="#666" stroke="#666" d="M1068-1147h215z"/>
+<path fill="#666" stroke="#666" d="M1068-1131h215z"/>
+<path fill="none" stroke="#666" d="M1067.5-873v-292h215v292z"/>
+</a></g><g id="edge12_Node000005_Node000013" class="edge"><title>Node13-&gt;Node5</title><a id="a_edge12_Node000005_Node000013">
+<path fill="none" stroke="#63b8ff" d="M1058.41-946.79c-102.09 62.36-249.25 152.25-348.63 212.96"/>
+<path fill="none" stroke="#63b8ff" d="m1056.86-949.94 10.36-2.23-6.71 8.2z"/>
+</a></g><g id="edge13_Node000013_Node000014" class="edge"><title>Node14-&gt;Node13</title><a id="a_edge13_Node000013_Node000014">
+<path fill="none" stroke="#63b8ff" d="M1226.07-1354.49c-1.5 50.74-5.02 114.84-13.07 171.49-.84 5.9-1.79 11.9-2.82 17.94"/>
+<path fill="none" stroke="#63b8ff" d="m1222.58-1354.88 3.78-9.9 3.22 10.09z"/>
+</a></g><g id="Node000015" class="node"><title>Node15</title><a xlink:href="../../db/ddc/classvtk_base.html" xlink:title="The vtkBase class." id="a_Node000015" target="_top">
+<path fill="#fff" stroke="transparent" d="M1158-1473h-58v52h58z"/>
+<text x="1105" y="-1460.2" font-family="Consolas" font-size="11">vtkBase</text>
+<text x="1125.5" y="-1444.2" font-family="Consolas" font-size="11"> </text>
+<text x="1125.5" y="-1428.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M1100-1455h58z"/>
+<path fill="#666" stroke="#666" d="M1100-1439h58z"/>
+<path fill="none" stroke="#666" d="M1100-1421v-52h58v52z"/>
+</a></g><g id="edge15_Node000013_Node000015" class="edge"><title>Node15-&gt;Node13</title><a id="a_edge15_Node000013_Node000015">
+<path fill="none" stroke="#63b8ff" d="M1142.12-1411.38c6.56 15.02 15.36 32.35 25.88 46.38 7.17 9.57 15.13 7.08 20 18 24.96 56.05 26.55 123.01 20.04 181.7"/>
+<path fill="none" stroke="#63b8ff" d="m1138.78-1410.28-.65-10.57 7.1 7.86z"/>
+</a></g><g id="edge16_Node000005_Node000016" class="edge"><title>Node16-&gt;Node5</title><a id="a_edge16_Node000005_Node000016">
+<path fill="none" stroke="#63b8ff" d="M336.2-979.23C379.93-948.77 439.23-903.51 483-855c11.73 13 23.05 27.29 33.73 41.99"/>
+<path fill="none" stroke="#63b8ff" d="m334.18-976.37-6.24-8.56 10.22 2.8z"/>
+</a></g><g id="Node000017" class="node"><title>Node17</title><a id="a_Node000017">
+<path fill="#fff" stroke="transparent" d="M846-1051H694v64h152z"/>
+<text x="699" y="-1038.2" font-family="Consolas" font-size="11">vector&lt; std::weak_ptr</text>
+<text x="736" y="-1026.2" font-family="Consolas" font-size="11">&lt; Node &gt; &gt;</text>
+<text x="766.5" y="-1010.2" font-family="Consolas" font-size="11"> </text>
+<text x="766.5" y="-994.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M694-1021h152z"/>
+<path fill="#666" stroke="#666" d="M694-1005h152z"/>
+<path fill="none" stroke="#666" d="M694-987v-64h152v64z"/>
+</a></g><g id="edge18_Node000005_Node000017" class="edge"><title>Node17-&gt;Node5</title><a id="a_edge18_Node000005_Node000017">
+<path fill="none" stroke="#63b8ff" d="M755.09-986.94c-17.73 36.93-48.62 101.3-78.04 162.59"/>
+<path fill="none" stroke="#63b8ff" d="m676.96-824.17-6.2 3.68 1.01 7.14 6.2-3.68z"/>
+</a><text x="725" y="-840.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> #node_ptr</text></g><g id="Node000018" class="node"><title>Node18</title><a id="a_Node000018">
+<path fill="#fff" stroke="transparent" d="M302.5-693h-31v52h31z"/>
+<text x="277" y="-680.2" font-family="Consolas" font-size="11">mat</text>
+<text x="284" y="-664.2" font-family="Consolas" font-size="11"> </text>
+<text x="284" y="-648.2" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M272-675h31z"/>
+<path fill="#666" stroke="#666" d="M272-659h31z"/>
+<path fill="none" stroke="#666" d="M271.5-641v-52h31v52z"/>
+</a></g><g id="edge21_Node000002_Node000018" class="edge"><title>Node18-&gt;Node2</title><a id="a_edge21_Node000002_Node000018">
+<path fill="none" stroke="#63b8ff" d="M283.69-640.96c-3.77 34.35-7.93 97.75 4.31 149.96.47 2.02.98 4.05 1.52 6.08"/>
+<path fill="none" stroke="#63b8ff" d="m289.56-484.8-2.16 6.89 5.53 4.63 2.15-6.88z"/>
+</a><text x="349" y="-494.2" fill="gray" font-family="Consolas" font-size="11" text-anchor="middle"> #direction_cosine</text></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_b2_d_l__coll__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>
