@@ -1,4 +1,4 @@
-<img src="suanPan-qr-ua.svg" width="150" align="middle"/><img src="suanPan.svg" width="150" align="middle"/>
+<img src="https://raw.githubusercontent.com/TLCFEM/suanPan-manual/refs/heads/dev/docs/suanPan-qr-ua.svg" width="150" align="middle"/><img src="https://raw.githubusercontent.com/TLCFEM/suanPan-manual/refs/heads/dev/docs/suanPan.svg" width="150" align="middle"/>
 
 # Introduction
 
