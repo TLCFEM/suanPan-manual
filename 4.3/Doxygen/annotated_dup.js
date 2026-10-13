@@ -373,6 +373,7 @@ var annotated_dup =
     [ "Hertzian", "d2/d1f/class_hertzian.html", "d2/d1f/class_hertzian" ],
     [ "HistoryCriterion", "d8/d78/class_history_criterion.html", "d8/d78/class_history_criterion" ],
     [ "Homogeneous", "d8/dba/class_homogeneous.html", "d8/dba/class_homogeneous" ],
+    [ "homotopy_config", "d3/d83/structhomotopy__config.html", "d3/d83/structhomotopy__config" ],
     [ "HSection2D", "df/d02/class_h_section2_d.html", "df/d02/class_h_section2_d" ],
     [ "ICL", "dd/d86/class_i_c_l.html", "dd/d86/class_i_c_l" ],
     [ "IGA", "df/d93/struct_i_g_a.html", null ],

@@ -204,7 +204,7 @@ var searchData=
   ['dm1_201',['DM1',['../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a14da106a71793958ff03e0cc548d962a',1,'OutputType.h']]],
   ['dm2_202',['DM2',['../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a7792feeffb35950edb545d41cd0d2800',1,'OutputType.h']]],
   ['dm3_203',['DM3',['../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a0a57ef9f0d5c209162469028944e9bee',1,'OutputType.h']]],
-  ['dof_204',['dof',['../df/da9/class_node_based_criterion.html#a7db1a9e7479304290b17259aa947a72f',1,'NodeBasedCriterion::dof'],['../dc/d8f/class_node.html#a1747748a6d54ff3eb2f8f9b579d17849',1,'Node::DOF']]],
+  ['dof_204',['dof',['../dc/d8f/class_node.html#a1747748a6d54ff3eb2f8f9b579d17849',1,'Node::DOF'],['../df/da9/class_node_based_criterion.html#a7db1a9e7479304290b17259aa947a72f',1,'NodeBasedCriterion::dof']]],
   ['dof_5fencoding_205',['dof_encoding',['../d2/db9/struct_data_element.html#a168a5544e918b7b360bcff0a67021fc4',1,'DataElement']]],
   ['dof_5fi_206',['dof_i',['../d4/d12/class_interaction_pair.html#afc37d24d431982eeed93fa9d18a24635',1,'InteractionPair']]],
   ['dof_5fj_207',['dof_j',['../d4/d12/class_interaction_pair.html#ac3362837ab159fc214e03591367571d8',1,'InteractionPair']]],
@@ -232,6 +232,6 @@ var searchData=
   ['dynamic_229',['dynamic',['../db/d7f/class_dynamic.html#accac2227c938670a0cd30f7069c53b32',1,'Dynamic::Dynamic()'],['../db/d7f/class_dynamic.html',1,'Dynamic']]],
   ['dynamic_2ecpp_230',['Dynamic.cpp',['../da/d26/_dynamic_8cpp.html',1,'']]],
   ['dynamic_2eh_231',['Dynamic.h',['../de/d1b/_dynamic_8h.html',1,'']]],
-  ['dynamic_5fupdate_232',['dynamic_update',['../d7/d98/_elastic_external_8cpp.html#a6c9f0b0e059b061fd7b79a04873004c7',1,'dynamic_update(const ExternalMaterialData *data, int *info):&#160;ElasticExternal.cpp'],['../de/db5/group___material.html#ggafbf12274aeca22ceeccecf524e311e35a7adaf133cee1e72c9bda4b06d218a2c9',1,'DYNAMIC_UPDATE:&#160;ExternalMaterialData.h']]],
+  ['dynamic_5fupdate_232',['dynamic_update',['../de/db5/group___material.html#ggafbf12274aeca22ceeccecf524e311e35a7adaf133cee1e72c9bda4b06d218a2c9',1,'DYNAMIC_UPDATE:&#160;ExternalMaterialData.h'],['../d7/d98/_elastic_external_8cpp.html#a6c9f0b0e059b061fd7b79a04873004c7',1,'dynamic_update(const ExternalMaterialData *data, int *info):&#160;ElasticExternal.cpp']]],
   ['dynamics_233',['DYNAMICS',['../dc/d56/group___storage.html#gga7d90861a140b3b6cf1087c5662cf4223a3573b2d8bce8526e7ccfc667cf4c7f47',1,'Factory.hpp']]]
 ];

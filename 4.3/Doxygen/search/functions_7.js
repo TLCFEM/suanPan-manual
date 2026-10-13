@@ -11,5 +11,6 @@ var searchData=
   ['historycriterion_8',['historycriterion',['../db/d48/class_min_history.html#aacb72d922beb5e4d9af61ca77e048988',1,'MinHistory::HistoryCriterion()'],['../dc/d95/class_max_history.html#aacb72d922beb5e4d9af61ca77e048988',1,'MaxHistory::HistoryCriterion()'],['../d8/d78/class_history_criterion.html#aacb72d922beb5e4d9af61ca77e048988',1,'HistoryCriterion::HistoryCriterion()']]],
   ['hoffman_5fprojection_9',['hoffman_projection',['../dc/dfe/namespacetransform.html#a86f89d6f7333dd229377cb756bb272f4',1,'transform']]],
   ['homogeneous_10',['Homogeneous',['../d8/dba/class_homogeneous.html#a154a52902bf2296e1fe0422813a0b943',1,'Homogeneous']]],
-  ['hsection2d_11',['HSection2D',['../df/d02/class_h_section2_d.html#a2bb2b6c1e814670bf6176bf9b287bdf7',1,'HSection2D']]]
+  ['homotopy_5fsolve_11',['homotopy_solve',['../dd/d83/homotopy_8hpp.html#ad6b520ef610c512356c34db6c6e7853c',1,'homotopy.hpp']]],
+  ['hsection2d_12',['HSection2D',['../df/d02/class_h_section2_d.html#a2bb2b6c1e814670bf6176bf9b287bdf7',1,'HSection2D']]]
 ];

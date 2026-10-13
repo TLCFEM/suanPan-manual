@@ -4,6 +4,7 @@ var dir_a9729cc3cf336159544460298e1486e7 =
     [ "TestColoring.cpp", "d3/d20/_test_coloring_8cpp.html", "d3/d20/_test_coloring_8cpp" ],
     [ "TestEigen.cpp", "d1/d50/_test_eigen_8cpp.html", "d1/d50/_test_eigen_8cpp" ],
     [ "TestExpression.cpp", "d1/d62/_test_expression_8cpp.html", "d1/d62/_test_expression_8cpp" ],
+    [ "TestHomotopy.cpp", "d7/db9/_test_homotopy_8cpp.html", "d7/db9/_test_homotopy_8cpp" ],
     [ "TestIntegration.cpp", "de/de6/_test_integration_8cpp.html", "de/de6/_test_integration_8cpp" ],
     [ "TestMatrix.cpp", "de/da5/_test_matrix_8cpp.html", "de/da5/_test_matrix_8cpp" ],
     [ "TestMode.cpp", "d8/d17/_test_mode_8cpp.html", "d8/d17/_test_mode_8cpp" ],

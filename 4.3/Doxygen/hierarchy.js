@@ -733,6 +733,7 @@ var hierarchy =
       ] ],
       [ "GroupReferenceForce", "dc/d51/class_group_reference_force.html", null ]
     ] ],
+    [ "homotopy_config", "d3/d83/structhomotopy__config.html", null ],
     [ "IGA", "df/d93/struct_i_g_a.html", null ],
     [ "IntegrationPlan", "dd/d31/class_integration_plan.html", null ],
     [ "Section2D::IntegrationPoint", "d8/d4d/struct_section2_d_1_1_integration_point.html", null ],

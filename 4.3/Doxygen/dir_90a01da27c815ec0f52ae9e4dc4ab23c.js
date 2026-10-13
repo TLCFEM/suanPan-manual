@@ -14,6 +14,7 @@ var dir_90a01da27c815ec0f52ae9e4dc4ab23c =
     [ "ExpressionParser.cpp", "dd/daa/_expression_parser_8cpp.html", "dd/daa/_expression_parser_8cpp" ],
     [ "ExpressionParser.h", "de/d94/_expression_parser_8h.html", "de/d94/_expression_parser_8h" ],
     [ "fgmres.hpp", "d4/d1f/fgmres_8hpp.html", "d4/d1f/fgmres_8hpp" ],
+    [ "homotopy.hpp", "dd/d83/homotopy_8hpp.html", "dd/d83/homotopy_8hpp" ],
     [ "IntegrationPlan.cpp", "d0/d65/_integration_plan_8cpp.html", "d0/d65/_integration_plan_8cpp" ],
     [ "IntegrationPlan.h", "d7/dab/_integration_plan_8h.html", "d7/dab/_integration_plan_8h" ],
     [ "LBFGS.hpp", "d8/d9a/_l_b_f_g_s_8hpp.html", null ],

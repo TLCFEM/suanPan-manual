@@ -12,9 +12,10 @@ var namespacetransform =
     ] ],
     [ "stress", "d1/d02/namespacetransform_1_1stress.html", [
       [ "angle", "d1/d02/namespacetransform_1_1stress.html#ac5015a59d9fd5bfbcc3d6035e195e5d5", null ],
-      [ "eigen_to_tensile_derivative", "d1/d02/namespacetransform_1_1stress.html#a051b6ec46ffac1368f14523bb3059dc0", null ],
+      [ "eigen_to_tensile_derivative", "d1/d02/namespacetransform_1_1stress.html#ae24b9e11844cdc9da66650caaf5771ec", null ],
       [ "eigen_to_tensile_stress", "d1/d02/namespacetransform_1_1stress.html#af0fdd9e184f5eae993ba59245879e161", null ],
       [ "eigen_to_tensor_base", "d1/d02/namespacetransform_1_1stress.html#a6bf661c638ff8bea8149d984594e886b", null ],
+      [ "eigen_to_transformed_derivative", "d1/d02/namespacetransform_1_1stress.html#add3622d69720686e9872a31ad59f96a5", null ],
       [ "principal", "d1/d02/namespacetransform_1_1stress.html#a51a199d2f57b742ab33f8df86ab7a759", null ],
       [ "rotate", "d1/d02/namespacetransform_1_1stress.html#aeb7db3b9196e15fa4d408ee5329f2ad3", null ],
       [ "trans", "d1/d02/namespacetransform_1_1stress.html#a54459a494ea0779213b53694a753e75c", null ]
