@@ -1,15 +1,15 @@
 # The Very First Analysis
 
-This page aims to show an overview of how a model looks like by establishing a simple model, which is a simple elastic
+This page aims to show an overview of what a model looks like by establishing a simple model, which is an elastic
 cantilever beam subjected to an end load.
 
 A native C++ parser is used by `suanPan`.
-The default syntax resembles the one of `OpenSees`.
+The default syntax resembles that of `OpenSees`.
 Model files are written in plain text.
 Although there is no restriction, the suffix `.supan` is reserved by default.
 
-The line starts with the hash symbol (`#`) or the exclamation symbol (`!`) is a comment line.
-To write one command spans a few lines, please use backslash (`\`) to concatenate multiple lines.
+The line that starts with the hash symbol (`#`) or the exclamation symbol (`!`) is a comment line.
+To write one command that spans a few lines, please use backslash (`\`) to concatenate multiple lines.
 Please refer to [Syntax](Syntax.md) for details.
 
 ```
@@ -43,7 +43,7 @@ exit
 ```
 
 Since each command is commented, there is not much to explain.
-This model is similar to the one created by the `example` command, both are simple one element models.
+This model is similar to the one created by the `example` command; both are simple one-element models.
 The output is directly printed on screen by default. For this model, it is
 
 ```
@@ -75,13 +75,13 @@ Resistance:
 Time Wasted: 0.0029 Seconds.
 ```
 
-The analytical solution of horizontal tip displacement is
+The analytical solution of the horizontal tip displacement is
 
 $$
 u=\dfrac{PL}{EA}=\dfrac{17\times1.34}{132\times7.213}=0.023926.
 $$
 
-The analytical solution of vertical tip displacement is
+The analytical solution of the vertical tip displacement is
 
 $$
 v=\dfrac{PL^3}{3EI}=\dfrac{23\times1.34^3}{3\times132\times6.835}=0.020476.

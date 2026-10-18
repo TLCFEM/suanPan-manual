@@ -31,5 +31,5 @@ There is **no** support for constraints implemented via the Lagrange multiplier 
 
 Theoretically, BFGS only works on symmetric positive definite systems.
 The algorithm will eventually fail if the system is not positive definite.
-Thus, it cannot be used in problems that exhibits material softening, snap-back, snap-through, etc.
+Thus, it cannot be used in problems that exhibit material softening, snap-back, snap-through, etc.
 However, the solver itself does **not** validate the type of systems given.

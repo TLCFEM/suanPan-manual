@@ -17,7 +17,7 @@ element Spring01 (1) (2) (3) (4)
 
 ## Remarks
 
-The `Spring01` uses displacement as the input quantity and compute force.
+The `Spring01` uses displacement as the input quantity and computes force.
 It can be used as a zero-length element to connect two nodes.
 
 Note only infinitesimal strain/deformation formulation is supported.

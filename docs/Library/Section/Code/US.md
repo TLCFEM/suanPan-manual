@@ -46,7 +46,7 @@ section US3DC (1) (2) (3) [4] [5]
 1. By default, inch is used as length unit, if users want to switch to another unit, set `scale` to corresponding
    values. For example, to use millimeter, `scale=25.4`.
 2. For 2D sections, the number of integration points is set to two using Gauss quadrature for flange.
-3. For 3D sections, along web/flange thickness, one integration point is used. along flange width and web height, the
+3. For 3D sections, along web/flange thickness, one integration point is used. Along flange width and web height, the
    same number of integration points is used as defined by user.
 
 **There will be discrepancies between design section properties and numerical section properties.**
@@ -54,7 +54,7 @@ section US3DC (1) (2) (3) [4] [5]
 
 ## Supported Designations
 
-The following designations from [AISC Shapes Database v16.0](https://www.aisc.org/publications/steel-construction-manual-resources/16th-ed-steel-construction-manual/aisc-shapes-database-v16.0/) is supported.
+The following designations from [AISC Shapes Database v16.0](https://www.aisc.org/publications/steel-construction-manual-resources/16th-ed-steel-construction-manual/aisc-shapes-database-v16.0/) are supported.
 
 | W       | M          | S        | HP       | WT           | MT         | ST          | HSS (Rectangle)     | HSS (Circle)    |
 |:--------|:-----------|:---------|:---------|:-------------|:-----------|:------------|:--------------------|:----------------|

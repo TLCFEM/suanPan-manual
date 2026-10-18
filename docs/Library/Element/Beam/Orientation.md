@@ -6,7 +6,7 @@ handles transformation between global and local coordinate systems of beam/truss
 Similar configurations are also required in other FEM software, see,
 for example, Section 26.3.4 `Beam element cross-section orientation` of the Abaqus Analysis User's Manual.
 
-The local $$x$$-axis is along the cord of the beam element.
+The local $$x$$-axis is along the chord of the beam element.
 The local $$z$$-axis is temporarily taken as the vector assigned by user.
 The local $$y$$-axis is defined to be the cross product of the local $$z$$-axis and the local $$x$$-axis.
 After obtaining the local $$y$$-axis, the local $$z$$-axis is redefined to be the cross product of the local $$x$$-axis
@@ -42,16 +42,16 @@ orientation (1) (2) (3) (4) (5)
    See de Souza's [thesis](https://books.google.co.nz/books/about/Force_based_Finite_Element_for_Large_Dis.html?id=YZ5NAQAAMAAJ).
 3. For brevity, the mass distribution does not follow the corotational formulation, implying that the mass matrix is
    always a constant matrix. This is often sufficient for applications in earthquake engineering. However, it is not
-   recommended for other applications. An energy-reserving corotational formulation is required, see Crisfield's work.
+   recommended for other applications. An energy-preserving corotational formulation is required, see Crisfield's work.
 
 Correct orientations are required for different element types.
 For example, `B31`/`F31` require `B3DL` or `B3DC`. `EB31OS` requires `B3DOSL` or `B3DOSC`.
 
 One can use the following model to check how the orientation works.
 
-The following model defines a number of beam elements with the `WT12X125` section that is placed at the centre of web.
+The following model defines a number of beam elements with the `WT12X125` section that is placed at the centre of the web.
 
-The elements are subject to axial forces, but since loads are applied at the centre of web, the elements are also subject to bending.
+The elements are subject to axial forces, but since loads are applied at the centre of the web, the elements are also subject to bending.
 
 Different orientations of local reference frame are defined. The nodal forces are different for different orientations.
 

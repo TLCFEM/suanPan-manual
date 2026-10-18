@@ -24,4 +24,4 @@ The eccentricity is measured from the centre of the section.
 The width and height are measured from midline to midline.
 
 Under the hood, the section is computed as an I-section.
-Integration scheme applies.
+The integration scheme applies.

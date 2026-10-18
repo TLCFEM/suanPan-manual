@@ -11,11 +11,11 @@ Some other damping models, such as the Rayleigh damping model, can be expressed 
 stiffness matrices.
 The corresponding damping matrix can be either formulated at global level by operating on global stiffness and mass
 matrices, or at element level by operating on elemental stiffness and mass matrices.
-In the later case, the global damping matrix can be assembled by the elemental damping matrices.
+In the latter case, the global damping matrix can be assembled by the elemental damping matrices.
 
-The Lee's damping model [10.1016/j.jsv.2020.115312](https://doi.org/10.1016/j.jsv.2020.115312) is used as the
+Lee's damping model [10.1016/j.jsv.2020.115312](https://doi.org/10.1016/j.jsv.2020.115312) is used as the
 fundamental model.
-It can be expressed in a form that can be expressed as a linear combination of mass and stiffness matrices.
+It can be expressed in a form that is a linear combination of mass and stiffness matrices.
 
 The [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.107152) discusses the application of the
 damping model at element level and investigates the relationship between the elemental and global damping ratio.

@@ -108,14 +108,14 @@ any nodes (not only supports).
 
 !!! warning "difference in explicit and implicit dynamic analysis"
     Implicit time integration schemes use displacement as the primary variable, thus `supportdisplacement`, `supportvelocity` and `supportacceleration`
-    all converts to the corresponding nodal displacement.
+    all convert to the corresponding nodal displacement.
     However, explicit time integration schemes use acceleration as the primary variable, and there is no way to obtain the corresponding nodal displacement/velocity from the acceleration (because they are explicit methods).
-    Thus, in explicit dynamic analysis, `supportdisplacement` is identical to `supportacceleration` which all applies acceleration on the nodes.
+    Thus, in explicit dynamic analysis, `supportdisplacement` is identical to `supportacceleration`, as both apply acceleration to the nodes.
     `supportvelocity` is not available in explicit dynamic analysis.
 
 #### Validation
 
-The algorithms implemented is **not** some naive integration.
+The algorithms implemented are **not** some naive integration.
 **All support excitations are guaranteed to be consistent with the time integration scheme used.**
 This means, the exact same input can be observed in the output for all interpolating methods.
 Extrapolating methods will not guarantee the exact same input in the output.
@@ -174,7 +174,7 @@ load refload (1) (2) (3) (4) (5...)
     a `displacement` or `groupdisplacement` is used.
 5.  Optionally, the displacement can be applied by using [`MPC`](../../Library/Constraint/MPC.md) constraint.
 6.  The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if
-    a `supportdisplacement`, `supportvelocity` and/or `supportacceleration` are used.
+    `supportdisplacement`, `supportvelocity` and/or `supportacceleration` are used.
 
 **It must be noted that nodal displacement loads are only valid for one single step.**
 This means, if a displacement load is defined within a step, it will be activated for that step only.

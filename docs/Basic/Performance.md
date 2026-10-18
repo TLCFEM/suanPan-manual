@@ -36,7 +36,7 @@ int benchmark() {
 }
 ```
 
-As FEM is essentially solving large matrices, such a benchmark is practical and close to actually performance.
+As FEM is essentially solving large matrices, such a benchmark is practical and close to actual performance.
 Profiling it on an average laptop yields the following result.
 This particular platform is able to achieve a CPI (cycles per instruction) of 0.686.
 This serves as the baseline and upper bound of practical performance.
@@ -48,7 +48,7 @@ This serves as the baseline and upper bound of practical performance.
 [This example](https://github.com/TLCFEM/suanPan/tree/dev/Example/Misc/DKTS3) is a linear elastic analysis.
 There are 20124 nodes and 39990 shell elements in total, and since each node has six DoFs, there are in total 120744 DoFs.
 
-Because an elastic material model is used, element state updating is trivial, requires only matrix multiplication.
+Because an elastic material model is used, element state updating is trivial, requiring only matrix multiplication.
 The main computation is assembling the global stiffness matrix and solving it.
 Profiling this example on the same platform yields the following result.
 It is able to achieve a CPI close to the baseline.
@@ -69,7 +69,7 @@ Assuming all (or at least the majority of) instructions are *useful* instruction
 
 Here are some tips that may improve the performance.
 
-1.  If the analysis is known to be linear elastic, use `set linear_system true` to skip convergence test and iteration.
+1.  If the analysis is known to be linear elastic, use `set linear_system true` to skip the convergence test and iteration.
     Note the analysis should be both material and geometric linear.
 2.  If the global system is known to be symmetric, use `set symm_mat true` to use a symmetric storage.
     Analyses involving 1D materials are mostly (**_not always_**) symmetric.
@@ -80,8 +80,8 @@ Here are some tips that may improve the performance.
     A dense solver is generally faster than a sparse solver for small systems.
 5.  Prefer a mixed-precision algorithm `set precision mixed` over a full-precision algorithm if the system is large.
     A mixed-precision algorithm is generally faster than a full-precision algorithm for large systems.
-    See following for details.
-6.  The performance of various sparser solver can vary significantly.
+    See the following for details.
+6.  The performance of various sparse solvers can vary significantly.
     It is recommended to try different solvers to find the best one.
 
 ## Mixed-Precision Algorithm
@@ -132,12 +132,12 @@ It is possible to tweak the performance in the following ways, which may or may 
 
 ### OpenMP Threads
 
-OpenMP is used by MKL and OpenBLAS to parallelize the matrix operations, alongside with SIMD instructions. It is 
+OpenMP is used by MKL and OpenBLAS to parallelize the matrix operations, alongside SIMD instructions. It is 
 possible to manually set [OMP_NUM_THREADS](https://www.google.com/search?q=omp_num_threads) to control the number of 
 threads used. Pay attention to over-subscription.
 
 [OMP_DYNAMIC](https://www.google.com/search?q=omp_dynamic) may affect cache locality and thus the performance. For 
-computation intensive tasks, it is recommended to set it to false.
+computation-intensive tasks, it is recommended to set it to false.
 
 ### Affinity
 
@@ -159,7 +159,7 @@ LD_PRELOAD=/path/to/libmimalloc.so suanpan -f input.sp
 
 !!! note "easy integration"
     With **portable archives** in POSIX systems, it is possible to place `libmimalloc.so` file under the `lib` folder and invoke `suanPan.sh` directly.
-    The script [`suanPan.sh`](https://github.com/TLCFEM/suanPan/blob/dev/Enhancement/suanPan.sh) automatically checks the presence of `libmamalloc.so` file and loads it if found.
+    The script [`suanPan.sh`](https://github.com/TLCFEM/suanPan/blob/dev/Enhancement/suanPan.sh) automatically checks the presence of the `libmimalloc.so` file and loads it if found.
 
 ### Smaller Memory Footprint
 

@@ -17,7 +17,7 @@ Both models shall yield the same uniaxial behaviour if the same parameter set is
 material Balloon ${1:(1)} ${2:(2)} ${3:(3)} ${4:(4)} ${5:(5)} ${6:(6 7 8 9)} ${7:(10 11 12 13)} ${8:(14 15 16 17)} ${9:(18 19 20 21)} ${10:(22 23 24 25)} ${11:(26)} ${12:[(27) (28) (29)...]}
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poisson's ratio
+# (3) double, Poisson's ratio
 # (4) double, k_r
 # (5) double, load reversal memory size
 # (6 7 8 9) double, u bound, initial, linear, saturation, rate
@@ -48,9 +48,9 @@ The parameter tuple takes $$\chi_0$$, $$k$$, $$\chi_s$$ and $$r$$.
 
 The key-value tuples indicated by tokens '-fc' and '-ac' control the evolutions of cyclic bounds (scalars).
 The key-value tuples indicated by tokens '-na' and '-nd'  control the evolutions of back stress like quantities (tensors).
-For all four sets, the Armstrong-Fredrick style exponential rule is used, and two parameters indicator the saturation target and the corresponding saturation rate.
+For all four sets, the Armstrong-Frederick style exponential rule is used, and two parameters indicate the saturation target and the corresponding saturation rate.
 
-Typically, the saturation value can be fixed to unity such that those quantities saturation to unity (either scalar or tensor) as the actual magnitudes need to account for the previous bounds.
+Typically, the saturation value can be fixed to unity such that those quantities saturate to unity (either scalar or tensor) as the actual magnitudes need to account for the previous bounds.
 For the same quantity, more than one tuple can be defined.
 For example, `-fc .4 100 -fc .6 200` means there are two components, one saturates to 0.4 with a rate of 100 and the other saturates to 0.6 with a rate of 200.
 The two parts are summed up so $$F_c$$ will eventually saturate to 1.0.

@@ -29,7 +29,7 @@ $$
 \mathbf{C}=\mathbf{\theta{}D}\mathbf{\theta}^\mathrm{T},
 $$
 
-where $$\mathbf{D}$$ is the diagonal matrix with diagonal entries to be $$\dfrac{2\xi_n\omega_n}{M_n}$$, and
+where $$\mathbf{D}$$ is the diagonal matrix whose diagonal entries are $$\dfrac{2\xi_n\omega_n}{M_n}$$, and
 $$\mathbf{\theta}=\mathbf{M\phi}$$.
 
 However, the damping matrix is not explicitly formed, since $$\mathbf{C}$$ is fully populated while $$\mathbf{K}$$ and
@@ -43,7 +43,7 @@ $$
 \mathbf{K}_e\mathbf{\Delta{}U}=\mathbf{R},
 $$
 
-with $$\mathbf{K}_e=\mathbf{K}+c_0\mathbf{M}+c_1\mathbf{C}$$ to be the effective stiffness matrix. By denoting
+with $$\mathbf{K}_e=\mathbf{K}+c_0\mathbf{M}+c_1\mathbf{C}$$ being the effective stiffness matrix. By denoting
 $$\mathbf{K}+c_0\mathbf{M}+c_1\mathbf{C}_v$$ to be $$\mathbf{\bar{K}}$$, then
 
 $$
@@ -56,7 +56,7 @@ $$
 
 where $$\mathbf{\bar{D}}=c_1\mathbf{D}$$. Note $$c_0$$ and $$c_1$$ are the corresponding parameters used in Newmark
 algorithm. Note $$\mathbf{C}_v$$ is used to denote the additional viscous damping effect due to viscous devices such as
-dampers. This part does not contribute the formulation of global damping matrix.
+dampers. This part does not contribute to the formulation of the global damping matrix.
 
 By using the Woodbury identity, one could obtain
 
@@ -73,5 +73,5 @@ $$
 
 Note $$\mathbf{\bar{D}}^{-1}$$ can be conveniently formulated as it is simply a diagonal matrix.
 
-The above formula requires two additional function calls to matrix solver. If the factorization can be stored, this
+The above formula requires two additional function calls to the matrix solver. If the factorization can be stored, this
 reduces to two backward substitutions.

@@ -16,7 +16,7 @@ and [`Damper02`](../../../Element/Special/Damper02.md).
 
 The quadrant damper is implemented.
 
-The damping force is defined as a function of displacement and velocity (or strain and strain rate, depends on what the
+The damping force is defined as a function of displacement and velocity (or strain and strain rate, depending on what the
 input is).
 
 $$
@@ -24,7 +24,7 @@ $$
 $$
 
 The damping coefficient is a function of strain and strain rate that can be expressed as follows, which shows different
-response in different quadrants.
+responses in different quadrants.
 
 $$
 \begin{align*} \eta\left(\varepsilon,\dot\varepsilon\right)

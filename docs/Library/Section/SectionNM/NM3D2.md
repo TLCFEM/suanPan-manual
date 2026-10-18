@@ -36,7 +36,7 @@ This surface is suitable for I-sections.
 
 ### Option Two
 
-One may wish to customise the surface by assigning different weights and orders, it is possible by using the following
+One may wish to customise the surface by assigning different weights and orders; it is possible by using the following
 syntax.
 
 ```

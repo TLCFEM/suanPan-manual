@@ -36,7 +36,7 @@ The name K4 comes from the fact that the four authors' last names all start with
 
 The model implements the proposed hardening laws and crack closing mechanism.
 But the damage evolution is different from the original formulation.
-In specific, the original linear damage evolution is replaced by an exponential law that would alleviate potential
+Specifically, the original linear damage evolution is replaced by an exponential law that would alleviate potential
 numerical issues, as the numerical world does not like exact zeros.
 
 ### Additive Split
@@ -85,7 +85,7 @@ The tensile strength $$f_t$$ is controlled by `(6)`.
 The hardening modulus $$h_t$$ is computed as `(4)` times elastic modulus.
 
 The crush strength $$f_c$$ `(7)` can be expressed as $$f_c=f_y+h_ck_0$$ where $$f_y$$ is `(9)` times $$f_c$$.
-$$k_0$$ is strain when crush strength is reached, this is controlled by `(8)`.
+$$k_0$$ is the strain when crush strength is reached; this is controlled by `(8)`.
 The hardening modulus $$h_c$$ is automatically computed.
 The hardening modulus $$h_d$$ is computed as `(5)` times elastic modulus.
 

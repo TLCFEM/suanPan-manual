@@ -6,7 +6,7 @@ The model script can be downloaded. [computing-response-spectrum.zip](computing-
 
 ## Introduction
 
-Imaging you are asked to compute the response spectra of a collection of accelerograms which may be obtained from
+Imagine you are asked to compute the response spectra of a collection of accelerograms which may be obtained from
 some earthquake event. How would you do it?
 
 According to the definition, the response spectrum is the maximum response of structures with different natural
@@ -95,7 +95,7 @@ $$
 The provided acceleration is sampled with a sampling interval of $$0.03$$ s. To improve the accuracy of the response
 history analysis, the time step size is set to $$0.01$$ s.
 
-Note since we are applying acceleration as inertial force, the amplitude of the acceleration is $$-1$$.
+Note since we are applying acceleration as an inertial force, the amplitude of the acceleration is $$-1$$.
 
 ## SDOF Response
 
@@ -162,12 +162,12 @@ The results are shown below.
 
 ![response](computing-response-spectrum-a.png)
 
-It is evident that Lee's algorithm is accurate. If one pays attention to the wall clock time required by two approaches,
+It is evident that Lee's algorithm is accurate. If one pays attention to the wall clock time required by the two approaches,
 Lee's algorithm is much faster than the full response history analysis. On an average platform, Lee's algorithm is 
 100 times faster (indicative). There are a few things to note.
 
-1. The response history analysis often requires a small step size --- a fraction of sampling interval of 
-   acceleration record. This is to ensure the accuracy of the result.
+1. The response history analysis often requires a small step size --- a fraction of the sampling interval of 
+   the acceleration record. This is to ensure the accuracy of the result.
 2. Lee's algorithm is essentially an IIR filter. It only requires two multiplications per time step. The sampling 
    interval can be directly used to compute the response.
 3. With Lee's algorithm, in a more general setting, velocity and acceleration responses would be computed as the 
@@ -229,7 +229,7 @@ plt.close()
 ### Refine the Result
 
 As the sampling interval of the provided acceleration record is $$0.03$$ s, it appears to be too large to obtain 
-accurate result. How to tell that? Given that the damping ratio is small, SA and PSA should be close.
+an accurate result. How to tell that? Given that the damping ratio is small, SA and PSA should be close.
 
 We can try to refine the result by using a smaller interval. To this end, we first create a new record by linear 
 interpolation.

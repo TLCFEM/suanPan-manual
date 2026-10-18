@@ -1,9 +1,9 @@
 # pwd
 
-The `pwd` command resembles the same command in Unix-like systems, which can be used to print/set current working path.
+The `pwd` command resembles the same command in Unix-like systems, which can be used to print/set the current working path.
 
-To load files from another path while to save the keystrokes at the same time, users can set current working path to the
-folder contains the desired modal script first.
+To load files from another path while to save the keystrokes at the same time, users can set the current working path to
+the folder containing the desired model script first.
 
 ## Syntax
 

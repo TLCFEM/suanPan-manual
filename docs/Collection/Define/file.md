@@ -10,7 +10,7 @@ file (1)
 # (1) string, external file name
 ```
 
-Please note users can use [`pwd`](../Process/pwd.md) to change current working path.
+Please note users can use [`pwd`](../Process/pwd.md) to change the current working path.
 
 ## Usage
 

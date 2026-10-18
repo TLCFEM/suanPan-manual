@@ -19,7 +19,7 @@ variable layout.
 
 ## Remarks
 
-1. The backbone file must have exact two columns, stores turning points of the backbone.
+1. The backbone file must have exactly two columns, storing turning points of the backbone.
 2. The origin does not need to be included.
 3. Tension backbone shall be positive.
 4. Compression backbone shall be negative, positive table will be converted to negative.

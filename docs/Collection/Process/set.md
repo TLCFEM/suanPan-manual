@@ -4,7 +4,7 @@ The `set` command is used to set some properties of the analysis.
 
 ## Linear Elastic Simplification
 
-In a general non-linear context, each substep requires at least two system solving, one for initial guess, one for
+In a general non-linear context, each substep requires at least two system solving steps, one for initial guess, one for
 convergence test.
 There is no general way to detect a linear system automatically,
 with which we know the initial guess leads to convergence so that further system solving is not necessary.
@@ -50,7 +50,7 @@ set min_step_size (1)
 
 By default, an **asymmetric banded** matrix storage scheme is used. For 1D analysis, the global stiffness matrix is
 always symmetric. However, when it comes to 2D and 3D analyses, the global stiffness may be structurally symmetric in
-terms of its layout, but there may not have the same value on the symmetric entries. In maths language, if $$K(i,j)
+terms of its layout, but the symmetric entries may not have the same value. In maths language, if $$K(i,j)
 \neq0$$ then $$K(j,i)\neq0$$, but $$K(i,j)\neq{}K(j,i)$$. Hence, an asymmetric banded storage is the safest.
 The `_gbsv()` LAPACK subroutine is used for matrix solving.
 
@@ -70,7 +70,7 @@ particle collision issues, the full storage scheme is the only option.
 
 If the matrix is symmetric, a so-called pack format can be used to store the matrix. Essentially, only the upper or the
 lower triangle of the matrix is stored. The spatial cost is half of that of the full storage, but the solving speed is
-no better. The `_spsv()` subroutine is used for matrix solving. It is not recommended using this packed scheme.
+no better. The `_spsv()` subroutine is used for matrix solving. It is not recommended to use this packed scheme.
 
 #### Sparse Storage
 
@@ -88,7 +88,7 @@ set system_solver (1)
 
 #### Mixed Precision Algorithm
 
-The following command can be used to control if to use mixed precision refinement.
+The following command can be used to control whether to use mixed precision refinement.
 This command has no effect if the target matrix storage scheme has no mixed precision implementation.
 
 ```
@@ -175,17 +175,17 @@ With `SP_ENABLE_MPI` **enabled**, all available settings are summarised in the f
 Some empirical guidance can be concluded as follows.
 
 1.  For most cases, the asymmetric banded storage with full precision solver is the most general option.
-2.  The best performance is obtained by using symmetric banded storage, if the (effective) stiffness matrix is guaranteed
+2.  The best performance is obtained by using symmetric banded storage; if the (effective) stiffness matrix is guaranteed
     to be positive definite, users shall use it as a priority.
 3.  The mixed precision algorithm often gives the most significant performance boost for full storage with `CUDA` solver.
-    It outperforms the full precision algorithm when the size of system exceeds several thousands.
+    It outperforms the full precision algorithm when the size of the system exceeds several thousands.
 4.  The `SPIKE` solver is slightly slower than the conventional `LAPACK` implementations.
 5.  The `PARDISO` direct solver and `FGMRES` iterative solver are provided by `MKL`.
 
 ## Parallel Matrix Assembling
 
 For dense matrix storage schemes, the global matrix is stored in a consecutive chunk of memory.
-Assembling global matrix needs to fill in the corresponding memory location with potentially several values contributed by different elements.
+Assembling the global matrix needs to fill in the corresponding memory location with potentially several values contributed by different elements.
 Often in-place atomic summation is involved.
 To assign each memory location a mutex lock is not cost-efficient.
 Instead, a $$k$$-coloring concept can be adopted to divide the whole model into several groups.
@@ -201,11 +201,11 @@ set color_model false
 set color_model none
 ```
 
-As a NP hard problem, there is no optimal algorithm to find the **minimum** chromatic number.
+As an NP-hard problem, there is no optimal algorithm to find the **minimum** chromatic number.
 The target, however, is to find a small enough number to better utilize parallelism.
 The [Welsh-Powell](https://doi.org/10.1093/comjnl/10.1.85) algorithm is implemented.
 It is a sequential algorithm that may be slow on large problems.
-The [maximum independent set](https://en.wikipedia.org/wiki/Maximal_independent_set) algorithm is also available, it would outperform the Welsh-Powell algorithm on large models since it is parallelized.
+The [maximum independent set](https://en.wikipedia.org/wiki/Maximal_independent_set) algorithm is also available; it would outperform the Welsh-Powell algorithm on large models since it is parallelized.
 To switch, users can use the following command.
 
 ```
@@ -215,8 +215,8 @@ set color_model MIS
 set color_model WP
 ```
 
-Also, depending on the problem setup, such a coloring may or may not help improving the performance.
-If there are not a large number of matrix assembling, the time saved may not be significant.
+Also, depending on the problem setup, such a coloring may or may not help improve the performance.
+If there are not many matrix assembling operations, the time saved may not be significant.
 Thus, for problems of small sizes, users may consider disabling coloring.
 
 This option has no effect if a sparse storage is used.
@@ -232,8 +232,8 @@ set load_multiplier (1)
 # (1) double, new penalty number
 ```
 
-This command does not overwrite user defined penalty number if the specific constraint or load takes the penalty number
-than input arguments.
+This command does not overwrite the user-defined penalty number if the specific constraint or load takes the penalty number
+as an input argument.
 
 ## FGMRES Iterative Tolerance
 
@@ -246,7 +246,7 @@ set fgmres_tolerance (1)
 
 If the boundary condition is applied via the penalty method, say for example one previously
 uses `set constraint_multiplier 1E8`, then there is no need to set a tolerance smaller than `1E-8`. A slightly larger
-value is sufficient for an iterative algorithm, one can then set
+value is sufficient for an iterative algorithm; one can then set
 
 ```
 set fgmres_tolerance 1E-6

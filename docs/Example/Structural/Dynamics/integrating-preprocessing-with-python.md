@@ -2,7 +2,7 @@
 
 Minimum version: v2.5
 
-In this example, we demonstrate how to use python to preprocess data by creating a frame structure. This example requires some Python familiarity. However, as we are developing a frame structure which contains mainly frame elements, the procedure is relatively straightforward.
+In this example, we demonstrate how to use Python to preprocess data by creating a frame structure. This example requires some Python familiarity. However, as we are developing a frame structure which contains mainly frame elements, the procedure is relatively straightforward.
 
 ## Objective
 
@@ -293,7 +293,7 @@ with open('column.sp', 'r') as f:
 
 ### Fibre Based Elements
 
-The similar procedure can be used to generate fibre based elements with slight modifications. Here we use [`F21`](../../../Library/Element/Beam/F21.md) element. It relies on sections, and designations can be directly used to create sections. In this example, we use [`US2D`](../../../Library/Section/Code/US.md) category.
+A similar procedure can be used to generate fibre based elements with slight modifications. Here we use [`F21`](../../../Library/Element/Beam/F21.md) element. It relies on sections, and designations can be directly used to create sections. In this example, we use [`US2D`](../../../Library/Section/Code/US.md) category.
 
 
 ```python
@@ -456,7 +456,7 @@ main_file.write(
 pass
 ```
 
-We keep writing dynamic analysis step and the corresponding settings into the file.
+We keep writing the dynamic analysis step and the corresponding settings into the file.
 
 
 ```python

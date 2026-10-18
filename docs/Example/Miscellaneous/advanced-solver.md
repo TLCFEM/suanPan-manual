@@ -10,7 +10,7 @@ We will also show how to use the advanced solver to overcome the convergence iss
 
 ## An Example of Failure
 
-It is possible to click the right bottom corner of the plot to open the plot in a new tab.
+It is possible to click the bottom right corner of the plot to open the plot in a new tab.
 You can also drag the initial guess (red dot) to see how the first four iterations go.
 
 <iframe src="https://www.desmos.com/calculator/38b56e84f0?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
@@ -146,7 +146,7 @@ Running the analysis again, the L-BFGS solver converges in the first unloading s
 1. It is perfectly normal for the Newton solver to fail to converge in some situations.
 2. The advanced solvers, such as AICN and L-BFGS, can be used to overcome the convergence issue.
 
-In specific, the Newton-Raphson method should typically converge when the response is "nice", for example, monotonic with non-trivial curvature.
+Specifically, the Newton-Raphson method should typically converge when the response is "nice", for example, monotonic with non-trivial curvature.
 If the quadratic convergence cannot be achieved in this specific case, then the local integration at material point level may be the culprit.
 
 When the response is not "nice", for example, cyclic loading, softening, the Newton solver may fail to converge even when everything is implemented correctly.

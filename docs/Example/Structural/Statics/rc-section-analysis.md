@@ -42,7 +42,7 @@ For detailed material definitions, please refer to the corresponding pages.
 
 Now we define a rectangular concrete section with the dimension of $$400~\text{mm}\times500~\text{mm}$$ and nine integration points along section height.
 Since it is a 2D section, it is meaningless to define multiple integration points along the $$z$$ axis.
-All 2D sections only use 1D integration schemes along $$y$$ axis.
+All 2D sections only use 1D integration schemes along the $$y$$ axis.
 
 ```
 section Rectangle2D 2 400. 500. 1 9
@@ -122,8 +122,8 @@ By removing the axial load, the section now undergoes pure bending.
 The maximum moment under such a loading configuration is about $$170~\text{kNm}$$.
 
 One can quickly compute a rough estimate of the moment capacity.
-The compression depth of concrete section can be calculated via axial equilibrium.
-Assuming only the bottom rebars are effective, steel tension force shall be equal to the concrete compression force, this gives the depth of compression region as
+The compression depth of the concrete section can be calculated via axial equilibrium.
+Assuming only the bottom rebars are effective, the steel tension force shall be equal to the concrete compression force, this gives the depth of compression region as
 
 $$
 d'=\dfrac{400~\text{MPa}\times900~\text{mm}^2}{400~\text{mm}\times30~\text{MPa}}=30~\text{mm}.
@@ -135,7 +135,7 @@ $$
 M=400~\text{MPa}\times900~\text{mm}^2\times\left(500~\text{mm}-30~\text{mm}-15~\text{mm}\right)=164~\text{kNm}.
 $$
 
-The net lever arm is total height minus half of the compression depth minus cover thickness.
+The net lever arm is the total height minus half of the compression depth minus the cover thickness.
 
 !!! warning "just a rough estimate"
     The above procedure is nothing but a rough estimate.

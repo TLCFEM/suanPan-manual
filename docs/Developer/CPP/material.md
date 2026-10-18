@@ -10,7 +10,7 @@
 ## Main Tasks of a Material Model
 
 The material model is often associated with the integration point to compute the material response. As a general
-purposed computation framework, in general, most material models are not tied to any specific element types.
+purpose computation framework, in general, most material models are not tied to any specific element types.
 
 The main task of a material model is to compute the response based on the input(s). The input may be displacement,
 strain, velocity, strain rate, etc. The corresponding response could be force, stress and stiffness.
@@ -21,7 +21,7 @@ variables.
 
 ## Abstraction
 
-The abstraction of the `Material`class is given in the `MaterialBase` class.
+The abstraction of the `Material` class is given in the `MaterialBase` class.
 
 ## Data Storage
 
@@ -63,7 +63,7 @@ struct MaterialData {
 ```
 
 Two states are stored. The current state is the converged state while the trial state should be updated for each
-iteration. The difference between two states is also stored, given that some material models is formulated based on an
+iteration. The difference between two states is also stored, given that some material models are formulated based on an
 incremental form.
 
 The variable `initial_history` can be used to assign initial conditions. A detailed layout shall be provided in the
@@ -104,7 +104,7 @@ trial strain. If the material model is rate independent, this method can be left
  virtual int update_trial_status(const vec&, const vec&);
 ```
 
-Some element models may call the material model with increments. The according methods are defined as well.
+Some element models may call the material model with increments. The corresponding methods are defined as well.
 
 ```cpp
  virtual int update_incre_status(const vec&);
@@ -125,7 +125,7 @@ above four methods are defined.
 ```
 
 By default, these methods wrap the input scalars into `vec` variables and call the corresponding vector versions of
-these methods. If there is no special considerations, these four methods do not need to be overridden.
+these methods. If there are no special considerations, these four methods do not need to be overridden.
 
 ## Material In Details
 
@@ -133,7 +133,7 @@ these methods. If there is no special considerations, these four methods do not 
 
 The initialization procedure is performed before the analysis. The main task is to formulate for example the initial
 stiffness, initialize the corresponding history variables (if any), etc. The pointer of the domain that the current
-material model is defined in is sent to the initialization method in case of any other resources are required by the
+material model is defined in is sent to the initialization method in case any other resources are required by the
 current material model.
 
 As the material model is the bottom layer of FEA, most models are independent of other components of the problem domain.
@@ -155,7 +155,7 @@ Then the history variables are initialized. A scalar (accumulated plastic strain
 stress) are required so the total size of history variables is 7.
 
 ***It shall be noted that, if the model is designed to support nonzero initial history, viz., initial conditions,
-history variables cannot be initialized by directly call the `zeros()` method. The method `initialize_history()` shall
+history variables cannot be initialized by directly calling the `zeros()` method. The method `initialize_history()` shall
 be called instead. This method checks if the initial history is set. If yes, the initial condition will be retained.***
 
 By default, strain, stress and stiffness will be initialized in the base class implementation of `initialize()`. If any
@@ -217,5 +217,5 @@ int Material::reset_status() {
 }
 ```
 
-Developers can still choose to manage state variables by them own. Similar to elements, all state updates, including all
+Developers can still choose to manage state variables on their own. Similar to elements, all state updates, including all
 history variables, shall only happen in the `update_trial_status()` method to keep a simple and clean structure.

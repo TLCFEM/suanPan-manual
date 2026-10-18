@@ -20,7 +20,7 @@ amplitude Constant 1
 cload 2 1 1E-4 2 6
 ```
 
-We use arc length method to track the behavior, this is not necessary for this particular example as there is no
+We use the arc length method to track the behavior, this is not necessary for this particular example as there is no
 snap-through nor snap-back. The reference load is applied on the free end. For stopping criterion, we use minimum
 displacement at the free end.
 
@@ -46,4 +46,4 @@ The response is shown as follows.
 
 ![response](bifurcation-of-a-cantilever-beam.svg)
 
-The buckling load is just under $$2.5$$, agrees with the previous linear buckling analysis.
+The buckling load is just under $$2.5$$, which agrees with the previous linear buckling analysis.

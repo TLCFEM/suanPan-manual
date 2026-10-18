@@ -3,7 +3,7 @@
 Objective Concrete Model
 
 The `ConcreteExp` model uses the exponential functions from the Barcelona model (Lubliner, 1989) as the backbones. The
-main advantage is now the area under the backbone has an upper bound and can be explicitly integrated. By associating
+main advantage is that the area under the backbone has an upper bound and can be explicitly integrated. By associating
 this value with objective quantities, it is possible to obtain a uni-axial concrete model that supports objective
 response.
 
@@ -37,7 +37,7 @@ $$
 $$
 
 where $$a$$ and $$b$$ are two material properties that control the shape of the backbone. For tension, $$a<1$$. For
-compression $$a>1$$.
+compression, $$a>1$$.
 
 The area under the backbone is
 
@@ -54,7 +54,7 @@ $$
 The model accepts $$g_t$$ and $$g_c$$ in order to obtain objective results.
 
 The parameters $$f_t$$ and $$f_c$$ are elastic limits of tension and compression respectively. **However, the maximum
-strength $$f_{c,m}$$ are taken as inputs since for compression there is a hardening response.**
+strength $$f_{c,m}$$ is taken as an input since for compression there is a hardening response.**
 
 It could be derived that
 
@@ -62,7 +62,7 @@ $$
 \dfrac{f_c}{f_{c,m}}=\dfrac{4a_c}{\left(1+a_c\right)^2}.
 $$
 
-If, as normally assumed, the elastic limit of $$80~\%$$ of the maximum strength, then
+If, as normally assumed, the elastic limit is $$80~\%$$ of the maximum strength, then
 
 $$
 \dfrac{f_c}{f_{c,m}}=\dfrac{4a_c}{\left(1+a_c\right)^2}=0.8,\qquad a_c\approx3.73.

@@ -3,7 +3,7 @@
 ## Local CS
 
 The beam section possesses a local coordinate system that differs from the global coordinate system. The local
-$$x$$-axis is aligned with beam cord. Strong axis is represented by local $$z$$-axis while weak axis is represented by
+$$x$$-axis is aligned with beam chord. Strong axis is represented by local $$z$$-axis while weak axis is represented by
 local $$y$$-axis. The local $$xyz$$ axes form a right-handed coordinate system.
 
 ## Orientation
@@ -45,9 +45,9 @@ A few different general purpose beam elements are available.
 The [`B21`](B21.md) and [`B31`](B31.md) are classic Bernoulli beam elements, which are probably the first beam 
 elements introduced in any FEM textbooks. They are displacement based elements, meaning that the displacement 
 profile along beam chord always follows the Hermite polynomial. This is fine for elastic analysis but may not be 
-suitable for plastic analysis. The nonlinear response is often over stiff. Accuracy can be improved by mesh 
+suitable for plastic analysis. The nonlinear response is often overly stiff. Accuracy can be improved by mesh 
 refinement, but it appears a bit cumbersome to define multiple elements within the same span/floor with interior 
-nodes do not connect additional frames.
+nodes that do not connect additional frames.
 
 To model hinge connection at one of two ends, one can use [`B21E`](B21E.md) so that either the first or the second 
 end has zero moment. To specify the explicit plastic hinge length, one can use [`B21H`](B21H.md). Plasticity is only 

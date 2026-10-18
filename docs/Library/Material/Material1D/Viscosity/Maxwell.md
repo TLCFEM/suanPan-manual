@@ -15,7 +15,7 @@ material Maxwell (1) (2) (3) [4] [5] [6]
 # (1) int, unique tag
 # (2) int, damper tag
 # (3) int, spring tag
-# [4] bool string, if to use matrix formulation, default: false
+# [4] bool string, whether to use matrix formulation, default: false
 # [5] int, the maximum unconverged substep allowed, default: 1
 # [6] double, local time integration parameter, default: 0.0
 ```
@@ -27,7 +27,7 @@ material Maxwell (1) (2) (3) [4] [5] [6]
    scalar iteration is performed. In general, a scalar algorithm requires fewer floating number operations but may be
    less numerically stable.
 2. The parameter `[5]` can be set to a nonzero positive integer to allow some unconverged substeps to be accumulated to
-   avoid sharp transition regions that may cause numerical issues. As the result, the response may not be as smooth as
+   avoid sharp transition regions that may cause numerical issues. As a result, the response may not be as smooth as in
    other regions.
 3. The parameter `[6]` is used to control how local strain is integrated. A value of $$0.0$$ indicates it would be
    automatically computed based on the input strain and strain rate increments. A value of $$0.5$$ indicates a linear

@@ -1,6 +1,6 @@
 # TabularSpline
 
-The `TabularSpline` amplitude reads external tabular amplitude, interpolation is performed when necessary.
+The `TabularSpline` amplitude reads an external tabular amplitude; interpolation is performed when necessary.
 
 There should be exactly two columns in the external file. The first column is time point, and the second one shall be
 the amplitude.
@@ -25,7 +25,7 @@ amplitude TabularSpline (1) (2)
 This amplitude implementation changes the original piece-wise linear amplitude defined in the provided table.
 This thus results in a slightly different shape compared to the original one.
 
-This shall exclusively used in seismic analysis and apply to ground motions.
+This shall be exclusively used in seismic analysis and apply to ground motions.
 
 The main motivation is to curb the unwanted potential spurious responses in the final results.
 The technical details have been extensively discussed in [this paper](https://doi.org/10.1080/13632469.2024.2372814).

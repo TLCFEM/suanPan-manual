@@ -16,7 +16,7 @@ upsampling (1) (2) [3] [4]
 
 ## Remarks
 
-The seismogram _**must**_ be stored in double column plain text file. The first column stores the time series, and the
+The seismogram _**must**_ be stored in a double column plain text file. The first column stores the time series, and the
 second column stores the acceleration amplitudes.
 
 The time series _**must**_ be equally spaced.

@@ -13,8 +13,8 @@ node (1) [2...]
 ## Usage
 
 A unique tag is required to identify different nodes. The tag shall be an unsigned integer, negative values are not
-allowed. Although zero is a valid tag, it is suggested to label nodes starting with one. It is not recommended to use
-arbitrarily large tag for any nodes, although the maximum tag is about four billion (`unsigned int`). Any unnecessarily
+allowed. Although zero is a valid tag, it is suggested to label nodes starting with one. It is not recommended to use an
+arbitrarily large tag for any node, although the maximum tag is about four billion (`unsigned int`). Any unnecessarily
 large node tag may lead to memory leakage as some functions create matrix depending on the largest node tag to ensure
 all nodes could be stored.
 
@@ -35,7 +35,7 @@ node 3 0.
 node 4 9. 8. 7. 1.
 ```
 
-In fact, during initialisation, the dimension of each node will be double-checked to ensure the connected elements could
+In fact, during initialisation, the dimension of each node will be double-checked to ensure the connected elements can
 work properly. Meanwhile, excessive dimensions would be ignored (but not discarded) during analysis. If for example one
 is performing a 2D analysis and the model contains the following snippet.
 
@@ -47,9 +47,9 @@ node 2 2. 1.
 
 The dimension of node 1 will be automatically expanded to two with zero filling,
 so node 1 represents node $$(3.0,0.0)$$ in the 2D space.
-If, on the other hand, an 1D analysis is performed, then the second coordinate will be ignored.
+If, on the other hand, a 1D analysis is performed, then the second coordinate will be ignored.
 
-It is still recommended defining nodes with proper coordinates. Generating a node list from ABAQUS input file is an easy
+It is still recommended to define nodes with proper coordinates. Generating a node list from ABAQUS input file is an easy
 task.
 
 ## Output Types

@@ -19,7 +19,7 @@ $$
 V_{LJ}=4\alpha\left(\left(\dfrac{\sigma}{r}\right)^{12}-\left(\dfrac{\sigma}{r}\right)^{6}\right),
 $$
 
-where $$r$$ is the distance between two particles, $$\sigma$$ is the size of particle,
+where $$r$$ is the distance between two particles, $$\sigma$$ is the size of a particle,
 which is taken as **one tenth** of spacing `[2]`.
 
 The force is computed as

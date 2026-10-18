@@ -19,4 +19,4 @@ The constraint is applied to ALL particles defined in the system. Since any two 
 there is no way to obtain the structural topology. Thus, the full/sparse matrix storage shall be used. Parameter `(2)`
 controls the uniform size of particles. When any two particles are closer than the value defined in `(2)`, interaction
 forces will be applied. The penalty method is used in implementation, thus parameter `(3)` represents the penalty
-number, adjusting this value leads to different magnitudes of interaction forces.
+number; adjusting this value leads to different magnitudes of interaction forces.

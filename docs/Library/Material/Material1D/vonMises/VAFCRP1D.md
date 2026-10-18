@@ -22,7 +22,7 @@ $$
 ^{\dfrac{1}{\epsilon}}-1\right),
 $$
 
-where $$\mu$$ and $$\epsilon$$ are two material constants that controls viscosity.
+where $$\mu$$ and $$\epsilon$$ are two material constants that control viscosity.
 Note either $$\mu$$ or $$\epsilon$$ can be set to zero to disable rate-dependent response.
 In that case this model is identical to the [`ArmstrongFrederick1D`](ArmstrongFrederick1D.md) model.
 

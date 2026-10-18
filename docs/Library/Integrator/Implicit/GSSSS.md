@@ -12,7 +12,7 @@ The GSSSS approach unifies various time integration methods in a single framewor
 
 There are quite a few papers on this topic by the same group of authors. Similar contents can be found in a number of
 papers. The implementation is based on a unified predictor multi-corrector representation. It is sufficiently general so
-that both elastic and elastoplastic systems can be analyzed. The implementation is documented in details in Section
+that both elastic and elastoplastic systems can be analyzed. The implementation is documented in detail in Section
 14.3.4 (Eqs. 14.280 --- 14.296) of the first reference.
 
 It is strongly recommended to give the references a careful read as GSSSS is very elegant if you wish to learn more
@@ -31,7 +31,7 @@ integrator GSSSSV0 (1) (2) (3) (4)
 # (4) double, spectral radius (order does not matter)
 ```
 
-The optimal scheme (see table below) only requires one spectral radius, one can use the following command to use the 
+The optimal scheme (see the table below) only requires one spectral radius; one can use the following command to use the 
 optimal scheme.
 
 ```text
@@ -49,7 +49,7 @@ $$
 0\leqslant\rho_{3,\infty}\leqslant\rho_{1,\infty}\leqslant\rho_{2,\infty}\leqslant1.
 $$
 
-The syntax takes three spectral radii in arbitrary order, they are clamped between zero and unity, sorted and assigned
+The syntax takes three spectral radii in arbitrary order; they are clamped between zero and unity, sorted and assigned
 to $$\rho_{3,\infty}$$, $$\rho_{1,\infty}$$ and $$\rho_{2,\infty}$$ to compute internal parameters. Users can thus
 assign three valid radii without worrying about the order.
 

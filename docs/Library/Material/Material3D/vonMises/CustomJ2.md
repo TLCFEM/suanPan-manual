@@ -12,7 +12,7 @@ This model is an implementation of the [`NonlinearJ2`](NonlinearJ2.md) abstract 
 material CustomJ2 (1) (2) (3) (4) (5) [6]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, possions ratio
+# (3) double, Poisson's ratio
 # (4) int, isotropic hardening expression tag
 # (5) int, kinematic hardening expression tag
 # [6] double, density, default: 0.0

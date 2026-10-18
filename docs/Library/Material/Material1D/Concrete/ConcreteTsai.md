@@ -39,7 +39,7 @@ variable layout.
    recommended).
 2. There is no additional consideration for small loops, which is available in [`ConcreteCM`](ConcreteCM.md).
 
-The parameter $$m$$ defined in the reference.
+The parameter $$m$$ is defined in the reference.
 But it is not explicitly exposed in order to eliminate inconsistent elastic modulus in compression and tension.
 It is, instead, computed internally based on the given strains at compression and tension strength.
 

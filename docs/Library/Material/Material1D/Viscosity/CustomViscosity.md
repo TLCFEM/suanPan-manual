@@ -23,7 +23,7 @@ The input size shall be 2 and the output size shall be 3.
 
 ## Example
 
-Imaging to model the linear viscous material such that
+Imagine modelling a linear viscous material such that
 
 $$
 \sigma=1234\dot{\epsilon},
@@ -37,5 +37,5 @@ expression SimpleVector 1 x|2 y|3 y[0]:=1234*x[1];y[1]:=0;y[2]:=1234;
 
 The strain maps to `x[0]` and the strain rate maps to `x[1]`.
 
-The stress output maps to `y[0]` and its derivatives regarding strain and strain rate maps to `y[1]` and `y[2]`
+The stress output maps to `y[0]` and its derivatives regarding strain and strain rate map to `y[1]` and `y[2]`
 respectively.

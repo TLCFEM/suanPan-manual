@@ -59,7 +59,7 @@ If **VTK** is enabled, it is possible to record the distribution of tension dama
 hdf5recorder 1 Visualisation DT width 3 scale 0
 ```
 
-Since we are not interested in the displacement, `scale` is simply set to zero. The output file are automatically
+Since we are not interested in the displacement, `scale` is simply set to zero. The output files are automatically
 numbered with a total width of four. It is changed to three in this example. The generated visualisation files can be loaded
 into **ParaView** as a group to generate animations.
 
@@ -84,7 +84,7 @@ Results are shown as follows, which agree with experimental results.
 
 ## Element Deletion
 
-It is possible to further define a criterion so that for elements that exceed a certain value of $$d_t$$, they are
+It is possible to further define a criterion so that elements that exceed a certain value of $$d_t$$ are
 removed from the model. This is an approach adopted widely to simulate crack propagation.
 
 ```

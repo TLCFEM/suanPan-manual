@@ -3,8 +3,8 @@
 The Lagrange multiplier method can be used to define constraints. Extra storage is required for the so-called auxiliary
 border stiffness matrix. The constraint is satisfied exactly.
 
-The `FixedLength2D` and `FixedLength3D` constraints behave similar to the `Tie` element, the nonlinear constraint is
-implemented via Lagrange multiplier method.
+The `FixedLength2D` and `FixedLength3D` constraints behave similarly to the `Tie` element; the nonlinear constraint is
+implemented via the Lagrange multiplier method.
 
 The position $$\mathbf{x}$$ of a given node can be expressed as the summation of coordinate $$\mathbf{d}$$ and
 displacement $$\mathbf{u}$$.

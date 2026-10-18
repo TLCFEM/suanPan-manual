@@ -22,7 +22,7 @@ step implicitdynamic (1) (2)
 
 The explicit dynamics system uses acceleration as the primary variable.
 
-All displacement based loads/constraints cannot be not applied.
+All displacement based loads/constraints cannot be applied.
 
 ### Syntax
 

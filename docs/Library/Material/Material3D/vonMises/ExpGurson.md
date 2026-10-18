@@ -12,7 +12,7 @@ References:
 material ExpGurson (1) (2) (3) (4) (5) [6] [7] [8] [9] [10] [11]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, initial yield stress, \sigma_y^0
 # (5) double, n
 # [6] double, q1, default: 1.0

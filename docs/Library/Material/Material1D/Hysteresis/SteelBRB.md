@@ -3,7 +3,7 @@
 Steel Model For Modelling BRB
 
 The `SteelBRB` material defines a steel model. It can be used to model buckling restrained braces. It uses exponential
-type functions thus resembles the [`RambergOsgood`](RambergOsgood.md) material.
+type functions and thus resembles the [`RambergOsgood`](RambergOsgood.md) material.
 
 References are available:
 
@@ -60,7 +60,7 @@ material SteelBRB (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) [11]
 
 ## Theory
 
-The model is described in incremental form. The total strain increment is decomposed into elastic and plastic part,
+The model is described in incremental form. The total strain increment is decomposed into elastic and plastic parts,
 
 $$
 \dot\sigma=E(\dot\varepsilon-\dot\varepsilon_p).
@@ -72,7 +72,7 @@ $$
 \dot\varepsilon_p=\Big|\dfrac{\sigma-\sigma_p}{\sigma_y}\Big|^\alpha\dot\varepsilon,
 $$
 
-in which $$\sigma_p$$ is associated with $$\varepsilon_p$$ via plastic modulus $$H$$,
+in which $$\sigma_p$$ is associated with $$\varepsilon_p$$ via the plastic modulus $$H$$,
 
 $$
 \sigma_p=H\varepsilon_p,

@@ -2,7 +2,7 @@
 
 By default, all recorders record files and store the data under the **initial** current working directory. The initial
 current working directory is the working directory where the main program is executed. Note that here **initial** is
-emphasized given the fact that users can use `pwd` command to change the current working directory.
+emphasized given the fact that users can use the `pwd` command to change the current working directory.
 
 Internally, the output folder is managed by an independent path that is initialised to the current working directory
 when starting the program.
@@ -23,7 +23,7 @@ set output_folder (1)
 
 A few points to note:
 
-1. The program tries to create the given output folder it does not exist. The creation itself may fail. In case of any
+1. The program tries to create the given output folder if it does not exist. The creation itself may fail. In case of any
    failure, the output folder is not changed.
 2. The output folder can be either absolute or relative (to current output folder).
 3. A special token `$pwd` is available to set the output folder to the current working directory, which may have been
@@ -40,7 +40,7 @@ suanPan ~<> pwd
 suanPan ~<> peek output_folder
 /home/theodore/Demo
 suanPan ~<> pwd ..
-# change pwd does not affect output_folder
+# changing pwd does not affect output_folder
 suanPan ~<> pwd
 /home/theodore
 suanPan ~<> peek output_folder
@@ -69,7 +69,7 @@ suanPan ~<> exit
 ## Control Output Folder For Recorders
 
 The `output_folder` attribute is a global attribute that will be accessed by recorders when the `save` command is
-invoked. This means it is possible to set different folders for different recorders prior to save the data. The
+invoked. This means it is possible to set different folders for different recorders prior to saving the data. The
 following is a simple example that shows how to store displacement and resistance data in different folders.
 
 The example model is an elastic cantilever beam with a point load at the free end.

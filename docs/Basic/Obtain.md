@@ -27,15 +27,15 @@ suanpan
 sp
 ```
 
-One can also attach volume to the container to access files in the host machine.
+One can also attach a volume to the container to access files in the host machine.
 This may be the main use case.
-Assume there is a model file under the path `/path/to/host/folder/example.model.sp`, to run the analysis under this folder, one can use the following command.
+Assume there is a model file under the path `/path/to/host/folder/example.model.sp`; to run the analysis under this folder, one can use the following command.
 
 ```bash
 docker run --rm -v /path/to/host/folder:/dirty -w /dirty tlcfem/suanpan sp -f example.model.sp
 ```
 
-Docker image is convenient on machines with older kernels or limited by other factors that does not allow 
+The Docker image is convenient on machines with older kernels or limited by other factors that do not allow 
 execution of precompiled binaries.
 
 This is now supported by the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=tlc.suanpan).
@@ -97,7 +97,7 @@ To run the application, one shall use the following command in terminal.
 flatpak run io.github.tlcfem.suanPan
 ```
 
-Since no shim is created, it would be convenient to create alias such that
+Since no shim is created, it would be convenient to create an alias such that
 
 ```bash
 echo "alias suanpan=\"flatpak run io.github.tlcfem.suanPan\"" >> ~/.bashrc
@@ -111,12 +111,12 @@ By default, the `AVX2` support is turned on to utilize CPU capability. For CPUs 
 application **cannot** be successfully executed. Users can either compile the program by themselves or request a
 specific version by filing an issue.
 
-The name of the executable is `suanPan`, however, snap/chocolatey/scoop will create shim executable named as 
+The name of the executable is `suanPan`; however, snap/chocolatey/scoop will create a shim executable named as 
 `suanpan`. Depending on how the application is installed, one may use `suanpan` or `suanPan` to invoke the application.
 
 The parallelization is enabled mostly by the `TBB` library and `<execution>` header (C++17). If the program is compiled
 with **SUANPAN_MT** macro, parallelization is used by default. The **OpenMP** is enabled in several parts of the
-program, users can set environment variable **OMP_NUM_THREADS** to customize some **OpenMP** based parallelization. To
+program; users can set the environment variable **OMP_NUM_THREADS** to customize some **OpenMP** based parallelization. To
 do so, users can, for example, in Windows, use the following command.
 
 ```powershell
@@ -223,8 +223,8 @@ suanPan ~<>
 
 ### Batch Mode
 
-To analyze the model written in a model file named as for example `example.supan`, the `-f` or `--file` parameter can be
-used. First we create the file `example.supan` with `exit` command.
+To analyze the model written in a model file named, for example, `example.supan`, the `-f` or `--file` parameter can be
+used. First, we create the file `example.supan` with the `exit` command.
 
 ```bash
 echo exit > example.supan
@@ -249,7 +249,7 @@ to terminals slows down the analysis. Users can use the `-np` or `--noprint` opt
 ./suanPan.exe -np -f example.supan
 ```
 
-In the CLI mode, it is possible to use `file` command to load the file.
+In the CLI mode, it is possible to use the `file` command to load the file.
 
 ```
 +--------------------------------------------------+
@@ -309,15 +309,15 @@ use/modify it. It may be necessary to manually search for the file if the applic
 
 ### Autocomplete
 
-All keywords used are stored in the JSON file `suanPan.sublime-completions`. Place the file in
+All keywords used are stored in the JSON file `suanPan.sublime-completions`. Place the file in the
 folder `~/.config/sublime-text-3/Packages/User/` (Linux) or `%appdata%\Sublime Text 3\Packages\User` (Windows) and you
 are good to go with the previous syntax file. The new path has been changed to `~/.config/sublime-text/Packages/User/` (
 Linux) and `%appdata%\Sublime Text\Packages\User` (Windows) in `Sublime Text 4`.
 
 ### Build System
 
-In order to render ANSI color codes correctly in Linux like systems, you may wish to
-install [ANSIescape](https://packagecontrol.io/packages/ANSIescape) package. Now define a new build system
+In order to render ANSI color codes correctly in Linux-like systems, you may wish to
+install the [ANSIescape](https://packagecontrol.io/packages/ANSIescape) package. Now define a new build system
 via `Tools -> Build System -> New Build System...`, copy and paste the following contents in the file and save it
 as `suanPan.sublime-build`. You may need to replace command `suanpan` with the full path of the executable.
 
@@ -351,18 +351,18 @@ suanpan -nc -f model_file.supan
 ### Windows
 
 A batch file named as `AddAssociation.bat` is provided in the archive. It associates `*.sp` and `*.supan` files with the
-program and copies configuration files to default folder if Sublime Text is installed. If the package is installed via
+program and copies configuration files to the default folder if Sublime Text is installed. If the package is installed via
 package managers, please manually search for and execute this file.
 
-Admin privilege is required.
+Admin privileges are required.
 
 ### Linux
 
 A bash script named as `suanPan.sh` is provided in the archive to set up the above configurations automatically. The
 script can be used to both execute the program and create symbolic links.
 
-For the first time use, the following commands create a soft link under `$HOME/.local/bin` so that users can execute the
-program anywhere by invoking command `suanpan` in any folder. The Sublime Text configuration files are copied to the
+For first-time use, the following commands create a soft link under `$HOME/.local/bin` so that users can execute the
+program anywhere by invoking the command `suanpan` in any folder. The Sublime Text configuration files are copied to the
 default folder if Sublime Text is installed.
 
 ```bash

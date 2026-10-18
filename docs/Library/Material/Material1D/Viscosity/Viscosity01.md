@@ -2,7 +2,7 @@
 
 Viscous Damper
 
-The damping force is defined as a function of velocity (or strain rate, depends on what the input is). This material
+The damping force is defined as a function of velocity (or strain rate, depending on what the input is). This material
 model does not respond to strain/displacement. To represent materials that respond to both displacement and velocity,
 see [`Maxwell`](Maxwell.md) and [`Kelvin`](Kelvin.md).
 

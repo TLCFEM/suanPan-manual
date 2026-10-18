@@ -2,9 +2,9 @@
 
 Record Model Response
 
-The available output types are listed in [OutputType](OutputType.md) file.
+The available output types are listed in the [OutputType](OutputType.md) file.
 
-To control the folders to which the recorder will write the output, please check [OutputFolder](OutputFolder.md) file.
+To control the folders to which the recorder will write the output, please check the [OutputFolder](OutputFolder.md) file.
 
 Not all quantities at every time step need to be stored. Only those explicitly specified will be stored as history
 output.
@@ -12,7 +12,7 @@ output.
 Currently, there are several types of recorders. Analysts can choose to record either **element response** at
 integration points (strain, stress, etc., some elements support response at elemental nodes) or **nodal response** at
 model nodes (displacement, velocity, acceleration, reaction, etc.). The third type supports the output of the summation
-of the same quantity of several nodes/elements. Alternatively, analyst can recorder global quantities such as global
+of the same quantity of several nodes/elements. Alternatively, the analyst can record global quantities such as global
 stiffness/mass, global kinetic energy, etc.
 
 ## Syntax
@@ -72,7 +72,7 @@ recorder (1) hdf5 Visualisation (3) [every 4]
 # for example: "every 10" means the recorder will record the response every ten converged substeps.
 ```
 
-The `Visualisation` will immediately write the disk with incremental file names.
+The `Visualisation` will immediately write to the disk with incremental file names.
 
 ## Node Recorder
 

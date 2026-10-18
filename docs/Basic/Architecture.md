@@ -5,21 +5,21 @@ The MPI-based distributed design could take various forms in the context of OOP.
 ## A Straightforward Method
 One approach is to serialize and send all associated data to another process, the receiving process deserializes the byte stream and creates all necessary objects and performs the computation.
 This involves intensive data exchange, and packing/unpacking associated data every iteration is not a light task.
-This approach does not scale well as the analysis would quickly be bottlenecked by encoding/decoding message and latency.
+This approach does not scale well as the analysis would quickly be bottlenecked by encoding/decoding messages and latency.
 
 This is unfortunately the approach used by OpenSees.
 OpenSees is outdated in terms of both shared-memory parallelism (which does not exist at all) and distributed-memory parallelism (which is too fine aggregated and lacks both performance and flexibility).
 OpenSees effectively requires every class that needs to be distributed to provide a schema, in order to serialize/deserialize objects, manually, as there is a lack of reflection mechanism.
-Imaging for general nonlinear problems, in order to update the status of an element, it needs to send element history variable sets and that of associated material objects over the network.
-However, if it is an elastic step, the trial status can be simply computed by a matrix multiplication, the cost of messaging passing is disproportional and thus kills performance.
+Imagine that for general nonlinear problems, in order to update the status of an element, it needs to send element history variable sets and that of associated material objects over the network.
+However, if it is an elastic step, the trial status can be simply computed by a matrix multiplication; the cost of message passing is disproportional and thus kills performance.
 It does not scale well by the nature of its design.
 
 ## Remote Objects with P2P Communication
 
-An alternative is to create the same object on every process, the actual computation is done on one of the processes, and only the results are sent back to the root process.
+An alternative is to create the same object on every process; the actual computation is done on one of the processes, and only the results are sent back to the root process.
 With this approach, there is no need for object 'proxies', as all objects on all processes are complete, fully functional, homogeneous objects.
 They manage all necessary data internally, locally.
-There is also no need to pack/unpack complex data structure, making the implementation extremely simple and maintainable.
+There is also no need to pack/unpack complex data structures, making the implementation extremely simple and maintainable.
 The only message to communicate is the elemental matrices (stiffness, mass, etc.) and the corresponding resistance vector.
 The size is significantly smaller than the previous approach.
 

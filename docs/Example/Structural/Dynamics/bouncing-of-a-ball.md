@@ -4,7 +4,7 @@ In this example we show the application of the [`RigidWall`](../../../Library/Co
 [`RestitutionWall`](../../../Library/Constraint/RestitutionWall.md) constraints. It is also possible to define a 
 rigid wall with finite dimension. The model script can be [downloaded](bouncing-of-a-ball.supan).
 
-A mass point is used to idealize the ball. As this is a dynamics problem of rigid body, there is no need to define any
+A mass point is used to idealize the ball. As this is a dynamics problem of a rigid body, there is no need to define any
 material models to provide stiffness matrix. For this reason, it is possible to just define a point mass at the target
 point.
 
@@ -25,7 +25,7 @@ amplitude Constant 1
 To apply the gravity, we use a constant vertical acceleration load, to do so,
 
 ```
-# define a acceleration load of magnitude -1 using amplitude 1 on DoF 2 of node 1
+# define an acceleration load of magnitude -1 using amplitude 1 on DoF 2 of node 1
 acceleration 1 1 -1 2 1
 ```
 
@@ -38,7 +38,7 @@ cload 1 1 -1 2 1
 Since the initial state is always in equilibrium, an initial condition can be added.
 
 ```
-# assign initial acceleration of maginutde of -1 on DoF 2 of node 1
+# assign initial acceleration of magnitude -1 on DoF 2 of node 1
 initial acc -1 2 1
 ```
 
@@ -80,7 +80,7 @@ $$
 ## Rigid Wall Constraint
 
 We define two infinite rigid wall constraints inclined $$\pi/4$$ and $$3\pi/4$$ to form a right angle. The ball can
-bounce between two walls. Two walls are both anchored at the origin and have infinite dimension, the outer normals are
+bounce between two walls. Two walls are both anchored at the origin and have infinite dimension; the outer normals are
 $$(1,1)$$ and $$(-1,1)$$, respectively. The penalty factor is chosen to be $$0.1$$ in this particular example. 
 Accounting for the time step defined below ($$0.005$$), the actual penalty factor applied to the effective stiffness is
 $$0.1/0005/0.005=4000$$.
@@ -90,7 +90,7 @@ rigidwall 1 0 0 1 1 1E-1
 rigidwall 2 0 0 -1 1 1E-1
 ```
 
-The penalty factor can be altered to achieve different levels of satisfactions of the constraint. But higher values also
+The penalty factor can be altered to achieve different levels of satisfaction of the constraint. But higher values also
 result in greater high frequency noise.
 
 It may be of interest to record the motion of the ball.

@@ -22,6 +22,6 @@ element DKTS4 (1) (2...5) (6) (7) [8] [9]
 
 ## Remarks
 
-1. If the nonlinear geometry switched on, the transformation between the global and local reference frames will depend
+1. If the nonlinear geometry is switched on, the transformation between the global and local reference frames will depend
    on the current displacement. The nonlinear transformation is similar to the corotational transformation, and the
    local response is still linear. Thus, it follows "large displacement, small deformation" assumption.

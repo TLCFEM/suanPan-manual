@@ -12,12 +12,12 @@ rules. The [`BilinearMises1D`](../Material1D/vonMises/BilinearMises1D.md) model 
 the `Mises1D` model and only implements the isotropic hardening.
 
 The [`ExpMises1D`](../Material1D/vonMises/ExpMises1D.md) model implements the exponential type isotropic hardening rule
-with a saturated stress, again there is no kinematic hardening defined.
+with a saturated stress; again there is no kinematic hardening defined.
 
 For nonlinear kinematic hardening rule, often an Armstrong-Frederick type definition is used for modelling Bauschinger
-effect. Two models are available, they are the [`ArmstrongFredick1D`](../Material1D/vonMises/ArmstrongFrederick1D.md)
-model which is rate dependent and the [`VAFCRP1D`](../Material1D/vonMises/VAFCRP1D.md) model which is rate dependent,
-the corresponding viscosity is defined in a Peric style. If experiment data is available, those two models will give
+effect. Two models are available: the [`ArmstrongFrederick1D`](../Material1D/vonMises/ArmstrongFrederick1D.md)
+model which is rate dependent and the [`VAFCRP1D`](../Material1D/vonMises/VAFCRP1D.md) model which is rate dependent.
+The corresponding viscosity is defined in a Peric style. If experiment data is available, those two models will give
 better simulation results for a wide range of metals.
 
 Another model that can be used is the asymmetric [`SteelBRB`](../Material1D/Hysteresis/SteelBRB.md) model which is

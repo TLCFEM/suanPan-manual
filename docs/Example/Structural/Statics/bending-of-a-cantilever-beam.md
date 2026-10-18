@@ -31,7 +31,7 @@ material Elastic1D 1 10
 section Rectangle3D 1 2 2 1
 ```
 
-Assuming the beam is in the $$xy$$ plane, then strong axis aligns with global $$z$$. To define 3D beam elements, its
+Assuming the beam is in the $$xy$$ plane, then the strong axis aligns with global $$z$$. To define 3D beam elements, its
 section orientation shall be defined. The corotational formulation that supports nonlinear geometry is used.
 
 ```
@@ -39,7 +39,7 @@ section orientation shall be defined. The corotational formulation that supports
 orientation B3DC 1 0 0 -1.
 ```
 
-Now define the elements. Replacing `F31` with `B31` to use displacement based elements.
+Now define the elements. Replace `F31` with `B31` to use displacement based elements.
 
 ```
 element F31 1 1 3 1 1 5 true
@@ -66,7 +66,7 @@ plainrecorder 1 Node U1 2
 plainrecorder 2 Node U2 2
 ```
 
-It shall be noted since nonlinear geometry is adopted, the stiffness may not be symmetric anymore, it is necessary to
+It shall be noted that since nonlinear geometry is adopted, the stiffness may not be symmetric anymore, it is necessary to
 switch off symmetric matrix storage to ensure correct results are computed. Since not all nonlinear geometry problems
 are asymmetric, the program itself has no mechanism to check if it is appropriate to use symmetric/asymmetric storage.
 

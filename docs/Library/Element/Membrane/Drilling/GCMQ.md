@@ -45,7 +45,7 @@ element SGCMQG (1) (2...5) (6) [7] [8]
   - "L": 3rd Order Lobatto Scheme
   - "G": 3rd Order Gauss Scheme
 * `GCMQ` is the full version described in [10.1002/nme.6066](https://doi.org/10.1002/nme.6066) with enhanced strain, `SGCMQ` is a `PS` like element with no enhanced
-  strain, the direct result of which is less computation is required (less than `CP8R`).
+  strain, the direct result of which is that less computation is required (less than `CP8R`).
 
 The default approach interpolates translations from drilling rotations using edge length, potentially causing severe mesh dependency for drilling DoFs.
 This is only an issue if the simulation actually uses drilling DoFs, as it can skew the accuracy of connected components.

@@ -28,33 +28,33 @@ node 4 3 0
 
 Here we use unit distance between two adjacent nodes.
 If the elements used are based on strain and strain rate, the unit distance is the only correct choice.
-If the elements used are based on displacement and velocity, the unit distance is not a must.
+If the elements used are based on displacement and velocity, the unit distance is not required.
 
 ### Materials
 
 The left spring uses a $$\tanh$$ function.
-To model it, we use [Tanh1D](../../../Library/Material/Material1D/Elastic/Tanh1D.md) material.
+To model it, we use the [Tanh1D](../../../Library/Material/Material1D/Elastic/Tanh1D.md) material.
 
 ```text
 material Tanh1D 1 1000
 ```
 
 The right spring uses a $$\sinh$$ function.
-To model it, we use [Sinh1D](../../../Library/Material/Material1D/Elastic/Sinh1D.md) material.
+To model it, we use the [Sinh1D](../../../Library/Material/Material1D/Elastic/Sinh1D.md) material.
 
 ```text
 material Sinh1D 3 1000
 ```
 
 The middle spring is a linear spring, we simply
-use [Elastic1D](../../../Library/Material/Material1D/Elastic/Elastic1D.md) material.
+use the [Elastic1D](../../../Library/Material/Material1D/Elastic/Elastic1D.md) material.
 
 ```text
 material Elastic1D 2 100
 ```
 
 The dashpot is linear. We use $$\alpha=1$$
-in [Viscosity01](../../../Library/Material/Material1D/Viscosity/Viscosity01.md) material.
+in the [Viscosity01](../../../Library/Material/Material1D/Viscosity/Viscosity01.md) material.
 The viscosity coefficient is $$5$$.
 
 ```text

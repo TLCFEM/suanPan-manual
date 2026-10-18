@@ -1,6 +1,6 @@
 # modifier
 
-The `modifier` objects are used to modify element response that does not considered in element itself. Typical examples
+The `modifier` objects are used to modify element response that is not considered in the element itself. Typical examples
 include element damping matrix, lumped mass matrix, etc.
 
 It shall be noted that if several modifiers are defined, they are applied on the system in a sequential manner based on

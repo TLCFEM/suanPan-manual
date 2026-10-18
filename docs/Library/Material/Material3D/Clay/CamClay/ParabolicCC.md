@@ -10,7 +10,7 @@ $$
 a(\alpha)=a_0+H\alpha^2\ge0,
 $$
 
-in which $$H$$ is the hardening modulus, note $$\alpha=\varepsilon_p=\varepsilon_1+\varepsilon_2+\varepsilon_3$$ is the
+in which $$H$$ is the hardening modulus; note that $$\alpha=\varepsilon_p=\varepsilon_1+\varepsilon_2+\varepsilon_3$$ is the
 volumetric plastic strain.
 
 The hardening modulus could be either positive or negative.
@@ -23,7 +23,7 @@ The hardening modulus could be either positive or negative.
 material ParabolicCC (1) (2) (3) (4) (5) (6) (7) (8) [9]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, beta, controls compression side shape
 # (5) double, m, slope of CSL
 # (6) double, p_t, initial tension strength

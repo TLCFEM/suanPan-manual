@@ -3,7 +3,7 @@
 ## Per Step Configurations
 
 As mentioned in [Structure](../../Basic/Structure.md), the commands used between two steps belong to the first step.
-It means the following.
+This means the following.
 
 ```text
 # first step of duration 4.0

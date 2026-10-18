@@ -38,14 +38,14 @@ element Damper04 (1) (2) (3) (4) (5) [6] [7] [8]
 # (3) int, node j
 # (4) int, damper tag
 # (5) int, spring tag
-# [6] bool string, if to use matrix in iteration, default: true
+# [6] bool string, whether to use matrix in iteration, default: true
 # [7] int, the maximum delay number, default: 0
 # [8] double, beta, default: 0.5
 ```
 
 ## Remarks
 
-1. Parameter `[7]` indicates if to stack diverged increments into next iteration. If $$0$$ is assigned, the material
+1. Parameter `[7]` indicates whether to stack diverged increments into next iteration. If $$0$$ is assigned, the material
    returns a failure flag as long as local iteration fails to converge. If $$n>0$$, a maximum $$n$$ increments are
    allowed to be stacked before exit due to divergence.
 2. The `[8]` parameter controls the local time integration, $$\beta\in[0,1]$$ shall be defined. The default value

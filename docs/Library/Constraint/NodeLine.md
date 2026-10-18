@@ -1,6 +1,6 @@
 # NodeLine
 
-The `NodeLine` constraint implements 2D node-line contact via Lagrangian multiplier method.
+The `NodeLine` constraint implements 2D node-line contact via the Lagrangian multiplier method.
 
 ## Syntax
 
@@ -17,11 +17,11 @@ The geometry can be illustrated in the following figure.
 ![node-line](NodeLine.svg)
 
 This constraint is intended to model the line-crossing style contact.
-In most cases, the whole plane can be divided into two regions, separated by a series of line segments, one side shall be the no-entry zone.
-The target slave nodes are constrained in such way that they can only stay on the initial side. 
+In most cases, the whole plane can be divided into two regions, separated by a series of line segments; one side shall be the no-entry zone.
+The target slave nodes are constrained in such a way that they can only stay on the initial side. 
 
 Nodes $$i$$ and $$j$$ define a line segment with a finite length.
-Node $$k$$ is not allowed to enter the  shaded region on opposite side of the line.
+Node $$k$$ is not allowed to enter the shaded region on the opposite side of the line.
 It can, however, enter the unshaded regions on either side.
 The initial positions of three nodes define the initial side of node $$k$$.
 

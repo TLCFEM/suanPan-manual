@@ -31,7 +31,7 @@ virtual vec compute_derivative(double, double) = 0;
 
 The first argument is $$\varepsilon_v$$. The second argument is $$\varepsilon_s=\varepsilon_p^2$$.
 
-The method shall return a vector of size six with following values computed.
+The method shall return a vector of size six with the following values computed.
 
 | **index** | **value**                                                           |
 |:----------|:--------------------------------------------------------------------|

@@ -1,6 +1,6 @@
 # protect
 
-In for example structural optimization, elements will be disabled when necessary. For some analysis, some elements shall
+In, for example, structural optimization, elements will be disabled when necessary. For some analyses, some elements shall
 never be disabled. To this end, users can use `protect` to protect those elements from being modified.
 
 ## Syntax

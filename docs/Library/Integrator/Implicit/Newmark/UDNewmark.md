@@ -2,10 +2,10 @@
 
 Newmark Time Integration With Uniform/Universal Damping
 
-This damping formulation is an generalisation of [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016) and the nonviscous damping used in [NonviscousNewmark](NonviscousNewmark.md).
+This damping formulation is a generalisation of [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016) and the nonviscous damping used in [NonviscousNewmark](NonviscousNewmark.md).
 Both can be expressed in the convolution form.
 
-While [NonviscousNewmark](NonviscousNewmark.md) convolutes velocity vector, [UDDNewmark](UDNewmark.md) convolutes hysteresis and inertial forces, respectively.
+While [NonviscousNewmark](NonviscousNewmark.md) convolutes the velocity vector, [UDDNewmark](UDNewmark.md) convolutes hysteresis and inertial forces.
 
 !!! note "Pros"
     1. Allows a scalar definition of the specific damping factor.
@@ -13,7 +13,7 @@ While [NonviscousNewmark](NonviscousNewmark.md) convolutes velocity vector, [UDD
     3. Very cheap to compute, almost trivial, on par with Rayleigh damping.
 
 !!! note "Cons"
-    1. Induces dynamic hardening of the system, this hardening is affected by the damping factor over the whole frequency spectrum.
+    1. Induces dynamic hardening of the system; this hardening is affected by the damping factor over the whole frequency spectrum.
 
 ## References
 
@@ -68,7 +68,7 @@ $$
 The real part of $$m_j$$ shall be negative.
 The real part of $$s_j$$ shall be positive.
 
-Using the paremeter set for `UDDNewmark`, the specific damping factor as defined in [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016) can be expressed as
+Using the parameter set for `UDDNewmark`, the specific damping factor as defined in [10.1016/j.compstruc.2018.10.016](https://doi.org/10.1016/j.compstruc.2018.10.016) can be expressed as
 
 $$
 \zeta(\omega)=-\sum\dfrac{m_j\omega}{s_j^2+\omega^2}.

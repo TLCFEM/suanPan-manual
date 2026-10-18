@@ -7,11 +7,11 @@ modified slightly. Readers can also refer to the corresponding section
 in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
 for details on the theory.
 
-The modifications can be summaries as follows.
+The modifications can be summarised as follows.
 
 1. The continuum mechanics convention (tension positive) is used. All volumetric strain and hydrostatic stress related
    quantities shall flip their signs.
-2. The Lode angle dependency is removed, which is equivalent to set $$c=1$$ in Eq. (19).
+2. The Lode angle dependency is removed, which is equivalent to setting $$c=1$$ in Eq. (19).
 3. Constants such as $$2/3$$ and $$\sqrt{2/3}$$ are removed. They can be combined with the model parameters.
 4. The hardening related parameter $$h$$ as defined in Eq. (24) causes numerical issues under small cyclic loads. Hence,
    it is changed to a similar form.
@@ -24,7 +24,7 @@ The modifications can be summaries as follows.
 material DafaliasMazanri (1) (2-18) [19]
 # (1) int, unique material tag
 # (2) double, reference shear modulus G_0 ==> 125
-# (3) double, poissons ratio \nu
+# (3) double, Poisson's ratio \nu
 # (4) double, \alpha^c ==> 1.5
 # (5) double, slope of critical state line \lambda_c ==> 0.02
 # (6) double, initial void ratio e_0
@@ -53,10 +53,10 @@ $$
 G=G_0\dfrac{\left(2.97-e\right)^2}{1+e}\sqrt{pp_{at}},\qquad K=\dfrac{2}{3}\dfrac{1+\nu}{1-2\nu}G.
 $$
 
-To improve numerical stability, $$G$$ is bounded by $$G_rG_0|p_{at}|$$ where $$G_r$$ is a constant can be chosen as for
-example $$0.1$$. This is equivalent to define an elastic response for $$|p|<0.01|p_{at}|$$.
+To improve numerical stability, $$G$$ is bounded by $$G_rG_0|p_{at}|$$ where $$G_r$$ is a constant that can be chosen as for
+example $$0.1$$. This is equivalent to defining an elastic response for $$|p|<0.01|p_{at}|$$.
 
-The void ratio can be associated to strain so that
+The void ratio can be associated with strain so that
 
 $$
 e=e_0+\left(1+e_0\right)\mathrm{tr~}{\varepsilon^{tr}}.
@@ -120,7 +120,7 @@ $$
 F=\big|\mathbf{s}+p\mathbf{\alpha}\big|+mp=\big|\mathbf{\eta}\big|+mp,
 $$
 
-where $$\alpha$$ is the so called back stress ratio and $$m$$ characterises the size of the wedge. For simplicity, $$m$$
+where $$\alpha$$ is the so-called back stress ratio and $$m$$ characterises the size of the wedge. For simplicity, $$m$$
 is assumed to be a constant in this model.
 
 By denoting $$\mathbf{\eta}=\mathbf{s}+p\mathbf{\alpha}$$, the directional unit tensor is defined as
@@ -131,7 +131,7 @@ $$
 
 ### Flow Rule
 
-A non-associated plastic flow is used, the corresponding flow rule is defined as follows.
+A non-associated plastic flow is used; the corresponding flow rule is defined as follows.
 
 $$
 \Delta\mathbf{\varepsilon}^p=\gamma\left(\mathbf{n}+\dfrac{1}{3}D\mathbf{I}\right),

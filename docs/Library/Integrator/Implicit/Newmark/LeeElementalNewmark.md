@@ -28,4 +28,4 @@ integrator LeeElementalNewmark (1) (2) (3) ((4) (5)...)
 See also [LeeNewmark](LeeNewmark.md)
 and [LeeNewmarkFull](LeeNewmarkFull.md).
 
-The actually damping ratio applied is the product of the reference damping ratio and the ratio defined in each modifier.
+The actual damping ratio applied is the product of the reference damping ratio and the ratio defined in each modifier.

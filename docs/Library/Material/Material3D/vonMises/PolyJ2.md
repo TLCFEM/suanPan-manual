@@ -11,7 +11,7 @@ kinematic hardening is disabled.
 material PolyJ2 (1) (2) (3) (4) [(5)...]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poisson's ratio
+# (3) double, Poisson's ratio
 # (4) double, density
 # [(5)...] double, parameters in polynomial
 ```

@@ -34,7 +34,7 @@ element B31OS (1) (2) (3) (4) (5) [6] [7]
    The Hermite shape function is used for the interpolation of $$\phi$$.
 5. A 3D OS section is required for this element.
 
-The Alemdar's thesis contains a few typos. The following expressions are confirmed to be correct and used in the
+Alemdar's thesis contains a few typos. The following expressions are confirmed to be correct and used in the
 implementation.
 
 1. Eq. 7.12 (Eq. 7.63)
@@ -90,7 +90,7 @@ For further references, please see [this](https://doi.org/10.1016/j.engstruct.20
 
 ![cantilever beam with angle section](Angle.svg)
 
-The cantilever beam with the angle section under an axial load applied at the shear centre.
+The cantilever beam with the angle section is under an axial load applied at the shear centre.
 
 #### Remarks
 

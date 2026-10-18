@@ -1,6 +1,6 @@
 # Tabular
 
-The `Tabular` amplitude reads external tabular amplitude, interpolation is performed when necessary.
+The `Tabular` amplitude reads an external tabular amplitude; interpolation is performed when necessary.
 
 There should be exactly two columns in the external file. The first column is time point, and the second one shall be
 the amplitude.

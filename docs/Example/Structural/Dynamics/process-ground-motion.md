@@ -5,7 +5,7 @@ For different methods, different considerations shall be taken into account.
 
 The ground motion record can be one of acceleration, velocity, or displacement.
 Depending on how it is collected, it could either be a processed or raw record.
-Typically, seismometer collects acceleration, and velocity and displacement are derived from acceleration.
+Typically, a seismometer collects acceleration, and velocity and displacement are derived from acceleration.
 We assume that analysts are given accelerograms. 
 
 ## EOM
@@ -18,7 +18,7 @@ $$
 
 To incorporate ground motion in the form of acceleration, one can choose the following methods.
 
-1.  Apply the acceleration on the upper structure, in the form of inertial force, with the assist of the global mass matrix.
+1.  Apply the acceleration on the upper structure, in the form of inertial force, with the aid of the global mass matrix.
     This method involves the global mass matrix $$\mathbf{M}$$, and assumes $$\mathbf{M}$$ is constant, or at least remains constant within the time step.
 2.  Apply the ground motion on the supports.
     This method mimics the real-world situation.
@@ -36,7 +36,7 @@ $$
 
 However, when applied in the form of force, there is a risk of unintended spurious force.
 One can refer to the paper [10.1080/13632469.2024.2372814](https://doi.org/10.1080/13632469.2024.2372814) for more details.
-The conclusion is that, one shall always process the ground motion based on the time step size used in response history analysis, regardless of the source of the ground motion, processed or raw.
+The conclusion is that one shall always process the ground motion based on the time step size used in response history analysis, regardless of the source of the ground motion, processed or raw.
 
 ## Ground Motion as Support Displacement
 
@@ -45,7 +45,7 @@ In this case, the ground motion is converted to displacement.
 But how?
 Naturally, acceleration shall be integrated twice to obtain displacement.
 However, the integration process is not straightforward.
-Furthermore, not any integration method is suitable for this purpose.
+Furthermore, not every integration method is suitable for this purpose.
 
 ## Example
 
@@ -145,7 +145,7 @@ plot_freq(interp_dt, interp_waveform)
     
 
 
-From the graph, one shall see that the interpolated acceleration contain significantly large components beyond the original 100 Hz.
+From the graph, one shall see that the interpolated acceleration contains significantly large components beyond the original 100 Hz.
 It is thus concluded that ***significant spurious response may be present***.
 
 The ground motion can also be converted to displacement by using cumulative integration.
@@ -194,8 +194,8 @@ pass
     
 
 
-In the above, we use Newmark method to compute the acceleration that corresponds to the integrated displacement.
-By comparing two accelerations records (original ground motion and converted from the integrated displacement), we could see some slight differences.
+In the above, we use the Newmark method to compute the acceleration that corresponds to the integrated displacement.
+By comparing two acceleration records (original ground motion and converted from the integrated displacement), we could see some slight differences.
 Such differences appear to be negligible.
 
 However, if the acceleration is linearly interpolated, what would such a process bring?
@@ -239,14 +239,14 @@ pass
     
 
 
-From the figure, one can assert that, if the structure responds to 200 Hz signals, the response could be significant as by choosing to integrate the acceleration using a method that is different from the one used in response history analysis (here, the Newmark method).
+From the figure, one can assert that, if the structure responds to 200 Hz signals, the response could be significant by choosing to integrate the acceleration using a method that is different from the one used in response history analysis (here, the Newmark method).
 
 ## Remarks
 
 In the above example, we have demonstrated two things.
 
 1.  As discussed in [10.1080/13632469.2024.2372814](https://doi.org/10.1080/13632469.2024.2372814), when ground motion is applied in the form of inertial force, linear interpolation of acceleration introduces high frequency noise, the amplitude of which could be relatively large. This would introduce spurious responses.
-2.  When ground motion is applied in the form of support displacement, an inconsistent integration method that is used to integrate acceleration to displacement could introduce high frequency noise as well, if the integration method is different from the one used in response history analysis. This type of spurious response is not significant if the acceleration is not linear interpolated.
+2.  When ground motion is applied in the form of support displacement, an inconsistent integration method that is used to integrate acceleration to displacement could introduce high frequency noise as well, if the integration method is different from the one used in response history analysis. This type of spurious response is not significant if the acceleration is not linearly interpolated.
 
 In conclusion, analysts shall be aware of two things.
 

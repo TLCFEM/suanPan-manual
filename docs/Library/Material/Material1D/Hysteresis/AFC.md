@@ -4,8 +4,8 @@ Asymmetrical Friction Connection
 
 ## Theory
 
-The `AFC` model is a bilinear hardening model with an unloading stiffness differs from the initial stiffness. The term
-AFC comes from "asymmetric friction connection" which is a type of energy dissipaters. But this model can be used in
+The `AFC` model is a bilinear hardening model with an unloading stiffness that differs from the initial stiffness. The term
+AFC comes from "asymmetric friction connection" which is a type of energy dissipater. But this model can be used in
 other applications.
 
 ## Syntax

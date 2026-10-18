@@ -1,6 +1,6 @@
 # [★★☆☆☆] Dynamic Analysis of a Portal Frame
 
-A portal frame is analysed using viscous damper as energy dissipater.
+A portal frame is analysed using a viscous damper as an energy dissipater.
 
 The model script can be downloaded. [dynamic-analysis-of-a-portal-frame.zip](dynamic-analysis-of-a-portal-frame.zip)
 
@@ -16,7 +16,7 @@ $$
 EI_c=2\times10^5\times3.18\times10^6=6.36\times10^{11}~\mathrm{Nmm^2}=0.636~\mathrm{MNm^2}.
 $$
 
-Since the moment of inertia of the beam is about ten times larger than that of column, it is fair to assume the beam is rigid.
+Since the moment of inertia of the beam is about ten times larger than that of the column, it is fair to assume the beam is rigid.
 So the horizontal translation stiffness is
 
 $$
@@ -32,7 +32,7 @@ $$
 
 ## Simulation Setup
 
-First we define nodes, materials, sections and point masses, we use `B21` as elements.
+First we define nodes, materials, sections and point masses; we use `B21` as elements.
 
 ```
 ! length = meter
@@ -140,7 +140,7 @@ acceleration 1 1 9.83 1
 ```
 
 The Newmark algorithm would be used.
-We adopt absolute displacement increment as convergence criterion.
+We adopt absolute displacement increment as the convergence criterion.
 
 ```
 integrator Newmark 1

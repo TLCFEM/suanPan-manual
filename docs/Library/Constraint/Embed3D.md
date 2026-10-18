@@ -1,6 +1,6 @@
 # Embed3D
 
-The `Embed3D` constraint implements the embedded constraint in 3D space via multiplier method.
+The `Embed3D` constraint implements the embedded constraint in 3D space via the multiplier method.
 
 ## Syntax
 

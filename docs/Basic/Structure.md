@@ -26,8 +26,8 @@ exit
 
 Anything before the first `step` command is treated as the setup of model properties. This part may include the
 definitions of nodes, elements, material models, loads, recorders, boundary conditions, etc. In this part, the order of
-commands **does not** affect the establishment of the model. So that the following reshuffled command flow creates the
-same model as the original one does, although, the `EB21` element is created before the creation of its connected nodes.
+commands **does not** affect the establishment of the model. So the following reshuffled command flow creates the
+same model as the original one does, although the `EB21` element is created before the creation of its connected nodes.
 
 ```
 element EB21 1 1 2 7.213 6.825 1
@@ -42,8 +42,8 @@ anything in this part.
 
 ## Analysis Properties Setup
 
-The command block between the first `step` command the `analyze` command (or the `precheck` command) is the setup of
-analysis properties. A similar analysis flow which resembles the one of ABAQUS is used, that is, multiple steps can be
+The command block between the first `step` command and the `analyze` command (or the `precheck` command) is the setup of
+analysis properties. A similar analysis flow which resembles that of ABAQUS is used, that is, multiple steps can be
 defined in sequence in this part.
 
 In this example, within step 1, a fixed boundary condition is applied to node 1, two concentrated loads are applied to
@@ -59,7 +59,7 @@ cload 2 0 17 1 2
 analyze
 ```
 
-Now the horizontal load is created in step 2 that follows step 1. It shall be noted the BC is created before the first
+Now the horizontal load is created in step 2 that follows step 1. It shall be noted that the BC is created before the first
 step. By default, there is a step 0 with no step time, so the BC can be defined in either step 0 or step 1. Similar to
 ABAQUS, the sequence of multiple steps will affect analysis results.
 

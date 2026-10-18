@@ -10,14 +10,14 @@ Reference:
 
 Please note the following.
 
-1. **Only applies to elastic system.**
+1. **Only applies to an elastic system.**
 2. **Only trivial initial conditions are accounted for.**
 
 ## Syntax
 
 ### Form A
 
-For accelerogram record stored in single column plain text file. The following syntax can be used.
+For an accelerogram record stored in a single column plain text file. The following syntax can be used.
 
 ```text title="response_spectrum"
 response_spectrum (1) (2) (3) (4)
@@ -36,7 +36,7 @@ As the accelerogram only provides the amplitudes, the sampling interval must be 
 
 ### Form B
 
-For accelerogram record stored in double column plain text file. The following syntax can be used.
+For an accelerogram record stored in a double column plain text file. The following syntax can be used.
 
 ```text
 response_spectrum (1) (2) (3)

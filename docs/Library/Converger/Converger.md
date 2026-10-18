@@ -1,6 +1,6 @@
 # Converger
 
-Though the term `converger` is not a valid word, it is used to denote the object that provide information about if the
+Though the term `converger` is not a valid word, it is used to denote the object that provides information about whether the
 system converges.
 
 ## Syntax
@@ -18,7 +18,7 @@ converger (1) (2) (3) (4) [5]
 
 ## Available Convergers
 
-Currently, following convergers are available.
+Currently, the following convergers are available.
 
 * [AbsDisp](Absolute/AbsDisp.md)
 * [AbsError](Absolute/AbsError.md)

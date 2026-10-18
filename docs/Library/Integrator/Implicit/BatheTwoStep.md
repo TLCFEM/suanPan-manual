@@ -21,7 +21,7 @@ For further discussions on this type of algorithm, one can check the following r
 integrator BatheTwoStep (1) [2] [3]
 # (1) int, unique integrator tag
 # [2] double, spectral radius, \rho_\infty, default: 0
-# [2] double, sub-step size, gamma, default: 0.5
+# [3] double, sub-step size, gamma, default: 0.5
 ```
 
 Using `integrator BatheTwoStep (1)` with two optional parameters omitted gives the same results as in versions prior 

@@ -36,7 +36,7 @@ $$
 \varepsilon=\dfrac{\sigma}{E}+\alpha\dfrac{\sigma}{E}(\dfrac{\sigma}{\sigma_0})^{n-1}
 $$
 
-where $$\alpha$$ is the offset and $$n$$ is the material constant controls hardening. Noting that
+where $$\alpha$$ is the offset and $$n$$ is the material constant that controls hardening. Noting that
 $$\varepsilon=\varepsilon_e+\varepsilon_p=\dfrac{\sigma}{E}+\varepsilon_p$$, hence
 
 $$

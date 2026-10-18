@@ -429,7 +429,7 @@
         * [YLD0418P](Library/Material/Material3D/Orthotropic/YLD0418P.md)
     * Sand
         * [SimpleSand](Library/Material/Material3D/Sand/SimpleSand.md)
-        * [DafalisaManzari](Library/Material/Material3D/Sand/DafaliasManzari.md)
+        * [DafaliasManzari](Library/Material/Material3D/Sand/DafaliasManzari.md)
     * vonMises
         * [ArmstrongFrederick](Library/Material/Material3D/vonMises/ArmstrongFrederick.md)
         * [BilinearJ2](Library/Material/Material3D/vonMises/BilinearJ2.md)

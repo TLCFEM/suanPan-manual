@@ -21,9 +21,9 @@ For object types, possible values are: `domain`, `step`, `converger`, `constrain
 
 ## Enable/Disable Print Output
 
-Additionally, it is possible to enable or disable output. Printing to screen buffer takes time. Once the model is
+Additionally, it is possible to enable or disable output. Printing to the screen buffer takes time. Once the model is
 confirmed to be correctly established, users can disable print to improve speed. Third-party libraries are not
-controlled by this command thus may print.
+controlled by this command and thus may print.
 
 ```
 enable print

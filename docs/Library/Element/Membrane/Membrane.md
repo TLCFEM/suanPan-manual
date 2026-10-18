@@ -6,7 +6,7 @@ For other special purpose elements, there are not many options anyway.
 Try the following decision tree to find the best membrane element to use.
 
 1. Is the geometry regular or irregular?
-   * regular --- use quadrilateral elements that are often more flexible than triangular elements thus provide better results with the same amount of DoFs
+   * regular --- use quadrilateral elements that are often more flexible than triangular elements and thus provide better results with the same amount of DoFs
    * irregular --- use triangular elements unless a good mesh can be generated to avoid distorted geometry
 
 ## Triangular Elements
@@ -18,7 +18,7 @@ Try the following decision tree to find the best membrane element to use.
    * speed --- [`CP3`](Plane/CP3.md)
    * accuracy --- [`CP6`](Plane/CP6.md)
 
-Noting that [`CP3`](Plane/CP3.md) element is very rigid and often requires a very dense mesh to get relatively accurate
+Noting that the [`CP3`](Plane/CP3.md) element is very rigid and often requires a very dense mesh to get relatively accurate
 result, it is not recommended for most applications.
 
 ## Quadrilateral Elements
@@ -28,7 +28,7 @@ result, it is not recommended for most applications.
    * no --- go to Q3
 2. Is consistent material stiffness available?
    * yes --- go to Q6
-   * no --- [`GQ12`](Drilling/GQ12.md), it does not require local inversion so works even material tangent stiffness is not exact (but global convergence may still be an issue)
+   * no --- [`GQ12`](Drilling/GQ12.md), it does not require local inversion so it works even when the material tangent stiffness is not exact (but global convergence may still be an issue)
 3. Used in elastoplastic applications?
    * yes --- normally mixed formulation is better, go to Q4, alternatively displacement based formulation, go to Q5
    * no --- go to Q5

@@ -1,4 +1,4 @@
-# CircleHollow3D
+# CircularHollow3D
 
 3D Hollow Circle Section
 

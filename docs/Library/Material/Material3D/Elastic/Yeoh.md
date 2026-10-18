@@ -24,7 +24,7 @@ material Yeoh (1) (2...)
 1. The above command takes input list of arbitrary length ($$\ge2$$, excluding tag).
 2. If the number of double inputs is odd, the last one is interpreted as density.
 3. If the number of double inputs is even, the density is assumed to be zero.
-4. The first half of double inputs is read as $$C_{i0}$$ and the second half $$C_{i1}$$.
+4. The first half of double inputs is read as $$C_{i0}$$ and the second half as $$C_{i1}$$.
 
 ## Examples
 
@@ -46,7 +46,7 @@ If density is nonzero, say for example $$\rho=10^{-4}$$, then the following comm
 material Yeoh 1 20 4000 1E-4
 ```
 
-For $$i=3$$, let $$C_{10}=20$$, $$C_{20}=30$$, $$C_{30}=40$$, $$C_{11}=2000$$,$$C_{21}=3000$$ and $$C_{31}=4000$$, the
+For $$i=3$$, let $$C_{10}=20$$, $$C_{20}=30$$, $$C_{30}=40$$, $$C_{11}=2000$$, $$C_{21}=3000$$ and $$C_{31}=4000$$, the
 strain energy density is
 
 $$

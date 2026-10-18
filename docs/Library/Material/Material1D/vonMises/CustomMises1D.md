@@ -57,7 +57,7 @@ $$
 y=0.
 $$
 
-For elastic modulus of $$E=10$$, the isotropic hardening ratio satisfies:
+For an elastic modulus of $$E=10$$, the isotropic hardening ratio satisfies:
 
 $$
 0.5=E\dfrac{H}{1-H},

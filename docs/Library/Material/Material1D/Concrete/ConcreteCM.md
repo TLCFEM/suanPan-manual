@@ -23,8 +23,8 @@ material ConcreteCM (1) (2) (3) (4) (5) (6) [7] [8] [9] [10]
 1. The Chang-Mander concrete model uses Tsai's equation as backbone curves for both tension and compression.
 2. Parameters `NC` and `NT` control the shapes of backbone curves. A detailed explanation is presented later.
 3. In the original model, the transition between compression and tension could sometimes have larger stiffness than
-   initial stiffness. This is unlikely to be true in reality.
-4. A linear behaviour of part of hysteresis behaviour can be applied by turning on the linear transition switch. ***It
+   the initial stiffness. This is unlikely to be true in reality.
+4. A linear behaviour for part of the hysteresis can be applied by turning on the linear transition switch. ***It
    shall be noted that a linear hysteresis rule is much more stable than the original version.***
 5. The original CM model has some undefined behaviour which may cause stability issues. This is a simplified model.
 
@@ -81,14 +81,14 @@ material ConcreteCM (1) (2) (3) (4) (5) (6) [7] [8] [9] [10]
 
 ## Determination of Parameters
 
-The Tsai's equation (Tsai, 1988) can be expressed as
+The Tsai equation (Tsai, 1988) can be expressed as
 
 $$
 y=\dfrac{mx}{1+(m-\dfrac{n}{n-1})x+\dfrac{x^n}{n-1}}.
 $$
 
 where $$x=\varepsilon/\varepsilon_c$$ or $$x=\varepsilon/\varepsilon_t$$ is normalized strain and $$y=f/f_c$$ and
-$$y=f/f_t$$ are normalized stress. The stress decreases to zero if $$m(n-1)>n$$ and $$n>1$$. The initial stiffness is
+$$y=f/f_t$$ are normalized stresses. The stress decreases to zero if $$m(n-1)>n$$ and $$n>1$$. The initial stiffness is
 related to $$m_t$$ and $$m_c$$ by
 
 $$

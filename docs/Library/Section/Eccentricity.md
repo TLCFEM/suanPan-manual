@@ -54,7 +54,7 @@ peek node 2
 exit
 ```
 
-Manually set the eccentricity removes the extra bending.
+Manually setting the eccentricity removes the extra bending.
 It needs to be moved down by $$2.7408$$ so that the barycentre is at the origin.
 
 ```text

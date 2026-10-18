@@ -1,6 +1,6 @@
 # materialtestbyload
 
-This command category can be used to test most material models **depend on load/stress input only** without establishing
+This command category can be used to test most material models **that depend on load/stress input only** without establishing
 a FE model. Some wrappers and material models that rely on other material models cannot be tested in this way.
 
 ## Syntax

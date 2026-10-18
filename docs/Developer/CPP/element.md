@@ -2,7 +2,7 @@
 
 ## Abstraction
 
-The abstraction of the `Element` class is defined in `ElementBase` class. Readers can check that header to get an
+The abstraction of the `Element` class is defined in the `ElementBase` class. Readers can check that header to get an
 overall picture of all methods implemented.
 
 ## Variables and Methods
@@ -59,7 +59,7 @@ struct ElementData {
 ```
 
 There are some built-in methods to get nodal information. The purposes are indicated by method names. These methods are
-implemented through the stored node pointers. The same functionalities can be reimplemented manually otherwise those
+implemented through the stored node pointers. The same functionalities can be reimplemented manually; otherwise, those
 predefined methods are sufficient in most cases.
 
 ```cpp
@@ -223,7 +223,7 @@ virtual const mat& get_initial_secant() const;
 
 As a general guideline, here are some conventions to follow:
 
-1.  It is not recommended using the second approach, that is, managing internal variables at derived class level, unless
+1.  It is not recommended to use the second approach, that is, managing internal variables at derived class level, unless
     all methods are carefully implemented.
 2.  All state updates, including all history variables, shall only happen in the `update_status()` method, as all get
     methods are declared as `const`.
@@ -252,7 +252,7 @@ virtual vector<vec> record(OutputType);
 ```
 
 A number of physical variables can be identified and output accordingly in this method. Except for some special elements
-that stores element-wise variables, most elements would directly forward call `record(OutputType)` in the associated
+that store element-wise variables, most elements would directly forward call `record(OutputType)` in the associated
 material objects following the order of integration points and generate and return a `vector<vec>`.
 
 ## Remarks
@@ -265,4 +265,4 @@ For different dimensions, here are some very simple elements implemented for ref
 
 1.  1D --- `Spring01` a spring element based on infinitesimal displacement.
 2.  2D --- `ElementExample` a three-node triangle plain membrane element.
-3.  3D --- `C3D4` a four-node tetragon using one-node integration.
+3.  3D --- `C3D4` a four-node tetrahedron using one-point integration.

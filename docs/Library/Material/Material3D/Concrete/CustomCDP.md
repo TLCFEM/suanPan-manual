@@ -4,7 +4,7 @@ The CDP Model With Custom Backbones
 
 The formulation is identical to that of the `CDP` model.
 
-User should provide the backbones and damage evolutions via expressions.
+The user should provide the backbones and damage evolutions via expressions.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ material CustomCDP (1) (2) (3) (4) (5) (6) (7) [8] [9] [10] [11]
 # (2) int, tension expression tag
 # (3) int, compression expression tag
 # (4) double, elastic modulus
-# (5) double, poisson's ratio
+# (5) double, Poisson's ratio
 # (6) double, normalized crack energy (+)
 # (7) double, normalized crush energy (+)
 # [8] double, dilatancy parameter, default: 0.2
@@ -49,10 +49,10 @@ The damage degradation index $$d$$ shall satisfy: $$d(0)=0$$ and $$d(1)=1$$.
 
 The $$f$$ is the actual stress observed as the final output of the model.
 
-By following these rules imposed, users can implement any custom backbone and damage evolution.
+By following these imposed rules, users can implement any custom backbone and damage evolution.
 
 Further explanation of the curves can be seen in
-[10.1061/(ASCE)0733-9399(1998)124:8(892)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:8(892))
+[10.1061/(ASCE)0733-9399(1998)124:8(892)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:8(892)).
 
 ## Example
 

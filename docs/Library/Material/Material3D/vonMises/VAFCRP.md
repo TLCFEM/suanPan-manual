@@ -71,8 +71,8 @@ $$
 \dfrac{\gamma}{\Delta{}t}=\dot{\gamma}=\dfrac{1}{\mu}\left(\left(\dfrac{q}{k}\right)^{\dfrac{1}{\epsilon}}-1\right),
 $$
 
-where $$\mu$$ and $$\epsilon$$ are two material constants that controls viscosity.
-Note either $$\mu$$ or $$\epsilon$$ can be set to zero to disable rate-dependent response
+where $$\mu$$ and $$\epsilon$$ are two material constants that control viscosity.
+Note either $$\mu$$ or $$\epsilon$$ can be set to zero to disable rate-dependent response.
 In that case this model is identical to the [`ArmstrongFrederick`](ArmstrongFrederick.md) model.
 
 Also note the Perzyna type definition, which is defined as
@@ -93,7 +93,7 @@ Check the older syntax in the older version of the documentation.
 material VAFCRP (1) (2) (3) (4) (5) (6) (7) (8) (9) [10 11...] [12]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, yield stress
 # (5) double, linear hardening modulus
 # (6) double, saturation stress

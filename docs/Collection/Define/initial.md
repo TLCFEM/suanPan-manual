@@ -27,9 +27,9 @@ initial history (1) [2...]
 
 Proper initial nodal conditions are important for dynamic analysis. Some time integration algorithms are sensitive to
 initial conditions. For example, if a standard sinusoidal wave is used as excitation, its initial displacement and
-acceleration are zeros so nothing needs to be changed. However, its initial velocity shall be unity, if it is not set to
+acceleration are zeros so nothing needs to be changed. However, its initial velocity shall be unity; if it is not set to
 unity, the results may oscillate.
 
-Some material models supports user-defined initial history variables. It could be useful when it comes to model for
+Some material models support user-defined initial history variables. It could be useful when it comes to modelling, for
 example rolled/annealed metal. Different material models may have different layout of storage of history variables.
 Please refer to the specific model for details.
