@@ -123,7 +123,16 @@ Variables</h2></td></tr>
 <tr class="memitem:a2bf6b8cb45d97e669bd64c1e238eeb8b" id="r_a2bf6b8cb45d97e669bd64c1e238eeb8b"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da8/namespacecompare.html#a2bf6b8cb45d97e669bd64c1e238eeb8b">skip_files</a></td></tr>
 <tr class="separator:a2bf6b8cb45d97e669bd64c1e238eeb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">compare.py - Compare files across commits, ignoring timestamps and noise.
+
+Compares two commits (or directories) and outputs unified diffs for changed files.
+Excludes known non-deterministic files and timestamps from comparison.
+
+Usage: python3 compare.py &lt;commit1&gt; &lt;commit2&gt;
+       python3 compare.py &lt;tarball1&gt; &lt;tarball2&gt;
+       python3 compare.py &lt;dir1&gt; &lt;dir2&gt;
+</pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a8333c2de8c5578b483deb1e402318478" name="a8333c2de8c5578b483deb1e402318478"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8333c2de8c5578b483deb1e402318478">&#9670;&#160;</a></span>compare_commits()</h2>
 
