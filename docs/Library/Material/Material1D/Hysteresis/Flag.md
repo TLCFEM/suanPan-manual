@@ -12,14 +12,15 @@ bilinear hardening model.
 ## Syntax
 
 ```text title="Flag"
-material Flag01 (1) (2) (3) (4) (5)
+material Flag01 (1) (2) (3) (4) [5] [6]
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, yield stress, positive
 # (4) double, residual stress, can be either positive or negative
-# (5) double, hardening ratio
+# [5] double, hardening ratio, default: 0.0
+# [6] double, density, default: 0.0
 
-material Flag02 (1) (2) (3) (4) (5) (6) (7) (8)
+material Flag02 (1) (2) (3) (4) (5) (6) (7) (8) [9]
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, tension yield stress, positive
@@ -28,6 +29,7 @@ material Flag02 (1) (2) (3) (4) (5) (6) (7) (8)
 # (6) double, compression yield stress, negative
 # (7) double, compression residual stress, can be either positive or negative
 # (8) double, compression hardening ratio
+# [9] double, density, default: 0.0
 ```
 
 ## History Variable Layout

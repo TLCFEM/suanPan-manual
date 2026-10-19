@@ -17,8 +17,8 @@ initial acceleration (1) (2) [3...]
 
 For material properties:
 
-```
-initial history (1) [2...]
+```text title="initial"
+initial material history (1) [2...]
 # (1) int, material model tag
 # [2...] double, initial history vector
 ```

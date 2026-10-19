@@ -11,7 +11,7 @@ upsampling (1) (2) [3] [4]
 # (1) string, file path of the seismogram file
 # (2) integer, upsampling rate
 # [3] string, window type, default: 'Hamming'
-# [4] integer, window length, default: 0
+# [4] integer, window length, default: 8
 ```
 
 ## Remarks

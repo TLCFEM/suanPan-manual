@@ -13,9 +13,9 @@ Elemental Damping Using Lee's Formulation
 ## Syntax
 
 ```text title="ElementalLee"
-modifier ElementalLee (1) (2) [(3)...]
+modifier ElementalLee (1) [2] [(3)...]
 # (1) int, unique modifier tag
-# (2) double, damping ratio
+# [2] double, damping ratio, default: 0.02
 # [(3)...] int, element tags
 ```
 

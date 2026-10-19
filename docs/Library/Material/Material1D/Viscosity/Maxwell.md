@@ -16,8 +16,8 @@ material Maxwell (1) (2) (3) [4] [5] [6]
 # (2) int, damper tag
 # (3) int, spring tag
 # [4] bool string, whether to use matrix formulation, default: false
-# [5] int, the maximum unconverged substep allowed, default: 1
-# [6] double, local time integration parameter, default: 0.0
+# [5] int, the maximum unconverged substep allowed, default: 0
+# [6] double, local time integration parameter, default: 0.5
 ```
 
 ## Remarks

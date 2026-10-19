@@ -36,7 +36,7 @@ $$
 ## Syntax
 
 ```text title="Viscosity02"
-material Viscosity02 (1) (2) (3) [4] [5] [6] [7] [8]
+material Viscosity02 (1) (2) (3) [4] [5] [6] [7] [8] [9]
 # (1) int, unique tag
 # (2) double, alpha
 # (3) double, damping coefficient \eta_1
@@ -45,4 +45,5 @@ material Viscosity02 (1) (2) (3) [4] [5] [6] [7] [8]
 # [6] double, damping coefficient \eta_4, default: (3)
 # [7] double, steepness factor g_1, default: 1E3
 # [8] double, steepness factor g_2, default: 1E3
+# [9] double, limit, default: 1.0
 ```

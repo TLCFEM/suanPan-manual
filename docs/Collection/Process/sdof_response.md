@@ -40,8 +40,8 @@ As the accelerogram only provides the amplitudes, the sampling interval must be 
 
 For an accelerogram record stored in a double column plain text file. The following syntax can be used.
 
-```text
-response_spectrum (1) (2) (3)
+```text title="sdof_response"
+sdof_response (1) (2) (3)
 # (1) string, file path of the accelerogram file
 # (2) double, frequency of the system
 # (3) double, damping ratio
