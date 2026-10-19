@@ -17,7 +17,7 @@ where $$A_{10}$$ and $$A_{01}$$ are two material constants and $$K$$ is the bulk
 ## Syntax
 
 ```text title="MooneyRivlin"
-material MoonetRivlin (1) (2) (3) (4) [5]
+material MooneyRivlin (1) (2) (3) (4) [5]
 # (1) int, unique tag
 # (2) double, bulk modulus
 # (3) double, A_{10}

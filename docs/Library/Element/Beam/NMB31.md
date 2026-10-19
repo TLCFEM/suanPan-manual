@@ -13,12 +13,13 @@
 ## Syntax
 
 ```text title="NMB31"
-element NMB31 (1) (2) (3) (4) (5)
+element NMB31 (1) (2) (3) (4) (5) [6]
 # (1) int, unique element tag
 # (2) int, node i
 # (3) int, node j
 # (4) int, section tag
 # (5) int, orientation tag
+# [6] bool string, nonlinear geometry switch, default: false
 ```
 
 ## Remarks

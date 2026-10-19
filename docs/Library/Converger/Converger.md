@@ -8,11 +8,11 @@ system converges.
 All convergers, except for [`Logic`](Other/Logic.md) and [`FixedNumber`](Other/FixedNumber.md), share the same definition.
 
 ```text title="Converger"
-converger (1) (2) (3) (4) [5]
+converger (1) (2) [3] [4] [5]
 # (1) string, converger type
 # (2) int, unique tag
-# (3) double, tolerance
-# (4) int, maximum iteration
+# [3] double, tolerance, default: 1E-6
+# [4] int, maximum iteration, default: 10
 # [5] bool string, print switch, default: false
 ```
 

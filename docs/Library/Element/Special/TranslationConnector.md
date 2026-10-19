@@ -10,12 +10,12 @@ Translation Connector Implemented via Penalty Method
 * Number of DoFs: 2 (Translation: UX, Translation: UY)
 
 ```text title="TranslationConnector"
-element TranslationConnector2D (1) (2) (3) (4) [5]
+element TranslationConnector2D (1) (2) (3) (4) (5)
 # (1) int, unique element tag
 # (2) int, node i
 # (3) int, node j
 # (4) int, node k
-# [5] double, penalty factor
+# (5) double, penalty factor
 ```
 
 ### TranslationConnector3D
@@ -24,12 +24,12 @@ element TranslationConnector2D (1) (2) (3) (4) [5]
 * Number of DoFs: 3 (Translation: UX, Translation: UY, Translation: UZ)
 
 ```text
-element TranslationConnector3D (1) (2) (3) (4) [5]
+element TranslationConnector3D (1) (2) (3) (4) (5)
 # (1) int, unique element tag
 # (2) int, node i
 # (3) int, node j
 # (4) int, node k
-# [5] double, penalty factor
+# (5) double, penalty factor
 ```
 
 ## Theory

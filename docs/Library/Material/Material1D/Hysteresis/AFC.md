@@ -11,16 +11,17 @@ other applications.
 ## Syntax
 
 ```text title="AFC"
-material AFCS (1) (2) (3) (4) (5)
-material AFC02 (1) (2) (3) (4) (5)
+material AFCS (1) (2) (3) (4) (5) [6]
+material AFC02 (1) (2) (3) (4) (5) [6]
 # (1) int, unique tag
 # (2) double, elastic modulus
 # (3) double, yield stress
 # (4) double, hardening modulus
 # (5) double, unloading modulus
+# [6] double, density, default: 0.0
 
-material AFC (1) (2) (3) (4) (5) (6) (7) (8)
-material AFC01 (1) (2) (3) (4) (5) (6) (7) (8)
+material AFC (1) (2) (3) (4) (5) (6) (7) (8) [9]
+material AFC01 (1) (2) (3) (4) (5) (6) (7) (8) [9]
 # (1) int, unique tag
 # (2) double, elastic modulus
 # (3) double, tension yield stress
@@ -29,6 +30,7 @@ material AFC01 (1) (2) (3) (4) (5) (6) (7) (8)
 # (6) double, compression yield stress
 # (7) double, compression hardening modulus
 # (8) double, compression unloading modulus
+# [9] double, density, default: 0.0
 ```
 
 ## History Variable Layout

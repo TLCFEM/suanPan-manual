@@ -20,4 +20,5 @@ pwd (1)
 # (1) string, new absolute working path
 ```
 
-Please note in Windows, `\` needs to be changed to `\\` or `/`. Note relative paths are not supported.
+Please note in Windows, `\` needs to be changed to `\\` or `/`. Relative paths are resolved against the current working
+path.

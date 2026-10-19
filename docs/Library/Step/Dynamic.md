@@ -7,10 +7,10 @@ The implicit dynamics system uses displacement as the primary variable.
 ### Syntax
 
 ```text title="Dynamic"
-step dynamic (1) (2)
-step implicitdynamic (1) (2)
+step dynamic (1) [2]
+step implicitdynamic (1) [2]
 # (1) int, unique step tag
-# (2) double, step size
+# [2] double, time period, default: 1.0
 ```
 
 ### Remarks
@@ -27,9 +27,9 @@ All displacement based loads/constraints cannot be applied.
 ### Syntax
 
 ```text title="Dynamic"
-step explicitdynamic (1) (2)
+step explicitdynamic (1) [2]
 # (1) int, unique step tag
-# (2) double, step size
+# [2] double, time period, default: 1.0
 ```
 
 ### Remarks

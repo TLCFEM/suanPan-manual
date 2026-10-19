@@ -14,7 +14,7 @@ Both models shall yield the same uniaxial behaviour if the same parameter set is
 ## Syntax
 
 ```text title="Balloon"
-material Balloon ${1:(1)} ${2:(2)} ${3:(3)} ${4:(4)} ${5:(5)} ${6:(6 7 8 9)} ${7:(10 11 12 13)} ${8:(14 15 16 17)} ${9:(18 19 20 21)} ${10:(22 23 24 25)} ${11:(26)} ${12:[(27) (28) (29)...]}
+material Balloon (1) (2...25) (26) [(27) (28) (29)...]
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, Poisson's ratio
@@ -26,8 +26,8 @@ material Balloon ${1:(1)} ${2:(2)} ${3:(3)} ${4:(4)} ${5:(5)} ${6:(6 7 8 9)} ${7
 # (18 19 20 21) double, am bound, initial, linear, saturation, rate
 # (22 23 24 25) double, ac bound, initial, linear, saturation, rate
 # (26) double, density
-# (27) string, token, one of '-fc', '-ac', '-na', '-nd'
-# (28 29) double, saturation, rate
+# (27) string, token, one of '-fc', '-ac', '-na', '-nd', '-memory'
+# (28 29) double, saturation and rate, omitted for '-memory'
 ```
 
 ## Theory

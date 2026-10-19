@@ -4,9 +4,10 @@ The (generalized) eigenvalue problem is handled in the `Frequency` step. To defi
 following command.
 
 ```
-step frequency (1) (2)
+step frequency (1) [2] [3]
 # (1) int, unique step tag
-# (2) int, number of eigen modes to be solved
+# [2] int, number of eigen modes to be solved, default: 1
+# [3] string, eigenvalue type, default: s
 ```
 
 To successfully run an eigen analysis, the system shall be symmetric, otherwise complex eigenvalues are computed. This

@@ -252,7 +252,6 @@
     * [Mindlin](Library/Element/Plate/Mindlin.md)
 * Shell
     * [DKTS3](Library/Element/Shell/DKTS3.md)
-    * [DKTS4](Library/Element/Shell/DKTS4.md)
     * [S4](Library/Element/Shell/S4.md)
     * [SGCMS](Library/Element/Shell/SGCMS.md)
     * [ShellBase](Library/Element/Shell/ShellBase.md)

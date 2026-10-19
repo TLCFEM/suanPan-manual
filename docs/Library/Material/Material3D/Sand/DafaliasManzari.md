@@ -21,7 +21,7 @@ The modifications can be summarised as follows.
 ## Syntax
 
 ```text title="DafaliasManzari"
-material DafaliasMazanri (1) (2-18) [19]
+material DafaliasManzari (1) (2-18) [19]
 # (1) int, unique material tag
 # (2) double, reference shear modulus G_0 ==> 125
 # (3) double, Poisson's ratio \nu

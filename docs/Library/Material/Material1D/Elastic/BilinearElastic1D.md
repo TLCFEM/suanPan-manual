@@ -5,11 +5,11 @@ Uniaxial Bilinear Elastic Material
 ## Syntax
 
 ```text title="BilinearElastic1D"
-material BilinearElastic1D (1) (2) (3) (4) [5]
+material BilinearElastic1D (1) (2) (3) [4] [5]
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, yield stress
-# (4) double, hardening modulus
+# [4] double, hardening modulus, default: 0.0
 # [5] double, density, default: 0.0
 ```
 

@@ -24,8 +24,8 @@ For 2D beam elements, the local $$z$$-axis is defined to be the global $$z$$-axi
 
 ```text title="Orientation"
 orientation (1) (2) (3) (4) (5)
-# (1) int, unique orientation tag
-# (2) string, orientation type
+# (1) string, orientation type
+# (2) int, unique orientation tag
 # (3) double, x component of local z axis
 # (4) double, y component of local z axis
 # (5) double, z component of local z axis
