@@ -3,6 +3,7 @@
 The element state determination, as well as solving the global system, can be distributed over a process grid.
 By enabling MPI, the application can be executed on clusters.
 The architecture design is explained in [this](Architecture.md) page.
+The detailed parallelism mechanisms, covering both shared-memory (oneTBB) threading and distributed-memory (MPI) execution, are analysed in the [Parallelism Mechanisms](Parallelism.md) page.
 
 There are a few caveats.
 The distributed solvers for linear systems rely on external libraries, typically an implementation of ScaLAPACK.

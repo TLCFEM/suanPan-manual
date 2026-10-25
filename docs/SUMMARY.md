@@ -13,6 +13,7 @@
 * [Compile Application](Basic/Compile.md)
 * [Build Documentation](Basic/Build.md)
 * [Architecture Design](Basic/Architecture.md)
+* [Parallelism Mechanisms](Basic/Parallelism.md)
 * [On Clusters](Basic/Cluster.md)
 
 ## Example
