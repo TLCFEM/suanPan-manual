@@ -12,7 +12,7 @@ var searchData=
   ['_7edensemat_9',['~DenseMat',['../d0/de9/class_dense_mat.html#a71ea6cecc89e12c571ab8baa90aa60df',1,'DenseMat']]],
   ['_7edomain_10',['~Domain',['../d4/df4/class_domain.html#a434f386b59b3f0b6064abca8547d2dd2',1,'Domain']]],
   ['_7eexternalmaterial_11',['~ExternalMaterial',['../db/d58/class_external_material.html#a88cc4fe12d6ba6b59a4d27faca9732ad',1,'ExternalMaterial']]],
-  ['_7eexternalmodule_12',['~ExternalModule',['../da/d46/group___utility.html#ga31e08bfc4ef91c8c852ac206508a575e',1,'ExternalModule']]],
+  ['_7eexternalmodule_12',['~ExternalModule',['../d7/d04/class_external_module.html#a31e08bfc4ef91c8c852ac206508a575e',1,'ExternalModule']]],
   ['_7eframerecorder_13',['~FrameRecorder',['../da/d11/class_frame_recorder.html#a4e1932e8877c67cace844a9417a733ba',1,'FrameRecorder']]],
   ['_7efullmatcuda_14',['~FullMatCUDA',['../d9/dc8/class_full_mat_c_u_d_a.html#a67f9002974b82d9d0d9e98e518ab61d1',1,'FullMatCUDA']]],
   ['_7emetamat_15',['~MetaMat',['../d8/d79/class_meta_mat.html#a91746e8779231a67e3cf47b3f03a33d1',1,'MetaMat']]],

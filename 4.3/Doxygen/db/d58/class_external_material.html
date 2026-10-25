@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('db/d58/class_external_material.html','
 </div><!--header-->
 <div class="contents">
 
-<p>A <a class="el" href="../../db/d58/class_external_material.html" title="A ExternalMaterial class.">ExternalMaterial</a> class.  
+<p>An <a class="el" href="../../db/d58/class_external_material.html" title="An ExternalMaterial class.">ExternalMaterial</a> class.  
  <a href="../../db/d58/class_external_material.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/d67/_external_material_8h_source.html">ExternalMaterial.h</a>&gt;</code></p>
@@ -156,7 +156,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7efd9675a002894f01453e2c91c38020"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad57fa41a3d077b3b59576c4d7568b6fb" id="r_ad57fa41a3d077b3b59576c4d7568b6fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d58/class_external_material.html#ad57fa41a3d077b3b59576c4d7568b6fb">clear_status</a> () override</td></tr>
 <tr class="separator:ad57fa41a3d077b3b59576c4d7568b6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a45d580bdfb0fcb1feb2dfb9911145c" id="r_a2a45d580bdfb0fcb1feb2dfb9911145c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; vec &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d58/class_external_material.html#a2a45d580bdfb0fcb1feb2dfb9911145c">record</a> (<a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) const override</td></tr>
+<tr class="memitem:a2a45d580bdfb0fcb1feb2dfb9911145c" id="r_a2a45d580bdfb0fcb1feb2dfb9911145c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; vec &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d58/class_external_material.html#a2a45d580bdfb0fcb1feb2dfb9911145c">record</a> (<a class="el" href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) const override</td></tr>
 <tr class="separator:a2a45d580bdfb0fcb1feb2dfb9911145c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_material"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_material')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/dee/class_material.html">Material</a></td></tr>
 <tr class="memitem:afcfe486afbd03d7c72b37807ac1cf8e6 inherit pub_methods_class_material" id="r_afcfe486afbd03d7c72b37807ac1cf8e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dee/class_material.html#afcfe486afbd03d7c72b37807ac1cf8e6">Material</a> (unsigned, <a class="el" href="../../de/db5/group___material.html#gaa21d290305b112c1288671b0139ddd8f">MaterialType</a>, <a class="el" href="../../df/de6/classdouble.html">double</a>)</td></tr>
@@ -415,9 +415,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a5a96ff3da13ca56da27fddefa9a8ec04 inherit pro_attribs_struct_data_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A <a class="el" href="../../db/d58/class_external_material.html" title="A ExternalMaterial class.">ExternalMaterial</a> class. </p>
-<p>The <a class="el" href="../../db/d58/class_external_material.html" title="A ExternalMaterial class.">ExternalMaterial</a> class enables communication across DLL boundary via C style interface. The function has such a signature: </p><div class="fragment"><div class="line">void(*)(<a class="code hl_class" href="../../d2/d59/struct_external_material_data.html">ExternalMaterialData</a>* data, <span class="keywordtype">int</span>* info);</div>
-<div class="ttc" id="astruct_external_material_data_html"><div class="ttname"><a href="../../d2/d59/struct_external_material_data.html">ExternalMaterialData</a></div><div class="ttdoc">A ExternalMaterialData class.</div><div class="ttdef"><b>Definition</b> ExternalMaterialData.h:51</div></div>
+<div class="textblock"><p>An <a class="el" href="../../db/d58/class_external_material.html" title="An ExternalMaterial class.">ExternalMaterial</a> class. </p>
+<p>The <a class="el" href="../../db/d58/class_external_material.html" title="An ExternalMaterial class.">ExternalMaterial</a> class enables communication across DLL boundary via C style interface. The function has such a signature: </p><div class="fragment"><div class="line">void(*)(<a class="code hl_class" href="../../d2/d59/struct_external_material_data.html">ExternalMaterialData</a>* data, <span class="keywordtype">int</span>* info);</div>
+<div class="ttc" id="astruct_external_material_data_html"><div class="ttname"><a href="../../d2/d59/struct_external_material_data.html">ExternalMaterialData</a></div><div class="ttdoc">An ExternalMaterialData class.</div><div class="ttdef"><b>Definition</b> ExternalMaterialData.h:51</div></div>
 </div><!-- fragment --><p>On enter, <code>info</code> indicates what kind of operation shall the external model do. The following values are used: 0: acquire memory and initialisation 1: deallocate memory 2: update trial state with strain input only 3: update trial state with strain and strain rate inputs 4: commit trial state 5: reset to current state 6: clear to empty state 7: validate constants</p>
 <p>On exit, <code>info</code> indicates if the operation succeeds. The following value is used: 0: success</p>
 <dl class="section author"><dt>Author</dt><dd>tlc </dd></dl>
@@ -712,7 +712,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">std::vector&lt; vec &gt; ExternalMaterial::record </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>

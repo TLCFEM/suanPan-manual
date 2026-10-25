@@ -229,5 +229,6 @@ var group___material =
       [ "PlaneType::E", "de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca3a3ea00cfc35332cedf6e5e9a32e94da", null ],
       [ "PlaneType::A", "de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca7fc56270e7a70fa81a5935b72eacbe29", null ],
       [ "PlaneType::N", "de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa", null ]
-    ] ]
+    ] ],
+    [ "create_new_material", "de/db5/group___material.html#ga064ffd0d316aad86c90d5e2c49be1390", null ]
 ];

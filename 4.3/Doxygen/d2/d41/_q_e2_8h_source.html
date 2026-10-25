@@ -179,14 +179,14 @@ $(document).ready(function(){initNavTree('d2/d41/_q_e2_8h_source.html','../../')
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    [[nodiscard]] mat <a class="code hl_function" href="../../dd/d4b/class_q_e2.html#a7a0b0473d2d48e7366da3cacd55a3f06">compute_shape_function</a>(<span class="keyword">const</span> mat&amp;, <span class="keywordtype">unsigned</span>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    [[nodiscard]] std::vector&lt;vec&gt; <a class="code hl_function" href="../../dd/d4b/class_q_e2.html#ac72f3957eea69a20dd38bd95da300024">record</a>(<a class="code hl_enumeration" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    [[nodiscard]] std::vector&lt;vec&gt; <a class="code hl_function" href="../../dd/d4b/class_q_e2.html#ac72f3957eea69a20dd38bd95da300024">record</a>(<a class="code hl_enumeration" href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d4b/class_q_e2.html#aca21dde0026b83ea73149ef9556f1926">print</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#ifdef SUANPAN_VTK</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    [[nodiscard]] vtkSmartPointer&lt;vtkCell&gt; GetCell() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    mat GetData(<a class="code hl_enumeration" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    mat GetData(<a class="code hl_enumeration" href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    mat GetDeformation(<span class="keywordtype">double</span>) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>};</div>
@@ -195,7 +195,6 @@ $(document).ready(function(){initNavTree('d2/d41/_q_e2_8h_source.html','../../')
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="ttc" id="a_material_element_8h_html"><div class="ttname"><a href="../../dc/d5f/_material_element_8h.html">MaterialElement.h</a></div></div>
-<div class="ttc" id="a_output_type_8h_html_a4e0517338e6c4a31a2addafc06d4f3a3"><div class="ttname"><a href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a></div><div class="ttdeci">OutputType</div><div class="ttdef"><b>Definition</b> OutputType.h:24</div></div>
 <div class="ttc" id="aclass_material_element2_d_html"><div class="ttname"><a href="../../d8/df9/class_material_element2_d.html">MaterialElement2D</a></div><div class="ttdef"><b>Definition</b> MaterialElement.h:60</div></div>
 <div class="ttc" id="aclass_q_e2_html"><div class="ttname"><a href="../../dd/d4b/class_q_e2.html">QE2</a></div><div class="ttdoc">A QE2 class.</div><div class="ttdef"><b>Definition</b> QE2.h:38</div></div>
 <div class="ttc" id="aclass_q_e2_html_a29a83a2f130f05964a02b004229e9966"><div class="ttname"><a href="../../dd/d4b/class_q_e2.html#a29a83a2f130f05964a02b004229e9966">QE2::update_status</a></div><div class="ttdeci">int update_status() override</div><div class="ttdef"><b>Definition</b> QE2.cpp:137</div></div>
@@ -208,6 +207,7 @@ $(document).ready(function(){initNavTree('d2/d41/_q_e2_8h_source.html','../../')
 <div class="ttc" id="aclass_q_e2_html_aec80f7b581c99dda094cfff6856efa6e"><div class="ttname"><a href="../../dd/d4b/class_q_e2.html#aec80f7b581c99dda094cfff6856efa6e">QE2::commit_status</a></div><div class="ttdeci">int commit_status() override</div><div class="ttdef"><b>Definition</b> QE2.cpp:180</div></div>
 <div class="ttc" id="aclassuvec_html"><div class="ttname"><a href="../../dd/d59/classuvec.html">uvec</a></div></div>
 <div class="ttc" id="agroup___material_html_ggab64cf36e331cfb4f1d2ebc9803ae725ca7fc56270e7a70fa81a5935b72eacbe29"><div class="ttname"><a href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca7fc56270e7a70fa81a5935b72eacbe29">PlaneType::A</a></div><div class="ttdeci">@ A</div></div>
+<div class="ttc" id="agroup___recorder_html_ga4e0517338e6c4a31a2addafc06d4f3a3"><div class="ttname"><a href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a></div><div class="ttdeci">OutputType</div><div class="ttdef"><b>Definition</b> OutputType.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

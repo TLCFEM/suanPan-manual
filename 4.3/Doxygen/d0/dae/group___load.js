@@ -83,5 +83,7 @@ var group___load =
       [ "process", "d1/d73/class_support_acceleration.html#a1ef168d8a57def6f47e2485b61c112b2", null ],
       [ "SupportMotion", "d1/d73/class_support_acceleration.html#af9a95392ffe42b1b9325095872daa4aa", null ]
     ] ],
+    [ "create_new_amplitude", "d0/dae/group___load.html#ga504466ed257007aafb6796c9279848a9", null ],
+    [ "create_new_load", "d0/dae/group___load.html#gaae7019f988f8a32d865456b666d7bbfd", null ],
     [ "set_load_multiplier", "d0/dae/group___load.html#gaf634afa2b8d06254d2908c608b65fc66", null ]
 ];

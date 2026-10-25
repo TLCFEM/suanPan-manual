@@ -165,14 +165,14 @@ $(document).ready(function(){initNavTree('de/d67/_c3_d20_8h_source.html','../../
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    [[nodiscard]] mat <a class="code hl_function" href="../../de/dba/class_c3_d20.html#a7df40b1ac2185d34f3aeaae1febfbb91">compute_shape_function</a>(<span class="keyword">const</span> mat&amp;, <span class="keywordtype">unsigned</span>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    [[nodiscard]] std::vector&lt;vec&gt; <a class="code hl_function" href="../../de/dba/class_c3_d20.html#a2d8f2a21e7ad4f96f825e9d23abf2549">record</a>(<a class="code hl_enumeration" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    [[nodiscard]] std::vector&lt;vec&gt; <a class="code hl_function" href="../../de/dba/class_c3_d20.html#a2d8f2a21e7ad4f96f825e9d23abf2549">record</a>(<a class="code hl_enumeration" href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/dba/class_c3_d20.html#af0da3d73ddab30ee0cf782b50ee2bdea">print</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#ifdef SUANPAN_VTK</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    [[nodiscard]] vtkSmartPointer&lt;vtkCell&gt; GetCell() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    mat GetData(<a class="code hl_enumeration" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    mat GetData(<a class="code hl_enumeration" href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    mat GetDeformation(<span class="keywordtype">double</span>) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
@@ -181,7 +181,6 @@ $(document).ready(function(){initNavTree('de/d67/_c3_d20_8h_source.html','../../
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="ttc" id="a_material_element_8h_html"><div class="ttname"><a href="../../dc/d5f/_material_element_8h.html">MaterialElement.h</a></div></div>
-<div class="ttc" id="a_output_type_8h_html_a4e0517338e6c4a31a2addafc06d4f3a3"><div class="ttname"><a href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a></div><div class="ttdeci">OutputType</div><div class="ttdef"><b>Definition</b> OutputType.h:24</div></div>
 <div class="ttc" id="aclass_c3_d20_html"><div class="ttname"><a href="../../de/dba/class_c3_d20.html">C3D20</a></div><div class="ttdoc">The C3D20 class defines C3D20 C3D20R elements.</div><div class="ttdef"><b>Definition</b> C3D20.h:34</div></div>
 <div class="ttc" id="aclass_c3_d20_html_a2d8f2a21e7ad4f96f825e9d23abf2549"><div class="ttname"><a href="../../de/dba/class_c3_d20.html#a2d8f2a21e7ad4f96f825e9d23abf2549">C3D20::record</a></div><div class="ttdeci">std::vector&lt; vec &gt; record(OutputType) const override</div><div class="ttdef"><b>Definition</b> C3D20.cpp:183</div></div>
 <div class="ttc" id="aclass_c3_d20_html_a509a13788e3ad8ab14807cbc42720cdd"><div class="ttname"><a href="../../de/dba/class_c3_d20.html#a509a13788e3ad8ab14807cbc42720cdd">C3D20::initialize</a></div><div class="ttdeci">int initialize(const shared_ptr&lt; DomainBase &gt; &amp;) override</div><div class="ttdef"><b>Definition</b> C3D20.cpp:43</div></div>
@@ -193,6 +192,7 @@ $(document).ready(function(){initNavTree('de/d67/_c3_d20_8h_source.html','../../
 <div class="ttc" id="aclass_c3_d20_html_af0da3d73ddab30ee0cf782b50ee2bdea"><div class="ttname"><a href="../../de/dba/class_c3_d20.html#af0da3d73ddab30ee0cf782b50ee2bdea">C3D20::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition</b> C3D20.cpp:189</div></div>
 <div class="ttc" id="aclass_material_element3_d_html"><div class="ttname"><a href="../../d7/df2/class_material_element3_d.html">MaterialElement3D</a></div><div class="ttdef"><b>Definition</b> MaterialElement.h:73</div></div>
 <div class="ttc" id="aclassuvec_html"><div class="ttname"><a href="../../dd/d59/classuvec.html">uvec</a></div></div>
+<div class="ttc" id="agroup___recorder_html_ga4e0517338e6c4a31a2addafc06d4f3a3"><div class="ttname"><a href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a></div><div class="ttdeci">OutputType</div><div class="ttdef"><b>Definition</b> OutputType.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

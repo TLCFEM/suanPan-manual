@@ -1,21 +1,5 @@
 var group___material_3_d =
 [
-    [ "DataNonlinearGurson1D", "d1/d1e/struct_data_nonlinear_gurson1_d.html", [
-      [ "elastic_modulus", "d1/d1e/struct_data_nonlinear_gurson1_d.html#adadbbc094bf774bc92c2ec980ab288e5", null ],
-      [ "en", "d1/d1e/struct_data_nonlinear_gurson1_d.html#aa5e11746efee0d5edba71066788d2aa8", null ],
-      [ "fn", "d1/d1e/struct_data_nonlinear_gurson1_d.html#a6ba5d0fdbceb9b11ab7ad6533ed83079", null ],
-      [ "poissons_ratio", "d1/d1e/struct_data_nonlinear_gurson1_d.html#a601d4130fa29c7b6e174a65fc0a330e2", null ],
-      [ "q1", "d1/d1e/struct_data_nonlinear_gurson1_d.html#ab8f174a9e20271a87131248a6773edda", null ],
-      [ "q2", "d1/d1e/struct_data_nonlinear_gurson1_d.html#a59231a558523daeac39d9e8def0ab464", null ],
-      [ "sn", "d1/d1e/struct_data_nonlinear_gurson1_d.html#afb6f2632760d64d7b8b46c3565a8a8f7", null ]
-    ] ],
-    [ "NonlinearGurson1D", "d7/d44/class_nonlinear_gurson1_d.html", [
-      [ "NonlinearGurson1D", "d7/d44/class_nonlinear_gurson1_d.html#a57e90987ebbb1393fe8bea3273d56a8c", null ],
-      [ "get", "d7/d44/class_nonlinear_gurson1_d.html#aeec67071d91ca9413467dc4f517afad1", null ],
-      [ "initialize", "d7/d44/class_nonlinear_gurson1_d.html#a59d953220542e06095d141e154c71a86", null ],
-      [ "record", "d7/d44/class_nonlinear_gurson1_d.html#a02e11f8c709008c204ab43d6a28c79af", null ],
-      [ "update_trial_status", "d7/d44/class_nonlinear_gurson1_d.html#a0bb512db0cbb943b056e5ac15a9c5178", null ]
-    ] ],
     [ "DataBilinearCC", "db/df8/struct_data_bilinear_c_c.html", [
       [ "a", "db/df8/struct_data_bilinear_c_c.html#a863be5ca8ae8e5a17244908367146bfe", null ],
       [ "a_slope", "db/df8/struct_data_bilinear_c_c.html#a628e1568b14757d6c55d4e6c9e027bb8", null ]
@@ -525,6 +509,27 @@ var group___material_3_d =
       [ "unique_copy", "d2/d24/class_balloon.html#a095b9dce3b797e9b011d891fd4c4c2ba", null ],
       [ "update_trial_status", "d2/d24/class_balloon.html#a69486045a4ff514e5150933d7b6c7103", null ]
     ] ],
+    [ "BalloonBuffer", "df/d02/class_balloon_buffer.html", [
+      [ "Type", "df/d02/class_balloon_buffer.html#aa12d6ab3275aeea9465020fa68909f56", [
+        [ "MINIMUM", "df/d02/class_balloon_buffer.html#aa12d6ab3275aeea9465020fa68909f56acf0ee111afe9889278a772d631dfa150", null ],
+        [ "MAXIMUM", "df/d02/class_balloon_buffer.html#aa12d6ab3275aeea9465020fa68909f56a115f17a28532bbd6f0f5ec83ed20692a", null ],
+        [ "MEAN", "df/d02/class_balloon_buffer.html#aa12d6ab3275aeea9465020fa68909f56a4ea6d1161ea24d7599365f574aff6610", null ]
+      ] ],
+      [ "BalloonBuffer", "df/d02/class_balloon_buffer.html#af140d91ec24d51d2f63c3e346bada84f", null ],
+      [ "enqueue", "df/d02/class_balloon_buffer.html#a5f563f0c09cd0040706845388681e073", null ],
+      [ "operator()", "df/d02/class_balloon_buffer.html#a9187c1150feaaf1a1ad22d93b2235edb", null ],
+      [ "zeros", "df/d02/class_balloon_buffer.html#aeb8c6105c8a5335d22773dd6d6b66ea8", null ]
+    ] ],
+    [ "BalloonBound", "dc/da4/class_balloon_bound.html", [
+      [ "BalloonBound", "dc/da4/class_balloon_bound.html#a2799aff051d33eeaa9593caeb54a1741", null ],
+      [ "operator()", "dc/da4/class_balloon_bound.html#a808d84aee7714acdf94a7365e45dfd19", null ]
+    ] ],
+    [ "BalloonSaturation", "db/de3/class_balloon_saturation.html", [
+      [ "BalloonSaturation", "db/de3/class_balloon_saturation.html#a3240a4cbd8ba8f99c23587d422683595", null ],
+      [ "a", "db/de3/class_balloon_saturation.html#a7ee2630abb4c2a7d759782a9ff83c87c", null ],
+      [ "b", "db/de3/class_balloon_saturation.html#a8d23d2e61bd0e49dbc1602f8572d9678", null ]
+    ] ],
+    [ "BalloonBase", "df/deb/class_balloon_base.html", null ],
     [ "DataBilinearJ2", "d8/d39/struct_data_bilinear_j2.html", [
       [ "beta", "d8/d39/struct_data_bilinear_j2.html#a62067850f25110b2099e4871e4958ffa", null ],
       [ "elastic_modulus", "d8/d39/struct_data_bilinear_j2.html#aed7f6342f4b3ce5ec0d8c37bc6d6c6c6", null ],
@@ -649,6 +654,20 @@ var group___material_3_d =
       [ "unique_copy", "d2/d04/class_subloading.html#a31f87734f25ebd0f43ce66a6ca4d363b", null ],
       [ "update_trial_status", "d2/d04/class_subloading.html#acc8fb0991147717c69e8ba0e6b9cbdb5", null ]
     ] ],
+    [ "SubloadingBound", "d6/dc0/struct_subloading_bound.html", [
+      [ "operator()", "d6/dc0/struct_subloading_bound.html#aeb2249c10661cea832e4c92a5c15cb55", null ],
+      [ "initial", "d6/dc0/struct_subloading_bound.html#a454130dc0f2df66c6df13ebeb8b5fb9a", null ],
+      [ "linear", "d6/dc0/struct_subloading_bound.html#a8ae9b5ade586fbcac2304d28d9b5499c", null ],
+      [ "rate", "d6/dc0/struct_subloading_bound.html#addf53fffbad88fe10647357818b55f92", null ],
+      [ "saturation", "d6/dc0/struct_subloading_bound.html#aef323c4999f65f5e6da98f232ffa8c93", null ]
+    ] ],
+    [ "SubloadingSaturation", "dd/de5/class_subloading_saturation.html", [
+      [ "SubloadingSaturation", "dd/de5/class_subloading_saturation.html#aad363552500ee24fd21c466bc48c9a66", null ],
+      [ "b", "dd/de5/class_subloading_saturation.html#a9245fd22882fb05ff82ce9face9cb2e3", null ],
+      [ "r", "dd/de5/class_subloading_saturation.html#a3bc187a311b30ad8cd2367df0fe4a183", null ],
+      [ "rb", "dd/de5/class_subloading_saturation.html#af801f1da874fcbf8440a2143588bd757", null ]
+    ] ],
+    [ "SubloadingBase", "d7/d3d/class_subloading_base.html", null ],
     [ "TableGurson", "d9/db0/class_table_gurson.html", [
       [ "TableGurson", "d9/db0/class_table_gurson.html#a98cb84471a72d3100882855fbd3ee907", null ],
       [ "unique_copy", "d9/db0/class_table_gurson.html#a576f9b54b3c2f4dd49fb0442e84cdd98", null ]

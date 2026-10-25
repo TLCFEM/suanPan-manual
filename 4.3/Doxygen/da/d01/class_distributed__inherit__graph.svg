@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 11216;
 var viewHeight = 1224;
-var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Distributed</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Distributed</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="Base class providing distributed-memory communication for elements." id="a_Node000001">
 <path fill="#999" stroke="transparent" d="M5755.5-1216h-107v68h107z"/>
 <text x="5665" y="-1203.2" font-family="Consolas" font-size="11">Distributed</text>
 <text x="5653" y="-1187.2" font-family="Consolas" font-size="11">+</text>
@@ -13,7 +13,7 @@ var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.
 <path fill="#666" stroke="#666" d="M5649-1182h13z"/>
 <path fill="#666" stroke="#666" d="M5662-1182h94z"/>
 <path fill="none" stroke="#666" d="M5648.5-1148v-68h107v68z"/>
-</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d5/d50/class_element.html" xlink:title="A Element class." id="a_Node000002" target="_top">
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d5/d50/class_element.html" xlink:title="The base class for all elements." id="a_Node000002" target="_top">
 <path fill="#fff" stroke="transparent" d="M5809.5-1112h-215v292h215z"/>
 <text x="5678.5" y="-1099.2" font-family="Consolas" font-size="11">Element</text>
 <text x="5599" y="-1083.2" font-family="Consolas" font-size="11">#</text>
@@ -100,7 +100,7 @@ var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.
 </a></g><g id="edge3_Node000002_Node000004" class="edge"><title>Node2-&gt;Node4</title><a id="a_edge3_Node000002_Node000004">
 <path fill="none" stroke="#63b8ff" d="M5584.66-929.83C5494.79-899.6 5370.31-850.35 5274-784c-3.47 2.39-6.91 4.97-10.28 7.69"/>
 <path fill="none" stroke="#63b8ff" d="m5583.74-933.22 10.6.16-8.38 6.48z"/>
-</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../de/dec/class_element_example.html" id="a_Node000005" target="_top">
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../de/dec/class_element_example.html" xlink:title="An example element implementation for developers." id="a_Node000005" target="_top">
 <path fill="#fff" stroke="transparent" d="M5411-784h-128v148h128z"/>
 <text x="5299.5" y="-771.2" font-family="Consolas" font-size="11">ElementExample</text>
 <text x="5343.5" y="-755.2" font-family="Consolas" font-size="11"> </text>
@@ -124,7 +124,7 @@ var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.
 </a></g><g id="edge4_Node000002_Node000005" class="edge"><title>Node2-&gt;Node5</title><a id="a_edge4_Node000002_Node000005">
 <path fill="none" stroke="#63b8ff" d="M5585.51-898.03c-52.39 32.05-113.9 72.46-165.51 114.03-2.93 2.36-5.87 4.83-8.8 7.36"/>
 <path fill="none" stroke="#63b8ff" d="m5583.81-901.09 10.36-2.22-6.72 8.19z"/>
-</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../db/dcd/class_embedded.html" xlink:title="A Embedded class." id="a_Node000006" target="_top">
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../db/dcd/class_embedded.html" xlink:title="An Embedded class." id="a_Node000006" target="_top">
 <path fill="#fff" stroke="transparent" d="M5550.5-776h-121v132h121z"/>
 <text x="5439.5" y="-763.2" font-family="Consolas" font-size="11">Embedded&lt; DIM &gt;</text>
 <text x="5487" y="-747.2" font-family="Consolas" font-size="11"> </text>

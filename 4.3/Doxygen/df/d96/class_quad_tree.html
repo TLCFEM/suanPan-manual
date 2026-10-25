@@ -104,9 +104,12 @@ $(document).ready(function(){initNavTree('df/d96/class_quad_tree.html','../../')
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d0/d1a/class_quad_tree-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">QuadTree&lt; T, BUCKET_SIZE &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">QuadTree&lt; T, BUCKET_SIZE &gt; Class Template Reference<div class="ingroups"><a class="el" href="../../db/dd2/group___element.html">Element</a> &raquo; <a class="el" href="../../da/d46/group___utility.html">Utility</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A bucketed quadtree for spatial queries.  
+ <a href="../../df/d96/class_quad_tree.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d9/ddd/quadtree_8hpp_source.html">quadtree.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -128,14 +131,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab1237d519f3ace4a8be725616bc23d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38d42f6aab663414e438a4330d40713b" id="r_a38d42f6aab663414e438a4330d40713b"><td class="memTemplParams" colspan="2">template&lt;std::forward_iterator IT&gt; <br />
 requires std::is_convertible_v&lt;std::iter_value_t&lt;IT&gt;, <a class="el" href="../../df/d96/class_quad_tree.html#a4f060c719e033c90dbcce871999905c5">node_ptr_t</a>&gt;</td></tr>
-<tr class="memitem:a38d42f6aab663414e438a4330d40713b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d96/class_quad_tree.html#a38d42f6aab663414e438a4330d40713b">insert</a> (IT <a class="el" href="../../d4/d48/_storage_8hpp.html#ada24dbb9bbd8bbb5f669e50614db6c79">begin</a>, IT <a class="el" href="../../d4/d48/_storage_8hpp.html#a45bf90d3e5b89fc6c46f15cc58c1c60c">end</a>)</td></tr>
+<tr class="memitem:a38d42f6aab663414e438a4330d40713b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d96/class_quad_tree.html#a38d42f6aab663414e438a4330d40713b">insert</a> (IT <a class="el" href="../../d9/df2/group___domain.html#gada24dbb9bbd8bbb5f669e50614db6c79">begin</a>, IT <a class="el" href="../../d9/df2/group___domain.html#ga45bf90d3e5b89fc6c46f15cc58c1c60c">end</a>)</td></tr>
 <tr class="separator:a38d42f6aab663414e438a4330d40713b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd2f11ad1757aa2c06d061ac22d142ad" id="r_abd2f11ad1757aa2c06d061ac22d142ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d96/class_quad_tree.html#abd2f11ad1757aa2c06d061ac22d142ad">insert</a> (leaf_t &amp;&amp;in_child)</td></tr>
 <tr class="separator:abd2f11ad1757aa2c06d061ac22d142ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2c469a4849c1ce2dde55dfa9ef4c1b3" id="r_ab2c469a4849c1ce2dde55dfa9ef4c1b3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="../../df/d96/class_quad_tree.html">QuadTree</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d96/class_quad_tree.html#ab2c469a4849c1ce2dde55dfa9ef4c1b3">overlap</a> (const <a class="el" href="../../d2/d0d/struct_bounding_box.html">BoundingBox</a>&lt; T &gt; &amp;target) const</td></tr>
 <tr class="separator:ab2c469a4849c1ce2dde55dfa9ef4c1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;std::floating_point T = double, unsigned BUCKET_SIZE = 1&gt;<br />
+class QuadTree&lt; T, BUCKET_SIZE &gt;</div><p>A bucketed quadtree for spatial queries. </p>
+<dl class="section author"><dt>Author</dt><dd>tlc </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>25/04/2026 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a4f060c719e033c90dbcce871999905c5" name="a4f060c719e033c90dbcce871999905c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f060c719e033c90dbcce871999905c5">&#9670;&#160;</a></span>node_ptr_t</h2>
 

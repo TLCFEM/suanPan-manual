@@ -107,6 +107,9 @@ $(document).ready(function(){initNavTree('de/d24/class_resource_holder.html','..
 </div><!--header-->
 <div class="contents">
 
+<p>A copyable resource wrapper that clones its object via <code>unique_copy()</code>.  
+ <a href="../../de/d24/class_resource_holder.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d4/da0/_resource_holder_8h_source.html">ResourceHolder.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for ResourceHolder&lt; T &gt;:</div>
@@ -130,9 +133,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a92dc83d0444b5f03559539ad79234f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba8e0e495f1b3e929f3892acbd9964a" id="r_acba8e0e495f1b3e929f3892acbd9964a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d24/class_resource_holder.html#acba8e0e495f1b3e929f3892acbd9964a">ResourceHolder</a> (std::unique_ptr&lt; T &gt; &amp;&amp;old)</td></tr>
 <tr class="separator:acba8e0e495f1b3e929f3892acbd9964a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d96bfc693f7cbe72e96042a2f6cd62e" id="r_a7d96bfc693f7cbe72e96042a2f6cd62e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a> &gt; <br />
-requires std::is_base_of_v&lt;T, <a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a>&gt;</td></tr>
-<tr class="memitem:a7d96bfc693f7cbe72e96042a2f6cd62e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d24/class_resource_holder.html">ResourceHolder</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d24/class_resource_holder.html#a7d96bfc693f7cbe72e96042a2f6cd62e">operator=</a> (<a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a> &amp;&amp;other)</td></tr>
+<tr class="memitem:a7d96bfc693f7cbe72e96042a2f6cd62e" id="r_a7d96bfc693f7cbe72e96042a2f6cd62e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../d2/d70/group___recorder.html#gga4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a> &gt; <br />
+requires std::is_base_of_v&lt;T, <a class="el" href="../../d2/d70/group___recorder.html#gga4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a>&gt;</td></tr>
+<tr class="memitem:a7d96bfc693f7cbe72e96042a2f6cd62e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d24/class_resource_holder.html">ResourceHolder</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d24/class_resource_holder.html#a7d96bfc693f7cbe72e96042a2f6cd62e">operator=</a> (<a class="el" href="../../d2/d70/group___recorder.html#gga4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a> &amp;&amp;other)</td></tr>
 <tr class="separator:a7d96bfc693f7cbe72e96042a2f6cd62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13e4fe64a29a9c4a24e33f0c924ad8a3" id="r_a13e4fe64a29a9c4a24e33f0c924ad8a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d24/class_resource_holder.html">ResourceHolder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d24/class_resource_holder.html#a13e4fe64a29a9c4a24e33f0c924ad8a3">operator=</a> (const std::shared_ptr&lt; T &gt; &amp;old)</td></tr>
 <tr class="separator:a13e4fe64a29a9c4a24e33f0c924ad8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,8 +149,10 @@ requires std::is_base_of_v&lt;T, <a class="el" href="../../d4/d0f/_output_type_8
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 requires requires(T* copyable) { copyable-&gt;unique_copy(); }<br />
-class ResourceHolder&lt; T &gt;</div><dl class="section author"><dt>Author</dt><dd>tlc </dd></dl>
+class ResourceHolder&lt; T &gt;</div><p>A copyable resource wrapper that clones its object via <code>unique_copy()</code>. </p>
+<dl class="section author"><dt>Author</dt><dd>tlc </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>15/02/2023 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4046c92a1fa6e1f6d36df1fe430d1af6" name="a4046c92a1fa6e1f6d36df1fe430d1af6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4046c92a1fa6e1f6d36df1fe430d1af6">&#9670;&#160;</a></span>ResourceHolder() <span class="overload">[1/4]</span></h2>
@@ -434,8 +439,8 @@ template&lt;typename T &gt; </div>
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a> &gt; <br />
-requires std::is_base_of_v&lt;T, <a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a>&gt;</div>
+template&lt;typename <a class="el" href="../../d2/d70/group___recorder.html#gga4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a> &gt; <br />
+requires std::is_base_of_v&lt;T, <a class="el" href="../../d2/d70/group___recorder.html#gga4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -443,7 +448,7 @@ requires std::is_base_of_v&lt;T, <a class="el" href="../../d4/d0f/_output_type_8
         <tr>
           <td class="memname"><a class="el" href="../../de/d24/class_resource_holder.html">ResourceHolder</a> &amp; <a class="el" href="../../de/d24/class_resource_holder.html">ResourceHolder</a>&lt; T &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a> &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d2/d70/group___recorder.html#gga4e0517338e6c4a31a2addafc06d4f3a3a4c614360da93c0a041b22e537de151eb">U</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>

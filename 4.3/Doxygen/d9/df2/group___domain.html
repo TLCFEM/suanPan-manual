@@ -136,6 +136,18 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8f/class_node.html">Node</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../dc/d8f/class_node.html" title="The Node class holds the number of DoFs, coordinate, displacement, velocity and acceleration.">Node</a> class holds the number of DoFs, coordinate, displacement, velocity and acceleration.  <a href="../../dc/d8f/class_node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d56/class_storage.html">Storage&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A candidate <a class="el" href="../../da/d56/class_storage.html" title="A candidate Storage class that stores FEM objects.">Storage</a> class that stores FEM objects.  <a href="../../da/d56/class_storage.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d57/class_tag.html">Tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base <a class="el" href="../../d0/d57/class_tag.html" title="A base Tag class.">Tag</a> class.  <a href="../../d0/d57/class_tag.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1d/class_copyable_tag.html">CopyableTag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Label objects that can be copied.  <a href="../../d7/d1d/class_copyable_tag.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db8/class_unique_tag.html">UniqueTag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Label objects that cannot be copied.  <a href="../../db/db8/class_unique_tag.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -183,6 +195,49 @@ Typedefs</h2></td></tr>
 <tr class="separator:ga95167f752934d6f2013f995044229538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga93e266a0894dd4e3a0319ed9098f68aa" id="r_ga93e266a0894dd4e3a0319ed9098f68aa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga93e266a0894dd4e3a0319ed9098f68aa">LongFactory</a> = <a class="el" href="../../db/dec/class_factory.html">Factory</a>&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt;</td></tr>
 <tr class="separator:ga93e266a0894dd4e3a0319ed9098f68aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d906e5258ccec78932b02fac96265ea" id="r_ga2d906e5258ccec78932b02fac96265ea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga2d906e5258ccec78932b02fac96265ea"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga2d906e5258ccec78932b02fac96265ea">dual</a> = std::pair&lt; unsigned, shared_ptr&lt; T &gt; &gt;</td></tr>
+<tr class="separator:ga2d906e5258ccec78932b02fac96265ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga850daed0c9aa8cceeb76d9979020be04" id="r_ga850daed0c9aa8cceeb76d9979020be04"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga850daed0c9aa8cceeb76d9979020be04">AmplitudeStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../de/d90/class_amplitude.html">Amplitude</a> &gt;</td></tr>
+<tr class="separator:ga850daed0c9aa8cceeb76d9979020be04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga625ef2bec37509116a297543425d72d8" id="r_ga625ef2bec37509116a297543425d72d8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga625ef2bec37509116a297543425d72d8">ExpressionStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../df/d03/class_expression.html">Expression</a> &gt;</td></tr>
+<tr class="separator:ga625ef2bec37509116a297543425d72d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9ab4c6c73317bf4a59521ddea4aac1a" id="r_gac9ab4c6c73317bf4a59521ddea4aac1a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gac9ab4c6c73317bf4a59521ddea4aac1a">ConstraintStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d8/d71/class_constraint.html">Constraint</a> &gt;</td></tr>
+<tr class="separator:gac9ab4c6c73317bf4a59521ddea4aac1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac29e713036ae79d1744223f60f3f3fde" id="r_gac29e713036ae79d1744223f60f3f3fde"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gac29e713036ae79d1744223f60f3f3fde">ConvergerStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d7/dae/class_converger.html">Converger</a> &gt;</td></tr>
+<tr class="separator:gac29e713036ae79d1744223f60f3f3fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f346d91ba10f7461ce200743469b65b" id="r_ga3f346d91ba10f7461ce200743469b65b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga3f346d91ba10f7461ce200743469b65b">CriterionStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d3/d46/class_criterion.html">Criterion</a> &gt;</td></tr>
+<tr class="separator:ga3f346d91ba10f7461ce200743469b65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d7204be0c350c091fd34003251b95de" id="r_ga4d7204be0c350c091fd34003251b95de"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga4d7204be0c350c091fd34003251b95de">DatabaseStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../dc/d83/class_database.html">Database</a> &gt;</td></tr>
+<tr class="separator:ga4d7204be0c350c091fd34003251b95de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f2b4b0af9f82a2891758a361565621a" id="r_ga7f2b4b0af9f82a2891758a361565621a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga7f2b4b0af9f82a2891758a361565621a">DomainStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d4/df4/class_domain.html">Domain</a> &gt;</td></tr>
+<tr class="separator:ga7f2b4b0af9f82a2891758a361565621a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7720e15b1a38dca4bcee3648c71f6a3" id="r_gae7720e15b1a38dca4bcee3648c71f6a3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gae7720e15b1a38dca4bcee3648c71f6a3">DomainBaseStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt;</td></tr>
+<tr class="separator:gae7720e15b1a38dca4bcee3648c71f6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc9374520e457caff5e8621cd6d372d5" id="r_gadc9374520e457caff5e8621cd6d372d5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gadc9374520e457caff5e8621cd6d372d5">ElementStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d5/d50/class_element.html">Element</a> &gt;</td></tr>
+<tr class="separator:gadc9374520e457caff5e8621cd6d372d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66f9892d9d776b02f99fb156361a31d1" id="r_ga66f9892d9d776b02f99fb156361a31d1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga66f9892d9d776b02f99fb156361a31d1">GroupStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../da/d50/class_group.html">Group</a> &gt;</td></tr>
+<tr class="separator:ga66f9892d9d776b02f99fb156361a31d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97d004ff9827b86ac882ecc0b59d0908" id="r_ga97d004ff9827b86ac882ecc0b59d0908"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga97d004ff9827b86ac882ecc0b59d0908">IntegratorStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d6/d55/class_integrator.html">Integrator</a> &gt;</td></tr>
+<tr class="separator:ga97d004ff9827b86ac882ecc0b59d0908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2a6c9127684a2a11c1f9a0c1b7b0142" id="r_gaf2a6c9127684a2a11c1f9a0c1b7b0142"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gaf2a6c9127684a2a11c1f9a0c1b7b0142">InteractionStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d3/d8e/class_interaction.html">Interaction</a> &gt;</td></tr>
+<tr class="separator:gaf2a6c9127684a2a11c1f9a0c1b7b0142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac680f5bc5b69587c0931b462ea6f2386" id="r_gac680f5bc5b69587c0931b462ea6f2386"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gac680f5bc5b69587c0931b462ea6f2386">LoadStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../df/d07/class_load.html">Load</a> &gt;</td></tr>
+<tr class="separator:gac680f5bc5b69587c0931b462ea6f2386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f1ee9674d1b484e7cceecb0485aedf4" id="r_ga2f1ee9674d1b484e7cceecb0485aedf4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga2f1ee9674d1b484e7cceecb0485aedf4">MaterialStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../dc/dee/class_material.html">Material</a> &gt;</td></tr>
+<tr class="separator:ga2f1ee9674d1b484e7cceecb0485aedf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf845ccec593d8885579521d28371c018" id="r_gaf845ccec593d8885579521d28371c018"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gaf845ccec593d8885579521d28371c018">ModifierStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d8/dc0/class_modifier.html">Modifier</a> &gt;</td></tr>
+<tr class="separator:gaf845ccec593d8885579521d28371c018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3123605d4b830d3507d416deee933d4c" id="r_ga3123605d4b830d3507d416deee933d4c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga3123605d4b830d3507d416deee933d4c">NodeStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../dc/d8f/class_node.html">Node</a> &gt;</td></tr>
+<tr class="separator:ga3123605d4b830d3507d416deee933d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1c77c139cc5cab8184f63f568ca6657" id="r_gad1c77c139cc5cab8184f63f568ca6657"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gad1c77c139cc5cab8184f63f568ca6657">OrientationStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d2/dcd/class_orientation.html">Orientation</a> &gt;</td></tr>
+<tr class="separator:gad1c77c139cc5cab8184f63f568ca6657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab65bb3a9a92253c913cb640ef82d3fea" id="r_gab65bb3a9a92253c913cb640ef82d3fea"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gab65bb3a9a92253c913cb640ef82d3fea">RecorderStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d3/d1a/class_recorder.html">Recorder</a> &gt;</td></tr>
+<tr class="separator:gab65bb3a9a92253c913cb640ef82d3fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga547ab3e978204619bada5894976314e8" id="r_ga547ab3e978204619bada5894976314e8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga547ab3e978204619bada5894976314e8">SectionStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../df/d29/class_section.html">Section</a> &gt;</td></tr>
+<tr class="separator:ga547ab3e978204619bada5894976314e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58a63c559e472947109b0f7295f0b6c0" id="r_ga58a63c559e472947109b0f7295f0b6c0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga58a63c559e472947109b0f7295f0b6c0">SolverStorage</a> = <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; <a class="el" href="../../d6/d8d/class_solver.html">Solver</a> &gt;</td></tr>
+<tr class="separator:ga58a63c559e472947109b0f7295f0b6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -201,6 +256,81 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga26c74713cfea22ed43db7f48de533b1c" id="r_ga26c74713cfea22ed43db7f48de533b1c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga26c74713cfea22ed43db7f48de533b1c"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a> ()</td></tr>
+<tr class="separator:ga26c74713cfea22ed43db7f48de533b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga898556f4d02b42e6f5caa0675ca2f761" id="r_ga898556f4d02b42e6f5caa0675ca2f761"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga898556f4d02b42e6f5caa0675ca2f761"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga898556f4d02b42e6f5caa0675ca2f761">StorageType&lt; Amplitude &gt;</a> ()</td></tr>
+<tr class="separator:ga898556f4d02b42e6f5caa0675ca2f761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81d481d690c3bd60dba4f4c7cdc7ab46" id="r_ga81d481d690c3bd60dba4f4c7cdc7ab46"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga81d481d690c3bd60dba4f4c7cdc7ab46"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga81d481d690c3bd60dba4f4c7cdc7ab46">StorageType&lt; Expression &gt;</a> ()</td></tr>
+<tr class="separator:ga81d481d690c3bd60dba4f4c7cdc7ab46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69b4218cd3e19c622573e4b85026feac" id="r_ga69b4218cd3e19c622573e4b85026feac"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga69b4218cd3e19c622573e4b85026feac"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga69b4218cd3e19c622573e4b85026feac">StorageType&lt; Constraint &gt;</a> ()</td></tr>
+<tr class="separator:ga69b4218cd3e19c622573e4b85026feac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66d2e27a658b7b12d6d7e2acbabf8214" id="r_ga66d2e27a658b7b12d6d7e2acbabf8214"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga66d2e27a658b7b12d6d7e2acbabf8214"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga66d2e27a658b7b12d6d7e2acbabf8214">StorageType&lt; Converger &gt;</a> ()</td></tr>
+<tr class="separator:ga66d2e27a658b7b12d6d7e2acbabf8214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1bce3b8a206f95026b64f2e4a56494b1" id="r_ga1bce3b8a206f95026b64f2e4a56494b1"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga1bce3b8a206f95026b64f2e4a56494b1"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga1bce3b8a206f95026b64f2e4a56494b1">StorageType&lt; Criterion &gt;</a> ()</td></tr>
+<tr class="separator:ga1bce3b8a206f95026b64f2e4a56494b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf80fb1c4911d1923e9eeeef1508d15ce" id="r_gaf80fb1c4911d1923e9eeeef1508d15ce"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:gaf80fb1c4911d1923e9eeeef1508d15ce"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gaf80fb1c4911d1923e9eeeef1508d15ce">StorageType&lt; Database &gt;</a> ()</td></tr>
+<tr class="separator:gaf80fb1c4911d1923e9eeeef1508d15ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac13a93094f4491cf3533f8812c7f3b24" id="r_gac13a93094f4491cf3533f8812c7f3b24"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:gac13a93094f4491cf3533f8812c7f3b24"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gac13a93094f4491cf3533f8812c7f3b24">StorageType&lt; Domain &gt;</a> ()</td></tr>
+<tr class="separator:gac13a93094f4491cf3533f8812c7f3b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8509b5d9ad28ae607697ebf757af8bcd" id="r_ga8509b5d9ad28ae607697ebf757af8bcd"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga8509b5d9ad28ae607697ebf757af8bcd"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga8509b5d9ad28ae607697ebf757af8bcd">StorageType&lt; DomainBase &gt;</a> ()</td></tr>
+<tr class="separator:ga8509b5d9ad28ae607697ebf757af8bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66df56772b42ab55763f398401e56f18" id="r_ga66df56772b42ab55763f398401e56f18"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga66df56772b42ab55763f398401e56f18"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga66df56772b42ab55763f398401e56f18">StorageType&lt; Element &gt;</a> ()</td></tr>
+<tr class="separator:ga66df56772b42ab55763f398401e56f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86987d07f9b93f5ccf96f8d7b873e685" id="r_ga86987d07f9b93f5ccf96f8d7b873e685"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga86987d07f9b93f5ccf96f8d7b873e685"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga86987d07f9b93f5ccf96f8d7b873e685">StorageType&lt; Group &gt;</a> ()</td></tr>
+<tr class="separator:ga86987d07f9b93f5ccf96f8d7b873e685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabca0ee8ad35e67f49a86a0bfb9e4d47b" id="r_gabca0ee8ad35e67f49a86a0bfb9e4d47b"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:gabca0ee8ad35e67f49a86a0bfb9e4d47b"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gabca0ee8ad35e67f49a86a0bfb9e4d47b">StorageType&lt; Integrator &gt;</a> ()</td></tr>
+<tr class="separator:gabca0ee8ad35e67f49a86a0bfb9e4d47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6440714729eaca837b88b4e35dd395b3" id="r_ga6440714729eaca837b88b4e35dd395b3"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga6440714729eaca837b88b4e35dd395b3"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga6440714729eaca837b88b4e35dd395b3">StorageType&lt; Interaction &gt;</a> ()</td></tr>
+<tr class="separator:ga6440714729eaca837b88b4e35dd395b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8fbd2df1239344876ff9638608ef5332" id="r_ga8fbd2df1239344876ff9638608ef5332"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga8fbd2df1239344876ff9638608ef5332"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga8fbd2df1239344876ff9638608ef5332">StorageType&lt; Load &gt;</a> ()</td></tr>
+<tr class="separator:ga8fbd2df1239344876ff9638608ef5332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaffef10d3d9c07e7734609a002d32a5e2" id="r_gaffef10d3d9c07e7734609a002d32a5e2"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:gaffef10d3d9c07e7734609a002d32a5e2"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gaffef10d3d9c07e7734609a002d32a5e2">StorageType&lt; Material &gt;</a> ()</td></tr>
+<tr class="separator:gaffef10d3d9c07e7734609a002d32a5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34ac173057c832ad8a8f9178577007c5" id="r_ga34ac173057c832ad8a8f9178577007c5"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga34ac173057c832ad8a8f9178577007c5"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga34ac173057c832ad8a8f9178577007c5">StorageType&lt; Modifier &gt;</a> ()</td></tr>
+<tr class="separator:ga34ac173057c832ad8a8f9178577007c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2e13de487f7685ce121fecf579a77de" id="r_gac2e13de487f7685ce121fecf579a77de"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:gac2e13de487f7685ce121fecf579a77de"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gac2e13de487f7685ce121fecf579a77de">StorageType&lt; Node &gt;</a> ()</td></tr>
+<tr class="separator:gac2e13de487f7685ce121fecf579a77de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga740b5730497e948b0fa7d0fcfcda7178" id="r_ga740b5730497e948b0fa7d0fcfcda7178"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga740b5730497e948b0fa7d0fcfcda7178"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga740b5730497e948b0fa7d0fcfcda7178">StorageType&lt; Orientation &gt;</a> ()</td></tr>
+<tr class="separator:ga740b5730497e948b0fa7d0fcfcda7178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8c8d47f31864acb42d1a56bad2363d0" id="r_gae8c8d47f31864acb42d1a56bad2363d0"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:gae8c8d47f31864acb42d1a56bad2363d0"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gae8c8d47f31864acb42d1a56bad2363d0">StorageType&lt; Recorder &gt;</a> ()</td></tr>
+<tr class="separator:gae8c8d47f31864acb42d1a56bad2363d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac264b73714c22dab97780fe3316e5103" id="r_gac264b73714c22dab97780fe3316e5103"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:gac264b73714c22dab97780fe3316e5103"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gac264b73714c22dab97780fe3316e5103">StorageType&lt; Section &gt;</a> ()</td></tr>
+<tr class="separator:gac264b73714c22dab97780fe3316e5103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81f5ae1e913a8a77330ed76d9a560b6d" id="r_ga81f5ae1e913a8a77330ed76d9a560b6d"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga81f5ae1e913a8a77330ed76d9a560b6d"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga81f5ae1e913a8a77330ed76d9a560b6d">StorageType&lt; Solver &gt;</a> ()</td></tr>
+<tr class="separator:ga81f5ae1e913a8a77330ed76d9a560b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9fef2ead36155a4d764cfc0c158dd05c" id="r_ga9fef2ead36155a4d764cfc0c158dd05c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga9fef2ead36155a4d764cfc0c158dd05c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::const_iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga9fef2ead36155a4d764cfc0c158dd05c">cbegin</a> (const <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt; &amp;<a class="el" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca5dbc98dcc983a70728bd082d1a47546e">S</a>)</td></tr>
+<tr class="separator:ga9fef2ead36155a4d764cfc0c158dd05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga916985b45c9bc283fcc4bb8ef49a28b5" id="r_ga916985b45c9bc283fcc4bb8ef49a28b5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga916985b45c9bc283fcc4bb8ef49a28b5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::const_iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga916985b45c9bc283fcc4bb8ef49a28b5">cend</a> (const <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt; &amp;<a class="el" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca5dbc98dcc983a70728bd082d1a47546e">S</a>)</td></tr>
+<tr class="separator:ga916985b45c9bc283fcc4bb8ef49a28b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada24dbb9bbd8bbb5f669e50614db6c79" id="r_gada24dbb9bbd8bbb5f669e50614db6c79"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gada24dbb9bbd8bbb5f669e50614db6c79"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gada24dbb9bbd8bbb5f669e50614db6c79">begin</a> (<a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt; &amp;<a class="el" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca5dbc98dcc983a70728bd082d1a47546e">S</a>)</td></tr>
+<tr class="separator:gada24dbb9bbd8bbb5f669e50614db6c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45bf90d3e5b89fc6c46f15cc58c1c60c" id="r_ga45bf90d3e5b89fc6c46f15cc58c1c60c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga45bf90d3e5b89fc6c46f15cc58c1c60c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga45bf90d3e5b89fc6c46f15cc58c1c60c">end</a> (<a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt; &amp;<a class="el" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca5dbc98dcc983a70728bd082d1a47546e">S</a>)</td></tr>
+<tr class="separator:ga45bf90d3e5b89fc6c46f15cc58c1c60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae90c110c8a54c8c1554511303b9fd281" id="r_gae90c110c8a54c8c1554511303b9fd281"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gae90c110c8a54c8c1554511303b9fd281"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gae90c110c8a54c8c1554511303b9fd281">DomainBase::erase</a> (unsigned)</td></tr>
 <tr class="separator:gae90c110c8a54c8c1554511303b9fd281"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,6 +367,40 @@ Functions</h2></td></tr>
 <tr class="memitem:gac5f625ee276f26cfca4551f15603f824" id="r_gac5f625ee276f26cfca4551f15603f824"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:gac5f625ee276f26cfca4551f15603f824"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gac5f625ee276f26cfca4551f15603f824">DomainBase::find</a> (const unsigned T)</td></tr>
 <tr class="separator:gac5f625ee276f26cfca4551f15603f824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe741dbe0b72f3fbf284ffffb422dcb3" id="r_gafe741dbe0b72f3fbf284ffffb422dcb3"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gafe741dbe0b72f3fbf284ffffb422dcb3">Storage&lt; T &gt;::cbegin</a> () const</td></tr>
+<tr class="separator:gafe741dbe0b72f3fbf284ffffb422dcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga714c2f17c882e47a55baa026f8181cb5" id="r_ga714c2f17c882e47a55baa026f8181cb5"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga714c2f17c882e47a55baa026f8181cb5">Storage&lt; T &gt;::cend</a> () const</td></tr>
+<tr class="separator:ga714c2f17c882e47a55baa026f8181cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7bfcc96a0c37e9a615657b0e25d36ba2" id="r_ga7bfcc96a0c37e9a615657b0e25d36ba2"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga7bfcc96a0c37e9a615657b0e25d36ba2">Storage&lt; T &gt;::begin</a> ()</td></tr>
+<tr class="separator:ga7bfcc96a0c37e9a615657b0e25d36ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f8d0f14299232dc53d4633b972a814f" id="r_ga4f8d0f14299232dc53d4633b972a814f"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga4f8d0f14299232dc53d4633b972a814f">Storage&lt; T &gt;::end</a> ()</td></tr>
+<tr class="separator:ga4f8d0f14299232dc53d4633b972a814f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga013cb19bdce869254a6c7644921f75e0" id="r_ga013cb19bdce869254a6c7644921f75e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga013cb19bdce869254a6c7644921f75e0">Storage&lt; T &gt;::insert</a> (const shared_ptr&lt; T &gt; &amp;)</td></tr>
+<tr class="separator:ga013cb19bdce869254a6c7644921f75e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06be2b0a936464f23e4cd6147b1a1584" id="r_ga06be2b0a936464f23e4cd6147b1a1584"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga06be2b0a936464f23e4cd6147b1a1584">Storage&lt; T &gt;::operator[]</a> (unsigned)</td></tr>
+<tr class="separator:ga06be2b0a936464f23e4cd6147b1a1584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51835b9f2ffd4b3bbf076492b5a1f2c2" id="r_ga51835b9f2ffd4b3bbf076492b5a1f2c2"><td class="memItemLeft" align="right" valign="top">const shared_ptr&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga51835b9f2ffd4b3bbf076492b5a1f2c2">Storage&lt; T &gt;::at</a> (unsigned) const</td></tr>
+<tr class="separator:ga51835b9f2ffd4b3bbf076492b5a1f2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaea6dbc46854eaf228e053459c79743d" id="r_gaaea6dbc46854eaf228e053459c79743d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; shared_ptr&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#gaaea6dbc46854eaf228e053459c79743d">Storage&lt; T &gt;::get</a> () const</td></tr>
+<tr class="separator:gaaea6dbc46854eaf228e053459c79743d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c06f55c3c192fa18e8e0d6465fa078d" id="r_ga0c06f55c3c192fa18e8e0d6465fa078d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga0c06f55c3c192fa18e8e0d6465fa078d">Storage&lt; T &gt;::find</a> (unsigned) const</td></tr>
+<tr class="separator:ga0c06f55c3c192fa18e8e0d6465fa078d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81e65e59906a407ed2fdd0ed8b8a2900" id="r_ga81e65e59906a407ed2fdd0ed8b8a2900"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga81e65e59906a407ed2fdd0ed8b8a2900">Storage&lt; T &gt;::erase</a> (unsigned)</td></tr>
+<tr class="separator:ga81e65e59906a407ed2fdd0ed8b8a2900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c3366c165ce282edb40ff7ec3d54838" id="r_ga0c3366c165ce282edb40ff7ec3d54838"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga0c3366c165ce282edb40ff7ec3d54838">Storage&lt; T &gt;::enable</a> (unsigned)</td></tr>
+<tr class="separator:ga0c3366c165ce282edb40ff7ec3d54838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga943b002d5726416b145f33701c7db86d" id="r_ga943b002d5726416b145f33701c7db86d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga943b002d5726416b145f33701c7db86d">Storage&lt; T &gt;::disable</a> (unsigned)</td></tr>
+<tr class="separator:ga943b002d5726416b145f33701c7db86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b51334e65934ab09fd23bd4fa91aa17" id="r_ga6b51334e65934ab09fd23bd4fa91aa17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga6b51334e65934ab09fd23bd4fa91aa17">Storage&lt; T &gt;::update</a> ()</td></tr>
+<tr class="separator:ga6b51334e65934ab09fd23bd4fa91aa17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15f02e19fc564b2d64411ac4911cac04" id="r_ga15f02e19fc564b2d64411ac4911cac04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga15f02e19fc564b2d64411ac4911cac04">Storage&lt; T &gt;::enable</a> ()</td></tr>
+<tr class="separator:ga15f02e19fc564b2d64411ac4911cac04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0224b21796a7b8e879146a0c573729e6" id="r_ga0224b21796a7b8e879146a0c573729e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga0224b21796a7b8e879146a0c573729e6">Storage&lt; T &gt;::reset</a> ()</td></tr>
+<tr class="separator:ga0224b21796a7b8e879146a0c573729e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga679fb7e6b9da4a81c8882b96a48128e5" id="r_ga679fb7e6b9da4a81c8882b96a48128e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga679fb7e6b9da4a81c8882b96a48128e5">Storage&lt; T &gt;::clear</a> ()</td></tr>
+<tr class="separator:ga679fb7e6b9da4a81c8882b96a48128e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46dd09875ad737879c04a3268795848e" id="r_ga46dd09875ad737879c04a3268795848e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/group___domain.html#ga46dd09875ad737879c04a3268795848e">Storage&lt; T &gt;::size</a> () const</td></tr>
+<tr class="separator:ga46dd09875ad737879c04a3268795848e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -248,6 +412,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gaf662b02ef7914f9cb0067d2686d1b015">AmplitudeQueue</a> =  std::vector&lt;shared_ptr&lt;<a class="el" href="../../de/d90/class_amplitude.html">Amplitude</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga850daed0c9aa8cceeb76d9979020be04" name="ga850daed0c9aa8cceeb76d9979020be04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga850daed0c9aa8cceeb76d9979020be04">&#9670;&#160;</a></span>AmplitudeStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga850daed0c9aa8cceeb76d9979020be04">AmplitudeStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../de/d90/class_amplitude.html">Amplitude</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -268,6 +446,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gac9ab4c6c73317bf4a59521ddea4aac1a" name="gac9ab4c6c73317bf4a59521ddea4aac1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9ab4c6c73317bf4a59521ddea4aac1a">&#9670;&#160;</a></span>ConstraintStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gac9ab4c6c73317bf4a59521ddea4aac1a">ConstraintStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d8/d71/class_constraint.html">Constraint</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gaa893bf7dff5c7de9cc496638f39324c8" name="gaa893bf7dff5c7de9cc496638f39324c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa893bf7dff5c7de9cc496638f39324c8">&#9670;&#160;</a></span>ConvergerQueue</h2>
 
@@ -276,6 +468,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gaa893bf7dff5c7de9cc496638f39324c8">ConvergerQueue</a> =  std::vector&lt;shared_ptr&lt;<a class="el" href="../../d7/dae/class_converger.html">Converger</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac29e713036ae79d1744223f60f3f3fde" name="gac29e713036ae79d1744223f60f3f3fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac29e713036ae79d1744223f60f3f3fde">&#9670;&#160;</a></span>ConvergerStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gac29e713036ae79d1744223f60f3f3fde">ConvergerStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d7/dae/class_converger.html">Converger</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -296,6 +502,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga3f346d91ba10f7461ce200743469b65b" name="ga3f346d91ba10f7461ce200743469b65b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f346d91ba10f7461ce200743469b65b">&#9670;&#160;</a></span>CriterionStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga3f346d91ba10f7461ce200743469b65b">CriterionStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d3/d46/class_criterion.html">Criterion</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga1b80063e643c62436df14120afcbbd3f" name="ga1b80063e643c62436df14120afcbbd3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1b80063e643c62436df14120afcbbd3f">&#9670;&#160;</a></span>DatabaseQueue</h2>
 
@@ -304,6 +524,64 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga1b80063e643c62436df14120afcbbd3f">DatabaseQueue</a> =  std::vector&lt;shared_ptr&lt;<a class="el" href="../../dc/d83/class_database.html">Database</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4d7204be0c350c091fd34003251b95de" name="ga4d7204be0c350c091fd34003251b95de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d7204be0c350c091fd34003251b95de">&#9670;&#160;</a></span>DatabaseStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga4d7204be0c350c091fd34003251b95de">DatabaseStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../dc/d83/class_database.html">Database</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae7720e15b1a38dca4bcee3648c71f6a3" name="gae7720e15b1a38dca4bcee3648c71f6a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7720e15b1a38dca4bcee3648c71f6a3">&#9670;&#160;</a></span>DomainBaseStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gae7720e15b1a38dca4bcee3648c71f6a3">DomainBaseStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7f2b4b0af9f82a2891758a361565621a" name="ga7f2b4b0af9f82a2891758a361565621a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7f2b4b0af9f82a2891758a361565621a">&#9670;&#160;</a></span>DomainStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga7f2b4b0af9f82a2891758a361565621a">DomainStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d4/df4/class_domain.html">Domain</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2d906e5258ccec78932b02fac96265ea" name="ga2d906e5258ccec78932b02fac96265ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d906e5258ccec78932b02fac96265ea">&#9670;&#160;</a></span>dual</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga2d906e5258ccec78932b02fac96265ea">dual</a> =  std::pair&lt;unsigned, shared_ptr&lt;T&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -324,6 +602,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gadc9374520e457caff5e8621cd6d372d5" name="gadc9374520e457caff5e8621cd6d372d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc9374520e457caff5e8621cd6d372d5">&#9670;&#160;</a></span>ElementStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gadc9374520e457caff5e8621cd6d372d5">ElementStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d5/d50/class_element.html">Element</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gaed33a066fc8a9e61fa989e62950b3b0b" name="gaed33a066fc8a9e61fa989e62950b3b0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaed33a066fc8a9e61fa989e62950b3b0b">&#9670;&#160;</a></span>ExpressionQueue</h2>
 
@@ -332,6 +624,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gaed33a066fc8a9e61fa989e62950b3b0b">ExpressionQueue</a> =  std::vector&lt;shared_ptr&lt;<a class="el" href="../../df/d03/class_expression.html">Expression</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga625ef2bec37509116a297543425d72d8" name="ga625ef2bec37509116a297543425d72d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga625ef2bec37509116a297543425d72d8">&#9670;&#160;</a></span>ExpressionStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga625ef2bec37509116a297543425d72d8">ExpressionStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../df/d03/class_expression.html">Expression</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -366,6 +672,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga66f9892d9d776b02f99fb156361a31d1" name="ga66f9892d9d776b02f99fb156361a31d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66f9892d9d776b02f99fb156361a31d1">&#9670;&#160;</a></span>GroupStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga66f9892d9d776b02f99fb156361a31d1">GroupStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../da/d50/class_group.html">Group</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga7b5c1ca088201bab6ce6e8d563fceeaf" name="ga7b5c1ca088201bab6ce6e8d563fceeaf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7b5c1ca088201bab6ce6e8d563fceeaf">&#9670;&#160;</a></span>IntegratorQueue</h2>
 
@@ -374,6 +694,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga7b5c1ca088201bab6ce6e8d563fceeaf">IntegratorQueue</a> =  std::vector&lt;shared_ptr&lt;<a class="el" href="../../d6/d55/class_integrator.html">Integrator</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga97d004ff9827b86ac882ecc0b59d0908" name="ga97d004ff9827b86ac882ecc0b59d0908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97d004ff9827b86ac882ecc0b59d0908">&#9670;&#160;</a></span>IntegratorStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga97d004ff9827b86ac882ecc0b59d0908">IntegratorStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d6/d55/class_integrator.html">Integrator</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -394,6 +728,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gaf2a6c9127684a2a11c1f9a0c1b7b0142" name="gaf2a6c9127684a2a11c1f9a0c1b7b0142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf2a6c9127684a2a11c1f9a0c1b7b0142">&#9670;&#160;</a></span>InteractionStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gaf2a6c9127684a2a11c1f9a0c1b7b0142">InteractionStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d3/d8e/class_interaction.html">Interaction</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gac61ad1d580c8721dfa9c7001156dcc36" name="gac61ad1d580c8721dfa9c7001156dcc36"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac61ad1d580c8721dfa9c7001156dcc36">&#9670;&#160;</a></span>LoadQueue</h2>
 
@@ -402,6 +750,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gac61ad1d580c8721dfa9c7001156dcc36">LoadQueue</a> =  std::vector&lt;shared_ptr&lt;<a class="el" href="../../df/d07/class_load.html">Load</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac680f5bc5b69587c0931b462ea6f2386" name="gac680f5bc5b69587c0931b462ea6f2386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac680f5bc5b69587c0931b462ea6f2386">&#9670;&#160;</a></span>LoadStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gac680f5bc5b69587c0931b462ea6f2386">LoadStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../df/d07/class_load.html">Load</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -436,6 +798,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga2f1ee9674d1b484e7cceecb0485aedf4" name="ga2f1ee9674d1b484e7cceecb0485aedf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f1ee9674d1b484e7cceecb0485aedf4">&#9670;&#160;</a></span>MaterialStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga2f1ee9674d1b484e7cceecb0485aedf4">MaterialStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../dc/dee/class_material.html">Material</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga6c59585a89898c4d7588c0fcc26a9fe1" name="ga6c59585a89898c4d7588c0fcc26a9fe1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6c59585a89898c4d7588c0fcc26a9fe1">&#9670;&#160;</a></span>ModifierQueue</h2>
 
@@ -444,6 +820,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga6c59585a89898c4d7588c0fcc26a9fe1">ModifierQueue</a> =  std::vector&lt;shared_ptr&lt;<a class="el" href="../../d8/dc0/class_modifier.html">Modifier</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf845ccec593d8885579521d28371c018" name="gaf845ccec593d8885579521d28371c018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf845ccec593d8885579521d28371c018">&#9670;&#160;</a></span>ModifierStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gaf845ccec593d8885579521d28371c018">ModifierStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d8/dc0/class_modifier.html">Modifier</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -464,6 +854,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga3123605d4b830d3507d416deee933d4c" name="ga3123605d4b830d3507d416deee933d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3123605d4b830d3507d416deee933d4c">&#9670;&#160;</a></span>NodeStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga3123605d4b830d3507d416deee933d4c">NodeStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../dc/d8f/class_node.html">Node</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga0a84dd7d34e4595679ee3eb416a79dea" name="ga0a84dd7d34e4595679ee3eb416a79dea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga0a84dd7d34e4595679ee3eb416a79dea">&#9670;&#160;</a></span>OrientationQueue</h2>
 
@@ -472,6 +876,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga0a84dd7d34e4595679ee3eb416a79dea">OrientationQueue</a> =  std::vector&lt;shared_ptr&lt;<a class="el" href="../../d2/dcd/class_orientation.html">Orientation</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad1c77c139cc5cab8184f63f568ca6657" name="gad1c77c139cc5cab8184f63f568ca6657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1c77c139cc5cab8184f63f568ca6657">&#9670;&#160;</a></span>OrientationStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gad1c77c139cc5cab8184f63f568ca6657">OrientationStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d2/dcd/class_orientation.html">Orientation</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -492,6 +910,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gab65bb3a9a92253c913cb640ef82d3fea" name="gab65bb3a9a92253c913cb640ef82d3fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab65bb3a9a92253c913cb640ef82d3fea">&#9670;&#160;</a></span>RecorderStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gab65bb3a9a92253c913cb640ef82d3fea">RecorderStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d3/d1a/class_recorder.html">Recorder</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gad612ba5366eff98b86e571e9a4ef7ed6" name="gad612ba5366eff98b86e571e9a4ef7ed6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad612ba5366eff98b86e571e9a4ef7ed6">&#9670;&#160;</a></span>SectionQueue</h2>
 
@@ -506,6 +938,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga547ab3e978204619bada5894976314e8" name="ga547ab3e978204619bada5894976314e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga547ab3e978204619bada5894976314e8">&#9670;&#160;</a></span>SectionStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga547ab3e978204619bada5894976314e8">SectionStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../df/d29/class_section.html">Section</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gabc9c87d54f8036c6c8e48ca1d1d7f54f" name="gabc9c87d54f8036c6c8e48ca1d1d7f54f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gabc9c87d54f8036c6c8e48ca1d1d7f54f">&#9670;&#160;</a></span>SolverQueue</h2>
 
@@ -514,6 +960,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#gabc9c87d54f8036c6c8e48ca1d1d7f54f">SolverQueue</a> =  std::vector&lt;shared_ptr&lt;<a class="el" href="../../d6/d8d/class_solver.html">Solver</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga58a63c559e472947109b0f7295f0b6c0" name="ga58a63c559e472947109b0f7295f0b6c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga58a63c559e472947109b0f7295f0b6c0">&#9670;&#160;</a></span>SolverStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d9/df2/group___domain.html#ga58a63c559e472947109b0f7295f0b6c0">SolverStorage</a> =  <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt;<a class="el" href="../../d6/d8d/class_solver.html">Solver</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -581,8 +1041,297 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga51835b9f2ffd4b3bbf076492b5a1f2c2" name="ga51835b9f2ffd4b3bbf076492b5a1f2c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga51835b9f2ffd4b3bbf076492b5a1f2c2">&#9670;&#160;</a></span>at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const shared_ptr&lt; T &gt; &amp; <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga51835b9f2ffd4b3bbf076492b5a1f2c2_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga7bfcc96a0c37e9a615657b0e25d36ba2" name="ga7bfcc96a0c37e9a615657b0e25d36ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7bfcc96a0c37e9a615657b0e25d36ba2">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::iterator <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gada24dbb9bbd8bbb5f669e50614db6c79" name="gada24dbb9bbd8bbb5f669e50614db6c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada24dbb9bbd8bbb5f669e50614db6c79">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::iterator begin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_gada24dbb9bbd8bbb5f669e50614db6c79_icgraph.svg" width="507" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="gafe741dbe0b72f3fbf284ffffb422dcb3" name="gafe741dbe0b72f3fbf284ffffb422dcb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe741dbe0b72f3fbf284ffffb422dcb3">&#9670;&#160;</a></span>cbegin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::const_iterator <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_gafe741dbe0b72f3fbf284ffffb422dcb3_icgraph.svg" width="400" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga9fef2ead36155a4d764cfc0c158dd05c" name="ga9fef2ead36155a4d764cfc0c158dd05c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9fef2ead36155a4d764cfc0c158dd05c">&#9670;&#160;</a></span>cbegin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::const_iterator cbegin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga714c2f17c882e47a55baa026f8181cb5" name="ga714c2f17c882e47a55baa026f8181cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga714c2f17c882e47a55baa026f8181cb5">&#9670;&#160;</a></span>cend() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::const_iterator <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga916985b45c9bc283fcc4bb8ef49a28b5" name="ga916985b45c9bc283fcc4bb8ef49a28b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga916985b45c9bc283fcc4bb8ef49a28b5">&#9670;&#160;</a></span>cend() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::const_iterator cend </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga679fb7e6b9da4a81c8882b96a48128e5" name="ga679fb7e6b9da4a81c8882b96a48128e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga679fb7e6b9da4a81c8882b96a48128e5">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga679fb7e6b9da4a81c8882b96a48128e5_cgraph.svg" width="274" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga943b002d5726416b145f33701c7db86d" name="ga943b002d5726416b145f33701c7db86d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga943b002d5726416b145f33701c7db86d">&#9670;&#160;</a></span>disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::disable </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga943b002d5726416b145f33701c7db86d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga15f02e19fc564b2d64411ac4911cac04" name="ga15f02e19fc564b2d64411ac4911cac04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga15f02e19fc564b2d64411ac4911cac04">&#9670;&#160;</a></span>enable() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::enable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0c3366c165ce282edb40ff7ec3d54838" name="ga0c3366c165ce282edb40ff7ec3d54838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c3366c165ce282edb40ff7ec3d54838">&#9670;&#160;</a></span>enable() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::enable </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga0c3366c165ce282edb40ff7ec3d54838_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga4f8d0f14299232dc53d4633b972a814f" name="ga4f8d0f14299232dc53d4633b972a814f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f8d0f14299232dc53d4633b972a814f">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::iterator <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga45bf90d3e5b89fc6c46f15cc58c1c60c" name="ga45bf90d3e5b89fc6c46f15cc58c1c60c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45bf90d3e5b89fc6c46f15cc58c1c60c">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::iterator end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga45bf90d3e5b89fc6c46f15cc58c1c60c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="ga2534fce0e6583b66dc3d261245a1ae04" name="ga2534fce0e6583b66dc3d261245a1ae04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2534fce0e6583b66dc3d261245a1ae04">&#9670;&#160;</a></span>erase() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2534fce0e6583b66dc3d261245a1ae04">&#9670;&#160;</a></span>erase() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -615,7 +1364,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="gae90c110c8a54c8c1554511303b9fd281" name="gae90c110c8a54c8c1554511303b9fd281"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae90c110c8a54c8c1554511303b9fd281">&#9670;&#160;</a></span>erase() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae90c110c8a54c8c1554511303b9fd281">&#9670;&#160;</a></span>erase() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -634,8 +1383,33 @@ template&lt;typename &gt; </div>
 
 </div>
 </div>
+<a id="ga81e65e59906a407ed2fdd0ed8b8a2900" name="ga81e65e59906a407ed2fdd0ed8b8a2900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81e65e59906a407ed2fdd0ed8b8a2900">&#9670;&#160;</a></span>erase() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga81e65e59906a407ed2fdd0ed8b8a2900_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="gac5f625ee276f26cfca4551f15603f824" name="gac5f625ee276f26cfca4551f15603f824"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac5f625ee276f26cfca4551f15603f824">&#9670;&#160;</a></span>find() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac5f625ee276f26cfca4551f15603f824">&#9670;&#160;</a></span>find() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -668,7 +1442,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="gaf9d0ab059a61d5a654c7ac2d8551c8a0" name="gaf9d0ab059a61d5a654c7ac2d8551c8a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf9d0ab059a61d5a654c7ac2d8551c8a0">&#9670;&#160;</a></span>find() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9d0ab059a61d5a654c7ac2d8551c8a0">&#9670;&#160;</a></span>find() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -688,7 +1462,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="gae9389486cab1626ec65145cd2da12292" name="gae9389486cab1626ec65145cd2da12292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae9389486cab1626ec65145cd2da12292">&#9670;&#160;</a></span>find() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9389486cab1626ec65145cd2da12292">&#9670;&#160;</a></span>find() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -707,8 +1481,33 @@ template&lt;typename &gt; </div>
 
 </div>
 </div>
+<a id="ga0c06f55c3c192fa18e8e0d6465fa078d" name="ga0c06f55c3c192fa18e8e0d6465fa078d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c06f55c3c192fa18e8e0d6465fa078d">&#9670;&#160;</a></span>find() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga0c06f55c3c192fa18e8e0d6465fa078d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="ga702f4ab6040de98cc0cc401547e71d44" name="ga702f4ab6040de98cc0cc401547e71d44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga702f4ab6040de98cc0cc401547e71d44">&#9670;&#160;</a></span>get() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga702f4ab6040de98cc0cc401547e71d44">&#9670;&#160;</a></span>get() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -727,7 +1526,7 @@ template&lt;typename &gt; </div>
 </div>
 </div>
 <a id="ga50476865b8f22ad0362e2eb93e3f705e" name="ga50476865b8f22ad0362e2eb93e3f705e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga50476865b8f22ad0362e2eb93e3f705e">&#9670;&#160;</a></span>get() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50476865b8f22ad0362e2eb93e3f705e">&#9670;&#160;</a></span>get() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -753,8 +1552,32 @@ template&lt;&gt; </div>
 
 </div>
 </div>
+<a id="gaaea6dbc46854eaf228e053459c79743d" name="gaaea6dbc46854eaf228e053459c79743d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaea6dbc46854eaf228e053459c79743d">&#9670;&#160;</a></span>get() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; shared_ptr&lt; T &gt; &gt; &amp; <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_gaaea6dbc46854eaf228e053459c79743d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="ga011770c7b974ac4753e1c52fab3c4af6" name="ga011770c7b974ac4753e1c52fab3c4af6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga011770c7b974ac4753e1c52fab3c4af6">&#9670;&#160;</a></span>get() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga011770c7b974ac4753e1c52fab3c4af6">&#9670;&#160;</a></span>get() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -782,7 +1605,7 @@ template&lt;&gt; </div>
 </div>
 </div>
 <a id="ga2b80fb569247992d424108c2a9b384e9" name="ga2b80fb569247992d424108c2a9b384e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2b80fb569247992d424108c2a9b384e9">&#9670;&#160;</a></span>get() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b80fb569247992d424108c2a9b384e9">&#9670;&#160;</a></span>get() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -802,7 +1625,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="ga9fa4e909734e23f0e9c7fb62630be1fa" name="ga9fa4e909734e23f0e9c7fb62630be1fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9fa4e909734e23f0e9c7fb62630be1fa">&#9670;&#160;</a></span>get() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9fa4e909734e23f0e9c7fb62630be1fa">&#9670;&#160;</a></span>get() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -873,6 +1696,682 @@ template&lt;&gt; </div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_gaa449016bb5185d0e9aa0264dac030f16_cgraph.svg" width="554" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga013cb19bdce869254a6c7644921f75e0" name="ga013cb19bdce869254a6c7644921f75e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga013cb19bdce869254a6c7644921f75e0">&#9670;&#160;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">const shared_ptr&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>I</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga013cb19bdce869254a6c7644921f75e0_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga06be2b0a936464f23e4cd6147b1a1584" name="ga06be2b0a936464f23e4cd6147b1a1584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06be2b0a936464f23e4cd6147b1a1584">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; T &gt; &amp; <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0224b21796a7b8e879146a0c573729e6" name="ga0224b21796a7b8e879146a0c573729e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0224b21796a7b8e879146a0c573729e6">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga46dd09875ad737879c04a3268795848e" name="ga46dd09875ad737879c04a3268795848e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga46dd09875ad737879c04a3268795848e">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga46dd09875ad737879c04a3268795848e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga26c74713cfea22ed43db7f48de533b1c" name="ga26c74713cfea22ed43db7f48de533b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26c74713cfea22ed43db7f48de533b1c">&#9670;&#160;</a></span>StorageType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * StorageType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga898556f4d02b42e6f5caa0675ca2f761" name="ga898556f4d02b42e6f5caa0675ca2f761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga898556f4d02b42e6f5caa0675ca2f761">&#9670;&#160;</a></span>StorageType&lt; Amplitude &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../de/d90/class_amplitude.html">Amplitude</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga69b4218cd3e19c622573e4b85026feac" name="ga69b4218cd3e19c622573e4b85026feac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga69b4218cd3e19c622573e4b85026feac">&#9670;&#160;</a></span>StorageType&lt; Constraint &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d8/d71/class_constraint.html">Constraint</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga66d2e27a658b7b12d6d7e2acbabf8214" name="ga66d2e27a658b7b12d6d7e2acbabf8214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66d2e27a658b7b12d6d7e2acbabf8214">&#9670;&#160;</a></span>StorageType&lt; Converger &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d7/dae/class_converger.html">Converger</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1bce3b8a206f95026b64f2e4a56494b1" name="ga1bce3b8a206f95026b64f2e4a56494b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1bce3b8a206f95026b64f2e4a56494b1">&#9670;&#160;</a></span>StorageType&lt; Criterion &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d3/d46/class_criterion.html">Criterion</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf80fb1c4911d1923e9eeeef1508d15ce" name="gaf80fb1c4911d1923e9eeeef1508d15ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf80fb1c4911d1923e9eeeef1508d15ce">&#9670;&#160;</a></span>StorageType&lt; Database &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../dc/d83/class_database.html">Database</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac13a93094f4491cf3533f8812c7f3b24" name="gac13a93094f4491cf3533f8812c7f3b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac13a93094f4491cf3533f8812c7f3b24">&#9670;&#160;</a></span>StorageType&lt; Domain &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d4/df4/class_domain.html">Domain</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8509b5d9ad28ae607697ebf757af8bcd" name="ga8509b5d9ad28ae607697ebf757af8bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8509b5d9ad28ae607697ebf757af8bcd">&#9670;&#160;</a></span>StorageType&lt; DomainBase &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga66df56772b42ab55763f398401e56f18" name="ga66df56772b42ab55763f398401e56f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66df56772b42ab55763f398401e56f18">&#9670;&#160;</a></span>StorageType&lt; Element &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d5/d50/class_element.html">Element</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga81d481d690c3bd60dba4f4c7cdc7ab46" name="ga81d481d690c3bd60dba4f4c7cdc7ab46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81d481d690c3bd60dba4f4c7cdc7ab46">&#9670;&#160;</a></span>StorageType&lt; Expression &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../df/d03/class_expression.html">Expression</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga86987d07f9b93f5ccf96f8d7b873e685" name="ga86987d07f9b93f5ccf96f8d7b873e685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86987d07f9b93f5ccf96f8d7b873e685">&#9670;&#160;</a></span>StorageType&lt; Group &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../da/d50/class_group.html">Group</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabca0ee8ad35e67f49a86a0bfb9e4d47b" name="gabca0ee8ad35e67f49a86a0bfb9e4d47b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabca0ee8ad35e67f49a86a0bfb9e4d47b">&#9670;&#160;</a></span>StorageType&lt; Integrator &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d6/d55/class_integrator.html">Integrator</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6440714729eaca837b88b4e35dd395b3" name="ga6440714729eaca837b88b4e35dd395b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6440714729eaca837b88b4e35dd395b3">&#9670;&#160;</a></span>StorageType&lt; Interaction &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d3/d8e/class_interaction.html">Interaction</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8fbd2df1239344876ff9638608ef5332" name="ga8fbd2df1239344876ff9638608ef5332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fbd2df1239344876ff9638608ef5332">&#9670;&#160;</a></span>StorageType&lt; Load &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../df/d07/class_load.html">Load</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaffef10d3d9c07e7734609a002d32a5e2" name="gaffef10d3d9c07e7734609a002d32a5e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaffef10d3d9c07e7734609a002d32a5e2">&#9670;&#160;</a></span>StorageType&lt; Material &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../dc/dee/class_material.html">Material</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga34ac173057c832ad8a8f9178577007c5" name="ga34ac173057c832ad8a8f9178577007c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34ac173057c832ad8a8f9178577007c5">&#9670;&#160;</a></span>StorageType&lt; Modifier &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d8/dc0/class_modifier.html">Modifier</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac2e13de487f7685ce121fecf579a77de" name="gac2e13de487f7685ce121fecf579a77de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac2e13de487f7685ce121fecf579a77de">&#9670;&#160;</a></span>StorageType&lt; Node &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../dc/d8f/class_node.html">Node</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga740b5730497e948b0fa7d0fcfcda7178" name="ga740b5730497e948b0fa7d0fcfcda7178"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga740b5730497e948b0fa7d0fcfcda7178">&#9670;&#160;</a></span>StorageType&lt; Orientation &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d2/dcd/class_orientation.html">Orientation</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae8c8d47f31864acb42d1a56bad2363d0" name="gae8c8d47f31864acb42d1a56bad2363d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8c8d47f31864acb42d1a56bad2363d0">&#9670;&#160;</a></span>StorageType&lt; Recorder &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d3/d1a/class_recorder.html">Recorder</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac264b73714c22dab97780fe3316e5103" name="gac264b73714c22dab97780fe3316e5103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac264b73714c22dab97780fe3316e5103">&#9670;&#160;</a></span>StorageType&lt; Section &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../df/d29/class_section.html">Section</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga81f5ae1e913a8a77330ed76d9a560b6d" name="ga81f5ae1e913a8a77330ed76d9a560b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81f5ae1e913a8a77330ed76d9a560b6d">&#9670;&#160;</a></span>StorageType&lt; Solver &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="../../d9/df2/group___domain.html#ga26c74713cfea22ed43db7f48de533b1c">StorageType</a>&lt; <a class="el" href="../../d6/d8d/class_solver.html">Solver</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6b51334e65934ab09fd23bd4fa91aa17" name="ga6b51334e65934ab09fd23bd4fa91aa17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b51334e65934ab09fd23bd4fa91aa17">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d56/class_storage.html">Storage</a>&lt; T &gt;::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga6b51334e65934ab09fd23bd4fa91aa17_cgraph.svg" width="283" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/df2/group___domain_ga6b51334e65934ab09fd23bd4fa91aa17_icgraph.svg" width="100%" height="485"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

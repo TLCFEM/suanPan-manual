@@ -429,8 +429,8 @@ var group___solver =
       [ "print", "d9/df9/class_f_e_a_s_t.html#abea242711b86c0d72e01f3c258ecfbe6", null ]
     ] ],
     [ "MPDC", "da/d34/class_m_p_d_c.html", [
-      [ "MPDC", "dc/da7/group___solver.html#ga1188c6381c545c136c14f575697bd9c9", null ],
-      [ "analyze", "dc/da7/group___solver.html#ga1112e6ef5a0d4e42b12682901bb3d16a", null ]
+      [ "MPDC", "da/d34/class_m_p_d_c.html#a1188c6381c545c136c14f575697bd9c9", null ],
+      [ "analyze", "da/d34/class_m_p_d_c.html#a1112e6ef5a0d4e42b12682901bb3d16a", null ]
     ] ],
     [ "Newton", "de/d8e/class_newton.html", [
       [ "Newton", "de/d8e/class_newton.html#ac882a1a75c6f92a3b7ec8c6257bf4215", null ],
@@ -462,6 +462,6 @@ var group___solver =
       [ "set_step_size", "d6/d8d/class_solver.html#a1744bab2c411ba840f9d04a8814a3a6a", null ]
     ] ],
     [ "LongFactory", "dc/da7/group___solver.html#ga93e266a0894dd4e3a0319ed9098f68aa", null ],
-    [ "MPDC::analyze", "dc/da7/group___solver.html#ga1112e6ef5a0d4e42b12682901bb3d16a", null ],
-    [ "MPDC::MPDC", "dc/da7/group___solver.html#ga1188c6381c545c136c14f575697bd9c9", null ]
+    [ "create_new_integrator", "dc/da7/group___solver.html#ga69ba9ed00724b2b0d4ab9120f0f027d1", null ],
+    [ "create_new_solver", "dc/da7/group___solver.html#gaad99001487f4905e1e96a807a31bf846", null ]
 ];

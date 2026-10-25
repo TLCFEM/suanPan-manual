@@ -163,14 +163,14 @@ $(document).ready(function(){initNavTree('da/d2b/_g_q12_8h_source.html','../../'
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    [[nodiscard]] mat <a class="code hl_function" href="../../d4/da8/class_g_q12.html#a4975546a47dce6ce7bc4dc1d76947263">compute_shape_function</a>(<span class="keyword">const</span> mat&amp;, <span class="keywordtype">unsigned</span>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    [[nodiscard]] std::vector&lt;vec&gt; <a class="code hl_function" href="../../d4/da8/class_g_q12.html#a92aaf8c8cf7f52b9b10a2c055f8e9095">record</a>(<a class="code hl_enumeration" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    [[nodiscard]] std::vector&lt;vec&gt; <a class="code hl_function" href="../../d4/da8/class_g_q12.html#a92aaf8c8cf7f52b9b10a2c055f8e9095">record</a>(<a class="code hl_enumeration" href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/da8/class_g_q12.html#ace7d2890877afb906e513a2befdc68e5">print</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#ifdef SUANPAN_VTK</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    [[nodiscard]] vtkSmartPointer&lt;vtkCell&gt; GetCell() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    mat GetData(<a class="code hl_enumeration" href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    mat GetData(<a class="code hl_enumeration" href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a>) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    mat GetDeformation(<span class="keywordtype">double</span>) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
@@ -179,7 +179,6 @@ $(document).ready(function(){initNavTree('da/d2b/_g_q12_8h_source.html','../../'
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="ttc" id="a_material_element_8h_html"><div class="ttname"><a href="../../dc/d5f/_material_element_8h.html">MaterialElement.h</a></div></div>
-<div class="ttc" id="a_output_type_8h_html_a4e0517338e6c4a31a2addafc06d4f3a3"><div class="ttname"><a href="../../d4/d0f/_output_type_8h.html#a4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a></div><div class="ttdeci">OutputType</div><div class="ttdef"><b>Definition</b> OutputType.h:24</div></div>
 <div class="ttc" id="aclass_g_q12_html"><div class="ttname"><a href="../../d4/da8/class_g_q12.html">GQ12</a></div><div class="ttdoc">The GQ12 class implements the displacement based four node quadrilateral drilling element proposed by...</div><div class="ttdef"><b>Definition</b> GQ12.h:44</div></div>
 <div class="ttc" id="aclass_g_q12_html_a2472e73477846a92df2228d87bb01472"><div class="ttname"><a href="../../d4/da8/class_g_q12.html#a2472e73477846a92df2228d87bb01472">GQ12::clear_status</a></div><div class="ttdeci">int clear_status() override</div><div class="ttdef"><b>Definition</b> GQ12.cpp:155</div></div>
 <div class="ttc" id="aclass_g_q12_html_a3bea5589428cffb9032dbef78e3ef5bc"><div class="ttname"><a href="../../d4/da8/class_g_q12.html#a3bea5589428cffb9032dbef78e3ef5bc">GQ12::initialize</a></div><div class="ttdeci">int initialize(const shared_ptr&lt; DomainBase &gt; &amp;) override</div><div class="ttdef"><b>Definition</b> GQ12.cpp:36</div></div>
@@ -191,6 +190,7 @@ $(document).ready(function(){initNavTree('da/d2b/_g_q12_8h_source.html','../../'
 <div class="ttc" id="aclass_g_q12_html_ace7d2890877afb906e513a2befdc68e5"><div class="ttname"><a href="../../d4/da8/class_g_q12.html#ace7d2890877afb906e513a2befdc68e5">GQ12::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition</b> GQ12.cpp:175</div></div>
 <div class="ttc" id="aclass_material_element2_d_html"><div class="ttname"><a href="../../d8/df9/class_material_element2_d.html">MaterialElement2D</a></div><div class="ttdef"><b>Definition</b> MaterialElement.h:60</div></div>
 <div class="ttc" id="aclassuvec_html"><div class="ttname"><a href="../../dd/d59/classuvec.html">uvec</a></div></div>
+<div class="ttc" id="agroup___recorder_html_ga4e0517338e6c4a31a2addafc06d4f3a3"><div class="ttname"><a href="../../d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3">OutputType</a></div><div class="ttdeci">OutputType</div><div class="ttdef"><b>Definition</b> OutputType.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

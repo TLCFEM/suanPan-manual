@@ -5,8 +5,18 @@ var group___section =
     [ "Section-3D", "d8/d07/group___section-3_d.html", "d8/d07/group___section-3_d" ],
     [ "Section-NM", "df/d54/group___section-_n_m.html", "df/d54/group___section-_n_m" ],
     [ "Section-OS", "d8/ddc/group___section-_o_s.html", "d8/ddc/group___section-_o_s" ],
-    [ "Fibre.h", "d0/dbd/_fibre_8h.html", null ],
     [ "suanpan", "d6/d9c/namespacesuanpan.html", null ],
+    [ "Fibre", "d4/d4c/class_fibre.html", [
+      [ "Fibre", "d4/d4c/class_fibre.html#ac443f22afc7e06adff23da1e2f82fa7e", null ],
+      [ "clear_status", "d4/d4c/class_fibre.html#a34dd2483136b161162e0f57c2a9df0e6", null ],
+      [ "commit_status", "d4/d4c/class_fibre.html#a5807ed4ac58e67eb115ab9bfb6bdaa95", null ],
+      [ "initialize", "d4/d4c/class_fibre.html#aa249488e53f7a8bc541da55af87017cd", null ],
+      [ "print", "d4/d4c/class_fibre.html#a5b73f0911a0a70993e588a56b24300f0", null ],
+      [ "reset_status", "d4/d4c/class_fibre.html#a454307abc07c9e0e263f135dff91aae8", null ],
+      [ "set_characteristic_length", "d4/d4c/class_fibre.html#a64227d6f511116f38dcb5ee6cf58e5d0", null ],
+      [ "update_trial_status", "d4/d4c/class_fibre.html#aab10afc869a85eeb554ebea4744a9934", null ],
+      [ "fibre", "d4/d4c/class_fibre.html#ae6fe41191163e94d6be36282189187f2", null ]
+    ] ],
     [ "DataSection", "d0/d02/struct_data_section.html", [
       [ "area", "d0/d02/struct_data_section.html#af4980c94b1a4c930c620b4cef1364fdf", null ],
       [ "characteristic_length", "d0/d02/struct_data_section.html#a43e690fd26d3481493e8d96b95575b62", null ],
@@ -76,5 +86,6 @@ var group___section =
       [ "SectionType::NM2D", "d3/dfd/group___section.html#gga348b2bebe2e04254356fa46d6ed23817a7c15602f64e083123c19cc0847230473", null ],
       [ "SectionType::NM3D", "d3/dfd/group___section.html#gga348b2bebe2e04254356fa46d6ed23817ae0c332f0dcd4e497b179ddf0af16313c", null ],
       [ "SectionType::OS3D", "d3/dfd/group___section.html#gga348b2bebe2e04254356fa46d6ed23817addf36189f409696374df47a25efc1289", null ]
-    ] ]
+    ] ],
+    [ "create_new_section", "d3/dfd/group___section.html#ga0542ffe177f5ff2d6ffe0a8826bf6645", null ]
 ];

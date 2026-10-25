@@ -107,7 +107,7 @@ var searchData=
   ['moleculardynamics_104',['moleculardynamics',['../d0/da6/class_molecular_dynamics3_d.html#ae9226133956e7769633ed0e5455594a5',1,'MolecularDynamics3D::MolecularDynamics()'],['../d9/dab/class_molecular_dynamics2_d.html#ae9226133956e7769633ed0e5455594a5',1,'MolecularDynamics2D::MolecularDynamics()'],['../d3/d49/class_molecular_dynamics.html#ae9226133956e7769633ed0e5455594a5',1,'MolecularDynamics::MolecularDynamics()']]],
   ['mooneyrivlin_105',['MooneyRivlin',['../de/da3/class_mooney_rivlin.html#aa467f4b168e98ba9d4d18c9f21077020',1,'MooneyRivlin']]],
   ['mpc_106',['MPC',['../df/d9d/class_m_p_c.html#a15a9ec42fdac58e828d2d587d0ded04f',1,'MPC']]],
-  ['mpdc_107',['MPDC',['../dc/da7/group___solver.html#ga1188c6381c545c136c14f575697bd9c9',1,'MPDC']]],
+  ['mpdc_107',['MPDC',['../da/d34/class_m_p_d_c.html#a1188c6381c545c136c14f575697bd9c9',1,'MPDC']]],
   ['mpf_108',['MPF',['../d9/d1b/class_m_p_f.html#ab2ab0ce7c975e98bac578adaa542d29a',1,'MPF']]],
   ['multilinearelastic1d_109',['MultilinearElastic1D',['../de/d67/class_multilinear_elastic1_d.html#a4624aeb1d887eccbf94f5b9e821c5db8',1,'MultilinearElastic1D']]],
   ['multilinearj2_110',['MultilinearJ2',['../df/d66/class_multilinear_j2.html#ab011c3bd7afad23664f8068141d6c606',1,'MultilinearJ2']]],

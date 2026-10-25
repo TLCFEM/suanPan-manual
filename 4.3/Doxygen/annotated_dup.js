@@ -370,6 +370,7 @@ var annotated_dup =
     [ "GSSSSOptimal", "d7/d02/class_g_s_s_s_s_optimal.html", "d7/d02/class_g_s_s_s_s_optimal" ],
     [ "GSSSSU0", "df/dfe/class_g_s_s_s_s_u0.html", "df/dfe/class_g_s_s_s_s_u0" ],
     [ "GSSSSV0", "dd/d20/class_g_s_s_s_s_v0.html", "dd/d20/class_g_s_s_s_s_v0" ],
+    [ "HDF", "d2/d9c/class_h_d_f.html", null ],
     [ "Hertzian", "d2/d1f/class_hertzian.html", "d2/d1f/class_hertzian" ],
     [ "HistoryCriterion", "d8/d78/class_history_criterion.html", "d8/d78/class_history_criterion" ],
     [ "Homogeneous", "d8/dba/class_homogeneous.html", "d8/dba/class_homogeneous" ],

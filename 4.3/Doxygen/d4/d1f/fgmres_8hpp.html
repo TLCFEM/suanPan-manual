@@ -105,6 +105,9 @@ $(document).ready(function(){initNavTree('d4/d1f/fgmres_8hpp.html','../../'); in
   <div class="headertitle"><div class="title">fgmres.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>FGMRES iterative solver based on the MKL interface.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;mkl_rci.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/d8f/suan_pan_8h_source.html">suanPan.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -122,67 +125,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a312c40ad2c8acf61866b9011cfcb9b4e" id="r_a312c40ad2c8acf61866b9011cfcb9b4e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+<tr class="memitem:ga312c40ad2c8acf61866b9011cfcb9b4e" id="r_ga312c40ad2c8acf61866b9011cfcb9b4e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
 requires requires(const T&amp; a, const mat&amp; b) { { a * b } -&gt; std::same_as&lt;mat&gt;; a.n_rows; }</td></tr>
-<tr class="memitem:a312c40ad2c8acf61866b9011cfcb9b4e"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d1f/fgmres_8hpp.html#a312c40ad2c8acf61866b9011cfcb9b4e">fgmres_solve</a> (const T &amp;kernel, const vec &amp;diagonal, <a class="el" href="../../df/de6/classdouble.html">double</a> *left, <a class="el" href="../../df/de6/classdouble.html">double</a> *right, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance)</td></tr>
-<tr class="separator:a312c40ad2c8acf61866b9011cfcb9b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga312c40ad2c8acf61866b9011cfcb9b4e"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#ga312c40ad2c8acf61866b9011cfcb9b4e">fgmres_solve</a> (const T &amp;kernel, const vec &amp;diagonal, <a class="el" href="../../df/de6/classdouble.html">double</a> *left, <a class="el" href="../../df/de6/classdouble.html">double</a> *right, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance)</td></tr>
+<tr class="separator:ga312c40ad2c8acf61866b9011cfcb9b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a312c40ad2c8acf61866b9011cfcb9b4e" name="a312c40ad2c8acf61866b9011cfcb9b4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a312c40ad2c8acf61866b9011cfcb9b4e">&#9670;&#160;</a></span>fgmres_solve()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires requires(const T&amp; a, const mat&amp; b) { { a * b } -&gt; std::same_as&lt;mat&gt;; a.n_rows; }</div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int fgmres_solve </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>kernel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vec &amp;&#160;</td>
-          <td class="paramname"><em>diagonal</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a> *&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a> *&#160;</td>
-          <td class="paramname"><em>right</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>tolerance</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d1f/fgmres_8hpp_a312c40ad2c8acf61866b9011cfcb9b4e_icgraph.svg" width="419" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>FGMRES iterative solver based on the MKL interface. </p>
+<dl class="section author"><dt>Author</dt><dd>tlc </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>16/05/2025 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

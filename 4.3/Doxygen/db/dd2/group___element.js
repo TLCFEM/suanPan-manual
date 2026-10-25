@@ -10,6 +10,19 @@ var group___element =
     [ "Special", "dc/d27/group___special.html", "dc/d27/group___special" ],
     [ "Truss", "de/d05/group___truss.html", "de/d05/group___truss" ],
     [ "Utility", "da/d46/group___utility.html", "da/d46/group___utility" ],
+    [ "ElementExample", "de/dec/class_element_example.html", [
+      [ "ElementExample", "de/dec/class_element_example.html#a62010fdb37269bf3c15c07f3ec020e3c", null ],
+      [ "clear_status", "de/dec/class_element_example.html#a07792dbe50c6a5ec4d3702ba8921b96b", null ],
+      [ "commit_status", "de/dec/class_element_example.html#a3920b39f8f227ee28b1d94908c92acf3", null ],
+      [ "initialize", "de/dec/class_element_example.html#a4be082fc23f0915e7f8811acc4f66acb", null ],
+      [ "print", "de/dec/class_element_example.html#a472cb86cceb9013a4c9bbd40f697e4d0", null ],
+      [ "reset_status", "de/dec/class_element_example.html#aa3f341c07d52bb374c0e08e84865aaa7", null ],
+      [ "update_status", "de/dec/class_element_example.html#aa8ce40728e02f8fe744eeca7b200aa56", null ]
+    ] ],
+    [ "Distributed", "dd/d45/class_distributed.html", [
+      [ "Distributed", "dd/d45/class_distributed.html#aae09a15515739a713710ac30dd0faf52", null ],
+      [ "is_local", "dd/d45/class_distributed.html#ac90ff85c78d085143e1c97ebafc30739", null ]
+    ] ],
     [ "DataElement", "d2/db9/struct_data_element.html", [
       [ "body_force", "d2/db9/struct_data_element.html#ab47699f4cb60f46b0a939251110fb501", null ],
       [ "characteristic_length", "d2/db9/struct_data_element.html#a9a6f9d0d2636d6ce8d253f86b7d36869", null ],
@@ -284,6 +297,12 @@ var group___element =
       [ "reset_status", "d0/d1a/class_element_template.html#ab877e384c2f049025d15e5c68cf25ff4", null ],
       [ "update_status", "d0/d1a/class_element_template.html#a6b91174bc2271830d8f234f30cbd5f03", null ]
     ] ],
+    [ "MappingDOF", "dc/d92/struct_mapping_d_o_f.html", [
+      [ "g_col", "dc/d92/struct_mapping_d_o_f.html#a13ff37a08ea0716b40f239e424454b72", null ],
+      [ "g_row", "dc/d92/struct_mapping_d_o_f.html#a21eb5a70863df801a6572ca997e30eea", null ],
+      [ "l_col", "dc/d92/struct_mapping_d_o_f.html#a5316e361505c6ea97884da25434954ef", null ],
+      [ "l_row", "dc/d92/struct_mapping_d_o_f.html#a440f3c654cb59cfde90d69ea586d7100", null ]
+    ] ],
     [ "MaterialElement", "d0/d07/class_material_element.html", [
       [ "MaterialElement", "d0/d07/class_material_element.html#a010fdd05f6bf52202a25016734ff9d2c", null ]
     ] ],
@@ -324,5 +343,9 @@ var group___element =
       [ "initialize", "db/dcd/class_embedded.html#a918d3bd07b35169972b9f8d1cd7b8f4d", null ],
       [ "reset_status", "db/dcd/class_embedded.html#ab4b751be17665da77a22f2b99719b94c", null ],
       [ "update_status", "db/dcd/class_embedded.html#a945a23e7bbf0aec40bf690ad9ab81d58", null ]
-    ] ]
+    ] ],
+    [ "create_new_element", "db/dd2/group___element.html#ga8bad39d4dda98e171a5a0118758c0717", null ],
+    [ "create_new_mass", "db/dd2/group___element.html#gae02fd5d507356a2de02bc8b5d1769729", null ],
+    [ "create_new_modifier", "db/dd2/group___element.html#ga464b66e3d2007559622d15f84078b40e", null ],
+    [ "create_new_orientation", "db/dd2/group___element.html#gaba912762dd090d074d3033395e239538", null ]
 ];

@@ -107,6 +107,10 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 <ol type="1">
 <li>Arc-length analysis is limited on both SMP and DMP, mainly due to the lack of determinant computation.</li>
 </ol>
+<h1>version 4.2.1</h1>
+<ol type="1">
+<li>fix the tangent stiffness matrix formulation in <a class="el" href="../../d7/d86/class_g_c_m_q.html" title="A GCMQ class.">GCMQ</a> element <a href="https://github.com/TLCFEM/suanPan/pull/389">#389</a></li>
+</ol>
 <h1>version 4.2</h1>
 <ol type="1">
 <li>(<b>breaking</b>) change the behaviour of criterion DoF tokens, similar to the change made in v4.0, use explicit tokens for unconventional DoFs <a href="https://github.com/TLCFEM/suanPan/pull/368">#368</a></li>
@@ -214,7 +218,7 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 <li>bugfixes: <a href="https://github.com/TLCFEM/suanPan/pull/185">#185</a></li>
 <li>update <code>Catch2</code> to version <code>3.5.2</code></li>
 <li>update <code>fmt</code> to version <code>10.2.1</code></li>
-<li>add nonviscous damping: <code><a class="el" href="../../d9/d75/class_nonviscous_newmark.html" title="A NonviscousNewmark class defines a solver using Newmark algorithm.">NonviscousNewmark</a></code> (global level integrator), <code><a class="el" href="../../df/df2/class_elemental_nonviscous.html" title="A ElementalNonviscous damping class.">ElementalNonviscous</a></code> (element level modifier) and <code><a class="el" href="../../dc/d77/class_nonviscous01.html" title="A 1D Viscosity class.">Nonviscous01</a></code> (material level model)</li>
+<li>add nonviscous damping: <code><a class="el" href="../../d9/d75/class_nonviscous_newmark.html" title="A NonviscousNewmark class defines a solver using Newmark algorithm.">NonviscousNewmark</a></code> (global level integrator), <code><a class="el" href="../../df/df2/class_elemental_nonviscous.html" title="An ElementalNonviscous damping class.">ElementalNonviscous</a></code> (element level modifier) and <code><a class="el" href="../../dc/d77/class_nonviscous01.html" title="A 1D Viscosity class.">Nonviscous01</a></code> (material level model)</li>
 </ol>
 <h1>version 3.2</h1>
 <ol type="1">
@@ -244,7 +248,7 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 <li>add <code><a class="el" href="../../db/d13/class_translation_connector.html" title="A TranslationConnector class.">TranslationConnector</a></code> <a href="https://github.com/TLCFEM/suanPan/pull/127">#127</a></li>
 <li>add <code><a class="el" href="../../dc/d83/class_custom_amplitude.html" title="An Amplitude class that can generate Amplitude pattern.">CustomAmplitude</a></code> <a href="https://github.com/TLCFEM/suanPan/pull/129">#129</a></li>
 <li>update <code>Armadillo</code> to version <code>12.2</code> <a href="https://github.com/TLCFEM/suanPan/pull/134">#134</a></li>
-<li>add <code><a class="el" href="../../d3/d32/class_asymm_elastic1_d.html" title="A 1-D Elastic class.">AsymmElastic1D</a></code> <a href="https://github.com/TLCFEM/suanPan/pull/135">#135</a></li>
+<li>add <code><a class="el" href="../../d3/d32/class_asymm_elastic1_d.html" title="A 1-D asymmetric elastic material.">AsymmElastic1D</a></code> <a href="https://github.com/TLCFEM/suanPan/pull/135">#135</a></li>
 <li>update <code>TBB</code> to version <code>2021.9.0</code></li>
 <li>update <code>MUMPS</code> to version <code>5.6.0</code></li>
 </ol>
@@ -265,7 +269,7 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 <li>add Euler buckling load check for <code><a class="el" href="../../d6/d59/class_t2_d2.html" title="A T2D2 class.">T2D2</a></code> <a href="https://github.com/TLCFEM/suanPan/pull/104">#104</a></li>
 <li>speed-up analysis with visualisation recorder <a href="https://github.com/TLCFEM/suanPan/pull/102">#102</a></li>
 <li>update <code>VTK</code> to version <code>9.2.5</code></li>
-<li>add <code><a class="el" href="../../df/d03/class_expression.html" title="A Expression class represents a maths expression.">Expression</a></code> to support custom function definition <a href="https://github.com/TLCFEM/suanPan/pull/105">#105</a></li>
+<li>add <code><a class="el" href="../../df/d03/class_expression.html" title="A mathematical expression.">Expression</a></code> to support custom function definition <a href="https://github.com/TLCFEM/suanPan/pull/105">#105</a></li>
 <li>add <code><a class="el" href="../../dd/dd2/class_custom_mises1_d.html" title="A CustomMises1D material class.">CustomMises1D</a></code>, <code><a class="el" href="../../d6/d0d/class_custom_c_c.html" title="The CustomCC class.">CustomCC</a></code>, <code><a class="el" href="../../d4/d09/class_custom_c_d_p.html" title="The CustomCDP class.">CustomCDP</a></code>, <code><a class="el" href="../../d1/d95/class_custom_d_p.html" title="The CustomDP class.">CustomDP</a></code>, <code><a class="el" href="../../dc/dcb/class_custom_j2.html" title="The CustomJ2 class.">CustomJ2</a></code> and <code><a class="el" href="../../d9/d84/class_custom_hoffman.html">CustomHoffman</a></code> models</li>
 </ol>
 <h1>version 2.7</h1>
@@ -276,8 +280,8 @@ $(document).ready(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','..
 <li>update <code>Armadillo</code> to version <code>11.4</code></li>
 <li>update modern <code>Arpack</code> <a href="https://github.com/TLCFEM/suanPan/pull/94">#94</a></li>
 <li>add <code><a class="el" href="../../dd/d2b/class_tchamwa.html" title="A Tchamwa class defines a solver using Tchamwa algorithm.">Tchamwa</a></code> <a href="https://github.com/TLCFEM/suanPan/pull/88">#88</a>, <code><a class="el" href="../../d3/d9a/class_bathe_explicit.html" title="A BatheExplicit class defines a solver using BatheExplicit algorithm.">BatheExplicit</a></code> <a href="https://github.com/TLCFEM/suanPan/pull/90">#90</a> and <code>GeneralisedAlphaExplicit</code> <a href="https://github.com/TLCFEM/suanPan/pull/93">#93</a> explicit time integration methods</li>
-<li>add <code><a class="el" href="../../db/d4b/class_o_a_l_t_s.html" title="A OALTS class defines a solver using OALTS algorithm.">OALTS</a></code> two-step implicit time integration method <a href="https://github.com/TLCFEM/suanPan/pull/92">#92</a></li>
-<li>add <code><a class="el" href="../../dd/d36/class_sinh1_d.html" title="A 1D Elastic class.">Sinh1D</a></code> and <code><a class="el" href="../../d7/d37/class_tanh1_d.html" title="A 1D Elastic class.">Tanh1D</a></code> nonlinear elastic 1D material</li>
+<li>add <code><a class="el" href="../../db/d4b/class_o_a_l_t_s.html" title="An OALTS class defines a solver using OALTS algorithm.">OALTS</a></code> two-step implicit time integration method <a href="https://github.com/TLCFEM/suanPan/pull/92">#92</a></li>
+<li>add <code><a class="el" href="../../dd/d36/class_sinh1_d.html" title="A 1-D nonlinear elastic material using a sinh law.">Sinh1D</a></code> and <code><a class="el" href="../../d7/d37/class_tanh1_d.html" title="A 1-D nonlinear elastic material using a tanh law.">Tanh1D</a></code> nonlinear elastic 1D material</li>
 <li>add <code>linear_system</code> flag to speed up linear system analysis</li>
 </ol>
 <h1>version 2.6.1</h1>

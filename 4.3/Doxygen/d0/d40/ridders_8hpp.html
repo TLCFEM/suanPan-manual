@@ -105,6 +105,9 @@ $(document).ready(function(){initNavTree('d0/d40/ridders_8hpp.html','../../'); i
   <div class="headertitle"><div class="title">ridders.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Ridders' root-finding method.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="../../d8/d8f/suan_pan_8h_source.html">suanPan.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ridders.hpp:</div>
@@ -121,285 +124,26 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9eeceb201574c024c419303b22874923" id="r_a9eeceb201574c024c419303b22874923"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </td></tr>
-<tr class="memitem:a9eeceb201574c024c419303b22874923"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d40/ridders_8hpp.html#a9eeceb201574c024c419303b22874923">ridders</a> (const T &amp;func, <a class="el" href="../../df/de6/classdouble.html">double</a> x1, <a class="el" href="../../df/de6/classdouble.html">double</a> f1, <a class="el" href="../../df/de6/classdouble.html">double</a> x2, <a class="el" href="../../df/de6/classdouble.html">double</a> f2, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance, const unsigned max_iteration=50)</td></tr>
-<tr class="memdesc:a9eeceb201574c024c419303b22874923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Ridders' method for finding the root of a function.  <br /></td></tr>
-<tr class="separator:a9eeceb201574c024c419303b22874923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af96449e7c5393333cc807d300369d830" id="r_af96449e7c5393333cc807d300369d830"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </td></tr>
-<tr class="memitem:af96449e7c5393333cc807d300369d830"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d40/ridders_8hpp.html#af96449e7c5393333cc807d300369d830">ridders</a> (const T &amp;func, <a class="el" href="../../df/de6/classdouble.html">double</a> x1, <a class="el" href="../../df/de6/classdouble.html">double</a> x2, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance, const unsigned max_iteration=50)</td></tr>
-<tr class="separator:af96449e7c5393333cc807d300369d830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f4f1c54d33e4cccbf851976e768ff28" id="r_a4f4f1c54d33e4cccbf851976e768ff28"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </td></tr>
-<tr class="memitem:a4f4f1c54d33e4cccbf851976e768ff28"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d40/ridders_8hpp.html#a4f4f1c54d33e4cccbf851976e768ff28">ridders_guess</a> (const T &amp;func, <a class="el" href="../../df/de6/classdouble.html">double</a> x1, <a class="el" href="../../df/de6/classdouble.html">double</a> f1, <a class="el" href="../../df/de6/classdouble.html">double</a> x2, <a class="el" href="../../df/de6/classdouble.html">double</a> f2, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance, const unsigned max_iteration=50)</td></tr>
-<tr class="separator:a4f4f1c54d33e4cccbf851976e768ff28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41eb77aa0395ab47f9b0d6ab21aa0f12" id="r_a41eb77aa0395ab47f9b0d6ab21aa0f12"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </td></tr>
-<tr class="memitem:a41eb77aa0395ab47f9b0d6ab21aa0f12"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d40/ridders_8hpp.html#a41eb77aa0395ab47f9b0d6ab21aa0f12">ridders_guess</a> (const T &amp;func, <a class="el" href="../../df/de6/classdouble.html">double</a> x1, <a class="el" href="../../df/de6/classdouble.html">double</a> x2, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance, const unsigned max_iteration=50)</td></tr>
-<tr class="separator:a41eb77aa0395ab47f9b0d6ab21aa0f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9eeceb201574c024c419303b22874923" id="r_ga9eeceb201574c024c419303b22874923"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </td></tr>
+<tr class="memitem:ga9eeceb201574c024c419303b22874923"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#ga9eeceb201574c024c419303b22874923">ridders</a> (const T &amp;func, <a class="el" href="../../df/de6/classdouble.html">double</a> x1, <a class="el" href="../../df/de6/classdouble.html">double</a> f1, <a class="el" href="../../df/de6/classdouble.html">double</a> x2, <a class="el" href="../../df/de6/classdouble.html">double</a> f2, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance, const unsigned max_iteration=50)</td></tr>
+<tr class="memdesc:ga9eeceb201574c024c419303b22874923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Ridders' method for finding the root of a function.  <br /></td></tr>
+<tr class="separator:ga9eeceb201574c024c419303b22874923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf96449e7c5393333cc807d300369d830" id="r_gaf96449e7c5393333cc807d300369d830"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </td></tr>
+<tr class="memitem:gaf96449e7c5393333cc807d300369d830"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#gaf96449e7c5393333cc807d300369d830">ridders</a> (const T &amp;func, <a class="el" href="../../df/de6/classdouble.html">double</a> x1, <a class="el" href="../../df/de6/classdouble.html">double</a> x2, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance, const unsigned max_iteration=50)</td></tr>
+<tr class="separator:gaf96449e7c5393333cc807d300369d830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f4f1c54d33e4cccbf851976e768ff28" id="r_ga4f4f1c54d33e4cccbf851976e768ff28"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </td></tr>
+<tr class="memitem:ga4f4f1c54d33e4cccbf851976e768ff28"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#ga4f4f1c54d33e4cccbf851976e768ff28">ridders_guess</a> (const T &amp;func, <a class="el" href="../../df/de6/classdouble.html">double</a> x1, <a class="el" href="../../df/de6/classdouble.html">double</a> f1, <a class="el" href="../../df/de6/classdouble.html">double</a> x2, <a class="el" href="../../df/de6/classdouble.html">double</a> f2, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance, const unsigned max_iteration=50)</td></tr>
+<tr class="separator:ga4f4f1c54d33e4cccbf851976e768ff28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41eb77aa0395ab47f9b0d6ab21aa0f12" id="r_ga41eb77aa0395ab47f9b0d6ab21aa0f12"><td class="memTemplParams" colspan="2">template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </td></tr>
+<tr class="memitem:ga41eb77aa0395ab47f9b0d6ab21aa0f12"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#ga41eb77aa0395ab47f9b0d6ab21aa0f12">ridders_guess</a> (const T &amp;func, <a class="el" href="../../df/de6/classdouble.html">double</a> x1, <a class="el" href="../../df/de6/classdouble.html">double</a> x2, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance, const unsigned max_iteration=50)</td></tr>
+<tr class="separator:ga41eb77aa0395ab47f9b0d6ab21aa0f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a9eeceb201574c024c419303b22874923" name="a9eeceb201574c024c419303b22874923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9eeceb201574c024c419303b22874923">&#9670;&#160;</a></span>ridders() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/de6/classdouble.html">double</a> ridders </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>func</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>x1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>f1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>x2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>f2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>tolerance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned&#160;</td>
-          <td class="paramname"><em>max_iteration</em> = <code>50</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Implements Ridders' method for finding the root of a function. </p>
-<p>Ridders' method is a root-finding algorithm that combines the bisection method with an exponential interpolation to achieve quadratic convergence under ideal conditions.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>A callable type that takes a double as input and returns a double. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">func</td><td>The function for which the root is to be found. It must be callable with a double argument. </td></tr>
-    <tr><td class="paramname">x1</td><td>The first initial guess for the root. </td></tr>
-    <tr><td class="paramname">f1</td><td>The value of the function at x1 (i.e., func(x1)). </td></tr>
-    <tr><td class="paramname">x2</td><td>The second initial guess for the root. </td></tr>
-    <tr><td class="paramname">f2</td><td>The value of the function at x2 (i.e., func(x2)). </td></tr>
-    <tr><td class="paramname">tolerance</td><td>The tolerance for the root-finding process. </td></tr>
-    <tr><td class="paramname">max_iteration</td><td>The maximum number of iterations to perform (default is 50). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The estimated root of the function within the specified tolerance. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d40/ridders_8hpp_a9eeceb201574c024c419303b22874923_icgraph.svg" width="623" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="af96449e7c5393333cc807d300369d830" name="af96449e7c5393333cc807d300369d830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af96449e7c5393333cc807d300369d830">&#9670;&#160;</a></span>ridders() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/de6/classdouble.html">double</a> ridders </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>func</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>x1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>x2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>tolerance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned&#160;</td>
-          <td class="paramname"><em>max_iteration</em> = <code>50</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d40/ridders_8hpp_af96449e7c5393333cc807d300369d830_cgraph.svg" width="230" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a4f4f1c54d33e4cccbf851976e768ff28" name="a4f4f1c54d33e4cccbf851976e768ff28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f4f1c54d33e4cccbf851976e768ff28">&#9670;&#160;</a></span>ridders_guess() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/de6/classdouble.html">double</a> ridders_guess </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>func</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>x1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>f1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>x2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>f2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>tolerance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned&#160;</td>
-          <td class="paramname"><em>max_iteration</em> = <code>50</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d40/ridders_8hpp_a4f4f1c54d33e4cccbf851976e768ff28_cgraph.svg" width="283" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d40/ridders_8hpp_a4f4f1c54d33e4cccbf851976e768ff28_icgraph.svg" width="408" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a41eb77aa0395ab47f9b0d6ab21aa0f12" name="a41eb77aa0395ab47f9b0d6ab21aa0f12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41eb77aa0395ab47f9b0d6ab21aa0f12">&#9670;&#160;</a></span>ridders_guess() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::invocable&lt; <a class="el" href="../../df/de6/classdouble.html">double</a> &gt; T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/de6/classdouble.html">double</a> ridders_guess </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>func</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>x1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>x2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../df/de6/classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>tolerance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned&#160;</td>
-          <td class="paramname"><em>max_iteration</em> = <code>50</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d40/ridders_8hpp_a41eb77aa0395ab47f9b0d6ab21aa0f12_cgraph.svg" width="470" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Ridders' root-finding method. </p>
+<dl class="section author"><dt>Author</dt><dd>tlc </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>06/11/2023 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

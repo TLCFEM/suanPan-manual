@@ -244,5 +244,8 @@ var group___constraint =
     [ "TranslationConnector3D", "da/dcb/class_translation_connector3_d.html", [
       [ "TranslationConnector3D", "da/dcb/class_translation_connector3_d.html#a9119a0fa7b7396a475b714368ebf4c52", null ]
     ] ],
+    [ "create_new_constraint", "df/dfe/group___constraint.html#ga07af42ad85717f33728d18e7180f33cd", null ],
+    [ "create_new_criterion", "df/dfe/group___constraint.html#gaad660f5c01d157ca0f0624f70324b261", null ],
+    [ "create_new_interaction", "df/dfe/group___constraint.html#ga63d1ebb178ae94d048588a8080184664", null ],
     [ "set_constraint_multiplier", "df/dfe/group___constraint.html#ga8dccf51bd9592344f2957dae30d06562", null ]
 ];
