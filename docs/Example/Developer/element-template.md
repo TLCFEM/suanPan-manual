@@ -83,7 +83,7 @@ ElementTemplate::ElementTemplate(const unsigned T, uvec&& NT, const unsigned MT,
 
 /**
  * @brief
- * As explained before, this method get all necessary information, which
+ * As explained before, this method gets all necessary information, which
  * includes getting copies of Material objects and other operations, from the
  * Domain object.
  *
@@ -103,7 +103,7 @@ ElementTemplate::ElementTemplate(const unsigned T, uvec&& NT, const unsigned MT,
  *
  * One can also initialize stiffness matrix and/or other built-in matrices from
  * Element class (check the definition for details) in the `initialize()` method.
- * However, this it not necessary, as the Solver will always call
+ * However, this is not necessary, as the Solver will always call
  * update_status() method with a zero trial displacement to update current
  * stiffness and resistance before running iterations.
  */
@@ -170,7 +170,7 @@ void ElementTemplate::initialize(const shared_ptr<DomainBase>& D) {
  *
  * For a static analysis, **stiffness** and **resistance** have to be
  * formulated. Apart from this, there is nothing you have to do. They will be
- * send to global assembler by methods in base Element class, which can also be
+ * sent to the global assembler by methods in base Element class, which can also be
  * overridden to be customized.
  */
 int ElementTemplate::update_status() {

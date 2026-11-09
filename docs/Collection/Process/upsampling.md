@@ -11,12 +11,12 @@ upsampling (1) (2) [3] [4]
 # (1) string, file path of the seismogram file
 # (2) integer, upsampling rate
 # [3] string, window type, default: 'Hamming'
-# [4] integer, window length, default: 0
+# [4] integer, window length, default: 8
 ```
 
 ## Remarks
 
-The seismogram _**must**_ be stored in double column plain text file. The first column stores the time series, and the
+The seismogram _**must**_ be stored in a double column plain text file. The first column stores the time series, and the
 second column stores the acceleration amplitudes.
 
 The time series _**must**_ be equally spaced.

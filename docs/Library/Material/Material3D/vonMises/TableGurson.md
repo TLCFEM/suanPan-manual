@@ -6,7 +6,7 @@
 material TableGurson (1) (2) (3) (4) (5) (6) (7) (8) (9) [10]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poisson's ratio
+# (3) double, Poisson's ratio
 # (4) string, table file name
 # (5) double, q1
 # (6) double, q2

@@ -33,7 +33,7 @@ $$
 \phi=\dfrac{2}{1+\rho_\infty}.
 $$
 
-The Tchamwa scheme has a first order accuracy and controllable numerical dissipation.
+The Tchamwa scheme has first order accuracy and controllable numerical dissipation.
 
 ## Remarks
 

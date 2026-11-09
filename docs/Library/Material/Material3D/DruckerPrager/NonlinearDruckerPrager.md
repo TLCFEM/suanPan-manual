@@ -2,7 +2,7 @@
 
 Drucker-Prager Material Model
 
-The Drucker-Prager model use the following function as the yield surface.
+The Drucker-Prager model uses the following function as the yield surface.
 
 $$
 F(\sigma,c)=\sqrt{J_2}+\eta_yp-\xi{}c
@@ -18,7 +18,7 @@ $$
 \Phi(\sigma,c)=\sqrt{J_2}+\eta_fp
 $$
 
-with $$\eta_f$$ is another material constant. If $$\eta_f=\eta_y$$, the associative plasticity is defined so that the
+where $$\eta_f$$ is another material constant. If $$\eta_f=\eta_y$$, the associative plasticity is defined so that the
 symmetry of stiffness matrix is recovered.
 
 The accumulated plastic strain $$\bar{\varepsilon_p}$$ is defined as

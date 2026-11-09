@@ -17,7 +17,7 @@ Additional material on the same topic can be found in the following literature.
 2. [10.1007/s11831-023-10022-1](https://doi.org/10.1007/s11831-023-10022-1)
 3. [10.1007/s11831-022-09880-y](https://doi.org/10.1007/s11831-022-09880-y)
 
-Prof. Koichi Hashiguchi has published a large amount of papers on this topic.
+Prof. Koichi Hashiguchi has published a large number of papers on this topic.
 To find more references, please refer to the monograph and the references therein.
 
 Alternatively, refer to the corresponding section
@@ -36,7 +36,7 @@ $$
 
 where $$\eta=\sigma-a^y\alpha+\left(z-1\right)\sigma^yd$$ is the shifted stress, shifted from the centre defined by $$a^y\alpha+\left(1-z\right)\sigma^yd$$.
 The scalar $$0\leqslant{}z\leqslant{}1$$ is the normal yield ratio that provides a smooth transition from the interior to the normal yield surface.
-The scalar $$\sigma^y$$ is the yield stress, that is affected by isotropic hardening.
+The scalar $$\sigma^y$$ is the yield stress that is affected by isotropic hardening.
 
 ### Isotropic Hardening
 
@@ -49,7 +49,7 @@ $$
 where $$\sigma^i$$ is the initial yield stress, $$k_\text{iso}$$ is the linear hardening modulus, $$\sigma^s_\text{iso}$$ is the saturation stress
 and $$m^s_\text{iso}$$ is the hardening rate.
 
-The history variable $$q$$ is the accumulated plastic strain, conventionally, it is
+The history variable $$q$$ is the accumulated plastic strain; conventionally, it is
 
 $$
 \dot{q}=\gamma
@@ -71,7 +71,7 @@ $$
 a^y=a^i+k_\text{kin}q+a^s_\text{kin}\left(1-e^{-m^s_\text{kin}q}\right)
 $$
 
-where $$b$$ is hardening rate.
+where $$b$$ is the hardening rate.
 Compared to the conventional AF rule, the saturation bound is not a constant in this model.
 Instead, it is associated to plasticity.
 The backbone $$a^y$$ mimics $$\sigma^y$$.

@@ -9,7 +9,7 @@ In a standard element, stiffness matrix could be solely computed according to it
 could be formulated in multiple ways such as consistent, lumped, to name a few. For lumped formulation, there are also
 several versions. If the Rayleigh type damping is used, damping matrix shall be related to both mass matrix and
 stiffness matrix. Furthermore, the weights shall be computed based on global structure properties, in other words, it is
-not possible to determine those weights within element. Besides, other types of damping formulation could also be used.
+not possible to determine those weights within the element. Besides, other types of damping formulation could also be used.
 
 Such variance existing in element formulation raises a demand of the `Modifier` class. A `Modifier` object can exist
 independently and can access and modify some data of the target elements. This provides great convenience in defining
@@ -63,7 +63,7 @@ modifier Rayleigh (1) (2) (3) (4) (5) (6...)
 
 ## Elemental Modal Damping
 
-The rigid body modes are assumed to be undampened. The modes whose frequencies are higher than the cut-off frequency is
+The rigid body modes are assumed to be undampened. The modes whose frequencies are higher than the cut-off frequency are
 ignored. The Wilson-Penzien approach is applied for each element. Currently, only consistent mass matrix is supported.
 
 ```

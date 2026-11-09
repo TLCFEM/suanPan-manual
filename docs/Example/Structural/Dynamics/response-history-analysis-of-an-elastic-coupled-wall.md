@@ -86,7 +86,7 @@ acceleration 1 1 3.92 1
 
 ### Damping Model
 
-The [Lee's damping model](../../../Library/Integrator/Implicit/Newmark/LeeNewmark.md) is chosen as an illustration. Knowing that
+[Lee's damping model](../../../Library/Integrator/Implicit/Newmark/LeeNewmark.md) is chosen as an illustration. Knowing that
 $$\omega_1=\sqrt{367.59}=19.17~\mathrm{rad/s}$$, we assign a single basic function at $$\omega_1$$ with $$5\%$$ damping
 ratio.
 
@@ -113,7 +113,7 @@ analyze
 ## Some Stats
 
 This example consists of $$83$$ nodes, equivalent to $$249$$ DoFs. With one basic function used in the damping model,
-the size of matrix solved is about $$500\times500$$. On recent machines, the response history analysis can be done
+the size of the matrix solved is about $$500\times500$$. On recent machines, the response history analysis can be done
 within one minute. The solving time increases almost linearly with an increasing number of basic functions used in the
 damping model.
 

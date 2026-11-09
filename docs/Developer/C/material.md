@@ -1,11 +1,11 @@
 # material
 
 Passing CPP objects to/from libraries may have stability issues. The strong coupling between main executable and library
-results in users have to make sure both executable and library are compiled with the same compiler of the same version.
+results in users having to make sure both the executable and the library are compiled with the same compiler of the same version.
 This does not sound nice.
 
 A C type interface is more stable. The C interface of material models is implemented via a common function with a
-trailing `_handler`. The function takes a pointer to `ExternalMaterialData` structure with plain PODs as input argument
+trailing `_handler`. The function takes a pointer to an `ExternalMaterialData` structure with plain PODs as input argument
 and operates on that based on the operation indicated by a pointer to an integer. If the material model has a name
 of `samplemat`, then the signature will be
 
@@ -16,7 +16,7 @@ SUANPAN_EXPORT void samplemat_handler(ExternalMaterialData* data, int* info);
 ## Communication Convention
 
 On entry, based on different values of `*info`, a set of different operations need to be done and the corresponding
-results need to be stored in `*data`. The structure of `*data` would be explained later, we focus on `*info` in this
+results need to be stored in `*data`. The structure of `*data` will be explained later; we focus on `*info` in this
 section.
 
 In general, two states should be managed in the material model. The current state stores converged variables from the
@@ -26,7 +26,7 @@ state may or may not be the converged state, thus may or may not be kept in an i
 | value | operation                                                                  |
 |-------|----------------------------------------------------------------------------|
 | 0     | allocate memory, initialise variables based on parameters defined by users |
-| 1     | deallocate memory that is previously allocated in operation `*info=0`      |
+| 1     | deallocate memory that was previously allocated in operation `*info=0`      |
 | 2     | update material state based on new trial strain only                       |
 | 3     | update material state based on new trial strain and new trial strain rate  |
 | 4     | commit trial state to current state                                        |
@@ -40,11 +40,11 @@ Some remarks to explain those operations.
     known to the main executable how large the memory is required, this has to be done by the library using whatever
     methods to allocate.
 2.  In operation `*info=2`, trial state is updated based on trial strain and current state (as an incremental form is
-    implemented). This operation will be called in a static analysis, or by elements that only computes strains. Before
+    implemented). This operation will be called in a static analysis, or by elements that only compute strains. Before
     calling this operation, the trial strain will be written to the corresponding location of allocated memory some place
     defined in `*data`.
 3.  In operation `*info=3`, trial state is updated based on trial strain, trial strain rate and current state (as an
-    incremental form is implemented). This operation will be called by elements that computes both strains and strain
+    incremental form is implemented). This operation will be called by elements that compute both strains and strain
     rates and pass them to material models. Often, the resulting stiffness and damping matrices shall be computed. Before
     calling this operation, the trial strain and the trial strain rate will be written to the corresponding location of
     allocated memory some place defined in `*data`.
@@ -58,14 +58,14 @@ Some remarks to explain those operations.
     cannot be done in the main executable although the command is processed in the main executable, in which all
     parameters will be read as double inputs and stored in a raw double array in `*data`.
 
-In a typical analysis flow, `*info=0` will be called first to initialise memory, then `*info=7` will be called to valid
+In a typical analysis flow, `*info=0` will be called first to initialise memory, then `*info=7` will be called to validate
 parameters. If it fails, `*info=1` will be called. Otherwise, either `*info=2` or `*info=3` will be called to update
 states, followed by appropriate remaining operations.
 
 For any material models, developers must provide implementations of the above eight operations. Whether those
 implementations are combined with the exported handler or wrapped in separate functions is left to developers to decide.
 
-On exit, `*info=0` indicates the operation succeeds and no error has been reported, it can be set to other values to
+On exit, `*info=0` indicates the operation succeeds and no error has been reported; it can be set to other values to
 terminate analysis.
 
 ## Data Layout
@@ -113,7 +113,7 @@ in the continuous memory from `pool[t_strain]` to `pool[t_strain+6]`.
 
 During initialisation (`*info=0`), some positive values shall be assigned if the target variable will be used in the
 model, otherwise, leave it as `-1`. The `pool` shall be allocated with whatever size required. `*pool` stores not only
-mandatory state variables, it can further store additional history variables manages by the model itself.
+mandatory state variables, it can further store additional history variables managed by the model itself.
 
 ## Example
 
@@ -143,7 +143,7 @@ SUANPAN_EXPORT void elasticexternal_handler(ExternalMaterialData* data, int* inf
 
 ### Allocation
 
-Since it is a uni-axial elastic material, `size` should be one. Strain, stress and stiffness related variables are used,
+Since it is a uniaxial elastic material, `size` should be one. Strain, stress and stiffness related variables are used,
 the rest can remain unused. We arrange the data in the following layout.
 
 | index     | value             |
@@ -209,14 +209,14 @@ void deallocate_material(ExternalMaterialData* data, int* info) {
 
 ### Update Based On Strain
 
-No local iteration is required to update state, thus stress can always be computed by multiply strain with elastic
+No local iteration is required to update state, thus stress can always be computed by multiplying strain with elastic
 modulus, which is
 
 $$
 \sigma^{n}=E~\varepsilon^{n}
 $$
 
-For complex models, alias can be used to simplify code.
+For complex models, aliases can be used to simplify code.
 
 ```cpp
 void static_update(ExternalMaterialData* data, int* info) {

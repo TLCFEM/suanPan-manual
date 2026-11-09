@@ -69,8 +69,8 @@ suanPan ~<>
 ```
 
 Five domains are created. When `remove domain 2` is invoked, the current domain is `5`, so `2` is safely removed.
-When `erase domain 5` is invoked, the current domain 5 is then deleted, by default, the program switches to the first
-domain in the storage, it could be other domains, not necessary `1`. When `domain 4` is invoked, `4` already exists in
-the storage so instead of creating a new one, the program switch to the existing one.
+When `erase domain 5` is invoked, the current domain 5 is then deleted; by default, the program switches to the first
+domain in the storage, which could be other domains, not necessarily `1`. When `domain 4` is invoked, `4` already exists in
+the storage so instead of creating a new one, the program switches to the existing one.
 
-Within each domain, independent model can be defined, when `analyze` command is called, all domains will be analyzed.
+Within each domain, an independent model can be defined; when the `analyze` command is called, all domains will be analyzed.

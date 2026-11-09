@@ -17,12 +17,12 @@ integrator LeeNewmarkIterative (1) (2) (3) ((4) (5) (6) [7...]...)
 
 1. The definition of parameters is **identical** to that of [`LeeNewmarkFull`](LeeNewmarkFull.md).
 2. Instead of unrolling all modes into a single sparse damping matrix, this integrator uses an iterative procedure to
-   solve system. The convergence rate is **linear**.
+   solve the system. The convergence rate is **linear**.
 3. Since the convergence rate is linear even with [`Newton`](../../../Solver/Newton.md) method, one may use
    the [`(L)BFGS`](../../../Solver/BFGS.md) method to achieve a super-linear convergence rate.
 
 The damping force is obtained via matrix operations, which include matrix inversion. In this phase, some sparse matrices
-will be formed, to control what solver to be used to solve sparse matrix, one can set the subsystem solver via the
+will be formed; to control which solver is used to solve the sparse matrices, one can set the subsystem solver via the
 following commands.
 
 ```text

@@ -2,7 +2,7 @@
 
 Exponential Hardening Cam-Clay Model
 
-This hardening law is identical to the one documented in ABAQUS manual (4.4.3).
+This hardening law is identical to the one documented in the ABAQUS manual (4.4.3).
 
 ## Hardening
 
@@ -29,7 +29,7 @@ consolidation line with the void ratio axis in a plot of void ratio versus equiv
 material ExpCC (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) [11]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, beta, controls compression side shape
 # (5) double, m, slope of CSL
 # (6) double, p_t, initial tension strength

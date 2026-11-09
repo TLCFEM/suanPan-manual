@@ -14,7 +14,7 @@ CustomNodeGroup (1) (2)
 
 The `CustomNodeGroup` uses an [`expression`](../../Collection/Define/expression.md) to determine whether a given node shall be included in the group.
 
-It uses the coordinates of the target node (with size adjusted) as the input and the expression shall return a positive value if the node shall be included in the group. Otherwise, it shall return a negative value.
+It uses the coordinates of the target node (with size adjusted) as the input, and the expression shall return a positive value if the node shall be included in the group. Otherwise, it shall return a negative value.
 
 The following example selects all nodes with `x` coordinate greater than 0.5.
 

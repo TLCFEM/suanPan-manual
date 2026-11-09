@@ -54,7 +54,7 @@ material AFCO1D (1) (2) (3) (4) (5) (6) (7) (8) (9) [(10) (11)...] [12]
 
 ## Examples
 
-With a perfectly plastic response, the [`ArmstrongFrederick1D`](ArmstrongFrederick1D.md) presents a non-degrading envelop.
+With a perfectly plastic response, the [`ArmstrongFrederick1D`](ArmstrongFrederick1D.md) presents a non-degrading envelope.
 
 ```text
 material ArmstrongFrederick1D 1 2E5 4E2 0 0 0

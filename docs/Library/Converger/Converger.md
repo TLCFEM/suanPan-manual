@@ -1,6 +1,6 @@
 # Converger
 
-Though the term `converger` is not a valid word, it is used to denote the object that provide information about if the
+Though the term `converger` is not a valid word, it is used to denote the object that provides information about whether the
 system converges.
 
 ## Syntax
@@ -8,17 +8,17 @@ system converges.
 All convergers, except for [`Logic`](Other/Logic.md) and [`FixedNumber`](Other/FixedNumber.md), share the same definition.
 
 ```text title="Converger"
-converger (1) (2) (3) (4) [5]
+converger (1) (2) [3] [4] [5]
 # (1) string, converger type
 # (2) int, unique tag
-# (3) double, tolerance
-# (4) int, maximum iteration
+# [3] double, tolerance, default: 1E-6
+# [4] int, maximum iteration, default: 10
 # [5] bool string, print switch, default: false
 ```
 
 ## Available Convergers
 
-Currently, following convergers are available.
+Currently, the following convergers are available.
 
 * [AbsDisp](Absolute/AbsDisp.md)
 * [AbsError](Absolute/AbsError.md)

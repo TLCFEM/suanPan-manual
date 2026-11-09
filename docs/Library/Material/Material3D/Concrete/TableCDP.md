@@ -15,7 +15,7 @@ In total, four tables are required.
 material TableCDP (1) (2) (3) (4) (5) (6) (7) [8] [9] [10] [11]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poisson's ratio
+# (3) double, Poisson's ratio
 # (4) string, file name of tension backbone table
 # (5) string, file name of compression backbone table
 # (6) string, file name of tension damage table
@@ -23,7 +23,7 @@ material TableCDP (1) (2) (3) (4) (5) (6) (7) [8] [9] [10] [11]
 # [8] double, dilatancy parameter, default: 0.2
 # [9] double, biaxial compression strength ratio, default: 1.16
 # [10] double, stiffness recovery ratio, default: 0.5
-# [11] double, density, default: 0
+# [11] double, density, default: 2400e-12
 ```
 
 ## Remarks

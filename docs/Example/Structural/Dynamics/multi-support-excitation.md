@@ -7,13 +7,13 @@ The model can be downloaded [here](multi-support-excitation.zip).
 The multiple support excitation refers to different prescribed motions at various supports. The general discussion of
 linear elastic systems, as presented in typical textbooks (see for
 example [Chopra's textbook](https://www.pearson.com/us/higher-education/program/Chopra-Dynamics-of-Structures-5th-Edition/PGM1101746.html))
-, is somehow not suitable to numerical implementation.
+, is somehow not suitable for numerical implementation.
 
-The implementation in `suanPan` converts whatever support excitations applied to prescribed displacements and the
+The implementation in `suanPan` converts whatever support excitations are applied to prescribed displacements and the
 displacement controlled algorithm [`MPDC`](../../../Library/Solver/MPDC.md) is automatically enabled to solve the
 system.
 
-Thus, support excitations in forms of displacement, velocity and acceleration are supported.
+Thus, support excitations in the forms of displacement, velocity and acceleration are supported.
 
 ## A Simple Model
 
@@ -39,7 +39,7 @@ hdf5recorder 1 Node U1 1 2
 amplitude Tabular 1 EZ
 ```
 
-The analysis setting consists of a dynamic step with [`Newmark`](../../../Library/Integrator/Implicit/Newmark/Newmark.md)
+The analysis setting consists of a dynamic step with a [`Newmark`](../../../Library/Integrator/Implicit/Newmark/Newmark.md)
 integrator. Those settings are stored in `setting.sp` file.
 
 ```text title="setting.sp"
@@ -80,7 +80,7 @@ It shall be noted $$-\ddot{u}_g$$ is applied.
 
 ### Apply Excitation On Support
 
-To apply acceleration excitation on support, the corresponding DoF should not be constrained. Thus, rigid body motions
+To apply acceleration excitation on a support, the corresponding DoF should not be constrained. Thus, rigid body motions
 are expected.
 
 ```text hl_lines="6"

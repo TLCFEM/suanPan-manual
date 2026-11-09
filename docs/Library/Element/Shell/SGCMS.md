@@ -2,7 +2,7 @@
 
 Simplified Generalized Conforming Mixed Shell Element
 
-A planar shell element uses SGCMQ for membrane action and DKT4 element for plate action.
+A planar shell element uses SGCMQ for membrane action and the DKT4 element for plate action.
 
 * Number of Nodes: 4
 * Number of DoFs: 6 (Translation, Translation, Translation, Rotation, Rotation, Rotation)
@@ -15,16 +15,16 @@ A planar shell element uses SGCMQ for membrane action and DKT4 element for plate
 ## Syntax
 
 ```text title="SGCMS"
-element SGCMS (1) (2...5) (6) (7) [8]
+element SGCMS (1) (2...5) (6) [7] [8]
 # (1) int, unique element tag
 # (2...5) int, node i, j, k, l
 # (6) int, material tag
-# (7) double, thickness
-# [8] bool, nonlinear geometry switch, default: false
+# [7] double, thickness, default: 1.0
+# [8] bool string, nonlinear geometry switch, default: false
 ```
 
 ## Remarks
 
-1. If the nonlinear geometry switched on, the transformation between the global and local reference frames will depend
+1. If the nonlinear geometry is switched on, the transformation between the global and local reference frames will depend
    on the current displacement. The nonlinear transformation is similar to the corotational transformation, and the
    local response is still linear. Thus, it follows "large displacement, small deformation" assumption.

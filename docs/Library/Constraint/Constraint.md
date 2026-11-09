@@ -1,7 +1,7 @@
 # Constraint
 
 There are a number of different approaches to implement constraints in a FEM context. Interested readers can check
-out the relevant documentations of ABAQUS,
+out the relevant documentation of ABAQUS,
 or [this](https://mashayekhi.iut.ac.ir/sites/mashayekhi.iut.ac.ir/files//files_course/lesson_16.pdf)
 slides for a brief introductory summary on linear constraints.
 
@@ -23,7 +23,7 @@ The Lagrange multiplier method uses the border matrices to exactly enforce the c
 higher than the penalty function method, as it is not known in advance if the specific constraint (especially the
 inequality constraints) should be active or not before the unconstrained system is solved.
 
-## Difference Between Two Methods With Examples
+## Difference Between the Two Methods With Examples
 
 Here we show a very simple example to illustrate the difference between the two methods. The homogeneous Dirichlet
 type boundary condition (`fix` and `fix2`) is used.
@@ -58,7 +58,7 @@ exit
 
 ### Penalty Function Method
 
-The `fix` command implements the penalty function method, the default penalty factor is $$10^8$$. The analysis
+The `fix` command implements the penalty function method; the default penalty factor is $$10^8$$. The analysis
 results can be shown as follows.
 
 ```text

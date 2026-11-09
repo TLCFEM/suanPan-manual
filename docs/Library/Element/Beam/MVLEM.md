@@ -8,7 +8,7 @@ Multiple Vertical Line Element Model
 
 The `MVLEM` element is often used in modelling walls. It is in fact a simplified beam element with shear response.
 
-Personally I do not recommend the usage of this element in any cases.
+Personally I do not recommend the usage of this element in any case.
 
 ## Syntax
 
@@ -29,4 +29,4 @@ element MVLEM (1) (2) (3) (4) (5) ((6) (7) (8) (9) (10)...)
 ## Remarks
 
 1. Parameters `(6)` to `(10)` form a group of parameters that define a single fibre, if there are multiple fibres, which
-   is often the case, repeat five parameter group for each fibre.
+   is often the case, repeat the five parameter group for each fibre.

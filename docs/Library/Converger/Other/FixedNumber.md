@@ -5,8 +5,8 @@ The algorithm iterates at most a fixed number of times. Even if the system does 
 ## Syntax
 
 ```text title="FixedNumber"
-converger FixedNumber (1) (2) [3]
+converger FixedNumber (1) [2] [3]
 # (1) int, unique tag
-# (2) int, maximum iteration
+# [2] int, maximum iteration, default: 10
 # [3] bool string, print switch, default: false
 ```

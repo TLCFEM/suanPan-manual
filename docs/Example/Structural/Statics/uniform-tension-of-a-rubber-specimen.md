@@ -18,10 +18,10 @@ file element.supan
 ```
 
 After loading nodes and elements, a `MooneyRivlin` material is defined with $$C_1=80~\text{MPa}$$, $$C_2=20~\text{MPa}$$
-and $$K=10^6~\text{MPa}$$. This is a regularized version of Mooney-Rivlin model that allows a certain degree of
-dilatation. The $$D_1$$ parameter used in ABAQUS is the inverse of bulk modulus so that $$D_1=0$$ means fully
-incompressible. The displacement of magnitude of $$10$$ along $$x$$ axis is applied on the free end. A static step with
-an initial step size of $$0.01$$ is used. With `fixed_step_size` off, the algorithm automatically scale step size based
+and $$K=10^6~\text{MPa}$$. This is a regularized version of the Mooney-Rivlin model that allows a certain degree of
+dilatation. The $$D_1$$ parameter used in ABAQUS is the inverse of the bulk modulus so that $$D_1=0$$ means fully
+incompressible. The displacement of magnitude of $$10$$ along the $$x$$ axis is applied on the free end. A static step with
+an initial step size of $$0.01$$ is used. With `fixed_step_size` off, the algorithm automatically scales the step size based
 on convergence performance.
 
 ```

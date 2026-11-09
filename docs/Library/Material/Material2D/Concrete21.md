@@ -1,8 +1,8 @@
 # Concrete21
 
-The `Concrete21` material model implements the smeared rotating crack model for concrete. In general, it takes in-plane
+The `Concrete21` material model implements the smeared rotating crack model for concrete. In general, it takes the in-plane
 strain vector as the input, converts it into principal strains and calls uniaxial material models to compute uniaxial
-stress and stiffness response. These ae rotated back to the nominal direction using the same eigen vectors.
+stress and stiffness response. These are rotated back to the nominal direction using the same eigen vectors.
 
 The underlying uniaxial concrete model used is the [`ConcreteTsai`](../Material1D/Concrete/ConcreteTsai.md) model.
 

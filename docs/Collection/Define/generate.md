@@ -60,7 +60,7 @@ generatebyrule nodegroup 1 2 1. -200.
 
 ## form three: generate a node group based on the line segment
 
-It is sometimes useful to select all nodes lie in a straight line segment. The following command can be used.
+It is sometimes useful to select all nodes that lie in a straight line segment. The following command can be used.
 
 ```
 generatebypoint nodegroup (1) [(2)...]
@@ -69,7 +69,7 @@ generatebypoint nodegroup (1) [(2)...]
 ```
 
 There is no restriction on the size of each point defined, but the sizes of two points must match. If one wants to
-select all points lie on the line segment between points $$(3,~4)$$ and $$(8,~7)$$, then
+select all points that lie on the line segment between points $$(3,~4)$$ and $$(8,~7)$$, then
 
 ```
 generatebypoint nodegroup 1 3. 4. 8. 7.

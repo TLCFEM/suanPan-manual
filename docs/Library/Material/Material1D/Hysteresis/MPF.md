@@ -40,21 +40,21 @@ $$
 \sigma_n=b\varepsilon_n+\dfrac{\varepsilon_n-b\varepsilon_n}{\sqrt[R]{1+\varepsilon_n^R}},
 $$
 
-with the normalized stress $$\sigma_n$$ and strain $$\varepsilon_n$$ and parameter $$R$$ that controls curvature defined as
+with the normalized stress $$\sigma_n$$ and strain $$\varepsilon_n$$, and parameter $$R$$ that controls curvature, defined as
 
 $$
 \sigma_n=\dfrac{\sigma-\sigma_r}{\sigma_0-\sigma_r},\quad\varepsilon_n=\dfrac{\varepsilon-\varepsilon_r}{\varepsilon_0-\varepsilon_r},\quad{}R=R_0-\dfrac{a_1\xi}{a_2+\xi},\quad\xi^n=\dfrac{\left|\varepsilon_r^{n}-\varepsilon_0^{n-1}\right|}{\varepsilon_{y,0}},\qquad(n>1).
 $$
 
-The other parameters are: $$b$$ controls hardening, $$\sigma_y=\sigma_0^0$$ and $$\varepsilon_y=\varepsilon_0^0$$ are initial yielding stress and strain so that $$E=\sigma_y/\varepsilon_y$$ defines Young's modulus, and three dimensionless parameters with recommended values $$R_0=20$$, $$a_1=18.5$$ and $$a_2=0.15$$.
+The other parameters are: $$b$$ controls hardening, $$\sigma_y=\sigma_0^0$$ and $$\varepsilon_y=\varepsilon_0^0$$ are the initial yielding stress and strain so that $$E=\sigma_y/\varepsilon_y$$ defines Young's modulus, and three dimensionless parameters with recommended values $$R_0=20$$, $$a_1=18.5$$ and $$a_2=0.15$$.
 The parameter $$\xi$$ controls the Bauschinger effect.
 It can be set to zero so that $$R=R_0$$ remains unchanged for the whole loading history.
-As the result, the corresponding response resembles the one of a bilinear hardening material.
+As a result, the corresponding response resembles the one of a bilinear hardening material.
 The parameters $$a_3$$ and $$a_4$$ control isotropic hardening, thus are only used when isotropic hardening is activated.
 
 ![definition](MPF.svg)
 
-The governing equation defines a smooth transition curve that asymptotically approaches a limit (linear hardening bound) controlled by the height (reference stress magnigude) and the corresponding hardening ratio.
+The governing equation defines a smooth transition curve that asymptotically approaches a limit (linear hardening bound) controlled by the height (reference stress magnitude) and the corresponding hardening ratio.
 
 ## Remarks
 

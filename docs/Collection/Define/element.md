@@ -13,7 +13,7 @@ element <name> <tag> <connected_nodes> <associated_material> <other_specific_par
 
 ## Output Types
 
-All elements support record elemental stiffness and mass by tokens `K` and `M`. One can use the following to record 
+All elements support recording elemental stiffness and mass by tokens `K` and `M`. One can use the following to record 
 them. The detailed syntax can be seen in [Record](../../Library/Recorder/Recorder.md) page.
 
 ```text
@@ -60,7 +60,7 @@ element MyEle (1) (2) (3) (4)
 
 Then `element MyEle 7 8 9 10` will create an element with tag 7, nodes 8, 9 and material 10, while `element MyEle 7 8 9`
 or `element MyEle 7 8 9 unexpected_str` will fail the creation. Whether nodes 8, 9 and material 10 exist or not is not
-validated. Instead, these type of validations are performed during the initialisation stage, before the analysis stage.
+validated. Instead, these types of validations are performed during the initialisation stage, before the analysis stage.
 This means, the order of defining basic components is **not** important. It is valid to define an element before
 defining its connected nodes.
 
@@ -76,16 +76,16 @@ uniaxial material model is assigned to a 3D element, the element will be disable
 During the analysis stage, the global solving algorithm solves the global system and updates nodal displacement
 accordingly. The new nodal displacement will be dispatched to all active elements for further analysis.
 
-From the element's perspective, it is in charge of returning elemental nodal force vector based on given nodal
+From the element's perspective, it is in charge of returning the elemental nodal force vector based on the given nodal
 displacement vector.
 
 ### Interaction
 
 The problem domain holds all necessary information for elements to update themselves. Elements do not directly 
-interacts with global data storage. Rather, them only communicates with the associated nodes and sections/materials.
+interact with the global data storage. Rather, they only communicate with the associated nodes and sections/materials.
 
 A complete interaction graph can be seen as follows. For elements themselves, apart from the connected nodes, they 
-do not share information with any other objects by any means. Some elements may do not even need sections and/or 
+do not share information with any other objects by any means. Some elements may not even need sections and/or
 materials.
 
 ``` mermaid

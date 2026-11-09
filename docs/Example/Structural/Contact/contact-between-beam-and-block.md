@@ -61,7 +61,7 @@ fix 2 E 6 7
 The [`Contact2D`](../../../Library/Element/Special/Contact2D.md) element is used to define contact. It requires two node
 groups that define master and slave, respectively.
 
-Note the outer normal vector of master line is defined by rotating the axis by $$\pi/2$$ anticlockwise, the node
+Note that the outer normal vector of the master line is defined by rotating the axis by $$\pi/2$$ anticlockwise; the node
 sequence matters.
 
 ```
@@ -80,7 +80,7 @@ element Contact2D 6 2 1 1E6
 
 The [`NodeLine`](../../../Library/Constraint/NodeLine.md) contact constraint can be applied in order to properly account
 for contact interaction. Each constraint requires three nodes: master $$i$$, master $$j$$ and slave $$k$$. Again the
-outer normal vector of master line is defined by rotating the axis by $$\pi/2$$ anticlockwise, the node sequence
+outer normal vector of the master line is defined by rotating the axis by $$\pi/2$$ anticlockwise; the node sequence
 matters.
 
 ```
@@ -116,7 +116,7 @@ exit
 ## Remarks
 
 The contact itself is implemented as an element thus the contact force cannot be directly spotted in the resistance of
-corresponding nodes.
+the corresponding nodes.
 
 The master lines and slave nodes do not rely on the specific elements connected. Thus, the node-line contact can be
 applied to any 2D problems with various element types including truss, beam, membrane, etc.

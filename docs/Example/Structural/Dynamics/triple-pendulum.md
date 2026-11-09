@@ -26,7 +26,7 @@ The first node is pinned so that it does not move.
 
 ### With Rigid Links
 
-By using rigid truss elements, the inextensible links can be approximated given that if the rigidity is sufficiently
+By using rigid truss elements, the inextensible links can be approximated given that the rigidity is sufficiently
 large. Define the corresponding truss elements and point masses. Note here since the fixed node `1` is connected to the
 truss element `1`, there is no need to assign mass to it.
 
@@ -62,7 +62,7 @@ element Mass 4 4 20 1 2
 ```
 
 Note here, compared to the previous approach, since the fixed node `1` is now not connected to any truss elements, 
-it will be associated to nothing if no point mass is assigned to it. This is not allowed. Such an 'isolated' dummy 
+it will be associated with nothing if no point mass is assigned to it. This is not allowed. Such an 'isolated' dummy 
 node will be identified and automatically **disabled** during the initialisation stage. In order to avoid this, it is 
 **necessary** to assign a point mass to it.
 
@@ -74,7 +74,7 @@ An initial velocity is assigned to node `3`.
 initial velocity 25 1 3
 ```
 
-The gravity load is assigned in form of constant force.
+The gravity load is assigned in the form of a constant force.
 
 ```text
 amplitude Constant 1
@@ -112,7 +112,7 @@ The animation is presented as follows.
 ## What's Next?
 
 Everything seems to be working fine, which appears to be good. So what's next? If the results are carefully examined,
-one would notice some unexpected behaviour. For ones who have a good background of dynamics, it must be noticed that 
+one would notice some unexpected behaviour. For those who have a good background in dynamics, it must be noticed that 
 the Newmark method has no algorithmic damping. It is also not ideal in terms of energy/momentum conservation.
 
 If one plots the acceleration history, one can notice that the acceleration is not physically meaningful.
@@ -133,5 +133,5 @@ All in all, as long as the system may result in high frequency response, the use
 
 The high frequency response may stem from either very large stiffness or very small mass. The former case may happen 
 when parts of the system are very rigid. The application of penalty method often results in large stiffness 
-components. The latter case may happen when the mass is under integrated or even lumped. Both are somehow inevitable 
+components. The latter case may happen when the mass is under-integrated or even lumped. Both are somehow inevitable 
 in practical simulations. One shall consider other time integration methods to obtain more reliable results.

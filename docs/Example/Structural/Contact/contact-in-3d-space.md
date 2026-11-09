@@ -10,7 +10,7 @@ The model scripts can be [downloaded](contact-in-3d-space.supan).
 ## The Model
 
 The contact itself does not need to be defined on any discrete surfaces of elements. Instead, the facet is always
-formulated by the given three nodes. Thus, contacts can be defined on, for examples, plate/shell surfaces,
+formulated by the given three nodes. Thus, contacts can be defined on, for example, plate/shell surfaces,
 cube/tetrahedron surfaces, or even three nodes only.
 
 Here we define a square flat shell with one edge clamped.
@@ -35,7 +35,7 @@ generate nodegroup 1 1 3 4
 groupmultiplierbc 1 encastre 1
 ```
 
-A 3D beam cantilever beam is defined on top of the shell.
+A 3D cantilever beam is defined on top of the shell.
 
 ```
 node 10 8.5 2 .1

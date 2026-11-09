@@ -13,12 +13,12 @@ Concrete Damage Plasticity Model
 !!! warning "automatic regularization"
     The `CDP` model automatically regularizes the input arguments to avoid ill-shaped backbones.
     This may not always be desirable.
-    If it is not possible to obtain desired backbone, use [`TableCDP`](TableCDP.md) instead.
+    If it is not possible to obtain the desired backbone, use [`TableCDP`](TableCDP.md) instead.
 
 ## Outline
 
 The CDP model supports stiffness degradation.
-The backbone envelops are defined as exponential functions in terms of plastic strain [4].
+The backbone envelopes are defined as exponential functions in terms of plastic strain [4].
 Apart from the listed references, readers can also refer to the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 
 The following shows the backbone of effective stress and the corresponding damage variable as functions of $$\kappa$$.
@@ -31,7 +31,7 @@ The following shows the backbone of effective stress and the corresponding damag
 material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 # (1) int, unique tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, crack stress f_t
 # (5) double, crush stress f_c
 # (6) double, normalized crack energy g_t
@@ -50,11 +50,11 @@ material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 
 1. Poisson's ratio shall be smaller than $$0.5$$, a typical value for concrete is around $$0.2$$.
 2. Crack stress shall be greater than zero while crush stress shall be smaller than zero. But the program automatically
-   set the signs for both stresses.
+   sets the signs for both stresses.
 3. Normalized crack energy $$g_t=G_F/l_c$$ equals the first mode crack energy $$G_F$$ over the characteristic length
    $$l_c$$. For SI (millimeter) unit system, typical values are of order $$10^{-3}$$. The compression conjugate $$g_c$$
    is typically greater than $$g_t$$ by the order of $$10^2$$.
-4. Hardening parameters controls tension degradation slope and compression hardening shape. Values $$a_t\approx0.5$$ and
+4. Hardening parameters control tension degradation slope and compression hardening shape. Values $$a_t\approx0.5$$ and
    $$a_c\approx2$$ to $$a_c\approx5$$ give good results.
 5. Dilatancy parameter can be set to $$0.2$$. Comparisons can be seen in Lee's doctoral dissertation.
 6. Biaxial compression ratio is defined as the ratio between biaxial and uniaxial compression strengths. According to
@@ -118,6 +118,8 @@ This model supports the following additional history variables to be recorded.
 ## Iso-error Map
 
 The following example iso-error maps are obtained via the following script.
+The parameters are chosen in such a way that tension and compression are more or less balanced.
+They do not reflect parameters for real concrete.
 
 ```py
 from plugins import ErrorMap
@@ -126,15 +128,17 @@ from plugins import ErrorMap
 
 young_modulus = 3e4
 yield_stress = 30
+energy = 1e-1
 
 with ErrorMap(
-   f"material CDP 1 {young_modulus} .18 {0.1 * yield_stress} {yield_stress} 1E-2 1E-1 .4 3. .6 .8 .23 1.16 .4",
-   ref_strain=yield_stress / young_modulus,
-   ref_stress=yield_stress,
-   contour_samples=20,
+    f"material CDP 1 {young_modulus} .18 {0.8 * yield_stress} {yield_stress} {0.8 * energy} {energy} .4 3. .6 .8 .4 1.16 .4",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+    contour_samples=20,
+    tmp_dir=(Path(__file__).parent / "tmp").as_posix(),
 ) as error_map:
-   error_map.contour("cdp.uniaxial", center=(-2, 0), size=1)
-   error_map.contour("cdp.biaxial", center=(-2, -2), size=1)
+    error_map.contour("cdp.uniaxial", center=(-2, 0), size=3)
+    error_map.contour("cdp.biaxial", center=(-2, -2), size=3)
 ```
 
 ![absolute error uniaxial](cdp.uniaxial.abs.error.svg)

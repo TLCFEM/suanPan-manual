@@ -2,7 +2,7 @@
 
 ## Syntax
 
-### prior to v3.2.0
+### Prior to v3.2.0
 
 For versions prior to v3.2.0, the syntax is as follows.
 Only one single DoF is permitted to be controlled.
@@ -39,10 +39,10 @@ set max_step_size (1)
 # (1) double, step size (arc length)
 
 set fixed_step_size (1)
-# (1) bool, flag to indicate if to fix the arc length
+# (1) bool, flag to indicate whether to fix the arc length
 ```
 
 ## Remarks
 
 1. A [`Ramm`](../Solver/Ramm.md) solver with default parameters is automatically enabled if no valid `Ramm` solver is
-   defined. Not all storage schemes are supported, please check `Ramm` documentation.
+   defined. Not all storage schemes are supported; please check `Ramm` documentation.

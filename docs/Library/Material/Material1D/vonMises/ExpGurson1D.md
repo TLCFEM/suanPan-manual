@@ -10,7 +10,7 @@ See also the corresponding section in [Constitutive Modelling Cookbook](https://
 material ExpGurson1D (1) (2) (3) (4) (5) [6] [7] [8] [9] [10] [11]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, yield stress
 # (5) double, n
 # [6] double, q1, default: 1.0

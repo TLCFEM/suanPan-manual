@@ -22,7 +22,7 @@ used. The initial yield stress is $$\sigma_y=200~\mathrm{MPa}$$.
 
 ### Isotropic Hardening
 
-The same exponential function with a saturated limit is used in both AF model and the ABAQUS implementation.
+The same exponential function with a saturated limit is used in both the AF model and the ABAQUS implementation.
 
 $$
 k(p)=\sigma_y+k_s(1-e^{-mp})+k_lp,
@@ -64,7 +64,7 @@ $$
 ## Numerical Model
 
 The following commands can be used to define the model. Note since it is a plane strain problem, the corresponding
-wrapper is used. Also note due to the different implementation of kinematic hardening, exact result is not possible.
+wrapper is used. Also note due to the different implementation of kinematic hardening, an exact result is not possible.
 
 ```
 material ArmstrongFrederick 1 2.1E5 .3 2E2 2E3 0 .26 2E4 81

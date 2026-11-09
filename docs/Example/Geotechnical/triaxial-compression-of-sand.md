@@ -54,7 +54,7 @@ displacement 3 1 -0.02 3 5 6 7 8
 
 ### Cyclic
 
-Cyclic displacement load can be applied. It varies cyclicly after the target confinement is achieved.
+Cyclic displacement load can be applied. It varies cyclically after the target confinement is achieved.
 
 ```
 amplitude Tabular 1 cyclic
@@ -68,7 +68,7 @@ The load level can be plotted as follows.
 
 ## Result
 
-The $$p$$-$$q$$ response is shown as follows. As a linear relationship is assumed for elastic part, linear line segments
+The $$p$$-$$q$$ response is shown as follows. As a linear relationship is assumed for the elastic part, linear line segments
 are expected within the yield surface.
 
 The `SimpleSand` model is a very simple model for sand to showcase the concept of bounding surface.

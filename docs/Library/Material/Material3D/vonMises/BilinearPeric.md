@@ -21,7 +21,7 @@ The yielding surface is identical to that of the von Mises model.
 material BilinearPeric (1) (2) (3) (4) (5) (6) (7) [8]
 # (1) int, unique tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, yield stress
 # (5) double, hardening modulus
 # (6) double, mu

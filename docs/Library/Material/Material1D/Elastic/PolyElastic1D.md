@@ -12,7 +12,7 @@ material PolyElastic1D (1) [(2)...]
 
 ## Theory
 
-The stress response is defined as a polynomial function of strain on the positive strain ($$\varepsilon>0$$).
+The stress response is defined as a polynomial function of strain for positive strain ($$\varepsilon>0$$).
 
 $$
 \sigma=a_1\varepsilon+a_2\varepsilon^2+a_3\varepsilon^3\cdots

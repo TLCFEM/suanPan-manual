@@ -27,7 +27,7 @@ for detailed discussion of the **Bi-directional Evolutionary Structural Optimiza
 
 Here a brief introduction is presented to explain what the `StrainEnergyEvolution` criterion does to the model.
 
-To perform optimization with `StrainEnergyEvolution`, a `Optimization` step shall be defined instead of a standard
+To perform optimization with `StrainEnergyEvolution`, an `Optimization` step shall be defined instead of a standard
 static step.
 
 ```
@@ -47,7 +47,7 @@ element.
 
 ### Averaging
 
-Instead of the original node based averaging procedure, which requires to compute the sensitivity parameter of the
+Instead of the original node based averaging procedure, which requires computing the sensitivity parameter of the
 connected nodes, the `StrainEnergyEvolution` criterion uses a *convolution filter* type process. The averaged strain
 energy is updated by computing the weighted average of the strain energy of all connected elements. Say the target
 element, denoted with subscript $$j$$, is connected to $$m=n-1$$ elements. Accounting for the target element itself,
@@ -61,12 +61,12 @@ $$
 The parameter $$W$$ is controlled by the fourth input argument `[4]`.
 
 For the above averaging process, each element can affect the adjacent elements, resulting in a smoothed distribution of
-strain energy. Such a process can be repeated several times to further average the result. The number of the averaging
-process is controlled by the fifth input argument `[5]`.
+strain energy. Such a process can be repeated several times to further average the result. The number of averaging
+processes is controlled by the fifth input argument `[5]`.
 
 ### Stabilization
 
-Collect all averaged strain energy into a vector and denote it with $$\mathbf{\alpha}^k$$, it is stabilized by
+Collect all averaged strain energy into a vector and denote it with $$\mathbf{\alpha}^k$$; it is stabilized by
 considering the strain energy of the previous iteration $$\mathbf{\alpha}^{k-1}$$,
 
 $$

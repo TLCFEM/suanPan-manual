@@ -110,7 +110,7 @@ print(ele)
 
 ### Area
 
-The library has implemented basic utility functions to elements, such that basic properties for each element can be conveniently obtained.
+The library has implemented basic utility functions for elements, such that basic properties for each element can be conveniently obtained.
 
 
 ```python
@@ -224,7 +224,7 @@ class Cell3DOS:
             f" {self.py:+E}"
             f" {self.pz:+E}"
             # f" $mat_tag"
-            f" 1"  # here we just user 1 for brevity
+            f" 1"  # here we just use 1 for brevity
             f" {self.y:+E}"
             f" {self.z:+E}"
         )
@@ -483,7 +483,7 @@ with h5py.File("R1-RF.h5", "r") as f:
     
 
 
-We shall see the initial stiffness is $$74.93$$, which is close to the torsional constant $$J$$.
+We shall see that the initial stiffness is $$74.93$$, which is close to the torsional constant $$J$$.
 Due to the existence of bi-moments, the torque is not linearly proportional to the rotation.
 If one records the `S` output, the St. Venant torsion would be $$GJ\phi'$$.
 

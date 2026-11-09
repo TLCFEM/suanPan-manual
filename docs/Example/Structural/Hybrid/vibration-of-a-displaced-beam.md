@@ -14,8 +14,8 @@ node 1 0 0
 node 2 1 0
 ```
 
-To simply the example, we use elastic material and the `EB21` element, so that there is no need to define beam sections.
-A point mass of magnitude of $$2$$ is applied to node $$2$$ DoF $$2$$.
+To simplify the example, we use elastic material and the `EB21` element, so that there is no need to define beam sections.
+A point mass of magnitude $$2$$ is applied to node $$2$$ DoF $$2$$.
 
 ```
 material Elastic1D 1 10
@@ -51,7 +51,7 @@ converger AbsIncreDisp 1 1E-8 3 1
 
 ## Dynamic Step
 
-A dynamic step with step size of $$2$$ can then be defined. There is no need to define any load in this step. The
+A dynamic step with a step size of $$2$$ can then be defined. There is no need to define any load in this step. The
 previous displacement load is by default active for only one step. Hence, in this dynamic step, the displacement load is
 automatically suspended. A default `Newmark` integrator will be automatically defined if there is no valid integrator.
 

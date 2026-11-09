@@ -26,7 +26,7 @@ virtual double compute_h(double) const = 0; // kinematic hardening
 virtual double compute_dh(double) const = 0; // derivative kinematic
 ```
 
-All four methods take equivalent plastic strain as the input argument, on output, the corresponding quantities shall be
+All four methods take equivalent plastic strain as the input argument; on output, the corresponding quantities shall be
 provided.
 
 The isotropic hardening function $$K(\bar\varepsilon_p)$$ defines the isotropic hardening rule, there are some
@@ -54,7 +54,7 @@ F(\sigma,\bar\varepsilon_p)=\sqrt{\dfrac{3}{2}(s-\beta(\bar\varepsilon_p)):(s-\b
 \bar\varepsilon_p)
 $$
 
-where $$\beta(\bar\varepsilon_p)$$ is the back stress depends on the equivalent plastic strain $$\bar\varepsilon_p$$ and
+where $$\beta(\bar\varepsilon_p)$$ is the back stress that depends on the equivalent plastic strain $$\bar\varepsilon_p$$ and
 $$\sigma_y(\bar\varepsilon_p)$$ is the yield stress. Note
 
 $$
@@ -123,7 +123,7 @@ To define such a hardening behavior, a vector shall be used to store all constan
 
 ```cpp
 // PolyJ2.h
-const vec poly_para; // poly_para is a vector stores a_i
+const vec poly_para; // poly_para is a vector storing a_i
 ```
 
 The methods could be written as follows.

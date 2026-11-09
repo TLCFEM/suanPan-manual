@@ -31,8 +31,8 @@ achieve a target PGA/PGV/PGD, it shall be assigned to the magnitude of the appli
 ## Usage
 
 For example, to load the accelerogram `20110221_235142_CSHS_N76W_A`, which is one of the 2011 Christchurch earthquake
-recordings, user shall first extract the file `20110221_235142_CSHS_N76W_A` from `NZStrongMotion.7z` and place it where
-the program can locate, for example, the current working folder.
+recordings, the user shall first extract the file `20110221_235142_CSHS_N76W_A` from `NZStrongMotion.7z` and place it where
+the program can locate it, for example, the current working folder.
 
 To define such an amplitude, one can use
 
@@ -44,9 +44,9 @@ amplitude NZStrongMotion 1 20110221_235142_CSHS_N76W_A
 
 The format of original file can be seen [here](https://www.geonet.org.nz/data/supplementary/strong_motion_file_formats).
 
-The processed archive first extract accelerogram name from the file, then read how many acceleration values shall be
-read and the interval between two records, then read all values and scale them by multiplying each by $$1000$$ and store
-them into an integer array. The array has the following layout.
+The processed archive first extracts the accelerogram name from the file, then reads how many acceleration values shall
+be read and the interval between two records, then reads all values and scales them by multiplying each by $$1000$$ and
+stores them into an integer array. The array has the following layout.
 
 | index |         value ($$\times1000$$)         |
 |:-----:|:--------------------------------------:|

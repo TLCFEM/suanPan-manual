@@ -28,7 +28,7 @@ C_4\sigma_{12}^2+C_5\sigma_{23}^2+C_6\sigma_{13}^2+C_7\sigma_{11}+C_8\sigma_{22}
 \end{multline}
 $$
 
-with $$\sigma=[\sigma_{11}~\sigma_{22}~\sigma_{33}~\sigma_{12}~\sigma_{23}~\sigma_{13}]^\mathrm{T}$$ is the stress,
+where $$\sigma=[\sigma_{11}~\sigma_{22}~\sigma_{33}~\sigma_{12}~\sigma_{23}~\sigma_{13}]^\mathrm{T}$$ is the stress,
 $$C_1$$ to $$C_9$$ are material constants. $$K(\bar\epsilon_p)$$ is the isotropic hardening function.
 
 The constants are defined as follows.

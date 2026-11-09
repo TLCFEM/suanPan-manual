@@ -1,6 +1,6 @@
 # RigidWall
 
-The `RigidWall` constraint implements the contact between model and the assigned rigid walls. The rigid walls can have
+The `RigidWall` constraint implements the contact between the model and the assigned rigid walls. The rigid walls can have
 either finite or infinite dimensions.
 
 ## Theory
@@ -130,5 +130,5 @@ constraint finiterigidwallmultiplier (1) (2...4) (5...7) (8...10)
 1. The normal vector of finite rigid walls is computed by cross-product between two edges defined. Beware of the order.
 2. The penalty function method can be used in both static and dynamic analysis.
 3. The multiplier method can only be used in static analysis.
-4. Both methods do not perform well in dynamic analysis, to conserve energy and momentum; users may use the 
+4. Both methods do not perform well in dynamic analysis to conserve energy and momentum; users may use the 
    [`RestitutionWall`](RestitutionWall.md) constraint instead.

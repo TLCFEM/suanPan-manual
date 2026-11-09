@@ -1,6 +1,6 @@
 # [★★★☆☆] Lee's Frame
 
-The Lee's frame is shown as follows.
+Lee's frame is shown as follows.
 
 ![Lee's frame](lees-frame.svg)
 
@@ -41,8 +41,8 @@ fix 1 1 1 11
 fix 2 2 1 11
 ```
 
-Both snap-back and snap-through are involved in this example, the arc length method shall be used. A reference load of
-magnitude $$-1$$ is applied on the DoF 2 of node 7.
+Both snap-back and snap-through are involved in this example, so the arc length method shall be used. A reference load of
+magnitude $$-1$$ is applied on DoF 2 of node 7.
 
 ```
 refload 1 0 -1 2 7
@@ -50,7 +50,7 @@ step arclength 1
 ```
 
 Here the magnitude of reference load matters. A proper selection of reference load may help to converge. By default,
-the algorithm automatically scale the arc length until a stopping criterion is met.
+the algorithm automatically scales the arc length until a stopping criterion is met.
 
 To control the solving strategy, one can control arc length by using
 
@@ -67,7 +67,7 @@ steps are allowed, this may not be sufficient, to change it the `set` command ca
 criterion MinDisplacement 1 7 2 -3.8
 ```
 
-With the above criterion, when the negative displacement of DoF2 of node 7 reaches $$-3.8$$, the analysis stops.
+With the above criterion, when the negative displacement of DoF 2 of node 7 reaches $$-3.8$$, the analysis stops.
 
 Now the model can be analyzed.
 

@@ -9,7 +9,7 @@ discussed.
 
 ### Implementation
 
-The easiest approach to implement the constraint with penalty method is to treat the constraint as a special element.
+The easiest approach to implement the constraint with the penalty method is to treat the constraint as a special element.
 
 ## Lagrange Multiplier Method
 
@@ -59,7 +59,7 @@ From the formulation, it is clear that the general implementation of Lagrange mu
 namely the Hessian matrix and the gradient of constraints $$g_i$$.
 
 For the Hessian matrix, it can be treated as the corresponding stiffness matrix of the element that connects the nodes
-on which the constraint is applied. It can be computed locally and assembled into global stiffness matrix with other
+on which the constraint is applied. It can be computed locally and assembled into the global stiffness matrix with other
 conventional elements.
 
 For the gradient, it is normally stored separately in the so-called border matrix. In a system with multiple constraints

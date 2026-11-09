@@ -21,7 +21,7 @@ where $$a$$ and $$b$$ are two constants that control the shape of the backbone. 
 material ExpJ2 (1) (2) (3) (4) (5) (6) [7]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, yield stress
 # (5) double, a
 # (6) double, b

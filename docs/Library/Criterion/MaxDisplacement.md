@@ -1,6 +1,6 @@
 # MaxDisplacement
 
-The `MaxDisplacement` criterion tests the displacement of the specified node, if it is **greater** the given value, the
+The `MaxDisplacement` criterion tests the displacement of the specified node, if it is **greater** than the given value, the
 analysis is terminated.
 
 ## Syntax

@@ -110,7 +110,7 @@ materialtest1d 1 4E-4 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 80
 
 ![strength degradation](BWBN.EX2.svg)
 
-A positive $$\delta_A$$ has the similar effect.
+A positive $$\delta_A$$ has a similar effect.
 
 ```
 material BWBN 1 2E5 4E2 0 .5 1. 1. 0. 1. 0. 1. 0. 0. 1E0 0. 0. 1. 0.

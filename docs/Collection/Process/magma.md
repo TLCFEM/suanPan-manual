@@ -1,7 +1,7 @@
 # magma
 
 The [MAGMA](https://icl.utk.edu/magma/) library provides a vast number of algorithms that can be used to solve sparse
-linear systems on GPUs. To enable MAGMA solver, the valid CUDA installation must be present. The application should be
+linear systems on GPUs. To enable MAGMA solver, a valid CUDA installation must be present. The application should be
 compiled with `-DSP_ENABLE_CUDA=ON` and `-DSP_ENABLE_MAGMA=ON` options.
 
 ## Compiling MAGMA
@@ -71,13 +71,13 @@ The following key-value options are available to customise the solver:
 | `--blocksize` | positive integer                                                                            |
 | `--alignment` | positive integer                                                                            |
 | `--restart`   | positive integer                                                                            |
-| `--atol`      | positive float-point number                                                                 |
-| `--rtol`      | positive float-point number                                                                 |
+| `--atol`      | positive floating-point number                                                              |
+| `--rtol`      | positive floating-point number                                                              |
 | `--maxiter`   | positive integer                                                                            |
 | `--verbose`   | `0` or `1`                                                                                  |
 | `--prestart`  | positive integer                                                                            |
-| `--patol`     | positive float-point number                                                                 |
-| `--prtol`     | positive float-point number                                                                 |
+| `--patol`     | positive floating-point number                                                                 |
+| `--prtol`     | positive floating-point number                                                                 |
 | `--piters`    | positive integer                                                                            |
 | `--ppattern`  | positive integer                                                                            |
 | `--psweeps`   | positive integer                                                                            |

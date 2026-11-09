@@ -26,7 +26,7 @@ element PCPE4UC (1) (2...5) (6) (7) (8) (9)
 
 Only plane strain is supported. Plane stress does not make sense in geotechnical engineering.
 
-For fluid phase, an isotropic fluid material can be provided, it mainly provides the bulk modulus of the fluid phase.
+For the fluid phase, an isotropic fluid material can be provided, which mainly provides the bulk modulus of the fluid phase.
 For example,
 
 ```

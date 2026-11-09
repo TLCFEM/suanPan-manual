@@ -14,7 +14,7 @@ $$
 A(t)=\sum{}a_i\cos(i\dfrac{2\pi}{T_0}(t-t_0))=\sum{}a_i\cos(if_0(t-t_0))\quad\text{for}\quad{}t>t_0.
 $$
 
-In above equations, $$T_0$$ is the base period and $$f_0$$ is base frequency accordingly. In the above definition,
+In the above equations, $$T_0$$ is the base period and $$f_0$$ is the base frequency accordingly. In the above definition,
 $$t_0$$ is the (pseudo) start time of the step in which the amplitude is defined.
 
 ## Syntax

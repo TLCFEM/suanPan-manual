@@ -22,7 +22,7 @@ Here we show the built-in material template.
 
 /**
  * \brief It is recommended to store data, especially constant data, in a simple
- * structure. The motivation is to obtain a clear interface so that store and recover
+ * structure. The motivation is to obtain a clear interface so that storage and recovery
  * of objects will be easier.
  */
 struct MaterialExampleData {

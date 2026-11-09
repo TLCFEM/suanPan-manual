@@ -4,7 +4,7 @@
 
 To avoid all the hassles, this manual can be viewed locally via `docker`.
 
-Simply run the following command, the manual will be available at [http://localhost:8000](http://localhost:8000).
+Simply run the following command, and the manual will be available at [http://localhost:8000](http://localhost:8000).
 
 ```bash
 docker run --rm -d -p 8000:8000/tcp ghcr.io/tlcfem/suanpan-manual:latest
@@ -63,7 +63,7 @@ Alternatively, if the `doxygen` documentation is required, the following command
 python -m pip install -e .
 ```
 
-Note `doxygen` and `git` are required to be available.
+Note that `doxygen` and `git` are required to be available.
 This also installs a custom mkdocs plugin to overwrite inline math expressions to properly render them.
 
 #### Build and Run

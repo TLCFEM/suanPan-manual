@@ -1,6 +1,6 @@
 # Logic
 
-Multiple criteria can be combined to emit termination signal under certain logical conditions.
+Multiple criteria can be combined to emit a termination signal under certain logical conditions.
 
 ## Syntax
 

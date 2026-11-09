@@ -1,7 +1,7 @@
 # import
 
 The `import` command is used to load external libraries. Drop the library file `.dll` (or `.so` or `.dylib`) to the same
-folder contains the executable, one can use following command to import it.
+folder containing the executable, and one can use the following command to import it.
 
 ```
 import (1)
@@ -15,7 +15,7 @@ there is no need to explicitly import the library. It will be done automatically
 
 Say for example, the external library `ElementExample.dll` contains the corresponding function to create an
 external `ElementExample` object. According to the default naming convention, the function will be named
-as `void new_elementexample()`. To define a `ElementExample` element, one can simply use
+as `void new_elementexample()`. To define an `ElementExample` element, one can simply use
 
 ```
 element ElementExample !... element definition goes here

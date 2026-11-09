@@ -49,7 +49,7 @@ We consider a very basic, elastic-perfectly plastic response.
 We choose a moderate value $$400~\text{MPa}$$ for initial yield stress.
 
 The evolution rate $$u$$ of yield ratio controls the curvature.
-A higher value $$u$$ results in a faster approaching, making the response closer to conventional elastic-perfectly plastic.
+A higher value $$u$$ results in a faster approach, making the response closer to conventional elastic-perfectly plastic.
 However, the conventional bi-linear response is not realistic, and the stiffness shows a discontinuity/jump at the yielding point.
 
 The introduction of yield ratio $$z$$ ensures a controllable smooth transition from the conventional 'elastic' region to the 'plastic' one.
@@ -151,11 +151,11 @@ exit
 ## Isotropic Hardening
 
 On top of the initial yield stress, a saturation can be added.
-The response exponentially approaches the saturation stress, this can be accompanied with a linear hardening as well.
+The response exponentially approaches the saturation stress, this can be accompanied by a linear hardening as well.
 
 Here, we choose a linear hardening modulus $$2000~\text{MPa}$$, which is $$0.1$$ of elastic modulus.
 However, this hardening modulus is measured with plastic strain, the total response would present a different slope.
-We further choose a saturation of $$200~\text{MPa}$$, so the total stress shall be $$600~\text{MPa}$$, in absence of linear hardening.
+We further choose a saturation of $$200~\text{MPa}$$, so the total stress shall be $$600~\text{MPa}$$, in the absence of linear hardening.
 
 We shall see that $$m^s_\text{iso}$$ controls saturation speed.
 
@@ -241,8 +241,8 @@ exit
 
 ## Kinematic Hardening
 
-Similarly, kinematic hardening also saturated to $$a^i$$.
-In additional to that, since it is defined that the saturation itself is not a constant, itself can be saturated again.
+Similarly, kinematic hardening also saturates to $$a^i$$.
+In addition to that, since it is defined that the saturation itself is not a constant, it can itself be saturated again.
 We choose a $$a^i=100~\text{MPa}$$ with potentially another $$150~\text{MPa}$$ saturation, resulting in $$500~\text{MPa}$$ to $$650~\text{MPa}$$ in total, depending on the configuration.
 
 
@@ -328,7 +328,7 @@ exit
 ## Ratcheting
 
 The original subloading surface model shows excessive plastic strain accumulation under cyclic loading.
-The extended version addresses such an issue with the assist of the elastic core.
+The extended version addresses such an issue with the aid of the elastic core.
 It is controlled by $z_e$ and $c_e$, the former controls the size, while the latter controls the rate.
 
 To illustrate, we choose a bilinear hardening model as the basis.

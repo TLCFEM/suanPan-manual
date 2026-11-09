@@ -5,7 +5,7 @@ downloaded [here](particle-collision.zip).
 
 ## General Information
 
-The container is assumed to be a square with edge length of $$10$$. A certain number of nodes are randomly generated
+The container is assumed to be a square with an edge length of $$10$$. A certain number of nodes are randomly generated
 within the container with randomly generated initial velocities. A small program is written to generate the model
 script. One could compile the `Generator.cpp` file and run it with the number of particles needed. For example,
 
@@ -24,7 +24,7 @@ $$
 F(d)=\alpha\ln\left(\dfrac{d}{s}\right),
 $$
 
-where $$s$$ is the approximate size of particles, $$\alpha$$ is a factor that can be used to adjust response. To define
+where $$s$$ is the approximate size of the particles, $$\alpha$$ is a factor that can be used to adjust response. To define
 such a collision, one can use
 
 ```

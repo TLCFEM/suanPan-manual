@@ -5,7 +5,7 @@ initialization procedure, all valid elements will request a copy of associated m
 problem domain.
 
 Density is treated as a material property so in order to define consistent mass, often a proper density shall be
-assigned in the definition of the material prototypes. Most material models has density as the final optional input
+assigned in the definition of the material prototypes. Most material models have density as the final optional input
 argument.
 
 Please refer to the specific type of materials for details.

@@ -17,7 +17,7 @@ The associated plasticity is assumed.
 Both isotropic and kinematic hardening rules are employed.
 
 Although the plastic flow is associative, the hardening rules are not.
-As the result, the consistent tangent modulus is not symmetric.
+As a result, the consistent tangent modulus is not symmetric.
 
 ### Isotropic Hardening
 
@@ -59,7 +59,7 @@ Check the older syntax in the older version of the documentation.
 material ArmstrongFrederick (1) (2) (3) (4) (5) (6) (7) [(8) (9)...] [10]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, yield stress
 # (5) double, linear hardening modulus
 # (6) double, saturation stress

@@ -15,7 +15,7 @@ Please note the formulation is based on the first reference, which is a revised 
 Strictly speaking, the `SectionNM` is not a section, as a conventional section takes sectional elongation and curvature
 as input and computes sectional force and moment as output.
 The `SectionNM` takes elemental deformation and resistance (which are local quantities of two end nodes)
-and directly compute the force and moment.
+and directly computes the force and moment.
 Loosely speaking, the `SectionNM` is a special model that accounts for two end sections simultaneously.
 
 According to [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176), the whole model can be implemented at the element level.

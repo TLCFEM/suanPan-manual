@@ -26,7 +26,7 @@ $$
 \sqrt{\dfrac{f_y}{100~\text{MPa}}}\dfrac{L}{D}.
 $$
 
-Since this parameter is calibrated according to dimensional constant $$100~\text{MPa}$$, the whole analysis must then
+Since this parameter is calibrated according to the dimensional constant $$100~\text{MPa}$$, the whole analysis must then
 use the same unit system.
 
 This is a common issue in lots of phenomenological models, which lack a clear implication of those ad-hoc parameters.

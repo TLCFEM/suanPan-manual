@@ -18,7 +18,7 @@ The `Ramp` amplitude is the default amplitude that would be used if no valid amp
 ## Syntax
 
 ```text title="Linear"
-amplitutde Linear (1) (2)
+amplitude Linear (1) (2)
 # (1) int, unique amplitude tag
 # (2) double, slope V
 

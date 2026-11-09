@@ -12,7 +12,7 @@ material Prestrain (1) (2) (3) (4)
 # (1) int, unique material tag
 # (2) int, underlying material tag
 # (3) int, amplitude tag, set to 0 to use a ramp function
-# (4) double, maginutde
+# (4) double, magnitude
 ```
 
 ## Remarks

@@ -1,6 +1,6 @@
 # CustomDP
 
-Drucker-Prager model With Custom Hardening
+Drucker-Prager Model With Custom Hardening
 
 ## Syntax
 
@@ -8,7 +8,7 @@ Drucker-Prager model With Custom Hardening
 material CustomDP (1) (2) (3) (4) (5) (6) (7) [8]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, \eta_y
 # (5) double, \eta_f
 # (6) double, \xi

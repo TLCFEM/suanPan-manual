@@ -1,15 +1,15 @@
 # Material1D
 
-In additional to the default output types supported by all materials, all uniaxial material models support the following basic output types.
+In addition to the default output types supported by all materials, all uniaxial material models support the following basic output types.
 
 | variable label | physical meaning         |
 | -------------- | ------------------------ |
-| SP             | principle stress         |
-| EP             | principle strain         |
-| EEP            | principle elastic stress |
-| PEP            | principle plastic strain |
+| SP             | principal stress         |
+| EP             | principal strain         |
+| EEP            | principal elastic stress |
+| PEP            | principal plastic strain |
 
-All principle values are identical to the normal ones for uniaxial material models.
+All principal values are identical to the normal ones for uniaxial material models.
 
 Depending on the specific material model, additional output types may be available.
 

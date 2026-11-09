@@ -2,9 +2,9 @@
 
 Record Model Response
 
-The available output types are listed in [OutputType](OutputType.md) file.
+The available output types are listed in the [OutputType](OutputType.md) file.
 
-To control the folders to which the recorder will write the output, please check [OutputFolder](OutputFolder.md) file.
+To control the folders to which the recorder will write the output, please check the [OutputFolder](OutputFolder.md) file.
 
 Not all quantities at every time step need to be stored. Only those explicitly specified will be stored as history
 output.
@@ -12,7 +12,7 @@ output.
 Currently, there are several types of recorders. Analysts can choose to record either **element response** at
 integration points (strain, stress, etc., some elements support response at elemental nodes) or **nodal response** at
 model nodes (displacement, velocity, acceleration, reaction, etc.). The third type supports the output of the summation
-of the same quantity of several nodes/elements. Alternatively, analyst can recorder global quantities such as global
+of the same quantity of several nodes/elements. Alternatively, the analyst can record global quantities such as global
 stiffness/mass, global kinetic energy, etc.
 
 ## Syntax
@@ -25,7 +25,7 @@ recorder (1) plain (2) (3) [every 4] [5...]
 recorder (1) hdf5 (2) (3) [every 4] [5...]
 # (1) int, unique recorder tag
 # (2) string, recorder type
-# (3) string, object type that needs to be recorded
+# (3) string, output type
 # [4] int, optional argument with leading keyword "every" to indicate the interval of recording,
 # for example: "every 10" means the recorder will record the response every ten converged substeps.
 # [5...] int, tags of elements/nodes, etc.
@@ -55,7 +55,7 @@ recorder (1) hdf5 Eigen
 # to record response of the whole model, this one only supports HDF5
 recorder (1) hdf5 Frame (3) [every 4]
 # (1) int, unique recorder tag
-# (3) string, object type that needs to be recorded
+# (3) string, output type
 # [4] int, optional argument with leading keyword "every" to indicate the interval of recording,
 # for example: "every 10" means the recorder will record the response every ten converged substeps.
 ```
@@ -67,12 +67,12 @@ recorder (1) hdf5 Frame (3) [every 4]
 recorder (1) plain Visualisation (3) [every 4]
 recorder (1) hdf5 Visualisation (3) [every 4]
 # (1) int, unique recorder tag
-# (3) string, object type that needs to be recorded
+# (3) string, output type
 # [4] int, optional argument with leading keyword "every" to indicate the interval of recording,
 # for example: "every 10" means the recorder will record the response every ten converged substeps.
 ```
 
-The `Visualisation` will immediately write the disk with incremental file names.
+The `Visualisation` will immediately write to the disk with incremental file names.
 
 ## Node Recorder
 
@@ -82,7 +82,7 @@ To record nodal response,
 recorder (1) plain Node (3) [every 4] [5...]
 recorder (1) hdf5 GroupNode (3) [every 4] [5...]
 # (1) int, unique recorder tag
-# (3) string, object type that needs to be recorded
+# (3) string, output type
 # [4] int, optional argument with leading keyword "every" to indicate the interval of recording,
 # for example: "every 10" means the recorder will record the response every ten converged substeps.
 # [5...] int, tags of nodes or node groups, etc.
@@ -96,7 +96,7 @@ Nodal scalar response can be directly summed up by using the `Sum` recorder.
 recorder (1) plain Sum (3) [every 4] [5...]
 recorder (1) hdf5 GroupSum (3) [every 4] [5...]
 # (1) int, unique recorder tag
-# (3) string, object type that needs to be recorded
+# (3) string, output type
 # [4] int, optional argument with leading keyword "every" to indicate the interval of recording
 # [5...] int, tags of nodes or node groups, etc.
 ```
@@ -111,7 +111,7 @@ To record element response,
 recorder (1) plain Element (3) [every 4] [5...]
 recorder (1) hdf5 GroupElement (3) [every 4] [5...]
 # (1) int, unique recorder tag
-# (3) string, object type that needs to be recorded
+# (3) string, output type
 # [4] int, optional argument with leading keyword "every" to indicate the interval of recording,
 # for example: "every 10" means the recorder will record the response every ten converged substeps.
 # [5...] int, tags of elements or element groups, etc.
@@ -129,7 +129,7 @@ Currently, it is possible to record energy quantities.
 recorder (1) plain Global (3) [every 4]
 recorder (1) hdf5 Global (3) [every 4]
 # (1) int, unique recorder tag
-# (3) string, object type that needs to be recorded
+# (3) string, output type
 # [4] int, optional argument with leading keyword "every" to indicate the interval of recording,
 # for example: "every 10" means the recorder will record the response every ten converged substeps.
 ```

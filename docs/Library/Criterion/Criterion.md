@@ -1,8 +1,8 @@
 # Criterion
 
 !!! warning "activation"
-    Each step can have multiple criteria, they shall be defined in each step block.
-    The criteria defined before the first step is not activated by default.
+    Each step can have multiple criteria; they shall be defined in each step block.
+    The criteria defined before the first step are not activated by default.
 
     In the following example, the first `MaxHistory` criterion and the second `MinHistory` criterion are defined before the definition of the first step.
     If the third `LogicOR` criterion is not defined, no criterion will be used in the analysis.

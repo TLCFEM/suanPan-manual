@@ -32,7 +32,7 @@ for theory, formulation and implementation details.
 material Subloading (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) (15) [16]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poisson's ratio
+# (3) double, Poisson's ratio
 # (4) double, isotropic initial stress, \sigma^i>=0
 # (5) double, isotropic linear hardening modulus, k_{iso}>=0
 # (6) double, isotropic saturation stress, \sigma^s>=0

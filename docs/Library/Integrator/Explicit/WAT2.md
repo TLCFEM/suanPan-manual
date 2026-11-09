@@ -32,7 +32,7 @@ The default value of $$r=1/3$$ yields $$C_1=1/3$$.
 It is a two-stage method implemented in an alternating fashion.
 
 !!! warning
-    It is claimed to have a third-order accuracy for displacement and velocity.
+    It is claimed to have third-order accuracy for displacement and velocity.
     However, it is only valid for results at the end of the time step (the second stage after applying the corrector).
     For the results at the end of the first stage, it is only second-order accurate.
     For nonlinear problems, the error introduced in the first stage will be carried over to the history of the material model, thus affecting the results of the second stage.

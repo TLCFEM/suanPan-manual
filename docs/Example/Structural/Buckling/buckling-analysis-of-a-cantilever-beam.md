@@ -9,7 +9,7 @@ $$
 EI=E\dfrac{bh^3}{12}=1200\times\dfrac{1}{12}=100.
 $$
 
-According to the Euler's formula, the critical axial load of such a cantilever beam is given as
+According to Euler's formula, the critical axial load of such a cantilever beam is given as
 
 $$
 P_{cr}=\dfrac{\pi^2EI}{(KL)^2}
@@ -25,7 +25,7 @@ $$
 
 ## Model Geometry
 
-We use the `B21` element to model the problem. Since `B21` incorporates with sections, we need to define a proper
+We use the `B21` element to model the problem. Since `B21` incorporates sections, we need to define a proper
 section, the `Rectangle2D` is used. The geometry is stored in file `geometry.supan`.
 
 ```
@@ -67,7 +67,7 @@ fix 1 E 1
 cload 1 0 -1E-2 1 6
 ```
 
-We could then create a `buckle` step and analysis the problem. Alternatively, the keyword `buckling` could be used. It
+We could then create a `buckle` step and analyse the problem. Alternatively, the keyword `buckling` could be used. It
 shall be noted, the stiffness in nonlinear analysis may not be positive definite, thus not all matrix storage schemes
 are valid to solve the problem. It is recommended to use asymmetric schemes.
 
@@ -98,13 +98,13 @@ buckling load multiplier: 2.48778147E+02.
 Finished in 0.005 seconds.
 ```
 
-The buckling load is then the multiplication of initial reference load and multiplier.
+The buckling load is then the multiplication of the initial reference load and the multiplier.
 
 $$
 P_{cr}=2.488\times10^2\times1\times10^{-2}=2.488.
 $$
 
-This is close to the Euler's solution. Mesh refinement could be applied to obtain closer value. The effect of different
+This is close to Euler's solution. Mesh refinement could be applied to obtain a closer value. The effect of different
 magnitudes of initial reference load is shown as below.
 
 ![buckling analysis](buckling-analysis-of-a-cantilever-beam.svg)

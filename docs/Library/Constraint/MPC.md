@@ -38,5 +38,5 @@ constraint mpc (1) (2) (3) [(4) (5) (6)...]
 For example, to enforce identical displacement between `U1` of node `101` and `U2` of node `102`, one can use the following definition.
 
 ```text
-constraint mpc 1 0 0. 101 u1 1. 102 u2 -1,
+constraint mpc 1 0 0. 101 u1 1. 102 u2 -1.
 ```

@@ -15,7 +15,7 @@ material CDPM2ISO (1) [2-16]
 material CDPM2ANISO (1) [2-16]
 # (1) int, unique material tag
 # [2] double, elastic modulus, default: 3E4
-# [3] double, poissons ratio, default: 0.3
+# [3] double, Poisson's ratio, default: 0.3
 # [4] double, tension strength (positive), default: 3.0
 # [5] double, compression strength (positive), default: 30.0
 # [6] double, q_h0, initial hardening factor, default: 0.3
@@ -39,7 +39,7 @@ material CDPM2ANISO (1) [2-16]
    to [10.1016/j.ijsolstr.2013.07.008](https://doi.org/10.1016/j.ijsolstr.2013.07.008).
 4. The default `CDPM2` uses isotropic damage, which is equivalent to `CDPM2ISO`.
 5. The token `CDPM2ANISO` uses anisotropic damage.
-6. If damage is activated, both tension and compression use the exponential damage model, the degradation is controlled
+6. If damage is activated, both tension and compression use the exponential damage model; the degradation is controlled
    by parameters [14] and [15]. The characteristic length can be accounted for by modifying them.
 
 Details of implementation can be seen in the corresponding section
@@ -73,7 +73,7 @@ $$
 $$
 
 In the above expressions, $$\mathbf{\bar{\sigma}}$$ is the effective stress (undamaged),
-$$\mathbf{\bar{\sigma}}_c$$ and $$\mathbf{\bar{\sigma}}_t$$ are compressive and tensile part of the effective stress.
+$$\mathbf{\bar{\sigma}}_c$$ and $$\mathbf{\bar{\sigma}}_t$$ are compressive and tensile parts of the effective stress.
 They are computed via eigen decomposition of the effective stress tensor.
 $$\omega_c$$ and $$\omega_t$$ are the compressive and tensile damage variables, respectively.
 

@@ -8,11 +8,11 @@ the bilinear backbone.
 ## Syntax
 
 ```text title="NLE1D01"
-material NLE1D01 (1) (2) (3) (4) [5] [6]
+material NLE1D01 (1) (2) (3) (4) (5) [6]
 # (1) int, unique material tag
 # (2) double, elastic modulus
 # (3) double, turning stress
 # (4) double, hardening ratio
-# [5] double, radius of transition, default: 20
+# (5) double, radius of transition
 # [6] double, density, default: 0
 ```

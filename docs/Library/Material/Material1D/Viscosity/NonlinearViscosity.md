@@ -3,7 +3,7 @@
 Nonlinear Viscosity Model
 
 The `NonlinearViscosity` class is an abstract class that provides a general nonlinear framework for implementations of
-various viscous type material, such as a dashpot.
+various viscous type materials, such as a dashpot.
 
 The stress shall be computed by
 

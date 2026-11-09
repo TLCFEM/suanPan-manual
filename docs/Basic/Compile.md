@@ -19,7 +19,7 @@ There is no need to install any dependencies on the host machine.
 
 The `tlcfem/suanpan-env` image also supports `arm64`, in which `OpenBLAS` is used as the linear algebra driver.
 
-On AMD platforms, it is known that `MKL` may throttle thus yields a poor performance, it may be necessary to use a specific version of `OpenBLAS` or [`AMD Optimizing CPU Libraries (AOCL)`](https://www.amd.com/en/developer/aocl.html) instead.
+On AMD platforms, it is known that `MKL` may throttle and thus yield poor performance; it may be necessary to use a specific version of `OpenBLAS` or [`AMD Optimizing CPU Libraries (AOCL)`](https://www.amd.com/en/developer/aocl.html) instead.
 
 ### Docker Images
 
@@ -34,7 +34,7 @@ docker build -t suanpan -f ./Rocky.Dockerfile .
 ```
 
 Once the image is built, run the container and use `sp`, `suanpan` or `suanPan` to invoke the program in the container.
-Maybe it is necessary to map some folders to the container.
+It may be necessary to map some folders to the container.
 
 ```bash
 docker run -it --rm suanpan
@@ -43,7 +43,7 @@ suanpan -v
 ```
 
 Docker files provide a standard reproducible environment and a reference configuration.
-One can always introduce adaptions to cater various needs.
+One can always introduce adaptations to cater to various needs.
 
 ## Without Docker
 
@@ -57,7 +57,7 @@ It mainly targets the `amd64` architecture.
 2.  The linear algebra driver used is [OpenBLAS](https://github.com/xianyi/OpenBLAS). You may want to compile it with the
     optimal configuration based on the specific machine. Otherwise, precompiled binaries (dynamic platform) are available
     in this [repository](https://github.com/TLCFEM/prebuilds).
-3.  It is strongly recommended installing Intel MKL for potentially better performance.
+3.  It is strongly recommended to install Intel MKL for potentially better performance.
 4.  Please be aware that MKL is throttled on AMD platforms. Performance comparisons can be seen for
     example [here](https://github.com/flame/blis/blob/master/docs/Performance.md). If you have AMD CPUs please collect
     more knowledge to determine which linear algebra library is more suitable.
@@ -67,13 +67,13 @@ It mainly targets the `amd64` architecture.
 A number of new features from new standards are utilized.
 To compile the binary, a compiler that supports **C++20** is required.
 
-GCC 13, Clang 18, VS 2026, Intel compilers and later version of those compilers are tested with the source code.
+GCC 13, Clang 18, VS 2026, Intel compilers and later versions of those compilers are tested with the source code.
 
 On Windows, Visual Studio with Intel oneAPI toolkit is recommended.
 Alternatively, [WinLibs](http://winlibs.com/) can be used if GCC compilers are preferred.
 
 On other platforms (Linux and macOS), simply use GCC which comes with a valid Fortran compiler.
-Clang can also be used for C/CPP code, but since Clang and GCC have different supports for C++ new standards, successful
+Clang can also be used for C/CPP code, but since Clang and GCC have different support for new C++ standards, successful
 compilation is not guaranteed with Clang.
 
 ### Obtain Source Code
@@ -104,7 +104,7 @@ Instead, use VS Code with CMake extension to automatically configure the project
 
 A solution file is provided under `MSVC/suanPan` folder. There are two configurations:
 
-1.  `Debug`: Assume no available Fortran compiler, all Fortran related libraries are provided as precompiled DLLs. Use
+1.  `Debug`: Assumes no available Fortran compiler; all Fortran related libraries are provided as precompiled DLLs. Use
     OpenBLAS for linear algebra. Multithreading disabled. Visualisation disabled. HDF5 support disabled.
 2.  `Release`: Fortran libraries are configured with Intel compilers. Use MKL for linear algebra. Multithreading enabled.
     Visualisation enabled with VTK version 9.5. HDF5 support enabled. CUDA enabled.
@@ -116,7 +116,7 @@ Simply open the solution and switch to Debug configuration, ignore all potential
 
 To compile `Release` version, please
 
-1.  Make sure oneAPI both Base and HPC toolkits, as well as VS integration, are installed.
+1.  Make sure both oneAPI Base and HPC toolkits, as well as VS integration, are installed.
     The MKL is enabled via integrated option `<UseInteloneMKL>Parallel</UseInteloneMKL>`.
 
 2.  Make sure CUDA is installed. The environment variable `$(CUDA_PATH)` is used to locate headers.
@@ -179,7 +179,7 @@ Check the following recording.
 
 ##### Install VTK
 
-Ubuntu official repository does not (Fedora does!) contain the latest VTK library. It's better to compile it manually.
+The Ubuntu official repository does not (Fedora does!) contain the latest VTK library. It's better to compile it manually.
 
 1.  Install OpenGL first, as well as compilers if necessary.
 
@@ -209,7 +209,7 @@ Ubuntu official repository does not (Fedora does!) contain the latest VTK librar
     ```
 
 5.  Now obtain `suanPan` source code and unpack it. To configure it with VTK support, users may use the following
-    flag `-DSP_ENABLE_VTK=ON`. If `FindVTK` is presented and `VTK` is installed to default location, there is no need
+    flag `-DSP_ENABLE_VTK=ON`. If `FindVTK` is present and `VTK` is installed to default location, there is no need
     to provide the variable `VTK_PATH`, otherwise point it to the `lib/cmake/vtk-9.1` folder.
 
 ##### Install MKL
@@ -217,7 +217,7 @@ Ubuntu official repository does not (Fedora does!) contain the latest VTK librar
 The provided CMake configuration covers both `oneMKL` and `Intel MKL 2020`. Please note MKL is included in oneAPI
 toolkit starting from 2021, which has a different folder structure compared to Intel Parallel Studio.
 
-The following guide is a manual installation is based on Ubuntu terminal using the official repository.
+The following guide is a manual installation based on the Ubuntu terminal using the official repository.
 See [this page](https://www.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/top/installation/install-using-package-managers/apt.html)
 for details.
 
@@ -349,18 +349,18 @@ Currently, the following are supported and tested.
 2. [`Intel oneAPI MKL`](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html)
 3. [`AMD Optimizing CPU Libraries (AOCL)`](https://www.amd.com/en/developer/aocl.html)
 
-As a general guideline, when it comes to choose a proper implementation, the following points shall be considered.
+As a general guideline, when it comes to choosing a proper implementation, the following points shall be considered.
 
 1. From my very personal experience, `OpenBLAS` is okay for small matrices on a few cores, but could be slow when the size hits some threshold.
    This is also seen in this [benchmark](https://github.com/flame/blis/blob/master/docs/Performance.md).
 2. `Intel oneAPI MKL` is exclusively optimised for Intel CPUs, and may throttle on other platforms.
-   This [benchmark](https://github.com/flame/blis/blob/master/docs/Performance.md) show clear differences on AMD platforms.
-3. `AMD Optimizing CPU Libraries (AOCL)` is optimised for AMD CPUs based on `BLIS` and `FLAME` libraries, it performance on both platforms (and others) is superb.
+   This [benchmark](https://github.com/flame/blis/blob/master/docs/Performance.md) shows clear differences on AMD platforms.
+3. `AMD Optimizing CPU Libraries (AOCL)` is optimised for AMD CPUs based on `BLIS` and `FLAME` libraries; its performance on both platforms (and others) is superb.
 
 Thus, use `Intel oneAPI MKL` if it is preferred or an Intel platform is targeted.
 The downside is that `Intel oneAPI MKL` is proprietary and the final binary may have a large size.
 For other cases, use `AMD Optimizing CPU Libraries (AOCL)` when possible.
-The downside it that it may need manual compilation of the libraries for the target OS.
+The downside is that it may need manual compilation of the libraries for the target OS.
 `OpenBLAS` shall be deemed as the last resort and the usage is discouraged as of writing.
 
 ### Build Options
@@ -401,8 +401,8 @@ If CMake GUI is used to configure the project, the following options are availab
     libraries will be used, leading to larger binary size but faster execution and fewer dependencies.
 18. `SP_ENABLE_IOMP`: If enabled, Intel's OpenMP implementation will be used. Otherwise, Default ones (such as GNU OpenMP
     library) will be used.
-19. `SP_ENABLE_MPI`: Enabled cluster support via MPI.
-20. `SP_ENABLE_64BIT_INDEXING`: Enable 64-bit integer for matrix indexing.
+19. `SP_ENABLE_MPI`: Enables cluster support via MPI.
+20. `SP_ENABLE_64BIT_INDEXING`: Enables 64-bit integer for matrix indexing.
 
 !!! warning "multiple runtimes"
     The `SP_ENABLE_IOMP` should be switched on/off based on the compilers used.
@@ -445,21 +445,21 @@ To use `AOCL`, one shall manually compile the `blis` and `flame` libraries in ad
 
 ### 64-bit Indexing
 
-The FEM framework part itself uses `unsigned` 32-bit integer for indexing, this means it supports up to 4 billion objects, for example, nodes and elements.
-This is sufficient at least for the years coming.
+The FEM framework part itself uses `unsigned` 32-bit integer for indexing; this means it supports up to 4 billion objects, for example, nodes and elements.
+This is sufficient at least for the coming years.
 But the linear algebra driver may quickly hit the size limit.
 For [`lp64`](https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models) builds, the indexing capability of a default Fortran integer is around 2 billion.
 If the problem is large enough, the global matrix may have more than 2 billion entries (either dense or sparse storage).
-In this case, it is necessary to using 64-bit indexing, see [`ilp64`](https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models) model.
+In this case, it is necessary to use 64-bit indexing; see the [`ilp64`](https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models) model.
 
 To do so, compile the application with the flag `-DSP_ENABLE_64BIT_INDEXING=ON`.
 
 !!! note
     The bundled `OpenBLAS` binaries are built for `lp64` only.
-    If one decides to use `OpenBLAS`, a `ilp64` version must be provided via `SP_OPENBLAS_PATH`.
+    If one decides to use `OpenBLAS`, an `ilp64` version must be provided via `SP_OPENBLAS_PATH`.
 
 !!! note
     If `SP_ENABLE_MPI=ON` is also enabled, one shall make sure the linked MPI is also compiled with 64-bit integer support.
     [MPICH](https://www.mpich.org/) is known to work well with either 32-bit or 64-bit integer size.
 
-`MKL` provides both versions for `lp64` and `ilp64`, `CMake` will handle the linkage automatically.
+`MKL` provides both versions for `lp64` and `ilp64`; `CMake` will handle the linkage automatically.

@@ -23,7 +23,7 @@ element NMB21 (1) (2) (3) (4) [5]
 
 ## Remarks
 
-Only `NM2D*` sections are supported. There is no validation of section attached, analysts shall make sure proper
+Only `NM2D*` sections are supported. There is no validation of the section attached, analysts shall make sure proper
 sections are used.
 
 See [SectionNM](../../Section/SectionNM/SectionNM.md) for more information about the section.

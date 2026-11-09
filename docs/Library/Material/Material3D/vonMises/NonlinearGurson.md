@@ -59,7 +59,7 @@ $$
 A=\dfrac{f_N}{s_N\sqrt{2\pi}}\exp\left(-\dfrac{1}{2}\left(\dfrac{\varepsilon_m^p-\varepsilon_N}{s_N}\right)^2\right).
 $$
 
-Parameters $$f_N$$, $$s_N$$ and $$\varepsilon_N$$ controls the normal distribution of volume fraction. **If $$f_N=0$$,
+Parameters $$f_N$$, $$s_N$$ and $$\varepsilon_N$$ control the normal distribution of volume fraction. **If $$f_N=0$$,
 the nucleation is disabled. In this case, when $$f_0=0$$, the volume fraction will stay at zero regardless of strain
 history.**
 

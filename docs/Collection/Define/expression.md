@@ -6,9 +6,9 @@ The `expression` command essentially parses a block of plain text into mathemati
 The parsing and evaluation functionalities are powered by [`exprtk`](https://github.com/ArashPartow/exprtk).
 
 The `exprtk` generates an AST from the input text.
-The evaluation of the expression has an on par performance with the native C++ code.
+The evaluation of the expression has performance on par with the native C++ code.
 
-But a customisable expression allows for more flexibility and it is easier to experiment different functions.
+But a customisable expression allows for more flexibility and it is easier to experiment with different functions.
 
 ## Syntax
 
@@ -43,7 +43,7 @@ expression SimpleVector (1) (2) (3) (4)
 This evaluates a vector-valued function $$y:=f(x_1,x_2,\cdots,x_n)$$.
 An assignment must be used to explicitly assign values to the output variables.
 The input arguments can be either scalars or vectors.
-The output argument should be a vector, the size shall be given such that `"y|3"` represents a vector of size 3.
+The output argument should be a vector; the size shall be given such that `"y|3"` represents a vector of size 3.
 
 This form ***does not support*** automatic computation of derivatives.
 Thus, it ***cannot*** be used in models that require automatic computation of derivatives.
@@ -76,7 +76,7 @@ expression SimpleScalar 1 x x^3+x
 
 Here, we use `x` as the free variable and the corresponding expression is `x^3+x`.
 
-For the unixial nonlienar elastic model, the input is strain, which maps to `x`, the output maps to stress.
+For the uniaxial nonlinear elastic model, the input is strain, which maps to `x`, the output maps to stress.
 
 Alternatively, the expression can be stored in a file and loaded by the program.
 

@@ -16,7 +16,7 @@ and [`Damper02`](../../../Element/Special/Damper02.md).
 
 The quadrant damper is implemented.
 
-The damping force is defined as a function of displacement and velocity (or strain and strain rate, depends on what the
+The damping force is defined as a function of displacement and velocity (or strain and strain rate, depending on what the
 input is).
 
 $$
@@ -24,7 +24,7 @@ $$
 $$
 
 The damping coefficient is a function of strain and strain rate that can be expressed as follows, which shows different
-response in different quadrants.
+responses in different quadrants.
 
 $$
 \begin{align*} \eta\left(\varepsilon,\dot\varepsilon\right)
@@ -36,7 +36,7 @@ $$
 ## Syntax
 
 ```text title="Viscosity02"
-material Viscosity02 (1) (2) (3) [4] [5] [6] [7] [8]
+material Viscosity02 (1) (2) (3) [4] [5] [6] [7] [8] [9]
 # (1) int, unique tag
 # (2) double, alpha
 # (3) double, damping coefficient \eta_1
@@ -45,4 +45,5 @@ material Viscosity02 (1) (2) (3) [4] [5] [6] [7] [8]
 # [6] double, damping coefficient \eta_4, default: (3)
 # [7] double, steepness factor g_1, default: 1E3
 # [8] double, steepness factor g_2, default: 1E3
+# [9] double, limit, default: 1.0
 ```

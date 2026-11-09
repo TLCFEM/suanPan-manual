@@ -1,6 +1,6 @@
 # Embed2D
 
-The `Embed2D` constraint implements the embedded constraint in 2D space via multiplier method.
+The `Embed2D` constraint implements the embedded constraint in 2D space via the multiplier method.
 
 ## Syntax
 

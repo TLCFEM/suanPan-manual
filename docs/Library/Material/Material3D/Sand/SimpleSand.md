@@ -16,7 +16,7 @@ for details on the theory.
 material SimpleSand (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) [14]
 # (1) int, unique material tag
 # (2) double, elastic modulus
-# (3) double, poissons ratio
+# (3) double, Poisson's ratio
 # (4) double, m, size of yield surface
 # (5) double, A, dilatancy related parameter, often negative
 # (6) double, h, dilatancy related hardening parameter

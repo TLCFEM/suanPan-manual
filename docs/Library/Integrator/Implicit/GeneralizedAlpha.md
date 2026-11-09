@@ -22,7 +22,7 @@ integrator GeneralizedAlpha (1) (2) (3)
 
 ## Governing Equation
 
-The generalized alpha method assumes that the displacement $$d$$ and the velocity $$v$$ are integrated as such,
+The generalized alpha method assumes that the displacement $$d$$ and the velocity $$v$$ are integrated as follows,
 
 $$
 d_{n+1}=d_n+\Delta{}tv_n+\Delta{}t^2\left(\left(\dfrac{1}{2}-\beta\right)a_n+\beta{}a_{n+1}\right)
@@ -33,7 +33,7 @@ $$
 v_{n+1}=v_n+\Delta{}t\left(1-\gamma\right)a_n+\Delta{}t\gamma{}a_{n+1}.
 $$
 
-The equation of motion is expressed at somewhere between $$t_n$$ and $$t_{n+1}$$.
+The equation of motion is expressed somewhere between $$t_n$$ and $$t_{n+1}$$.
 
 $$
 Ma_{n+1-\alpha_m}+Cv_{n+1-\alpha_f}+Kd_{n+1-\alpha_f}=F_{n+1-\alpha_f},
@@ -56,7 +56,7 @@ $$
 \alpha_m\le\alpha_f\le\dfrac{1}{2},\quad\beta\ge\dfrac{1}{4}+\dfrac{1}{2}\left(\alpha_f-\alpha_m\right).
 $$
 
-Only one parameter is required, the spectral radius $$\rho_\infty$$ that ranges from zero to one.
+Only one parameter is required: the spectral radius $$\rho_\infty$$ that ranges from zero to one.
 
 The following expressions are used to determine the values of all constants used.
 
@@ -65,7 +65,7 @@ $$
 \gamma=\dfrac{1}{2}-\dfrac{\rho_\infty-1}{\rho_\infty+1},\quad \beta=\dfrac{1}{\left(\rho_\infty+1\right)^2}.
 $$
 
-So that the resulting algorithm is unconditionally stable and has a second order accuracy. The target numerical damping
+The resulting algorithm is unconditionally stable and has second order accuracy. The target numerical damping
 for high frequencies is achieved while that of low frequencies is minimized.
 
 The recommended values of the spectral radius $$\rho_\infty$$ range from $$0.5$$ to $$0.8$$.

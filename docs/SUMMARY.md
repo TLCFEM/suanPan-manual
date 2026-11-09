@@ -13,6 +13,7 @@
 * [Compile Application](Basic/Compile.md)
 * [Build Documentation](Basic/Build.md)
 * [Architecture Design](Basic/Architecture.md)
+* [Parallelism Mechanisms](Basic/Parallelism.md)
 * [On Clusters](Basic/Cluster.md)
 
 ## Example
@@ -252,7 +253,6 @@
     * [Mindlin](Library/Element/Plate/Mindlin.md)
 * Shell
     * [DKTS3](Library/Element/Shell/DKTS3.md)
-    * [DKTS4](Library/Element/Shell/DKTS4.md)
     * [S4](Library/Element/Shell/S4.md)
     * [SGCMS](Library/Element/Shell/SGCMS.md)
     * [ShellBase](Library/Element/Shell/ShellBase.md)
@@ -398,6 +398,7 @@
         * [CDPM2](Library/Material/Material3D/Concrete/CDPM2.md)
         * [Rebar3D](Library/Material/Material3D/Concrete/Rebar3D.md)
         * [TableCDP](Library/Material/Material3D/Concrete/TableCDP.md)
+        * [AbaqusCDP](Library/Material/Material3D/Concrete/AbaqusCDP.md)
         * [CustomCDP](Library/Material/Material3D/Concrete/CustomCDP.md)
     * Damage
         * [IsotropicDamage](Library/Material/Material3D/Damage/IsotropicDamage.md)
@@ -428,7 +429,7 @@
         * [YLD0418P](Library/Material/Material3D/Orthotropic/YLD0418P.md)
     * Sand
         * [SimpleSand](Library/Material/Material3D/Sand/SimpleSand.md)
-        * [DafalisaManzari](Library/Material/Material3D/Sand/DafaliasManzari.md)
+        * [DafaliasManzari](Library/Material/Material3D/Sand/DafaliasManzari.md)
     * vonMises
         * [ArmstrongFrederick](Library/Material/Material3D/vonMises/ArmstrongFrederick.md)
         * [BilinearJ2](Library/Material/Material3D/vonMises/BilinearJ2.md)

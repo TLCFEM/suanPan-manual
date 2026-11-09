@@ -20,15 +20,15 @@ Available keywords and corresponding parameters are listed as follows.
 1. `scale` controls the scale of deformed configuration. A single double value is required as parameter. Default is zero (undeformed). Example: `scale 2`
 2. `type` controls which quantity shall be extracted and plotted. A single string is required as parameter. Available
    values can be seen in output types. Example: `type U1`
-3. `fontsize` controls the font size of legend, title, etc. This has no effect if the plot is saved.
+3. `fontsize` controls the font size of the legend, title, etc. This has no effect if the plot is saved.
    Example: `fontsize 14`
-4. `nobar` disables legend in plot window.
-5. `size` controls the size of plot window. Two double values are required. Examples: `size 300 400`
+4. `nobar` disables the legend in the plot window.
+5. `size` controls the size of the plot window. Two double values are required. Examples: `size 300 400`
 6. `save` indicates the file name. A string value is required. The extension suffix will be automatically appended. Example: `save S11`
 
 ## Remarks
 
-Invoking this command with proper parameters spawn an interactive rendering window using VTK.
+Invoking this command with proper parameters spawns an interactive rendering window using VTK.
 It offers a quick view of the model.
 The spawned window can be closed by pressing `q` key.
 The spawned window does not block the application so it is possible to plot multiple quantities at the same time.

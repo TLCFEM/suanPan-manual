@@ -2,7 +2,7 @@
 
 Sometimes, it is necessary to apply multiple convergers.
 
-The `Logic` family provides some logical combinations of convergers so that it is convenient to chain arbitrary number
+The `Logic` family provides some logical combinations of convergers so that it is convenient to chain an arbitrary number
 of convergers together.
 
 ## Syntax
@@ -22,7 +22,7 @@ Let's assume, by default, the relative increment of displacement [`RelIncreDisp`
 is preferred. However, when performing a response history analysis, when the first displacement increment of some
 substep is close to zero, then a small relative increment of displacement is not achievable due to machine precision. In
 this case, we want to add another converger using absolute increment of
-displacement [`AbsIncreDisp`](../Absolute/AbsIncreDisp.md) converger so that when absolute increment displacement is
+displacement [`AbsIncreDisp`](../Absolute/AbsIncreDisp.md) converger so that when the absolute displacement increment is
 small enough, the analysis is continued.
 
 It is possible to use `LogicOR` to achieve this.
@@ -44,7 +44,7 @@ converger RelIncreDisp 1 1E-10 10 true
 converger AbsIncreDisp 2 1E-10 10 true
 ```
 
-The chained convergers would be initialised recursively. This means it is possible to chain arbitrary number of
+The chained convergers would be initialised recursively. This means it is possible to chain an arbitrary number of
 convergers together. For example,
 
 ```

@@ -24,7 +24,7 @@ element NMB21EH (1) (2) (3) (4) [5]
 
 ## Remarks
 
-Only `NM2D*` sections are supported. There is no validation of section attached, analysts shall make sure proper
+Only `NM2D*` sections are supported. There is no validation of the section attached, analysts shall make sure proper
 sections are used.
 
 The `NMB21EL` element releases the moment at low node `i` and the `NMB21EH` element releases the moment at high node 

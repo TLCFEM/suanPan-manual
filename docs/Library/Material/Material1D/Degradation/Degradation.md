@@ -35,7 +35,7 @@ where $$\bar{K}$$ is the effective stiffness of the intact material model.
 
 ### Stress Dependent Degradation
 
-Assuming the degradation factor depends on the strain history, namely, $$D=D(\bar{\sigma}_{max})$$.
+Assuming the degradation factor depends on the stress history, namely, $$D=D(\bar{\sigma}_{max})$$.
 In which $$\bar{\sigma}_{max}$$ is the maximum effective stress of the whole loading history.
 
 Where damage evolution is activated, the stiffness can be expressed as
