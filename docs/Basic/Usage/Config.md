@@ -1,4 +1,4 @@
-# Configuration
+# Command-Line Configuration
 
 All available options can be printed via the `--help` flag.
 
@@ -18,8 +18,7 @@ Optional arguments:
 
 ## Disable New Version Check
 
-Some distributions are bundled with an updater that checks for new versions of the application on startup and allows you
-to download new archives if necessary.
+Some distributions are bundled with an updater that checks for new versions of the application on startup and allows you to download new archives if necessary.
 In some fully automated environments, one can disable the check via the `-nu` option.
 
 ```shell
@@ -64,3 +63,5 @@ To disable the output, use the `-np` option.
 ```shell
 suanpan -np -f <your_input_model.sp>
 ```
+
+Continue with [Editor Setup](Editors.md).

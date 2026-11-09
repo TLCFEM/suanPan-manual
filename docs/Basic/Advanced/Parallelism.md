@@ -1,4 +1,4 @@
-# Parallelism Mechanisms in suanPan
+# Parallelism Mechanisms
 
 **An analysis of shared-memory (thread-based) and distributed-memory (cluster/MPI) parallelism in the suanPan finite element framework.**
 
@@ -15,7 +15,8 @@ suanPan is an open-source finite element framework whose performance-critical co
 | **Distributed memory** (cluster) | Cross-rank assembly & solving | MPI via the **MPL** library | `SP_ENABLE_MPI` | `SUANPAN_DISTRIBUTED` |
 | Heterogeneous (offload) | GPU solvers | CUDA / MAGMA | `SP_ENABLE_CUDA` | `SUANPAN_CUDA` |
 
-Both shared and distributed parallelism funnel through the **`Domain`** object, which owns the element/node/constraint ponds and the global stiffness container. This report focuses on the shared-memory (`SUANPAN_MT`) and distributed-memory (`SUANPAN_DISTRIBUTED`) mechanisms and the data flows through them.
+Both shared and distributed parallelism funnel through the **`Domain`** object, which owns the element/node/constraint ponds and the global stiffness container.
+This report focuses on the shared-memory (`SUANPAN_MT`) and distributed-memory (`SUANPAN_DISTRIBUTED`) mechanisms and the data flows through them.
 
 The two mechanisms are *orthogonal*: the same problem can be run single-node multithreaded, or across a cluster of MPI ranks, or both simultaneously (MPI ranks that are themselves multithreaded).
 
@@ -37,7 +38,8 @@ SP_ENABLE_SYSLIB     (line 81)  →  (none)                        use system TB
 
 ### 2.1 The `SUANPAN_MT` switch (`suanPan.h:184-192`)
 
-The single most important macro for shared-memory parallelism. When defined, the generic `suanpan_sort` / `suanpan_for_each` primitives map to their oneTBB equivalents; otherwise they degrade to the standard library serial versions:
+The single most important macro for shared-memory parallelism.
+When defined, the generic `suanpan_sort` / `suanpan_for_each` primitives map to their oneTBB equivalents; otherwise they degrade to the standard library serial versions:
 
 ```cpp
 // suanPan.h
@@ -80,7 +82,8 @@ Crucially, three **reduction/broadcast helpers** are defined with an identical n
 | `allreduce(x)` | `comm_world.allreduce(mpl::plus, x)` — sum over all ranks | identity |
 | `reduce(x)` | sum to rank 0 only | identity |
 
-This lets ordinary analysis code call `allreduce(...)` / `bcast_from_root(...)` **unconditionally** — on a serial build these are no-ops. MPI init is owned by `mpl::environment` (invoked in `suanPan.cpp:48`), and the ezp/BLACS layer is told *not* to manage its own MPI (`ezp::blacs_env<>::do_not_manage_mpi()`), so a single world communicator is shared everywhere.
+This lets ordinary analysis code call `allreduce(...)` / `bcast_from_root(...)` **unconditionally** — on a serial build these are no-ops.
+MPI init is owned by `mpl::environment` (invoked in `suanPan.cpp:48`), and the ezp/BLACS layer is told *not* to manage its own MPI (`ezp::blacs_env<>::do_not_manage_mpi()`), so a single world communicator is shared everywhere.
 
 > The rank is surfaced in logging via the `[P{n}]` prefix (`suanPan.h:267`) and in recorder filenames (`Recorder/Recorder.cpp:99`) whenever `comm_size > 1`.
 
@@ -90,11 +93,13 @@ This lets ordinary analysis code call `allreduce(...)` / `bcast_from_root(...)` 
 
 ### 3.1 The analytic model: element colouring
 
-The principal challenge in parallel global assembly is avoiding concurrent writes to the same global matrix/vector entry. suanPan solves this **without locks or atomics** on the hot path by partitioning elements into **"colours"** such that:
+The principal challenge in parallel global assembly is avoiding concurrent writes to the same global matrix/vector entry.
+suanPan solves this **without locks or atomics** on the hot path by partitioning elements into **"colours"** such that:
 
 > **Two elements in the same colour never share a node, and therefore never share a global degree-of-freedom (DOF) index.**
 
-Within a colour, element DOF encodings are pairwise disjoint, so their `+=` contributions to the global stiffness/resistance cannot collide. Colours are processed **sequentially**; elements *within* a colour are processed **concurrently** via oneTBB.
+Within a colour, element DOF encodings are pairwise disjoint, so their `+=` contributions to the global stiffness/resistance cannot collide.
+Colours are processed **sequentially**; elements *within* a colour are processed **concurrently** via oneTBB.
 
 This is formalised in `Toolbox/sort_color.hpp` (`sort_color_wp` weighted-priority and `sort_color_mis` maximal-independent-set variants) and driven by `Domain::assign_color()` (`Domain/Domain.cpp:919-945`):
 
@@ -123,7 +128,8 @@ template<typename T, typename D> using unordered_map = tbb::concurrent_unordered
 
 ### 3.2 Visualising the shared-memory data flow
 
-The following diagram shows the end-to-end pipeline for a single Newton-Raphson iteration. Parallel (oneTBB) sections are highlighted.
+The following diagram shows the end-to-end pipeline for a single Newton-Raphson iteration.
+Parallel (oneTBB) sections are highlighted.
 
 ```mermaid
 flowchart TD
@@ -160,9 +166,14 @@ flowchart TD
 
 **Step-by-step narrative:**
 
-1. **`update_trial_status`** (`DomainState.cpp:497-511`) fans out **the entire element pool** via `suanpan::for_all`. This step only *reads* the shared nodal trial-displacement vector and *writes private* per-element state, so no colouring is needed. Each element's `update_status()` runs at its integration points **serially** (e.g. `C3D8::update_status`, `Element/Cube/C3D8.cpp:112`) but **in parallel across elements**. Per-element failure codes are summed into a shared `std::atomic_int code`, then reduced across MPI ranks with `allreduce`.
+1. **`update_trial_status`** (`DomainState.cpp:497-511`) fans out **the entire element pool** via `suanpan::for_all`.
+   This step only *reads* the shared nodal trial-displacement vector and *writes private* per-element state, so no colouring is needed.
+   Each element's `update_status()` runs at its integration points **serially** (e.g. `C3D8::update_status`, `Element/Cube/C3D8.cpp:112`) but **in parallel across elements**.
+   Per-element failure codes are summed into a shared `std::atomic_int code`, then reduced across MPI ranks with `allreduce`.
 
-2. **`assemble_resistance` / `assemble_matrix`** (`DomainState.cpp`) zero the target global vector/matrix, then iterate colours sequentially; within each colour `suanpan::for_all` runs the elements concurrently. Each element scatters its private stiffness/resistance using `Factory::assemble_matrix_helper` (`Factory.hpp:1466`), which does a **lock-free** `GM->unsafe_at(g_row, g_col) += EM(...)`. `unsafe_at` is deliberately named — its safety is guaranteed *by the colouring invariant*, not by synchronization.
+2. **`assemble_resistance` / `assemble_matrix`** (`DomainState.cpp`) zero the target global vector/matrix, then iterate colours sequentially; within each colour `suanpan::for_all` runs the elements concurrently.
+   Each element scatters its private stiffness/resistance using `Factory::assemble_matrix_helper` (`Factory.hpp:1466`), which does a **lock-free** `GM->unsafe_at(g_row, g_col) += EM(...)`.
+   `unsafe_at` is deliberately named — its safety is guaranteed *by the colouring invariant*, not by synchronization.
 
 3. The resulting sparse matrix undergoes `csc_condense()` (merging duplicate `(row,col)` triplets) upon solve, and the linear system is handed to a solver backend.
 
@@ -185,7 +196,9 @@ flowchart TD
 
 SuanPan's distributed model is a classic **element-by-row (data) decomposition**:
 
-> Each element is tagged `is_local` on exactly one rank. Each rank assembles its **local** element contributions into its own local global matrix/vector. The partial systems are then **sum-reduced** across all ranks with `allreduce` so every rank ends up with the identical global system, which is solved by a distributed solver (or by a rank-0 solver whose result is **broadcast** back via `bcast_from_root`).
+> Each element is tagged `is_local` on exactly one rank.
+> Each rank assembles its **local** element contributions into its own local global matrix/vector.
+> The partial systems are then **sum-reduced** across all ranks with `allreduce` so every rank ends up with the identical global system, which is solved by a distributed solver (or by a rank-0 solver whose result is **broadcast** back via `bcast_from_root`).
 
 Free functions in `suanPan.h` provide rank-agnostic collective operations (see §2.2) that serial builds turn into no-ops.
 
@@ -228,7 +241,8 @@ flowchart LR
   - `allreduce(trial_damping_force)` (62) · `allreduce(trial_nonviscous_force)` (83) · `allreduce(trial_inertial_force)` (104)
   - generic `assemble_vector` returns `allreduce(result)` (125)
 
-- **Stiffness/mass/damping/geometry matrices** — each rank calls `<matrix>->allreduce()` after its local colour-scatter. The virtual `MetaMat::allreduce()` (declared `MetaMat.hpp:220`) is where the matrix is assembled across ranks:
+- **Stiffness/mass/damping/geometry matrices** — each rank calls `<matrix>->allreduce()` after its local colour-scatter.
+  The virtual `MetaMat::allreduce()` (declared `MetaMat.hpp:220`) is where the matrix is assembled across ranks:
   - Dense: element-wise in-place sum of the whole buffer via `comm_world.allreduce(mpl::plus<T>, ...)` (`DenseMat.hpp:125-129`)
   - Sparse: collect COO entry counts with `allgather`, then non-blocking `ibcast` each rank's row/col/val triplets into the concatenated pool, then `csc_condense()` to merge duplicates (`SparseMat.hpp:92-118`)
 
@@ -263,7 +277,8 @@ sequenceDiagram
 
 ### 4.3 Distributed linear solver backends
 
-Solver backends are selected in `Domain/Factory.hpp::get_basic_container()` (`Factory.hpp:1495-1517`). Under `SUANPAN_DISTRIBUTED` it constructs the `*Cluster` (distributed) variants:
+Solver backends are selected in `Domain/Factory.hpp::get_basic_container()` (`Factory.hpp:1495-1517`).
+Under `SUANPAN_DISTRIBUTED` it constructs the `*Cluster` (distributed) variants:
 
 | Storage scheme | Distributed backend | Underlying parallel routine |
 |---|---|---|
@@ -368,8 +383,11 @@ flowchart TB
 
 ## 7. Summary
 
-1. **Shared-memory parallelism** (`SUANPAN_MT`, oneTBB) parallelises the element computation and global assembly **coarse-grained over elements**, with correctness guaranteed by a **graph-colouring invariant** that makes cross-element writes to shared global storage collision-free by construction — no locks or atomics on the hot path. Concurrent containers, `parallel_for`/`parallel_for_each`/`parallel_sort`, and a static `affinity_partitioner` provide the threading substrate; parallel STL (`par`/`par_unseq`) backs a few reduction/preallocation helpers.
+1. **Shared-memory parallelism** (`SUANPAN_MT`, oneTBB) parallelises the element computation and global assembly **coarse-grained over elements**, with correctness guaranteed by a **graph-colouring invariant** that makes cross-element writes to shared global storage collision-free by construction — no locks or atomics on the hot path.
+   Concurrent containers, `parallel_for`/`parallel_for_each`/`parallel_sort`, and a static `affinity_partitioner` provide the threading substrate; parallel STL (`par`/`par_unseq`) backs a few reduction/preallocation helpers.
 
-2. **Distributed-memory parallelism** (`SUANPAN_DISTRIBUTED`, MPI via MPL) partitions elements over ranks and reconciles the partial systems with **`allreduce`** (exact-sum of local vectors/matrices) so every rank holds the identical global system. The system is solved by **distributed backends** — ScaLAPACK/ezp (`pgesv`/`pposv`/`pgbsv`/`ppbsv`) for dense, MKL PARDISO / MUMPS / LIS for sparse, P-ARPACK for eigenproblems — and the result is **broadcast back** via `bcast_from_root`. Cross-rank communication reuses one shared MPL world communicator.
+2. **Distributed-memory parallelism** (`SUANPAN_DISTRIBUTED`, MPI via MPL) partitions elements over ranks and reconciles the partial systems with **`allreduce`** (exact-sum of local vectors/matrices) so every rank holds the identical global system.
+   The system is solved by **distributed backends** — ScaLAPACK/ezp (`pgesv`/`pposv`/`pgbsv`/`ppbsv`) for dense, MKL PARDISO / MUMPS / LIS for sparse, P-ARPACK for eigenproblems — and the result is **broadcast back** via `bcast_from_root`.
+   Cross-rank communication reuses one shared MPL world communicator.
 
 3. **The two layers compose**: within each MPI rank, oneTBB threads accelerate local element/assembly work, while MPI coordinates across ranks — giving a natural **hybrid (MPI + threads)** execution model.

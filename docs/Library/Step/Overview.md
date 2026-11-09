@@ -2,7 +2,7 @@
 
 ## Per Step Configurations
 
-As mentioned in [Structure](../../Basic/Structure.md), the commands used between two steps belong to the first step.
+As mentioned in [Structure](../../Basic/GettingStarted/Structure.md), the commands used between two steps belong to the first step.
 This means the following.
 
 ```text

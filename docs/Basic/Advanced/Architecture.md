@@ -3,6 +3,7 @@
 The MPI-based distributed design could take various forms in the context of OOP.
 
 ## A Straightforward Method
+
 One approach is to serialize and send all associated data to another process, the receiving process deserializes the byte stream and creates all necessary objects and performs the computation.
 This involves intensive data exchange, and packing/unpacking associated data every iteration is not a light task.
 This approach does not scale well as the analysis would quickly be bottlenecked by encoding/decoding messages and latency.

@@ -56,7 +56,7 @@ This significantly lowers the barrier to entry for researchers implementing and 
 
 The input file logic in [suanPan](https://tlcfem.github.io/suanPan/) shares syntax paradigms with `ABAQUS`, enabling users familiar with commercial software to transition efficiently.
 
-To establish a baseline understanding, users should review the initial demonstration in [Analyze](Basic/Analyze.md), followed by the foundational architectural overviews in [Syntax](Basic/Syntax.md) and [Structure](Basic/Structure.md).
+To establish a baseline understanding, users should start from the [Basic overview](Basic/Overview.md), review the initial demonstration in [Your First Analysis](Basic/GettingStarted/Analyze.md), and then read the foundational overviews in [Model Syntax](Basic/GettingStarted/Syntax.md) and [Model Structure](Basic/GettingStarted/Structure.md).
 
 For practical applications, the `Example` section offers a tiered learning path ranging from introductory benchmarks to complex simulations.
 Recommended entry points include:
@@ -76,7 +76,7 @@ Feature requests or inquiries regarding the implementation of specific elements 
 
 Documentation improvements, including errata and clarifications, should be submitted as pull requests or tracking issues.
 Documentation contributions for third-party libraries must consist of a self-contained markdown file outlining usage guidelines and relevant theoretical foundations.
-Detailed instructions for local compilation of this manual are provided in [Build](Basic/Build.md).
+Detailed instructions for local compilation of this manual are provided in [Build the Manual](Basic/Building/Build.md).
 
 ## Citation
 

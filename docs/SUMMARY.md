@@ -4,17 +4,29 @@
 
 ## Basic
 
-* [Obtain Application](Basic/Obtain.md)
-* [Configure Application](Basic/Config.md)
-* [Perform Analysis](Basic/Analyze.md)
-* [Model Syntax](Basic/Syntax.md)
-* [Model Structure](Basic/Structure.md)
-* [Tweak Performance](Basic/Performance.md)
-* [Compile Application](Basic/Compile.md)
-* [Build Documentation](Basic/Build.md)
-* [Architecture Design](Basic/Architecture.md)
-* [Parallelism Mechanisms](Basic/Parallelism.md)
-* [On Clusters](Basic/Cluster.md)
+* [Overview](Basic/Overview.md)
+* Getting Started
+    * [Obtain the Application](Basic/GettingStarted/Obtain.md)
+    * [Your First Analysis](Basic/GettingStarted/Analyze.md)
+    * [Model Syntax](Basic/GettingStarted/Syntax.md)
+    * [Model Structure](Basic/GettingStarted/Structure.md)
+* Usage
+    * [Command-Line Configuration](Basic/Usage/Config.md)
+    * [Editor Setup](Basic/Usage/Editors.md)
+    * [Performance Tweaks](Basic/Usage/Performance.md)
+    * [Automation and System Integration](Basic/Usage/Automation.md)
+* Building
+    * [Compile the Application](Basic/Building/Compile.md)
+    * Platform Guides
+        * [Windows](Basic/Building/Platforms/Windows.md)
+        * [Linux](Basic/Building/Platforms/Linux.md)
+        * [macOS](Basic/Building/Platforms/MacOS.md)
+    * [Build Options](Basic/Building/Options.md)
+    * [Build the Manual](Basic/Building/Build.md)
+* Advanced
+    * [Architecture Design](Basic/Advanced/Architecture.md)
+    * [Parallelism Mechanisms](Basic/Advanced/Parallelism.md)
+    * [Run on Clusters](Basic/Advanced/Cluster.md)
 
 ## Example
 

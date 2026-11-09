@@ -1,4 +1,4 @@
-# Utilizing Distributed Memory Multi Node Cluster
+# Run on Clusters
 
 The element state determination, as well as solving the global system, can be distributed over a process grid.
 By enabling MPI, the application can be executed on clusters.

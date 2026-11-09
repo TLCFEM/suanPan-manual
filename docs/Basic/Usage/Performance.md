@@ -2,11 +2,9 @@
 
 `suanPan` prioritizes performance and designs the analysis logic in a parallel context accordingly.
 
-Although the majority of analyses of common types can be parallelized, there are still certain parts that have 
-strong data dependencies that cannot be parallelized.
+Although the majority of analyses of common types can be parallelized, there are still certain parts that have strong data dependencies that cannot be parallelized.
 The speed-up factor is mostly determined by the serial code.
-According to [Amdahl's law](https://en.wikipedia.org/wiki/Amdahl%27s_law), there would be an upper bound of the 
-theoretical speed-up.
+According to [Amdahl's law](https://en.wikipedia.org/wiki/Amdahl%27s_law), there would be an upper bound of the theoretical speed-up.
 
 ## Benchmark
 
@@ -57,7 +55,7 @@ It is able to achieve a CPI close to the baseline.
 
 ### Medium-sized Plastic Analysis
 
-[This example](../Example/Geotechnical/slope-analysis.md) contains 2990 nodes, and uses a plastic material model.
+[This example](../../Example/Geotechnical/slope-analysis.md) contains 2990 nodes, and uses a plastic material model.
 Element state updating now involves local plasticity integration.
 It is able to achieve a CPI of 0.979 in this case.
 
@@ -74,7 +72,8 @@ Here are some tips that may improve the performance.
 2.  If the global system is known to be symmetric, use `set symm_mat true` to use a symmetric storage.
     Analyses involving 1D materials are mostly (**_not always_**) symmetric.
     Analyses involving 2D and 3D materials are mostly (**_not always_**) **_not_** symmetric.
-3.  Consider a proper stepping strategy. A fixed stepping size may be unnecessarily expensive.
+3.  Consider a proper stepping strategy.
+    A fixed stepping size may be unnecessarily expensive.
     A proper adaptive stepping strategy can significantly improve the performance.
 4.  Prefer a dense solver over a sparse solver if the system is small.
     A dense solver is generally faster than a sparse solver for small systems.
@@ -86,12 +85,9 @@ Here are some tips that may improve the performance.
 
 ## Mixed-Precision Algorithm
 
-On some platforms, the performance of the mixed-precision algorithm can be significantly better than the full-precision
-algorithm.
-The mixed-precision algorithm converts the full-precision matrix to a lower precision matrix, and then solves the system
-using the lower precision matrix.
-Typically, only two to three iterations are required as each iteration reduces the relative error by a factor around
-machine epsilon of the lower precision.
+On some platforms, the performance of the mixed-precision algorithm can be significantly better than the full-precision algorithm.
+The mixed-precision algorithm converts the full-precision matrix to a lower precision matrix, and then solves the system using the lower precision matrix.
+Typically, only two to three iterations are required as each iteration reduces the relative error by a factor around machine epsilon of the lower precision.
 
 The built-in tests consist of benchmarks for mixed-precision algorithms.
 One can execute the following command to run the tests.
@@ -132,26 +128,25 @@ It is possible to tweak the performance in the following ways, which may or may 
 
 ### OpenMP Threads
 
-OpenMP is used by MKL and OpenBLAS to parallelize the matrix operations, alongside SIMD instructions. It is 
-possible to manually set [OMP_NUM_THREADS](https://www.google.com/search?q=omp_num_threads) to control the number of 
-threads used. Pay attention to over-subscription.
+OpenMP is used by MKL and OpenBLAS to parallelize the matrix operations, alongside SIMD instructions.
+It is possible to manually set [OMP_NUM_THREADS](https://www.google.com/search?q=omp_num_threads) to control the number of threads used.
+Pay attention to over-subscription.
 
-[OMP_DYNAMIC](https://www.google.com/search?q=omp_dynamic) may affect cache locality and thus the performance. For 
-computation-intensive tasks, it is recommended to set it to false.
+[OMP_DYNAMIC](https://www.google.com/search?q=omp_dynamic) may affect cache locality and thus the performance.
+For computation-intensive tasks, it is recommended to set it to false.
 
 ### Affinity
 
 CPU affinity can also affect the performance.
-Tweaking affinity, for example, with [KMP_AFFINITY](https://www.google.com/search?q=KMP_AFFINITY), can improve 
-performance.
+Tweaking affinity, for example, with [KMP_AFFINITY](https://www.google.com/search?q=KMP_AFFINITY), can improve performance.
 
 ### Memory Allocation
 
-Memory fragmentation may downgrade analysis performance, especially for finite element analysis, in which there are 
-a large number of small matrices and vectors. It is recommended to use a performant memory allocator, for example, a 
-general purpose allocator like [mimalloc](https://github.com/microsoft/mimalloc).
+Memory fragmentation may downgrade analysis performance, especially for finite element analysis, in which there are a large number of small matrices and vectors.
+It is recommended to use a performant memory allocator, for example, a general purpose allocator like [mimalloc](https://github.com/microsoft/mimalloc).
 
-On Linux, it is fairly easy to replace the default memory allocator. For example,
+On Linux, it is fairly easy to replace the default memory allocator.
+For example,
 
 ```bash
 LD_PRELOAD=/path/to/libmimalloc.so suanpan -f input.sp
@@ -197,3 +192,5 @@ This is particularly useful if the target platform has memory constraints.
 32.53user 2.52system 0:05.27elapsed 665%CPU (0avgtext+0avgdata 2887796maxresident)k
 0inputs+16outputs (0major+468057minor)pagefaults 0swaps
 ```
+
+Continue with [Automation and System Integration](Automation.md).

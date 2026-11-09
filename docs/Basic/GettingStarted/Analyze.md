@@ -1,7 +1,6 @@
-# The Very First Analysis
+# Your First Analysis
 
-This page aims to show an overview of what a model looks like by establishing a simple model, which is an elastic
-cantilever beam subjected to an end load.
+This page aims to show an overview of what a model looks like by establishing a simple model, which is an elastic cantilever beam subjected to an end load.
 
 A native C++ parser is used by `suanPan`.
 The default syntax resembles that of `OpenSees`.
@@ -44,7 +43,8 @@ exit
 
 Since each command is commented, there is not much to explain.
 This model is similar to the one created by the `example` command; both are simple one-element models.
-The output is directly printed on screen by default. For this model, it is
+The output is directly printed on screen by default.
+For this model, it is
 
 ```
 +--------------------------------------------------------+
@@ -86,3 +86,5 @@ The analytical solution of the vertical tip displacement is
 $$
 v=\dfrac{PL^3}{3EI}=\dfrac{23\times1.34^3}{3\times132\times6.835}=0.020476.
 $$
+
+Continue with [Model Syntax](Syntax.md).
