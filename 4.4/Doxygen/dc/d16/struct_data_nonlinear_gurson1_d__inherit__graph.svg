@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 260;
+var viewHeight = 477;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>DataNonlinearGurson1D</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" d="M205.25-469H55.5v161.5h149.75z"/>
+<text xml:space="preserve" x="59.5" y="-454.55" font-family="Consolas" font-size="11">DataNonlinearGurson1D</text>
+<text xml:space="preserve" x="66.94" y="-437.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="85.12" y="-437.05" font-family="Consolas" font-size="11">elastic_modulus</text>
+<text xml:space="preserve" x="66.94" y="-419.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="85.12" y="-419.55" font-family="Consolas" font-size="11">poissons_ratio</text>
+<text xml:space="preserve" x="66.94" y="-402.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="85.12" y="-402.05" font-family="Consolas" font-size="11">q1</text>
+<text xml:space="preserve" x="66.94" y="-384.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="85.12" y="-384.55" font-family="Consolas" font-size="11">q2</text>
+<text xml:space="preserve" x="66.94" y="-367.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="85.12" y="-367.05" font-family="Consolas" font-size="11">fn</text>
+<text xml:space="preserve" x="66.94" y="-349.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="85.12" y="-349.55" font-family="Consolas" font-size="11">sn</text>
+<text xml:space="preserve" x="66.94" y="-332.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="85.12" y="-332.05" font-family="Consolas" font-size="11">en</text>
+<text xml:space="preserve" x="127" y="-314.55" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M55.5-449.5h149.75z"/>
+<path fill="#666" stroke="#666" d="M55.5-327h27.62z"/>
+<path fill="#666" stroke="#666" d="M83.12-327h122.13z"/>
+<path fill="none" stroke="#666" d="M55.5-307.5V-469h149.75v161.5z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d7/d44/class_nonlinear_gurson1_d.html" xlink:title="The NonlinearGurson1D class." id="a_Node000002" target="_top">
+<path fill="#fff" d="M210.62-271.5H50.12V-145h160.5z"/>
+<text xml:space="preserve" x="73" y="-257.05" font-family="Consolas" font-size="11">NonlinearGurson1D</text>
+<text xml:space="preserve" x="127" y="-239.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="54.12" y="-222.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="64.88" y="-222.05" font-family="Consolas" font-size="11">NonlinearGurson1D()</text>
+<text xml:space="preserve" x="54.12" y="-204.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="64.88" y="-204.55" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="54.12" y="-187.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="64.88" y="-187.05" font-family="Consolas" font-size="11">get()</text>
+<text xml:space="preserve" x="54.12" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="64.88" y="-169.55" font-family="Consolas" font-size="11">update_trial_status()</text>
+<text xml:space="preserve" x="54.12" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="64.88" y="-152.05" font-family="Consolas" font-size="11">record()</text>
+<path fill="#666" stroke="#666" d="M50.12-252h160.5z"/>
+<path fill="#666" stroke="#666" d="M50.12-234.5h160.5z"/>
+<path fill="none" stroke="#666" d="M50.12-145v-126.5h160.5V-145z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#006400" d="M130.38-296.21v24.76"/>
+<path fill="none" stroke="#006400" d="m126.88-296.11 3.5-10 3.5 10z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d5/de0/class_custom_gurson1_d.html" xlink:title="The CustomGurson1D class." id="a_Node000003" target="_top">
+<path fill="#fff" d="M126.75-109H0V0h126.75z"/>
+<text xml:space="preserve" x="16.12" y="-94.55" font-family="Consolas" font-size="11">CustomGurson1D</text>
+<text xml:space="preserve" x="60" y="-77.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="4" y="-59.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-59.55" font-family="Consolas" font-size="11">CustomGurson1D()</text>
+<text xml:space="preserve" x="4" y="-42.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-42.05" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="4" y="-24.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-24.55" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="4" y="-7.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-7.05" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M0-89.5h126.75z"/>
+<path fill="#666" stroke="#666" d="M0-72h126.75z"/>
+<path fill="none" stroke="#666" d="M0 0v-109h126.75V0z"/>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M98.38-134.78c-3.9 8.83-7.82 17.72-11.56 26.19"/>
+<path fill="none" stroke="#63b8ff" d="m95.08-135.97 7.24-7.74-.84 10.57z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../da/d9a/class_exp_gurson1_d.html" xlink:title="The ExpGurson1D class." id="a_Node000004" target="_top">
+<path fill="#fff" d="M251.62-100.25h-106.5v91.5h106.5z"/>
+<text xml:space="preserve" x="161.25" y="-85.8" font-family="Consolas" font-size="11">ExpGurson1D</text>
+<text xml:space="preserve" x="195" y="-68.3" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="149.12" y="-50.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="159.88" y="-50.8" font-family="Consolas" font-size="11">ExpGurson1D()</text>
+<text xml:space="preserve" x="149.12" y="-33.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="159.88" y="-33.3" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="149.12" y="-15.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="159.88" y="-15.8" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M145.12-80.75h106.5z"/>
+<path fill="#666" stroke="#666" d="M145.12-63.25h106.5z"/>
+<path fill="none" stroke="#666" d="M145.12-8.75v-91.5h106.5v91.5z"/>
+</a></g><g id="edge3_Node000002_Node000004" class="edge"><title>Node2-&gt;Node4</title><a id="a_edge3_Node000002_Node000004">
+<path fill="none" stroke="#63b8ff" d="M162.85-134.77c5.3 11.81 10.64 23.74 15.52 34.62"/>
+<path fill="none" stroke="#63b8ff" d="m159.74-133.15-.89-10.56 7.28 7.7z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="struct_data_nonlinear_gurson1_d__inherit__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

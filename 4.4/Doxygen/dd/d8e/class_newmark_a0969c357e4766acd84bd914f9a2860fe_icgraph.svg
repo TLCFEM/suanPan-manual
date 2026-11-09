@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 641;
+var viewHeight = 247;
+var sectionId = &apos;dynsection-2&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Newmark::Newmark</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M633-120.25H509v21.5h124z"/>
+<text xml:space="preserve" x="571" y="-105.8" font-family="Consolas" font-size="11" text-anchor="middle">Newmark::Newmark</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d2/d22/class_lee_newmark_base.html#a75bc51802158e6b1e8758f1928b2f1e4" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M473-219.25H254.5v21.5H473z"/>
+<text xml:space="preserve" x="363.75" y="-204.8" font-family="Consolas" font-size="11" text-anchor="middle">LeeNewmarkBase::LeeNewmarkBase</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M552.35-129c-18.05-18.64-47.83-45.98-79.35-60.5-6.67-3.07-13.79-5.65-21.06-7.82"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m554.87-131.43 4.31 9.68-9.4-4.88z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d0/d6e/class_lee_newmark_iterative.html#a82f4037d3b5dc8abbc7402b462ec1e76" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M442.62-180H284.88v35h157.74z"/>
+<text xml:space="preserve" x="292.88" y="-165.55" font-family="Consolas" font-size="11">LeeNewmarkIterative</text>
+<text xml:space="preserve" x="363.75" y="-152.05" font-family="Consolas" font-size="11" text-anchor="middle">::LeeNewmarkIterative</text>
+</a></g><g id="edge4_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge4_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M520.21-123.73c-15.13-4.22-31.82-8.78-47.21-12.77-10.29-2.67-21.16-5.39-31.87-8.02"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m520.77-127.2 8.69 6.07-10.58.67z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d6/d6d/class_rayleigh_newmark.html#a075029f2a4e064f6a3786e020cc60c2f" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M456.12-127H271.38v35h184.74z"/>
+<text xml:space="preserve" x="279.38" y="-112.55" font-family="Consolas" font-size="11">RayleighNewmark::Rayleigh</text>
+<text xml:space="preserve" x="363.75" y="-99.05" font-family="Consolas" font-size="11" text-anchor="middle">Newmark</text>
+</a></g><g id="edge5_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge5_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M497.3-109.5h-40.81"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m497.18-113 10 3.5-10 3.5z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../de/d87/class_u_d_newmark.html#a113238bc6230e4de5ebba8a80c455cc7" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M439.25-74.25h-151v21.5h151z"/>
+<text xml:space="preserve" x="363.75" y="-59.8" font-family="Consolas" font-size="11" text-anchor="middle">UDNewmark::UDNewmark</text>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M520.31-95.37C505.18-91.29 488.46-87 473-83.5c-13.79 3.12-28.66 6.1-42.82 8.77"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m518.97-98.63 10.57.74-8.72 6.01z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d8/d75/class_wilson_penzien_newmark.html#a77a9bfb746e74fa13f71fafef44090d9" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M446-35H281.5V0H446z"/>
+<text xml:space="preserve" x="289.5" y="-20.55" font-family="Consolas" font-size="11">WilsonPenzienNewmark</text>
+<text xml:space="preserve" x="363.75" y="-7.05" font-family="Consolas" font-size="11" text-anchor="middle">::WilsonPenzienNewmark</text>
+</a></g><g id="edge7_Node000001_Node000008" class="edge"><title>Node1-&gt;Node8</title><a id="a_edge7_Node000001_Node000008">
+<path fill="none" stroke="#63b8ff" d="M548.2-91.25c-18.81 14.89-47.28 35.4-75.2 47.75-8.4 3.71-17.4 6.95-26.5 9.75"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m545.95-93.93 9.98-3.56-5.58 9.01z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d7/d28/class_lee_newmark.html#af5a2770c7beeab5752a3b37919e7d795" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M191.5-239.25H27v21.5h164.5z"/>
+<text xml:space="preserve" x="109.25" y="-224.8" font-family="Consolas" font-size="11" text-anchor="middle">LeeNewmark::LeeNewmark</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M242.84-218c-17.35-1.37-34.86-2.76-51.21-4.05"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m243-221.5 9.69 4.28-10.24 2.7z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d4/d3c/class_lee_newmark_full.html#aed92f606b6dae2ddd388514feccc3357" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M218.5-199.25H0v21.5h218.5z"/>
+<text xml:space="preserve" x="109.25" y="-184.8" font-family="Consolas" font-size="11" text-anchor="middle">LeeNewmarkFull::LeeNewmarkFull</text>
+</a></g><g id="edge3_Node000002_Node000004" class="edge"><title>Node2-&gt;Node4</title><a id="a_edge3_Node000002_Node000004">
+<path fill="none" stroke="#63b8ff" d="M242.85-199c-8.06.64-16.15 1.28-24.14 1.91"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m242.45-202.48 10.24 2.7-9.69 4.28z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_newmark_a0969c357e4766acd84bd914f9a2860fe_icgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

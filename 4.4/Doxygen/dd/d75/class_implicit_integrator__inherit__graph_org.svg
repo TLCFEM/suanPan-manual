@@ -1,0 +1,707 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1708" height="2539pt" viewBox="0 0 1281 2539"><g class="graph" transform="translate(4 2535)"><title>ImplicitIntegrator</title><g class="node"><title>Node1</title><a>
+<path fill="#999" d="M572.5-1583H439v91.5h133.5z"/>
+<text xml:space="preserve" x="445" y="-1568.55" font-family="Consolas" font-size="11">ImplicitIntegrator</text>
+<text xml:space="preserve" x="502.38" y="-1551.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="443" y="-1533.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="453.75" y="-1533.55" font-family="Consolas" font-size="11">type()</text>
+<text xml:space="preserve" x="443" y="-1516.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="453.75" y="-1516.05" font-family="Consolas" font-size="11">assemble_matrix()</text>
+<text xml:space="preserve" x="443" y="-1498.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="453.75" y="-1498.55" font-family="Consolas" font-size="11">Integrator()</text>
+<path fill="#666" stroke="#666" d="M439-1563.5h133.5z"/>
+<path fill="#666" stroke="#666" d="M439-1546h133.5z"/>
+<path fill="none" stroke="#666" d="M439-1491.5v-91.5h133.5v91.5z"/>
+</a></g><g class="node"><title>Node5</title><a xlink:href="../../d9/dd7/class_bathe_two_step.html" xlink:title="A BatheTwoStep class defines a solver using BatheTwoStep algorithm." target="_top">
+<path fill="#fff" d="M187.5-1282.5H0V-985h187.5z"/>
+<text xml:space="preserve" x="53.25" y="-1268.05" font-family="Consolas" font-size="11">BatheTwoStep</text>
+<text xml:space="preserve" x="90.38" y="-1250.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="4" y="-1233.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1233.05" font-family="Consolas" font-size="11">BatheTwoStep()</text>
+<text xml:space="preserve" x="4" y="-1215.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1215.55" font-family="Consolas" font-size="11">time_independent_matrix()</text>
+<text xml:space="preserve" x="4" y="-1198.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1198.05" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="4" y="-1180.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1180.55" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="14.75" y="-1167.05" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="4" y="-1149.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1149.55" font-family="Consolas" font-size="11">update_incre_time()</text>
+<text xml:space="preserve" x="4" y="-1132.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1132.05" font-family="Consolas" font-size="11">update_trial_status()</text>
+<text xml:space="preserve" x="4" y="-1114.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1114.55" font-family="Consolas" font-size="11">commit_status()</text>
+<text xml:space="preserve" x="4" y="-1097.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1097.05" font-family="Consolas" font-size="11">clear_status()</text>
+<text xml:space="preserve" x="4" y="-1079.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1079.55" font-family="Consolas" font-size="11">from_incre_velocity()</text>
+<text xml:space="preserve" x="4" y="-1062.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1062.05" font-family="Consolas" font-size="11">from_incre_acceleration()</text>
+<text xml:space="preserve" x="4" y="-1044.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1044.55" font-family="Consolas" font-size="11">from_total_velocity()</text>
+<text xml:space="preserve" x="4" y="-1027.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1027.05" font-family="Consolas" font-size="11">from_total_acceleration()</text>
+<text xml:space="preserve" x="4" y="-1009.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-1009.55" font-family="Consolas" font-size="11">print()</text>
+<text xml:space="preserve" x="4" y="-992.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="14.75" y="-992.05" font-family="Consolas" font-size="11">update_parameter()</text>
+<path fill="#666" stroke="#666" d="M0-1263h187.5z"/>
+<path fill="#666" stroke="#666" d="M0-1245.5h187.5z"/>
+<path fill="none" stroke="#666" d="M0-985v-297.5h187.5V-985z"/>
+</a></g><g class="edge"><title>Node1-&gt;Node5</title><a>
+<path fill="none" stroke="#63b8ff" d="M428.26-1524.69c-80.23 13.44-198.38 37.84-231.51 69.19-47.58 45.03-73.24 112.05-87.06 173.2"/>
+<path fill="none" stroke="#63b8ff" d="m427.38-1528.1 10.44 1.83-9.3 5.08z"/>
+</a></g><g class="node"><title>Node6</title><a xlink:href="../../d8/da3/class_g_s_s_s_s.html" xlink:title="A GSSSS class defines a solver using GSSSS algorithm." target="_top">
+<path fill="#fff" d="M393.5-1455.5H206V-812h187.5z"/>
+<text xml:space="preserve" x="282.88" y="-1441.05" font-family="Consolas" font-size="11">GSSSS</text>
+<text xml:space="preserve" x="210" y="-1423.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1423.55" font-family="Consolas" font-size="11">L3</text>
+<text xml:space="preserve" x="210" y="-1406.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1406.05" font-family="Consolas" font-size="11">L5</text>
+<text xml:space="preserve" x="210" y="-1388.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1388.55" font-family="Consolas" font-size="11">W1</text>
+<text xml:space="preserve" x="210" y="-1371.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1371.05" font-family="Consolas" font-size="11">W3G3</text>
+<text xml:space="preserve" x="210" y="-1353.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1353.55" font-family="Consolas" font-size="11">W2G5</text>
+<text xml:space="preserve" x="210" y="-1336.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1336.05" font-family="Consolas" font-size="11">W1G6</text>
+<text xml:space="preserve" x="210" y="-1318.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1318.55" font-family="Consolas" font-size="11">DT</text>
+<text xml:space="preserve" x="210" y="-1301.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1301.05" font-family="Consolas" font-size="11">C0</text>
+<text xml:space="preserve" x="210" y="-1283.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1283.55" font-family="Consolas" font-size="11">C1</text>
+<text xml:space="preserve" x="210" y="-1266.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1266.05" font-family="Consolas" font-size="11">C2</text>
+<text xml:space="preserve" x="210" y="-1248.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1248.55" font-family="Consolas" font-size="11">C3</text>
+<text xml:space="preserve" x="210" y="-1231.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1231.05" font-family="Consolas" font-size="11">C4</text>
+<text xml:space="preserve" x="210" y="-1213.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1213.55" font-family="Consolas" font-size="11">XD</text>
+<text xml:space="preserve" x="210" y="-1196.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1196.05" font-family="Consolas" font-size="11">XV</text>
+<text xml:space="preserve" x="210" y="-1178.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1178.55" font-family="Consolas" font-size="11">XA</text>
+<text xml:space="preserve" x="210" y="-1161.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1161.05" font-family="Consolas" font-size="11">L1</text>
+<text xml:space="preserve" x="210" y="-1143.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1143.55" font-family="Consolas" font-size="11">L2</text>
+<text xml:space="preserve" x="210" y="-1126.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-1126.05" font-family="Consolas" font-size="11">L4</text>
+<text xml:space="preserve" x="210" y="-1108.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-1108.55" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="210" y="-1091.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-1091.05" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="220.75" y="-1077.55" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="210" y="-1060.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-1060.05" font-family="Consolas" font-size="11">load_scaling_factor()</text>
+<text xml:space="preserve" x="210" y="-1042.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-1042.55" font-family="Consolas" font-size="11">get_residual()</text>
+<text xml:space="preserve" x="210" y="-1025.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-1025.05" font-family="Consolas" font-size="11">get_reference_load()</text>
+<text xml:space="preserve" x="210" y="-1007.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-1007.55" font-family="Consolas" font-size="11">update_trial_status()</text>
+<text xml:space="preserve" x="210" y="-990.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-990.05" font-family="Consolas" font-size="11">from_incre_velocity()</text>
+<text xml:space="preserve" x="210" y="-972.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-972.55" font-family="Consolas" font-size="11">from_incre_acceleration()</text>
+<text xml:space="preserve" x="210" y="-955.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-955.05" font-family="Consolas" font-size="11">print()</text>
+<text xml:space="preserve" x="210" y="-937.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-937.55" font-family="Consolas" font-size="11">update_parameter()</text>
+<text xml:space="preserve" x="210" y="-920.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-920.05" font-family="Consolas" font-size="11">process_load_impl()</text>
+<text xml:space="preserve" x="210" y="-902.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-902.55" font-family="Consolas" font-size="11">process_constraint</text>
+<text xml:space="preserve" x="220.75" y="-889.05" font-family="Consolas" font-size="11">_impl()</text>
+<text xml:space="preserve" x="210" y="-871.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-871.55" font-family="Consolas" font-size="11">generate_constants()</text>
+<text xml:space="preserve" x="210" y="-854.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-854.05" font-family="Consolas" font-size="11">generate_constants()</text>
+<text xml:space="preserve" x="210" y="-836.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-836.55" font-family="Consolas" font-size="11">generate_constants()</text>
+<text xml:space="preserve" x="210" y="-819.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="220.75" y="-819.05" font-family="Consolas" font-size="11">generate_constants()</text>
+<path fill="#666" stroke="#666" d="M206-1436h187.5z"/>
+<path fill="#666" stroke="#666" d="M206-1121h12.75z"/>
+<path fill="#666" stroke="#666" d="M218.75-1121H393.5z"/>
+<path fill="none" stroke="#666" d="M206-812v-643.5h187.5V-812z"/>
+</a></g><g class="edge"><title>Node1-&gt;Node6</title><a>
+<path fill="none" stroke="#63b8ff" d="M430.76-1486.39c-10.43 9.33-20.22 19.71-28.01 30.89a356 356 0 0 0-9.48 14.35"/>
+<path fill="none" stroke="#63b8ff" d="m428.21-1488.81 9.87-3.85-5.32 9.16z"/>
+</a></g><g class="node"><title>Node10</title><a xlink:href="../../da/d53/class_generalized_alpha.html" xlink:title="A GeneralizedAlpha class defines a solver using GeneralizedAlpha algorithm." target="_top">
+<path fill="#fff" d="M599.5-1280.5H412V-987h187.5z"/>
+<text xml:space="preserve" x="451.75" y="-1266.05" font-family="Consolas" font-size="11">GeneralizedAlpha</text>
+<text xml:space="preserve" x="502.38" y="-1248.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="416" y="-1231.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1231.05" font-family="Consolas" font-size="11">GeneralizedAlpha()</text>
+<text xml:space="preserve" x="416" y="-1213.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1213.55" font-family="Consolas" font-size="11">GeneralizedAlpha()</text>
+<text xml:space="preserve" x="416" y="-1196.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1196.05" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="416" y="-1178.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1178.55" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="426.75" y="-1165.05" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="416" y="-1147.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1147.55" font-family="Consolas" font-size="11">get_residual()</text>
+<text xml:space="preserve" x="416" y="-1130.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1130.05" font-family="Consolas" font-size="11">get_reference_load()</text>
+<text xml:space="preserve" x="416" y="-1112.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1112.55" font-family="Consolas" font-size="11">update_trial_status()</text>
+<text xml:space="preserve" x="416" y="-1095.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1095.05" font-family="Consolas" font-size="11">from_incre_velocity()</text>
+<text xml:space="preserve" x="416" y="-1077.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1077.55" font-family="Consolas" font-size="11">from_incre_acceleration()</text>
+<text xml:space="preserve" x="416" y="-1060.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1060.05" font-family="Consolas" font-size="11">print()</text>
+<text xml:space="preserve" x="416" y="-1042.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="426.75" y="-1042.55" font-family="Consolas" font-size="11">update_parameter()</text>
+<text xml:space="preserve" x="416" y="-1025.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="426.75" y="-1025.05" font-family="Consolas" font-size="11">process_load_impl()</text>
+<text xml:space="preserve" x="416" y="-1007.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="426.75" y="-1007.55" font-family="Consolas" font-size="11">process_constraint</text>
+<text xml:space="preserve" x="426.75" y="-994.05" font-family="Consolas" font-size="11">_impl()</text>
+<path fill="#666" stroke="#666" d="M412-1261h187.5z"/>
+<path fill="#666" stroke="#666" d="M412-1243.5h187.5z"/>
+<path fill="none" stroke="#666" d="M412-987v-293.5h187.5V-987z"/>
+</a></g><g class="edge"><title>Node1-&gt;Node10</title><a>
+<path fill="none" stroke="#63b8ff" d="M505.75-1480.52v200.19"/>
+<path fill="none" stroke="#63b8ff" d="m502.25-1480.23 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node11</title><a xlink:href="../../dd/d8e/class_newmark.html" xlink:title="A Newmark class defines a solver using Newmark algorithm." target="_top">
+<path fill="#fff" d="M805.5-1273.75H618v280h187.5z"/>
+<text xml:space="preserve" x="688.12" y="-1259.3" font-family="Consolas" font-size="11">Newmark</text>
+<text xml:space="preserve" x="622" y="-1241.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="632.75" y="-1241.8" font-family="Consolas" font-size="11">C0</text>
+<text xml:space="preserve" x="622" y="-1224.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="632.75" y="-1224.3" font-family="Consolas" font-size="11">C1</text>
+<text xml:space="preserve" x="622" y="-1206.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="632.75" y="-1206.8" font-family="Consolas" font-size="11">C2</text>
+<text xml:space="preserve" x="622" y="-1189.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="632.75" y="-1189.3" font-family="Consolas" font-size="11">C3</text>
+<text xml:space="preserve" x="622" y="-1171.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="632.75" y="-1171.8" font-family="Consolas" font-size="11">C4</text>
+<text xml:space="preserve" x="622" y="-1154.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="632.75" y="-1154.3" font-family="Consolas" font-size="11">C5</text>
+<text xml:space="preserve" x="622" y="-1136.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="632.75" y="-1136.8" font-family="Consolas" font-size="11">Newmark()</text>
+<text xml:space="preserve" x="622" y="-1119.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="632.75" y="-1119.3" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="622" y="-1101.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="632.75" y="-1101.8" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="632.75" y="-1088.3" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="622" y="-1070.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="632.75" y="-1070.8" font-family="Consolas" font-size="11">update_trial_status()</text>
+<text xml:space="preserve" x="622" y="-1053.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="632.75" y="-1053.3" font-family="Consolas" font-size="11">from_incre_velocity()</text>
+<text xml:space="preserve" x="622" y="-1035.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="632.75" y="-1035.8" font-family="Consolas" font-size="11">from_incre_acceleration()</text>
+<text xml:space="preserve" x="622" y="-1018.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="632.75" y="-1018.3" font-family="Consolas" font-size="11">print()</text>
+<text xml:space="preserve" x="622" y="-1000.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="632.75" y="-1000.8" font-family="Consolas" font-size="11">update_parameter()</text>
+<path fill="#666" stroke="#666" d="M618-1254.25h187.5z"/>
+<path fill="#666" stroke="#666" d="M618-1149.25h12.75z"/>
+<path fill="#666" stroke="#666" d="M630.75-1149.25H805.5z"/>
+<path fill="none" stroke="#666" d="M618-993.75v-280h187.5v280z"/>
+</a></g><g class="edge"><title>Node1-&gt;Node11</title><a>
+<path fill="none" stroke="#63b8ff" d="M580.74-1486.39c10.43 9.33 20.22 19.71 28.01 30.89 37.52 53.87 61.94 122.17 77.53 181.88"/>
+<path fill="none" stroke="#63b8ff" d="m578.74-1483.5-5.32-9.16 9.87 3.85z"/>
+</a></g><g class="node"><title>Node23</title><a xlink:href="../../db/d4b/class_o_a_l_t_s.html" xlink:title="An OALTS class defines a solver using OALTS algorithm." target="_top">
+<path fill="#fff" d="M1011.5-1273.75H824v280h187.5z"/>
+<text xml:space="preserve" x="900.88" y="-1259.3" font-family="Consolas" font-size="11">OALTS</text>
+<text xml:space="preserve" x="914.38" y="-1241.8" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="828" y="-1224.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1224.3" font-family="Consolas" font-size="11">OALTS()</text>
+<text xml:space="preserve" x="828" y="-1206.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1206.8" font-family="Consolas" font-size="11">time_independent_matrix()</text>
+<text xml:space="preserve" x="828" y="-1189.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1189.3" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="828" y="-1171.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1171.8" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="838.75" y="-1158.3" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="828" y="-1140.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1140.8" font-family="Consolas" font-size="11">update_trial_status()</text>
+<text xml:space="preserve" x="828" y="-1123.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1123.3" font-family="Consolas" font-size="11">commit_status()</text>
+<text xml:space="preserve" x="828" y="-1105.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1105.8" font-family="Consolas" font-size="11">clear_status()</text>
+<text xml:space="preserve" x="828" y="-1088.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1088.3" font-family="Consolas" font-size="11">from_incre_velocity()</text>
+<text xml:space="preserve" x="828" y="-1070.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1070.8" font-family="Consolas" font-size="11">from_incre_acceleration()</text>
+<text xml:space="preserve" x="828" y="-1053.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1053.3" font-family="Consolas" font-size="11">from_total_velocity()</text>
+<text xml:space="preserve" x="828" y="-1035.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1035.8" font-family="Consolas" font-size="11">from_total_acceleration()</text>
+<text xml:space="preserve" x="828" y="-1018.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="838.75" y="-1018.3" font-family="Consolas" font-size="11">print()</text>
+<text xml:space="preserve" x="828" y="-1000.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="838.75" y="-1000.8" font-family="Consolas" font-size="11">update_parameter()</text>
+<path fill="#666" stroke="#666" d="M824-1254.25h187.5z"/>
+<path fill="#666" stroke="#666" d="M824-1236.75h187.5z"/>
+<path fill="none" stroke="#666" d="M824-993.75v-280h187.5v280z"/>
+</a></g><g class="edge"><title>Node1-&gt;Node23</title><a>
+<path fill="none" stroke="#63b8ff" d="M583.24-1524.69c80.23 13.44 198.38 37.84 231.51 69.19 49.81 47.14 75.6 118.38 88.92 181.76"/>
+<path fill="none" stroke="#63b8ff" d="m582.98-1521.19-9.3-5.08 10.44-1.83z"/>
+</a></g><g class="node"><title>Node2</title><a xlink:href="../../d6/d55/class_integrator.html" xlink:title="The Integrator class is basically a wrapper of the DomainBase class with regard to some status changi..." target="_top">
+<path fill="#fff" d="M599.5-1978.5H412v359.5h187.5z"/>
+<text xml:space="preserve" x="472" y="-1964.05" font-family="Consolas" font-size="11">Integrator</text>
+<text xml:space="preserve" x="502.38" y="-1946.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="416" y="-1929.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1929.05" font-family="Consolas" font-size="11">Integrator()</text>
+<text xml:space="preserve" x="416" y="-1911.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1911.55" font-family="Consolas" font-size="11">set_domain()</text>
+<text xml:space="preserve" x="416" y="-1894.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1894.05" font-family="Consolas" font-size="11">get_domain()</text>
+<text xml:space="preserve" x="416" y="-1876.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1876.55" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="416" y="-1859.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1859.05" font-family="Consolas" font-size="11">type()</text>
+<text xml:space="preserve" x="416" y="-1841.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1841.55" font-family="Consolas" font-size="11">set_time_step_switch()</text>
+<text xml:space="preserve" x="416" y="-1824.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1824.05" font-family="Consolas" font-size="11">allow_to_change_time</text>
+<text xml:space="preserve" x="426.75" y="-1810.55" font-family="Consolas" font-size="11">_step()</text>
+<text xml:space="preserve" x="416" y="-1793.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1793.05" font-family="Consolas" font-size="11">set_matrix_assembled</text>
+<text xml:space="preserve" x="426.75" y="-1779.55" font-family="Consolas" font-size="11">_switch()</text>
+<text xml:space="preserve" x="416" y="-1762.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1762.05" font-family="Consolas" font-size="11">matrix_is_assembled()</text>
+<text xml:space="preserve" x="416" y="-1744.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="426.75" y="-1744.55" font-family="Consolas" font-size="11">time_independent_matrix()</text>
+<text xml:space="preserve" x="426.75" y="-1727.05" font-family="Consolas" font-size="11">and 49 more...</text>
+<text xml:space="preserve" x="416" y="-1709.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="426.75" y="-1709.55" font-family="Consolas" font-size="11">update_parameter()</text>
+<text xml:space="preserve" x="416" y="-1692.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="426.75" y="-1692.05" font-family="Consolas" font-size="11">process_load_impl()</text>
+<text xml:space="preserve" x="416" y="-1674.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="426.75" y="-1674.55" font-family="Consolas" font-size="11">process_constraint</text>
+<text xml:space="preserve" x="426.75" y="-1661.05" font-family="Consolas" font-size="11">_impl()</text>
+<text xml:space="preserve" x="416" y="-1643.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="426.75" y="-1643.55" font-family="Consolas" font-size="11">has_corrector()</text>
+<text xml:space="preserve" x="416" y="-1626.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="426.75" y="-1626.05" font-family="Consolas" font-size="11">correct_trial_status()</text>
+<path fill="#666" stroke="#666" d="M412-1959h187.5z"/>
+<path fill="#666" stroke="#666" d="M412-1941.5h187.5z"/>
+<path fill="none" stroke="#666" d="M412-1619v-359.5h187.5v359.5z"/>
+</a></g><g class="edge"><title>Node2-&gt;Node1</title><a>
+<path fill="none" stroke="#63b8ff" d="M505.75-1608.04v25.36"/>
+<path fill="none" stroke="#63b8ff" d="m502.25-1607.78 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node3</title><a xlink:href="../../db/db8/class_unique_tag.html" xlink:title="Label objects that cannot be copied." target="_top">
+<path fill="#fff" d="M555.62-2193.5h-99.74v179h99.74z"/>
+<text xml:space="preserve" x="475.38" y="-2179.05" font-family="Consolas" font-size="11">UniqueTag</text>
+<text xml:space="preserve" x="502.38" y="-2161.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="459.88" y="-2144.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2144.05" font-family="Consolas" font-size="11">UniqueTag()</text>
+<text xml:space="preserve" x="459.88" y="-2126.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2126.55" font-family="Consolas" font-size="11">UniqueTag()</text>
+<text xml:space="preserve" x="459.88" y="-2109.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2109.05" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="459.88" y="-2091.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2091.55" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="459.88" y="-2074.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2074.05" font-family="Consolas" font-size="11">~UniqueTag()</text>
+<text xml:space="preserve" x="459.88" y="-2056.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2056.55" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="459.88" y="-2039.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2039.05" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="459.88" y="-2021.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2021.55" font-family="Consolas" font-size="11">Tag()</text>
+<path fill="#666" stroke="#666" d="M455.88-2174h99.74z"/>
+<path fill="#666" stroke="#666" d="M455.88-2156.5h99.74z"/>
+<path fill="none" stroke="#666" d="M455.88-2014.5v-179h99.74v179z"/>
+</a></g><g class="edge"><title>Node3-&gt;Node2</title><a>
+<path fill="none" stroke="#63b8ff" d="M505.75-2003.44v25.2"/>
+<path fill="none" stroke="#63b8ff" d="m502.25-2003.37 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node4</title><a xlink:href="../../d0/d57/class_tag.html" xlink:title="A base Tag class." target="_top">
+<path fill="#fff" d="M555.62-2531h-99.74v301.5h99.74z"/>
+<text xml:space="preserve" x="495.62" y="-2516.55" font-family="Consolas" font-size="11">Tag</text>
+<text xml:space="preserve" x="502.38" y="-2499.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="459.88" y="-2481.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2481.55" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="459.88" y="-2464.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2464.05" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="459.88" y="-2446.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2446.55" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="459.88" y="-2429.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2429.05" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="459.88" y="-2411.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2411.55" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="459.88" y="-2394.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2394.05" font-family="Consolas" font-size="11">~Tag()</text>
+<text xml:space="preserve" x="459.88" y="-2376.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2376.55" font-family="Consolas" font-size="11">set_tag()</text>
+<text xml:space="preserve" x="459.88" y="-2359.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2359.05" font-family="Consolas" font-size="11">get_tag()</text>
+<text xml:space="preserve" x="459.88" y="-2341.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2341.55" font-family="Consolas" font-size="11">enable()</text>
+<text xml:space="preserve" x="459.88" y="-2324.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2324.05" font-family="Consolas" font-size="11">disable()</text>
+<text xml:space="preserve" x="459.88" y="-2306.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2306.55" font-family="Consolas" font-size="11">guard()</text>
+<text xml:space="preserve" x="459.88" y="-2289.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2289.05" font-family="Consolas" font-size="11">unguard()</text>
+<text xml:space="preserve" x="459.88" y="-2271.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2271.55" font-family="Consolas" font-size="11">is_active()</text>
+<text xml:space="preserve" x="459.88" y="-2254.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2254.05" font-family="Consolas" font-size="11">is_guarded()</text>
+<text xml:space="preserve" x="459.88" y="-2236.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="470.62" y="-2236.55" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M455.88-2511.5h99.74z"/>
+<path fill="#666" stroke="#666" d="M455.88-2494h99.74z"/>
+<path fill="none" stroke="#666" d="M455.88-2229.5V-2531h99.74v301.5z"/>
+</a></g><g class="edge"><title>Node4-&gt;Node3</title><a>
+<path fill="none" stroke="#63b8ff" d="M505.75-2218.39v25.11"/>
+<path fill="none" stroke="#63b8ff" d="m502.25-2218.17 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node7</title><a xlink:href="../../d7/d02/class_g_s_s_s_s_optimal.html" target="_top">
+<path fill="#fff" d="M188.38-592.25H75.12v56.5h113.26z"/>
+<text xml:space="preserve" x="91.25" y="-577.8" font-family="Consolas" font-size="11">GSSSSOptimal</text>
+<text xml:space="preserve" x="128.38" y="-560.3" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="79.12" y="-542.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="89.88" y="-542.8" font-family="Consolas" font-size="11">GSSSSOptimal()</text>
+<path fill="#666" stroke="#666" d="M75.12-572.75h113.26z"/>
+<path fill="#666" stroke="#666" d="M75.12-555.25h113.26z"/>
+<path fill="none" stroke="#666" d="M75.12-535.75v-56.5h113.26v56.5z"/>
+</a></g><g class="edge"><title>Node6-&gt;Node7</title><a>
+<path fill="none" stroke="#63b8ff" d="M202.83-805.21c-26.34 89.03-50.95 172.18-63.12 213.31"/>
+<path fill="none" stroke="#63b8ff" d="m199.43-806.04 6.19-8.6.52 10.58z"/>
+</a></g><g class="node"><title>Node8</title><a xlink:href="../../df/dfe/class_g_s_s_s_s_u0.html" target="_top">
+<path fill="#fff" d="M285.5-592.25H206v56.5h79.5z"/>
+<text xml:space="preserve" x="222.12" y="-577.8" font-family="Consolas" font-size="11">GSSSSU0</text>
+<text xml:space="preserve" x="242.38" y="-560.3" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="210" y="-542.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="220.75" y="-542.8" font-family="Consolas" font-size="11">GSSSSU0()</text>
+<path fill="#666" stroke="#666" d="M206-572.75h79.5z"/>
+<path fill="#666" stroke="#666" d="M206-555.25h79.5z"/>
+<path fill="none" stroke="#666" d="M206-535.75v-56.5h79.5v56.5z"/>
+</a></g><g class="edge"><title>Node6-&gt;Node8</title><a>
+<path fill="none" stroke="#63b8ff" d="M268.21-801.13c-8.31 87.33-16.02 168.45-19.88 209.02"/>
+<path fill="none" stroke="#63b8ff" d="m264.7-801.24 4.43-9.63 2.54 10.29z"/>
+</a></g><g class="node"><title>Node9</title><a xlink:href="../../dd/d20/class_g_s_s_s_s_v0.html" target="_top">
+<path fill="#fff" d="M383.5-592.25H304v56.5h79.5z"/>
+<text xml:space="preserve" x="320.12" y="-577.8" font-family="Consolas" font-size="11">GSSSSV0</text>
+<text xml:space="preserve" x="340.38" y="-560.3" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="308" y="-542.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="318.75" y="-542.8" font-family="Consolas" font-size="11">GSSSSV0()</text>
+<path fill="#666" stroke="#666" d="M304-572.75h79.5z"/>
+<path fill="#666" stroke="#666" d="M304-555.25h79.5z"/>
+<path fill="none" stroke="#666" d="M304-535.75v-56.5h79.5v56.5z"/>
+</a></g><g class="edge"><title>Node6-&gt;Node9</title><a>
+<path fill="none" stroke="#63b8ff" d="M325.45-801.13c6.77 87.33 13.06 168.45 16.2 209.02"/>
+<path fill="none" stroke="#63b8ff" d="m321.98-800.62 2.72-10.24 4.26 9.7z"/>
+</a></g><g class="node"><title>Node12</title><a xlink:href="../../d2/d22/class_lee_newmark_base.html" xlink:title="A LeeNewmarkBase class defines a solver using Newmark algorithm with Lee damping model." target="_top">
+<path fill="#fff" d="M568.38-776H401.12v424h167.26z"/>
+<text xml:space="preserve" x="437.5" y="-761.55" font-family="Consolas" font-size="11">LeeNewmarkBase</text>
+<text xml:space="preserve" x="405.12" y="-744.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-744.05" font-family="Consolas" font-size="11">n_block</text>
+<text xml:space="preserve" x="405.12" y="-726.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-726.55" font-family="Consolas" font-size="11">stiffness_type</text>
+<text xml:space="preserve" x="405.12" y="-709.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-709.05" font-family="Consolas" font-size="11">first_iteration</text>
+<text xml:space="preserve" x="405.12" y="-691.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-691.55" font-family="Consolas" font-size="11">current_internal</text>
+<text xml:space="preserve" x="405.12" y="-674.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-674.05" font-family="Consolas" font-size="11">trial_internal</text>
+<text xml:space="preserve" x="405.12" y="-656.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-656.55" font-family="Consolas" font-size="11">residual</text>
+<text xml:space="preserve" x="405.12" y="-639.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-639.05" font-family="Consolas" font-size="11">stiffness</text>
+<text xml:space="preserve" x="405.12" y="-621.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-621.55" font-family="Consolas" font-size="11">factory</text>
+<text xml:space="preserve" x="405.12" y="-604.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-604.05" font-family="Consolas" font-size="11">LeeNewmarkBase()</text>
+<text xml:space="preserve" x="405.12" y="-586.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-586.55" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="405.12" y="-569.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-569.05" font-family="Consolas" font-size="11">update_internal()</text>
+<text xml:space="preserve" x="405.12" y="-551.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-551.55" font-family="Consolas" font-size="11">solve()</text>
+<text xml:space="preserve" x="405.12" y="-534.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-534.05" font-family="Consolas" font-size="11">solve()</text>
+<text xml:space="preserve" x="405.12" y="-516.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-516.55" font-family="Consolas" font-size="11">solve()</text>
+<text xml:space="preserve" x="405.12" y="-499.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-499.05" font-family="Consolas" font-size="11">solve()</text>
+<text xml:space="preserve" x="405.12" y="-481.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-481.55" font-family="Consolas" font-size="11">get_residual()</text>
+<text xml:space="preserve" x="405.12" y="-464.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-464.05" font-family="Consolas" font-size="11">commit_status()</text>
+<text xml:space="preserve" x="405.12" y="-446.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-446.55" font-family="Consolas" font-size="11">clear_status()</text>
+<text xml:space="preserve" x="405.12" y="-429.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="415.88" y="-429.05" font-family="Consolas" font-size="11">reset_status()</text>
+<text xml:space="preserve" x="405.12" y="-411.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-411.55" font-family="Consolas" font-size="11">get_total_size()</text>
+<text xml:space="preserve" x="405.12" y="-394.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-394.05" font-family="Consolas" font-size="11">update_stiffness()</text>
+<text xml:space="preserve" x="405.12" y="-376.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-376.55" font-family="Consolas" font-size="11">update_residual()</text>
+<text xml:space="preserve" x="405.12" y="-359.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="415.88" y="-359.05" font-family="Consolas" font-size="11">erase_top_left_block()</text>
+<path fill="#666" stroke="#666" d="M401.12-756.5h167.26z"/>
+<path fill="#666" stroke="#666" d="M401.12-616.5h12.76z"/>
+<path fill="#666" stroke="#666" d="M413.88-616.5h154.5z"/>
+<path fill="none" stroke="#666" d="M401.12-352v-424h167.26v424z"/>
+</a></g><g class="edge"><title>Node11-&gt;Node12</title><a>
+<path fill="none" stroke="#63b8ff" d="M677.08-982.88c-16.3 55.71-38.78 118.15-68.33 170.88-10.32 18.42-19.73 18.14-31 36-3.21 5.08-6.35 10.29-9.44 15.59"/>
+<path fill="none" stroke="#63b8ff" d="m673.71-983.83 6.13-8.64.6 10.57z"/>
+</a></g><g class="node"><title>Node16</title><a xlink:href="../../d0/d6e/class_lee_newmark_iterative.html" xlink:title="A LeeNewmarkIterative class defines a solver using Newmark algorithm with Lee damping model." target="_top">
+<path fill="#fff" d="M747-658.25H586.5v188.5H747z"/>
+<text xml:space="preserve" x="602.62" y="-643.8" font-family="Consolas" font-size="11">LeeNewmarkIterative</text>
+<text xml:space="preserve" x="663.38" y="-626.3" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="590.5" y="-608.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="601.25" y="-608.8" font-family="Consolas" font-size="11">LeeNewmarkIterative()</text>
+<text xml:space="preserve" x="590.5" y="-591.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="601.25" y="-591.3" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="590.5" y="-573.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="601.25" y="-573.8" font-family="Consolas" font-size="11">process_constraint()</text>
+<text xml:space="preserve" x="590.5" y="-556.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="601.25" y="-556.3" font-family="Consolas" font-size="11">process_constraint</text>
+<text xml:space="preserve" x="601.25" y="-542.8" font-family="Consolas" font-size="11">_resistance()</text>
+<text xml:space="preserve" x="590.5" y="-525.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="601.25" y="-525.3" font-family="Consolas" font-size="11">assemble_matrix()</text>
+<text xml:space="preserve" x="590.5" y="-507.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="601.25" y="-507.8" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="601.25" y="-494.3" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="590.5" y="-476.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="601.25" y="-476.8" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M586.5-638.75H747z"/>
+<path fill="#666" stroke="#666" d="M586.5-621.25H747z"/>
+<path fill="none" stroke="#666" d="M586.5-469.75v-188.5H747v188.5z"/>
+</a></g><g class="edge"><title>Node11-&gt;Node16</title><a>
+<path fill="none" stroke="#63b8ff" d="M699.83-982.41c-8.16 103.01-18.73 236.39-25.7 324.32"/>
+<path fill="none" stroke="#63b8ff" d="m696.34-982.66 4.28-9.69 2.7 10.24z"/>
+</a></g><g class="node"><title>Node17</title><a xlink:href="../../d6/d6d/class_rayleigh_newmark.html" xlink:title="A RayleighNewmark class defines a solver using Newmark algorithm with Rayleigh damping model." target="_top">
+<path fill="#fff" d="M926-601H765.5v74H926z"/>
+<text xml:space="preserve" x="795.12" y="-586.55" font-family="Consolas" font-size="11">RayleighNewmark</text>
+<text xml:space="preserve" x="842.38" y="-569.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="769.5" y="-551.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="780.25" y="-551.55" font-family="Consolas" font-size="11">RayleighNewmark()</text>
+<text xml:space="preserve" x="769.5" y="-534.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="780.25" y="-534.05" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<path fill="#666" stroke="#666" d="M765.5-581.5H926z"/>
+<path fill="#666" stroke="#666" d="M765.5-564H926z"/>
+<path fill="none" stroke="#666" d="M765.5-527v-74H926v74z"/>
+</a></g><g class="edge"><title>Node11-&gt;Node17</title><a>
+<path fill="none" stroke="#63b8ff" d="M747.17-982.67c30.54 129.41 72.44 306.92 90.14 381.92"/>
+<path fill="none" stroke="#63b8ff" d="m743.77-981.85 1.11-10.54 5.7 8.93z"/>
+</a></g><g class="node"><title>Node18</title><a xlink:href="../../de/d87/class_u_d_newmark.html" xlink:title="A base class for Newmark integrators with uniform damping." target="_top">
+<path fill="#fff" d="M1083.88-697.25H943.62v266.5h140.26z"/>
+<text xml:space="preserve" x="983.38" y="-682.8" font-family="Consolas" font-size="11">UDNewmark</text>
+<text xml:space="preserve" x="947.62" y="-665.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="958.38" y="-665.3" font-family="Consolas" font-size="11">m</text>
+<text xml:space="preserve" x="947.62" y="-647.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="958.38" y="-647.8" font-family="Consolas" font-size="11">s</text>
+<text xml:space="preserve" x="947.62" y="-630.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="958.38" y="-630.3" font-family="Consolas" font-size="11">s_para</text>
+<text xml:space="preserve" x="947.62" y="-612.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="958.38" y="-612.8" font-family="Consolas" font-size="11">m_para</text>
+<text xml:space="preserve" x="947.62" y="-595.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="958.38" y="-595.3" font-family="Consolas" font-size="11">current_nonviscous</text>
+<text xml:space="preserve" x="947.62" y="-577.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="958.38" y="-577.8" font-family="Consolas" font-size="11">aux_para</text>
+<text xml:space="preserve" x="947.62" y="-560.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="958.38" y="-560.3" font-family="Consolas" font-size="11">accu_para</text>
+<text xml:space="preserve" x="947.62" y="-542.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="958.38" y="-542.8" font-family="Consolas" font-size="11">UDNewmark()</text>
+<text xml:space="preserve" x="947.62" y="-525.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="958.38" y="-525.3" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="947.62" y="-507.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="958.38" y="-507.8" font-family="Consolas" font-size="11">commit_status()</text>
+<text xml:space="preserve" x="947.62" y="-490.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="958.38" y="-490.3" font-family="Consolas" font-size="11">clear_status()</text>
+<text xml:space="preserve" x="947.62" y="-472.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="958.38" y="-472.8" font-family="Consolas" font-size="11">print()</text>
+<text xml:space="preserve" x="947.62" y="-455.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="958.38" y="-455.3" font-family="Consolas" font-size="11">update_parameter()</text>
+<text xml:space="preserve" x="947.62" y="-437.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="958.38" y="-437.8" font-family="Consolas" font-size="11">target_field()</text>
+<path fill="#666" stroke="#666" d="M943.62-677.75h140.26z"/>
+<path fill="#666" stroke="#666" d="M943.62-555.25h12.76z"/>
+<path fill="#666" stroke="#666" d="M956.38-555.25h127.5z"/>
+<path fill="none" stroke="#666" d="M943.62-430.75v-266.5h140.26v266.5z"/>
+</a></g><g class="edge"><title>Node11-&gt;Node18</title><a>
+<path fill="none" stroke="#63b8ff" d="M729.17-982.97c14.11 60.19 39.59 125.86 85.58 170.97 39.75 38.99 79.33-2.04 120 36 22.78 21.31 39.04 49.82 50.62 78.97"/>
+<path fill="none" stroke="#63b8ff" d="m725.77-982.13 1.23-10.53 5.6 8.99z"/>
+</a></g><g class="node"><title>Node22</title><a xlink:href="../../d8/d75/class_wilson_penzien_newmark.html" xlink:title="A WilsonPenzienNewmark class defines a solver using Newmark algorithm with Wilson-Penzien damping mod..." target="_top">
+<path fill="#fff" d="M1269.38-704h-167.26v280h167.26z"/>
+<text xml:space="preserve" x="1118.25" y="-689.55" font-family="Consolas" font-size="11">WilsonPenzienNewmark</text>
+<text xml:space="preserve" x="1182.38" y="-672.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="1106.12" y="-654.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-654.55" font-family="Consolas" font-size="11">WilsonPenzienNewmark()</text>
+<text xml:space="preserve" x="1106.12" y="-637.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-637.05" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="1106.12" y="-619.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-619.55" font-family="Consolas" font-size="11">process_constraint()</text>
+<text xml:space="preserve" x="1106.12" y="-602.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-602.05" font-family="Consolas" font-size="11">solve()</text>
+<text xml:space="preserve" x="1106.12" y="-584.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-584.55" font-family="Consolas" font-size="11">solve()</text>
+<text xml:space="preserve" x="1106.12" y="-567.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-567.05" font-family="Consolas" font-size="11">solve()</text>
+<text xml:space="preserve" x="1106.12" y="-549.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-549.55" font-family="Consolas" font-size="11">solve()</text>
+<text xml:space="preserve" x="1106.12" y="-532.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-532.05" font-family="Consolas" font-size="11">commit_status()</text>
+<text xml:space="preserve" x="1106.12" y="-514.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-514.55" font-family="Consolas" font-size="11">clear_status()</text>
+<text xml:space="preserve" x="1106.12" y="-497.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-497.05" font-family="Consolas" font-size="11">reset_status()</text>
+<text xml:space="preserve" x="1106.12" y="-479.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-479.55" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="1106.12" y="-462.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-462.05" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="1116.88" y="-448.55" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="1106.12" y="-431.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1116.88" y="-431.05" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M1102.12-684.5h167.26z"/>
+<path fill="#666" stroke="#666" d="M1102.12-667h167.26z"/>
+<path fill="none" stroke="#666" d="M1102.12-424v-280h167.26v280z"/>
+</a></g><g class="edge"><title>Node11-&gt;Node22</title><a>
+<path fill="none" stroke="#63b8ff" d="M724.98-982.68c13.31 61.82 39.32 128.66 89.77 170.68 95.74 79.73 178.23-38.62 278 36 24.44 18.28 42.58 44.39 55.99 72.05"/>
+<path fill="none" stroke="#63b8ff" d="m721.6-981.77 1.43-10.5 5.43 9.09z"/>
+</a></g><g class="node"><title>Node13</title><a xlink:href="../../d7/d28/class_lee_newmark.html" xlink:title="A LeeNewmark class defines a solver using Newmark algorithm with Lee damping model." target="_top">
+<path fill="#fff" d="M477-316H316.5v223.5H477z"/>
+<text xml:space="preserve" x="363" y="-301.55" font-family="Consolas" font-size="11">LeeNewmark</text>
+<text xml:space="preserve" x="320.5" y="-284.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="331.25" y="-284.05" font-family="Consolas" font-size="11">current_mass</text>
+<text xml:space="preserve" x="320.5" y="-266.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="331.25" y="-266.55" font-family="Consolas" font-size="11">current_stiffness</text>
+<text xml:space="preserve" x="320.5" y="-249.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="331.25" y="-249.05" font-family="Consolas" font-size="11">current_geometry</text>
+<text xml:space="preserve" x="320.5" y="-231.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="331.25" y="-231.55" font-family="Consolas" font-size="11">LeeNewmark()</text>
+<text xml:space="preserve" x="320.5" y="-214.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="331.25" y="-214.05" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="320.5" y="-196.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="331.25" y="-196.55" font-family="Consolas" font-size="11">process_constraint()</text>
+<text xml:space="preserve" x="320.5" y="-179.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="331.25" y="-179.05" font-family="Consolas" font-size="11">process_constraint</text>
+<text xml:space="preserve" x="331.25" y="-165.55" font-family="Consolas" font-size="11">_resistance()</text>
+<text xml:space="preserve" x="320.5" y="-148.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="331.25" y="-148.05" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="320.5" y="-130.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="331.25" y="-130.55" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="331.25" y="-117.05" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="320.5" y="-99.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="331.25" y="-99.55" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M316.5-296.5H477z"/>
+<path fill="#666" stroke="#666" d="M316.5-244h12.75z"/>
+<path fill="#666" stroke="#666" d="M329.25-244H477z"/>
+<path fill="none" stroke="#666" d="M316.5-92.5V-316H477v223.5z"/>
+</a></g><g class="edge"><title>Node12-&gt;Node13</title><a>
+<path fill="none" stroke="#63b8ff" d="M430.15-341.05c-2.12 8.63-4.21 17.12-6.24 25.37"/>
+<path fill="none" stroke="#63b8ff" d="m426.71-341.71 5.79-8.87 1.01 10.55z"/>
+</a></g><g class="node"><title>Node15</title><a xlink:href="../../d4/d3c/class_lee_newmark_full.html" xlink:title="A LeeNewmarkFull class defines a solver using Newmark algorithm with Lee damping model." target="_top">
+<path fill="#fff" d="M648.62-289.75H494.88v171h153.74z"/>
+<text xml:space="preserve" x="524.5" y="-275.3" font-family="Consolas" font-size="11">LeeNewmarkFull</text>
+<text xml:space="preserve" x="568.38" y="-257.8" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="498.88" y="-240.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.62" y="-240.3" font-family="Consolas" font-size="11">LeeNewmarkFull()</text>
+<text xml:space="preserve" x="498.88" y="-222.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.62" y="-222.8" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="498.88" y="-205.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.62" y="-205.3" font-family="Consolas" font-size="11">process_constraint()</text>
+<text xml:space="preserve" x="498.88" y="-187.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.62" y="-187.8" font-family="Consolas" font-size="11">process_constraint</text>
+<text xml:space="preserve" x="509.62" y="-174.3" font-family="Consolas" font-size="11">_resistance()</text>
+<text xml:space="preserve" x="498.88" y="-156.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.62" y="-156.8" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="509.62" y="-143.3" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="498.88" y="-125.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.62" y="-125.8" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M494.88-270.25h153.74z"/>
+<path fill="#666" stroke="#666" d="M494.88-252.75h153.74z"/>
+<path fill="none" stroke="#666" d="M494.88-118.75v-171h153.74v171z"/>
+</a></g><g class="edge"><title>Node12-&gt;Node15</title><a>
+<path fill="none" stroke="#63b8ff" d="M538.73-341.05c4.39 18.06 8.63 35.49 12.52 51.51"/>
+<path fill="none" stroke="#63b8ff" d="m535.37-340.04 1.04-10.54 5.76 8.89z"/>
+</a></g><g class="node"><title>Node14</title><a xlink:href="../../d7/de2/class_lee_elemental_newmark.html" target="_top">
+<path fill="#fff" d="M464.88-56.5H328.62V0h136.26z"/>
+<text xml:space="preserve" x="332.62" y="-42.05" font-family="Consolas" font-size="11">LeeElementalNewmark</text>
+<text xml:space="preserve" x="393.38" y="-24.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="341.75" y="-7.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="361.62" y="-7.05" font-family="Consolas" font-size="11">LeeNewmark()</text>
+<path fill="#666" stroke="#666" d="M328.62-37h136.26z"/>
+<path fill="#666" stroke="#666" d="M328.62-19.5h136.26z"/>
+<path fill="none" stroke="#666" d="M328.62 0v-56.5h136.26V0z"/>
+</a></g><g class="edge"><title>Node13-&gt;Node14</title><a>
+<path fill="none" stroke="#63b8ff" d="M396.75-81.17v24.98"/>
+<path fill="none" stroke="#63b8ff" d="m393.25-81.05 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node19</title><a xlink:href="../../d9/d75/class_nonviscous_newmark.html" xlink:title="A NonviscousNewmark class defines a solver using Newmark algorithm." target="_top">
+<path fill="#fff" d="M915-274.25H754.5v140H915z"/>
+<text xml:space="preserve" x="777.38" y="-259.8" font-family="Consolas" font-size="11">NonviscousNewmark</text>
+<text xml:space="preserve" x="831.38" y="-242.3" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="758.5" y="-224.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="769.25" y="-224.8" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="758.5" y="-207.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="769.25" y="-207.3" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="769.25" y="-193.8" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="758.5" y="-176.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="769.25" y="-176.3" font-family="Consolas" font-size="11">print()</text>
+<text xml:space="preserve" x="758.5" y="-158.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="769.25" y="-158.8" font-family="Consolas" font-size="11">UDNewmark()</text>
+<text xml:space="preserve" x="758.5" y="-141.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="769.25" y="-141.3" font-family="Consolas" font-size="11">target_field()</text>
+<path fill="#666" stroke="#666" d="M754.5-254.75H915z"/>
+<path fill="#666" stroke="#666" d="M754.5-237.25H915z"/>
+<path fill="none" stroke="#666" d="M754.5-134.25v-140H915v140z"/>
+</a></g><g class="edge"><title>Node18-&gt;Node19</title><a>
+<path fill="none" stroke="#63b8ff" d="M965.64-420.23c-9.34 23.22-19.73 46.7-30.89 68.23-13.76 26.55-31.45 54.05-48.12 77.97"/>
+<path fill="none" stroke="#63b8ff" d="m962.36-421.46 6.93-8.01-.42 10.59z"/>
+</a></g><g class="node"><title>Node20</title><a xlink:href="../../df/db4/class_u_d_a_newmark.html" target="_top">
+<path fill="#fff" d="M1094-309.25H933.5v210H1094z"/>
+<text xml:space="preserve" x="980" y="-294.8" font-family="Consolas" font-size="11">UDANewmark</text>
+<text xml:space="preserve" x="1010.38" y="-277.3" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="937.5" y="-259.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="948.25" y="-259.8" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="937.5" y="-242.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="948.25" y="-242.3" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="937.5" y="-224.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="948.25" y="-224.8" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="948.25" y="-211.3" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="937.5" y="-193.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="948.25" y="-193.8" font-family="Consolas" font-size="11">load_scaling_factor()</text>
+<text xml:space="preserve" x="937.5" y="-176.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="948.25" y="-176.3" font-family="Consolas" font-size="11">get_residual()</text>
+<text xml:space="preserve" x="937.5" y="-158.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="948.25" y="-158.8" font-family="Consolas" font-size="11">commit_status()</text>
+<text xml:space="preserve" x="937.5" y="-141.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="948.25" y="-141.3" font-family="Consolas" font-size="11">clear_status()</text>
+<text xml:space="preserve" x="937.5" y="-123.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="948.25" y="-123.8" font-family="Consolas" font-size="11">UDNewmark()</text>
+<text xml:space="preserve" x="937.5" y="-106.3" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="948.25" y="-106.3" font-family="Consolas" font-size="11">target_field()</text>
+<path fill="#666" stroke="#666" d="M933.5-289.75H1094z"/>
+<path fill="#666" stroke="#666" d="M933.5-272.25H1094z"/>
+<path fill="none" stroke="#666" d="M933.5-99.25v-210H1094v210z"/>
+</a></g><g class="edge"><title>Node18-&gt;Node20</title><a>
+<path fill="none" stroke="#63b8ff" d="M1013.75-419.44v110.19"/>
+<path fill="none" stroke="#63b8ff" d="m1010.25-419.29 3.5-10 3.5 10z"/>
+</a></g><g class="node"><title>Node21</title><a xlink:href="../../d6/dea/class_u_d_d_newmark.html" target="_top">
+<path fill="#fff" d="M1273-291.75h-160.5v175H1273z"/>
+<text xml:space="preserve" x="1159" y="-277.3" font-family="Consolas" font-size="11">UDDNewmark</text>
+<text xml:space="preserve" x="1189.38" y="-259.8" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="1116.5" y="-242.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1127.25" y="-242.3" font-family="Consolas" font-size="11">assemble_resistance()</text>
+<text xml:space="preserve" x="1116.5" y="-224.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1127.25" y="-224.8" font-family="Consolas" font-size="11">assemble_effective</text>
+<text xml:space="preserve" x="1127.25" y="-211.3" font-family="Consolas" font-size="11">_matrix()</text>
+<text xml:space="preserve" x="1116.5" y="-193.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1127.25" y="-193.8" font-family="Consolas" font-size="11">load_scaling_factor()</text>
+<text xml:space="preserve" x="1116.5" y="-176.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1127.25" y="-176.3" font-family="Consolas" font-size="11">get_residual()</text>
+<text xml:space="preserve" x="1116.5" y="-158.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1127.25" y="-158.8" font-family="Consolas" font-size="11">get_reference_load()</text>
+<text xml:space="preserve" x="1116.5" y="-141.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1127.25" y="-141.3" font-family="Consolas" font-size="11">UDNewmark()</text>
+<text xml:space="preserve" x="1116.5" y="-123.8" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="1127.25" y="-123.8" font-family="Consolas" font-size="11">target_field()</text>
+<path fill="#666" stroke="#666" d="M1112.5-272.25H1273z"/>
+<path fill="#666" stroke="#666" d="M1112.5-254.75H1273z"/>
+<path fill="none" stroke="#666" d="M1112.5-116.75v-175H1273v175z"/>
+</a></g><g class="edge"><title>Node18-&gt;Node21</title><a>
+<path fill="none" stroke="#63b8ff" d="M1061.86-420.23c9.34 23.22 19.73 46.7 30.89 68.23 10.5 20.26 23.28 41.06 36.16 60.41"/>
+<path fill="none" stroke="#63b8ff" d="m1058.63-418.88-.42-10.59 6.93 8.01z"/>
+</a></g></g></svg>

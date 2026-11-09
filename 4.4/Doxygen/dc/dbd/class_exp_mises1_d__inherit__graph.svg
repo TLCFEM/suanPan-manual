@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 413;
+var viewHeight = 1280;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>ExpMises1D</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="An ExpMises1D material class." id="a_Node000001">
+<path fill="#999" d="M179.5-74H73V0h106.5z"/>
+<text xml:space="preserve" x="92.5" y="-59.55" font-family="Consolas" font-size="11">ExpMises1D</text>
+<text xml:space="preserve" x="122.88" y="-42.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="77" y="-24.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="87.75" y="-24.55" font-family="Consolas" font-size="11">ExpMises1D()</text>
+<text xml:space="preserve" x="77" y="-7.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="87.75" y="-7.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<path fill="#666" stroke="#666" d="M73-54.5h106.5z"/>
+<path fill="#666" stroke="#666" d="M73-37h106.5z"/>
+<path fill="none" stroke="#666" d="M73 0v-74h106.5V0z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d6/d2a/struct_data_exp_mises1_d.html" id="a_Node000002" target="_top">
+<path fill="#fff" d="M102.5-219H0v109h102.5z"/>
+<text xml:space="preserve" x="4" y="-204.55" font-family="Consolas" font-size="11">DataExpMises1D</text>
+<text xml:space="preserve" x="4.69" y="-187.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="16.12" y="-187.05" font-family="Consolas" font-size="11">yield_stress</text>
+<text xml:space="preserve" x="4.69" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="16.12" y="-169.55" font-family="Consolas" font-size="11">a</text>
+<text xml:space="preserve" x="4.69" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="16.12" y="-152.05" font-family="Consolas" font-size="11">b</text>
+<text xml:space="preserve" x="4.69" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="16.12" y="-134.55" font-family="Consolas" font-size="11">c</text>
+<text xml:space="preserve" x="47.88" y="-117.05" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M0-199.5h102.5z"/>
+<path fill="#666" stroke="#666" d="M0-129.5h14.12z"/>
+<path fill="#666" stroke="#666" d="M14.12-129.5h88.38z"/>
+<path fill="none" stroke="#666" d="M0-110v-109h102.5v109z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node2-&gt;Node1</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#006400" d="M88.95-100.41c5.45 9.12 10.9 18.23 15.88 26.56"/>
+<path fill="none" stroke="#006400" d="m85.96-98.6-2.13-10.38 8.14 6.79z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../db/d14/class_nonlinear_mises1_d.html" xlink:title="A NonlinearMises1D material class." id="a_Node000003" target="_top">
+<path fill="#fff" d="M281.5-210.25H121v91.5h160.5z"/>
+<text xml:space="preserve" x="147.25" y="-195.8" font-family="Consolas" font-size="11">NonlinearMises1D</text>
+<text xml:space="preserve" x="197.88" y="-178.3" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="125" y="-160.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="135.75" y="-160.8" font-family="Consolas" font-size="11">NonlinearMises1D()</text>
+<text xml:space="preserve" x="125" y="-143.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="135.75" y="-143.3" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="125" y="-125.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="135.75" y="-125.8" font-family="Consolas" font-size="11">update_trial_status()</text>
+<path fill="#666" stroke="#666" d="M121-190.75h160.5z"/>
+<path fill="#666" stroke="#666" d="M121-173.25h160.5z"/>
+<path fill="none" stroke="#666" d="M121-118.75v-91.5h160.5v91.5z"/>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node3-&gt;Node1</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M168.69-109.02c-7.12 11.93-14.49 24.26-21.05 35.23"/>
+<path fill="none" stroke="#63b8ff" d="m165.69-110.81 8.13-6.79-2.13 10.38z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d0/de1/struct_data_mises1_d.html" id="a_Node000004" target="_top">
+<path fill="#fff" d="M192.25-355.25h-120v56.5h120z"/>
+<text xml:space="preserve" x="95.12" y="-340.8" font-family="Consolas" font-size="11">DataMises1D</text>
+<text xml:space="preserve" x="76.25" y="-323.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="87" y="-323.3" font-family="Consolas" font-size="11">elastic_modulus</text>
+<text xml:space="preserve" x="128.88" y="-305.8" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M72.25-335.75h120z"/>
+<path fill="#666" stroke="#666" d="M72.25-318.25H85z"/>
+<path fill="#666" stroke="#666" d="M85-318.25h107.25z"/>
+<path fill="none" stroke="#666" d="M72.25-298.75v-56.5h120v56.5z"/>
+</a></g><g id="edge3_Node000003_Node000004" class="edge"><title>Node4-&gt;Node3</title><a id="a_edge3_Node000003_Node000004">
+<path fill="none" stroke="#006400" d="M148.49-288.23c10.05 23.38 23 53.5 33.55 78.05"/>
+<path fill="none" stroke="#006400" d="m145.29-286.81-.74-10.57 7.17 7.8z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d9/d97/class_material1_d.html" xlink:title="A Material1D class." id="a_Node000005" target="_top">
+<path fill="#fff" d="M330.25-399h-120v144h120z"/>
+<text xml:space="preserve" x="236.5" y="-384.55" font-family="Consolas" font-size="11">Material1D</text>
+<text xml:space="preserve" x="266.88" y="-367.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="214.25" y="-349.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="225" y="-349.55" font-family="Consolas" font-size="11">Material1D()</text>
+<text xml:space="preserve" x="214.25" y="-332.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="225" y="-332.05" font-family="Consolas" font-size="11">clear_status()</text>
+<text xml:space="preserve" x="214.25" y="-314.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="225" y="-314.55" font-family="Consolas" font-size="11">commit_status()</text>
+<text xml:space="preserve" x="214.25" y="-297.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="225" y="-297.05" font-family="Consolas" font-size="11">reset_status()</text>
+<text xml:space="preserve" x="214.25" y="-279.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="225" y="-279.55" font-family="Consolas" font-size="11">record()</text>
+<text xml:space="preserve" x="214.25" y="-262.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="225" y="-262.05" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M210.25-379.5h120z"/>
+<path fill="#666" stroke="#666" d="M210.25-362h120z"/>
+<path fill="none" stroke="#666" d="M210.25-255v-144h120v144z"/>
+</a></g><g id="edge4_Node000003_Node000005" class="edge"><title>Node5-&gt;Node3</title><a id="a_edge4_Node000003_Node000005">
+<path fill="none" stroke="#63b8ff" d="M235.3-244.7c-5.11 11.89-10.21 23.75-14.85 34.54"/>
+<path fill="none" stroke="#63b8ff" d="m232.02-245.94 7.17-7.8-.74 10.56z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../dc/dee/class_material.html" xlink:title="A Material abstract base class." id="a_Node000006" target="_top">
+<path fill="#fff" d="M350.5-666.5H190V-435h160.5z"/>
+<text xml:space="preserve" x="243.25" y="-652.05" font-family="Consolas" font-size="11">Material</text>
+<text xml:space="preserve" x="266.88" y="-634.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="194" y="-617.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-617.05" font-family="Consolas" font-size="11">Material()</text>
+<text xml:space="preserve" x="194" y="-599.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-599.55" font-family="Consolas" font-size="11">get_density()</text>
+<text xml:space="preserve" x="194" y="-582.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-582.05" font-family="Consolas" font-size="11">get_material_type()</text>
+<text xml:space="preserve" x="194" y="-564.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-564.55" font-family="Consolas" font-size="11">get_plane_type()</text>
+<text xml:space="preserve" x="194" y="-547.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-547.05" font-family="Consolas" font-size="11">initialize_base()</text>
+<text xml:space="preserve" x="194" y="-529.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-529.55" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="194" y="-512.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-512.05" font-family="Consolas" font-size="11">initialize_history()</text>
+<text xml:space="preserve" x="194" y="-494.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-494.55" font-family="Consolas" font-size="11">set_initial_history()</text>
+<text xml:space="preserve" x="194" y="-477.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-477.05" font-family="Consolas" font-size="11">set_initialized()</text>
+<text xml:space="preserve" x="194" y="-459.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="204.75" y="-459.55" font-family="Consolas" font-size="11">set_symmetric()</text>
+<text xml:space="preserve" x="204.75" y="-442.05" font-family="Consolas" font-size="11">and 42 more...</text>
+<path fill="#666" stroke="#666" d="M190-647h160.5z"/>
+<path fill="#666" stroke="#666" d="M190-629.5h160.5z"/>
+<path fill="none" stroke="#666" d="M190-435v-231.5h160.5V-435z"/>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node6-&gt;Node5</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M270.25-424.01v25.08"/>
+<path fill="none" stroke="#63b8ff" d="m266.75-423.79 3.5-10 3.5 10z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../de/de9/struct_data_material.html" id="a_Node000007" target="_top">
+<path fill="#fff" d="M273.5-934H113v231.5h160.5z"/>
+<text xml:space="preserve" x="152.75" y="-919.55" font-family="Consolas" font-size="11">DataMaterial</text>
+<text xml:space="preserve" x="117" y="-902.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-902.05" font-family="Consolas" font-size="11">density</text>
+<text xml:space="preserve" x="117" y="-884.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-884.55" font-family="Consolas" font-size="11">material_type</text>
+<text xml:space="preserve" x="117" y="-867.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-867.05" font-family="Consolas" font-size="11">plane_type</text>
+<text xml:space="preserve" x="117" y="-849.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-849.55" font-family="Consolas" font-size="11">tolerance</text>
+<text xml:space="preserve" x="117" y="-832.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-832.05" font-family="Consolas" font-size="11">characteristic_length</text>
+<text xml:space="preserve" x="117" y="-814.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-814.55" font-family="Consolas" font-size="11">current_strain</text>
+<text xml:space="preserve" x="117" y="-797.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-797.05" font-family="Consolas" font-size="11">trial_strain</text>
+<text xml:space="preserve" x="117" y="-779.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-779.55" font-family="Consolas" font-size="11">incre_strain</text>
+<text xml:space="preserve" x="117" y="-762.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-762.05" font-family="Consolas" font-size="11">current_strain_rate</text>
+<text xml:space="preserve" x="117" y="-744.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="127.75" y="-744.55" font-family="Consolas" font-size="11">trial_strain_rate</text>
+<text xml:space="preserve" x="127.75" y="-727.05" font-family="Consolas" font-size="11">and 19 more...</text>
+<text xml:space="preserve" x="189.88" y="-709.55" font-family="Consolas" font-size="11"> </text>
+<path fill="#666" stroke="#666" d="M113-914.5h160.5z"/>
+<path fill="#666" stroke="#666" d="M113-722h12.75z"/>
+<path fill="#666" stroke="#666" d="M125.75-722H273.5z"/>
+<path fill="none" stroke="#666" d="M113-702.5V-934h160.5v231.5z"/>
+</a></g><g id="edge6_Node000006_Node000007" class="edge"><title>Node7-&gt;Node6</title><a id="a_edge6_Node000006_Node000007">
+<path fill="none" stroke="#006400" d="M229.59-691.93c2.48 8.54 4.97 17.13 7.43 25.62"/>
+<path fill="none" stroke="#006400" d="m226.31-690.69.58-10.58 6.14 8.63z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d7/d1d/class_copyable_tag.html" xlink:title="Label objects that can be copied." id="a_Node000008" target="_top">
+<path fill="#fff" d="M404.88-907.75H291.62v179h113.26z"/>
+<text xml:space="preserve" x="311.12" y="-893.3" font-family="Consolas" font-size="11">CopyableTag</text>
+<text xml:space="preserve" x="344.88" y="-875.8" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="295.62" y="-858.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="306.38" y="-858.3" font-family="Consolas" font-size="11">CopyableTag()</text>
+<text xml:space="preserve" x="295.62" y="-840.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="306.38" y="-840.8" font-family="Consolas" font-size="11">CopyableTag()</text>
+<text xml:space="preserve" x="295.62" y="-823.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="306.38" y="-823.3" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="295.62" y="-805.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="306.38" y="-805.8" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="295.62" y="-788.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="306.38" y="-788.3" font-family="Consolas" font-size="11">~CopyableTag()</text>
+<text xml:space="preserve" x="295.62" y="-770.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="306.38" y="-770.8" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="295.62" y="-753.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="306.38" y="-753.3" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="295.62" y="-735.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="306.38" y="-735.8" font-family="Consolas" font-size="11">Tag()</text>
+<path fill="#666" stroke="#666" d="M291.62-888.25h113.26z"/>
+<path fill="#666" stroke="#666" d="M291.62-870.75h113.26z"/>
+<path fill="none" stroke="#666" d="M291.62-728.75v-179h113.26v179z"/>
+</a></g><g id="edge7_Node000006_Node000008" class="edge"><title>Node8-&gt;Node6</title><a id="a_edge7_Node000006_Node000008">
+<path fill="none" stroke="#63b8ff" d="M319.06-717.89c-4.95 16.85-10.13 34.47-15.18 51.67"/>
+<path fill="none" stroke="#63b8ff" d="m315.67-718.78 6.18-8.61.54 10.58z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../d0/d57/class_tag.html" xlink:title="A base Tag class." id="a_Node000009" target="_top">
+<path fill="#fff" d="M398.12-1271.5h-99.74V-970h99.74z"/>
+<text xml:space="preserve" x="338.12" y="-1257.05" font-family="Consolas" font-size="11">Tag</text>
+<text xml:space="preserve" x="344.88" y="-1239.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="302.38" y="-1222.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1222.05" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="302.38" y="-1204.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1204.55" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="302.38" y="-1187.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1187.05" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="302.38" y="-1169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1169.55" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="302.38" y="-1152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1152.05" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="302.38" y="-1134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1134.55" font-family="Consolas" font-size="11">~Tag()</text>
+<text xml:space="preserve" x="302.38" y="-1117.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1117.05" font-family="Consolas" font-size="11">set_tag()</text>
+<text xml:space="preserve" x="302.38" y="-1099.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1099.55" font-family="Consolas" font-size="11">get_tag()</text>
+<text xml:space="preserve" x="302.38" y="-1082.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1082.05" font-family="Consolas" font-size="11">enable()</text>
+<text xml:space="preserve" x="302.38" y="-1064.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1064.55" font-family="Consolas" font-size="11">disable()</text>
+<text xml:space="preserve" x="302.38" y="-1047.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1047.05" font-family="Consolas" font-size="11">guard()</text>
+<text xml:space="preserve" x="302.38" y="-1029.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1029.55" font-family="Consolas" font-size="11">unguard()</text>
+<text xml:space="preserve" x="302.38" y="-1012.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-1012.05" font-family="Consolas" font-size="11">is_active()</text>
+<text xml:space="preserve" x="302.38" y="-994.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-994.55" font-family="Consolas" font-size="11">is_guarded()</text>
+<text xml:space="preserve" x="302.38" y="-977.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="313.12" y="-977.05" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M298.38-1252h99.74z"/>
+<path fill="#666" stroke="#666" d="M298.38-1234.5h99.74z"/>
+<path fill="none" stroke="#666" d="M298.38-970v-301.5h99.74V-970z"/>
+</a></g><g id="edge8_Node000008_Node000009" class="edge"><title>Node9-&gt;Node8</title><a id="a_edge8_Node000008_Node000009">
+<path fill="none" stroke="#63b8ff" d="M348.25-959.05v51.5"/>
+<path fill="none" stroke="#63b8ff" d="m344.75-958.87 3.5-10 3.5 10z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_exp_mises1_d__inherit__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

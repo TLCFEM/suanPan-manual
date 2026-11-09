@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 526;
+var viewHeight = 190;
+var sectionId = &apos;dynsection-126&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Quaternion::norm</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M518.25-61.5h-124V-40h124z"/>
+<text xml:space="preserve" x="456.25" y="-47.05" font-family="Consolas" font-size="11" text-anchor="middle">Quaternion::norm</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../da/d46/group___utility.html#ga0356cc7b1e2bb6a9a47c959a28139431" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M338-101.5H220.75V-80H338z"/>
+<text xml:space="preserve" x="279.38" y="-87.05" font-family="Consolas" font-size="11" text-anchor="middle">Quaternion::inv</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M395.13-64.5c-21.42-4.9-45.26-10.35-65.64-15.02"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m395.63-67.98 8.97 5.64-10.53 1.19z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d5/d73/_test_quaternion_8cpp.html#ae3037dd5e1a2f580a9c5e0166824be7b" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M120.62-61.5H43.88V-40h76.74z"/>
+<text xml:space="preserve" x="82.25" y="-47.05" font-family="Consolas" font-size="11" text-anchor="middle">TEST_CASE</text>
+</a></g><g id="edge8_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge8_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M382.57-50.75H120.92"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m382.31-54.25 10 3.5-10 3.5z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../da/d46/group___utility.html#ga2f1a0859860d319168c0c61b940c1c9d" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M358.25-22.5H200.5V-1h157.75z"/>
+<text xml:space="preserve" x="279.38" y="-8.05" font-family="Consolas" font-size="11" text-anchor="middle">Quaternion::normalise</text>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M393.92-37.07c-20.64 4.6-43.42 9.68-63.12 14.07"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m393.14-40.48 10.52 1.24-9 5.59z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../da/d46/group___utility.html#ga18bb64fdcf2a2e5fca392cfaf37e3718" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M161.12-181.5H3.38v21.5h157.74z"/>
+<text xml:space="preserve" x="82.25" y="-167.05" font-family="Consolas" font-size="11" text-anchor="middle">Quaternion::operator/</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M250.61-107.84c-22.52-13.25-55.45-31.26-86.11-42.91-8.83-3.35-18.41-6.29-27.79-8.81"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m252.39-110.85 6.79 8.13-10.38-2.12z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../da/d46/group___utility.html#gaa279c12392b3998b1284815224620f99" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M164.5-141.5H0v21.5h164.5z"/>
+<text xml:space="preserve" x="82.25" y="-127.05" font-family="Consolas" font-size="11" text-anchor="middle">Quaternion::operator/=</text>
+</a></g><g id="edge3_Node000002_Node000004" class="edge"><title>Node2-&gt;Node4</title><a id="a_edge3_Node000002_Node000004">
+<path fill="none" stroke="#63b8ff" d="M212.27-104.3c-24.14-4.95-51.17-10.49-74.22-15.22"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m212.93-107.74 9.09 5.44-10.5 1.42z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d5/d73/_test_quaternion_8cpp.html#a6e106cec4db7a81453b778e85608bd6f" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M120.62-101.5H43.88V-80h76.74z"/>
+<text xml:space="preserve" x="82.25" y="-87.05" font-family="Consolas" font-size="11" text-anchor="middle">TEST_CASE</text>
+</a></g><g id="edge4_Node000002_Node000005" class="edge"><title>Node2-&gt;Node5</title><a id="a_edge4_Node000002_Node000005">
+<path fill="none" stroke="#63b8ff" d="M209.2-90.75h-88.17"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m208.85-94.25 10 3.5-10 3.5z"/>
+</a></g><g id="edge5_Node000002_Node000006" class="edge"><title>Node2-&gt;Node6</title><a id="a_edge5_Node000002_Node000006">
+<path fill="none" stroke="#63b8ff" d="M212.52-77.25c-30.46 6.24-65.54 13.44-91.47 18.75"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m211.52-80.62 10.5 1.42-9.09 5.44z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d5/d73/_test_quaternion_8cpp.html#a91b77578116774ff16f51ed72c670cda" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M120.62-21.5H43.88V0h76.74z"/>
+<text xml:space="preserve" x="82.25" y="-7.05" font-family="Consolas" font-size="11" text-anchor="middle">TEST_CASE</text>
+</a></g><g id="edge7_Node000007_Node000008" class="edge"><title>Node7-&gt;Node8</title><a id="a_edge7_Node000007_Node000008">
+<path fill="none" stroke="#63b8ff" d="M188.86-11.29c-23.87.12-48.39.25-67.79.35"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m188.6-14.79 10.02 3.45-9.98 3.55z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="group___utility_ga5ce88d07462db0f4c248d09a12f3f090_icgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 767;
+var viewHeight = 373;
+var sectionId = &apos;dynsection-6&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Integrator::commit_status</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M759.25-197h-137.5v35h137.5z"/>
+<text xml:space="preserve" x="629.75" y="-182.55" font-family="Consolas" font-size="11">Integrator::commit</text>
+<text xml:space="preserve" x="690.5" y="-169.05" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d3/d9a/class_bathe_explicit.html#a8e88ea5938bcb7552b1066cdc28dcc10" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M575.62-365H417.88v35h157.74z"/>
+<text xml:space="preserve" x="425.88" y="-350.55" font-family="Consolas" font-size="11">BatheExplicit::commit</text>
+<text xml:space="preserve" x="496.75" y="-337.05" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M676.29-207.31c-16.69-32.17-48.38-84.5-90.54-114.19-4.3-3.03-8.95-5.71-13.79-8.08"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m679.31-209.1 1.37 10.51-7.62-7.36z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d9/dd7/class_bathe_two_step.html#a0c631a260e8acea367867d3b2177ff42" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M572.25-312h-151v35h151z"/>
+<text xml:space="preserve" x="429.25" y="-297.55" font-family="Consolas" font-size="11">BatheTwoStep::commit</text>
+<text xml:space="preserve" x="496.75" y="-284.05" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M665.4-205.45c-19.7-19.83-49.19-46.48-79.65-63.05-5.46-2.97-11.3-5.64-17.27-8.03"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m667.7-208.12 4.47 9.61-9.49-4.72z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../de/d6d/class_g_e_r_k_n.html#ad3985ed9a1496ac466409511a1c79c98" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M572.25-259.25h-151v21.5h151z"/>
+<text xml:space="preserve" x="496.75" y="-244.8" font-family="Consolas" font-size="11" text-anchor="middle">GERKN::commit_status</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M647.48-202.55c-18.5-9.41-40.77-19.75-61.73-26.95-8.57-2.94-17.78-5.53-26.89-7.77"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m649.01-205.7 7.27 7.71-10.49-1.49z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d2/d22/class_lee_newmark_base.html#ab8bc2cc43da07793b21f0743c2eb86a4" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M579-220H414.5v35H579z"/>
+<text xml:space="preserve" x="422.5" y="-205.55" font-family="Consolas" font-size="11">LeeNewmarkBase::commit</text>
+<text xml:space="preserve" x="496.75" y="-192.05" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g id="edge4_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge4_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M610.07-189.03c-10.11-1.21-20.47-2.45-30.61-3.67"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m610.34-192.52 9.51 4.67-10.34 2.28z"/>
+</a></g><g id="Node000011" class="node"><title>Node11</title><a xlink:href="../../db/d4b/class_o_a_l_t_s.html#a08c857b95dfe1f36766f1ee3b517ef4e" id="a_Node000011" target="_top">
+<path fill="#fff" stroke="#666" d="M572.25-167.25h-151v21.5h151z"/>
+<text xml:space="preserve" x="496.75" y="-152.8" font-family="Consolas" font-size="11" text-anchor="middle">OALTS::commit_status</text>
+</a></g><g id="edge10_Node000001_Node000011" class="edge"><title>Node1-&gt;Node11</title><a id="a_edge10_Node000001_Node000011">
+<path fill="none" stroke="#63b8ff" d="M610.07-169.97c-12.43 1.49-25.24 3.02-37.56 4.5"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m609.51-173.43 10.34 2.28-9.51 4.67z"/>
+</a></g><g id="Node000012" class="node"><title>Node12</title><a xlink:href="../../de/d87/class_u_d_newmark.html#a8a3ec04f6fc04e07ff0db8d7973f0257" id="a_Node000012" target="_top">
+<path fill="#fff" stroke="#666" d="M585.75-127.25h-178v21.5h178z"/>
+<text xml:space="preserve" x="496.75" y="-112.8" font-family="Consolas" font-size="11" text-anchor="middle">UDNewmark::commit_status</text>
+</a></g><g id="edge11_Node000001_Node000012" class="edge"><title>Node1-&gt;Node12</title><a id="a_edge11_Node000001_Node000012">
+<path fill="none" stroke="#63b8ff" d="M640.38-157.14c-17.06 7.23-36.47 14.86-54.63 20.64-10.3 3.28-21.44 6.24-32.22 8.82"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m638.71-160.23 10.57-.74-7.8 7.17z"/>
+</a></g><g id="Node000014" class="node"><title>Node14</title><a xlink:href="../../d8/d75/class_wilson_penzien_newmark.html#aba4b5a5bc64cc42b5d13691d7bfe0e61" id="a_Node000014" target="_top">
+<path fill="#fff" stroke="#666" d="M572.25-88h-151v35h151z"/>
+<text xml:space="preserve" x="429.25" y="-73.55" font-family="Consolas" font-size="11">WilsonPenzienNewmark</text>
+<text xml:space="preserve" x="496.75" y="-60.05" font-family="Consolas" font-size="11" text-anchor="middle">::commit_status</text>
+</a></g><g id="edge13_Node000001_Node000014" class="edge"><title>Node1-&gt;Node14</title><a id="a_edge13_Node000001_Node000014">
+<path fill="none" stroke="#63b8ff" d="M663.74-154.13c-19.86 18.31-48.78 42.38-77.99 57.63-5.65 2.95-11.68 5.61-17.84 8"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m661.14-156.49 9.68-4.3-4.88 9.4z"/>
+</a></g><g id="Node000015" class="node"><title>Node15</title><a xlink:href="../../d6/d55/class_integrator.html#af2ea8386e8b9171e94348966f294276d" id="a_Node000015" target="_top">
+<path fill="#fff" stroke="#666" d="M575.62-35H417.88V0h157.74z"/>
+<text xml:space="preserve" x="425.88" y="-20.55" font-family="Consolas" font-size="11">Integrator::stage_and</text>
+<text xml:space="preserve" x="496.75" y="-7.05" font-family="Consolas" font-size="11" text-anchor="middle">_commit_status</text>
+</a></g><g id="edge14_Node000001_Node000015" class="edge"><title>Node1-&gt;Node15</title><a id="a_edge14_Node000001_Node000015">
+<path fill="none" stroke="#63b8ff" d="M675.11-151.76c-17.24 30.6-48.95 79.22-89.36 107.26-4.99 3.46-10.44 6.49-16.1 9.14"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m672-153.36 7.87-7.08-1.73 10.45z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d2/d22/class_lee_newmark_base.html#af260f147f3fe085c539dacff6af213c3" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M371.75-220h-164.5v35h164.5z"/>
+<text xml:space="preserve" x="215.25" y="-205.55" font-family="Consolas" font-size="11">LeeNewmarkBase::update</text>
+<text xml:space="preserve" x="289.5" y="-192.05" font-family="Consolas" font-size="11" text-anchor="middle">_residual</text>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node5-&gt;Node6</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M402.57-202.5h-30.64"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m402.53-206 10 3.5-10 3.5z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d7/d28/class_lee_newmark.html#aab9b96774bf1ee1e6ab2e774819c7864" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M157.75-300H13.5v35h144.25z"/>
+<text xml:space="preserve" x="21.5" y="-285.55" font-family="Consolas" font-size="11">LeeNewmark::process</text>
+<text xml:space="preserve" x="85.62" y="-272.05" font-family="Consolas" font-size="11" text-anchor="middle">_constraint</text>
+</a></g><g id="edge6_Node000006_Node000007" class="edge"><title>Node6-&gt;Node7</title><a id="a_edge6_Node000006_Node000007">
+<path fill="none" stroke="#63b8ff" d="M242.73-225.3c-21.42-10.23-47.46-22.03-71.48-31.2-7.32-2.8-15.09-5.51-22.82-8.06"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m244-228.58 7.49 7.5-10.53-1.19z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d4/d3c/class_lee_newmark_full.html#aa8341c1f245045cb7ebe0a5856641849" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M171.25-247H0v35h171.25z"/>
+<text xml:space="preserve" x="8" y="-232.55" font-family="Consolas" font-size="11">LeeNewmarkFull::process</text>
+<text xml:space="preserve" x="85.62" y="-219.05" font-family="Consolas" font-size="11" text-anchor="middle">_constraint</text>
+</a></g><g id="edge7_Node000006_Node000008" class="edge"><title>Node6-&gt;Node8</title><a id="a_edge7_Node000006_Node000008">
+<path fill="none" stroke="#63b8ff" d="m195.63-214.92-24.21-3.24"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m196.02-218.4 9.45 4.8-10.37 2.14z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../d7/d28/class_lee_newmark.html#ab951170359b4b266bf343c13a2856c23" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M167.88-194H3.38v35h164.5z"/>
+<text xml:space="preserve" x="11.38" y="-179.55" font-family="Consolas" font-size="11">LeeNewmark::process</text>
+<text xml:space="preserve" x="85.62" y="-166.05" font-family="Consolas" font-size="11" text-anchor="middle">_constraint_resistance</text>
+</a></g><g id="edge8_Node000006_Node000009" class="edge"><title>Node6-&gt;Node9</title><a id="a_edge8_Node000006_Node000009">
+<path fill="none" stroke="#63b8ff" d="M195.78-190.56c-9.23 1.19-18.55 2.39-27.65 3.56"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m195.11-194 10.36 2.19-9.47 4.75z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../d4/d3c/class_lee_newmark_full.html#abf91cf7cf4b775666caca07d9f6a9fff" id="a_Node000010" target="_top">
+<path fill="#fff" stroke="#666" d="M171.25-141H0v35h171.25z"/>
+<text xml:space="preserve" x="8" y="-126.55" font-family="Consolas" font-size="11">LeeNewmarkFull::process</text>
+<text xml:space="preserve" x="85.62" y="-113.05" font-family="Consolas" font-size="11" text-anchor="middle">_constraint_resistance</text>
+</a></g><g id="edge9_Node000006_Node000010" class="edge"><title>Node6-&gt;Node10</title><a id="a_edge9_Node000006_Node000010">
+<path fill="none" stroke="#63b8ff" d="M240.62-179.86c-21.06 9.6-46.22 20.56-69.37 29.36-8.22 3.12-16.97 6.19-25.61 9.08"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m238.99-182.96 10.55-.99-7.63 7.35z"/>
+</a></g><g id="Node000013" class="node"><title>Node13</title><a xlink:href="../../df/db4/class_u_d_a_newmark.html#aa5f4c026deb4f8fcb84cf905451c8bcd" id="a_Node000013" target="_top">
+<path fill="#fff" stroke="#666" d="M358.25-134h-137.5v35h137.5z"/>
+<text xml:space="preserve" x="228.75" y="-119.55" font-family="Consolas" font-size="11">UDANewmark::commit</text>
+<text xml:space="preserve" x="289.5" y="-106.05" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g id="edge12_Node000012_Node000013" class="edge"><title>Node12-&gt;Node13</title><a id="a_edge12_Node000012_Node000013">
+<path fill="none" stroke="#63b8ff" d="M396.31-116.5h-37.79"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m396-120 10 3.5-10 3.5z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_integrator_a6f58f962ec742224c1f6d54355961ffb_icgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

@@ -1,0 +1,390 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 1866;
+var viewHeight = 1135;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Converger</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="The Converger class handles converger test to indicate if the iteration converges according to variou..." id="a_Node000001">
+<path fill="#999" d="M999.12-574h-147v319h147z"/>
+<text xml:space="preserve" x="895.25" y="-559.55" font-family="Consolas" font-size="11">Converger</text>
+<text xml:space="preserve" x="922.25" y="-542.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="856.12" y="-524.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-524.55" font-family="Consolas" font-size="11">Converger()</text>
+<text xml:space="preserve" x="856.12" y="-507.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-507.05" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="856.12" y="-489.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-489.55" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="856.12" y="-472.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-472.05" font-family="Consolas" font-size="11">set_tolerance()</text>
+<text xml:space="preserve" x="856.12" y="-454.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-454.55" font-family="Consolas" font-size="11">get_tolerance()</text>
+<text xml:space="preserve" x="856.12" y="-437.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-437.05" font-family="Consolas" font-size="11">set_max_iteration()</text>
+<text xml:space="preserve" x="856.12" y="-419.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-419.55" font-family="Consolas" font-size="11">get_max_iteration()</text>
+<text xml:space="preserve" x="856.12" y="-402.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-402.05" font-family="Consolas" font-size="11">set_domain()</text>
+<text xml:space="preserve" x="856.12" y="-384.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-384.55" font-family="Consolas" font-size="11">get_domain()</text>
+<text xml:space="preserve" x="856.12" y="-367.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-367.05" font-family="Consolas" font-size="11">set_error()</text>
+<text xml:space="preserve" x="856.12" y="-349.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-349.55" font-family="Consolas" font-size="11">get_error()</text>
+<text xml:space="preserve" x="856.12" y="-332.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-332.05" font-family="Consolas" font-size="11">set_conv_flag()</text>
+<text xml:space="preserve" x="856.12" y="-314.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-314.55" font-family="Consolas" font-size="11">get_conv_flag()</text>
+<text xml:space="preserve" x="856.12" y="-297.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="866.88" y="-297.05" font-family="Consolas" font-size="11">is_converged()</text>
+<text xml:space="preserve" x="856.12" y="-279.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="866.88" y="-279.55" font-family="Consolas" font-size="11">get_residual()</text>
+<text xml:space="preserve" x="856.12" y="-262.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="866.88" y="-262.05" font-family="Consolas" font-size="11">is_print()</text>
+<path fill="#666" stroke="#666" d="M852.12-554.5h147z"/>
+<path fill="#666" stroke="#666" d="M852.12-537h147z"/>
+<path fill="none" stroke="#666" d="M852.12-255v-319h147v319z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../db/d5a/class_abs_disp.html" xlink:title="The AbsDisp class handles converger test to indicate if the iteration converges." id="a_Node000004" target="_top">
+<path fill="#fff" d="M113.25-219H0v91.5h113.25z"/>
+<text xml:space="preserve" x="33" y="-204.55" font-family="Consolas" font-size="11">AbsDisp</text>
+<text xml:space="preserve" x="53.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="4" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-169.55" font-family="Consolas" font-size="11">AbsDisp()</text>
+<text xml:space="preserve" x="4" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="4" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M0-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M0-182h113.25z"/>
+<path fill="none" stroke="#666" d="M0-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M840.92-403.36C690.65-383.14 369.86-329.9 121.62-219c-2.87 1.29-5.76 2.7-8.62 4.21"/>
+<path fill="none" stroke="#63b8ff" d="m840.44-406.82 10.37 2.15-9.45 4.78z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d8/dab/class_abs_error.html" xlink:title="The AbsError class that handles converger test to indicate if the iteration converges." id="a_Node000005" target="_top">
+<path fill="#fff" d="M244.25-219H131v91.5h113.25z"/>
+<text xml:space="preserve" x="160.62" y="-204.55" font-family="Consolas" font-size="11">AbsError</text>
+<text xml:space="preserve" x="184.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="135" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="145.75" y="-169.55" font-family="Consolas" font-size="11">AbsError()</text>
+<text xml:space="preserve" x="135" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="145.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="135" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="145.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M131-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M131-182h113.25z"/>
+<path fill="none" stroke="#666" d="M131-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge4_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge4_Node000001_Node000005">
+<path fill="none" stroke="#63b8ff" d="M841.04-398.17C710.34-372.49 453.43-314.06 252.62-219c-2.84 1.35-5.7 2.82-8.55 4.37"/>
+<path fill="none" stroke="#63b8ff" d="m840.17-401.56 10.49 1.52-9.15 5.35z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../dc/d4d/class_abs_incre_acc.html" xlink:title="The AbsIncreAcc class that handles converger test to indicate if the iteration converges." id="a_Node000006" target="_top">
+<path fill="#fff" d="M375.25-219H262v91.5h113.25z"/>
+<text xml:space="preserve" x="281.5" y="-204.55" font-family="Consolas" font-size="11">AbsIncreAcc</text>
+<text xml:space="preserve" x="315.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="266" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="276.75" y="-169.55" font-family="Consolas" font-size="11">AbsIncreAcc()</text>
+<text xml:space="preserve" x="266" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="276.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="266" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="276.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M262-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M262-182h113.25z"/>
+<path fill="none" stroke="#666" d="M262-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge5_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge5_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M841.2-390.6C732.15-359.37 538.01-298.15 383.62-219c-2.8 1.44-5.62 2.98-8.44 4.59"/>
+<path fill="none" stroke="#63b8ff" d="m840.1-393.92 10.58.63-8.66 6.1z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d4/d8d/class_abs_incre_disp.html" xlink:title="The AbsIncreDisp class that handles converger test to indicate if the iteration converges." id="a_Node000007" target="_top">
+<path fill="#fff" d="M506.25-219H393v91.5h113.25z"/>
+<text xml:space="preserve" x="409.12" y="-204.55" font-family="Consolas" font-size="11">AbsIncreDisp</text>
+<text xml:space="preserve" x="446.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="397" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="407.75" y="-169.55" font-family="Consolas" font-size="11">AbsIncreDisp()</text>
+<text xml:space="preserve" x="397" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="407.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="397" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="407.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M393-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M393-182h113.25z"/>
+<path fill="none" stroke="#666" d="M393-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M841.92-378.29c-84.21 36.46-216.93 96.76-326.3 159.29-3.12 1.79-6.29 3.67-9.47 5.62"/>
+<path fill="none" stroke="#63b8ff" d="m840.5-381.49 10.57-.75-7.8 7.18z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d5/d86/class_abs_incre_energy.html" xlink:title="The AbsIncreEnergy class handles converger test to indicate if the iteration converges." id="a_Node000008" target="_top">
+<path fill="#fff" d="M651-219H524.25v91.5H651z"/>
+<text xml:space="preserve" x="540.38" y="-204.55" font-family="Consolas" font-size="11">AbsIncreEnergy</text>
+<text xml:space="preserve" x="584.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="528.25" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="539" y="-169.55" font-family="Consolas" font-size="11">AbsIncreEnergy()</text>
+<text xml:space="preserve" x="528.25" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="539" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="528.25" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="539" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M524.25-199.5H651z"/>
+<path fill="#666" stroke="#666" d="M524.25-182H651z"/>
+<path fill="none" stroke="#666" d="M524.25-127.5V-219H651v91.5z"/>
+</a></g><g id="edge7_Node000001_Node000008" class="edge"><title>Node1-&gt;Node8</title><a id="a_edge7_Node000001_Node000008">
+<path fill="none" stroke="#63b8ff" d="M842.93-354.97c-59.33 42-138.06 97.73-192.33 136.14"/>
+<path fill="none" stroke="#63b8ff" d="m840.86-357.79 10.19-2.92-6.14 8.63z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../de/dce/class_abs_residual.html" xlink:title="The Converger class handles converger test to indicate if the iteration converges according to variou..." id="a_Node000009" target="_top">
+<path fill="#fff" d="M782.25-219H669v91.5h113.25z"/>
+<text xml:space="preserve" x="688.5" y="-204.55" font-family="Consolas" font-size="11">AbsResidual</text>
+<text xml:space="preserve" x="722.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="673" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="683.75" y="-169.55" font-family="Consolas" font-size="11">AbsResidual()</text>
+<text xml:space="preserve" x="673" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="683.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="673" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="683.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M669-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M669-182h113.25z"/>
+<path fill="none" stroke="#666" d="M669-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge8_Node000001_Node000009" class="edge"><title>Node1-&gt;Node9</title><a id="a_edge8_Node000001_Node000009">
+<path fill="none" stroke="#63b8ff" d="M845.1-317.17c-28.5 34.1-59.2 70.81-82.34 98.49"/>
+<path fill="none" stroke="#63b8ff" d="m842.22-319.18 9.1-5.43-3.73 9.92z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../dd/d07/class_fixed_number.html" xlink:title="The FixedNumber class handles converger test to indicate if the iteration converges." id="a_Node000010" target="_top">
+<path fill="#fff" d="M913.25-219H800v91.5h113.25z"/>
+<text xml:space="preserve" x="819.5" y="-204.55" font-family="Consolas" font-size="11">FixedNumber</text>
+<text xml:space="preserve" x="853.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="804" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="814.75" y="-169.55" font-family="Consolas" font-size="11">FixedNumber()</text>
+<text xml:space="preserve" x="804" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="814.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="804" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="814.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M800-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M800-182h113.25z"/>
+<path fill="none" stroke="#666" d="M800-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge9_Node000001_Node000010" class="edge"><title>Node1-&gt;Node10</title><a id="a_edge9_Node000001_Node000010">
+<path fill="none" stroke="#63b8ff" d="M876.86-244.43c-2.61 9.05-5.08 17.64-7.35 25.51"/>
+<path fill="none" stroke="#63b8ff" d="m873.43-245.16 6.14-8.63.59 10.57z"/>
+</a></g><g id="Node000011" class="node"><title>Node11</title><a xlink:href="../../de/d65/class_logic_converger.html" xlink:title="The LogicConverger class that handles converger test to indicate if the iteration converges." id="a_Node000011" target="_top">
+<path fill="#fff" d="M1058-219H931.25v91.5H1058z"/>
+<text xml:space="preserve" x="947.38" y="-204.55" font-family="Consolas" font-size="11">LogicConverger</text>
+<text xml:space="preserve" x="935.25" y="-187.05" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="946" y="-187.05" font-family="Consolas" font-size="11">converger_a</text>
+<text xml:space="preserve" x="935.25" y="-169.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="946" y="-169.55" font-family="Consolas" font-size="11">converger_b</text>
+<text xml:space="preserve" x="935.25" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="946" y="-152.05" font-family="Consolas" font-size="11">LogicConverger()</text>
+<text xml:space="preserve" x="935.25" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="946" y="-134.55" font-family="Consolas" font-size="11">initialize()</text>
+<path fill="#666" stroke="#666" d="M931.25-199.5H1058z"/>
+<path fill="#666" stroke="#666" d="M931.25-164.5H944z"/>
+<path fill="#666" stroke="#666" d="M944-164.5h114z"/>
+<path fill="none" stroke="#666" d="M931.25-127.5V-219H1058v91.5z"/>
+</a></g><g id="edge10_Node000001_Node000011" class="edge"><title>Node1-&gt;Node11</title><a id="a_edge10_Node000001_Node000011">
+<path fill="none" stroke="#63b8ff" d="M974.39-244.43c2.61 9.05 5.08 17.64 7.35 25.51"/>
+<path fill="none" stroke="#63b8ff" d="m971.09-243.22.59-10.57 6.14 8.63z"/>
+</a></g><g id="Node000015" class="node"><title>Node15</title><a xlink:href="../../dc/dee/class_rel_disp.html" xlink:title="The RelDisp class that handles converger test to indicate if the iteration converges." id="a_Node000015" target="_top">
+<path fill="#fff" d="M1189.25-219H1076v91.5h113.25z"/>
+<text xml:space="preserve" x="1109" y="-204.55" font-family="Consolas" font-size="11">RelDisp</text>
+<text xml:space="preserve" x="1129.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="1080" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1090.75" y="-169.55" font-family="Consolas" font-size="11">RelDisp()</text>
+<text xml:space="preserve" x="1080" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1090.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="1080" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1090.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M1076-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M1076-182h113.25z"/>
+<path fill="none" stroke="#666" d="M1076-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge14_Node000001_Node000015" class="edge"><title>Node1-&gt;Node15</title><a id="a_edge14_Node000001_Node000015">
+<path fill="none" stroke="#63b8ff" d="m1006.11-320.48 87.93 101.63"/>
+<path fill="none" stroke="#63b8ff" d="m1003.78-317.82-3.89-9.85 9.19 5.27z"/>
+</a></g><g id="Node000016" class="node"><title>Node16</title><a xlink:href="../../dd/d17/class_rel_error.html" xlink:title="The RelError class that handles converger test to indicate if the iteration converges." id="a_Node000016" target="_top">
+<path fill="#fff" d="M1320.25-219H1207v91.5h113.25z"/>
+<text xml:space="preserve" x="1236.62" y="-204.55" font-family="Consolas" font-size="11">RelError</text>
+<text xml:space="preserve" x="1260.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="1211" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1221.75" y="-169.55" font-family="Consolas" font-size="11">RelError()</text>
+<text xml:space="preserve" x="1211" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1221.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="1211" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1221.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M1207-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M1207-182h113.25z"/>
+<path fill="none" stroke="#666" d="M1207-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge15_Node000001_Node000016" class="edge"><title>Node1-&gt;Node16</title><a id="a_edge15_Node000001_Node000016">
+<path fill="none" stroke="#63b8ff" d="M1008.3-354.98c61.76 43.72 144.53 102.31 198.86 140.76"/>
+<path fill="none" stroke="#63b8ff" d="m1006.34-352.08-6.14-8.63 10.19 2.92z"/>
+</a></g><g id="Node000017" class="node"><title>Node17</title><a xlink:href="../../d8/d3b/class_rel_incre_acc.html" xlink:title="The RelIncreAcc class that handles converger test to indicate if the iteration converges." id="a_Node000017" target="_top">
+<path fill="#fff" d="M1451.25-219H1338v91.5h113.25z"/>
+<text xml:space="preserve" x="1357.5" y="-204.55" font-family="Consolas" font-size="11">RelIncreAcc</text>
+<text xml:space="preserve" x="1391.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="1342" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1352.75" y="-169.55" font-family="Consolas" font-size="11">RelIncreAcc()</text>
+<text xml:space="preserve" x="1342" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1352.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="1342" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1352.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M1338-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M1338-182h113.25z"/>
+<path fill="none" stroke="#666" d="M1338-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge16_Node000001_Node000017" class="edge"><title>Node1-&gt;Node17</title><a id="a_edge16_Node000001_Node000017">
+<path fill="none" stroke="#63b8ff" d="M1009.27-377.78c83.07 36.53 213.17 96.58 320.35 158.78 2.85 1.65 5.73 3.38 8.62 5.17"/>
+<path fill="none" stroke="#63b8ff" d="m1008.01-374.51-7.75-7.22 10.56.81z"/>
+</a></g><g id="Node000018" class="node"><title>Node18</title><a xlink:href="../../d2/d85/class_rel_incre_disp.html" xlink:title="The RelIncreDisp class that handles converger test to indicate if the iteration converges." id="a_Node000018" target="_top">
+<path fill="#fff" d="M1582.25-219H1469v91.5h113.25z"/>
+<text xml:space="preserve" x="1485.12" y="-204.55" font-family="Consolas" font-size="11">RelIncreDisp</text>
+<text xml:space="preserve" x="1522.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="1473" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1483.75" y="-169.55" font-family="Consolas" font-size="11">RelIncreDisp()</text>
+<text xml:space="preserve" x="1473" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1483.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="1473" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1483.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M1469-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M1469-182h113.25z"/>
+<path fill="none" stroke="#666" d="M1469-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge17_Node000001_Node000018" class="edge"><title>Node1-&gt;Node18</title><a id="a_edge17_Node000001_Node000018">
+<path fill="none" stroke="#63b8ff" d="M1009.84-390.15c107.78 31.5 298.75 92.81 450.78 171.15 2.81 1.44 5.63 2.99 8.45 4.61"/>
+<path fill="none" stroke="#63b8ff" d="m1009.11-386.72-8.62-6.15 10.57-.57z"/>
+</a></g><g id="Node000019" class="node"><title>Node19</title><a xlink:href="../../dd/dec/class_rel_incre_energy.html" xlink:title="The RelIncreEnergy class handles converger test to indicate if the iteration converges." id="a_Node000019" target="_top">
+<path fill="#fff" d="M1727-219h-126.75v91.5H1727z"/>
+<text xml:space="preserve" x="1616.38" y="-204.55" font-family="Consolas" font-size="11">RelIncreEnergy</text>
+<text xml:space="preserve" x="1660.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="1604.25" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1615" y="-169.55" font-family="Consolas" font-size="11">RelIncreEnergy()</text>
+<text xml:space="preserve" x="1604.25" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1615" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="1604.25" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1615" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M1600.25-199.5H1727z"/>
+<path fill="#666" stroke="#666" d="M1600.25-182H1727z"/>
+<path fill="none" stroke="#666" d="M1600.25-127.5V-219H1727v91.5z"/>
+</a></g><g id="edge18_Node000001_Node000019" class="edge"><title>Node1-&gt;Node19</title><a id="a_edge18_Node000001_Node000019">
+<path fill="none" stroke="#63b8ff" d="M1010.08-396.59c129.02 27.54 381.31 88.14 581.54 177.59 2.96 1.32 5.94 2.74 8.92 4.24"/>
+<path fill="none" stroke="#63b8ff" d="m1009.65-393.1-9.05-5.49 10.51-1.36z"/>
+</a></g><g id="Node000020" class="node"><title>Node20</title><a xlink:href="../../dc/db8/class_rel_residual.html" xlink:title="The Converger class handles converger test to indicate if the iteration converges according to variou..." id="a_Node000020" target="_top">
+<path fill="#fff" d="M1858.25-219H1745v91.5h113.25z"/>
+<text xml:space="preserve" x="1764.5" y="-204.55" font-family="Consolas" font-size="11">RelResidual</text>
+<text xml:space="preserve" x="1798.25" y="-187.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="1749" y="-169.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1759.75" y="-169.55" font-family="Consolas" font-size="11">RelResidual()</text>
+<text xml:space="preserve" x="1749" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1759.75" y="-152.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="1749" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1759.75" y="-134.55" font-family="Consolas" font-size="11">is_converged()</text>
+<path fill="#666" stroke="#666" d="M1745-199.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M1745-182h113.25z"/>
+<path fill="none" stroke="#666" d="M1745-127.5V-219h113.25v91.5z"/>
+</a></g><g id="edge19_Node000001_Node000020" class="edge"><title>Node1-&gt;Node20</title><a id="a_edge19_Node000001_Node000020">
+<path fill="none" stroke="#63b8ff" d="M1009.85-403.43c150.83 20.21 474.73 73.6 725.77 184.43 3.17 1.4 6.35 2.95 9.5 4.61"/>
+<path fill="none" stroke="#63b8ff" d="m1009.81-399.91-9.46-4.78 10.38-2.16z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d7/d1d/class_copyable_tag.html" xlink:title="Label objects that can be copied." id="a_Node000002" target="_top">
+<path fill="#fff" d="M982.25-789H869v179h113.25z"/>
+<text xml:space="preserve" x="888.5" y="-774.55" font-family="Consolas" font-size="11">CopyableTag</text>
+<text xml:space="preserve" x="922.25" y="-757.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="873" y="-739.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="883.75" y="-739.55" font-family="Consolas" font-size="11">CopyableTag()</text>
+<text xml:space="preserve" x="873" y="-722.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="883.75" y="-722.05" font-family="Consolas" font-size="11">CopyableTag()</text>
+<text xml:space="preserve" x="873" y="-704.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="883.75" y="-704.55" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="873" y="-687.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="883.75" y="-687.05" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="873" y="-669.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="883.75" y="-669.55" font-family="Consolas" font-size="11">~CopyableTag()</text>
+<text xml:space="preserve" x="873" y="-652.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="883.75" y="-652.05" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="873" y="-634.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="883.75" y="-634.55" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="873" y="-617.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="883.75" y="-617.05" font-family="Consolas" font-size="11">Tag()</text>
+<path fill="#666" stroke="#666" d="M869-769.5h113.25z"/>
+<path fill="#666" stroke="#666" d="M869-752h113.25z"/>
+<path fill="none" stroke="#666" d="M869-610v-179h113.25v179z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node2-&gt;Node1</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M925.62-598.74v24.95"/>
+<path fill="none" stroke="#63b8ff" d="m922.13-598.61 3.5-10 3.5 10z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d0/d57/class_tag.html" xlink:title="A base Tag class." id="a_Node000003" target="_top">
+<path fill="#fff" d="M975.5-1126.5h-99.75V-825h99.75z"/>
+<text xml:space="preserve" x="915.5" y="-1112.05" font-family="Consolas" font-size="11">Tag</text>
+<text xml:space="preserve" x="922.25" y="-1094.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="879.75" y="-1077.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-1077.05" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="879.75" y="-1059.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-1059.55" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="879.75" y="-1042.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-1042.05" font-family="Consolas" font-size="11">Tag()</text>
+<text xml:space="preserve" x="879.75" y="-1024.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-1024.55" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="879.75" y="-1007.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-1007.05" font-family="Consolas" font-size="11">operator=()</text>
+<text xml:space="preserve" x="879.75" y="-989.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-989.55" font-family="Consolas" font-size="11">~Tag()</text>
+<text xml:space="preserve" x="879.75" y="-972.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-972.05" font-family="Consolas" font-size="11">set_tag()</text>
+<text xml:space="preserve" x="879.75" y="-954.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-954.55" font-family="Consolas" font-size="11">get_tag()</text>
+<text xml:space="preserve" x="879.75" y="-937.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-937.05" font-family="Consolas" font-size="11">enable()</text>
+<text xml:space="preserve" x="879.75" y="-919.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-919.55" font-family="Consolas" font-size="11">disable()</text>
+<text xml:space="preserve" x="879.75" y="-902.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-902.05" font-family="Consolas" font-size="11">guard()</text>
+<text xml:space="preserve" x="879.75" y="-884.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-884.55" font-family="Consolas" font-size="11">unguard()</text>
+<text xml:space="preserve" x="879.75" y="-867.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-867.05" font-family="Consolas" font-size="11">is_active()</text>
+<text xml:space="preserve" x="879.75" y="-849.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-849.55" font-family="Consolas" font-size="11">is_guarded()</text>
+<text xml:space="preserve" x="879.75" y="-832.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="890.5" y="-832.05" font-family="Consolas" font-size="11">print()</text>
+<path fill="#666" stroke="#666" d="M875.75-1107h99.75z"/>
+<path fill="#666" stroke="#666" d="M875.75-1089.5h99.75z"/>
+<path fill="none" stroke="#666" d="M875.75-825v-301.5h99.75V-825z"/>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node3-&gt;Node2</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M925.62-813.89v25.11"/>
+<path fill="none" stroke="#63b8ff" d="m922.13-813.67 3.5-10 3.5 10z"/>
+</a></g><g id="Node000012" class="node"><title>Node12</title><a xlink:href="../../d0/d8b/class_logic_converger_a_n_d.html" id="a_Node000012" target="_top">
+<path fill="#fff" d="M913-91.5H786.25V0H913z"/>
+<text xml:space="preserve" x="792.25" y="-77.05" font-family="Consolas" font-size="11">LogicConvergerAND</text>
+<text xml:space="preserve" x="846.25" y="-59.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="790.25" y="-42.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="801" y="-42.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="790.25" y="-24.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="801" y="-24.55" font-family="Consolas" font-size="11">is_converged()</text>
+<text xml:space="preserve" x="790.25" y="-7.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="801" y="-7.05" font-family="Consolas" font-size="11">LogicConverger()</text>
+<path fill="#666" stroke="#666" d="M786.25-72H913z"/>
+<path fill="#666" stroke="#666" d="M786.25-54.5H913z"/>
+<path fill="none" stroke="#666" d="M786.25 0v-91.5H913V0z"/>
+</a></g><g id="edge11_Node000011_Node000012" class="edge"><title>Node11-&gt;Node12</title><a id="a_edge11_Node000011_Node000012">
+<path fill="none" stroke="#63b8ff" d="M934.65-120.34c-11.18 9.68-22.77 19.71-33.66 29.13"/>
+<path fill="none" stroke="#63b8ff" d="m932.1-122.76 9.85-3.9-5.27 9.19z"/>
+</a></g><g id="Node000013" class="node"><title>Node13</title><a xlink:href="../../d6/d59/class_logic_converger_o_r.html" id="a_Node000013" target="_top">
+<path fill="#fff" d="M1058-91.5H931.25V0H1058z"/>
+<text xml:space="preserve" x="940.62" y="-77.05" font-family="Consolas" font-size="11">LogicConvergerOR</text>
+<text xml:space="preserve" x="991.25" y="-59.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="935.25" y="-42.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="946" y="-42.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="935.25" y="-24.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="946" y="-24.55" font-family="Consolas" font-size="11">is_converged()</text>
+<text xml:space="preserve" x="935.25" y="-7.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="946" y="-7.05" font-family="Consolas" font-size="11">LogicConverger()</text>
+<path fill="#666" stroke="#666" d="M931.25-72H1058z"/>
+<path fill="#666" stroke="#666" d="M931.25-54.5H1058z"/>
+<path fill="none" stroke="#666" d="M931.25 0v-91.5H1058V0z"/>
+</a></g><g id="edge12_Node000011_Node000013" class="edge"><title>Node11-&gt;Node13</title><a id="a_edge12_Node000011_Node000013">
+<path fill="none" stroke="#63b8ff" d="M994.62-116.34v25.13"/>
+<path fill="none" stroke="#63b8ff" d="m991.13-116.14 3.5-10 3.5 10z"/>
+</a></g><g id="Node000014" class="node"><title>Node14</title><a xlink:href="../../d0/d94/class_logic_converger_x_o_r.html" id="a_Node000014" target="_top">
+<path fill="#fff" d="M1203-91.5h-126.75V0H1203z"/>
+<text xml:space="preserve" x="1082.25" y="-77.05" font-family="Consolas" font-size="11">LogicConvergerXOR</text>
+<text xml:space="preserve" x="1136.25" y="-59.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="1080.25" y="-42.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1091" y="-42.05" font-family="Consolas" font-size="11">unique_copy()</text>
+<text xml:space="preserve" x="1080.25" y="-24.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1091" y="-24.55" font-family="Consolas" font-size="11">is_converged()</text>
+<text xml:space="preserve" x="1080.25" y="-7.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="1091" y="-7.05" font-family="Consolas" font-size="11">LogicConverger()</text>
+<path fill="#666" stroke="#666" d="M1076.25-72H1203z"/>
+<path fill="#666" stroke="#666" d="M1076.25-54.5H1203z"/>
+<path fill="none" stroke="#666" d="M1076.25 0v-91.5H1203V0z"/>
+</a></g><g id="edge13_Node000011_Node000014" class="edge"><title>Node11-&gt;Node14</title><a id="a_edge13_Node000011_Node000014">
+<path fill="none" stroke="#63b8ff" d="M1054.6-120.34c11.18 9.68 22.77 19.71 33.66 29.13"/>
+<path fill="none" stroke="#63b8ff" d="m1052.57-117.47-5.27-9.19 9.85 3.9z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_converger__inherit__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

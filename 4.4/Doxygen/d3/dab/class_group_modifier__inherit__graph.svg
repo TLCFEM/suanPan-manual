@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 809;
+var viewHeight = 320;
+var sectionId = &apos;dynsection-0&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>GroupModifier</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" d="M483.88-311.5h-147v74h147z"/>
+<text xml:space="preserve" x="366.5" y="-297.05" font-family="Consolas" font-size="11">GroupModifier</text>
+<text xml:space="preserve" x="407" y="-279.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="340.88" y="-262.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="351.62" y="-262.05" font-family="Consolas" font-size="11">GroupModifier()</text>
+<text xml:space="preserve" x="340.88" y="-244.55" font-family="Consolas" font-size="11">#</text>
+<text xml:space="preserve" x="351.62" y="-244.55" font-family="Consolas" font-size="11">update_object_tag()</text>
+<path fill="#666" stroke="#666" d="M336.88-292h147z"/>
+<path fill="#666" stroke="#666" d="M336.88-274.5h147z"/>
+<path fill="none" stroke="#666" d="M336.88-237.5v-74h147v74z"/>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d4/d10/class_group_body_force.html" xlink:title="Applies body forces to elements and element groups." id="a_Node000002" target="_top">
+<path fill="#fff" d="M126.75-192.75H0v74h126.75z"/>
+<text xml:space="preserve" x="16.12" y="-178.3" font-family="Consolas" font-size="11">GroupBodyForce</text>
+<text xml:space="preserve" x="60" y="-160.8" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="4" y="-143.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-143.3" font-family="Consolas" font-size="11">GroupBodyForce()</text>
+<text xml:space="preserve" x="4" y="-125.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="14.75" y="-125.8" font-family="Consolas" font-size="11">initialize()</text>
+<path fill="#666" stroke="#666" d="M0-173.25h126.75z"/>
+<path fill="#666" stroke="#666" d="M0-155.75h126.75z"/>
+<path fill="none" stroke="#666" d="M0-118.75v-74h126.75v74z"/>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#006400" d="M325.76-257.97c-55.26 11.75-128.23 30.37-189.38 56.47-6.02 2.57-12.12 5.57-18.11 8.79"/>
+<path fill="none" stroke="#006400" d="m324.93-261.37 10.51 1.38-9.08 5.47z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../dc/de7/class_group_nodal_displacement.html" id="a_Node000003" target="_top">
+<path fill="#fff" d="M325.75-192.75H145v74h180.75z"/>
+<text xml:space="preserve" x="161.12" y="-178.3" font-family="Consolas" font-size="11">GroupNodalDisplacement</text>
+<text xml:space="preserve" x="232" y="-160.8" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="149" y="-143.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="159.75" y="-143.3" font-family="Consolas" font-size="11">GroupNodalDisplacement()</text>
+<text xml:space="preserve" x="149" y="-125.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="159.75" y="-125.8" font-family="Consolas" font-size="11">initialize()</text>
+<path fill="#666" stroke="#666" d="M145-173.25h180.75z"/>
+<path fill="#666" stroke="#666" d="M145-155.75h180.75z"/>
+<path fill="none" stroke="#666" d="M145-118.75v-74h180.75v74z"/>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#006400" d="M346.99-231.21c-18.97 12.65-39.57 26.4-57.86 38.6"/>
+<path fill="none" stroke="#006400" d="m344.92-234.04 10.26-2.64-6.37 8.46z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d2/d3a/class_group_nodal_force.html" id="a_Node000004" target="_top">
+<path fill="#fff" d="M477.12-192.75h-133.5v74h133.5z"/>
+<text xml:space="preserve" x="359.75" y="-178.3" font-family="Consolas" font-size="11">GroupNodalForce</text>
+<text xml:space="preserve" x="407" y="-160.8" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="347.62" y="-143.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="358.38" y="-143.3" font-family="Consolas" font-size="11">GroupNodalForce()</text>
+<text xml:space="preserve" x="347.62" y="-125.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="358.38" y="-125.8" font-family="Consolas" font-size="11">initialize()</text>
+<path fill="#666" stroke="#666" d="M343.62-173.25h133.5z"/>
+<path fill="#666" stroke="#666" d="M343.62-155.75h133.5z"/>
+<path fill="none" stroke="#666" d="M343.62-118.75v-74h133.5v74z"/>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#006400" d="M410.38-226.08v33.67"/>
+<path fill="none" stroke="#006400" d="m406.88-226 3.5-10 3.5 10z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d1/d4a/class_group_penalty_b_c.html" xlink:title="A GroupPenaltyBC class." id="a_Node000005" target="_top">
+<path fill="#fff" d="M621.75-201.5H495v91.5h126.75z"/>
+<text xml:space="preserve" x="511.12" y="-187.05" font-family="Consolas" font-size="11">GroupPenaltyBC</text>
+<text xml:space="preserve" x="555" y="-169.55" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="499" y="-152.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.75" y="-152.05" font-family="Consolas" font-size="11">GroupPenaltyBC()</text>
+<text xml:space="preserve" x="499" y="-134.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.75" y="-134.55" font-family="Consolas" font-size="11">initialize()</text>
+<text xml:space="preserve" x="499" y="-117.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.75" y="-117.05" font-family="Consolas" font-size="11">process()</text>
+<path fill="#666" stroke="#666" d="M495-182h126.75z"/>
+<path fill="#666" stroke="#666" d="M495-164.5h126.75z"/>
+<path fill="none" stroke="#666" d="M495-110v-91.5h126.75v91.5z"/>
+</a></g><g id="edge4_Node000001_Node000005" class="edge"><title>Node1-&gt;Node5</title><a id="a_edge4_Node000001_Node000005">
+<path fill="none" stroke="#006400" d="M464.97-230.43c11.97 9.44 24.67 19.45 36.71 28.96"/>
+<path fill="none" stroke="#006400" d="m462.86-227.64-5.68-8.94 10.01 3.44z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../dc/d51/class_group_reference_force.html" id="a_Node000007" target="_top">
+<path fill="#fff" d="M800.62-192.75h-160.5v74h160.5z"/>
+<text xml:space="preserve" x="656.25" y="-178.3" font-family="Consolas" font-size="11">GroupReferenceForce</text>
+<text xml:space="preserve" x="717" y="-160.8" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="644.12" y="-143.3" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="654.88" y="-143.3" font-family="Consolas" font-size="11">GroupReferenceForce()</text>
+<text xml:space="preserve" x="644.12" y="-125.8" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="654.88" y="-125.8" font-family="Consolas" font-size="11">initialize()</text>
+<path fill="#666" stroke="#666" d="M640.12-173.25h160.5z"/>
+<path fill="#666" stroke="#666" d="M640.12-155.75h160.5z"/>
+<path fill="none" stroke="#666" d="M640.12-118.75v-74h160.5v74z"/>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#006400" d="M494.55-249.1c41.42 12.8 91.79 29.56 135.83 47.6 6.62 2.71 13.42 5.7 20.19 8.82"/>
+<path fill="none" stroke="#006400" d="m493.65-245.71-8.54-6.28 10.59-.42z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../db/dfd/class_group_multiplier_b_c.html" xlink:title="A GroupMultiplierBC class." id="a_Node000006" target="_top">
+<path fill="#fff" d="M621.75-74H495V0h126.75z"/>
+<text xml:space="preserve" x="501" y="-59.55" font-family="Consolas" font-size="11">GroupMultiplierBC</text>
+<text xml:space="preserve" x="555" y="-42.05" font-family="Consolas" font-size="11"> </text>
+<text xml:space="preserve" x="499" y="-24.55" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.75" y="-24.55" font-family="Consolas" font-size="11">process()</text>
+<text xml:space="preserve" x="499" y="-7.05" font-family="Consolas" font-size="11">+</text>
+<text xml:space="preserve" x="509.75" y="-7.05" font-family="Consolas" font-size="11">GroupPenaltyBC()</text>
+<path fill="#666" stroke="#666" d="M495-54.5h126.75z"/>
+<path fill="#666" stroke="#666" d="M495-37h126.75z"/>
+<path fill="none" stroke="#666" d="M495 0v-74h126.75V0z"/>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node5-&gt;Node6</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M558.38-99.03v25.38"/>
+<path fill="none" stroke="#63b8ff" d="m554.88-98.77 3.5-10 3.5 10z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_group_modifier__inherit__graph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

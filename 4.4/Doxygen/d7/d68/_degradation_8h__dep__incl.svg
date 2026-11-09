@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 1214;
+var viewHeight = 212;
+var sectionId = &apos;dynsection-1&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Material/Material1D/Degradation/Degradation.h</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M795.75-204h-191.5v35h191.5z"/>
+<text xml:space="preserve" x="612.25" y="-189.55" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="700" y="-176.05" font-family="Consolas" font-size="11" text-anchor="middle">/Degradation/Degradation.h</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../db/d92/_custom_strain_degradation_8h.html" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M285.25-126.25H12.75v35h272.5z"/>
+<text xml:space="preserve" x="20.75" y="-111.8" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="149" y="-98.3" font-family="Consolas" font-size="11" text-anchor="middle">/Degradation/CustomStrainDegradation.h</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M592.85-172.24C511.81-162.04 397.81-147.3 298-133c-13.74 1.97-28.17 4.12-42.43 6.29"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m592.2-175.69 10.36 2.23-9.48 4.72z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d0/d0c/_custom_stress_degradation_8h.html" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M579.25-126.25h-272.5v35h272.5z"/>
+<text xml:space="preserve" x="314.75" y="-111.8" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="443" y="-98.3" font-family="Consolas" font-size="11" text-anchor="middle">/Degradation/CustomStressDegradation.h</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M631.36-165.27c-40.87 12.05-92.15 27.16-130.88 38.58"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m630.29-168.6 10.58.53-8.6 6.18z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d8/db3/_degradation_8cpp.html" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M802.5-126.25h-205v35h205z"/>
+<text xml:space="preserve" x="605.5" y="-111.8" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="700" y="-98.3" font-family="Consolas" font-size="11" text-anchor="middle">/Degradation/Degradation.cpp</text>
+</a></g><g id="edge5_Node000001_Node000006" class="edge"><title>Node1-&gt;Node6</title><a id="a_edge5_Node000001_Node000006">
+<path fill="none" stroke="#63b8ff" d="M700-157.22v30.71"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m696.5-157.18 3.5-10 3.5 10z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../dc/d3a/_dhakal_8h.html" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M977.88-126.25H820.12v35h157.76z"/>
+<text xml:space="preserve" x="828.12" y="-111.8" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="899" y="-98.3" font-family="Consolas" font-size="11" text-anchor="middle">/Degradation/Dhakal.h</text>
+</a></g><g id="edge6_Node000001_Node000007" class="edge"><title>Node1-&gt;Node7</title><a id="a_edge6_Node000001_Node000007">
+<path fill="none" stroke="#63b8ff" d="M755.39-164.42c31.26 11.9 69.81 26.58 99.1 37.73"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m754.17-161.13-8.1-6.83 10.59.28z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../d0/d29/_trilinear_strain_degradation_8h.html" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M1203.5-133h-205v48.5h205z"/>
+<text xml:space="preserve" x="1006.5" y="-118.55" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="1006.5" y="-105.05" font-family="Consolas" font-size="11">/Degradation/TrilinearStrain</text>
+<text xml:space="preserve" x="1101" y="-91.55" font-family="Consolas" font-size="11" text-anchor="middle">Degradation.h</text>
+</a></g><g id="edge8_Node000001_Node000009" class="edge"><title>Node1-&gt;Node9</title><a id="a_edge8_Node000001_Node000009">
+<path fill="none" stroke="#63b8ff" d="M806.43-166.56C860.55-156.8 927.33-144.54 987-133c3.67.71 7.4 1.44 11.17 2.18"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m806.14-163.06-9.22-5.21 10.46-1.68z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../df/d42/_custom_strain_degradation_8cpp.html" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M286-41.75H0v35h286z"/>
+<text xml:space="preserve" x="8" y="-27.3" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="143" y="-13.8" font-family="Consolas" font-size="11" text-anchor="middle">/Degradation/CustomStrainDegradation.cpp</text>
+</a></g><g id="edge2_Node000002_Node000003" class="edge"><title>Node2-&gt;Node3</title><a id="a_edge2_Node000002_Node000003">
+<path fill="none" stroke="#63b8ff" d="M146.97-79.82c-.91 12.48-1.95 26.79-2.74 37.62"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m143.46-79.83 4.22-9.72 2.76 10.23z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d0/dd8/_custom_stress_degradation_8cpp.html" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M590-41.75H304v35h286z"/>
+<text xml:space="preserve" x="312" y="-27.3" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="447" y="-13.8" font-family="Consolas" font-size="11" text-anchor="middle">/Degradation/CustomStressDegradation.cpp</text>
+</a></g><g id="edge4_Node000004_Node000005" class="edge"><title>Node4-&gt;Node5</title><a id="a_edge4_Node000004_Node000005">
+<path fill="none" stroke="#63b8ff" d="M444.35-79.82c.61 12.48 1.3 26.79 1.83 37.62"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m440.87-79.39 3.01-10.15 3.98 9.82z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d7/d2c/_dhakal_8cpp.html" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M982.62-41.75H811.38v35h171.24z"/>
+<text xml:space="preserve" x="819.38" y="-27.3" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="897" y="-13.8" font-family="Consolas" font-size="11" text-anchor="middle">/Degradation/Dhakal.cpp</text>
+</a></g><g id="edge7_Node000007_Node000008" class="edge"><title>Node7-&gt;Node8</title><a id="a_edge7_Node000007_Node000008">
+<path fill="none" stroke="#63b8ff" d="M898.32-79.82c-.3 12.48-.65 26.79-.91 37.62"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m894.82-79.63 3.74-9.91 3.26 10.08z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../d7/d49/_trilinear_strain_degradation_8cpp.html" id="a_Node000010" target="_top">
+<path fill="#fff" stroke="#666" d="M1205.5-48.5h-205V0h205z"/>
+<text xml:space="preserve" x="1008.5" y="-34.05" font-family="Consolas" font-size="11">Material/Material1D</text>
+<text xml:space="preserve" x="1008.5" y="-20.55" font-family="Consolas" font-size="11">/Degradation/TrilinearStrain</text>
+<text xml:space="preserve" x="1103" y="-7.05" font-family="Consolas" font-size="11" text-anchor="middle">Degradation.cpp</text>
+</a></g><g id="edge9_Node000009_Node000010" class="edge"><title>Node9-&gt;Node10</title><a id="a_edge9_Node000009_Node000010">
+<path fill="none" stroke="#63b8ff" d="M1101.84-73.1c.2 8.22.41 16.79.59 24.37"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m1098.35-72.73 3.25-10.09 3.75 9.92z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="_degradation_8h__dep__incl_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

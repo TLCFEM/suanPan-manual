@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 567;
+var viewHeight = 73;
+var sectionId = &apos;dynsection-9&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>ConditionalModifier::process</title><g id="Node000001" class="node"><title>Node1</title><a xlink:title="Process and update both stiffness and resistance." id="a_Node000001">
+<path fill="#999" stroke="#666" d="M558.75-50.25H414.5v35h144.25z"/>
+<text xml:space="preserve" x="422.5" y="-35.8" font-family="Consolas" font-size="11">ConditionalModifier</text>
+<text xml:space="preserve" x="486.62" y="-22.3" font-family="Consolas" font-size="11" text-anchor="middle">::process</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d4/df4/class_domain.html#a3d1b000a10048b44c9d72aebb8a2245b" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M191.5-64.5H0V-43h191.5z"/>
+<text xml:space="preserve" x="95.75" y="-50.05" font-family="Consolas" font-size="11" text-anchor="middle">Domain::process_constraint</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M414.06-53.37c-11.79-2.65-23.95-4.94-35.56-6.38-61.78-7.67-131.76-6.23-186.52-2.84"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m414.82-56.79 8.93 5.7-10.54 1.11z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d4/df4/class_domain.html#afccd05bb5b31e788b86064d9f686d357" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M171.25-21.5h-151V0h151z"/>
+<text xml:space="preserve" x="95.75" y="-7.05" font-family="Consolas" font-size="11" text-anchor="middle">Domain::process_load</text>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M411.14-12.27c-10.87 2.28-21.99 4.25-32.64 5.52C308.68 1.6 228.43-.69 171.48-4.3"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m410.36-15.68 10.52 1.25-9.01 5.58z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../da/d44/class_conditional_modifier.html#ad4c440615ad5a142e8e675696f48a65c" xlink:title="Process and update resistance." id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M378.5-50.25h-151v35h151z"/>
+<text xml:space="preserve" x="235.5" y="-35.8" font-family="Consolas" font-size="11">ConditionalModifier</text>
+<text xml:space="preserve" x="303" y="-22.3" font-family="Consolas" font-size="11" text-anchor="middle">::process_resistance</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M402.83-32.75h-24.09"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m402.59-36.25 10 3.5-10 3.5z"/>
+</a></g><g id="edge4_Node000004_Node000002" class="edge"><title>Node4-&gt;Node2</title><a id="a_edge4_Node000004_Node000002">
+<path fill="none" stroke="#63b8ff" d="M215.62-41.59c-7.87-.8-15.87-1.62-23.8-2.43"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m215.93-45.07 9.59 4.5-10.3 2.46z"/>
+</a></g><g id="edge5_Node000004_Node000003" class="edge"><title>Node4-&gt;Node3</title><a id="a_edge5_Node000004_Node000003">
+<path fill="none" stroke="#63b8ff" d="M215.87-23.52c-14.74 1.58-29.94 3.21-44.35 4.76"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m215.21-26.97 10.31 2.42-9.57 4.54z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_conditional_modifier_a225b375fb23fd031e053a01e75de377e_icgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>

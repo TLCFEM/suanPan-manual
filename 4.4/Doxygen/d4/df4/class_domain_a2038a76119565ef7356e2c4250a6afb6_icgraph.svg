@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="main" onload="init(evt)"><style>.edge,.node,[data-mouse-over-selected=false]{opacity:.7}.edge.selected,.node.selected,[data-mouse-over-selected=true]{opacity:1}.edge:hover path{stroke:red}.edge:hover polygon{stroke:red;fill:red}</style><defs><g id="zoomPlus"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomplus.mouseover" end="zoomplus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8M0-4v8" pointer-events="none"/></g><g id="zoomMin"><use xlink:href="#rim" fill="#404040"><set attributeName="fill" begin="zoomminus.mouseover" end="zoomminus.mouseout" to="#808080"/></use><path fill="none" stroke="#fff" stroke-width="1.5" d="M-4 0h8" pointer-events="none"/></g><g id="arrowUp" transform="translate(30 24)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowRight" transform="rotate(90 3.5 39.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowDown" transform="matrix(-1 0 0 -1 30 48)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><g id="arrowLeft" transform="rotate(-90 26.5 9.5)"><use xlink:href="#rim"/><path fill="none" stroke="#fff" stroke-width="1.5" d="M0-3v7M-2.5-.5 0-3 2.5-.5" pointer-events="none"/></g><circle id="rim" cx="0" cy="0" r="7"/><circle id="rim2" cx="0" cy="0" r="3.5"/><use xlink:href="#rim2" id="resetDef" fill="#404040"><set attributeName="fill" begin="reset.mouseover" end="reset.mouseout" to="#808080"/></use></defs><script type="application/ecmascript">var viewWidth = 927;
+var viewHeight = 888;
+var sectionId = &apos;dynsection-135&apos;;</script><script xlink:href="../../svg.min.js" type="application/ecmascript"/><svg id="graph" class="graph"><g id="viewport"><title>Domain::is_sparse</title><g id="Node000001" class="node"><title>Node1</title><a id="a_Node000001">
+<path fill="#999" stroke="#666" d="M919.25-450.5H788.5v21.5h130.75z"/>
+<text xml:space="preserve" x="853.88" y="-436.05" font-family="Consolas" font-size="11" text-anchor="middle">Domain::is_sparse</text>
+</a></g><g id="Node000002" class="node"><title>Node2</title><a xlink:href="../../d4/df4/class_domain.html#ac98c142c59f1085bb3bf0dfe6d24cd05" id="a_Node000002" target="_top">
+<path fill="#fff" stroke="#666" d="M735.62-880.25h-178v35h178z"/>
+<text xml:space="preserve" x="565.62" y="-865.8" font-family="Consolas" font-size="11">Domain::assemble_current</text>
+<text xml:space="preserve" x="646.62" y="-852.3" font-family="Consolas" font-size="11" text-anchor="middle">_damping</text>
+</a></g><g id="edge1_Node000001_Node000002" class="edge"><title>Node1-&gt;Node2</title><a id="a_edge1_Node000001_Node000002">
+<path fill="none" stroke="#63b8ff" d="M850.21-462.32c-9.39-75.94-43.41-320.38-97.71-374.43-4.92-4.9-10.61-8.92-16.74-12.22"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m853.69-462.76-2.28 10.35-4.67-9.51z"/>
+</a></g><g id="Node000003" class="node"><title>Node3</title><a xlink:href="../../d4/df4/class_domain.html#a35a79c78dd0416540e0e588726664d07" id="a_Node000003" target="_top">
+<path fill="#fff" stroke="#666" d="M735.62-827.25h-178v35h178z"/>
+<text xml:space="preserve" x="565.62" y="-812.8" font-family="Consolas" font-size="11">Domain::assemble_current</text>
+<text xml:space="preserve" x="646.62" y="-799.3" font-family="Consolas" font-size="11" text-anchor="middle">_geometry</text>
+</a></g><g id="edge2_Node000001_Node000003" class="edge"><title>Node1-&gt;Node3</title><a id="a_edge2_Node000001_Node000003">
+<path fill="none" stroke="#63b8ff" d="M853.46-462.29c.29-61.21-7.73-231.97-100.96-321.46-4.87-4.68-10.45-8.55-16.43-11.76"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m856.96-462.42-3.64 9.95-3.36-10.05z"/>
+</a></g><g id="Node000004" class="node"><title>Node4</title><a xlink:href="../../d4/df4/class_domain.html#a25c1a079c393703dd912ac2ae89744e3" id="a_Node000004" target="_top">
+<path fill="#fff" stroke="#666" d="M752.5-774.5H540.75v21.5H752.5z"/>
+<text xml:space="preserve" x="646.62" y="-760.05" font-family="Consolas" font-size="11" text-anchor="middle">Domain::assemble_current_mass</text>
+</a></g><g id="edge3_Node000001_Node000004" class="edge"><title>Node1-&gt;Node4</title><a id="a_edge3_Node000001_Node000004">
+<path fill="none" stroke="#63b8ff" d="M852.79-461.93c-1.52-56.67-13.88-207.64-100.29-282.82-3.49-3.04-7.3-5.66-11.33-7.93"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m856.28-462.33-3.33 10.06-3.67-9.94z"/>
+</a></g><g id="Node000008" class="node"><title>Node8</title><a xlink:href="../../d4/df4/class_domain.html#a0a611edfd1adf329558858aaa4d1923f" id="a_Node000008" target="_top">
+<path fill="#fff" stroke="#666" d="M735.62-735.25h-178v35h178z"/>
+<text xml:space="preserve" x="565.62" y="-720.8" font-family="Consolas" font-size="11">Domain::assemble_current</text>
+<text xml:space="preserve" x="646.62" y="-707.3" font-family="Consolas" font-size="11" text-anchor="middle">_nonviscous</text>
+</a></g><g id="edge7_Node000001_Node000008" class="edge"><title>Node1-&gt;Node8</title><a id="a_edge7_Node000001_Node000008">
+<path fill="none" stroke="#63b8ff" d="M850.72-462.04c-5.99-49.26-27.38-167.91-98.22-229.71-4.95-4.32-10.5-7.94-16.41-10.98"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m854.17-462.66-2.38 10.32-4.57-9.56z"/>
+</a></g><g id="Node000009" class="node"><title>Node9</title><a xlink:href="../../d4/df4/class_domain.html#ac97865a514ec31c5f33165d356455263" id="a_Node000009" target="_top">
+<path fill="#fff" stroke="#666" d="M735.62-682.25h-178v35h178z"/>
+<text xml:space="preserve" x="565.62" y="-667.8" font-family="Consolas" font-size="11">Domain::assemble_current</text>
+<text xml:space="preserve" x="646.62" y="-654.3" font-family="Consolas" font-size="11" text-anchor="middle">_stiffness</text>
+</a></g><g id="edge8_Node000001_Node000009" class="edge"><title>Node1-&gt;Node9</title><a id="a_edge8_Node000001_Node000009">
+<path fill="none" stroke="#63b8ff" d="M848.17-461.81c-10.02-41.34-37.43-130.48-95.67-176.94-5.06-4.04-10.66-7.46-16.56-10.35"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m851.52-462.84-1.18 10.53-5.64-8.96z"/>
+</a></g><g id="Node000010" class="node"><title>Node10</title><a xlink:href="../../d4/df4/class_domain.html#a97ffe46e00d84317cce41e06b0684031" id="a_Node000010" target="_top">
+<path fill="#fff" stroke="#666" d="M735.62-629.25h-178v35h178z"/>
+<text xml:space="preserve" x="565.62" y="-614.8" font-family="Consolas" font-size="11">Domain::assemble_initial</text>
+<text xml:space="preserve" x="646.62" y="-601.3" font-family="Consolas" font-size="11" text-anchor="middle">_damping</text>
+</a></g><g id="edge9_Node000001_Node000010" class="edge"><title>Node1-&gt;Node10</title><a id="a_edge9_Node000001_Node000010">
+<path fill="none" stroke="#63b8ff" d="M844.03-461.47c-14.3-32.27-45.59-92.46-91.53-124.28-5.17-3.58-10.78-6.67-16.62-9.33"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m847.21-462.92.71 10.58-7.14-7.83z"/>
+</a></g><g id="Node000011" class="node"><title>Node11</title><a xlink:href="../../d4/df4/class_domain.html#a81eabc8a48f5226f2ec7bddc7bdd7a8f" id="a_Node000011" target="_top">
+<path fill="#fff" stroke="#666" d="M735.62-576.25h-178v35h178z"/>
+<text xml:space="preserve" x="565.62" y="-561.8" font-family="Consolas" font-size="11">Domain::assemble_initial</text>
+<text xml:space="preserve" x="646.62" y="-548.3" font-family="Consolas" font-size="11" text-anchor="middle">_geometry</text>
+</a></g><g id="edge10_Node000001_Node000011" class="edge"><title>Node1-&gt;Node11</title><a id="a_edge10_Node000001_Node000011">
+<path fill="none" stroke="#63b8ff" d="M837.08-459.39c-18.17-21.28-49.98-54.68-84.58-73.36-5.61-3.03-11.58-5.71-17.72-8.09"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m839.54-461.92 3.71 9.93-9.09-5.44z"/>
+</a></g><g id="Node000012" class="node"><title>Node12</title><a xlink:href="../../d4/df4/class_domain.html#a226bd71d278233efef67852cbabe4d45" id="a_Node000012" target="_top">
+<path fill="#fff" stroke="#666" d="M752.5-523.5H540.75v21.5H752.5z"/>
+<text xml:space="preserve" x="646.62" y="-509.05" font-family="Consolas" font-size="11" text-anchor="middle">Domain::assemble_initial_mass</text>
+</a></g><g id="edge11_Node000001_Node000012" class="edge"><title>Node1-&gt;Node12</title><a id="a_edge11_Node000001_Node000012">
+<path fill="none" stroke="#63b8ff" d="M826.48-456.93c-19.65-12.04-47.54-27.57-73.98-36.82-8.65-3.02-17.87-5.59-27.12-7.76"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m828.32-459.91 6.62 8.27-10.33-2.34z"/>
+</a></g><g id="Node000013" class="node"><title>Node13</title><a xlink:href="../../d4/df4/class_domain.html#a7e4328081a1feb79cf4de81955fe3b1e" id="a_Node000013" target="_top">
+<path fill="#fff" stroke="#666" d="M735.62-484.25h-178v35h178z"/>
+<text xml:space="preserve" x="565.62" y="-469.8" font-family="Consolas" font-size="11">Domain::assemble_initial</text>
+<text xml:space="preserve" x="646.62" y="-456.3" font-family="Consolas" font-size="11" text-anchor="middle">_nonviscous</text>
+</a></g><g id="edge12_Node000001_Node000013" class="edge"><title>Node1-&gt;Node13</title><a id="a_edge12_Node000001_Node000013">
+<path fill="none" stroke="#63b8ff" d="M777.14-449.71c-13.39-1.76-27.44-3.61-41.14-5.41"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m777.26-453.23 9.45 4.78-10.37 2.16z"/>
+</a></g><g id="Node000014" class="node"><title>Node14</title><a xlink:href="../../d4/df4/class_domain.html#af60e1fac466c8e7f0a19b23a51071d04" id="a_Node000014" target="_top">
+<path fill="#fff" stroke="#666" d="M735.62-431.25h-178v35h178z"/>
+<text xml:space="preserve" x="565.62" y="-416.8" font-family="Consolas" font-size="11">Domain::assemble_initial</text>
+<text xml:space="preserve" x="646.62" y="-403.3" font-family="Consolas" font-size="11" text-anchor="middle">_stiffness</text>
+</a></g><g id="edge13_Node000001_Node000014" class="edge"><title>Node1-&gt;Node14</title><a id="a_edge13_Node000001_Node000014">
+<path fill="none" stroke="#63b8ff" d="M777.14-430.16c-13.39 1.7-27.44 3.48-41.14 5.21"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m776.35-433.58 10.36 2.21-9.48 4.73z"/>
+</a></g><g id="Node000015" class="node"><title>Node15</title><a xlink:href="../../d4/df4/class_domain.html#a9e92649d44fcae1e39453f489816406d" id="a_Node000015" target="_top">
+<path fill="#fff" stroke="#666" d="M725.5-378.25H567.75v35H725.5z"/>
+<text xml:space="preserve" x="575.75" y="-363.8" font-family="Consolas" font-size="11">Domain::assemble_mass</text>
+<text xml:space="preserve" x="646.62" y="-350.3" font-family="Consolas" font-size="11" text-anchor="middle">_container</text>
+</a></g><g id="edge14_Node000001_Node000015" class="edge"><title>Node1-&gt;Node15</title><a id="a_edge14_Node000001_Node000015">
+<path fill="none" stroke="#63b8ff" d="M824.75-422.99c-19.69 11.18-46.92 25.56-72.25 35.24-8.61 3.29-17.76 6.31-26.94 9.04"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m822.87-425.95 10.41-1.96-6.91 8.03z"/>
+</a></g><g id="Node000016" class="node"><title>Node16</title><a xlink:href="../../d4/df4/class_domain.html#aaf7c1fa22536f89ccfa6434cfc4648a1" id="a_Node000016" target="_top">
+<path fill="#fff" stroke="#666" d="M742.38-325.25h-191.5v35h191.5z"/>
+<text xml:space="preserve" x="558.88" y="-310.8" font-family="Consolas" font-size="11">Domain::assemble_stiffness</text>
+<text xml:space="preserve" x="646.62" y="-297.3" font-family="Consolas" font-size="11" text-anchor="middle">_container</text>
+</a></g><g id="edge15_Node000001_Node000016" class="edge"><title>Node1-&gt;Node16</title><a id="a_edge15_Node000001_Node000016">
+<path fill="none" stroke="#63b8ff" d="M838.95-419.39c-17.43 23.89-49.51 63-86.45 84.64-5.84 3.42-12.11 6.41-18.58 9.03"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m835.97-421.25 8.65-6.12-2.94 10.18z"/>
+</a></g><g id="Node000017" class="node"><title>Node17</title><a xlink:href="../../d4/df4/class_domain.html#ada2da193790af8649fb5c3d1b775191e" id="a_Node000017" target="_top">
+<path fill="#fff" stroke="#666" d="M728.88-272.25h-164.5v35h164.5z"/>
+<text xml:space="preserve" x="572.38" y="-257.8" font-family="Consolas" font-size="11">Domain::assemble_trial</text>
+<text xml:space="preserve" x="646.62" y="-244.3" font-family="Consolas" font-size="11" text-anchor="middle">_damping</text>
+</a></g><g id="edge16_Node000001_Node000017" class="edge"><title>Node1-&gt;Node17</title><a id="a_edge16_Node000001_Node000017">
+<path fill="none" stroke="#63b8ff" d="M845.06-417.78c-13.41 34.44-44.12 100.83-92.56 136.03-7.07 5.14-15.04 9.3-23.33 12.67"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m841.77-418.97 6.78-8.14-.23 10.59z"/>
+</a></g><g id="Node000018" class="node"><title>Node18</title><a xlink:href="../../d4/df4/class_domain.html#a24f4a7412cc6a7e463cdb36c164f248d" id="a_Node000018" target="_top">
+<path fill="#fff" stroke="#666" d="M728.88-219.25h-164.5v35h164.5z"/>
+<text xml:space="preserve" x="572.38" y="-204.8" font-family="Consolas" font-size="11">Domain::assemble_trial</text>
+<text xml:space="preserve" x="646.62" y="-191.3" font-family="Consolas" font-size="11" text-anchor="middle">_geometry</text>
+</a></g><g id="edge17_Node000001_Node000018" class="edge"><title>Node1-&gt;Node18</title><a id="a_edge17_Node000001_Node000018">
+<path fill="none" stroke="#63b8ff" d="M848.73-417.33c-9.21 43.3-35.55 138.56-96.23 188.58-6.89 5.68-14.84 10.18-23.21 13.75"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m845.28-417.94 5.4-9.12 1.47 10.49z"/>
+</a></g><g id="Node000019" class="node"><title>Node19</title><a xlink:href="../../d4/df4/class_domain.html#aeb56cf0ee3e068b23376c879a69fb400" id="a_Node000019" target="_top">
+<path fill="#fff" stroke="#666" d="M745.75-166.5H547.5v21.5h198.25z"/>
+<text xml:space="preserve" x="646.62" y="-152.05" font-family="Consolas" font-size="11" text-anchor="middle">Domain::assemble_trial_mass</text>
+</a></g><g id="edge18_Node000001_Node000019" class="edge"><title>Node1-&gt;Node19</title><a id="a_edge18_Node000001_Node000019">
+<path fill="none" stroke="#63b8ff" d="M851.42-417.18c-4.6 51.51-23.42 178.1-98.92 241.43-4.12 3.45-8.65 6.38-13.45 8.86"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m847.92-417.36 4.27-9.7 2.71 10.24z"/>
+</a></g><g id="Node000020" class="node"><title>Node20</title><a xlink:href="../../d4/df4/class_domain.html#a6f3a45d69e4e85c4e760b7000dc55879" id="a_Node000020" target="_top">
+<path fill="#fff" stroke="#666" d="M728.88-127.25h-164.5v35h164.5z"/>
+<text xml:space="preserve" x="572.38" y="-112.8" font-family="Consolas" font-size="11">Domain::assemble_trial</text>
+<text xml:space="preserve" x="646.62" y="-99.3" font-family="Consolas" font-size="11" text-anchor="middle">_nonviscous</text>
+</a></g><g id="edge19_Node000001_Node000020" class="edge"><title>Node1-&gt;Node20</title><a id="a_edge19_Node000001_Node000020">
+<path fill="none" stroke="#63b8ff" d="M852.45-417.23c-2.35 56.31-16.56 204.19-99.95 281.48-6.74 6.25-14.74 11.06-23.28 14.75"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m848.94-417.24 3.82-9.89 3.18 10.11z"/>
+</a></g><g id="Node000021" class="node"><title>Node21</title><a xlink:href="../../d4/df4/class_domain.html#a608f41eea1b1ac6a7bd6697f241ec37e" id="a_Node000021" target="_top">
+<path fill="#fff" stroke="#666" d="M728.88-74.25h-164.5v35h164.5z"/>
+<text xml:space="preserve" x="572.38" y="-59.8" font-family="Consolas" font-size="11">Domain::assemble_trial</text>
+<text xml:space="preserve" x="646.62" y="-46.3" font-family="Consolas" font-size="11" text-anchor="middle">_stiffness</text>
+</a></g><g id="edge20_Node000001_Node000021" class="edge"><title>Node1-&gt;Node21</title><a id="a_edge20_Node000001_Node000021">
+<path fill="none" stroke="#63b8ff" d="M853.68-417.31c.94 62.47-5.37 239.92-101.18 333.56-6.66 6.51-14.66 11.5-23.24 15.34"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m850.19-416.92 3.25-10.09 3.74 9.92z"/>
+</a></g><g id="Node000022" class="node"><title>Node22</title><a xlink:href="../../d4/df4/class_domain.html#aa52e885fa4364b5a407049dc38d05bf6" id="a_Node000022" target="_top">
+<path fill="#fff" stroke="#666" d="M722.12-21.5h-151V0h151z"/>
+<text xml:space="preserve" x="646.62" y="-7.05" font-family="Consolas" font-size="11" text-anchor="middle">Domain::assign_color</text>
+</a></g><g id="edge21_Node000001_Node000022" class="edge"><title>Node1-&gt;Node22</title><a id="a_edge21_Node000001_Node000022">
+<path fill="none" stroke="#63b8ff" d="M850.54-417.38c-8.55 77.41-40.65 332.16-98.04 386.63-8.4 7.98-18.95 13.25-30.1 16.66"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m847.03-417.52 4.55-9.57 2.41 10.32z"/>
+</a></g><g id="Node000005" class="node"><title>Node5</title><a xlink:href="../../d4/df4/class_domain.html#ae587d3b2fd7a7a69e1f385bc5eda1996" id="a_Node000005" target="_top">
+<path fill="#fff" stroke="#666" d="M504.75-781.25h-164.5v35h164.5z"/>
+<text xml:space="preserve" x="348.25" y="-766.8" font-family="Consolas" font-size="11">Domain::update_current</text>
+<text xml:space="preserve" x="422.5" y="-753.3" font-family="Consolas" font-size="11" text-anchor="middle">_status</text>
+</a></g><g id="edge4_Node000004_Node000005" class="edge"><title>Node4-&gt;Node5</title><a id="a_edge4_Node000004_Node000005">
+<path fill="none" stroke="#63b8ff" d="M528.99-763.75h-23.95"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m528.9-767.25 10 3.5-10 3.5z"/>
+</a></g><g id="Node000006" class="node"><title>Node6</title><a xlink:href="../../d4/df4/class_domain.html#a73716b13bce42072091e17df6d436ee7" id="a_Node000006" target="_top">
+<path fill="#fff" stroke="#666" d="M304.25-774.5H187v21.5h117.25z"/>
+<text xml:space="preserve" x="245.62" y="-760.05" font-family="Consolas" font-size="11" text-anchor="middle">Domain::restart</text>
+</a></g><g id="edge5_Node000005_Node000006" class="edge"><title>Node5-&gt;Node6</title><a id="a_edge5_Node000005_Node000006">
+<path fill="none" stroke="#63b8ff" d="M328.47-763.75h-23.86"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m328.44-767.25 10 3.5-10 3.5z"/>
+</a></g><g id="Node000007" class="node"><title>Node7</title><a xlink:href="../../d4/df4/class_domain.html#ad8e4cd651937e1fccbea4a00793b360d" id="a_Node000007" target="_top">
+<path fill="#fff" stroke="#666" d="M151-774.5H0v21.5h151z"/>
+<text xml:space="preserve" x="75.5" y="-760.05" font-family="Consolas" font-size="11" text-anchor="middle">Domain::soft_restart</text>
+</a></g><g id="edge6_Node000006_Node000007" class="edge"><title>Node6-&gt;Node7</title><a id="a_edge6_Node000006_Node000007">
+<path fill="none" stroke="#63b8ff" d="M175.35-763.75h-23.96"/>
+<path fill="#63b8ff" stroke="#63b8ff" d="m175.25-767.25 10 3.5-10 3.5z"/>
+</a></g></g></svg><g id="navigator" fill="#404254"><path fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width=".5" d="M0 0h60v60H0z"/><use xlink:href="#zoomPlus" id="zoomplus" x="17" y="9" onmousedown="handleZoom(evt,'in')"/><use xlink:href="#zoomMin" id="zoomminus" x="42" y="9" onmousedown="handleZoom(evt,'out')"/><use xlink:href="#resetDef" id="reset" x="30" y="36" onmousedown="handleReset()"/><use xlink:href="#arrowUp" id="arrowup" x="0" y="0" onmousedown="handlePan(0,-1)"/><use xlink:href="#arrowRight" id="arrowright" x="0" y="0" onmousedown="handlePan(1,0)"/><use xlink:href="#arrowDown" id="arrowdown" x="0" y="0" onmousedown="handlePan(0,1)"/><use xlink:href="#arrowLeft" id="arrowleft" x="0" y="0" onmousedown="handlePan(-1,0)"/></g><svg height="30" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 15 15"><a xlink:href="class_domain_a2038a76119565ef7356e2c4250a6afb6_icgraph_org.svg" id="arrow_out" target="_base" transform="scale(.3)">
+   <rect id="button" width="38" height="38" x="6" y="6" fill="#f2f5e9" fill-opacity=".5" stroke="#606060" stroke-width="1" rx="5" ry="5"/>
+   <path id="arrow" d="M11.5 31.437c.44-11.34 10.543-20.114 20.659-9.458l4.91-4.733.02 14.754-14.929-.022 4.838-4.838c-8.47-8.876-13.706-1.91-15.498 4.297" style="fill:#404040"/>
+  </a></svg><script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script></svg>
