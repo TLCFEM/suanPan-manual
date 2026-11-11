@@ -62,6 +62,22 @@ def system_matrices():
     return stiffness, mass
 
 
+def full_stiffness():
+    """Stiffness matrix including the restrained base node.
+
+    The global stiffness used by the eigen-solver is condensed to the free
+    floor DoFs.  The force check below needs the full matrix so that the base
+    reaction can be compared with the recorder output.
+    """
+    n_node = N_FLOOR + 1
+    stiffness = STOREY_STIFFNESS * (
+        2.0 * np.eye(n_node) - np.eye(n_node, k=1) - np.eye(n_node, k=-1)
+    )
+    stiffness[0, 0] = STOREY_STIFFNESS
+    stiffness[-1, -1] = STOREY_STIFFNESS
+    return stiffness
+
+
 # ---------------------------------------------------------------------------
 # modal data stored by the Modal recorder
 # ---------------------------------------------------------------------------
@@ -73,14 +89,17 @@ def read_modal_data():
 
         # Node 2 is the first floor, Node 11 the roof.  A two-dimensional node
         # stores [U1, U2]; U1 is therefore the first entry of each N dataset.
+        # Node 1 is the restrained base; its F dataset contains the reaction.
         shape = np.zeros((N_FLOOR, frequency.size))
         force = np.zeros((N_FLOOR, frequency.size))
+        base_force = np.zeros(frequency.size)
         for mode in range(frequency.size):
+            base_force[mode] = file[f"Mode {mode + 1}/F1"][()].ravel()[0]
             for floor, node in enumerate(range(2, 2 + N_FLOOR)):
                 shape[floor, mode] = file[f"Mode {mode + 1}/N{node}"][()].ravel()[0]
                 force[floor, mode] = file[f"Mode {mode + 1}/F{node}"][()].ravel()[0]
 
-    return frequency, shape, participation, effective_mass, force
+    return frequency, shape, participation, effective_mass, base_force, force
 
 
 # ---------------------------------------------------------------------------
@@ -170,7 +189,7 @@ def main():
     omega = np.sqrt(eigenvalues)
     frequency_exact = omega / (2.0 * np.pi)
 
-    frequency, shape, participation, effective_mass, force = read_modal_data()
+    frequency, shape, participation, effective_mass, base_force, force = read_modal_data()
 
     # ------------------------------------------------------------------
     # 1. validate modal properties against the explicit eigenproblem
@@ -185,8 +204,14 @@ def main():
     participation_error = np.max(np.abs(participation - participation_exact))
     effective_mass_error = np.max(np.abs(effective_mass - effective_mass_exact))
 
-    force_exact = stiffness @ shape
-    force_error = np.max(np.abs(force - force_exact)) / np.max(np.abs(force_exact))
+    # The recorder assembles K * phi from the element stiffness matrices, so the
+    # force vector includes the base reaction.  Compare the complete vector.
+    shape_full = np.vstack([np.zeros((1, N_FLOOR)), shape])
+    force_full = np.vstack([base_force.reshape(1, -1), force])
+    force_exact = full_stiffness() @ shape_full
+    force_error = np.max(np.abs(force_full - force_exact)) / np.max(
+        np.abs(force_exact)
+    )
 
     # eigenvectors are only defined up to a sign
     sign_error = 0.0
@@ -206,7 +231,7 @@ def main():
     print(f"  maximum mode-shape difference          : {sign_error:.3e}")
     print(f"  maximum participation-factor error     : {participation_error:.3e}")
     print(f"  maximum effective-mass error           : {effective_mass_error:.3e}")
-    print(f"  maximum force-response error           : {force_error:.3e}")
+    print(f"  maximum modal elastic-force error      : {force_error:.3e}")
     print(
         f"  sum of effective masses / total mass   : "
         f"{effective_mass.sum() / mass.sum():.9f}"

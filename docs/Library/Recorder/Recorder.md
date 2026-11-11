@@ -51,7 +51,7 @@ recorder (1) hdf5 Eigen
 
 ## Modal Recorder
 
-The `Modal` recorder extracts frequencies, mass-normalised mode shapes, participation factors, effective modal masses and modal force responses from an eigenanalysis step.
+The `Modal` recorder extracts frequencies, mass-normalised mode shapes, participation factors, effective modal masses and modal elastic forces from an eigenanalysis step.
 
 ```
 recorder (1) hdf5 Modal (2...)

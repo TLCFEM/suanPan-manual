@@ -157,6 +157,8 @@ R1-Modal.h5
 For this two-dimensional model each node stores two local DoF components, `[U1, U2]`.
 The lateral mode-shape component of a floor is therefore the first entry of its `N` dataset.
 The second entry is the restrained `U2` component and is zero.
+The `F` datasets contain the nodal modal elastic forces assembled from the element stiffness matrices.
+In particular, `F1` contains the base reaction, while the `F` entries for nodes 2 to 11 are the storey forces.
 
 ## Post-Processing the Modal Data
 
@@ -227,6 +229,7 @@ $$
 $$
 
 and solves the generalised eigenproblem with `scipy.linalg.eigh`.
+For the force check it also assembles the full stiffness matrix, including the restrained base node, so that the base reaction is validated together with the storey forces.
 It then checks the following quantities.
 
 | quantity                                        | maximum error |
@@ -236,7 +239,7 @@ It then checks the following quantities.
 | mode-shape difference (sign-adjusted)           | $$5.51\times10^{-10}$$ |
 | participation-factor error                      | $$4.44\times10^{-16}$$ |
 | effective-mass error                            | $$1.78\times10^{-15}$$ |
-| relative modal force-response error             | $$1.28\times10^{-9}$$ |
+| relative modal elastic-force error (including base reaction) | $$1.28\times10^{-9}$$ |
 | $$\sum_n m_{n,U1}/\sum_i m_i$$                  | $$1.000000000$$ |
 
 The mode-shape comparison is sign-adjusted because eigenvectors are only defined up to an arbitrary sign.

@@ -29,7 +29,7 @@ typically requires the stiffness matrix to be symmetric. Besides, it must have
 ## Modal Properties
 
 The eigenanalysis itself stores the eigenvalues and eigenvectors in the global factory.
-To write frequencies, mode shapes, participation factors, effective modal masses and modal force responses to an HDF5 file, use the [Modal recorder](../Recorder/ModalRecorder.md).
+To write frequencies, mode shapes, participation factors, effective modal masses and modal elastic forces to an HDF5 file, use the [Modal recorder](../Recorder/ModalRecorder.md).
 
 ```
 recorder 1 hdf5 Modal U1

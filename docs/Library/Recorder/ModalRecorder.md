@@ -10,7 +10,7 @@ The `Modal` recorder post-processes the results of a [`Frequency`](../Step/Frequ
 2. mass-normalised mode shapes,
 3. modal participation factors,
 4. effective modal masses,
-5. modal force responses.
+5. modal elastic forces, including reactions.
 
 The recorder stores an HDF5 file.
 It does not record a time history; it stores a snapshot of the modal properties computed in the current step when that step is a [`Frequency`](../Step/Frequency.md) step.
@@ -87,9 +87,9 @@ The recorder computes the following quantities for mode $$n$$ and direction $$j$
 |--------------------------|-------------------------|-------------------------------------------------------------------------------|
 | natural frequency        | $$f_n$$                 | $$f_n=\dfrac{\sqrt{\lambda_n}}{2\pi}$$                                        |
 | mode shape               | $$\boldsymbol{\phi}_n$$ | mass-normalised, $$\boldsymbol{\phi}_n^T\mathbf{M}\boldsymbol{\phi}_n=1$$     |
-| participation factor     | $$\Gamma_{n,j}$$        | $$\Gamma_{n,j}=\boldsymbol{\phi}_n^T\mathbf{M}\mathbf{r}_j$$                   |
+| participation factor     | $$\Gamma_{n,j}$$        | $$\Gamma_{n,j}=\boldsymbol{\phi}_n^T\mathbf{M}\mathbf{r}_j$$                  |
 | effective modal mass     | $$m_{n,j}$$             | $$m_{n,j}=\Gamma_{n,j}^2$$                                                    |
-| modal force response     | $$\mathbf{f}_n$$        | $$\mathbf{f}_n=\lambda_n\mathbf{M}\boldsymbol{\phi}_n$$                       |
+| modal elastic force      | $$\mathbf{f}_n$$        | $$\mathbf{f}_n=\mathbf{K}\boldsymbol{\phi}_n$$                                |
 
 In the above, $$\mathbf{r}_j$$ is the unit influence vector in direction $$j$$.
 For example, for `U1`, every active `U1` DoF receives a unit entry and all other entries are zero.
@@ -102,9 +102,17 @@ The sign of a mode shape is arbitrary: an eigenvector can be multiplied by $$-1$
 Consequently, the sign of the corresponding participation factor is also arbitrary.
 The effective mass is not affected by the sign.
 
-The force response is the modal inertial force vector.
-For the unconstrained equations it is equal to $$\mathbf{K}\boldsymbol{\phi}_n$$.
-At constrained DoFs the mode shape is zero and the stored force component is also zero.
+The modal elastic force is assembled from the element stiffness matrices,
+
+$$
+\mathbf{f}_n=\sum_e\mathbf{K}_e\boldsymbol{\phi}_{n,e},
+$$
+
+rather than from the global stiffness matrix, because the global matrix is modified when boundary conditions and constraints are processed.
+On unconstrained DoFs this is the usual elastic restoring force $$\mathbf{K}\boldsymbol{\phi}_n=\lambda_n\mathbf{M}\boldsymbol{\phi}_n$$.
+On restrained DoFs it gives the reaction that enforces the mode shape, in the same sign convention as the nodal `RF` response.
+The force vector corresponds to a unit modal displacement.
+To obtain the peak modal force in a response-spectrum analysis, scale it by the corresponding modal coordinate amplitude, for example $$\Gamma_{n,j}S_d(T_n)$$.
 
 If the full set of modes is computed, the effective masses in a given direction sum to the total mass mobilised by the unit influence vector,
 
@@ -115,7 +123,7 @@ $$
 This identity is useful for checking that enough modes have been extracted.
 
 Modes whose modal mass is numerically zero or negative (for example, spurious modes in a model with an inconsistent mass matrix) are not normalised.
-Their force response remains zero.
+Their modal elastic force remains zero.
 
 ## Output File
 
@@ -167,7 +175,7 @@ R1-Modal.h5
    The group numbering follows the eigenvalue ordering, starting from one.
 4. For every active node, the mode group contains two datasets:
     - `N<tag>` is the nodal mode shape,
-    - `F<tag>` is the nodal force response.
+    - `F<tag>` is the nodal modal elastic force, including reactions.
 
    Here `<tag>` is the node tag, not the node index.
    For example, node 10 produces `N10` and `F10`.
@@ -183,7 +191,8 @@ Typical examples are:
 | three-dimensional beam/shell      | `U1`, `U2`, `U3`, `UR1`, `UR2`, `UR3` |
 
 The dataset length is the total number of DoFs of that node, including constrained DoFs.
-Constrained components are present but zero.
+Constrained components are present in both datasets.
+They are zero in `N<tag>` because the mode shape vanishes at a restrained DoF, while in `F<tag>` they contain the corresponding reaction and are generally nonzero.
 For example, in a two-dimensional model every node stores two rows, `[U1, U2]`; the `U1` component is row 0 and the `U2` component is row 1.
 Note that Python uses zero-based indexing.
 
