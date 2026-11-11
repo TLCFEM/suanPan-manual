@@ -1077,6 +1077,7 @@ var hierarchy =
             [ "GlobalMassRecorder", "d6/d11/class_global_mass_recorder.html", null ],
             [ "GlobalStiffnessRecorder", "d8/d7d/class_global_stiffness_recorder.html", null ]
           ] ],
+          [ "ModalRecorder", "dd/dd7/class_modal_recorder.html", null ],
           [ "NodeRecorder", "de/d66/class_node_recorder.html", [
             [ "GroupNodeRecorder", "d1/dcb/class_group_node_recorder.html", null ]
           ] ],

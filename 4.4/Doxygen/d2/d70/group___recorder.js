@@ -41,6 +41,11 @@ var group___recorder =
       [ "GlobalMassRecorder", "d6/d11/class_global_mass_recorder.html#aa11f0bc09aeb8768bf46a07529df49c7", null ],
       [ "print", "d6/d11/class_global_mass_recorder.html#a222e4afc8ae31b4148f7ccfd33cb4239", null ]
     ] ],
+    [ "ModalRecorder", "dd/dd7/class_modal_recorder.html", [
+      [ "ModalRecorder", "dd/dd7/class_modal_recorder.html#a81548d6a62e343758061fde5c76f6efd", null ],
+      [ "print", "dd/dd7/class_modal_recorder.html#a2fe4cef5592baa809f21c6afa24d98ed", null ],
+      [ "save", "dd/dd7/class_modal_recorder.html#a7b79a36c55d0d70479d8d4970b37ae48", null ]
+    ] ],
     [ "NodeRecorder", "de/d66/class_node_recorder.html", [
       [ "initialize", "de/d66/class_node_recorder.html#a5d112e20e4cd06230af971451167d4f6", null ],
       [ "print", "de/d66/class_node_recorder.html#ae96da1099bee6bf62e72d17b230ce7b3", null ],

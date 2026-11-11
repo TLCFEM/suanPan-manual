@@ -10,6 +10,8 @@ var dir_b2df46b3e07438c2f7bb907cd4fd47eb =
     [ "FrameRecorder.h", "d0/d3e/_frame_recorder_8h.html", null ],
     [ "GlobalRecorder.cpp", "d0/d65/_global_recorder_8cpp.html", null ],
     [ "GlobalRecorder.h", "d5/dce/_global_recorder_8h.html", null ],
+    [ "ModalRecorder.cpp", "df/de2/_modal_recorder_8cpp.html", "df/de2/_modal_recorder_8cpp" ],
+    [ "ModalRecorder.h", "dd/d34/_modal_recorder_8h.html", null ],
     [ "NodeRecorder.cpp", "d9/dc3/_node_recorder_8cpp.html", null ],
     [ "NodeRecorder.h", "db/d72/_node_recorder_8h.html", null ],
     [ "OutputType.cpp", "dd/d27/_output_type_8cpp.html", "dd/d27/_output_type_8cpp" ],

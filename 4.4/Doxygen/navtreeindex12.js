@@ -233,7 +233,7 @@ var NAVTREEINDEX12 =
 "d5/d68/class_bead.html#af09c26f2209b3d2d105709369b3ae63b":[2,21,1,11],
 "d5/d68/class_bead.html#af39e7a3fa78434e974fc1d9a56b44ac0":[2,21,1,12],
 "d5/d6a/_concrete21_8cpp.html":[6,0,9,1,2],
-"d5/d6c/class_sparse_mat_cluster_p_a_r_d_i_s_o.html":[5,0,616],
+"d5/d6c/class_sparse_mat_cluster_p_a_r_d_i_s_o.html":[5,0,617],
 "d5/d6d/class_n_m_b21.html":[2,5,0,11],
 "d5/d6d/class_n_m_b21.html#a106cda1f260e9f3835c0c5b819683e3f":[2,5,0,11,6],
 "d5/d6d/class_n_m_b21.html#a2dee29422662f779b34bf6fb8ea1496e":[2,5,0,11,10],
