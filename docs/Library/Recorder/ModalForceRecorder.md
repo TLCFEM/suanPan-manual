@@ -113,30 +113,34 @@ The output folder can be changed with the [`output_folder`](OutputFolder.md) att
 
 ## Data Layout
 
+Only the forces are stored.
+Frequencies and mode shapes are available from the [`Modal`](ModalRecorder.md) recorder.
 The HDF5 file contains the following objects.
 
 ```text
 R1-ModalForce.h5
-├── Frequency                       (n_mode, 1)
 ├── Mode 1                          one group per mode
-│   ├── F1                          (n_dof_node_1, 1)
-│   ├── F2                          (n_dof_node_2, 1)
-│   ├── EF1                         (n_dof_element_1, 1)
-│   ├── EF2                         (n_dof_element_2, 1)
-│   └── ...
+│   ├── Nodes
+│   │   ├── N1                      (n_dof_node_1, 1)
+│   │   ├── N2                      (n_dof_node_2, 1)
+│   │   └── ...
+│   └── Elements
+│       ├── E1                      (n_dof_element_1, 1)
+│       ├── E2                      (n_dof_element_2, 1)
+│       └── ...
 ├── Mode 2
 │   └── ...
 └── ...
 ```
 
-1. `Frequency` stores one natural frequency per row in hertz.
-2. Each mode has a group named `Mode 1`, `Mode 2`, etc.
+1. Each mode has a group named `Mode 1`, `Mode 2`, etc.
    The group numbering follows the eigenvalue ordering, starting from one.
-3. For every active node, the mode group contains a dataset `F<tag>`.
+2. Each mode group contains two groups, `Nodes` and `Elements`.
+3. For every active node, `Nodes` contains a dataset `N<tag>`.
    This is the assembled nodal force vector, that is, the sum of the force contributions of all elements attached to the node.
    Here `<tag>` is the node tag, not the node index.
-   For example, node 10 produces `F10`.
-4. For every local element, the mode group contains a dataset `EF<tag>`.
+   For example, node 10 produces `Nodes/N10`.
+4. For every local element, `Elements` contains a dataset `E<tag>`.
    This is the element force vector
 
    $$
@@ -144,11 +148,11 @@ R1-ModalForce.h5
    $$
 
    Here `<tag>` is the element tag, not the element index.
-   For example, element 10 produces `EF10`.
-   `EF` denotes an element force; it is not a strain component.
+   For example, element 10 produces `Elements/E10`.
+   `E` denotes an element force; it is not a strain component.
 
-The rows of `F<tag>` follow the node-local DoF order, that is, the order of the DoFs in the node's internal DoF list.
-The rows of `EF<tag>` follow the element-local DoF order, which is the node-by-node order used by the element stiffness matrix.
+The rows of `N<tag>` follow the node-local DoF order, that is, the order of the DoFs in the node's internal DoF list.
+The rows of `E<tag>` follow the element-local DoF order, which is the node-by-node order used by the element stiffness matrix.
 Typical examples are:
 
 | object type                       | local DoF order                    |
@@ -158,11 +162,11 @@ Typical examples are:
 | three-dimensional solid node      | `U1`, `U2`, `U3`                   |
 | three-dimensional beam/shell node | `U1`, `U2`, `U3`, `UR1`, `UR2`, `UR3` |
 
-For a two-node `Spring01` element in a two-dimensional model, the four rows of `EF<tag>` are
+For a two-node `Spring01` element in a two-dimensional model, the four rows of `E<tag>` are
 `[U1 of node i, U2 of node i, U1 of node j, U2 of node j]`.
 
 The dataset length is the total number of DoFs of the node or element, including constrained DoFs.
-Constrained components are present in both `F<tag>` and `EF<tag>`.
+Constrained components are present in both `N<tag>` and `E<tag>`.
 They are generally nonzero because they contain the reaction that enforces the mode shape.
 
 The nodal force can be recovered from the element forces by summing the element contributions at each shared node.
@@ -177,23 +181,21 @@ import h5py
 import numpy as np
 
 with h5py.File('R1-ModalForce.h5', 'r') as file:
-    frequency = file['Frequency'][()].ravel()
-
     # node 2 in a two-dimensional model stores [U1, U2]
-    nodal_force = file['Mode 1/F2'][()].ravel()
+    nodal_force = file['Mode 1/Nodes/N2'][()].ravel()
 
     # element 1 stores its nodal DoFs one node after another
-    element_force = file['Mode 1/EF1'][()].ravel()
+    element_force = file['Mode 1/Elements/E1'][()].ravel()
 ```
 
-For all modes, loop over `file[f'Mode {mode + 1}/F{tag}']` and `file[f'Mode {mode + 1}/EF{tag}']`.
+For all modes, loop over `file[f'Mode {mode + 1}/Nodes/N{tag}']` and `file[f'Mode {mode + 1}/Elements/E{tag}']`.
 Note that Python uses zero-based indexing.
 
 ## Parallel Analysis
 
 With multiple MPI ranks, every rank writes its own file.
-The assembled nodal force vector `F<tag>` is reduced over all ranks, so each file contains the complete nodal forces for the nodes stored on that rank.
-The element force datasets `EF<tag>` contain only the local elements of the rank that writes the file.
+The assembled nodal force vector `N<tag>` is reduced over all ranks, so each file contains the complete nodal forces for the nodes stored on that rank.
+The element force datasets `E<tag>` contain only the local elements of the rank that writes the file.
 
 ## Relation to the Other Modal Recorders
 

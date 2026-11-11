@@ -101,16 +101,18 @@ def read_modal_data():
 
 def read_force_data():
     with h5py.File(MODAL_FORCE_FILE, "r") as file:
-        frequency = file["Frequency"][()].ravel()
-        n_mode = frequency.size
+        # The ModalForce file contains one Mode group per extracted mode.
+        n_mode = sum(1 for name in file if name.startswith("Mode "))
 
-        # Node 1 is the restrained base; its F dataset contains the reaction.
+        # Node 1 is the restrained base; its N dataset contains the reaction.
         base_force = np.zeros(n_mode)
         force = np.zeros((N_FLOOR, n_mode))
         for mode in range(n_mode):
-            base_force[mode] = file[f"Mode {mode + 1}/F1"][()].ravel()[0]
+            base_force[mode] = file[f"Mode {mode + 1}/Nodes/N1"][()].ravel()[0]
             for floor, node in enumerate(range(2, 2 + N_FLOOR)):
-                force[floor, mode] = file[f"Mode {mode + 1}/F{node}"][()].ravel()[0]
+                force[floor, mode] = file[
+                    f"Mode {mode + 1}/Nodes/N{node}"
+                ][()].ravel()[0]
 
         # A Spring01 element stores [U1, U2] of each of its two nodes.  Its
         # force vector is therefore [f, 0, -f, 0] for a spring force f.
@@ -118,10 +120,10 @@ def read_force_data():
         for mode in range(n_mode):
             for element in range(1, N_FLOOR + 1):
                 element_force[element - 1, :, mode] = file[
-                    f"Mode {mode + 1}/EF{element}"
+                    f"Mode {mode + 1}/Elements/E{element}"
                 ][()].ravel()
 
-    return frequency, base_force, force, element_force
+    return base_force, force, element_force
 
 
 # ---------------------------------------------------------------------------
@@ -212,7 +214,7 @@ def main():
     frequency_exact = omega / (2.0 * np.pi)
 
     frequency, shape, participation, effective_mass = read_modal_data()
-    _, base_force, force, element_force = read_force_data()
+    base_force, force, element_force = read_force_data()
 
     # ------------------------------------------------------------------
     # 1. validate modal properties against the explicit eigenproblem

@@ -156,10 +156,11 @@ R1-Modal.h5
 └── ...
 
 R2-ModalForce.h5
-├── Frequency
 ├── Mode 1
-│   ├── F1 ... F11
-│   └── EF1 ... EF10
+│   ├── Nodes
+│   │   └── N1 ... N11
+│   └── Elements
+│       └── E1 ... E10
 ├── Mode 2
 │   └── ...
 └── ...
@@ -168,9 +169,9 @@ R2-ModalForce.h5
 For this two-dimensional model each node stores two local DoF components, `[U1, U2]`.
 The lateral mode-shape component of a floor is therefore the first entry of its `N` dataset.
 The second entry is the restrained `U2` component and is zero.
-The `F` datasets contain the assembled nodal modal elastic forces.
-In particular, `F1` contains the base reaction, while the `F` entries for nodes 2 to 11 are the storey forces.
-The `EF` datasets contain the element force vectors; `EF1` corresponds to the first storey spring and `EF10` to the spring below the roof.
+The `N` datasets in the `Nodes` groups contain the assembled nodal modal elastic forces.
+In particular, `N1` contains the base reaction, while the `N` entries for nodes 2 to 11 are the storey forces.
+The `E` datasets in the `Elements` groups contain the element force vectors; `E1` corresponds to the first storey spring and `E10` to the spring below the roof.
 
 ## Post-Processing the Modal Data
 
@@ -199,12 +200,12 @@ with h5py.File('R1-Modal.h5', 'r') as file:
 
 with h5py.File('R2-ModalForce.h5', 'r') as file:
     base_force = np.array([
-        file[f'Mode {mode + 1}/F1'][()].ravel()[0]
+        file[f'Mode {mode + 1}/Nodes/N1'][()].ravel()[0]
         for mode in range(frequency.size)
     ])
     force = np.column_stack([
         np.concatenate([
-            file[f'Mode {mode + 1}/F{node}'][()].ravel()[:1]
+            file[f'Mode {mode + 1}/Nodes/N{node}'][()].ravel()[:1]
             for node in range(2, 2 + N_FLOOR)
         ])
         for mode in range(frequency.size)
@@ -213,7 +214,7 @@ with h5py.File('R2-ModalForce.h5', 'r') as file:
 
 The first floor is node 2 and the roof is node 11, so the loop over `range(2, 12)` maps the nodal datasets to the ten floors.
 The `N` dataset is stored in the node-local DoF order `[U1, U2]`; index `0` extracts `U1`.
-The `F` datasets in `R2-ModalForce.h5` follow the same nodal order and contain the modal elastic forces.
+The `N` datasets in `R2-ModalForce.h5` follow the same nodal order and contain the modal elastic forces.
 
 The modal properties are summarised in the following table.
 The sign of the participation factor depends on the arbitrary sign of the mode shape.
