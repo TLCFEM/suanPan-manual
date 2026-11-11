@@ -9,8 +9,7 @@ The `Modal` recorder post-processes the results of a [`Frequency`](../Step/Frequ
 1. natural frequencies,
 2. mass-normalised mode shapes,
 3. modal participation factors,
-4. effective modal masses,
-5. modal elastic forces, including reactions.
+4. effective modal masses.
 
 The recorder stores an HDF5 file.
 It does not record a time history; it stores a snapshot of the modal properties computed in the current step when that step is a [`Frequency`](../Step/Frequency.md) step.
@@ -89,7 +88,6 @@ The recorder computes the following quantities for mode $$n$$ and direction $$j$
 | mode shape               | $$\mathbf{\phi}_n$$ | mass-normalised, $$\mathbf{\phi}_n^T\mathbf{M}\mathbf{\phi}_n=1$$     |
 | participation factor     | $$\Gamma_{n,j}$$        | $$\Gamma_{n,j}=\mathbf{\phi}_n^T\mathbf{M}\mathbf{r}_j$$                  |
 | effective modal mass     | $$m_{n,j}$$             | $$m_{n,j}=\Gamma_{n,j}^2$$                                                    |
-| modal elastic force      | $$\mathbf{f}_n$$        | $$\mathbf{f}_n=\mathbf{K}\mathbf{\phi}_n$$                                |
 
 In the above, $$\mathbf{r}_j$$ is the unit influence vector in direction $$j$$.
 For example, for `U1`, every active `U1` DoF receives a unit entry and all other entries are zero.
@@ -102,18 +100,6 @@ The sign of a mode shape is arbitrary: an eigenvector can be multiplied by $$-1$
 Consequently, the sign of the corresponding participation factor is also arbitrary.
 The effective mass is not affected by the sign.
 
-The modal elastic force is assembled from the element stiffness matrices,
-
-$$
-\mathbf{f}_n=\sum_e\mathbf{K}_e\mathbf{\phi}_{n,e},
-$$
-
-rather than from the global stiffness matrix, because the global matrix is modified when boundary conditions and constraints are processed.
-On unconstrained DoFs this is the usual elastic restoring force $$\mathbf{K}\mathbf{\phi}_n=\lambda_n\mathbf{M}\mathbf{\phi}_n$$.
-On restrained DoFs it gives the reaction that enforces the mode shape, in the same sign convention as the nodal `RF` response.
-The force vector corresponds to a unit modal displacement.
-To obtain the peak modal force in a response-spectrum analysis, scale it by the corresponding modal coordinate amplitude, for example $$\Gamma_{n,j}S_d(T_n)$$.
-
 If the full set of modes is computed, the effective masses in a given direction sum to the total mass mobilised by the unit influence vector,
 
 $$
@@ -123,7 +109,6 @@ $$
 This identity is useful for checking that enough modes have been extracted.
 
 Modes whose modal mass is numerically zero or negative (for example, spurious modes in a model with an inconsistent mass matrix) are not normalised.
-Their modal elastic force remains zero.
 
 ## Output File
 
@@ -157,9 +142,7 @@ R1-Modal.h5
 │   └── EffectiveMass
 ├── Mode 1                          one group per mode
 │   ├── N1                          (n_dof_node_1, 1)
-│   ├── F1                          (n_dof_node_1, 1)
 │   ├── N2                          (n_dof_node_2, 1)
-│   ├── F2                          (n_dof_node_2, 1)
 │   └── ...
 ├── Mode 2
 │   └── ...
@@ -173,14 +156,11 @@ R1-Modal.h5
    Both datasets have one row per mode.
 3. Each mode has a group named `Mode 1`, `Mode 2`, etc.
    The group numbering follows the eigenvalue ordering, starting from one.
-4. For every active node, the mode group contains two datasets:
-    - `N<tag>` is the nodal mode shape,
-    - `F<tag>` is the nodal modal elastic force, including reactions.
-
+4. For every active node, the mode group contains a dataset `N<tag>` with the nodal mode shape.
    Here `<tag>` is the node tag, not the node index.
-   For example, node 10 produces `N10` and `F10`.
+   For example, node 10 produces `N10`.
 
-The rows of `N<tag>` and `F<tag>` follow the node-local DoF order, that is, the order of the DoFs in the node's internal DoF list.
+The rows of `N<tag>` follow the node-local DoF order, that is, the order of the DoFs in the node's internal DoF list.
 Typical examples are:
 
 | node type                         | local DoF order                    |
@@ -191,8 +171,7 @@ Typical examples are:
 | three-dimensional beam/shell      | `U1`, `U2`, `U3`, `UR1`, `UR2`, `UR3` |
 
 The dataset length is the total number of DoFs of that node, including constrained DoFs.
-Constrained components are present in both datasets.
-They are zero in `N<tag>` because the mode shape vanishes at a restrained DoF, while in `F<tag>` they contain the corresponding reaction and are generally nonzero.
+Constrained components are present in `N<tag>` but are zero because the mode shape vanishes at a restrained DoF.
 For example, in a two-dimensional model every node stores two rows, `[U1, U2]`; the `U1` component is row 0 and the `U2` component is row 1.
 Note that Python uses zero-based indexing.
 
@@ -222,11 +201,12 @@ with h5py.File('R1-Modal.h5', 'r') as file:
 
 For a two-dimensional model, `N2[0]` is the `U1` mode-shape component of node 2 and `N2[1]` is the `U2` component.
 
-## Relation to the Eigen Recorder
+## Relation to the Other Modal Recorders
 
 The [Eigen recorder](Recorder.md) writes the raw eigenvalues and eigenvectors to `Eigenvalue.h5`.
 The `Modal` recorder writes a separate file with the processed modal quantities.
-Both recorders can be defined in the same analysis if the raw eigenvectors are also needed.
+The [ModalForce recorder](ModalForceRecorder.md) writes the modal elastic forces, including the element force vectors.
+The recorders can be defined in the same analysis if the raw eigenvectors, modal properties and modal forces are all needed.
 
 ## Example
 

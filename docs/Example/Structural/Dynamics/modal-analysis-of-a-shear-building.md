@@ -10,7 +10,7 @@ This example demonstrates a complete modal analysis workflow for a small but rea
 
 1. define a ten-storey shear building with ten lateral DoFs,
 2. run a [`Frequency`](../../../Library/Step/Frequency.md) step,
-3. write the modal properties with the [Modal recorder](../../../Library/Recorder/ModalRecorder.md),
+3. write the modal properties with the [Modal recorder](../../../Library/Recorder/ModalRecorder.md) and the modal forces with the [ModalForce recorder](../../../Library/Recorder/ModalForceRecorder.md),
 4. read and validate the modal data with Python,
 5. use the mode shapes, participation factors and effective masses in a modal combination,
 6. validate the modal superposition against a direct response history analysis.
@@ -93,13 +93,16 @@ fix 1 E 1
 fix 2 U2 1 2 3 4 5 6 7 8 9 10 11
 
 recorder 1 hdf5 Modal U1
+recorder 2 hdf5 ModalForce
 
 step frequency 1 10
 analyze
 
 peek eigenvalue
 peek recorder 1
+peek recorder 2
 save recorder 1
+save recorder 2
 
 exit
 ```
@@ -137,8 +140,8 @@ Eigenvalues:
    1.5645e+04
 ```
 
-The `Modal` recorder writes `R1-Modal.h5`.
-Its structure follows the layout described in the [Modal recorder documentation](../../../Library/Recorder/ModalRecorder.md):
+The `Modal` recorder writes `R1-Modal.h5` and the `ModalForce` recorder writes `R2-ModalForce.h5`.
+Their structures follow the layouts described in the [Modal recorder documentation](../../../Library/Recorder/ModalRecorder.md) and the [ModalForce recorder documentation](../../../Library/Recorder/ModalForceRecorder.md):
 
 ```text
 R1-Modal.h5
@@ -147,8 +150,16 @@ R1-Modal.h5
 │   ├── ParticipationFactor
 │   └── EffectiveMass
 ├── Mode 1
-│   ├── N1 ... N11
-│   └── F1 ... F11
+│   └── N1 ... N11
+├── Mode 2
+│   └── ...
+└── ...
+
+R2-ModalForce.h5
+├── Frequency
+├── Mode 1
+│   ├── F1 ... F11
+│   └── EF1 ... EF10
 ├── Mode 2
 │   └── ...
 └── ...
@@ -157,8 +168,9 @@ R1-Modal.h5
 For this two-dimensional model each node stores two local DoF components, `[U1, U2]`.
 The lateral mode-shape component of a floor is therefore the first entry of its `N` dataset.
 The second entry is the restrained `U2` component and is zero.
-The `F` datasets contain the nodal modal elastic forces assembled from the element stiffness matrices.
+The `F` datasets contain the assembled nodal modal elastic forces.
 In particular, `F1` contains the base reaction, while the `F` entries for nodes 2 to 11 are the storey forces.
+The `EF` datasets contain the element force vectors; `EF1` corresponds to the first storey spring and `EF10` to the spring below the roof.
 
 ## Post-Processing the Modal Data
 
@@ -184,10 +196,24 @@ with h5py.File('R1-Modal.h5', 'r') as file:
     for mode in range(frequency.size):
         for floor, node in enumerate(range(2, 2 + N_FLOOR)):
             shape[floor, mode] = file[f'Mode {mode + 1}/N{node}'][()].ravel()[0]
+
+with h5py.File('R2-ModalForce.h5', 'r') as file:
+    base_force = np.array([
+        file[f'Mode {mode + 1}/F1'][()].ravel()[0]
+        for mode in range(frequency.size)
+    ])
+    force = np.column_stack([
+        np.concatenate([
+            file[f'Mode {mode + 1}/F{node}'][()].ravel()[:1]
+            for node in range(2, 2 + N_FLOOR)
+        ])
+        for mode in range(frequency.size)
+    ])
 ```
 
 The first floor is node 2 and the roof is node 11, so the loop over `range(2, 12)` maps the nodal datasets to the ten floors.
 The `N` dataset is stored in the node-local DoF order `[U1, U2]`; index `0` extracts `U1`.
+The `F` datasets in `R2-ModalForce.h5` follow the same nodal order and contain the modal elastic forces.
 
 The modal properties are summarised in the following table.
 The sign of the participation factor depends on the arbitrary sign of the mode shape.
@@ -229,7 +255,8 @@ $$
 $$
 
 and solves the generalised eigenproblem with `scipy.linalg.eigh`.
-For the force check it also assembles the full stiffness matrix, including the restrained base node, so that the base reaction is validated together with the storey forces.
+For the force checks it also assembles the full stiffness matrix, including the restrained base node, so that the base reaction is validated together with the storey forces.
+The element forces read from the `ModalForce` recorder are compared with $$k_e(\phi_{n,i}-\phi_{n,j})$$ for each storey spring.
 It then checks the following quantities.
 
 | quantity                                        | maximum error |
@@ -239,7 +266,8 @@ It then checks the following quantities.
 | mode-shape difference (sign-adjusted)           | $$5.51\times10^{-10}$$ |
 | participation-factor error                      | $$4.44\times10^{-16}$$ |
 | effective-mass error                            | $$1.78\times10^{-15}$$ |
-| relative modal elastic-force error (including base reaction) | $$1.28\times10^{-9}$$ |
+| relative nodal force error (including base reaction) | $$1.28\times10^{-9}$$ |
+| relative element force error                    | $$2.53\times10^{-9}$$ |
 | $$\sum_n m_{n,U1}/\sum_i m_i$$                  | $$1.000000000$$ |
 
 The mode-shape comparison is sign-adjusted because eigenvectors are only defined up to an arbitrary sign.
@@ -417,7 +445,7 @@ The example directory contains:
 
 | file | description |
 |------|-------------|
-| `shear-building.supan` | modal analysis and `Modal` recorder |
+| `shear-building.supan` | modal analysis with `Modal` and `ModalForce` recorders |
 | `shear-building-rha.supan` | direct response history analysis |
 | `ground_motion.txt` | ground acceleration record used for the validation |
 | `modal-analysis-of-a-shear-building.py` | post-processing and validation script |
@@ -430,5 +458,6 @@ The example directory contains:
    When comparing results, either align the signs or compare the absolute values.
 3. The effective mass is the most convenient quantity for deciding how many modes to include.
    For this model, three modes capture more than 97% of the mass in the `U1` direction.
-4. The recorder stores nodal data in the node-local DoF order, including restrained components.
-   See the [Modal recorder documentation](../../../Library/Recorder/ModalRecorder.md) for the exact layout.
+4. The recorders store nodal data in the node-local DoF order, including restrained components.
+   Element forces are stored in the element-local DoF order.
+   See the [Modal recorder documentation](../../../Library/Recorder/ModalRecorder.md) and the [ModalForce recorder documentation](../../../Library/Recorder/ModalForceRecorder.md) for the exact layouts.
