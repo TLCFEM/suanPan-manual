@@ -49,6 +49,19 @@ recorder (1) hdf5 Eigen
 # (1) int, unique recorder tag
 ```
 
+## Modal Recorder
+
+The `Modal` recorder extracts frequencies, mass-normalised mode shapes, participation factors, effective modal masses and modal force responses from an eigenanalysis step.
+
+```
+recorder (1) hdf5 Modal (2...)
+# (1) int, unique recorder tag
+# (2...) string, DoF identifiers that define the influence directions
+```
+
+The recorder writes an HDF5 file.
+Please check [ModalRecorder](ModalRecorder.md) for the computed quantities and the data layout.
+
 ## Frame Recorder
 
 ```

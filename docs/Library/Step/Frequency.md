@@ -26,6 +26,18 @@ typically requires the stiffness matrix to be symmetric. Besides, it must have
    multiplier method. If the system contains constraints, users shall make sure they are applied via the penalty
    function method.
 
+## Modal Properties
+
+The eigenanalysis itself stores the eigenvalues and eigenvectors in the global factory.
+To write frequencies, mode shapes, participation factors, effective modal masses and modal force responses to an HDF5 file, use the [Modal recorder](../Recorder/ModalRecorder.md).
+
+```
+recorder 1 hdf5 Modal U1
+step frequency 1 10
+analyze
+save recorder 1
+```
+
 ## FEAST Solver
 
 By default, the `ARPACK` solver is used to solve the generalized eigen problem.

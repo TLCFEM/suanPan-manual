@@ -54,6 +54,7 @@
         * [bouncing of a ball](Example/Structural/Dynamics/bouncing-of-a-ball.md)
         * [mass-spring-dashpot system](Example/Structural/Dynamics/mass-spring-dashpot-system.md)
         * [dynamic analysis of a portal frame](Example/Structural/Dynamics/dynamic-analysis-of-a-portal-frame.md)
+        * [modal analysis of a shear building](Example/Structural/Dynamics/modal-analysis-of-a-shear-building.md)
         * [elemental damping](Example/Structural/Dynamics/elemental-damping.md)
         * [particle collision](Example/Structural/Dynamics/particle-collision.md)
         * [response history analysis of an elastic coupled wall](Example/Structural/Dynamics/response-history-analysis-of-an-elastic-coupled-wall.md)
@@ -481,6 +482,7 @@
 ### Recorder
 
 * [Recorder](Library/Recorder/Recorder.md)
+* [ModalRecorder](Library/Recorder/ModalRecorder.md)
 * [OutputType](Library/Recorder/OutputType.md)
 
 ### Section
