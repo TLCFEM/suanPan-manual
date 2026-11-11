@@ -72,13 +72,13 @@ Note that `every` and object tags are not supported for this recorder; all remai
 For the generalised eigenproblem
 
 $$
-\mathbf{K}\boldsymbol{\phi}_n=\lambda_n\mathbf{M}\boldsymbol{\phi}_n,
+\mathbf{K}\mathbf{\phi}_n=\lambda_n\mathbf{M}\mathbf{\phi}_n,
 $$
 
 define the mass-normalised mode shape
 
 $$
-\boldsymbol{\phi}_n^T\mathbf{M}\boldsymbol{\phi}_n=1.
+\mathbf{\phi}_n^T\mathbf{M}\mathbf{\phi}_n=1.
 $$
 
 The recorder computes the following quantities for mode $$n$$ and direction $$j$$.
@@ -86,10 +86,10 @@ The recorder computes the following quantities for mode $$n$$ and direction $$j$
 | quantity                 | symbol                  | definition                                                                    |
 |--------------------------|-------------------------|-------------------------------------------------------------------------------|
 | natural frequency        | $$f_n$$                 | $$f_n=\dfrac{\sqrt{\lambda_n}}{2\pi}$$                                        |
-| mode shape               | $$\boldsymbol{\phi}_n$$ | mass-normalised, $$\boldsymbol{\phi}_n^T\mathbf{M}\boldsymbol{\phi}_n=1$$     |
-| participation factor     | $$\Gamma_{n,j}$$        | $$\Gamma_{n,j}=\boldsymbol{\phi}_n^T\mathbf{M}\mathbf{r}_j$$                  |
+| mode shape               | $$\mathbf{\phi}_n$$ | mass-normalised, $$\mathbf{\phi}_n^T\mathbf{M}\mathbf{\phi}_n=1$$     |
+| participation factor     | $$\Gamma_{n,j}$$        | $$\Gamma_{n,j}=\mathbf{\phi}_n^T\mathbf{M}\mathbf{r}_j$$                  |
 | effective modal mass     | $$m_{n,j}$$             | $$m_{n,j}=\Gamma_{n,j}^2$$                                                    |
-| modal elastic force      | $$\mathbf{f}_n$$        | $$\mathbf{f}_n=\mathbf{K}\boldsymbol{\phi}_n$$                                |
+| modal elastic force      | $$\mathbf{f}_n$$        | $$\mathbf{f}_n=\mathbf{K}\mathbf{\phi}_n$$                                |
 
 In the above, $$\mathbf{r}_j$$ is the unit influence vector in direction $$j$$.
 For example, for `U1`, every active `U1` DoF receives a unit entry and all other entries are zero.
@@ -105,11 +105,11 @@ The effective mass is not affected by the sign.
 The modal elastic force is assembled from the element stiffness matrices,
 
 $$
-\mathbf{f}_n=\sum_e\mathbf{K}_e\boldsymbol{\phi}_{n,e},
+\mathbf{f}_n=\sum_e\mathbf{K}_e\mathbf{\phi}_{n,e},
 $$
 
 rather than from the global stiffness matrix, because the global matrix is modified when boundary conditions and constraints are processed.
-On unconstrained DoFs this is the usual elastic restoring force $$\mathbf{K}\boldsymbol{\phi}_n=\lambda_n\mathbf{M}\boldsymbol{\phi}_n$$.
+On unconstrained DoFs this is the usual elastic restoring force $$\mathbf{K}\mathbf{\phi}_n=\lambda_n\mathbf{M}\mathbf{\phi}_n$$.
 On restrained DoFs it gives the reaction that enforces the mode shape, in the same sign convention as the nodal `RF` response.
 The force vector corresponds to a unit modal displacement.
 To obtain the peak modal force in a response-spectrum analysis, scale it by the corresponding modal coordinate amplitude, for example $$\Gamma_{n,j}S_d(T_n)$$.
