@@ -1,9 +1,10 @@
 """Post-processing and validation for the ten-storey shear building example.
 
-The script reads the modal data written by the ``Modal`` recorder and
-independently reconstructs the eigenproblem with NumPy/SciPy.  It then uses the
-same modal data to reproduce a response history analysis and to perform an
-SRSS/CQC modal combination.
+The script reads the modal data written by the ``Modal`` recorder and the modal
+forces written by the ``ModalForce`` recorder, and independently reconstructs
+the eigenproblem with NumPy/SciPy.  It then uses the same modal data to
+reproduce a response history analysis and to perform an SRSS/CQC modal
+combination.
 
 If ``suanPan`` is available in ``PATH``, the script runs the two models first.
 Otherwise, run them manually from this directory before executing the script:
@@ -28,6 +29,7 @@ FLOOR_MASS = 10.0  # t
 STOREY_STIFFNESS = 4.0e4  # kN/m
 
 MODAL_FILE = BASE / "R1-Modal.h5"
+MODAL_FORCE_FILE = BASE / "R2-ModalForce.h5"
 RHA_FILE = BASE / "R2-U1.h5"
 GROUND_MOTION_FILE = BASE / "ground_motion.txt"
 
@@ -89,17 +91,39 @@ def read_modal_data():
 
         # Node 2 is the first floor, Node 11 the roof.  A two-dimensional node
         # stores [U1, U2]; U1 is therefore the first entry of each N dataset.
-        # Node 1 is the restrained base; its F dataset contains the reaction.
         shape = np.zeros((N_FLOOR, frequency.size))
-        force = np.zeros((N_FLOOR, frequency.size))
-        base_force = np.zeros(frequency.size)
         for mode in range(frequency.size):
-            base_force[mode] = file[f"Mode {mode + 1}/F1"][()].ravel()[0]
             for floor, node in enumerate(range(2, 2 + N_FLOOR)):
                 shape[floor, mode] = file[f"Mode {mode + 1}/N{node}"][()].ravel()[0]
-                force[floor, mode] = file[f"Mode {mode + 1}/F{node}"][()].ravel()[0]
 
-    return frequency, shape, participation, effective_mass, base_force, force
+    return frequency, shape, participation, effective_mass
+
+
+def read_force_data():
+    with h5py.File(MODAL_FORCE_FILE, "r") as file:
+        # The ModalForce file contains one Mode group per extracted mode.
+        n_mode = sum(1 for name in file if name.startswith("Mode "))
+
+        # Node 1 is the restrained base; its N dataset contains the reaction.
+        base_force = np.zeros(n_mode)
+        force = np.zeros((N_FLOOR, n_mode))
+        for mode in range(n_mode):
+            base_force[mode] = file[f"Mode {mode + 1}/Nodes/N1"][()].ravel()[0]
+            for floor, node in enumerate(range(2, 2 + N_FLOOR)):
+                force[floor, mode] = file[
+                    f"Mode {mode + 1}/Nodes/N{node}"
+                ][()].ravel()[0]
+
+        # A Spring01 element stores [U1, U2] of each of its two nodes.  Its
+        # force vector is therefore [f, 0, -f, 0] for a spring force f.
+        element_force = np.zeros((N_FLOOR, 4, n_mode))
+        for mode in range(n_mode):
+            for element in range(1, N_FLOOR + 1):
+                element_force[element - 1, :, mode] = file[
+                    f"Mode {mode + 1}/Elements/E{element}"
+                ][()].ravel()
+
+    return base_force, force, element_force
 
 
 # ---------------------------------------------------------------------------
@@ -189,7 +213,8 @@ def main():
     omega = np.sqrt(eigenvalues)
     frequency_exact = omega / (2.0 * np.pi)
 
-    frequency, shape, participation, effective_mass, base_force, force = read_modal_data()
+    frequency, shape, participation, effective_mass = read_modal_data()
+    base_force, force, element_force = read_force_data()
 
     # ------------------------------------------------------------------
     # 1. validate modal properties against the explicit eigenproblem
@@ -213,6 +238,20 @@ def main():
         np.abs(force_exact)
     )
 
+    # Each Spring01 element connects two adjacent nodes.  Its element force is
+    # k * (phi_i - phi_j) * [1, 0, -1, 0] in its local DoF order [iU1, iU2, jU1,
+    # jU2].  The base node is restrained, so its mode-shape component is zero.
+    element_force_exact = np.zeros_like(element_force)
+    for mode in range(N_FLOOR):
+        for element in range(N_FLOOR):
+            delta = shape_full[element, mode] - shape_full[element + 1, mode]
+            element_force_exact[element, :, mode] = (
+                STOREY_STIFFNESS * delta * np.array([1.0, 0.0, -1.0, 0.0])
+            )
+    element_force_error = np.max(
+        np.abs(element_force - element_force_exact)
+    ) / np.max(np.abs(element_force_exact))
+
     # eigenvectors are only defined up to a sign
     sign_error = 0.0
     for mode in range(N_FLOOR):
@@ -231,7 +270,8 @@ def main():
     print(f"  maximum mode-shape difference          : {sign_error:.3e}")
     print(f"  maximum participation-factor error     : {participation_error:.3e}")
     print(f"  maximum effective-mass error           : {effective_mass_error:.3e}")
-    print(f"  maximum modal elastic-force error      : {force_error:.3e}")
+    print(f"  maximum nodal force error              : {force_error:.3e}")
+    print(f"  maximum element force error            : {element_force_error:.3e}")
     print(
         f"  sum of effective masses / total mass   : "
         f"{effective_mass.sum() / mass.sum():.9f}"

@@ -453,6 +453,7 @@ var annotated_dup =
     [ "MinHistory", "db/d48/class_min_history.html", "db/d48/class_min_history" ],
     [ "MinimumGap", "d6/d40/class_minimum_gap.html", "d6/d40/class_minimum_gap" ],
     [ "MinResistance", "d4/da5/class_min_resistance.html", "d4/da5/class_min_resistance" ],
+    [ "ModalForceRecorder", "dc/d56/class_modal_force_recorder.html", "dc/d56/class_modal_force_recorder" ],
     [ "ModalRecorder", "dd/dd7/class_modal_recorder.html", "dd/dd7/class_modal_recorder" ],
     [ "Modifier", "d8/dc0/class_modifier.html", "d8/dc0/class_modifier" ],
     [ "ModifierDynamics", "da/d57/class_modifier_dynamics.html", "da/d57/class_modifier_dynamics" ],

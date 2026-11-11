@@ -111,43 +111,41 @@ $(function(){initNavTree('dd/d34/_modal_recorder_8h_source.html','../../',''); }
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#ifndef MODALRECORDER_H</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define MODALRECORDER_H</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d02/_node_8h.html">Domain/Node.h</a>&gt;</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d42/_recorder_8h.html">Recorder/Recorder.h</a>&gt;</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="foldopen" id="foldopen00062" data-start="{" data-end="};">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../dd/dd7/class_modal_recorder.html">   62</a></span><span class="keyword">class </span><a class="code hl_function" href="../../dd/dd7/class_modal_recorder.html#a81548d6a62e343758061fde5c76f6efd">ModalRecorder</a> final : <span class="keyword">public</span> <a class="code hl_function" href="../../d3/d1a/class_recorder.html#a14876e8bd800b43855c8dbb2bb7d267f">Recorder</a> {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::vector&lt;Node::DOF&gt; directions;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    vec frequency;            <span class="comment">// natural frequencies</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    mat participation_factor; <span class="comment">// modal participation factors</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    mat effective_mass;       <span class="comment">// effective modal masses</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    mat mode_shape;           <span class="comment">// mass normalized mode shapes</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    mat force_response;       <span class="comment">// modal elastic force, assembled from element stiffness</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#ifndef MODALRECORDER_H</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define MODALRECORDER_H</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d02/_node_8h.html">Domain/Node.h</a>&gt;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &lt;<a class="code" href="../../d2/d42/_recorder_8h.html">Recorder/Recorder.h</a>&gt;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../dd/dd7/class_modal_recorder.html">   57</a></span><span class="keyword">class </span><a class="code hl_function" href="../../dd/dd7/class_modal_recorder.html#a81548d6a62e343758061fde5c76f6efd">ModalRecorder</a> final : <span class="keyword">public</span> <a class="code hl_function" href="../../d3/d1a/class_recorder.html#a14876e8bd800b43855c8dbb2bb7d267f">Recorder</a> {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::vector&lt;Node::DOF&gt; directions;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    vec frequency;            <span class="comment">// natural frequencies</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    mat participation_factor; <span class="comment">// modal participation factors</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    mat effective_mass;       <span class="comment">// effective modal masses</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    std::vector&lt;std::pair&lt;unsigned, mat&gt;&gt; node_shape; <span class="comment">// node tag and nodal mode shapes</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> record_impl(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="../../dd/dd7/class_modal_recorder.html#a81548d6a62e343758061fde5c76f6efd">ModalRecorder</a>(<span class="keywordtype">unsigned</span> = 0, std::vector&lt;Node::DOF&gt;&amp;&amp; = {}, <span class="keywordtype">bool</span> = <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::vector&lt;std::pair&lt;unsigned, uvec&gt;&gt; node_dof; <span class="comment">// node tag and corresponding DoF indices</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dd7/class_modal_recorder.html#a7b79a36c55d0d70479d8d4970b37ae48">save</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> record_impl(<span class="keyword">const</span> shared_ptr&lt;DomainBase&gt;&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="../../dd/dd7/class_modal_recorder.html#a81548d6a62e343758061fde5c76f6efd">ModalRecorder</a>(<span class="keywordtype">unsigned</span> = 0, std::vector&lt;Node::DOF&gt;&amp;&amp; = {}, <span class="keywordtype">bool</span> = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dd7/class_modal_recorder.html#a7b79a36c55d0d70479d8d4970b37ae48">save</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dd7/class_modal_recorder.html#a2fe4cef5592baa809f21c6afa24d98ed">print</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dd7/class_modal_recorder.html#a2fe4cef5592baa809f21c6afa24d98ed">print</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
 </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
 <div class="ttc" id="a_node_8h_html"><div class="ttname"><a href="../../d1/d02/_node_8h.html">Node.h</a></div></div>
 <div class="ttc" id="a_recorder_8h_html"><div class="ttname"><a href="../../d2/d42/_recorder_8h.html">Recorder.h</a></div></div>
-<div class="ttc" id="aclass_modal_recorder_html_a2fe4cef5592baa809f21c6afa24d98ed"><div class="ttname"><a href="../../dd/dd7/class_modal_recorder.html#a2fe4cef5592baa809f21c6afa24d98ed">ModalRecorder::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition</b> ModalRecorder.cpp:169</div></div>
-<div class="ttc" id="aclass_modal_recorder_html_a7b79a36c55d0d70479d8d4970b37ae48"><div class="ttname"><a href="../../dd/dd7/class_modal_recorder.html#a7b79a36c55d0d70479d8d4970b37ae48">ModalRecorder::save</a></div><div class="ttdeci">void save() override</div><div class="ttdef"><b>Definition</b> ModalRecorder.cpp:123</div></div>
-<div class="ttc" id="aclass_modal_recorder_html_a81548d6a62e343758061fde5c76f6efd"><div class="ttname"><a href="../../dd/dd7/class_modal_recorder.html#a81548d6a62e343758061fde5c76f6efd">ModalRecorder::ModalRecorder</a></div><div class="ttdeci">ModalRecorder(unsigned=0, std::vector&lt; Node::DOF &gt; &amp;&amp;={}, bool=true)</div><div class="ttdef"><b>Definition</b> ModalRecorder.cpp:115</div></div>
+<div class="ttc" id="aclass_modal_recorder_html_a2fe4cef5592baa809f21c6afa24d98ed"><div class="ttname"><a href="../../dd/dd7/class_modal_recorder.html#a2fe4cef5592baa809f21c6afa24d98ed">ModalRecorder::print</a></div><div class="ttdeci">void print() override</div><div class="ttdef"><b>Definition</b> ModalRecorder.cpp:146</div></div>
+<div class="ttc" id="aclass_modal_recorder_html_a7b79a36c55d0d70479d8d4970b37ae48"><div class="ttname"><a href="../../dd/dd7/class_modal_recorder.html#a7b79a36c55d0d70479d8d4970b37ae48">ModalRecorder::save</a></div><div class="ttdeci">void save() override</div><div class="ttdef"><b>Definition</b> ModalRecorder.cpp:104</div></div>
+<div class="ttc" id="aclass_modal_recorder_html_a81548d6a62e343758061fde5c76f6efd"><div class="ttname"><a href="../../dd/dd7/class_modal_recorder.html#a81548d6a62e343758061fde5c76f6efd">ModalRecorder::ModalRecorder</a></div><div class="ttdeci">ModalRecorder(unsigned=0, std::vector&lt; Node::DOF &gt; &amp;&amp;={}, bool=true)</div><div class="ttdef"><b>Definition</b> ModalRecorder.cpp:96</div></div>
 <div class="ttc" id="aclass_recorder_html_a14876e8bd800b43855c8dbb2bb7d267f"><div class="ttname"><a href="../../d3/d1a/class_recorder.html#a14876e8bd800b43855c8dbb2bb7d267f">Recorder::Recorder</a></div><div class="ttdeci">Recorder(unsigned, uvec &amp;&amp;, OutputType, unsigned, bool)</div><div class="ttdoc">ctor</div><div class="ttdef"><b>Definition</b> Recorder.cpp:63</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
