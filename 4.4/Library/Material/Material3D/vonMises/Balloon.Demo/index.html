@@ -260,8 +260,8 @@
 <span class=normal><a href=#__codelineno-1-15>15</a></span>
 <span class=normal><a href=#__codelineno-1-16>16</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-1-1 name=__codelineno-1-1></a><span class=k>for</span> <span class=n>rate</span> <span class=ow>in</span> <span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mf>0.4</span><span class=p>):</span>
 <a id=__codelineno-1-2 name=__codelineno-1-2></a>    <span class=k>with</span> <span class=n>AutoSwitch</span><span class=p>(</span>
-<a id=__codelineno-1-3 name=__codelineno-1-3></a>            <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
-<a id=__codelineno-1-4 name=__codelineno-1-4></a>                <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
+<a id=__codelineno-1-3 name=__codelineno-1-3></a>        <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
+<a id=__codelineno-1-4 name=__codelineno-1-4></a>            <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
 <a id=__codelineno-1-5 name=__codelineno-1-5></a><span class=s2>1 1E2 10 \</span>
 <a id=__codelineno-1-6 name=__codelineno-1-6></a><span class=s2>1E1 0 -1E1 </span><span class=si>{</span><span class=n>rate</span><span class=si>}</span><span class=s2> \ ! u</span>
 <a id=__codelineno-1-7 name=__codelineno-1-7></a><span class=s2>1 1e-8 0 0 \ ! hfm</span>
@@ -269,9 +269,9 @@
 <a id=__codelineno-1-9 name=__codelineno-1-9></a><span class=s2>0 0 0 0 \ ! ham</span>
 <a id=__codelineno-1-10 name=__codelineno-1-10></a><span class=s2>0 0 0 0 \ ! hac</span>
 <a id=__codelineno-1-11 name=__codelineno-1-11></a><span class=s2>0 ! density"""</span><span class=p>,</span>
-<a id=__codelineno-1-12 name=__codelineno-1-12></a>                <span class=n>amplitude</span><span class=o>=</span><span class=s2>"t&lt;1?1-cos(2pi*t):t&lt;2?1.5-1.5*cos(2pi*t):t&lt;3?2-2cos(2pi*t):t&lt;4?2.5-2.5cos(2pi*t):3-3cos(2pi*t)"</span><span class=p>,</span>
-<a id=__codelineno-1-13 name=__codelineno-1-13></a>                <span class=n>duration</span><span class=o>=</span><span class=mi>4</span><span class=p>,</span>
-<a id=__codelineno-1-14 name=__codelineno-1-14></a>            <span class=p>)</span>
+<a id=__codelineno-1-12 name=__codelineno-1-12></a>            <span class=n>amplitude</span><span class=o>=</span><span class=s2>"t&lt;1?1-cos(2pi*t):t&lt;2?1.5-1.5*cos(2pi*t):t&lt;3?2-2cos(2pi*t):t&lt;4?2.5-2.5cos(2pi*t):3-3cos(2pi*t)"</span><span class=p>,</span>
+<a id=__codelineno-1-13 name=__codelineno-1-13></a>            <span class=n>duration</span><span class=o>=</span><span class=mi>4</span><span class=p>,</span>
+<a id=__codelineno-1-14 name=__codelineno-1-14></a>        <span class=p>)</span>
 <a id=__codelineno-1-15 name=__codelineno-1-15></a>    <span class=p>):</span>
 <a id=__codelineno-1-16 name=__codelineno-1-16></a>        <span class=n>gplot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R3-E1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>],</span> <span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R2-S1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>])</span>
 </code></pre></div></td></tr></table></div> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_3_0.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_3_1.png></p> <h2 id=basic-isotropic-hardening>Basic Isotropic Hardening</h2> <p>By controlling <span class=arithmatex>\(f_m\)</span>, the isotropic hardening behaviour is similar to the conventional understanding. The following examples adopt a linear hardening base with an optional saturation component. Note that this type of exponential saturation (of isotropic hardening) is rarely useful as it saturates only once since accumulated plasticity is not reversible.</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Python</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-2-1> 1</a></span>
@@ -291,8 +291,8 @@
 <span class=normal><a href=#__codelineno-2-15>15</a></span>
 <span class=normal><a href=#__codelineno-2-16>16</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-2-1 name=__codelineno-2-1></a><span class=k>for</span> <span class=n>rate</span> <span class=ow>in</span> <span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>2</span><span class=p>):</span>
 <a id=__codelineno-2-2 name=__codelineno-2-2></a>    <span class=k>with</span> <span class=n>AutoSwitch</span><span class=p>(</span>
-<a id=__codelineno-2-3 name=__codelineno-2-3></a>            <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
-<a id=__codelineno-2-4 name=__codelineno-2-4></a>                <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
+<a id=__codelineno-2-3 name=__codelineno-2-3></a>        <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
+<a id=__codelineno-2-4 name=__codelineno-2-4></a>            <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
 <a id=__codelineno-2-5 name=__codelineno-2-5></a><span class=s2>1 1E2 10 \</span>
 <a id=__codelineno-2-6 name=__codelineno-2-6></a><span class=s2>1E2 0 0 0 \ ! u</span>
 <a id=__codelineno-2-7 name=__codelineno-2-7></a><span class=s2>1 1e-2 .5 </span><span class=si>{</span><span class=n>rate</span><span class=si>}</span><span class=s2> \ ! hfm</span>
@@ -300,9 +300,9 @@
 <a id=__codelineno-2-9 name=__codelineno-2-9></a><span class=s2>0 0 0 0 \ ! ham</span>
 <a id=__codelineno-2-10 name=__codelineno-2-10></a><span class=s2>0 0 0 0 \ ! hac</span>
 <a id=__codelineno-2-11 name=__codelineno-2-11></a><span class=s2>0 ! density"""</span><span class=p>,</span>
-<a id=__codelineno-2-12 name=__codelineno-2-12></a>                <span class=n>amplitude</span><span class=o>=</span><span class=s2>"2-2cos(2pi*t)"</span><span class=p>,</span>
-<a id=__codelineno-2-13 name=__codelineno-2-13></a>                <span class=n>duration</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span>
-<a id=__codelineno-2-14 name=__codelineno-2-14></a>            <span class=p>)</span>
+<a id=__codelineno-2-12 name=__codelineno-2-12></a>            <span class=n>amplitude</span><span class=o>=</span><span class=s2>"2-2cos(2pi*t)"</span><span class=p>,</span>
+<a id=__codelineno-2-13 name=__codelineno-2-13></a>            <span class=n>duration</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span>
+<a id=__codelineno-2-14 name=__codelineno-2-14></a>        <span class=p>)</span>
 <a id=__codelineno-2-15 name=__codelineno-2-15></a>    <span class=p>):</span>
 <a id=__codelineno-2-16 name=__codelineno-2-16></a>        <span class=n>gplot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R3-E1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>],</span> <span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R2-S1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>])</span>
 </code></pre></div></td></tr></table></div> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_5_0.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_5_1.png></p> <h2 id=basic-kinematic-hardening>Basic Kinematic Hardening</h2> <p>A similar bound for kinematic hardening is controlled by <span class=arithmatex>\(a_m\)</span>. However, to activate kinematic hardening, at least one pair of <code>-na</code> AF-type rule is needed.</p> <p><strong>If rate is zero, it becomes a linear type rule.</strong></p> <p>The following example presents three cases:</p> <ol> <li>kinematic hardening deactivated,</li> <li>a linear kinematic hardening rule,</li> <li>an AF type exponential saturation rule.</li> </ol> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Python</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-3-1> 1</a></span>
@@ -323,8 +323,8 @@
 <span class=normal><a href=#__codelineno-3-16>16</a></span>
 <span class=normal><a href=#__codelineno-3-17>17</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-3-1 name=__codelineno-3-1></a><span class=k>for</span> <span class=n>saturation</span><span class=p>,</span> <span class=n>rate</span> <span class=ow>in</span> <span class=p>((</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>),</span> <span class=p>(</span><span class=mf>0.05</span><span class=p>,</span> <span class=mi>0</span><span class=p>),</span> <span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>5</span><span class=p>),</span> <span class=p>(</span><span class=mi>2</span><span class=p>,</span> <span class=mi>5</span><span class=p>)):</span>
 <a id=__codelineno-3-2 name=__codelineno-3-2></a>    <span class=k>with</span> <span class=n>AutoSwitch</span><span class=p>(</span>
-<a id=__codelineno-3-3 name=__codelineno-3-3></a>            <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
-<a id=__codelineno-3-4 name=__codelineno-3-4></a>                <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
+<a id=__codelineno-3-3 name=__codelineno-3-3></a>        <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
+<a id=__codelineno-3-4 name=__codelineno-3-4></a>            <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
 <a id=__codelineno-3-5 name=__codelineno-3-5></a><span class=s2>1 1E2 10 \</span>
 <a id=__codelineno-3-6 name=__codelineno-3-6></a><span class=s2>1E2 0 0 0 \ ! u</span>
 <a id=__codelineno-3-7 name=__codelineno-3-7></a><span class=s2>1 1e-8 0 0 \ ! hfm</span>
@@ -333,9 +333,9 @@
 <a id=__codelineno-3-10 name=__codelineno-3-10></a><span class=s2>0 0 0 0 \ ! hac</span>
 <a id=__codelineno-3-11 name=__codelineno-3-11></a><span class=s2>0 \ ! density</span>
 <a id=__codelineno-3-12 name=__codelineno-3-12></a><span class=s2>-na </span><span class=si>{</span><span class=n>saturation</span><span class=si>}</span><span class=s2> </span><span class=si>{</span><span class=n>rate</span><span class=si>}</span><span class=s2>"""</span><span class=p>,</span>
-<a id=__codelineno-3-13 name=__codelineno-3-13></a>                <span class=n>amplitude</span><span class=o>=</span><span class=s2>"2-2cos(2pi*t)"</span><span class=p>,</span>
-<a id=__codelineno-3-14 name=__codelineno-3-14></a>                <span class=n>duration</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span>
-<a id=__codelineno-3-15 name=__codelineno-3-15></a>            <span class=p>)</span>
+<a id=__codelineno-3-13 name=__codelineno-3-13></a>            <span class=n>amplitude</span><span class=o>=</span><span class=s2>"2-2cos(2pi*t)"</span><span class=p>,</span>
+<a id=__codelineno-3-14 name=__codelineno-3-14></a>            <span class=n>duration</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span>
+<a id=__codelineno-3-15 name=__codelineno-3-15></a>        <span class=p>)</span>
 <a id=__codelineno-3-16 name=__codelineno-3-16></a>    <span class=p>):</span>
 <a id=__codelineno-3-17 name=__codelineno-3-17></a>        <span class=n>gplot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R3-E1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>],</span> <span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R2-S1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>])</span>
 </code></pre></div></td></tr></table></div> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_7_0.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_7_1.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_7_2.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_7_3.png></p> <h2 id=growing-kinematic-hardening-bound>Growing Kinematic Hardening Bound</h2> <p>The back stress can saturate to a bound, this bound can evolve as well.</p> <p>Instead of using a combination of an AF rule and a linear rule for <code>-na</code>, one can allow <span class=arithmatex>\(a_m\)</span> to evolve. The following example adds a linear component to <span class=arithmatex>\(a_m\)</span>.</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Python</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-4-1> 1</a></span>
@@ -356,8 +356,8 @@
 <span class=normal><a href=#__codelineno-4-16>16</a></span>
 <span class=normal><a href=#__codelineno-4-17>17</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-4-1 name=__codelineno-4-1></a><span class=k>for</span> <span class=n>linear</span> <span class=ow>in</span> <span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mf>2e-2</span><span class=p>):</span>
 <a id=__codelineno-4-2 name=__codelineno-4-2></a>    <span class=k>with</span> <span class=n>AutoSwitch</span><span class=p>(</span>
-<a id=__codelineno-4-3 name=__codelineno-4-3></a>            <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
-<a id=__codelineno-4-4 name=__codelineno-4-4></a>                <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
+<a id=__codelineno-4-3 name=__codelineno-4-3></a>        <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
+<a id=__codelineno-4-4 name=__codelineno-4-4></a>            <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
 <a id=__codelineno-4-5 name=__codelineno-4-5></a><span class=s2>1 1E2 10 \</span>
 <a id=__codelineno-4-6 name=__codelineno-4-6></a><span class=s2>1E2 0 0 0 \ ! u</span>
 <a id=__codelineno-4-7 name=__codelineno-4-7></a><span class=s2>1 1e-8 0 0 \ ! hfm</span>
@@ -366,9 +366,9 @@
 <a id=__codelineno-4-10 name=__codelineno-4-10></a><span class=s2>0 0 0 0 \ ! hac</span>
 <a id=__codelineno-4-11 name=__codelineno-4-11></a><span class=s2>0 \ ! density</span>
 <a id=__codelineno-4-12 name=__codelineno-4-12></a><span class=s2>-na 1 5"""</span><span class=p>,</span>
-<a id=__codelineno-4-13 name=__codelineno-4-13></a>                <span class=n>amplitude</span><span class=o>=</span><span class=s2>"2-2cos(2pi*t)"</span><span class=p>,</span>
-<a id=__codelineno-4-14 name=__codelineno-4-14></a>                <span class=n>duration</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span>
-<a id=__codelineno-4-15 name=__codelineno-4-15></a>            <span class=p>)</span>
+<a id=__codelineno-4-13 name=__codelineno-4-13></a>            <span class=n>amplitude</span><span class=o>=</span><span class=s2>"2-2cos(2pi*t)"</span><span class=p>,</span>
+<a id=__codelineno-4-14 name=__codelineno-4-14></a>            <span class=n>duration</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span>
+<a id=__codelineno-4-15 name=__codelineno-4-15></a>        <span class=p>)</span>
 <a id=__codelineno-4-16 name=__codelineno-4-16></a>    <span class=p>):</span>
 <a id=__codelineno-4-17 name=__codelineno-4-17></a>        <span class=n>gplot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R3-E1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>],</span> <span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R2-S1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>])</span>
 </code></pre></div></td></tr></table></div> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_9_0.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_9_1.png></p> <h2 id=further-enhancement-bauschinger-effect>Further Enhancement Bauschinger Effect</h2> <p>At least one pair of non-trivial <code>-nd</code> sets would enable the transition of the subloading surface within the yield surface. This will allow early re-yielding when reversely loaded.</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Python</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-5-1> 1</a></span>
@@ -391,12 +391,12 @@
 <span class=normal><a href=#__codelineno-5-18>18</a></span>
 <span class=normal><a href=#__codelineno-5-19>19</a></span>
 <span class=normal><a href=#__codelineno-5-20>20</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-5-1 name=__codelineno-5-1></a><span class=k>for</span> <span class=n>saturation</span><span class=p>,</span> <span class=n>rate</span> <span class=ow>in</span> <span class=p>(</span>
-<a id=__codelineno-5-2 name=__codelineno-5-2></a>        <span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mf>5e-1</span><span class=p>),</span>
-<a id=__codelineno-5-3 name=__codelineno-5-3></a>        <span class=p>(</span><span class=mf>0.8</span><span class=p>,</span> <span class=mf>5e-1</span><span class=p>),</span>
+<a id=__codelineno-5-2 name=__codelineno-5-2></a>    <span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mf>5e-1</span><span class=p>),</span>
+<a id=__codelineno-5-3 name=__codelineno-5-3></a>    <span class=p>(</span><span class=mf>0.8</span><span class=p>,</span> <span class=mf>5e-1</span><span class=p>),</span>
 <a id=__codelineno-5-4 name=__codelineno-5-4></a><span class=p>):</span>
 <a id=__codelineno-5-5 name=__codelineno-5-5></a>    <span class=k>with</span> <span class=n>AutoSwitch</span><span class=p>(</span>
-<a id=__codelineno-5-6 name=__codelineno-5-6></a>            <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
-<a id=__codelineno-5-7 name=__codelineno-5-7></a>                <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
+<a id=__codelineno-5-6 name=__codelineno-5-6></a>        <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
+<a id=__codelineno-5-7 name=__codelineno-5-7></a>            <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
 <a id=__codelineno-5-8 name=__codelineno-5-8></a><span class=s2>1 1E2 10 \</span>
 <a id=__codelineno-5-9 name=__codelineno-5-9></a><span class=s2>5E-1 0 0 0 \ ! u</span>
 <a id=__codelineno-5-10 name=__codelineno-5-10></a><span class=s2>1 1e-8 0 0 \ ! hfm</span>
@@ -405,9 +405,9 @@
 <a id=__codelineno-5-13 name=__codelineno-5-13></a><span class=s2>0 0 0 0 \ ! hac</span>
 <a id=__codelineno-5-14 name=__codelineno-5-14></a><span class=s2>0 \ ! density</span>
 <a id=__codelineno-5-15 name=__codelineno-5-15></a><span class=s2>-nd </span><span class=si>{</span><span class=n>saturation</span><span class=si>}</span><span class=s2> </span><span class=si>{</span><span class=n>rate</span><span class=si>}</span><span class=s2>"""</span><span class=p>,</span>
-<a id=__codelineno-5-16 name=__codelineno-5-16></a>                <span class=n>amplitude</span><span class=o>=</span><span class=s2>"t&lt;1?1-cos(2pi*t):t&lt;2?1.5-1.5*cos(2pi*t):t&lt;3?2-2cos(2pi*t):t&lt;4?2.5-2.5cos(2pi*t):3-3cos(2pi*t)"</span><span class=p>,</span>
-<a id=__codelineno-5-17 name=__codelineno-5-17></a>                <span class=n>duration</span><span class=o>=</span><span class=mi>4</span><span class=p>,</span>
-<a id=__codelineno-5-18 name=__codelineno-5-18></a>            <span class=p>)</span>
+<a id=__codelineno-5-16 name=__codelineno-5-16></a>            <span class=n>amplitude</span><span class=o>=</span><span class=s2>"t&lt;1?1-cos(2pi*t):t&lt;2?1.5-1.5*cos(2pi*t):t&lt;3?2-2cos(2pi*t):t&lt;4?2.5-2.5cos(2pi*t):3-3cos(2pi*t)"</span><span class=p>,</span>
+<a id=__codelineno-5-17 name=__codelineno-5-17></a>            <span class=n>duration</span><span class=o>=</span><span class=mi>4</span><span class=p>,</span>
+<a id=__codelineno-5-18 name=__codelineno-5-18></a>        <span class=p>)</span>
 <a id=__codelineno-5-19 name=__codelineno-5-19></a>    <span class=p>):</span>
 <a id=__codelineno-5-20 name=__codelineno-5-20></a>        <span class=n>gplot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R3-E1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>],</span> <span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R2-S1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>])</span>
 </code></pre></div></td></tr></table></div> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_11_0.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_11_1.png></p> <h2 id=isotropic-hardening-stagnation>Isotropic Hardening Stagnation</h2> <p>If <span class=arithmatex>\(f_c\)</span> is trivial, isotropic hardening will stagnate under cyclic loading. This stagnation is the direct result of stagnation of accumulation of monotonic plastic strain. This process is controlled by the memory size: the number of previous reverse points that are memorised. The following example shows the comparisons among memorising 1, 2 and 5 most recent reverse points.</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Python</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-6-1> 1</a></span>
@@ -427,8 +427,8 @@
 <span class=normal><a href=#__codelineno-6-15>15</a></span>
 <span class=normal><a href=#__codelineno-6-16>16</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-6-1 name=__codelineno-6-1></a><span class=k>for</span> <span class=n>memory</span> <span class=ow>in</span> <span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>5</span><span class=p>):</span>
 <a id=__codelineno-6-2 name=__codelineno-6-2></a>    <span class=k>with</span> <span class=n>AutoSwitch</span><span class=p>(</span>
-<a id=__codelineno-6-3 name=__codelineno-6-3></a>            <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
-<a id=__codelineno-6-4 name=__codelineno-6-4></a>                <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
+<a id=__codelineno-6-3 name=__codelineno-6-3></a>        <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
+<a id=__codelineno-6-4 name=__codelineno-6-4></a>            <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
 <a id=__codelineno-6-5 name=__codelineno-6-5></a><span class=s2>    1 1E2 </span><span class=si>{</span><span class=n>memory</span><span class=si>}</span><span class=s2> \</span>
 <a id=__codelineno-6-6 name=__codelineno-6-6></a><span class=s2>    1e1 0 0 0 \ ! u</span>
 <a id=__codelineno-6-7 name=__codelineno-6-7></a><span class=s2>    1 4e-2 0 0 \ ! hfm</span>
@@ -436,9 +436,9 @@
 <a id=__codelineno-6-9 name=__codelineno-6-9></a><span class=s2>    0 0 0 0 \ ! ham</span>
 <a id=__codelineno-6-10 name=__codelineno-6-10></a><span class=s2>    0 0 0 0 \ ! hac</span>
 <a id=__codelineno-6-11 name=__codelineno-6-11></a><span class=s2>    0 ! density"""</span><span class=p>,</span>
-<a id=__codelineno-6-12 name=__codelineno-6-12></a>                <span class=n>amplitude</span><span class=o>=</span><span class=s2>"sin(2pi*t)"</span><span class=p>,</span>
-<a id=__codelineno-6-13 name=__codelineno-6-13></a>                <span class=n>duration</span><span class=o>=</span><span class=mi>20</span><span class=p>,</span>
-<a id=__codelineno-6-14 name=__codelineno-6-14></a>            <span class=p>)</span>
+<a id=__codelineno-6-12 name=__codelineno-6-12></a>            <span class=n>amplitude</span><span class=o>=</span><span class=s2>"sin(2pi*t)"</span><span class=p>,</span>
+<a id=__codelineno-6-13 name=__codelineno-6-13></a>            <span class=n>duration</span><span class=o>=</span><span class=mi>20</span><span class=p>,</span>
+<a id=__codelineno-6-14 name=__codelineno-6-14></a>        <span class=p>)</span>
 <a id=__codelineno-6-15 name=__codelineno-6-15></a>    <span class=p>):</span>
 <a id=__codelineno-6-16 name=__codelineno-6-16></a>        <span class=n>gplot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R3-E1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>],</span> <span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R2-S1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>])</span>
 </code></pre></div></td></tr></table></div> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_13_0.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_13_1.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_13_2.png></p> <h2 id=cyclic-isotropic-hardeningsoftening>Cyclic Isotropic Hardening/Softening</h2> <p>Although the accumulation of monotonic plastic strain is halted, the corresponding information is not lost. Instead, the total increment of plastic strain is stored largely in the so-called cyclic part during this cyclic phase. This part of plastic strain drives a separate bound controlled by <span class=arithmatex>\(f_c\)</span>. A non-trivial bound shall be accompanied by at least one pair of valid <code>-fc</code> rule.</p> <p>This mechanism can be used to simulate cyclic hardening/softening by defining a positive/negative evolving bound.</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Python</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-7-1> 1</a></span>
@@ -459,8 +459,8 @@
 <span class=normal><a href=#__codelineno-7-16>16</a></span>
 <span class=normal><a href=#__codelineno-7-17>17</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-7-1 name=__codelineno-7-1></a><span class=k>for</span> <span class=n>rate</span> <span class=ow>in</span> <span class=p>(</span><span class=mf>1e-1</span><span class=p>,</span> <span class=mf>5e-2</span><span class=p>):</span>
 <a id=__codelineno-7-2 name=__codelineno-7-2></a>    <span class=k>with</span> <span class=n>AutoSwitch</span><span class=p>(</span>
-<a id=__codelineno-7-3 name=__codelineno-7-3></a>            <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
-<a id=__codelineno-7-4 name=__codelineno-7-4></a>                <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
+<a id=__codelineno-7-3 name=__codelineno-7-3></a>        <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
+<a id=__codelineno-7-4 name=__codelineno-7-4></a>            <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
 <a id=__codelineno-7-5 name=__codelineno-7-5></a><span class=s2>1 1E2 1 \</span>
 <a id=__codelineno-7-6 name=__codelineno-7-6></a><span class=s2>1e1 0 0 0 \ ! u</span>
 <a id=__codelineno-7-7 name=__codelineno-7-7></a><span class=s2>1 4e-2 0 0 \ ! hfm</span>
@@ -469,9 +469,9 @@
 <a id=__codelineno-7-10 name=__codelineno-7-10></a><span class=s2>0 0 0 0 \ ! hac</span>
 <a id=__codelineno-7-11 name=__codelineno-7-11></a><span class=s2>0 \ ! density</span>
 <a id=__codelineno-7-12 name=__codelineno-7-12></a><span class=s2>-fc 1 </span><span class=si>{</span><span class=n>rate</span><span class=si>}</span><span class=s2>"""</span><span class=p>,</span>
-<a id=__codelineno-7-13 name=__codelineno-7-13></a>                <span class=n>amplitude</span><span class=o>=</span><span class=s2>"sin(2pi*t)"</span><span class=p>,</span>
-<a id=__codelineno-7-14 name=__codelineno-7-14></a>                <span class=n>duration</span><span class=o>=</span><span class=mi>20</span><span class=p>,</span>
-<a id=__codelineno-7-15 name=__codelineno-7-15></a>            <span class=p>)</span>
+<a id=__codelineno-7-13 name=__codelineno-7-13></a>            <span class=n>amplitude</span><span class=o>=</span><span class=s2>"sin(2pi*t)"</span><span class=p>,</span>
+<a id=__codelineno-7-14 name=__codelineno-7-14></a>            <span class=n>duration</span><span class=o>=</span><span class=mi>20</span><span class=p>,</span>
+<a id=__codelineno-7-15 name=__codelineno-7-15></a>        <span class=p>)</span>
 <a id=__codelineno-7-16 name=__codelineno-7-16></a>    <span class=p>):</span>
 <a id=__codelineno-7-17 name=__codelineno-7-17></a>        <span class=n>gplot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R3-E1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>],</span> <span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R2-S1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>])</span>
 </code></pre></div></td></tr></table></div> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_15_0.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_15_1.png></p> <p>Because the bound itself is evolving with the development of plasticity, this cyclic hardening/softening can occur repeatedly under certain conditions.</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Python</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-8-1> 1</a></span>
@@ -492,8 +492,8 @@
 <span class=normal><a href=#__codelineno-8-16>16</a></span>
 <span class=normal><a href=#__codelineno-8-17>17</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-8-1 name=__codelineno-8-1></a><span class=k>for</span> <span class=n>rate</span> <span class=ow>in</span> <span class=p>(</span><span class=mf>1e-1</span><span class=p>,</span> <span class=mf>5e-2</span><span class=p>):</span>
 <a id=__codelineno-8-2 name=__codelineno-8-2></a>    <span class=k>with</span> <span class=n>AutoSwitch</span><span class=p>(</span>
-<a id=__codelineno-8-3 name=__codelineno-8-3></a>            <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
-<a id=__codelineno-8-4 name=__codelineno-8-4></a>                <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
+<a id=__codelineno-8-3 name=__codelineno-8-3></a>        <span class=n>model</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>format</span><span class=p>(</span>
+<a id=__codelineno-8-4 name=__codelineno-8-4></a>            <span class=n>material</span><span class=o>=</span><span class=sa>rf</span><span class=s2>"""material Balloon1D 1 \</span>
 <a id=__codelineno-8-5 name=__codelineno-8-5></a><span class=s2>1 1E2 1 \</span>
 <a id=__codelineno-8-6 name=__codelineno-8-6></a><span class=s2>1e1 0 0 0 \ ! u</span>
 <a id=__codelineno-8-7 name=__codelineno-8-7></a><span class=s2>1 4e-2 0 0 \ ! hfm</span>
@@ -502,9 +502,9 @@
 <a id=__codelineno-8-10 name=__codelineno-8-10></a><span class=s2>0 0 0 0 \ ! hac</span>
 <a id=__codelineno-8-11 name=__codelineno-8-11></a><span class=s2>0 \ ! density</span>
 <a id=__codelineno-8-12 name=__codelineno-8-12></a><span class=s2>-fc 1 </span><span class=si>{</span><span class=n>rate</span><span class=si>}</span><span class=s2>"""</span><span class=p>,</span>
-<a id=__codelineno-8-13 name=__codelineno-8-13></a>                <span class=n>amplitude</span><span class=o>=</span><span class=s2>"t&lt;5?sin(2pi*t):t&lt;10?1.5sin(2pi*t):t&lt;15?2sin(2pi*t):2.5sin(2pi*t)"</span><span class=p>,</span>
-<a id=__codelineno-8-14 name=__codelineno-8-14></a>                <span class=n>duration</span><span class=o>=</span><span class=mi>20</span><span class=p>,</span>
-<a id=__codelineno-8-15 name=__codelineno-8-15></a>            <span class=p>)</span>
+<a id=__codelineno-8-13 name=__codelineno-8-13></a>            <span class=n>amplitude</span><span class=o>=</span><span class=s2>"t&lt;5?sin(2pi*t):t&lt;10?1.5sin(2pi*t):t&lt;15?2sin(2pi*t):2.5sin(2pi*t)"</span><span class=p>,</span>
+<a id=__codelineno-8-14 name=__codelineno-8-14></a>            <span class=n>duration</span><span class=o>=</span><span class=mi>20</span><span class=p>,</span>
+<a id=__codelineno-8-15 name=__codelineno-8-15></a>        <span class=p>)</span>
 <a id=__codelineno-8-16 name=__codelineno-8-16></a>    <span class=p>):</span>
 <a id=__codelineno-8-17 name=__codelineno-8-17></a>        <span class=n>gplot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R3-E1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>],</span> <span class=n>np</span><span class=o>.</span><span class=n>loadtxt</span><span class=p>(</span><span class=s2>"R2-S1.txt"</span><span class=p>)[:,</span> <span class=mi>1</span><span class=p>])</span>
 </code></pre></div></td></tr></table></div> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_17_0.png></p> <p><img alt=png src=../Balloon.Demo_files/Balloon.Demo_17_1.png></p> <h2 id=cyclic-kinematic-hardeningsoftening>Cyclic Kinematic Hardening/Softening</h2> <p>The counterpart of such a monotonic/cyclic split is also available for kinematic hardening. It is possible to define a non-trivial <span class=arithmatex>\(a_c\)</span> part with a valid <code>-ac</code> rule, and most likely, also with a valid <code>-na</code> rule.</p> <p>However, since kinematic hardening is likely cyclic anyway, such an evolution of bound does not have many practical implications apart from constraining the size of back stress being a constant portion of that of the yield surface (isotropic hardening). Nevertheless, it provides extra flexibility that may be useful for curve fitting.</p> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Footer> <a href=../ArmstrongFrederick/ class="md-footer__link md-footer__link--prev" aria-label="Previous: ArmstrongFrederick"> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </div> <div class=md-footer__title> <span class=md-footer__direction> Previous </span> <div class=md-ellipsis> ArmstrongFrederick </div> </div> </a> <a href=../Balloon/ class="md-footer__link md-footer__link--next" aria-label="Next: Balloon"> <div class=md-footer__title> <span class=md-footer__direction> Next </span> <div class=md-ellipsis> Balloon </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright © 2017-2026 Theodore Chang </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.footer"], "search": "../../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script> <script src=../../../../../assets/javascripts/bundle.a5f9d56c.min.js></script> <script src=../../../../../javascripts/mathjax.js></script> <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=es6"></script> <script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script> <script data-mkdocs-jupyter-mathjax="{&quot;url&quot;: &quot;https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-mml-chtml.js&quot;, &quot;version&quot;: 4}">
