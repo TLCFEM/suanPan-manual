@@ -103,9 +103,11 @@ with ErrorMap(
     f"material BilinearDP 1 {young_modulus} 0.3 0.31 0.31 1.219 6.983 100",
     ref_strain=ref_stress / young_modulus,
     ref_stress=ref_stress,
-    contour_samples=20,
+    contour_samples=30,
 ) as error_map:
-    error_map.contour("dp.uniaxial", center=(-2, 0.5, 0.5), size=1)
+    error_map.contour("dp.uniaxial", center=(-2, 0), size=4)
+    error_map.contour("dp.biaxial", center=(-2, -2), size=4)
 ```
 
 ![absolute error uniaxial](dp.uniaxial.abs.error.svg)
+![absolute error biaxial](dp.biaxial.abs.error.svg)
