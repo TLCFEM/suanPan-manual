@@ -94,6 +94,11 @@ The participation factor $$\Gamma_{n,j}$$ is available from the [`Modal`](ModalR
 Modes whose modal mass is numerically zero or negative (for example, spurious modes in a model with an inconsistent mass matrix) are not normalised.
 Their modal elastic force is zero.
 
+!!! warning "global force"
+    The force components are defined in the **global** coordinate system.
+    They are different from the elemental forces for some element types.
+    For example, with beam elements, the axial force and the transverse shear force are defined in the local frame, thus additional transformations are needed.
+
 ## Output File
 
 The recorder writes
