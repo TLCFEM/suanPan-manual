@@ -263,7 +263,7 @@ It then checks the following quantities.
 | quantity                                        | maximum error |
 |-------------------------------------------------|--------------:|
 | relative frequency error                        | $$4.74\times10^{-10}$$ |
-| $$\lVert\boldsymbol{\Phi}^T\mathbf{M}\boldsymbol{\Phi}-\mathbf{I}\rVert_\infty$$ | $$1.84\times10^{-12}$$ |
+| $$\lVert\mathbf{\Phi}^T\mathbf{M}\mathbf{\Phi}-\mathbf{I}\rVert_\infty$$ | $$1.84\times10^{-12}$$ |
 | mode-shape difference (sign-adjusted)           | $$5.51\times10^{-10}$$ |
 | participation-factor error                      | $$4.44\times10^{-16}$$ |
 | effective-mass error                            | $$1.78\times10^{-15}$$ |
@@ -295,7 +295,7 @@ $$
 Using the mass-normalised mode shapes and the modal coordinate
 
 $$
-\mathbf{u}(t)=\sum_n\boldsymbol{\phi}_n q_n(t),
+\mathbf{u}(t)=\sum_n\mathbf{\phi}_n q_n(t),
 $$
 
 the modal equation is
@@ -416,7 +416,7 @@ For unequal masses, one `cload` per floor with magnitude $$-m_i\times0.01$$ shou
 The script reconstructs the response history from the modal data,
 
 $$
-\mathbf{u}(t)=\sum_n\boldsymbol{\phi}_n q_n(t),
+\mathbf{u}(t)=\sum_n\mathbf{\phi}_n q_n(t),
 $$
 
 where each modal coordinate is obtained from the same Newmark scheme as the direct analysis.
