@@ -8,10 +8,11 @@ var group___recorder =
     [ "EigenRecorder", "d6/d32/class_eigen_recorder.html", [
       [ "EigenRecorder", "d6/d32/class_eigen_recorder.html#a9394e7b67d95a13caf87afbe60762450", null ],
       [ "print", "d6/d32/class_eigen_recorder.html#ab3f0dab3e2d5bc46911fa037d9c1f83b", null ],
-      [ "save", "d6/d32/class_eigen_recorder.html#a95ed236758b99a30a70067cbec262870", null ]
+      [ "save", "d6/d32/class_eigen_recorder.html#a03d4f4590198c442b8bb3150aa3110d2", null ]
     ] ],
     [ "ElementRecorder", "d2/da4/class_element_recorder.html", [
       [ "initialize", "d2/da4/class_element_recorder.html#aea1efd3d046681a81a3d3735b1217723", null ],
+      [ "is_distributed", "d2/da4/class_element_recorder.html#ae7458e198520096dc910e7de898629b4", null ],
       [ "print", "d2/da4/class_element_recorder.html#a970ed7776ec7dcca7647aed11900ea1e", null ],
       [ "Recorder", "d2/da4/class_element_recorder.html#a14876e8bd800b43855c8dbb2bb7d267f", null ]
     ] ],
@@ -20,13 +21,9 @@ var group___recorder =
     ] ],
     [ "FrameRecorder", "da/d11/class_frame_recorder.html", [
       [ "FrameRecorder", "da/d11/class_frame_recorder.html#afa492fe2f8bdbc8557a985c945822075", null ],
-      [ "FrameRecorder", "da/d11/class_frame_recorder.html#abdbbb681d83085aa4438a21743ae031b", null ],
-      [ "FrameRecorder", "da/d11/class_frame_recorder.html#aeafae67f4c78131ad0ad4abcffaa47b5", null ],
-      [ "~FrameRecorder", "da/d11/class_frame_recorder.html#a4e1932e8877c67cace844a9417a733ba", null ],
-      [ "operator=", "da/d11/class_frame_recorder.html#a3db2950920b6eaed19b306de6e4713ea", null ],
-      [ "operator=", "da/d11/class_frame_recorder.html#aca7515926d521022aee3c5b279b7fcf3", null ],
+      [ "~FrameRecorder", "da/d11/class_frame_recorder.html#aa143be959b19470136cd25cadba78494", null ],
       [ "print", "da/d11/class_frame_recorder.html#a546be30c53989c37fbe613bef4076dd5", null ],
-      [ "save", "da/d11/class_frame_recorder.html#a4fd9a91de1654fcd9fd9b08d060bf34e", null ]
+      [ "save", "da/d11/class_frame_recorder.html#a70e289ffbe5b17e104c7f8d4c878ff55", null ]
     ] ],
     [ "GlobalRecorder", "d8/d66/class_global_recorder.html", [
       [ "GlobalRecorder", "d8/d66/class_global_recorder.html#a272e59655b57d0c05e38f2ce7378585d", null ],
@@ -44,12 +41,12 @@ var group___recorder =
     [ "ModalForceRecorder", "dc/d56/class_modal_force_recorder.html", [
       [ "ModalForceRecorder", "dc/d56/class_modal_force_recorder.html#a46f04a4e4295f770c805be6ab6c4b5f8", null ],
       [ "print", "dc/d56/class_modal_force_recorder.html#afa62a1651bc8d0cfb743e74cdee67dc2", null ],
-      [ "save", "dc/d56/class_modal_force_recorder.html#a4b92c7df119c4c34130c1f03ec982419", null ]
+      [ "save", "dc/d56/class_modal_force_recorder.html#a3b299fd35492cd48836016c103934636", null ]
     ] ],
     [ "ModalRecorder", "dd/dd7/class_modal_recorder.html", [
       [ "ModalRecorder", "dd/dd7/class_modal_recorder.html#a81548d6a62e343758061fde5c76f6efd", null ],
       [ "print", "dd/dd7/class_modal_recorder.html#a2fe4cef5592baa809f21c6afa24d98ed", null ],
-      [ "save", "dd/dd7/class_modal_recorder.html#a7b79a36c55d0d70479d8d4970b37ae48", null ]
+      [ "save", "dd/dd7/class_modal_recorder.html#a678f7b42d5e892915e8565a135c87379", null ]
     ] ],
     [ "NodeRecorder", "de/d66/class_node_recorder.html", [
       [ "initialize", "de/d66/class_node_recorder.html#a5d112e20e4cd06230af971451167d4f6", null ],
@@ -63,13 +60,15 @@ var group___recorder =
     [ "Recorder", "d3/d1a/class_recorder.html", [
       [ "Recorder", "d3/d1a/class_recorder.html#a14876e8bd800b43855c8dbb2bb7d267f", null ],
       [ "clear_status", "d3/d1a/class_recorder.html#a90ca4282b40701fc7285b32026df6177", null ],
+      [ "combine", "d3/d1a/class_recorder.html#aa09bead81f0f32dfbda8373ca5d2d52a", null ],
       [ "initialize", "d3/d1a/class_recorder.html#a95aba2ed79f5dcb53dac987de0a99254", null ],
       [ "insert", "d3/d1a/class_recorder.html#a579680f7c9603576fc9aed8a49997b57", null ],
       [ "insert", "d3/d1a/class_recorder.html#aad7b1e6d1fa2ebb6ff92b51d3f25267a", null ],
+      [ "is_distributed", "d3/d1a/class_recorder.html#a755639abe168b7e9800aa969648a6c4c", null ],
       [ "print", "d3/d1a/class_recorder.html#afed78f7ef9ca577b5d027818da466f71", null ],
       [ "record", "d3/d1a/class_recorder.html#aba48cf0f0d76b9d9e1ac844824b95ec8", null ],
       [ "record_impl", "d3/d1a/class_recorder.html#ae87655d9923d26c9393901c5d3ce4945", null ],
-      [ "save", "d3/d1a/class_recorder.html#a82201bf02428d81dc45471bb7f7455f5", null ],
+      [ "save", "d3/d1a/class_recorder.html#a68b57146bc5c7972c8f5467f8413aab1", null ],
       [ "update_tag", "d3/d1a/class_recorder.html#a670d337108c4ebd1ed8b3aa818837ce8", null ],
       [ "component", "d3/d1a/class_recorder.html#a5cc927385bc8f6007a5af9d9d2105ea7", null ],
       [ "counter", "d3/d1a/class_recorder.html#a30363ba881abbd2c626a0c542db18bfa", null ],
@@ -93,7 +92,7 @@ var group___recorder =
       [ "VisualisationRecorder", "d6/df5/class_visualisation_recorder.html#a44f4dd131f9b5850e77423f0e149dc97", null ],
       [ "clear_status", "d6/df5/class_visualisation_recorder.html#a1f55a09a6deff55988621397fc896ee8", null ],
       [ "print", "d6/df5/class_visualisation_recorder.html#a53dae15ce62887c43ef832786e765e31", null ],
-      [ "save", "d6/df5/class_visualisation_recorder.html#a9f21af093299cae93f16e1f91c4d03cd", null ]
+      [ "save", "d6/df5/class_visualisation_recorder.html#a284dd8d0b51637ae5c90fd20d39f8749", null ]
     ] ],
     [ "OutputType", "d2/d70/group___recorder.html#ga4e0517338e6c4a31a2addafc06d4f3a3", [
       [ "OutputType::S", "d2/d70/group___recorder.html#gga4e0517338e6c4a31a2addafc06d4f3a3a5dbc98dcc983a70728bd082d1a47546e", null ],

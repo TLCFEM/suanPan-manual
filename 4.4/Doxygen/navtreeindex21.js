@@ -1,5 +1,12 @@
 var NAVTREEINDEX21 =
 {
+"d9/d76/class_sparse_mat_super_l_u.html":[2,11,28],
+"d9/d76/class_sparse_mat_super_l_u.html#a7645782857999991e65bf4b8c2af437c":[2,11,28,6],
+"d9/d76/class_sparse_mat_super_l_u.html#a87c596f96c531db5dcfc59767fba9643":[2,11,28,2],
+"d9/d76/class_sparse_mat_super_l_u.html#aa656ccc98bb5b33719485e192501e15a":[2,11,28,7],
+"d9/d76/class_sparse_mat_super_l_u.html#adc7d935699e9c97324881466cc3dfaf2":[2,11,28,5],
+"d9/d7b/_particle_collision_8cpp.html":[6,0,1,21],
+"d9/d7c/_maxwell_8cpp.html":[6,0,9,0,4,6],
 "d9/d80/_kelvin_8h.html":[6,0,9,0,4,5],
 "d9/d80/_kelvin_8h_source.html":[6,0,9,0,4,5],
 "d9/d80/_section_n_m2_d_8h.html":[6,0,13,3,19],
@@ -242,12 +249,5 @@ var NAVTREEINDEX21 =
 "d9/df2/group___domain.html#ga6c883a3b03c0ef927527857ab0d0056d":[2,8,27],
 "d9/df2/group___domain.html#ga6fc5267c83ae59d7692b920cac34f9df":[2,8,81],
 "d9/df2/group___domain.html#ga702f4ab6040de98cc0cc401547e71d44":[2,8,75],
-"d9/df2/group___domain.html#ga714c2f17c882e47a55baa026f8181cb5":[2,8,60],
-"d9/df2/group___domain.html#ga740b5730497e948b0fa7d0fcfcda7178":[2,8,103],
-"d9/df2/group___domain.html#ga7bfcc96a0c37e9a615657b0e25d36ba2":[2,8,56],
-"d9/df2/group___domain.html#ga7f2b4b0af9f82a2891758a361565621a":[2,8,21],
-"d9/df2/group___domain.html#ga81d481d690c3bd60dba4f4c7cdc7ab46":[2,8,95],
-"d9/df2/group___domain.html#ga81e65e59906a407ed2fdd0ed8b8a2900":[2,8,69],
-"d9/df2/group___domain.html#ga81f5ae1e913a8a77330ed76d9a560b6d":[2,8,106],
-"d9/df2/group___domain.html#ga8251997c7d7dea117d7ddf055b6029b7":[2,8,39]
+"d9/df2/group___domain.html#ga714c2f17c882e47a55baa026f8181cb5":[2,8,60]
 };

@@ -17,6 +17,7 @@ var suan_pan_8h =
     [ "suanpan_warning", "da/d46/group___utility.html#ga98b8fc049aeb3dc50098fc33bb498947", null ],
     [ "allreduce", "da/d46/group___utility.html#ga019503933c9603593e6c755fdb61b80e", null ],
     [ "suanpan::append_to", "d6/d9c/namespacesuanpan.html#aaed60e8e7dca40f9fc361980c0a7e06d", null ],
+    [ "barrier", "da/d46/group___utility.html#gadf7af4310553ab5974c9292a34680ce7", null ],
     [ "bcast_from_root", "da/d46/group___utility.html#gadd185ae82429bb251b224efd19bfd11e", null ],
     [ "suanpan::debug", "d6/d9c/namespacesuanpan.html#a6669c5d0bfd4ac0e93b6620520482ea9", null ],
     [ "suanpan::error", "d6/d9c/namespacesuanpan.html#a6364aee09d05c5aea905aa0df10bf22a", null ],

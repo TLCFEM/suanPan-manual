@@ -1,5 +1,9 @@
 var NAVTREEINDEX34 =
 {
+"de/d71/class_band_mat_spike.html#ac803e470f2684badbff23891804a105b":[2,11,11,2],
+"de/d71/class_band_mat_spike.html#af0db1c82980eac24a78f96c64cdd3a45":[2,11,11,11],
+"de/d71/class_band_mat_spike.html#afd895fe75ed7cf74fe6e605c32423afd":[2,11,11,1],
+"de/d7f/_node_group_8h.html":[6,0,5,0,11],
 "de/d7f/_node_group_8h_source.html":[6,0,5,0,11],
 "de/d81/_e_b31_o_s_8cpp.html":[6,0,6,0,12],
 "de/d82/_exp_j2_8h.html":[6,0,9,2,8,16],
@@ -245,9 +249,5 @@ var NAVTREEINDEX34 =
 "de/db5/group___material.html":[2,15],
 "de/db5/group___material.html#ga064ffd0d316aad86c90d5e2c49be1390":[2,15,19],
 "de/db5/group___material.html#ga80f3071508c2e5d5a97a113a1050cf6a":[2,15,14],
-"de/db5/group___material.html#ga9cb67a98266a51708d20674ae5ee071e":[2,15,15],
-"de/db5/group___material.html#gaa21d290305b112c1288671b0139ddd8f":[2,15,17],
-"de/db5/group___material.html#gab64cf36e331cfb4f1d2ebc9803ae725c":[2,15,18],
-"de/db5/group___material.html#gafbf12274aeca22ceeccecf524e311e35":[2,15,16],
-"de/db5/group___material.html#ggaa21d290305b112c1288671b0139ddd8fa0e3e06c992d1ead056a6861bb46b28a8":[2,15,17,0]
+"de/db5/group___material.html#ga9cb67a98266a51708d20674ae5ee071e":[2,15,15]
 };

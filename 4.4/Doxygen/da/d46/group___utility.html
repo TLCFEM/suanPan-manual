@@ -249,6 +249,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga019503933c9603593e6c755fdb61b80e template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga019503933c9603593e6c755fdb61b80e">allreduce</a> (T &amp;&amp;object)</td></tr>
 <tr class="memitem:gab4c068349513555af8f0cebe9326b70e" id="r_gab4c068349513555af8f0cebe9326b70e"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:gab4c068349513555af8f0cebe9326b70e template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab4c068349513555af8f0cebe9326b70e">reduce</a> (T &amp;&amp;object)</td></tr>
+<tr class="memitem:gadf7af4310553ab5974c9292a34680ce7" id="r_gadf7af4310553ab5974c9292a34680ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadf7af4310553ab5974c9292a34680ce7">barrier</a> ()</td></tr>
 <tr class="memitem:ga1dedfe8914d601833d703818541d3b29" id="r_ga1dedfe8914d601833d703818541d3b29"><td class="memTemplParams" colspan="2">template&lt;std::invocable F&gt; </td></tr>
 <tr class="memitem:ga1dedfe8914d601833d703818541d3b29 template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1dedfe8914d601833d703818541d3b29">suanpan_assert</a> (F &amp;&amp;handler)</td></tr>
 <tr class="memitem:gaf8d2165909a5b05cf91dce632ce172a4" id="r_gaf8d2165909a5b05cf91dce632ce172a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf8d2165909a5b05cf91dce632ce172a4">argument_parser</a> (int, char **)</td></tr>
@@ -698,7 +699,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="../../d6/d9c/namespacesuanpan.html#a6669c5d0bfd4ac0e93b6620520482ea9">suanpan::debug</a>(__FILE__, __LINE__, ##__VA_ARGS__)</div>
-<div class="ttc" id="anamespacesuanpan_html_a6669c5d0bfd4ac0e93b6620520482ea9"><div class="ttname"><a href="../../d6/d9c/namespacesuanpan.html#a6669c5d0bfd4ac0e93b6620520482ea9">suanpan::debug</a></div><div class="ttdeci">void debug(const std::string_view file_name, const int line, const std::string_view format_str, const T &amp;... args)</div><div class="ttdef"><b>Definition</b> suanPan.h:275</div></div>
+<div class="ttc" id="anamespacesuanpan_html_a6669c5d0bfd4ac0e93b6620520482ea9"><div class="ttname"><a href="../../d6/d9c/namespacesuanpan.html#a6669c5d0bfd4ac0e93b6620520482ea9">suanpan::debug</a></div><div class="ttdeci">void debug(const std::string_view file_name, const int line, const std::string_view format_str, const T &amp;... args)</div><div class="ttdef"><b>Definition</b> suanPan.h:281</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -717,7 +718,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="../../d6/d9c/namespacesuanpan.html#a6364aee09d05c5aea905aa0df10bf22a">suanpan::error</a>(__FILE__, __LINE__, ##__VA_ARGS__)</div>
-<div class="ttc" id="anamespacesuanpan_html_a6364aee09d05c5aea905aa0df10bf22a"><div class="ttname"><a href="../../d6/d9c/namespacesuanpan.html#a6364aee09d05c5aea905aa0df10bf22a">suanpan::error</a></div><div class="ttdeci">void error(const std::string_view file_name, const int line, const std::string_view format_str, const T &amp;... args)</div><div class="ttdef"><b>Definition</b> suanPan.h:290</div></div>
+<div class="ttc" id="anamespacesuanpan_html_a6364aee09d05c5aea905aa0df10bf22a"><div class="ttname"><a href="../../d6/d9c/namespacesuanpan.html#a6364aee09d05c5aea905aa0df10bf22a">suanpan::error</a></div><div class="ttdeci">void error(const std::string_view file_name, const int line, const std::string_view format_str, const T &amp;... args)</div><div class="ttdef"><b>Definition</b> suanPan.h:296</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -764,7 +765,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="../../d6/d9c/namespacesuanpan.html#ae62c6ad4d8b58b85a2a8ccb803b4be17">suanpan::fatal</a>(__FILE__, __LINE__, ##__VA_ARGS__)</div>
-<div class="ttc" id="anamespacesuanpan_html_ae62c6ad4d8b58b85a2a8ccb803b4be17"><div class="ttname"><a href="../../d6/d9c/namespacesuanpan.html#ae62c6ad4d8b58b85a2a8ccb803b4be17">suanpan::fatal</a></div><div class="ttdeci">void fatal(const std::string_view file_name, const int line, const std::string_view format_str, const T &amp;... args)</div><div class="ttdef"><b>Definition</b> suanPan.h:298</div></div>
+<div class="ttc" id="anamespacesuanpan_html_ae62c6ad4d8b58b85a2a8ccb803b4be17"><div class="ttname"><a href="../../d6/d9c/namespacesuanpan.html#ae62c6ad4d8b58b85a2a8ccb803b4be17">suanpan::fatal</a></div><div class="ttdeci">void fatal(const std::string_view file_name, const int line, const std::string_view format_str, const T &amp;... args)</div><div class="ttdef"><b>Definition</b> suanPan.h:304</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -853,7 +854,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="../../d6/d9c/namespacesuanpan.html#a81628ba3831cd58f23415a0e3ab40fb1">suanpan::warning</a>(__FILE__, __LINE__, ##__VA_ARGS__)</div>
-<div class="ttc" id="anamespacesuanpan_html_a81628ba3831cd58f23415a0e3ab40fb1"><div class="ttname"><a href="../../d6/d9c/namespacesuanpan.html#a81628ba3831cd58f23415a0e3ab40fb1">suanpan::warning</a></div><div class="ttdeci">void warning(const std::string_view file_name, const int line, const std::string_view format_str, const T &amp;... args)</div><div class="ttdef"><b>Definition</b> suanPan.h:282</div></div>
+<div class="ttc" id="anamespacesuanpan_html_a81628ba3831cd58f23415a0e3ab40fb1"><div class="ttname"><a href="../../d6/d9c/namespacesuanpan.html#a81628ba3831cd58f23415a0e3ab40fb1">suanpan::warning</a></div><div class="ttdeci">void warning(const std::string_view file_name, const int line, const std::string_view format_str, const T &amp;... args)</div><div class="ttdef"><b>Definition</b> suanPan.h:288</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1085,6 +1086,36 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/d46/group___utility_gaf8d2165909a5b05cf91dce632ce172a4_icgraph.svg" width="272" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="gadf7af4310553ab5974c9292a34680ce7" name="gadf7af4310553ab5974c9292a34680ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf7af4310553ab5974c9292a34680ce7">&#9670;&#160;</a></span>barrier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void barrier </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/d46/group___utility_gadf7af4310553ab5974c9292a34680ce7_icgraph.svg" width="514" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

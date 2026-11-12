@@ -537,6 +537,7 @@ var group___utility =
     [ "suanpan::mass::lumped_scale::apply", "da/d46/group___utility.html#ga27569b218d104bbbd5b5846a30ce197d", null ],
     [ "suanpan::mass::lumped_simple::apply", "da/d46/group___utility.html#ga3c2cff55c0bc8a88af6af94b9155038b", null ],
     [ "argument_parser", "da/d46/group___utility.html#gaf8d2165909a5b05cf91dce632ce172a4", null ],
+    [ "barrier", "da/d46/group___utility.html#gadf7af4310553ab5974c9292a34680ce7", null ],
     [ "bcast_from_root", "da/d46/group___utility.html#gadd185ae82429bb251b224efd19bfd11e", null ],
     [ "shape::beam", "da/d46/group___utility.html#ga8ba923a03a4c103faba603657766f7eb", null ],
     [ "blackman", "da/d46/group___utility.html#gaf14ef20d69910a148a8cdb11e6fc3d40", null ],

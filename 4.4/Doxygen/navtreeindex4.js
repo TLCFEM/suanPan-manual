@@ -212,8 +212,9 @@ var NAVTREEINDEX4 =
 "d2/da4/_linear_spring2_d_8h.html":[6,0,1,11],
 "d2/da4/_linear_spring2_d_8h_source.html":[6,0,1,11],
 "d2/da4/class_element_recorder.html":[2,16,2],
-"d2/da4/class_element_recorder.html#a14876e8bd800b43855c8dbb2bb7d267f":[2,16,2,2],
-"d2/da4/class_element_recorder.html#a970ed7776ec7dcca7647aed11900ea1e":[2,16,2,1],
+"d2/da4/class_element_recorder.html#a14876e8bd800b43855c8dbb2bb7d267f":[2,16,2,3],
+"d2/da4/class_element_recorder.html#a970ed7776ec7dcca7647aed11900ea1e":[2,16,2,2],
+"d2/da4/class_element_recorder.html#ae7458e198520096dc910e7de898629b4":[2,16,2,1],
 "d2/da4/class_element_recorder.html#aea1efd3d046681a81a3d3735b1217723":[2,16,2,0],
 "d2/da5/_c_d_p_m2_8h.html":[6,0,9,2,1,3],
 "d2/da5/_c_d_p_m2_8h_source.html":[6,0,9,2,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "d2/db0/class_c_p6.html#adfcf42bc36b9e4cc32a83de935e57c4d":[2,5,2,25,0],
 "d2/db1/_complex_hysteresis_8h.html":[6,0,9,0,3,11],
 "d2/db1/_complex_hysteresis_8h_source.html":[6,0,9,0,3,11],
-"d2/db4/_sum_recorder_8cpp.html":[6,0,10,22],
-"d2/db5/class_sparse_mat_f_g_m_r_e_s.html":[2,11,25]
+"d2/db4/_sum_recorder_8cpp.html":[6,0,10,22]
 };
