@@ -187,16 +187,15 @@ The following snippet reads all modal properties from a file written by recorder
 import h5py
 import numpy as np
 
-with h5py.File('R1-Modal.h5', 'r') as file:
-    frequency = file['Frequency'][()].ravel()
-    participation = file['U1/ParticipationFactor'][()].ravel()
-    effective_mass = file['U1/EffectiveMass'][()].ravel()
+with h5py.File("R1-Modal.h5", "r") as file:
+    frequency = file["Frequency"][()].ravel()
+    participation = file["U1/ParticipationFactor"][()].ravel()
+    effective_mass = file["U1/EffectiveMass"][()].ravel()
 
     # node 2 contributes rows [U1, U2] in a two-dimensional model
-    mode_shape = np.column_stack([
-        file[f'Mode {mode + 1}/N2'][()].ravel()[0]
-        for mode in range(frequency.size)
-    ])
+    mode_shape = np.column_stack(
+        [file[f"Mode {mode + 1}/N2"][()].ravel()[0] for mode in range(frequency.size)]
+    )
 ```
 
 For a two-dimensional model, `N2[0]` is the `U1` mode-shape component of node 2 and `N2[1]` is the `U2` component.

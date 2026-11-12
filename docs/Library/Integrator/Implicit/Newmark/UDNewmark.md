@@ -103,5 +103,5 @@ def map(m, s):
     return ms * s, s
 
 
-print(map([-2], [10])) # UDD -> UDA
+print(map([-2], [10]))  # UDD -> UDA
 ```

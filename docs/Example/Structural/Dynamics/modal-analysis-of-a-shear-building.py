@@ -110,9 +110,9 @@ def read_force_data():
         for mode in range(n_mode):
             base_force[mode] = file[f"Mode {mode + 1}/Nodes/N1"][()].ravel()[0]
             for floor, node in enumerate(range(2, 2 + N_FLOOR)):
-                force[floor, mode] = file[
-                    f"Mode {mode + 1}/Nodes/N{node}"
-                ][()].ravel()[0]
+                force[floor, mode] = file[f"Mode {mode + 1}/Nodes/N{node}"][()].ravel()[
+                    0
+                ]
 
         # A Spring01 element stores [U1, U2] of each of its two nodes.  Its
         # force vector is therefore [f, 0, -f, 0] for a spring force f.
@@ -234,9 +234,7 @@ def main():
     shape_full = np.vstack([np.zeros((1, N_FLOOR)), shape])
     force_full = np.vstack([base_force.reshape(1, -1), force])
     force_exact = full_stiffness() @ shape_full
-    force_error = np.max(np.abs(force_full - force_exact)) / np.max(
-        np.abs(force_exact)
-    )
+    force_error = np.max(np.abs(force_full - force_exact)) / np.max(np.abs(force_exact))
 
     # Each Spring01 element connects two adjacent nodes.  Its element force is
     # k * (phi_i - phi_j) * [1, 0, -1, 0] in its local DoF order [iU1, iU2, jU1,
@@ -248,9 +246,9 @@ def main():
             element_force_exact[element, :, mode] = (
                 STOREY_STIFFNESS * delta * np.array([1.0, 0.0, -1.0, 0.0])
             )
-    element_force_error = np.max(
-        np.abs(element_force - element_force_exact)
-    ) / np.max(np.abs(element_force_exact))
+    element_force_error = np.max(np.abs(element_force - element_force_exact)) / np.max(
+        np.abs(element_force_exact)
+    )
 
     # eigenvectors are only defined up to a sign
     sign_error = 0.0

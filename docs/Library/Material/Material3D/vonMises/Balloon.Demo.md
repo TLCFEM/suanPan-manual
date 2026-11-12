@@ -144,8 +144,8 @@ The following example compares the non-degrading and a degrading cases.
 ```python
 for rate in (0, 0.4):
     with AutoSwitch(
-            model=model.format(
-                material=rf"""material Balloon1D 1 \
+        model=model.format(
+            material=rf"""material Balloon1D 1 \
 1 1E2 10 \
 1E1 0 -1E1 {rate} \ ! u
 1 1e-8 0 0 \ ! hfm
@@ -153,9 +153,9 @@ for rate in (0, 0.4):
 0 0 0 0 \ ! ham
 0 0 0 0 \ ! hac
 0 ! density""",
-                amplitude="t<1?1-cos(2pi*t):t<2?1.5-1.5*cos(2pi*t):t<3?2-2cos(2pi*t):t<4?2.5-2.5cos(2pi*t):3-3cos(2pi*t)",
-                duration=4,
-            )
+            amplitude="t<1?1-cos(2pi*t):t<2?1.5-1.5*cos(2pi*t):t<3?2-2cos(2pi*t):t<4?2.5-2.5cos(2pi*t):3-3cos(2pi*t)",
+            duration=4,
+        )
     ):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
@@ -182,8 +182,8 @@ Note that this type of exponential saturation (of isotropic hardening) is rarely
 ```python
 for rate in (0, 2):
     with AutoSwitch(
-            model=model.format(
-                material=rf"""material Balloon1D 1 \
+        model=model.format(
+            material=rf"""material Balloon1D 1 \
 1 1E2 10 \
 1E2 0 0 0 \ ! u
 1 1e-2 .5 {rate} \ ! hfm
@@ -191,9 +191,9 @@ for rate in (0, 2):
 0 0 0 0 \ ! ham
 0 0 0 0 \ ! hac
 0 ! density""",
-                amplitude="2-2cos(2pi*t)",
-                duration=1,
-            )
+            amplitude="2-2cos(2pi*t)",
+            duration=1,
+        )
     ):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
@@ -227,8 +227,8 @@ The following example presents three cases:
 ```python
 for saturation, rate in ((0, 0), (0.05, 0), (1, 5), (2, 5)):
     with AutoSwitch(
-            model=model.format(
-                material=rf"""material Balloon1D 1 \
+        model=model.format(
+            material=rf"""material Balloon1D 1 \
 1 1E2 10 \
 1E2 0 0 0 \ ! u
 1 1e-8 0 0 \ ! hfm
@@ -237,9 +237,9 @@ for saturation, rate in ((0, 0), (0.05, 0), (1, 5), (2, 5)):
 0 0 0 0 \ ! hac
 0 \ ! density
 -na {saturation} {rate}""",
-                amplitude="2-2cos(2pi*t)",
-                duration=1,
-            )
+            amplitude="2-2cos(2pi*t)",
+            duration=1,
+        )
     ):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
@@ -279,8 +279,8 @@ The following example adds a linear component to $a_m$.
 ```python
 for linear in (0, 2e-2):
     with AutoSwitch(
-            model=model.format(
-                material=rf"""material Balloon1D 1 \
+        model=model.format(
+            material=rf"""material Balloon1D 1 \
 1 1E2 10 \
 1E2 0 0 0 \ ! u
 1 1e-8 0 0 \ ! hfm
@@ -289,9 +289,9 @@ for linear in (0, 2e-2):
 0 0 0 0 \ ! hac
 0 \ ! density
 -na 1 5""",
-                amplitude="2-2cos(2pi*t)",
-                duration=1,
-            )
+            amplitude="2-2cos(2pi*t)",
+            duration=1,
+        )
     ):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
@@ -316,12 +316,12 @@ This will allow early re-yielding when reversely loaded.
 
 ```python
 for saturation, rate in (
-        (0, 5e-1),
-        (0.8, 5e-1),
+    (0, 5e-1),
+    (0.8, 5e-1),
 ):
     with AutoSwitch(
-            model=model.format(
-                material=rf"""material Balloon1D 1 \
+        model=model.format(
+            material=rf"""material Balloon1D 1 \
 1 1E2 10 \
 5E-1 0 0 0 \ ! u
 1 1e-8 0 0 \ ! hfm
@@ -330,9 +330,9 @@ for saturation, rate in (
 0 0 0 0 \ ! hac
 0 \ ! density
 -nd {saturation} {rate}""",
-                amplitude="t<1?1-cos(2pi*t):t<2?1.5-1.5*cos(2pi*t):t<3?2-2cos(2pi*t):t<4?2.5-2.5cos(2pi*t):3-3cos(2pi*t)",
-                duration=4,
-            )
+            amplitude="t<1?1-cos(2pi*t):t<2?1.5-1.5*cos(2pi*t):t<3?2-2cos(2pi*t):t<4?2.5-2.5cos(2pi*t):3-3cos(2pi*t)",
+            duration=4,
+        )
     ):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
@@ -360,8 +360,8 @@ The following example shows the comparisons among memorising 1, 2 and 5 most rec
 ```python
 for memory in (1, 2, 5):
     with AutoSwitch(
-            model=model.format(
-                material=rf"""material Balloon1D 1 \
+        model=model.format(
+            material=rf"""material Balloon1D 1 \
     1 1E2 {memory} \
     1e1 0 0 0 \ ! u
     1 4e-2 0 0 \ ! hfm
@@ -369,9 +369,9 @@ for memory in (1, 2, 5):
     0 0 0 0 \ ! ham
     0 0 0 0 \ ! hac
     0 ! density""",
-                amplitude="sin(2pi*t)",
-                duration=20,
-            )
+            amplitude="sin(2pi*t)",
+            duration=20,
+        )
     ):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
@@ -407,8 +407,8 @@ This mechanism can be used to simulate cyclic hardening/softening by defining a 
 ```python
 for rate in (1e-1, 5e-2):
     with AutoSwitch(
-            model=model.format(
-                material=rf"""material Balloon1D 1 \
+        model=model.format(
+            material=rf"""material Balloon1D 1 \
 1 1E2 1 \
 1e1 0 0 0 \ ! u
 1 4e-2 0 0 \ ! hfm
@@ -417,9 +417,9 @@ for rate in (1e-1, 5e-2):
 0 0 0 0 \ ! hac
 0 \ ! density
 -fc 1 {rate}""",
-                amplitude="sin(2pi*t)",
-                duration=20,
-            )
+            amplitude="sin(2pi*t)",
+            duration=20,
+        )
     ):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
@@ -442,8 +442,8 @@ Because the bound itself is evolving with the development of plasticity, this cy
 ```python
 for rate in (1e-1, 5e-2):
     with AutoSwitch(
-            model=model.format(
-                material=rf"""material Balloon1D 1 \
+        model=model.format(
+            material=rf"""material Balloon1D 1 \
 1 1E2 1 \
 1e1 0 0 0 \ ! u
 1 4e-2 0 0 \ ! hfm
@@ -452,9 +452,9 @@ for rate in (1e-1, 5e-2):
 0 0 0 0 \ ! hac
 0 \ ! density
 -fc 1 {rate}""",
-                amplitude="t<5?sin(2pi*t):t<10?1.5sin(2pi*t):t<15?2sin(2pi*t):2.5sin(2pi*t)",
-                duration=20,
-            )
+            amplitude="t<5?sin(2pi*t):t<10?1.5sin(2pi*t):t<15?2sin(2pi*t):2.5sin(2pi*t)",
+            duration=20,
+        )
     ):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```

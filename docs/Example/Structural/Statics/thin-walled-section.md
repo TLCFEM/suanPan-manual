@@ -209,7 +209,9 @@ class Cell3DOS:
         If `omega` is None, no warping is considered.
         """
 
-        N, B, self.area, _, _ = shape_function(ele.coords, array([0, 1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0]))
+        N, B, self.area, _, _ = shape_function(
+            ele.coords, array([0, 1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0])
+        )
         self.tag = ele.el_id + 1  # el_id is zero-based
         self.y, self.z = ele.coords[:, :3].mean(axis=1)
         self.omega = omega.dot(N) if omega is not None else 0
@@ -252,7 +254,6 @@ def to_file(cells, file_name):
 
         f.write(f"section Fibre3DOS {1 + len(cells)} ")
         f.write(" ".join([str(cell.tag) for cell in cells]) + "\n")
-
 ```
 
 Now it is possible to pass in a geometry, and call the export function to generate cell data.
@@ -360,14 +361,16 @@ holes = []
 control_points = [[y_offset, z_offset]]
 geometry = Geometry.from_points(points, facets, control_points)
 
-geometry.create_mesh(mesh_sizes=.2)
+geometry.create_mesh(mesh_sizes=0.2)
 geometry.plot_geometry()
 
 cells = to_cell3dos(geometry, no_warping=False)
 
 to_file(cells, "w36x330.sp")
 
-print(f'torsional constant = {sum(f.area * ((f.pz + f.y) * f.y - (f.py - f.z) * f.z) for f in cells)}')
+print(
+    f"torsional constant = {sum(f.area * ((f.pz + f.y) * f.y - (f.py - f.z) * f.z) for f in cells)}"
+)
 ```
 
 
@@ -457,7 +460,7 @@ import h5py
 with h5py.File("R1-RF.h5", "r") as f:
     data = f["/R1-RF/R1-RF2"]
     print(data[:, [0, 4]])
-    plt.plot(data[:, 0] * 1E-2, data[:, 4])
+    plt.plot(data[:, 0] * 1e-2, data[:, 4])
     plt.xlabel("rotation")
     plt.ylabel("torque")
     plt.tight_layout()
@@ -504,12 +507,7 @@ points = [
     [-b / 2, d / 2],
 ]
 
-facets = [
-    [0, 1],
-    [1, 2],
-    [2, 3],
-    [3, 0]
-]
+facets = [[0, 1], [1, 2], [2, 3], [3, 0]]
 
 holes = []
 control_points = [[0, 0]]
@@ -551,16 +549,16 @@ Use the following script to plot the results.
 
 
 ```python
-with h5py.File('R1-RF4.h5', 'r') as f:
-    data = f['/R1-RF4/R1-RF42']
+with h5py.File("R1-RF4.h5", "r") as f:
+    data = f["/R1-RF4/R1-RF42"]
     x = data[:, 0] * 1.4
-    plt.plot(x, data[:, 1] / 1000, label='B31OS')
-    ref = [z * .080 * 66.667 + .100 * 17.778 * z ** 3 for z in x]
-    plt.plot(x, ref, label='theoretical')
+    plt.plot(x, data[:, 1] / 1000, label="B31OS")
+    ref = [z * 0.080 * 66.667 + 0.100 * 17.778 * z**3 for z in x]
+    plt.plot(x, ref, label="theoretical")
     plt.legend()
-    plt.xlabel('rotation (rad)')
-    plt.ylabel('torque (kNm)')
-    plt.tight_layout(pad=.2)
+    plt.xlabel("rotation (rad)")
+    plt.ylabel("torque (kNm)")
+    plt.tight_layout(pad=0.2)
     plt.show()
 ```
 

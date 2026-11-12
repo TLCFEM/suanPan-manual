@@ -69,26 +69,26 @@ from plugins import ErrorMap
 # https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
 
 young_modulus = 200
-yield_stress = .4
+yield_stress = 0.4
 
 with ErrorMap(
-        fr'''
+    rf"""
 material Balloon 1 \
 {young_modulus} .2 1e2 2 \
 4E3 0 -3.6E3 5e2 \ ! u
-{yield_stress} {.02 * young_modulus} 0 0 \ ! hfm
+{yield_stress} {0.02 * young_modulus} 0 0 \ ! hfm
 0 0 .1 2e2 \ ! hfc
-{.2 * yield_stress} {.02 * young_modulus} 0 0 \ ! ham
-0 0 {.1 * yield_stress} 10 \ ! hac
+{0.2 * yield_stress} {0.02 * young_modulus} 0 0 \ ! ham
+0 0 {0.1 * yield_stress} 10 \ ! hac
 0 \ ! density
 -fc 1. 5E0 \ ! fc
 -na 1. 1E2 \ ! na
 -na 90. 0 \ ! na
 -nd .8 1E2 ! nd
-''',
-        ref_strain=yield_stress / young_modulus,
-        ref_stress=yield_stress,
-        contour_samples=30,
+""",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+    contour_samples=30,
 ) as error_map:
     error_map.contour("balloon.uniaxial", center=(-4, 0), size=5, type={"rel", "abs"})
     error_map.contour("balloon.biaxial", center=(-4, -4), size=5, type={"rel", "abs"})

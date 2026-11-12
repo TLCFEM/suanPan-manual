@@ -55,12 +55,12 @@ import json
 
 import numpy as np
 
-with open('process-ground-motion.json', 'r') as f:
+with open("process-ground-motion.json", "r") as f:
     record = json.load(f)
 
-waveform = np.array(record['raw_data'], dtype=float)
+waveform = np.array(record["raw_data"], dtype=float)
 waveform /= max(abs(waveform))
-dt = record['time_interval']
+dt = record["time_interval"]
 duration = dt * len(waveform)
 ```
 
@@ -73,8 +73,8 @@ import matplotlib.pyplot as plt
 
 def plot_waveform(_dt, _waveform):
     plt.plot(np.arange(0, _dt * len(_waveform), _dt), _waveform)
-    plt.xlabel('Time [s]')
-    plt.ylabel('Acceleration')
+    plt.xlabel("Time [s]")
+    plt.ylabel("Acceleration")
     plt.grid(True)
 
 
@@ -101,9 +101,9 @@ def plot_freq(_dt, _waveform):
     fft_values = 2 * np.abs(rfft(_waveform)) / n
 
     plt.plot(frequencies, fft_values)
-    plt.xlabel('Frequency [Hz]')
-    plt.ylabel('Amplitude')
-    plt.yscale('log')
+    plt.xlabel("Frequency [Hz]")
+    plt.ylabel("Amplitude")
+    plt.yscale("log")
     plt.grid(True)
 
 
@@ -169,14 +169,25 @@ What acceleration would such a displacement produce if the Newmark method is use
 
 
 ```python
-def newmark(displacement, interval, gamma=.5, beta=.25):
+def newmark(displacement, interval, gamma=0.5, beta=0.25):
     acceleration: np.ndarray = np.zeros_like(displacement)
     velocity: np.ndarray = np.zeros_like(displacement)
     for i in range(1, len(displacement)):
-        acceleration[i] = (displacement[i] - displacement[i - 1] - interval * velocity[i - 1] - (
-                0.5 - beta) * interval ** 2 * acceleration[i - 1]) / beta / interval ** 2
-        velocity[i] = velocity[i - 1] + (1.0 - gamma) * interval * acceleration[i - 1] + gamma * interval * \
-                      acceleration[i]
+        acceleration[i] = (
+            (
+                displacement[i]
+                - displacement[i - 1]
+                - interval * velocity[i - 1]
+                - (0.5 - beta) * interval**2 * acceleration[i - 1]
+            )
+            / beta
+            / interval**2
+        )
+        velocity[i] = (
+            velocity[i - 1]
+            + (1.0 - gamma) * interval * acceleration[i - 1]
+            + gamma * interval * acceleration[i]
+        )
     return acceleration
 
 
@@ -184,7 +195,7 @@ acc = newmark(disp, dt)
 
 plot_freq(dt, waveform)
 plot_freq(dt, acc)
-plt.legend(['Original', 'Trap -> Newmark'])
+plt.legend(["Original", "Trap -> Newmark"])
 pass
 ```
 
@@ -206,12 +217,14 @@ from scipy.integrate import cumulative_simpson
 
 
 def double_convert(_dt, _waveform):
-    return newmark(cumulative_simpson(cumulative_simpson(_waveform, dx=_dt), dx=_dt), _dt)
+    return newmark(
+        cumulative_simpson(cumulative_simpson(_waveform, dx=_dt), dx=_dt), _dt
+    )
 
 
 plot_freq(interp_dt, interp_waveform)
 plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
-plt.legend(['Original', 'Trap -> Newmark'])
+plt.legend(["Original", "Trap -> Newmark"])
 pass
 ```
 
@@ -229,7 +242,7 @@ Let's choose a different upsampling rate.
 interp_dt, interp_waveform = upsample(2)
 plot_freq(interp_dt, interp_waveform)
 plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
-plt.legend(['Original', 'Trap -> Newmark'])
+plt.legend(["Original", "Trap -> Newmark"])
 pass
 ```
 

@@ -32,8 +32,12 @@ with ErrorMap(
     ref_stress=yield_stress,
     contour_samples=30,
 ) as error_map:
-    error_map.contour("bilinear.hoffman.uniaxial", center=(-3, 0), size=2, type={"rel", "abs"})
-    error_map.contour("bilinear.hoffman.biaxial", center=(-3, -3), size=2, type={"rel", "abs"})
+    error_map.contour(
+        "bilinear.hoffman.uniaxial", center=(-3, 0), size=2, type={"rel", "abs"}
+    )
+    error_map.contour(
+        "bilinear.hoffman.biaxial", center=(-3, -3), size=2, type={"rel", "abs"}
+    )
 ```
 
 ![absolute error uniaxial](bilinear.hoffman.uniaxial.abs.error.svg)

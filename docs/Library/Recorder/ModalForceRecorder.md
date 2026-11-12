@@ -185,12 +185,12 @@ The following snippet reads the forces of the first mode.
 import h5py
 import numpy as np
 
-with h5py.File('R1-ModalForce.h5', 'r') as file:
+with h5py.File("R1-ModalForce.h5", "r") as file:
     # node 2 in a two-dimensional model stores [U1, U2]
-    nodal_force = file['Mode 1/Nodes/N2'][()].ravel()
+    nodal_force = file["Mode 1/Nodes/N2"][()].ravel()
 
     # element 1 stores its nodal DoFs one node after another
-    element_force = file['Mode 1/Elements/E1'][()].ravel()
+    element_force = file["Mode 1/Elements/E1"][()].ravel()
 ```
 
 For all modes, loop over `file[f'Mode {mode + 1}/Nodes/N{tag}']` and `file[f'Mode {mode + 1}/Elements/E{tag}']`.

@@ -188,28 +188,34 @@ import numpy as np
 
 N_FLOOR = 10
 
-with h5py.File('R1-Modal.h5', 'r') as file:
-    frequency = file['Frequency'][()].ravel()
-    participation = file['U1/ParticipationFactor'][()].ravel()
-    effective_mass = file['U1/EffectiveMass'][()].ravel()
+with h5py.File("R1-Modal.h5", "r") as file:
+    frequency = file["Frequency"][()].ravel()
+    participation = file["U1/ParticipationFactor"][()].ravel()
+    effective_mass = file["U1/EffectiveMass"][()].ravel()
 
     shape = np.zeros((N_FLOOR, frequency.size))
     for mode in range(frequency.size):
         for floor, node in enumerate(range(2, 2 + N_FLOOR)):
-            shape[floor, mode] = file[f'Mode {mode + 1}/N{node}'][()].ravel()[0]
+            shape[floor, mode] = file[f"Mode {mode + 1}/N{node}"][()].ravel()[0]
 
-with h5py.File('R2-ModalForce.h5', 'r') as file:
-    base_force = np.array([
-        file[f'Mode {mode + 1}/Nodes/N1'][()].ravel()[0]
-        for mode in range(frequency.size)
-    ])
-    force = np.column_stack([
-        np.concatenate([
-            file[f'Mode {mode + 1}/Nodes/N{node}'][()].ravel()[:1]
-            for node in range(2, 2 + N_FLOOR)
-        ])
-        for mode in range(frequency.size)
-    ])
+with h5py.File("R2-ModalForce.h5", "r") as file:
+    base_force = np.array(
+        [
+            file[f"Mode {mode + 1}/Nodes/N1"][()].ravel()[0]
+            for mode in range(frequency.size)
+        ]
+    )
+    force = np.column_stack(
+        [
+            np.concatenate(
+                [
+                    file[f"Mode {mode + 1}/Nodes/N{node}"][()].ravel()[:1]
+                    for node in range(2, 2 + N_FLOOR)
+                ]
+            )
+            for mode in range(frequency.size)
+        ]
+    )
 ```
 
 The first floor is node 2 and the roof is node 11, so the loop over `range(2, 12)` maps the nodal datasets to the ten floors.
@@ -357,7 +363,7 @@ The script computes the response spectrum of the supplied record for each mode a
 modal_peak = shape * (participation * spectral_displacement)
 
 srss = np.sqrt(np.sum(modal_peak**2, axis=1))
-cqc = np.sqrt(np.einsum('fm,mn,fn->f', modal_peak, rho, modal_peak))
+cqc = np.sqrt(np.einsum("fm,mn,fn->f", modal_peak, rho, modal_peak))
 ```
 
 Here `modal_peak` has one row per floor and one column per mode.

@@ -119,14 +119,14 @@ We can now run `rha.sp` and `sdof.sp` to obtain two sets of results.
 import os
 from shutil import which
 
-if os.name == 'nt':
-    exe_name = 'suanPan.exe'
+if os.name == "nt":
+    exe_name = "suanPan.exe"
 else:
-    exe_name = 'suanpan'
+    exe_name = "suanpan"
 
 if which(exe_name):
-    os.system(f'{exe_name} -np -f rha.sp')
-    os.system(f'{exe_name} -np -f sdof.sp')
+    os.system(f"{exe_name} -np -f rha.sp")
+    os.system(f"{exe_name} -np -f sdof.sp")
 ```
 
 Now let's try to plot the results.
@@ -135,26 +135,29 @@ Now let's try to plot the results.
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open('EZ_sdof_response', 'r') as f:
+with open("EZ_sdof_response", "r") as f:
     sdof = np.loadtxt(f)
-with open('R1-U2.txt', 'r') as f:
+with open("R1-U2.txt", "r") as f:
     displacement = np.loadtxt(f)
-with open('R2-V2.txt', 'r') as f:
+with open("R2-V2.txt", "r") as f:
     velocity = np.loadtxt(f)
-with open('R3-A2.txt', 'r') as f:
+with open("R3-A2.txt", "r") as f:
     acceleration = np.loadtxt(f)
 
 fig = plt.figure(figsize=(8, 8), dpi=300)
 ax1 = fig.add_subplot(311)
 for index, record, label in zip(
-        [1, 2, 3], [displacement, velocity, acceleration], ['Displacement', 'Velocity', 'Acceleration']):
+    [1, 2, 3],
+    [displacement, velocity, acceleration],
+    ["Displacement", "Velocity", "Acceleration"],
+):
     ax = fig.add_subplot(310 + index)
-    ax.plot(sdof[:, 0], sdof[:, index], 'r-', label='SDOF')
-    ax.plot(record[:, 0], record[:, 1], 'b-', label='RHA')
+    ax.plot(sdof[:, 0], sdof[:, index], "r-", label="SDOF")
+    ax.plot(record[:, 0], record[:, 1], "b-", label="RHA")
     ax.set_ylabel(label)
     ax.legend()
 fig.tight_layout()
-fig.savefig('time_response.png')
+fig.savefig("time_response.png")
 plt.close()
 ```
 
@@ -198,29 +201,34 @@ plotted.
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open('EZ_response_spectrum', 'r') as f:
+with open("EZ_response_spectrum", "r") as f:
     spectrum = np.loadtxt(f)
 
 fig = plt.figure(figsize=(8, 8), dpi=300)
 ax1 = fig.add_subplot(311)
-ax1.plot(spectrum[:, 0], spectrum[:, 1], 'r-', label='SD')
-ax1.set_ylabel('Displacement')
-ax1.set_xlabel('Period')
+ax1.plot(spectrum[:, 0], spectrum[:, 1], "r-", label="SD")
+ax1.set_ylabel("Displacement")
+ax1.set_xlabel("Period")
 ax1.legend()
 ax2 = fig.add_subplot(312)
-ax2.plot(spectrum[:, 0], spectrum[:, 2], 'r-', label='SV')
-ax2.plot(spectrum[:, 0], 2 * np.pi * spectrum[:, 1] / spectrum[:, 0], 'b-', label='PSV')
-ax2.set_ylabel('Velocity')
-ax2.set_xlabel('Period')
+ax2.plot(spectrum[:, 0], spectrum[:, 2], "r-", label="SV")
+ax2.plot(spectrum[:, 0], 2 * np.pi * spectrum[:, 1] / spectrum[:, 0], "b-", label="PSV")
+ax2.set_ylabel("Velocity")
+ax2.set_xlabel("Period")
 ax2.legend()
 ax3 = fig.add_subplot(313)
-ax3.plot(spectrum[:, 0], spectrum[:, 3], 'r-', label='SA')
-ax3.plot(spectrum[:, 0], 2 * np.pi * 2 * np.pi * spectrum[:, 1] / spectrum[:, 0] / spectrum[:, 0], 'b-', label='PSA')
-ax3.set_ylabel('Acceleration')
-ax3.set_xlabel('Period')
+ax3.plot(spectrum[:, 0], spectrum[:, 3], "r-", label="SA")
+ax3.plot(
+    spectrum[:, 0],
+    2 * np.pi * 2 * np.pi * spectrum[:, 1] / spectrum[:, 0] / spectrum[:, 0],
+    "b-",
+    label="PSA",
+)
+ax3.set_ylabel("Acceleration")
+ax3.set_xlabel("Period")
 ax3.legend()
 fig.tight_layout()
-fig.savefig('response_spectrum.png')
+fig.savefig("response_spectrum.png")
 plt.close()
 ```
 
@@ -237,12 +245,12 @@ interpolation.
 ```python
 import numpy as np
 
-EZ = np.loadtxt('EZ')
+EZ = np.loadtxt("EZ")
 
 time = np.arange(0, 10, 0.001)
 amplitude = np.interp(time, EZ[:, 0], EZ[:, 1])
 
-np.savetxt('EZ_refined', np.column_stack((time, amplitude)))
+np.savetxt("EZ_refined", np.column_stack((time, amplitude)))
 ```
 
 Now we can run the analysis again.

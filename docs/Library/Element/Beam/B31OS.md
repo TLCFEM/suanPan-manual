@@ -118,7 +118,7 @@ geom = Geometry.from_points(
 geom.create_mesh(mesh_sizes=2)
 geom.plot_geometry()
 
-to_fibre_section(geom, save_to='angle.sp', material_mapping={'default': 1})
+to_fibre_section(geom, save_to="angle.sp", material_mapping={"default": 1})
 
 pass
 ```
@@ -136,7 +136,7 @@ We use the following model to test.
 from matplotlib import pyplot as plt
 from h5py import File
 
-model = '''# cantilever beam with angle section
+model = """# cantilever beam with angle section
 node 1 0 0 0
 node 2 350 0 0
 node 3 700 0 0
@@ -171,32 +171,32 @@ analyze
 save recorder 1
 
 exit
-'''
+"""
 
-with open('angle.analysis.sp', 'w') as f:
+with open("angle.analysis.sp", "w") as f:
     f.write(model)
 
-executable = ['suanPan', 'suanPan.exe', 'suanpan']
+executable = ["suanPan", "suanPan.exe", "suanpan"]
 is_run = False
 
 for exe in executable:
     if shutil.which(exe):
-        run([exe, '-f', 'angle.analysis.sp'])
+        run([exe, "-f", "angle.analysis.sp"])
         is_run = True
         break
 
 if is_run:
-    with File('R1-U.h5', 'r') as f:
-        data = f['R1-U/R1-U5']
+    with File("R1-U.h5", "r") as f:
+        data = f["R1-U/R1-U5"]
         U1 = -data[:, 1]
         U2 = data[:, 2]
         U3 = -data[:, 3]
         LOAD = data[:, 0] * 60
-    plt.plot(U1, LOAD, label='|U1|')
-    plt.plot(U2, LOAD, label='|U2|')
-    plt.plot(U3, LOAD, label='|U3|')
-    plt.xlabel('displacement magnitude')
-    plt.ylabel('axial load')
+    plt.plot(U1, LOAD, label="|U1|")
+    plt.plot(U2, LOAD, label="|U2|")
+    plt.plot(U3, LOAD, label="|U3|")
+    plt.xlabel("displacement magnitude")
+    plt.ylabel("axial load")
     plt.legend()
     plt.show()
 ```
@@ -215,11 +215,11 @@ if is_run:
 ```python
 from sectionproperties.pre.library import rectangular_section
 
-geom = rectangular_section(d=30, b=.6).shift_section(-.3, -15)
-geom.create_mesh(mesh_sizes=.05)
+geom = rectangular_section(d=30, b=0.6).shift_section(-0.3, -15)
+geom.create_mesh(mesh_sizes=0.05)
 geom.plot_geometry()
 
-to_fibre_section(geom, save_to='flat.sp', material_mapping={'default': 1})
+to_fibre_section(geom, save_to="flat.sp", material_mapping={"default": 1})
 
 pass
 ```
@@ -234,7 +234,7 @@ Here we use the arc-length algorithm to solve the problem.
 
 
 ```python
-model = '''# cantilever beam with angle section
+model = """# cantilever beam with angle section
 node 1 0 0 0
 node 2 60 0 0
 node 3 120 0 0
@@ -271,27 +271,27 @@ analyze
 save recorder 1
 
 exit
-'''
+"""
 
-with open('flat.analysis.sp', 'w') as f:
+with open("flat.analysis.sp", "w") as f:
     f.write(model)
 
 is_run = False
 
 for exe in executable:
     if shutil.which(exe):
-        run([exe, '-f', 'flat.analysis.sp'])
+        run([exe, "-f", "flat.analysis.sp"])
         is_run = True
         break
 
 if is_run:
-    with File('R1-U.h5', 'r') as f:
-        data = f['R1-U/R1-U5']
+    with File("R1-U.h5", "r") as f:
+        data = f["R1-U/R1-U5"]
         U2 = data[:, 2]
-        LOAD = data[:, 0] * .001  # reference load
-    plt.plot(U2, LOAD, label='U2')
-    plt.xlabel('displacement magnitude')
-    plt.ylabel('transverse load')
+        LOAD = data[:, 0] * 0.001  # reference load
+    plt.plot(U2, LOAD, label="U2")
+    plt.xlabel("displacement magnitude")
+    plt.ylabel("transverse load")
     plt.legend()
     plt.show()
 ```
@@ -310,7 +310,7 @@ geom = rectangular_section(d=200, b=10).shift_section(-5, -100)
 geom.create_mesh(mesh_sizes=2)
 geom.plot_geometry()
 
-to_fibre_section(geom, save_to='flat2.sp', material_mapping={'default': 1})
+to_fibre_section(geom, save_to="flat2.sp", material_mapping={"default": 1})
 
 pass
 ```
@@ -323,7 +323,7 @@ pass
 
 
 ```python
-model = '''# cantilever beam with angle section
+model = """# cantilever beam with angle section
 node 1 0 0 0
 node 2 250 0 0
 node 3 500 0 0
@@ -358,27 +358,27 @@ analyze
 save recorder 1
 
 exit
-'''
+"""
 
-with open('flat2.analysis.sp', 'w') as f:
+with open("flat2.analysis.sp", "w") as f:
     f.write(model)
 
 is_run = False
 
 for exe in executable:
     if shutil.which(exe):
-        run([exe, '-f', 'flat2.analysis.sp'])
+        run([exe, "-f", "flat2.analysis.sp"])
         is_run = True
         break
 
 if is_run:
-    with File('R1-RF.h5', 'r') as f:
-        data = f['R1-RF/R1-RF5']
+    with File("R1-RF.h5", "r") as f:
+        data = f["R1-RF/R1-RF5"]
         torque = data[:, 4]
         twist = data[:, 0] * 1.4
     plt.plot(twist, torque)
-    plt.xlabel('twist')
-    plt.ylabel('torque')
+    plt.xlabel("twist")
+    plt.ylabel("torque")
     plt.show()
 ```
 

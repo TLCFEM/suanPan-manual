@@ -102,13 +102,13 @@ young_modulus = 3e4
 yield_stress = 30
 
 with ErrorMap(
-   f"material CDPM2 1 {young_modulus} .3 6. {yield_stress} .3 .01 .85 .08 .003 2. 1E-6 5. 15E-4 5E-4",
-   ref_strain=yield_stress / young_modulus,
-   ref_stress=yield_stress,
-   contour_samples=20,
+    f"material CDPM2 1 {young_modulus} .3 6. {yield_stress} .3 .01 .85 .08 .003 2. 1E-6 5. 15E-4 5E-4",
+    ref_strain=yield_stress / young_modulus,
+    ref_stress=yield_stress,
+    contour_samples=30,
 ) as error_map:
-   error_map.contour("cdpm2.uniaxial", center=(-2, -2), size=1)
-   error_map.contour("cdpm2.biaxial", center=(-2, 0), size=1)
+    error_map.contour("cdpm2.uniaxial", center=(-2, -2), size=3)
+    error_map.contour("cdpm2.biaxial", center=(-2, 0), size=3)
 ```
 
 ![absolute error uniaxial](cdpm2.uniaxial.abs.error.svg)

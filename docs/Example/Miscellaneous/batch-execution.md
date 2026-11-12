@@ -109,8 +109,8 @@ Given that we are going to use Python, we can simply choose the first option.
 import os
 import shutil
 
-placeholder = '$groundMotionRecord'
-duration = '$duration'
+placeholder = "$groundMotionRecord"
+duration = "$duration"
 
 template_file = open("batch-execution.supan", "r")
 template_model = template_file.read()
@@ -119,7 +119,7 @@ template_model = template_file.read()
 #### Load All Record Names
 
 ```py
-records = os.listdir('NZStrongMotion')
+records = os.listdir("NZStrongMotion")
 ```
 
 #### Loop
@@ -142,14 +142,18 @@ for record in records:
     model_file = open(record + ".sp", "w")
     # write modified script to the model file
     # remember now we are in the newly created folder, the record is stored in ..\NZStrongMotion
-    model_file.write(template_model.replace(placeholder, '..\\NZStrongMotion\\' + record).replace(duration, '100'))
+    model_file.write(
+        template_model.replace(placeholder, "..\\NZStrongMotion\\" + record).replace(
+            duration, "100"
+        )
+    )
     # remember to close before running the model
     model_file.close()
     # now invoke suanPan to run the model
     # you may need to replace suanPan with the full path to the executable file if it is not added to PATH
-    os.system('suanPan -f ' + record + '.sp > log.txt')
+    os.system("suanPan -f " + record + ".sp > log.txt")
     # need to change back to parent folder
-    os.chdir('..')
+    os.chdir("..")
 ```
 
 ### Postprocessing
