@@ -1109,6 +1109,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "thread_pool", "d3/dce/classthread__pool.html", null ],
+    [ "TokenRegistry&lt; V &gt;", "d6/d2d/class_token_registry.html", null ],
     [ "triplet_form&lt; data_t, index_t &gt;", "db/d78/classtriplet__form.html", null ],
     [ "Vector2D&lt; T &gt;", "d9/d36/struct_vector2_d.html", null ],
     [ "Vector2D&lt; double &gt;", "d9/d36/struct_vector2_d.html", [

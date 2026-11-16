@@ -105,7 +105,7 @@ $(function(){initNavTree('dd/daa/_expression_parser_8cpp.html','../../',''); });
 <div class="textblock"><code>#include &quot;<a class="el" href="../../de/d94/_expression_parser_8h_source.html">ExpressionParser.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="../../dc/df2/_domain_base_8h_source.html">Domain/DomainBase.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d6/d99/_expression_8h_source.html">Toolbox/Expression.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d5/d47/utility_8h_source.html">Toolbox/utility.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d3/d95/_token_registry_8h_source.html">Toolbox/TokenRegistry.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ExpressionParser.cpp:</div>
 <div class="dyncontent">
@@ -115,8 +115,8 @@ Include dependency graph for ExpressionParser.cpp:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a05b78a362c1ca82ab87e6f81d7183182" id="r_a05b78a362c1ca82ab87e6f81d7183182"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05b78a362c1ca82ab87e6f81d7183182">check_file</a> (std::string &amp;expression)</td></tr>
-<tr class="memitem:aa577c9fe6250bfaed30885064478abb2" id="r_aa577c9fe6250bfaed30885064478abb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa577c9fe6250bfaed30885064478abb2">new_simplescalar</a> (unique_ptr&lt; <a class="el" href="../../df/d03/class_expression.html">Expression</a> &gt; &amp;return_obj, std::istringstream &amp;command)</td></tr>
-<tr class="memitem:a940bedcb456d004bd098eb3fc1763f79" id="r_a940bedcb456d004bd098eb3fc1763f79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a940bedcb456d004bd098eb3fc1763f79">new_simplevector</a> (unique_ptr&lt; <a class="el" href="../../df/d03/class_expression.html">Expression</a> &gt; &amp;return_obj, std::istringstream &amp;command)</td></tr>
+<tr class="memitem:ad7282ce3608aeb004cf361c0a3773ca6" id="r_ad7282ce3608aeb004cf361c0a3773ca6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7282ce3608aeb004cf361c0a3773ca6">new_simplescalar</a> (unique_ptr&lt; <a class="el" href="../../df/d03/class_expression.html">Expression</a> &gt; &amp;return_obj, std::istringstream &amp;command, const unsigned tag)</td></tr>
+<tr class="memitem:af10d7fcf72698fde375719502d5e6a07" id="r_af10d7fcf72698fde375719502d5e6a07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af10d7fcf72698fde375719502d5e6a07">new_simplevector</a> (unique_ptr&lt; <a class="el" href="../../df/d03/class_expression.html">Expression</a> &gt; &amp;return_obj, std::istringstream &amp;command, const unsigned tag)</td></tr>
 <tr class="memitem:ae58e1b263ce33b90f2bad2f32336c7b7" id="r_ae58e1b263ce33b90f2bad2f32336c7b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae58e1b263ce33b90f2bad2f32336c7b7">create_new_expression</a> (const shared_ptr&lt; <a class="el" href="../../d4/d83/class_domain_base.html">DomainBase</a> &gt; &amp;domain, std::istringstream &amp;command)</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -163,7 +163,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_ae58e1b263ce33b90f2bad2f32336c7b7_cgraph.svg" width="594" height="167"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_ae58e1b263ce33b90f2bad2f32336c7b7_cgraph.svg" width="594" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -173,8 +173,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa577c9fe6250bfaed30885064478abb2" name="aa577c9fe6250bfaed30885064478abb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa577c9fe6250bfaed30885064478abb2">&#9670;&#160;</a></span>new_simplescalar()</h2>
+<a id="ad7282ce3608aeb004cf361c0a3773ca6" name="ad7282ce3608aeb004cf361c0a3773ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7282ce3608aeb004cf361c0a3773ca6">&#9670;&#160;</a></span>new_simplescalar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,25 +187,30 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::istringstream &amp;</td>          <td class="paramname"><span class="paramname"><em>command</em></span>&#160;)</td>
+          <td class="paramtype">std::istringstream &amp;</td>          <td class="paramname"><span class="paramname"><em>command</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned</td>          <td class="paramname"><span class="paramname"><em>tag</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_aa577c9fe6250bfaed30885064478abb2_cgraph.svg" width="336" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_ad7282ce3608aeb004cf361c0a3773ca6_cgraph.svg" width="336" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_aa577c9fe6250bfaed30885064478abb2_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_ad7282ce3608aeb004cf361c0a3773ca6_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="a940bedcb456d004bd098eb3fc1763f79" name="a940bedcb456d004bd098eb3fc1763f79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a940bedcb456d004bd098eb3fc1763f79">&#9670;&#160;</a></span>new_simplevector()</h2>
+<a id="af10d7fcf72698fde375719502d5e6a07" name="af10d7fcf72698fde375719502d5e6a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10d7fcf72698fde375719502d5e6a07">&#9670;&#160;</a></span>new_simplevector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,19 +223,24 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::istringstream &amp;</td>          <td class="paramname"><span class="paramname"><em>command</em></span>&#160;)</td>
+          <td class="paramtype">std::istringstream &amp;</td>          <td class="paramname"><span class="paramname"><em>command</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned</td>          <td class="paramname"><span class="paramname"><em>tag</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_a940bedcb456d004bd098eb3fc1763f79_cgraph.svg" width="336" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_af10d7fcf72698fde375719502d5e6a07_cgraph.svg" width="336" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_a940bedcb456d004bd098eb3fc1763f79_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/daa/_expression_parser_8cpp_af10d7fcf72698fde375719502d5e6a07_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

@@ -80,5 +80,5 @@ var group___section_2_d =
       [ "unique_copy", "d4/dce/class_t_section2_d.html#a9ab10fb1e3a29a7c34f0938e9228973f", null ]
     ] ],
     [ "Bar2D", "d8/d9b/group___section-2_d.html#ga57966aff83d325af133a7f688f42c8fc", null ],
-    [ "new_sectionexample", "d8/d9b/group___section-2_d.html#gad558b611fa36d4fb989f88ed73c2b086", null ]
+    [ "new_sectionexample", "d8/d9b/group___section-2_d.html#gae967660d6af56e4d2a518a51f840d257", null ]
 ];

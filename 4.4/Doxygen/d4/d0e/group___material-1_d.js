@@ -771,5 +771,5 @@ var group___material_1_d =
       [ "print", "d7/de2/class_uniaxial.html#abaa36a997cb84d604c5609154ff471b0", null ],
       [ "unique_copy", "d7/de2/class_uniaxial.html#a106edfcdd200c205240e601e1f06d29d", null ]
     ] ],
-    [ "new_materialexample", "d4/d0e/group___material-1_d.html#ga3102f5a6a2211e8fa603f09d7953a04f", null ]
+    [ "new_materialexample", "d4/d0e/group___material-1_d.html#gad29b85b2fda0044fedc31ee7da8e988c", null ]
 ];

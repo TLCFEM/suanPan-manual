@@ -4,8 +4,9 @@ var namespacesuanpan =
     [ "mass", "df/d90/namespacesuanpan_1_1mass.html", "df/d90/namespacesuanpan_1_1mass" ],
     [ "damping", "d1/d6c/namespacesuanpan_1_1damping.html", "d1/d6c/namespacesuanpan_1_1damping" ],
     [ "expression", "df/d5d/namespacesuanpan_1_1expression.html", [
-      [ "split", "df/d5d/namespacesuanpan_1_1expression.html#aac4a5ca698982110f6377e2010087a11", null ]
+      [ "split", "df/d5d/namespacesuanpan_1_1expression.html#ab2b8e7e8a1c28d8d745c483a90d6d8d2", null ]
     ] ],
+    [ "test", "d4/df5/namespacesuanpan_1_1test.html", "d4/df5/namespacesuanpan_1_1test" ],
     [ "graph", "d6/d9c/namespacesuanpan.html#a6c0eabb3b36b85bd7f95efb3a89cb6ea", null ],
     [ "map", "d6/d9c/namespacesuanpan.html#a6e645d5b9c2e75d2f8675a823d917235", null ],
     [ "set", "d6/d9c/namespacesuanpan.html#aee346f59668de607c359a1a9017bebbb", null ],
@@ -46,10 +47,12 @@ var namespacesuanpan =
     [ "to_lower", "d6/d9c/namespacesuanpan.html#ad83b7c122a853f3f95718f5feb9266c3", null ],
     [ "to_lower", "d6/d9c/namespacesuanpan.html#afda06016e0eeb06e74f44d10426580fb", null ],
     [ "to_lower", "d6/d9c/namespacesuanpan.html#aa2af16546eaee75622e5bdaba2f87ded", null ],
+    [ "to_lower", "d6/d9c/namespacesuanpan.html#a6076b2f27d0f30ccc2685b88d47c4edc", null ],
     [ "to_upper", "d6/d9c/namespacesuanpan.html#ab32985eac562c022907030f43e5c775a", null ],
     [ "to_upper", "d6/d9c/namespacesuanpan.html#a9234538b7468f36adc039e8987a6d836", null ],
     [ "to_upper", "d6/d9c/namespacesuanpan.html#af98622cdfe9844dba396053eb7e962ef", null ],
     [ "to_upper", "d6/d9c/namespacesuanpan.html#a3382d3364f63a62ce469242a29037a83", null ],
+    [ "to_upper", "d6/d9c/namespacesuanpan.html#a3f99ec8d69f3c3f429ba0a441148a862", null ],
     [ "translational", "d6/d9c/namespacesuanpan.html#a775d31f1abbd8dbe72826e74956b20fd", null ],
     [ "unique", "d6/d9c/namespacesuanpan.html#a5503d06b392524b4c225d9a0615db324", null ],
     [ "unique_copy", "d6/d9c/namespacesuanpan.html#a3d0bea86c9926f062be4ae72aee12738", null ],

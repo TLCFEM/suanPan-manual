@@ -51,5 +51,5 @@ var group___modifier =
       [ "Rayleigh", "d2/d7d/class_rayleigh.html#ad029b0c92ec129c51454d966d3adc8e6", null ],
       [ "update_status", "d2/d7d/class_rayleigh.html#a2be8412c436b7a65f5477d1d9e2762cc", null ]
     ] ],
-    [ "new_modifierexample", "d0/d58/group___modifier.html#gafc99d186d7df4e6b99cd2c1c6dd7fe2a", null ]
+    [ "new_modifierexample", "d0/d58/group___modifier.html#gad0f2f1a9dfcb5b8f330429d3833fa4b5", null ]
 ];

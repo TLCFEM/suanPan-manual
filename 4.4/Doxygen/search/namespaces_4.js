@@ -8,5 +8,7 @@ var searchData=
   ['suanpan_3a_3adetail_5',['detail',['../d2/dce/namespacesuanpan_1_1detail.html',1,'suanpan']]],
   ['suanpan_3a_3adetail_3a_3amagma_6',['magma',['../db/dab/namespacesuanpan_1_1detail_1_1magma.html',1,'suanpan::detail']]],
   ['suanpan_3a_3aexpression_7',['expression',['../df/d5d/namespacesuanpan_1_1expression.html',1,'suanpan']]],
-  ['suanpan_3a_3amass_8',['mass',['../df/d90/namespacesuanpan_1_1mass.html',1,'suanpan']]]
+  ['suanpan_3a_3amass_8',['mass',['../df/d90/namespacesuanpan_1_1mass.html',1,'suanpan']]],
+  ['suanpan_3a_3atest_9',['test',['../d4/df5/namespacesuanpan_1_1test.html',1,'suanpan']]],
+  ['suanpan_3a_3atest_3a_3acdpm2_10',['cdpm2',['../d3/d5f/namespacesuanpan_1_1test_1_1cdpm2.html',1,'suanpan::test']]]
 ];

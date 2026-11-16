@@ -694,6 +694,7 @@ var annotated_dup =
     [ "thread_pool", "d3/dce/classthread__pool.html", "d3/dce/classthread__pool" ],
     [ "Tie", "df/d7e/class_tie.html", "df/d7e/class_tie" ],
     [ "TimberPD", "dd/d13/class_timber_p_d.html", "dd/d13/class_timber_p_d" ],
+    [ "TokenRegistry", "d6/d2d/class_token_registry.html", "d6/d2d/class_token_registry" ],
     [ "TranslationConnector", "db/d13/class_translation_connector.html", "db/d13/class_translation_connector" ],
     [ "TranslationConnector2D", "d0/d6d/class_translation_connector2_d.html", "d0/d6d/class_translation_connector2_d" ],
     [ "TranslationConnector3D", "da/dcb/class_translation_connector3_d.html", "da/dcb/class_translation_connector3_d" ],

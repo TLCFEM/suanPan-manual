@@ -17,15 +17,15 @@ var group___utility =
       [ "~ExternalModule", "d7/d04/class_external_module.html#a31e08bfc4ef91c8c852ac206508a575e", null ],
       [ "locate_c_module", "d7/d04/class_external_module.html#a06f8e177f126c04dca65da07f5dec152", null ],
       [ "locate_cpp_module", "d7/d04/class_external_module.html#a2c73aba18f2907547d16cd6e8b76de80", null ],
-      [ "new_adapter", "d7/d04/class_external_module.html#ab92deefd7d4aa10c304adc8c8ae688d6", null ],
-      [ "new_adapter", "d7/d04/class_external_module.html#a93c1d3c71f513cf7e0b12d7e40e1fb97", null ],
-      [ "new_adapter", "d7/d04/class_external_module.html#a5e95be8a82766eee46331a6508cb0534", null ],
-      [ "new_adapter", "d7/d04/class_external_module.html#ad47bd2c2e5ab0283a619212ca997cb9a", null ],
-      [ "new_adapter", "d7/d04/class_external_module.html#a80bcdd66b2afbd3e7f9e2ae31c83393f", null ],
-      [ "new_adapter", "d7/d04/class_external_module.html#a46a4c462e405a5133139d4ded38fbd59", null ],
-      [ "new_adapter", "d7/d04/class_external_module.html#af89e381a1701e1a3a252955a068eb61d", null ],
-      [ "new_adapter", "d7/d04/class_external_module.html#abc913e1df13c659812307aa7b5f23abf", null ],
-      [ "new_object", "d7/d04/class_external_module.html#abff97f15428f6510f33d0ea748e27753", null ],
+      [ "new_adapter", "d7/d04/class_external_module.html#aef32635fd01b97440870d12f5020b2b6", null ],
+      [ "new_adapter", "d7/d04/class_external_module.html#a705094df3929f2b44643a6e6e19073ad", null ],
+      [ "new_adapter", "d7/d04/class_external_module.html#a34af7c55c0f68ae320a8db5f63a1a1c6", null ],
+      [ "new_adapter", "d7/d04/class_external_module.html#a2b9e16e080855a4f8753f74fada01249", null ],
+      [ "new_adapter", "d7/d04/class_external_module.html#ad904438c31ac671a48475aa2fb17a79b", null ],
+      [ "new_adapter", "d7/d04/class_external_module.html#a03928907584bfbfbad656240e602ef12", null ],
+      [ "new_adapter", "d7/d04/class_external_module.html#a3830e9b0e217f6238e692817f0796bff", null ],
+      [ "new_adapter", "d7/d04/class_external_module.html#afffc62795f18c707a18fdf5f72e95eb6", null ],
+      [ "new_object", "d7/d04/class_external_module.html#a45a1c6b96c2c231734bc991879cf977c", null ],
       [ "operator=", "d7/d04/class_external_module.html#a0ec2e51984f70a64b24ad4f9b8ac1df2", null ],
       [ "operator=", "d7/d04/class_external_module.html#ae48e8e759e0180fbc6898ad4e5dd6c2b", null ],
       [ "library_name", "d7/d04/class_external_module.html#ab2f7f737fffc57ad01793afd18e5b120", null ]
@@ -480,6 +480,11 @@ var group___utility =
       [ "submit", "d3/dce/classthread__pool.html#ae4f4894721617b282fc9602a413ff356", null ],
       [ "wait_for_tasks", "d3/dce/classthread__pool.html#a887cef533635b8c52834b23be3ab1c68", null ]
     ] ],
+    [ "TokenRegistry&lt; V &gt;", "d6/d2d/class_token_registry.html", [
+      [ "TokenRegistry", "d6/d2d/class_token_registry.html#a9e346b2aa5045870f1c8faafb9e66aac", null ],
+      [ "fetch", "d6/d2d/class_token_registry.html#a0f21ee19d23e10cd9f432fc4bae6086b", null ],
+      [ "size", "d6/d2d/class_token_registry.html#a83ea7eb0bb8cfa77b265fb6375400172", null ]
+    ] ],
     [ "Vector2D&lt; T &gt;", "d9/d36/struct_vector2_d.html", [
       [ "x", "d9/d36/struct_vector2_d.html#a4824c9b6a9eb9a60cb23be5e57fd061e", null ],
       [ "y", "d9/d36/struct_vector2_d.html#a8d2763f6cc88f084cb2c6ab1ef10c81d", null ]
@@ -621,6 +626,7 @@ var group___utility =
     [ "is_equal", "da/d46/group___utility.html#ga28df38886b556006c39043e3488b82de", null ],
     [ "is_equal", "da/d46/group___utility.html#ga5754283fe8d0e443533a31358ed4a94c", null ],
     [ "is_equal", "da/d46/group___utility.html#ga1905faea73401c4a50a21fc5c3dd4252", null ],
+    [ "is_equal_any", "da/d46/group___utility.html#ga15f1fb47c4bb5f9fe0b1ccd7083c6473", null ],
     [ "is_equal_any", "da/d46/group___utility.html#ga7cbcdb516877a615b0873e134177130a", null ],
     [ "is_false", "da/d46/group___utility.html#gae3c48fc37e6692e693762400b1217141", null ],
     [ "is_integer", "da/d46/group___utility.html#ga2842121868cc6968d146ee9626c76b25", null ],
