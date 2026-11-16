@@ -68,3 +68,54 @@ The bulk modulus $$B$$ is a function of $$\sigma_3$$.
 $$
 B=B_r\left(\dfrac{\sigma_3}{p_a}\right)^m.
 $$
+
+## Numerical Regularization
+
+The model is intended for compressive stress states. Two modifications keep the
+local iteration well-conditioned over a wide strain range.
+
+1. The confining-stress dependent moduli use the constant plateau for all
+   $$\sigma_3<p_a$$. There is no separate branch at $$\sigma_3=-p_a$$, which
+   would otherwise introduce a large jump in the moduli.
+2. The degradation factor is capped at a small positive residual value once
+   $$\sigma_d\ge\sigma_{d,\max}$$. Without this cap, the parabolic factor
+   increases again beyond failure, which can make the local Newton iteration
+   oscillate between two modulus branches.
+
+These modifications are required for the local iteration to converge over the
+full $$\pm2$$ reference-strain range used in the iso-error maps below.
+
+## Iso-error Map
+
+The following example iso-error maps are obtained via the following script.
+The maps are centred at the undeformed state and cover $$\pm2$$ reference
+strains in both in-plane normal components, with zero shear strain. The
+relative error is undefined at the origin because the reference stress
+vanishes there.
+
+```py
+from plugins import ErrorMap
+# note: the dependency `ErrorMap` can be found in the following link
+# https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
+
+reference_stress = 14.7
+
+with ErrorMap(
+    "material DuncanSelig 1 14.7 6000 .6 4000 .2 .7 .1 .7 .5",
+    ref_strain=reference_stress / 6000,
+    ref_stress=reference_stress,
+    contour_samples=20,
+    dimension=3,  # two-dimensional material, three in-plane components
+) as error_map:
+    error_map.contour(
+        "duncan.selig",
+        center=(0, 0),
+        size=2,
+        components=(0, 1),
+        type={"abs", "rel"},
+    )
+```
+
+![absolute error](duncan.selig.abs.error.svg)
+
+![relative error](duncan.selig.rel.error.svg)
