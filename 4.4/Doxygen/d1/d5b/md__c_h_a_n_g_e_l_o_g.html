@@ -107,6 +107,19 @@ $(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','../../',''); });
 <li>Arc-length analysis is limited on both SMP and DMP, mainly due to the lack of determinant computation.</li>
 </ol>
 <h1>version 4.3.1</h1>
+<ol type="1">
+<li>add <span class="tt"><a class="el" href="../../dd/dd7/class_modal_recorder.html" title="A ModalRecorder class.">ModalRecorder</a></span> for modal properties and <span class="tt"><a class="el" href="../../dc/d56/class_modal_force_recorder.html" title="A ModalForceRecorder class.">ModalForceRecorder</a></span> for nodal and elemental modal elastic forces <a href="https://github.com/TLCFEM/suanPan/pull/395">#395</a> <a href="https://github.com/TLCFEM/suanPan/pull/396">#396</a></li>
+<li>merge distributed <span class="tt">HDF5</span> recorder outputs into a single file and remove per-rank files after successful combination <a href="https://github.com/TLCFEM/suanPan/pull/397">#397</a></li>
+<li>(<b>breaking</b>) pass the object tag as an additional argument to C++ external module creation functions, update module signatures accordingly</li>
+<li>improve convergence and robustness of <span class="tt"><a class="el" href="../../d6/de0/class_dafalias_manzari.html" title="The DafaliasManzari class.">DafaliasManzari</a></span> and <span class="tt"><a class="el" href="../../de/d26/class_simple_sand.html" title="The SimpleSand class.">SimpleSand</a></span> models with backtracking line search, tension handling and pressure regularization <a href="https://github.com/TLCFEM/suanPan/pull/400">#400</a> <a href="https://github.com/TLCFEM/suanPan/pull/401">#401</a> <a href="https://github.com/TLCFEM/suanPan/pull/402">#402</a></li>
+<li>fix non-deviatoric plastic correction in <span class="tt"><a class="el" href="../../d2/d69/class_y_l_d0418_p.html" title="The YLD0418P class.">YLD0418P</a></span> return mapping <a href="https://github.com/TLCFEM/suanPan/pull/399">#399</a></li>
+<li>regularize <span class="tt"><a class="el" href="../../de/d0b/class_duncan_selig.html" title="A DuncanSelig material class.">DuncanSelig</a></span> moduli beyond failure to prevent local iteration oscillation</li>
+<li>fix body force matrix formulation in <span class="tt"><a class="el" href="../../d2/daf/class_s_g_c_m_q.html" title="A SGCMQ class.">SGCMQ</a></span> element</li>
+<li>stabilize return mapping by limiting the hardening increment in <span class="tt"><a class="el" href="../../dc/dfb/class_c_d_p_m2.html" title="The CDPM2 class.">CDPM2</a></span> and guarding the plastic multiplier in <span class="tt"><a class="el" href="../../d7/df3/class_nonlinear_cam_clay.html" title="The NonlinearCamClay class.">NonlinearCamClay</a></span></li>
+<li>refactor command parsers with token registries, factory functions and centralized tag extraction, with improved error handling <a href="https://github.com/TLCFEM/suanPan/pull/406">#406</a> <a href="https://github.com/TLCFEM/suanPan/pull/407">#407</a> <a href="https://github.com/TLCFEM/suanPan/pull/409">#409</a> <a href="https://github.com/TLCFEM/suanPan/pull/410">#410</a></li>
+<li>use an RAII wrapper for <span class="tt">HDF5</span> handling and remove the <span class="tt">hdf5_hl</span> dependency <a href="https://github.com/TLCFEM/suanPan/pull/398">#398</a></li>
+<li>update <span class="tt">VTK</span> to version <span class="tt">9.7.2</span></li>
+</ol>
 <h1>version 4.3</h1>
 <ol type="1">
 <li>fix the tangent stiffness matrix formulation in <a class="el" href="../../d7/d86/class_g_c_m_q.html" title="A GCMQ class.">GCMQ</a> element <a href="https://github.com/TLCFEM/suanPan/pull/389">#389</a></li>
