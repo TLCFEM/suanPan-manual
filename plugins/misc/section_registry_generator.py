@@ -261,9 +261,7 @@ def _generate(task: Task, margin: float, decimals: int) -> GeneratedSection:
         for name in TARGET_PROPERTIES
     }
 
-    return GeneratedSection(
-        task.label, task.family, rounded, errors, result.mode_used
-    )
+    return GeneratedSection(task.label, task.family, rounded, errors, result.mode_used)
 
 
 def _cpp_number(value: float, decimals: int) -> str:
@@ -293,8 +291,7 @@ def _render(sections: list[GeneratedSection], decimals: int, source: str) -> str
         if not group:
             continue
         worst = max(
-            max(abs(error) for error in section.errors.values())
-            for section in group
+            max(abs(error) for error in section.errors.values()) for section in group
         )
         lines.append(
             f"// {family.registry}(): {family.description}, {len(group)} sections, "
