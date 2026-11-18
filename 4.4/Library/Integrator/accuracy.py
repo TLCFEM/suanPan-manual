@@ -149,7 +149,7 @@ results = {}
 
 def numerical(vibrator, pick):
     def read_h5(name):
-        with h5py.File(f"{name}-{str(pick)}.h5", "r") as f:
+        with h5py.File(f"{name}-{pick!s}.h5", "r") as f:
             data = f[f"/{name}/{name}2"]
             return data[:, 0], data[:, 1]
 

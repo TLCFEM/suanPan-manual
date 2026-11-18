@@ -6,6 +6,7 @@ var dir_a9729cc3cf336159544460298e1486e7 =
     [ "TestColoring.cpp", "d3/d20/_test_coloring_8cpp.html", "d3/d20/_test_coloring_8cpp" ],
     [ "TestContainer.cpp", "d7/de4/_test_container_8cpp.html", "d7/de4/_test_container_8cpp" ],
     [ "TestDafaliasManzari.cpp", "da/ded/_test_dafalias_manzari_8cpp.html", "da/ded/_test_dafalias_manzari_8cpp" ],
+    [ "TestDuncanSelig.cpp", "d7/d62/_test_duncan_selig_8cpp.html", "d7/d62/_test_duncan_selig_8cpp" ],
     [ "TestEigen.cpp", "d1/d50/_test_eigen_8cpp.html", "d1/d50/_test_eigen_8cpp" ],
     [ "TestExpression.cpp", "d1/d62/_test_expression_8cpp.html", "d1/d62/_test_expression_8cpp" ],
     [ "TestHomotopy.cpp", "d7/db9/_test_homotopy_8cpp.html", "d7/db9/_test_homotopy_8cpp" ],

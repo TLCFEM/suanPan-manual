@@ -6,8 +6,8 @@
 import os
 import shutil
 from pathlib import Path
-import numpy as np
 
+import numpy as np
 
 input_folder = "NZ"
 output_folder = "OUTPUT"
@@ -57,12 +57,9 @@ for record in os.listdir(input_folder):
             file_dest += "\\D"
         file_dest += "\\" + motion_name + "_" + component_list[i]
         with open(file_dest, "w") as output:
-            output.write("{}\n".format(int(incre_time)))
+            output.write(f"{int(incre_time)}\n")
             max_amp = motion[:, i].max()
             min_amp = motion[:, i].min()
-            output.write(
-                "{}\n".format(int(max_amp if max_amp > -min_amp else -min_amp))
-            )
-            for j in range(0, motion.shape[0]):
-                output.write("{}\n".format(int(motion[j, i])))
+            output.write(f"{int(max(-min_amp, max_amp))}\n")
+            output.writelines(f"{int(motion[j, i])}\n" for j in range(motion.shape[0]))
     output_motion.unlink()

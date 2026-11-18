@@ -1,5 +1,10 @@
 var NAVTREEINDEX34 =
 {
+"de/d67/class_multilinear_elastic1_d.html#afcb76bdca6f737ce3e742de7f7ee196f":[2,15,0,28,1],
+"de/d68/class_isotropic_damage.html":[2,15,2,17],
+"de/d68/class_isotropic_damage.html#a094cadd6a90d3113a77b8f0995da0ad7":[2,15,2,17,1],
+"de/d68/class_isotropic_damage.html#a8a36d3fdbfc075c2fd1f6798ca03f1ee":[2,15,2,17,4],
+"de/d68/class_isotropic_damage.html#a99cc0ed8ca3d472a5645526eb7105c64":[2,15,2,17,5],
 "de/d68/class_isotropic_damage.html#aa5a7cf97a7c7b487e984fd62907fe4d6":[2,15,2,17,0],
 "de/d68/class_isotropic_damage.html#aca9d7ede3dcad18e7efcb2f2fc16a5ad":[2,15,2,17,6],
 "de/d68/class_isotropic_damage.html#ad790838bcc7fc6ab2431d136f17da686":[2,15,2,17,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX34 =
 "de/d90/class_amplitude.html":[2,13,0],
 "de/d90/class_amplitude.html#a073090c2dc25c2e3b88e8d2006cc11ad":[2,13,0,3],
 "de/d90/class_amplitude.html#a289315492b0ed2a174619d43ddcf5c82":[2,13,0,7],
-"de/d90/class_amplitude.html#a84c13ffcb23dbc17b2020406ea372d77":[2,13,0,6],
-"de/d90/class_amplitude.html#a85a65e28ad34ffb1bbd0242661feb40c":[2,13,0,5],
-"de/d90/class_amplitude.html#a8af101a244a1e108ea95e973862aebeb":[2,13,0,1],
-"de/d90/class_amplitude.html#a94003714911d6a699b1269fda31296e9":[2,13,0,0],
-"de/d90/class_amplitude.html#ada6f0ae08d26ee28e58042dbf5a90916":[2,13,0,4],
-"de/d90/class_amplitude.html#af1d8687847af6a48beaec831f5fbeabe":[2,13,0,8]
+"de/d90/class_amplitude.html#a84c13ffcb23dbc17b2020406ea372d77":[2,13,0,6]
 };
