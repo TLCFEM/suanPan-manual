@@ -52,9 +52,53 @@ section US3DC (1) (2) (3) [4] [5]
 **There will be discrepancies between design section properties and numerical section properties.**
 **Use with caution and check the [validation](US.pdf).**
 
+## Adjusted Sections
+
+The nominal `US` registry uses the published nominal dimensions of each shape. For rolled shapes this idealization ignores fillets, flange taper and other details, so the area, moments of inertia and section moduli computed from the nominal geometry can differ noticeably from the values tabulated by AISC.
+
+The adjusted registry uses the same designations but replaces the nominal dimensions with effective dimensions optimized against the tabulated AISC properties. The `A` suffix selects the adjusted registry and the `AC` suffix combines the adjustment with automatic recentering.
+
+```text title="Adjusted US"
+section US2DA (1) (2) (3) [4] [5] [6]
+section US3DA (1) (2) (3) [4] [5] [6] [7]
+section US2DAC (1) (2) (3) [4] [5]
+section US3DAC (1) (2) (3) [4] [5]
+# (1) string, designation
+# (2) int, unique tag
+# (3) int, material model tag
+# [4] double, scale, default: 1.0
+# [5] int, number of integration points along web height (and flange width for 3D), default: 6
+# [6] double, eccentricity (eccentricity of y axis for 3D), default: 0.0
+# [7] double, eccentricity of z axis, default: 0.0
+```
+
+The arguments are identical to the corresponding `US2D`, `US3D`, `US2DC` and `US3DC` commands. For example:
+
+```text
+section US2DA W14X90 1 1
+section US3DAC WT12X31 2 1
+```
+
+### What Is Changed
+
+- The adjusted registries are generated from the AISC Shapes Database v16.0 with `section_optimizer.py`.
+- The optimizer scales the dimensions of the rectangular I-section, T-section and hollow-section idealizations so that the computed properties follow the tabulated values of `A`, `Ix`, `Iy`, `Zx` and `Zy`.
+- For the M, S and ST families, the dimensions are allowed to move by at most 7 % from the nominal values. This is enough to keep all strong-axis properties (`A`, `Ix`, `Zx`) within 5 % for every section.
+- The weak-axis properties (`Iy`, `Zy`) are also targets, but they are allowed to exceed 5 % for the two smallest ST shapes, `ST2X3.85` and `ST1.5X2.85`, where the rectangular idealization is too coarse to fit all five properties at once.
+- The nominal `US2D`/`US3D` registries are unchanged. They still use the published nominal geometry.
+
+### What Is Achieved
+
+- Axial stiffness, strong-axis bending stiffness and strong-axis plastic capacity are much closer to the AISC tabulated values than with the nominal dimensions.
+- The adjusted M/S/ST dimensions stay within 7 % of the nominal geometry, so overall section depth and width remain close to the designated shape.
+- The strong-axis property error is at most about 4.1 % over all M/S/ST sections, and the weak-axis error is at most about 5.7 %, with only the two noted ST shapes above 5 %.
+- The choice between nominal and adjusted sections is explicit: use `US2D`/`US3D` when the exact published geometry is required, and `US2DA`/`US3DA` when the tabulated section properties are more important.
+
+The adjusted dimensions are effective dimensions for the idealization, not a replacement for the AISC geometry. The computed properties still depend on the number of integration points; see the [validation](US.pdf) for the numerical accuracy of the section integration.
+
 ## Supported Designations
 
-The following designations from [AISC Shapes Database v16.0](https://www.aisc.org/publications/steel-construction-manual-resources/16th-ed-steel-construction-manual/aisc-shapes-database-v16.0/) are supported.
+The following designations from [AISC Shapes Database v16.0](https://www.aisc.org/publications/steel-construction-manual-resources/16th-ed-steel-construction-manual/aisc-shapes-database-v16.0/) are supported. The same designations are accepted by the adjusted `US2DA`, `US3DA`, `US2DAC` and `US3DAC` commands.
 
 | W       | M          | S        | HP       | WT           | MT         | ST          | HSS (Rectangle)     | HSS (Circle)    |
 |:--------|:-----------|:---------|:---------|:-------------|:-----------|:------------|:--------------------|:----------------|

@@ -23,6 +23,13 @@ Run:
     python section_registry_generator.py
     python section_registry_generator.py --output us_registry.inc
     python section_registry_generator.py --xlsx <url-or-path> --margin 0.05
+    python section_registry_generator.py --types M,S,ST --margin 0.07
+
+The M, S and ST families contain small rolled shapes whose fillets are a
+significant fraction of the area.  A 5 % dimension bound is too tight for
+the rectangular idealization to keep every strong-axis property within
+5 %, so the refined registry uses a 7 % bound.  The two hardest ST shapes
+are allowed to exceed 5 % on the weak axis.
 
 Requires:
     pip install pandas openpyxl numpy scipy
@@ -42,7 +49,6 @@ import pandas
 from section_optimizer import (
     BOX_SECTION,
     I_SECTION,
-    MARGIN,
     T_SECTION,
     CircleSection,
     SectionModel,
@@ -51,10 +57,15 @@ from section_optimizer import (
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_XLSX = ROOT / "docs/Library/Section/Code/aisc-shapes-database-v16.0.xlsx"
+DEFAULT_MARGIN = 0.07
 
 # The optimizer uses "area" while the spreadsheet uses "A".
 TARGET_PROPERTIES = ("area", "Ix", "Iy", "Zx", "Zy")
 SPREADSHEET_PROPERTIES = {"area": "A", "Ix": "Ix", "Iy": "Iy", "Zx": "Zx", "Zy": "Zy"}
+# Strong-axis targets must remain accurate; the weak axis may be relaxed for
+# the small rolled shapes where the rectangular idealization is very coarse.
+STRONG_AXIS_PROPERTIES = ("area", "Ix", "Zx")
+WEAK_AXIS_PROPERTIES = ("Iy", "Zy")
 
 # CircleSection needs an explicit wall-thickness parameter for a hollow tube.
 ROUND_HSS = CircleSection(("d", "t"), ("t",))
@@ -264,6 +275,16 @@ def _generate(task: Task, margin: float, decimals: int) -> GeneratedSection:
     return GeneratedSection(task.label, task.family, rounded, errors, result.mode_used)
 
 
+def _check_strong_axis(section: GeneratedSection, strong_tolerance: float) -> None:
+    """Enforce the strong-axis limit; weak-axis errors are reported only."""
+    strong_error = max(abs(section.errors[name]) for name in STRONG_AXIS_PROPERTIES)
+    if strong_error > strong_tolerance:
+        raise ValueError(
+            f"strong-axis error {100.0 * strong_error:.2f} % exceeds "
+            f"{100.0 * strong_tolerance:.2f} %"
+        )
+
+
 def _cpp_number(value: float, decimals: int) -> str:
     text = f"{value:.{decimals}f}".rstrip("0").rstrip(".")
     if text in ("", "-0"):
@@ -310,16 +331,28 @@ def _summarize(sections: list[GeneratedSection]) -> None:
         group = [section for section in sections if section.family.key == family.key]
         if not group:
             continue
-        errors = [
-            (section.label, max(abs(error) for error in section.errors.values()))
+        strong_errors = [
+            (
+                section.label,
+                max(abs(section.errors[name]) for name in STRONG_AXIS_PROPERTIES),
+            )
             for section in group
         ]
-        worst_label, worst_error = max(errors, key=lambda item: item[1])
-        over_five = sum(error > 0.05 for _, error in errors)
+        weak_errors = [
+            (
+                section.label,
+                max(abs(section.errors[name]) for name in WEAK_AXIS_PROPERTIES),
+            )
+            for section in group
+        ]
+        worst_strong = max(strong_errors, key=lambda item: item[1])
+        worst_weak = max(weak_errors, key=lambda item: item[1])
+        over_five = sum(error > 0.05 for _, error in weak_errors)
         print(
             f"  {family.registry:14s} {len(group):4d} sections, "
-            f"max {100.0 * worst_error:5.2f}% ({worst_label}), "
-            f"> 5%: {over_five}",
+            f"strong max {100.0 * worst_strong[1]:5.2f}% ({worst_strong[0]}), "
+            f"weak max {100.0 * worst_weak[1]:5.2f}% ({worst_weak[0]}), "
+            f"weak > 5%: {over_five}",
             file=sys.stderr,
         )
 
@@ -360,16 +393,29 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Worksheet name or zero-based index (default: 1).",
     )
     parser.add_argument(
+        "--types",
+        help=(
+            "Comma-separated AISC Type values to generate, e.g. 'M,S,ST' "
+            "(default: every supported type)."
+        ),
+    )
+    parser.add_argument(
         "--margin",
         type=float,
-        default=MARGIN,
-        help=f"Maximum relative change of each dimension (default: {MARGIN}).",
+        default=DEFAULT_MARGIN,
+        help=f"Maximum relative change of each dimension (default: {DEFAULT_MARGIN}).",
     )
     parser.add_argument(
         "--decimals",
         type=int,
         default=4,
         help="Decimal places in the generated C++ values (default: 4).",
+    )
+    parser.add_argument(
+        "--strong-tolerance",
+        type=float,
+        default=0.05,
+        help="Maximum relative error of A, Ix and Zx (default: 0.05).",
     )
     parser.add_argument(
         "--output",
@@ -382,6 +428,8 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         parser.error("--margin must lie between 0 and 1")
     if args.decimals < 0:
         parser.error("--decimals must be non-negative")
+    if not 0.0 <= args.strong_tolerance < 1.0:
+        parser.error("--strong-tolerance must lie between 0 and 1")
     return args
 
 
@@ -397,6 +445,15 @@ def main(argv: list[str] | None = None) -> int:
         print(f"error: {error}", file=sys.stderr)
         return 1
 
+    if args.types:
+        wanted = {
+            name.strip().upper() for name in args.types.split(",") if name.strip()
+        }
+        if not wanted:
+            print("error: --types does not name any section type", file=sys.stderr)
+            return 1
+        table = table[table["Type"].astype(str).str.strip().str.upper().isin(wanted)]
+
     sections: list[GeneratedSection] = []
     for _, row in table.iterrows():
         try:
@@ -408,8 +465,10 @@ def main(argv: list[str] | None = None) -> int:
         if task is None:
             continue
         try:
-            sections.append(_generate(task, args.margin, args.decimals))
-        except Exception as error:  # keep the pipeline usable if one row fails
+            section = _generate(task, args.margin, args.decimals)
+            _check_strong_axis(section, args.strong_tolerance)
+            sections.append(section)
+        except Exception as error:  # noqa: BLE001 - keep the pipeline usable
             print(
                 f"warning: optimization failed for {task.label}: {error}",
                 file=sys.stderr,
