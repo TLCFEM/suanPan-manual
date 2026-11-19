@@ -37,6 +37,66 @@ section NZ3D (1) (2) (3) [4] [5] [6] [7]
 3. For 3D sections, along web/flange thickness, one integration point is used. Along flange width and web height, the
    same number of integration points is used as defined by user.
 
+**There will be discrepancies between design section properties and numerical section properties.**
+**Use with caution and check the [validation](NZ.pdf).**
+
+## Adjusted Sections
+
+The nominal `NZ` registry uses the published nominal dimensions of each shape. The rectangular I-section idealization
+ignores root fillets and flange taper, so the area, moments of inertia and section moduli computed from the nominal
+geometry differ from the values tabulated in AS/NZS 3679.1.
+
+The adjusted registry keeps the same designations but replaces the nominal dimensions with effective dimensions
+optimized against the tabulated section properties. Use the `A` suffix to select the adjusted registry.
+
+```text title="Adjusted NZ"
+section NZ2DA (1) (2) (3) [4] [5] [6]
+section NZ3DA (1) (2) (3) [4] [5] [6] [7]
+# (1) string, designation
+# (2) int, unique tag
+# (3) int, material model tag
+# [4] double, scale, default: 1.0
+# [5] int, number of integration points, default: 6
+# [6] double, eccentricity (eccentricity of y axis for 3D), default: 0.0
+# [7] double, eccentricity of z axis, default: 0.0
+```
+
+The arguments are identical to the corresponding `NZ2D` and `NZ3D` commands. For example:
+
+```text
+section NZ2DA 610UB113 1 1
+section NZ3DA 310UC137 2 1
+```
+
+### What Is Changed
+
+- The section properties are extracted from the Dlubal cross-section database
+  ([UB](https://www.dlubal.com/en/cross-section-properties/series-ub-as-nzs-3679-1-tung-ho-steel)
+  and [UC](https://www.dlubal.com/en/cross-section-properties/series-uc-as-nzs-3679-1-tung-ho-steel),
+  AS/NZS 3679.1, Tung Ho Steel) and stored in [`nz.csv`](nz.csv).
+- The CSV stores the nominal dimensions `h`, `b`, `tw`, `tf`, the root radius `r1`, and the tabulated properties
+  `A`, `I_strong`, `I_weak`, `W_strong`, `W_weak`, `Wpl_strong` and `Wpl_weak`. The strong/weak labels avoid the
+  AS/NZS `x`/`y` axis naming, where `x` is the strong axis.
+- `eu_registry_generator.py` adjusts the flange width, flange thickness, web depth and web thickness so that the
+  rectangular idealization reproduces `A`, `Ix`, `Iy`, `Zx` and `Zy`. Equal flanges are kept equal.
+- Every adjusted dimension stays within 10 % of its nominal value.
+- The nominal `NZ2D`/`NZ3D` registries are unchanged and still use the published nominal geometry.
+- The adjusted registry contains the 41 AS/NZS 3679.1 UB and UC designations listed below. `NZ2DA`/`NZ3DA` report an
+  error for other NZ shapes, which remain available through the nominal commands.
+- For six UB sizes (`310UB32.0`, `310UB40.4`, `310UB46.2`, `360UB44.7`, `360UB50.7` and `360UB56.7`) the
+  manufacturer series reports plastic moduli that are inconsistent with its own elastic values. The tabulated values
+  of the generic AS/NZS 3679.1 series are used for these six sizes instead.
+
+### What Is Achieved
+
+- For all 41 UB and UC sections, the error of the area and of the strong-axis properties (`A`, `Ix`, `Zx`) is below
+  0.6 % for the UB series and below 0.95 % for the UC series. The largest weak-axis error (`Iy`, `Zy`) is below 0.8 %.
+- The adjusted dimensions remain close to the nominal geometry: the section depth changes by less than 1.5 %, the
+  flange width by less than 1.5 % and the flange thickness by less than 4.5 %.
+
+The adjusted dimensions are effective dimensions for the idealization, not a replacement for the AS/NZS 3679.1
+geometry. The computed properties still depend on the number of integration points.
+
 ## Supported Designations
 
 Currently, the following designations are available.

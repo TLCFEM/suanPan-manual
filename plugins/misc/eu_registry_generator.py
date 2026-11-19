@@ -10,6 +10,9 @@ HEA, HEB, HEM, IPE, UB, UC and UBP series.  The rectangular I-section
 idealization ignores root fillets and flange taper, so the nominal
 dimensions do not reproduce the tabulated area and inertias exactly.
 
+The same script processes docs/Library/Section/Code/nz.csv (AS/NZS 3679.1
+UB and UC) through --csv.
+
 For every designation the flange width, flange thickness, web depth and web
 thickness are adjusted with section_optimizer.py so that the computed
 properties follow the tabulated values.  Equal flanges are kept equal.
@@ -21,7 +24,7 @@ Run:
     python eu_registry_generator.py
     python eu_registry_generator.py --output eu_registry.inc
     python eu_registry_generator.py --margin 0.10
-    python eu_registry_generator.py --csv path/to/sections.csv
+    python eu_registry_generator.py --csv ../../docs/Library/Section/Code/nz.csv
 
 Requires:
     pip install numpy scipy
