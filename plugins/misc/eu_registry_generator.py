@@ -4,11 +4,11 @@ eu_registry_generator.py
 Generate the adjusted EU designation registry used by suanPan's
 SectionParser.cpp from the tabulated EN 10365:2017 section properties.
 
-The input CSV (docs/Library/Section/Code/EU-Sections.csv) contains the
-nominal dimensions and the tabulated properties A, Iy, Iz, Wply and Wplz of
-the HEA, HEB, HEM and IPE series.  The rectangular I-section idealization
-ignores root fillets and flange taper, so the nominal dimensions do not
-reproduce the tabulated area and inertias exactly.
+The input CSV (docs/Library/Section/Code/eu.csv) contains the nominal
+dimensions and the tabulated properties A, Iy, Iz, Wply and Wplz of the
+HEA, HEB, HEM, IPE, UB, UC and UBP series.  The rectangular I-section
+idealization ignores root fillets and flange taper, so the nominal
+dimensions do not reproduce the tabulated area and inertias exactly.
 
 For every designation the flange width, flange thickness, web depth and web
 thickness are adjusted with section_optimizer.py so that the computed
@@ -21,6 +21,7 @@ Run:
     python eu_registry_generator.py
     python eu_registry_generator.py --output eu_registry.inc
     python eu_registry_generator.py --margin 0.10
+    python eu_registry_generator.py --csv path/to/sections.csv
 
 Requires:
     pip install numpy scipy
@@ -39,11 +40,11 @@ import numpy as np
 from section_optimizer import I_SECTION, optimize_section
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_CSV = ROOT / "docs/Library/Section/Code/EU-Sections.csv"
+DEFAULT_CSV = ROOT / "docs/Library/Section/Code/eu.csv"
 DEFAULT_MARGIN = 0.10
 
 # The C++ registry order used by euisection().
-SERIES_ORDER = ("HEA", "HEB", "IPE", "HEM")
+SERIES_ORDER = ("HEA", "HEB", "IPE", "HEM", "UB", "UC", "UBP")
 
 # The rectangular idealization has four independent dimensions: flange width,
 # flange thickness, web depth and web thickness.  Equal flanges are linked.
@@ -122,7 +123,7 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--csv",
         type=Path,
         default=DEFAULT_CSV,
-        help=f"Section property CSV (default: {DEFAULT_CSV}).",
+        help=f"Section property CSV (default: {DEFAULT_CSV.relative_to(ROOT)}).",
     )
     parser.add_argument(
         "--margin",
@@ -162,8 +163,8 @@ def main(argv: list[str] | None = None) -> int:
 
     order = {name: index for index, name in enumerate(SERIES_ORDER)}
 
-    def sort_key(row: dict[str, str]) -> tuple[int, int]:
-        size = int(re.sub(r"\D", "", row["designation"]) or 0)
+    def sort_key(row: dict[str, str]) -> tuple[int, tuple[int, ...]]:
+        size = tuple(int(value) for value in re.findall(r"\d+", row["designation"]))
         return order.get(row["series"], 99), size
 
     rows.sort(key=sort_key)
