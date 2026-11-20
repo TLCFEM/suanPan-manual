@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>suanPan: Contribution</title>
+<title>suanPan: Contributing to suanPan</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -99,48 +99,274 @@ $(function(){initNavTree('d6/dcd/md__c_o_n_t_r_i_b_u_t_i_n_g.html','../../','');
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Contribution </div></div>
+  <div class="headertitle"><div class="title">Contributing to suanPan </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Pull requests are welcome. <br  />
- By submitting a pull request, you acknowledge and agree that project maintainers may modify your contribution without prior notice. This may include changes to the submitted code and, where applicable, updates to the project's overall licensing terms.</p>
-<p>If you intend to retain full copyright control over your work, please consider contributing through dynamically linked libraries.</p>
-<p>Feature requests should be submitted by opening an issue. <br  />
- Templates are available for feature request submissions.</p>
-<p>Private-domain collaboration in any form is also available; please contact <span class="tt">tlcfem(at)gmail(dot)com</span>.</p>
-<h1>Code Format Style</h1>
-<p>Please use the file <span class="tt">.clang-format</span> to format the code.</p>
-<h1>Naming Convention</h1>
-<ol type="1">
-<li>Use <span class="tt">snake_case</span> instead of <span class="tt">CamelCase</span> for variables.</li>
-<li>Use <span class="tt">CamelCase</span> for class names. Acronyms shall be capitalized, for example <span class="tt"><a class="el" href="../../d8/d1b/class_n_u_r_b_s_surface.html">NURBSSurface</a></span> instead of <span class="tt">NurbsSurface</span>.</li>
-<li>Use meaningful variable names instead of abstract names if possible.</li>
-<li>Avoid abbreviations, except for common ones such as <span class="tt">ptr</span> and <span class="tt">tmp</span>, for the ease of readability and maintenance.</li>
-</ol>
-<h1>Miscellaneous Tips</h1>
-<ol type="1">
-<li>Avoid non-const static variables, avoid shared working buffers.</li>
-<li>Use smart pointers instead of raw pointers.</li>
-<li>Use armadillo classes <span class="tt">mat</span> and <span class="tt">vec</span> for variables that involve mathematical operations.</li>
-<li>Use STL containers <span class="tt">std::array</span> and <span class="tt">std::vector</span> in general cases.</li>
-<li>Provide <a href="https://github.com/catchorg/Catch2">Catch2</a> tests if applicable, otherwise provide example models that cover the implementation as much as possible.</li>
-<li>Check similar existing implemented code first.</li>
-<li>Apply early return if possible, avoid deep nesting of code.</li>
-<li>Branch-free code is preferred.</li>
-</ol>
-<h1>Project structure</h1>
-<p>The repository uses the following top-level layout:</p>
+<div class="textblock"><p>Thank you for your interest in <b><a class="el" href="../../d3/d9f/namespacesuan_pan.html">suanPan</a></b>. Contributions of all kinds are welcome: bug reports, feature requests, documentation, tests, example models and code.</p>
+<p>This guide covers the development workflow, the coding style used in the project, and the release procedure.</p>
+<h1>Contents</h1>
 <ul>
-<li>CMakeLists.txt — top-level CMake build file.</li>
-<li>Include/ — public header files.</li>
-<li>Libs/ — third-party or internal libraries.</li>
-<li>UnitTest/ — unit tests and test harnesses.</li>
-<li>Example/ — example models and usage samples.</li>
-<li>Script/ — helper scripts for build/run/test tasks.</li>
-<li>Resource/ — data and resource files used by examples/tests.</li>
-<li>Solver/, Converger/, Constraint/, Element/, Material/, Checker/, Recorder/, Toolbox/, Step/, Load/ — core modules grouped by functionality (see the matching directory for implementation details).</li>
+<li>Before you contribute</li>
+<li>Development workflow</li>
+<li>Coding style</li>
+<li>Discouraged styles</li>
+<li>Project layout</li>
+<li>Release procedure</li>
 </ul>
-<p>When contributing, add or modify code in the appropriate module directory, update <span class="tt">CMakeLists.txt</span> as needed, and include tests or example models to demonstrate behavior. For large changes, open an issue first to discuss design. </p>
+<h1>Before you contribute</h1>
+<ol type="1">
+<li>Search the existing <a href="https://github.com/TLCFEM/suanPan/issues">issues</a> and pull requests before starting.</li>
+<li>Open an issue before large changes, breaking changes or significant refactors. This avoids duplicated work and lets the design be discussed first.</li>
+<li>Keep each pull request focused. Do not mix unrelated refactoring, formatting changes and new features in one pull request.</li>
+<li>Feature requests should be submitted by opening an issue. Templates are available for feature request submissions.</li>
+</ol>
+<h2>Contribution terms</h2>
+<p>By submitting a pull request, you acknowledge and agree that project maintainers may modify your contribution without prior notice. This may include changes to the submitted code and, where applicable, updates to the project's overall licensing terms.</p>
+<p>If you intend to retain full copyright control over your work, please consider contributing through dynamically linked libraries.</p>
+<p>Private-domain collaboration in any form is also available; please contact <span class="tt">tlcfem(at)gmail(dot)com</span>.</p>
+<h1>Development workflow</h1>
+<p>The default development branch is <span class="tt">dev</span>. The <span class="tt">master</span> branch is used for releases.</p>
+<ol type="1">
+<li><p class="startli">Fork the repository and clone it with submodules:</p>
+<div class="fragment"><div class="line">git clone --recursive https://github.com/TLCFEM/suanPan.git</div>
+<div class="line">cd suanPan</div>
+<div class="line">git switch dev</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Create a topic branch from <span class="tt">dev</span>:</p>
+<div class="fragment"><div class="line">git switch -c fix/my-change</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Build and test your change. See the <a href="https://tlcfem.github.io/suanPan-manual/latest/Basic/Compile/">manual</a> for the full dependency setup.</p>
+<div class="fragment"><div class="line">cmake -S . -B build \</div>
+<div class="line">  -DCMAKE_BUILD_TYPE=Release \</div>
+<div class="line">  -DCMAKE_INSTALL_PREFIX=build/dist</div>
+<div class="line">cmake --build build --target install --parallel</div>
+<div class="line">./build/dist/bin/suanPan -ct</div>
+</div><!-- fragment --><p class="startli">Unit tests are built into the main executable and are run with <span class="tt">-ct</span> (or <span class="tt">--catch2test</span>).</p>
+</li>
+<li><p class="startli">Format the files you changed:</p>
+<div class="fragment"><div class="line">clang-format -i path/to/changed_file.cpp path/to/changed_file.h</div>
+</div><!-- fragment --><p class="startli"><span class="tt">./Script/Format.sh</span> formats the whole source tree. Use it only when you intend to reformat the whole tree, otherwise it creates unrelated diffs.</p>
+</li>
+<li>Commit with a short, imperative summary. Put the reason for the change and any important details in the commit body. Reference the relevant issue or pull request when applicable.</li>
+<li>Open a pull request against <span class="tt">dev</span>, not <span class="tt">master</span>. Describe what changed, why it changed, how it was tested, and any breaking behaviour.</li>
+<li>Make sure CI is green and address review comments. Maintainers may squash or edit commits when merging.</li>
+</ol>
+<p>A pull request is ready to merge when it:</p>
+<ul>
+<li>builds without new warnings;</li>
+<li>passes the existing tests and includes tests for new behaviour;</li>
+<li>is formatted with the project <span class="tt">.clang-format</span>;</li>
+<li>contains no unrelated changes, commented-out code or debug output;</li>
+<li>documents user-visible changes, especially breaking changes.</li>
+</ul>
+<h1>Coding style</h1>
+<h2>Formatting</h2>
+<p>Use the repository <a href="../../.clang-format"><span class="tt">.clang-format</span></a> file. It is based on the LLVM style with the following important settings:</p>
+<ul>
+<li>4-space indentation, no tabs;</li>
+<li>no hard column limit;</li>
+<li>pointers and references attached to the type: <span class="tt">int* ptr</span>, <span class="tt">const std::string&amp; name</span>;</li>
+<li>no space before parentheses: <span class="tt">if(...)</span>, <span class="tt">for(...)</span>, <span class="tt">function(...)</span>;</li>
+<li>opening braces on the same line for functions, classes and control statements; <span class="tt">else</span> and <span class="tt">catch</span> on a new line;</li>
+<li>includes sorted and regrouped;</li>
+<li>one space before trailing comments.</li>
+</ul>
+<p>Also run <a href="../../.clang-tidy"><span class="tt">.clang-tidy</span></a> where practical. Do not disable checks or add blanket suppressions to silence warnings. Fix the cause, or suppress a single diagnostic with a short justification.</p>
+<h2>Naming</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Item  </th><th class="markdownTableHeadNone">Convention  </th><th class="markdownTableHeadNone">Example  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Classes, structs, enums  </td><td class="markdownTableBodyNone"><span class="tt">PascalCase</span>, acronyms fully capitalized  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="../../d8/d1b/class_n_u_r_b_s_surface.html">NURBSSurface</a></span>, <span class="tt"><a class="el" href="../../dc/dfb/class_c_d_p_m2.html" title="The CDPM2 class.">CDPM2</a></span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Functions, variables, members  </td><td class="markdownTableBodyNone"><span class="tt">snake_case</span>  </td><td class="markdownTableBodyNone"><span class="tt">compute_stiffness</span>, <span class="tt">elastic_modulus</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">File-scope constants  </td><td class="markdownTableBodyNone"><span class="tt">UPPER_SNAKE_CASE</span>  </td><td class="markdownTableBodyNone"><span class="tt">MAX_ITERATION</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Test files  </td><td class="markdownTableBodyNone"><span class="tt">Test&lt;Subject&gt;.cpp</span>  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="../../de/da5/_test_matrix_8cpp.html">TestMatrix.cpp</a></span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Header/source files  </td><td class="markdownTableBodyNone">Match the class or module name  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="../../df/d27/_bilinear_d_p_8h.html">BilinearDP.h</a></span>, <span class="tt"><a class="el" href="../../d3/d4d/_bilinear_d_p_8cpp.html">BilinearDP.cpp</a></span>  </td></tr>
+</table>
+<p>Additional naming rules:</p>
+<ol type="1">
+<li>Use meaningful names. Avoid abstract names such as <span class="tt">a</span>, <span class="tt">b</span>, <span class="tt">data2</span> when a descriptive name is possible.</li>
+<li>Avoid abbreviations except common ones such as <span class="tt">ptr</span> and <span class="tt">tmp</span>.</li>
+<li>Follow the naming already used by the surrounding module when extending existing code.</li>
+</ol>
+<h2>Modern C++</h2>
+<p>The project uses C++20. Prefer modern, explicit and safe C++:</p>
+<ul>
+<li>Use RAII and smart pointers (<span class="tt">std::unique_ptr</span>, <span class="tt">std::make_unique</span>, <span class="tt">std::shared_ptr</span>, <span class="tt">std::make_shared</span>) for ownership.</li>
+<li>Use <span class="tt">nullptr</span>, <span class="tt">constexpr</span>, <span class="tt">enum class</span>, <span class="tt">using</span> and <span class="tt">static_cast</span>.</li>
+<li>Use <span class="tt">[[nodiscard]]</span> on getters and factory functions, and <span class="tt">override</span>/<span class="tt">final</span> on virtual functions.</li>
+<li>Use <span class="tt">const</span> correctness. Pass cheap types by value and non-trivial types by <span class="tt">const</span> reference.</li>
+<li>Use <span class="tt">auto</span> when the type is obvious from the initializer or when it avoids repetitive type names. Keep explicit types at public API boundaries.</li>
+<li>Use <span class="tt">std::array</span> and <span class="tt">std::vector</span> for general containers. Use Armadillo <span class="tt">mat</span>/<span class="tt">vec</span> (and the project aliases) for mathematical operations.</li>
+<li>Prefer early returns and guard clauses over deeply nested code.</li>
+<li>Branch-free code is preferred where it remains readable.</li>
+<li>Use the project logging macros (<span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga1b7bae14c4dfe910f55137b7de12fb46">suanpan_info</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga25eeaeba608fccad92ecab15a5bdb909">suanpan_debug</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga98b8fc049aeb3dc50098fc33bb498947">suanpan_warning</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga4246523945b56b1676f44e88d5b3abc6">suanpan_fatal</a></span>) instead of <span class="tt">std::cout</span> or <span class="tt">printf</span> in library code.</li>
+<li>Use the project's approximate comparison helpers for floating-point comparisons where appropriate.</li>
+</ul>
+<h2>Headers and includes</h2>
+<ol type="1">
+<li>Keep the copyright and license header used by the file.</li>
+<li>Use the existing include-guard style (<span class="tt">#ifndef ... #define ... #endif</span>). Do not introduce <span class="tt">#pragma once</span> in new files.</li>
+<li>Include what you use. Do not rely on transitive includes and do not use <span class="tt">&lt;bits/stdc++.h&gt;</span>.</li>
+<li>Do not put <span class="tt">using namespace ...;</span> in a header. Prefer fully qualified names or a local <span class="tt">using</span> declaration in a source file.</li>
+<li>Keep the include order produced by <span class="tt">.clang-format</span>.</li>
+<li>Add Doxygen comments for public classes and functions, following the existing <span class="tt">@class</span>, <span class="tt">@brief</span>, <span class="tt">@author</span>, <span class="tt">@date</span>, <span class="tt">@file</span> and <span class="tt">@addtogroup</span> style.</li>
+</ol>
+<h2>Tests and examples</h2>
+<ol type="1">
+<li>Provide <a href="https://github.com/catchorg/Catch2">Catch2</a> tests for new behaviour when applicable. Add test files under <span class="tt">UnitTest/</span> and register them in <span class="tt">UnitTest/CMakeLists.txt</span>.</li>
+<li>Tests must be deterministic. Avoid relying on random data unless the seed is fixed.</li>
+<li>Use <span class="tt">REQUIRE</span>, <span class="tt">SECTION</span> and <span class="tt">Approx</span> in the same style as the existing tests.</li>
+<li>When a unit test is not practical, provide example models under <span class="tt">Example/</span> or <span class="tt">Resource/</span> that cover the implementation as much as possible.</li>
+<li>Check similar existing implementations before adding a new element, material, section, solver or command.</li>
+</ol>
+<h1>Discouraged styles</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Avoid  </th><th class="markdownTableHeadNone">Prefer  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">CamelCase</span> variables or functions  </td><td class="markdownTableBodyNone"><span class="tt">snake_case</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">NurbsSurface</span>, <span class="tt">HtmlParser</span>  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="../../d8/d1b/class_n_u_r_b_s_surface.html">NURBSSurface</a></span>, <span class="tt">HTMLParser</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Owning raw pointers, <span class="tt">new</span> and <span class="tt">delete</span>  </td><td class="markdownTableBodyNone"><span class="tt">std::unique_ptr</span>/<span class="tt">std::shared_ptr</span> with <span class="tt">std::make_unique</span>/<span class="tt">std::make_shared</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">NULL</span> or <span class="tt">0</span> as a pointer value  </td><td class="markdownTableBodyNone"><span class="tt">nullptr</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">C-style casts such as <span class="tt">(<a class="el" href="../../df/de6/classdouble.html">double</a>)x</span>  </td><td class="markdownTableBodyNone"><span class="tt">static_cast&lt;<a class="el" href="../../df/de6/classdouble.html">double</a>&gt;(x)</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">typedef</span>  </td><td class="markdownTableBodyNone"><span class="tt">using</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Mutable global state, non-const static variables or shared working buffers  </td><td class="markdownTableBodyNone">Explicit parameters, local state or member state  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">using namespace std;</span> in headers  </td><td class="markdownTableBodyNone">Qualified names or a local <span class="tt">using</span> in a source file  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Deeply nested <span class="tt">if</span>/<span class="tt">for</span> blocks  </td><td class="markdownTableBodyNone">Early returns and guard clauses  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Magic numbers  </td><td class="markdownTableBodyNone">Named <span class="tt">constexpr</span> constants  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">std::cout</span>, <span class="tt">printf</span> or <span class="tt">std::cerr</span> in library code  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga1b7bae14c4dfe910f55137b7de12fb46">suanpan_info</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga98b8fc049aeb3dc50098fc33bb498947">suanpan_warning</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a></span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">C-style arrays and manual bounds  </td><td class="markdownTableBodyNone"><span class="tt">std::array</span>, <span class="tt">std::vector</span> or Armadillo types  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Commented-out code and leftover debug prints  </td><td class="markdownTableBodyNone">Remove them before opening the pull request  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Catching everything with <span class="tt">catch(...)</span> and ignoring it  </td><td class="markdownTableBodyNone">Catch the expected exception type; rethrow unknown exceptions  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Unrelated reformatting or refactoring in a feature pull request  </td><td class="markdownTableBodyNone">A separate, focused pull request  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Abbreviations such as <span class="tt">stf</span>, <span class="tt">idx2</span>, <span class="tt">tmpmat</span>  </td><td class="markdownTableBodyNone">Descriptive names such as <span class="tt">stiffness</span>, <span class="tt">second_index</span>, <span class="tt">temporary_matrix</span>  </td></tr>
+</table>
+<h1>Project layout</h1>
+<ul>
+<li><span class="tt">CMakeLists.txt</span> — top-level CMake build file.</li>
+<li><span class="tt">Include/</span> — public headers and vendored dependencies.</li>
+<li><span class="tt">Libs/</span> — third-party or internal libraries.</li>
+<li><span class="tt">UnitTest/</span> — Catch2 tests and the test harness.</li>
+<li><span class="tt">Example/</span> — example models and usage samples.</li>
+<li><span class="tt">Developer/</span> — templates for external elements, materials, modifiers and sections.</li>
+<li><span class="tt">Script/</span> — helper scripts for build, format, versioning and packaging.</li>
+<li><span class="tt">Resource/</span> — data and resource files used by examples and tests.</li>
+<li><span class="tt">Domain/</span> — core domain objects such as nodes, elements and materials.</li>
+<li><span class="tt">Solver/</span>, <span class="tt">Converger/</span>, <span class="tt">Constraint/</span>, <span class="tt">Element/</span>, <span class="tt">Material/</span>, <span class="tt">Section/</span>, <span class="tt">Checker/</span>, <span class="tt">Recorder/</span>, <span class="tt">Toolbox/</span>, <span class="tt">Step/</span>, <span class="tt">Load/</span>, <span class="tt">Database/</span> — core modules grouped by functionality.</li>
+</ul>
+<p>When contributing, add or modify code in the appropriate module directory, update <span class="tt">CMakeLists.txt</span> as needed, and include tests or example models that demonstrate the behaviour. For large changes, open an issue first to discuss the design.</p>
+<h1>Release procedure</h1>
+<p>The release procedure is for maintainers. It assumes write access to the code repository, the documentation repository, the Fedora rpkg/COPR project, the Snapcraft project and the Flathub repository.</p>
+<p>Release tags in the code repository use the form <span class="tt">suanPan-vX.Y.Z</span>. Documentation tags use the version without the prefix, for example <span class="tt">4.3.1</span>.</p>
+<h2>1. Update the version and citation date</h2>
+<p>Run the version script from the repository root:</p>
+<div class="fragment"><div class="line">./Script/Version.sh 4 3 2</div>
+</div><!-- fragment --><p>Then edit <span class="tt">CITATION.cff</span> and set <span class="tt">date-released</span> to the release date. Confirm that <span class="tt">version</span> in <span class="tt">CITATION.cff</span> matches the new version.</p>
+<p>Add a new section at the top of <span class="tt"><a class="el" href="../../da/d00/_c_h_a_n_g_e_l_o_g_8md.html">CHANGELOG.md</a></span> for the release. Describe user-visible changes, fixes and breaking changes, and link the relevant pull requests. Commit these changes on <span class="tt">dev</span>.</p>
+<p><span class="tt">Script/Version.sh</span> updates the version in the build files, packaging files and CI workflows. Review the diff to make sure every version reference is consistent.</p>
+<h2>2. Merge the release to <span class="tt">master</span></h2>
+<p>Open a pull request from <span class="tt">dev</span> to <span class="tt">master</span> and merge it after CI passes. Merging to <span class="tt">master</span> triggers the <span class="tt">Stable</span> CI/CD workflow.</p>
+<h2>3. Promote the CI release</h2>
+<ol type="1">
+<li>Open the Actions tab and wait for the <span class="tt">Stable</span> workflow for the release merge commit to finish. It creates a prerelease tagged <span class="tt">daily-YYMMDD</span> and uploads the platform archives.</li>
+<li>Open the repository's Releases page and edit the <span class="tt">daily-YYMMDD</span> release.</li>
+<li>Rename the tag to <span class="tt">suanPan-vX.Y.Z</span>.</li>
+<li>Set the release title to <span class="tt"><a class="el" href="../../d3/d9f/namespacesuan_pan.html">suanPan</a> vX.Y.Z</span>.</li>
+<li>Uncheck "Set as a pre-release" and check "Set as the latest release".</li>
+<li>Replace the auto-generated body with the matching <span class="tt"><a class="el" href="../../da/d00/_c_h_a_n_g_e_l_o_g_8md.html">CHANGELOG.md</a></span> section. Keep the VirusTotal results if they are useful.</li>
+<li>Publish the release.</li>
+</ol>
+<p>Do not create a separate release from scratch. Rename and edit the CI-created release so that the uploaded assets remain attached.</p>
+<h2>4. Trigger the Fedora rpkg build</h2>
+<ol type="1">
+<li>Confirm that <span class="tt">Version:</span> in <span class="tt">suanPan.spec.rpkg</span> matches the new version.</li>
+<li>Push the updated spec to the rpkg repository used by COPR.</li>
+<li>Trigger a new build in the COPR project <span class="tt">tlcfem/suanPan</span>.</li>
+<li>Verify that the build succeeds for all supported Fedora and EPEL chroots.</li>
+</ol>
+<p>The spec uses the <span class="tt">rpkg</span> <span class="tt">git_dir_*</span> macros, so build from the release tag or the corresponding release commit.</p>
+<h2>5. Trigger the Snapcraft build</h2>
+<ol type="1">
+<li>Confirm that <span class="tt">version</span> in <span class="tt">snapcraft.yaml</span> matches the new version.</li>
+<li>Trigger new builds for <span class="tt">amd64</span> and <span class="tt">arm64</span> in the Snap Store.</li>
+<li>After the builds pass review, promote the new revision to the stable channel.</li>
+<li>Verify the published version with <span class="tt">snap info <a class="el" href="../../d6/d9c/namespacesuanpan.html">suanpan</a></span>.</li>
+</ol>
+<h2>6. Create the Flatpak release pull request</h2>
+<ol type="1">
+<li>Run the <span class="tt">Flatpak</span> workflow from the Actions tab, or open the pull request manually.</li>
+<li>The pull request must target <span class="tt">flathub/io.github.tlcfem.suanPan</span> on the <span class="tt">beta</span> branch.</li>
+<li>Update the pinned source commit and the release date in <span class="tt">io.github.tlcfem.suanPan.yml</span>.</li>
+<li>Confirm that the pinned commit is the release commit, not an arbitrary <span class="tt">dev</span> commit.</li>
+<li>Wait for Flathub CI to pass and merge the pull request.</li>
+</ol>
+<h2>7. Release the documentation</h2>
+<ol type="1">
+<li>Open the documentation repository, <span class="tt">TLCFEM/suanPan-manual</span>.</li>
+<li>Merge the documentation changes into <span class="tt">master</span>.</li>
+<li>Confirm that Read the Docs rebuilds the <span class="tt">latest</span> version successfully.</li>
+</ol>
+<h2>8. <a class="el" href="../../d0/d57/class_tag.html" title="A base Tag class.">Tag</a> the documentation repository</h2>
+<p>Create a tag without the <span class="tt">suanPan-v</span> prefix and push it:</p>
+<div class="fragment"><div class="line">git switch master</div>
+<div class="line">git pull</div>
+<div class="line">git tag 4.3.2</div>
+<div class="line">git push origin 4.3.2</div>
+</div><!-- fragment --><p>The tag triggers the Read the Docs build for that version. Confirm that the new version appears in the Read the Docs version selector and that the build succeeds.</p>
+<h2>Release checklist</h2>
+<ul class="check">
+<li class="unchecked">Version updated with <span class="tt">Script/Version.sh</span></li>
+</ul>
+<ul class="check">
+<li class="unchecked"><span class="tt">CITATION.cff</span> date and version updated</li>
+</ul>
+<ul class="check">
+<li class="unchecked"><span class="tt"><a class="el" href="../../da/d00/_c_h_a_n_g_e_l_o_g_8md.html">CHANGELOG.md</a></span> entry added</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Release merged to <span class="tt">master</span></li>
+</ul>
+<ul class="check">
+<li class="unchecked"><span class="tt">Stable</span> workflow completed successfully</li>
+</ul>
+<ul class="check">
+<li class="unchecked"><span class="tt">daily-YYMMDD</span> release renamed to <span class="tt">suanPan-vX.Y.Z</span> with release notes</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Fedora rpkg/COPR build triggered and green</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Snapcraft builds triggered and promoted</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Flatpak pull request merged</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Documentation merged to <span class="tt">master</span></li>
+</ul>
+<ul class="check">
+<li class="unchecked">Documentation tag pushed and Read the Docs build green </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

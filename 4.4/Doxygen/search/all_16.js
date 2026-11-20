@@ -461,7 +461,7 @@ var searchData=
   ['stresswrapper_2eh_458',['StressWrapper.h',['../d9/da4/_stress_wrapper_8h.html',1,'']]],
   ['strictly_5flower_459',['strictly_lower',['../de/d8b/group___meta_mat.html#ga04b9784f272647a357a4df75fa223485',1,'triplet_form']]],
   ['strictly_5fupper_460',['strictly_upper',['../de/d8b/group___meta_mat.html#ga4c186567ced3e4d5c01eaf01c8e3e51b',1,'triplet_form']]],
-  ['suanpan_461',['suanPan',['../d3/d9f/namespacesuan_pan.html',1,'suanPan'],['../index.html',1,'suanPan']]],
+  ['suanpan_461',['suanPan',['../d6/dcd/md__c_o_n_t_r_i_b_u_t_i_n_g.html',1,'Contributing to suanPan'],['../d3/d9f/namespacesuan_pan.html',1,'suanPan'],['../index.html',1,'suanPan']]],
   ['suanpan_462',['suanpan',['../d6/d9c/namespacesuanpan.html',1,'']]],
   ['suanpan_2ecpp_463',['suanPan.cpp',['../d6/dfd/suan_pan_8cpp.html',1,'']]],
   ['suanpan_2eh_464',['suanPan.h',['../d8/d8f/suan_pan_8h.html',1,'']]],
