@@ -25,6 +25,8 @@ build:
     - libz-dev
     - pngquant
   jobs:
+    pre_install:
+      - printf '%s\n' '        - docs/Library/Section/Code/*.Validation.ipynb' >> mkdocs.yml
     post_install:
       - ln -s $(find $(pwd)/suanPan* -type f -name suanPan.sh | head -n1) /home/docs/.asdf/shims/suanpan
       - suanpan -v
