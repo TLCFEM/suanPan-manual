@@ -98,24 +98,47 @@ from plugins import ErrorMap
 # note: the dependency `ErrorMap` can be found in the following link
 # https://github.com/TLCFEM/suanPan-manual/blob/dev/plugins/scripts/ErrorMap.py
 
-reference_stress = 14.7
+young_modulus = 6000
+ref_stress = 14.7
 
 with ErrorMap(
-    "material DuncanSelig 1 14.7 6000 .6 4000 .2 .7 .1 .7 .5",
-    ref_strain=reference_stress / 6000,
-    ref_stress=reference_stress,
-    contour_samples=20,
-    dimension=3,  # two-dimensional material, three in-plane components
+    f"material DuncanSelig 1 {ref_stress} {young_modulus} .6 4000 .2 .7 .1 .7 .5",
+    ref_strain=ref_stress / young_modulus,
+    ref_stress=ref_stress,
+    contour_samples=40,
+    dimension=3,
 ) as error_map:
     error_map.contour(
-        "duncan.selig",
-        center=(0, 0),
+        "duncan.selig.uniaxial.shear",
+        center=(-3, 0),
+        components=(0, 2),
         size=2,
+        type=("abs", "rel"),
+    )
+    error_map.contour(
+        "duncan.selig.uniaxial",
+        center=(-3, 0),
         components=(0, 1),
-        type={"abs", "rel"},
+        size=2,
+        type=("abs", "rel"),
+    )
+    error_map.contour(
+        "duncan.selig.biaxial",
+        center=(-3, -3),
+        components=(0, 2),
+        size=2,
+        type=("abs", "rel"),
     )
 ```
 
-![absolute error](duncan.selig.abs.error.svg)
+![biaxial abs error](duncan.selig.biaxial.abs.error.svg)
 
-![relative error](duncan.selig.rel.error.svg)
+![biaxial rel error](duncan.selig.biaxial.rel.error.svg)
+
+![uniaxial abs error](duncan.selig.uniaxial.abs.error.svg)
+
+![uniaxial rel error](duncan.selig.uniaxial.rel.error.svg)
+
+![uniaxial shear abs error](duncan.selig.uniaxial.shear.abs.error.svg)
+
+![uniaxial shear rel error](duncan.selig.uniaxial.shear.rel.error.svg)
