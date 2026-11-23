@@ -33,9 +33,11 @@ where $p'_0$ is the mean effective stress after consolidation and $p'$ is compre
 Liquefaction corresponds to $p'\to0$, i.e. $r_u\to1$.
 
 !!! note "how the results were produced"
-    A constant-volume strain path cannot be prescribed with the standard single-element FE model files shipped with suanPan: at zero mean stress the model returns a deviatoric-only tangent (no bulk stiffness), so any unconstrained volumetric mode makes the global system singular.
+    A constant-volume strain path cannot be prescribed with the standard single-element FE model files shipped with suanPan.
+    At zero effective confinement the model has no strength — the yield surface $F=|\mathbf s+p\boldsymbol\alpha|+mp$ with $p'\approx0$ requires $|\mathbf s|\approx0$ — so a prescribed shear displacement has no admissible equilibrium and the global Newton iteration oscillates.
+    Establishing the initial confinement and then switching to undrained shear would require changing boundary conditions between steps, which suanPan does not support.
     The results below are therefore generated with the small standalone driver in the download, which instantiates `DafaliasManzari` directly (exactly as the library unit tests do) and calls `update_incre_status()` with the prescribed strain vector at each increment.
-    The archive also contains a runnable suanPan model for the consolidation phase.
+    The archive also contains a runnable suanPan model for the consolidation phase and a patch that removes a related rank-deficiency of the tension-cap tangent (see the Remarks).
 
 ## The Model in Brief
 
@@ -160,7 +162,7 @@ With $A_0>0$ the response is dilative: the excess pore pressure is *negative* ($
 * The model computes the void ratio from the **trace of the total strain**, $e=e_0+(1+e_0)\,\mathrm{tr}\,\boldsymbol\varepsilon$. At large strains this is only an approximation, and the accumulation of volumetric error directly shifts $\psi$ and therefore the dilatancy and bounding surfaces.
 * The published model includes a Lode-angle function $g(\theta,c)$; this implementation drops it ($c=1$), so the yield surface is circular in the deviatoric plane. True triaxial stress states are approximated.
 * The hardening modulus was modified from the published $1/(\boldsymbol\alpha-\boldsymbol\alpha_{in}):\mathbf n$ form to an exponential expression to remove the singularity under small load reversals — precisely the regime of a cyclic liquefaction simulation.
-* The tension cap at $p'=0$ means the model cannot represent water tension or cavitation. Once liquefied, it returns a deviatoric-only response with the floor modulus $G_rG_0|p_{at}|$; the strains reported beyond that point are not a prediction of post-liquefaction flow but a regularised response.
+* The tension cap at $p'=0$ means the model cannot represent water tension or cavitation. The original implementation returns a deviatoric-only tangent there, which is rank deficient and can make the global FE matrix singular. The download contains a patch (`reference/dm_tangent_fix.patch`) that keeps the floor-modulus elastic pressure produced by the local elastic iteration and pairs it with the matching isotropic floor tangent, giving a consistent, full-rank state. With this patch all 209 upstream unit tests pass and the tension-cap element models converge without regression. The artificial tensile stress is $O(G_rG_0|p_{at}|\,\varepsilon_v)$ and is controlled by the existing $G_r$ parameter.
 * $p_{at}$ is forced negative and all arguments except $A_0$ are converted to absolute values by the constructor. Entering a positive $p_{at}$ still works, but entering a positive $A_0$ when contractive behaviour is intended does not.
 * For a simpler bounding-surface sand model without fabric effects, use [`SimpleSand`](../../Library/Material/Material3D/Sand/SimpleSand.md); it has no state-parameter-driven dilatancy and cannot reproduce the acceleration of pore-pressure build-up shown here.
 
