@@ -2,8 +2,7 @@
 
 Nonlinear Elastic 1D Type 01
 
-The `NLE1D01` material is a smoothed uniaxial bilinear elastic material model which uses the MP formula to approximate
-the bilinear backbone.
+The `NLE1D01` material is a smoothed uniaxial bilinear elastic material model which uses the MP formula to approximate the bilinear backbone.
 
 ## Syntax
 

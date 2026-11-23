@@ -2,8 +2,9 @@
 
 Polynomial Hardening J2 Model
 
-The `PolyJ2` defines a J2 material with isotropic hardening. The isotropic hardening is controlled by a polynomial. The
-kinematic hardening is disabled.
+The `PolyJ2` defines a J2 material with isotropic hardening.
+The isotropic hardening is controlled by a polynomial.
+The kinematic hardening is disabled.
 
 ## Syntax
 

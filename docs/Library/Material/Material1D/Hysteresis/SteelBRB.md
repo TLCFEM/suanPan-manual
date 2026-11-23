@@ -2,8 +2,9 @@
 
 Steel Model For Modelling BRB
 
-The `SteelBRB` material defines a steel model. It can be used to model buckling restrained braces. It uses exponential
-type functions and thus resembles the [`RambergOsgood`](RambergOsgood.md) material.
+The `SteelBRB` material defines a steel model.
+It can be used to model buckling restrained braces.
+It uses exponential type functions and thus resembles the [`RambergOsgood`](RambergOsgood.md) material.
 
 References are available:
 
@@ -26,8 +27,7 @@ material SteelBRB (1) (2) (3) (4) (5) (6) (7) [8]
 # [8] double, density, default: 0.0
 ```
 
-If tension response is different from compression response, which is often the case in modelling BRB, users can use the
-following command.
+If tension response is different from compression response, which is often the case in modelling BRB, users can use the following command.
 
 ```
 material SteelBRB (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) [11]
@@ -46,10 +46,11 @@ material SteelBRB (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) [11]
 
 ## Remarks
 
-1. In the original model, a linear response is defined before the initial yield stress, this feature is disabled. Thus,
-   the monotonic loading response is similar to that of the `RambergOsgood` material.
-2. In the original model, the elastic and plastic moduli could be different under tension and compression. The
-   implemented model uses identical values for these two parameters.
+1. In the original model, a linear response is defined before the initial yield stress.
+   This feature is disabled.
+   Thus, the monotonic loading response is similar to that of the `RambergOsgood` material.
+2. In the original model, the elastic and plastic moduli could be different under tension and compression.
+   The implemented model uses identical values for these two parameters.
 
 ## History Variable Layout
 
@@ -60,7 +61,8 @@ material SteelBRB (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) [11]
 
 ## Theory
 
-The model is described in incremental form. The total strain increment is decomposed into elastic and plastic parts,
+The model is described in incremental form.
+The total strain increment is decomposed into elastic and plastic parts,
 
 $$
 \dot\sigma=E(\dot\varepsilon-\dot\varepsilon_p).
@@ -84,8 +86,7 @@ $$
 \sigma_y=\sigma_s-(\sigma_s-\sigma_{y,0})\exp(-\dfrac{\mu}{\delta_r})
 $$
 
-where $$\sigma_s$$ is the saturated stress, $$\sigma_y$$ is the yield stress, $$\delta_r$$ is a constant parameter that
-controls the speed of isotropic hardening, $$\mu$$ is the accumulated plastic strain which is defined to be
+where $$\sigma_s$$ is the saturated stress, $$\sigma_y$$ is the yield stress, $$\delta_r$$ is a constant parameter that controls the speed of isotropic hardening, $$\mu$$ is the accumulated plastic strain which is defined to be
 
 $$
 \dot\mu=|\dot\varepsilon_p|.

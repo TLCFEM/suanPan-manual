@@ -30,8 +30,7 @@ section NM3D3 (1) (2...14) [(15) (16) (17) (18)...]
 # (18) double, d_i
 ```
 
-In the above command, parameters `(15)`, `(16)`, `(17)` and `(18)` form a set and can be appended as many groups as the
-analyst wishes.
+In the above command, parameters `(15)`, `(16)`, `(17)` and `(18)` form a set and can be appended as many groups as the analyst wishes.
 The surface is assumed to possess the following form,
 
 $$

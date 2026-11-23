@@ -7,29 +7,23 @@ The model can be [downloaded](elemental-damping.sp).
 
 Some damping models are only valid at global level as they may depend on some attributes of the global matrices.
 They are inherently not applicable at element level.
-Some other damping models, such as the Rayleigh damping model, can be expressed as a linear combination of mass and
-stiffness matrices.
-The corresponding damping matrix can be either formulated at global level by operating on global stiffness and mass
-matrices, or at element level by operating on elemental stiffness and mass matrices.
+Some other damping models, such as the Rayleigh damping model, can be expressed as a linear combination of mass and stiffness matrices.
+The corresponding damping matrix can be either formulated at the global level by operating on global stiffness and mass matrices, or at the element level by operating on elemental stiffness and mass matrices.
 In the latter case, the global damping matrix can be assembled by the elemental damping matrices.
 
-Lee's damping model [10.1016/j.jsv.2020.115312](https://doi.org/10.1016/j.jsv.2020.115312) is used as the
-fundamental model.
+Lee's damping model [10.1016/j.jsv.2020.115312](https://doi.org/10.1016/j.jsv.2020.115312) is used as the fundamental model.
 It can be expressed in a form that is a linear combination of mass and stiffness matrices.
 
-The [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.107152) discusses the application of the
-damping model at element level and investigates the relationship between the elemental and global damping ratio.
+The [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.107152) discusses the application of the damping model at element level and investigates the relationship between the elemental and global damping ratio.
 
-To use the model, the [`ElementalLee`](../../../Library/Element/Modifier/ElementalLee.md) modifier and
-the [`LeeElementalNewmark`](../../../Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md) integrator shall be used.
+To use the model, the [`ElementalLee`](../../../Library/Element/Modifier/ElementalLee.md) modifier and the [`LeeElementalNewmark`](../../../Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md) integrator shall be used.
 
 ## The Model
 
 To make the validation possible and simple, we define two SDOF springs in the same problem domain.
-Those two springs are not connected to each other, making them independently respond to the applied load.
+Those two springs are not connected to each other, making them respond independently to the applied load.
 This avoids coupling and allows us to validate the damping ratio.
-However, the same idea can be applied to complex models such that part of the model is assigned with one damping ratio
-while the other parts are assigned with different damping ratios.
+However, the same idea can be applied to complex models such that part of the model is assigned one damping ratio while the other parts are assigned different damping ratios.
 
 ```text
 node 1 0 0
@@ -54,12 +48,9 @@ fix 2 2 1 2 3 4
 ## Elemental Damping
 
 The elemental damping is achieved by two parts.
-The global configuration of the damping curve adjusts how the system responds to different frequencies, that is, defines
-a reference damping curve.
-This part is done via the [`LeeElementalNewmark`](../../../Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md)
-integrator.
-The second part assigns damping ratio multipliers to each element via
-the [`ElementalLee`](../../../Library/Element/Modifier/ElementalLee.md) modifier.
+The global configuration of the damping curve adjusts how the system responds to different frequencies, that is, defines a reference damping curve.
+This part is done via the [`LeeElementalNewmark`](../../../Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md) integrator.
+The second part assigns damping ratio multipliers to each element via the [`ElementalLee`](../../../Library/Element/Modifier/ElementalLee.md) modifier.
 The actual damping applied to each element is the product of the multiplier and the reference damping curve.
 
 Here, for illustration, we apply $$\eta=0.05$$ and $$\eta=0.2$$ to the two elements, respectively.
@@ -88,8 +79,7 @@ converger RelIncreDisp 1 1E-10 3 1
 ```
 
 The dynamic step is used to release the spring.
-In this step, the [`LeeElementalNewmark`](../../../Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md)
-integrator is used to define the reference damping curve.
+In this step, the [`LeeElementalNewmark`](../../../Library/Integrator/Implicit/Newmark/LeeElementalNewmark.md) integrator is used to define the reference damping curve.
 One base function is used, the reference damping ratio is $$1$$ at $$5~\text{rad/s}$$.
 The actual damping ratios are $$0.05\times1=0.05$$ and $$0.2\times1=0.2$$, respectively.
 
@@ -121,12 +111,9 @@ As $$u_0=0.2$$, for $$\eta=0.05$$, $$u_1=0.146$$, for $$\eta=0.2$$, $$u_1=0.055$
 
 ![displacement history](elemental-damping-ex.svg)
 
-Because those two elements are not connected/coupled with each other, they respond independently and follow the assigned
-damping ratios.
+Because those two elements are not connected or coupled with each other, they respond independently and follow the assigned damping ratios.
 This is not practically useful but demonstrates the idea of elemental damping.
-In actual applications, a reference damping ratio curve can be defined to control the overall damping behaviour of the
-system.
+In actual applications, a reference damping ratio curve can be defined to control the overall damping behaviour of the system.
 Then different damping ratios can be assigned to different elements.
 
-For the potential coupling issue and further discussion,
-see [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.107152).
+For the potential coupling issue and further discussion, see [10.1016/j.compstruc.2023.107152](https://doi.org/10.1016/j.compstruc.2023.107152).

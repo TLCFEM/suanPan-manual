@@ -2,12 +2,11 @@
 
 Symmetric/Asymmetric Flag
 
-Some self-centering and rocking systems show flag shaped hysteresis behavior. The `Flag01` model defines a symmetric
-flag shaped hysteresis rule. The `Flag02` model is an extension of the `Flag01` model and defines an asymmetric flag
-shaped hysteresis rule.
+Some self-centering and rocking systems show flag-shaped hysteresis behavior.
+The `Flag01` model defines a symmetric flag-shaped hysteresis rule.
+The `Flag02` model is an extension of the `Flag01` model and defines an asymmetric flag-shaped hysteresis rule.
 
-More flexible flag shaped hysteresis behavior can be achieved by combining multilinear elastic model with for example
-bilinear hardening model.
+More flexible flag-shaped hysteresis behavior can be achieved by combining a multilinear elastic model with, for example, a bilinear hardening model.
 
 ## Syntax
 
@@ -44,8 +43,7 @@ material Flag02 (1) (2) (3) (4) (5) (6) (7) (8) [9]
 ## Remarks
 
 1. `Flag01` is a wrapper of `Flag02`.
-2. If `Flag01` is used, the compression yield stress and residual stress would be `-(3)` and `-(4)` so that the response
-   would be symmetric.
+2. If `Flag01` is used, the compression yield stress and residual stress would be `-(3)` and `-(4)` so that the response would be symmetric.
 
 ## Usage
 

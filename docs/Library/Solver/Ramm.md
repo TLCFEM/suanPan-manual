@@ -29,8 +29,7 @@ set fixed_step_size (1)
 
 1. A proper arc length shall be manually input to achieve an efficient analysis.
 2. Often the arc length is allowed to change depending on the smoothness of the turning point.
-3. If the arc length is not fixed, a positive minimum/maximum arc length (step size) will kick in to prevent the
-   arc length from being too small/large.
+3. If the arc length is not fixed, a positive minimum/maximum arc length (step size) will kick in to prevent the arc length from being too small/large.
 4. Any non-positive values for the minimum/maximum arc length will be ignored.
 
 A good overview of the method and its implementation details can be found in Crisfield's book (ISBN: 9780471929567), see Chapter 9.
@@ -52,7 +51,7 @@ For general cases, the (sign of) determinant of the tangent stiffness is require
 
 Only `LAPACK` based solvers can be used.
 Thus, one needs to use the following settings.
-Note they are all default settings thus do not need to be explicitly set.
+Note that they are all default settings and thus do not need to be explicitly set.
 The point is **do not choose something else**.
 
 ```text
@@ -65,7 +64,7 @@ set system_solver LAPACK
 ### With MPI
 
 Only the `MUMPS` solver is able to compute the determinant.
-`ScaLAPACK` based solvers do not support inspection of factorization thus cannot provide an efficient way of computing determinant.
+`ScaLAPACK` based solvers do not support inspection of factorization and thus cannot provide an efficient way of computing determinant.
 Thus, one needs to enable sparse storage and choose the `MUMPS` solver.
 
 ```text

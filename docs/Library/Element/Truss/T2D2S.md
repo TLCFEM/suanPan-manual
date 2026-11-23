@@ -9,7 +9,7 @@
 ## Syntax
 
 ```text title="T2D2S"
-element T2D2S (1) (2) (3) (4) [6] [7] [8]
+element T2D2S (1) (2) (3) (4) [5] [6]
 # (1) int, unique element tag
 # (2) int, node i
 # (3) int, node j
@@ -20,6 +20,7 @@ element T2D2S (1) (2) (3) (4) [6] [7] [8]
 
 ## Remarks
 
-1. Compared to `T2D2`, `T2D2S` uses section instead of material. Hence, sectional area is handled by the corresponding
-   section model.
-2. The nonlinearity cannot propagate into the section level. So it is not possible to update area in `T2D2S`.
+1. Compared to `T2D2`, `T2D2S` uses section instead of material.
+   Hence, sectional area is handled by the corresponding section model.
+2. The nonlinearity cannot propagate into the section level.
+   So it is not possible to update area in `T2D2S`.

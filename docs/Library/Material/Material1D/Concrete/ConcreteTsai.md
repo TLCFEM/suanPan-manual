@@ -30,13 +30,12 @@ material ConcreteTsai (1) (2) (3) (4) (5) (6) (7) (8) (9) [10]
 
 ## History Variable Layout
 
-Since it is derived from the [`SimpleHysteresis`](../Hysteresis/SimpleHysteresis.md) model, they share the same history
-variable layout.
+Since it is derived from the [`SimpleHysteresis`](../Hysteresis/SimpleHysteresis.md) model, it shares the same history variable layout.
 
 ## Remarks
 
-1. The middle point parameter represents the size of hysteresis loop, valid values range from 0 to 1 (ends not
-   recommended).
+1. The middle point parameter represents the size of the hysteresis loop.
+   Valid values range from 0 to 1 (ends not recommended).
 2. There is no additional consideration for small loops, which is available in [`ConcreteCM`](ConcreteCM.md).
 
 The parameter $$m$$ is defined in the reference.

@@ -2,8 +2,7 @@
 
 Viscoplasticity
 
-Similar to the classic rate independent J2 plasticity, the `NonlinearPeric` class defines a J2 plasticity that incorporates
-viscoplasticity using Peric's model, that is
+Similar to the classic rate independent J2 plasticity, the `NonlinearPeric` class defines a J2 plasticity that incorporates viscoplasticity using Peric's model, that is
 
 $$
 \dot\gamma(\sigma,\sigma_y)=\left\{\begin{array}{ll}\dfrac{1}{\mu}\left[\dfrac{q(\sigma)}{\sigma_y}-1\right]

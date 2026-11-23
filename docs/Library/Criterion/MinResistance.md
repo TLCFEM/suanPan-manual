@@ -1,7 +1,6 @@
 # MinResistance
 
-The `MinResistance` criterion tests the resistance of the specified node, if it is **smaller** than the given value, the
-analysis is terminated.
+The `MinResistance` criterion tests the resistance of the specified node; if it is **smaller** than the given value, the analysis is terminated.
 
 ## Syntax
 

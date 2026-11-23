@@ -1,8 +1,7 @@
 # [★★☆☆☆] Mass-Spring-Dashpot System
 
-This example is taken from the ABAQUS benchmark manual, see section 2.6.1.
-The original problem is also reported in the research paper,
-see [10.1002/nme.1620170902](https://doi.org/10.1002/nme.1620170902).
+This example is taken from the ABAQUS benchmark manual; see section 2.6.1.
+The original problem is also reported in [10.1002/nme.1620170902](https://doi.org/10.1002/nme.1620170902).
 
 The model can be [downloaded](mass-spring-dashpot-system.zip).
 
@@ -16,7 +15,7 @@ The configuration of the model is shown below.
 
 ### Nodes
 
-There are two DoFs in the system, two masses are connected to fixed points via nonlinear elastic springs.
+There are two DoFs in the system; two masses are connected to fixed points via nonlinear elastic springs.
 In order to do so, we define four nodes.
 
 ```text
@@ -46,15 +45,14 @@ To model it, we use the [Sinh1D](../../../Library/Material/Material1D/Elastic/Si
 material Sinh1D 3 1000
 ```
 
-The middle spring is a linear spring, we simply
-use the [Elastic1D](../../../Library/Material/Material1D/Elastic/Elastic1D.md) material.
+The middle spring is a linear spring, so we simply use the [Elastic1D](../../../Library/Material/Material1D/Elastic/Elastic1D.md) material.
 
 ```text
 material Elastic1D 2 100
 ```
 
-The dashpot is linear. We use $$\alpha=1$$
-in the [Viscosity01](../../../Library/Material/Material1D/Viscosity/Viscosity01.md) material.
+The dashpot is linear.
+We use $$\alpha=1$$ in the [Viscosity01](../../../Library/Material/Material1D/Viscosity/Viscosity01.md) material.
 The viscosity coefficient is $$5$$.
 
 ```text
@@ -63,9 +61,7 @@ material Viscosity01 4 1 5
 
 ### Elements
 
-The springs can be modelled by using either [T2D2](../../../Library/Element/Truss/T2D2.md), which uses strain and strain
-rate as the basic quantities, or [Spring01](../../../Library/Element/Special/Spring01.md), which uses displacement and
-velocity as the basic quantities.
+The springs can be modelled by using either [T2D2](../../../Library/Element/Truss/T2D2.md), which uses strain and strain rate as the basic quantities, or [Spring01](../../../Library/Element/Special/Spring01.md), which uses displacement and velocity as the basic quantities.
 
 ```text
 element Spring01 1 1 2 1
@@ -88,7 +84,8 @@ mass 6 3 1 1
 
 ### IBC
 
-The vertical DoFs of all nodes shall be fixed. The horizontal DoFs of the first and last nodes shall be fixed.
+The vertical DoFs of all nodes shall be fixed.
+The horizontal DoFs of the first and last nodes shall be fixed.
 
 ```text
 fix2 1 1 1 4
@@ -103,8 +100,8 @@ initial velocity 100 1 2
 
 ### Load
 
-To apply a step load, one shall use tabular amplitude to define the load curve. The following table can be stored in
-file `h`.
+To apply a step load, one shall use a tabular amplitude to define the load curve.
+The following table can be stored in the file `h`.
 
 ```text
 0 0
@@ -134,8 +131,8 @@ hdf5recorder 2 Node V1 2 3
 
 ### Step and Analysis
 
-The remaining settings are pretty standard. We use a dynamic step with a default integration
-scheme ([Newmark](../../../Library/Integrator/Implicit/Newmark/Newmark.md)).
+The remaining settings are pretty standard.
+We use a dynamic step with a default integration scheme ([Newmark](../../../Library/Integrator/Implicit/Newmark/Newmark.md)).
 If one wishes, other integration schemes can be used.
 
 ```text

@@ -15,8 +15,8 @@ material LinearDamage (1) (2) (3) (4) [5]
 
 ## Theory
 
-In this model, the equivalent total strain is used to characterize the damage development, namely, $$d=f(\varepsilon_
-{eq})$$. Then the final response is defined as
+In this model, the equivalent total strain is used to characterize the damage development, namely, $$d=f(\varepsilon_{eq})$$.
+Then the final response is defined as
 
 $$
 \mathbf\sigma=d\mathbf{\bar\sigma},

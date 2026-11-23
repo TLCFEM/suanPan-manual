@@ -4,8 +4,8 @@ Nonlinear Version of AFC
 
 ## Theory
 
-The difference between the [`AFC`](AFC.md) model and this AFCN model is the initial loading part. This AFCN model
-accounts for additional slip-lock effect.
+The difference between the [`AFC`](AFC.md) model and this AFCN model is the initial loading part.
+This AFCN model accounts for an additional slip-lock effect.
 
 ## Syntax
 

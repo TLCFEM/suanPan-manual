@@ -1,6 +1,6 @@
 # domain
 
-The `domain` command can be used to create new problem domains or switch from one to another.
+The `domain` command creates a new problem domain or switches to an existing one.
 
 ## Syntax
 
@@ -11,8 +11,9 @@ domain (1)
 
 ## Example
 
-The program adopts a domain concept so that it could hold multiple domains (problems) at the same time. The program
-starts with a default domain labelled with tag 1. Following output can be seen if a debug version is executed.
+The program uses a domain concept so that it can hold multiple domains (problems) at the same time.
+It starts with a default domain labelled with tag 1.
+The following output is seen when a debug build is executed.
 Irrelevant information has been removed for simplicity.
 
 ```
@@ -30,7 +31,7 @@ debug: Domain 1 ctor() called.
 suanPan ~<>
 ```
 
-By using the `domain` command, readers can create/switch to other domains, if necessary.
+Use the `domain` command to create or switch to other domains.
 
 ```
 suanPan ~<> domain 2
@@ -39,7 +40,7 @@ create_new_domain() successfully creates Domain 2.
 suanPan ~<>
 ```
 
-Of course, domains can be deleted by using `erase`, `remove` or `delete`.
+Domains can be deleted with `erase`, `remove` or `delete`.
 
 ```
 suanPan ~<> domain 2
@@ -68,9 +69,11 @@ erase_domain() switches to Domain 1.
 suanPan ~<>
 ```
 
-Five domains are created. When `remove domain 2` is invoked, the current domain is `5`, so `2` is safely removed.
-When `erase domain 5` is invoked, the current domain 5 is then deleted; by default, the program switches to the first
-domain in the storage, which could be other domains, not necessarily `1`. When `domain 4` is invoked, `4` already exists in
-the storage so instead of creating a new one, the program switches to the existing one.
+Five domains are created.
+When `remove domain 2` is invoked, the current domain is `5`, so `2` is safely removed.
+When `erase domain 5` is invoked, the current domain 5 is deleted.
+By default, the program then switches to the first domain in storage, which is not necessarily `1`.
+When `domain 4` is invoked, `4` already exists in storage, so the program switches to the existing domain instead of creating a new one.
 
-Within each domain, an independent model can be defined; when the `analyze` command is called, all domains will be analyzed.
+Within each domain, an independent model can be defined.
+When the `analyze` command is called, all domains are analyzed.

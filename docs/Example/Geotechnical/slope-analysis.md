@@ -24,7 +24,7 @@ $$
 \phi=\arctan\dfrac{\tan\phi'}{\text{FoS}},
 $$
 
-where $$\phi'=20^\circ$$ is the internal angle of friction.  
+where $$\phi'=20^\circ$$ is the internal angle of friction.
 
 The mesh is defined in the files `nodes.supan` and `elements.supan` presented in the zip file.
 
@@ -41,7 +41,7 @@ material PlaneStrain 2 1
 ```
 
 For more information on how to compute the parameters, please check [this](../../Library/Material/Material3D/DruckerPrager/NonlinearDruckerPrager.md) page.
-In this problem, the Drucker-Prager yield surface circumscribes the Mohr-Coulomb yield surface. 
+In this problem, the Drucker-Prager yield surface circumscribes the Mohr-Coulomb yield surface.
 
 ## BCs and Loading
 

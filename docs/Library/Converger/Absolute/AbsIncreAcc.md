@@ -8,7 +8,7 @@ $$
 \mathbf{M\cdot\Delta{}A=R},
 $$
 
-this converger tests the norm of displacement increment, viz.,
+this converger tests the norm of acceleration increment, viz.,
 
 $$
 \left|\mathbf{\Delta{}A}\right|_\infty\leqslant{}tol.

@@ -17,14 +17,12 @@ Additional material on the same topic can be found in the following literature.
 2. [10.1007/s11831-023-10022-1](https://doi.org/10.1007/s11831-023-10022-1)
 3. [10.1007/s11831-022-09880-y](https://doi.org/10.1007/s11831-022-09880-y)
 
-Prof. Koichi Hashiguchi has published a large amount of papers on this topic.
+Prof. Koichi Hashiguchi has published a large number of papers on this topic.
 To find more references, please refer to the monograph and the references therein.
 
 ## Theory
 
-Refer to the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
-for theory, formulation and implementation details.
+Refer to the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf) for theory, formulation and implementation details.
 
 ## Syntax
 

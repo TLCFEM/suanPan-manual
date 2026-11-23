@@ -3,10 +3,8 @@
 Uniaxial Bilinear Material Using J2 Plasticity
 
 The `Bilinear1D` material implements a simple plasticity model that employs both linear isotropic and kinematic hardening rules.
-Further details can be found in Section 1.4.4 of [Computational Inelasticity ](https://doi.org/10.1007/b98904).
-Alternatively, refer to the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
-for implementation details.
+Further details can be found in Section 1.4.4 of [Computational Inelasticity](https://doi.org/10.1007/b98904).
+Alternatively, refer to the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf) for implementation details.
 
 It is suitable for simple hysteresis modelling.
 For more complex behaviour, one shall use other models.
@@ -32,9 +30,9 @@ material Bilinear1D (1) (2) (3) [4] [5] [6]
 
 ## Remarks
 
-1. The parameter `beta` is employed for the mixed hardening rule: zero $$0.0$$ for kinematic hardening and unity $$1.0$$ for
-   isotropic hardening; anything in the range indicates a mixed hardening response.
-2. Negative hardening ratio (softening) is supported. However, the yield surface will always be non-negative.
+1. The parameter `beta` is employed for the mixed hardening rule: zero $$0.0$$ for kinematic hardening and unity $$1.0$$ for isotropic hardening; anything in the range indicates a mixed hardening response.
+2. Negative hardening ratio (softening) is supported.
+   However, the yield surface will always be non-negative.
 
 ## Usage
 

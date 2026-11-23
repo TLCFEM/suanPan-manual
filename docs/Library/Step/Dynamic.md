@@ -34,5 +34,4 @@ step explicitdynamic (1) [2]
 
 ### Remarks
 
-1. The [`Tchamwa`](../Integrator/Explicit/Tchamwa.md) with spectral radius of $$0.8$$ is automatically enabled if there is no
-   valid integrator defined.
+1. The [`Tchamwa`](../Integrator/Explicit/Tchamwa.md) with spectral radius of $$0.8$$ is automatically enabled if there is no valid integrator defined.

@@ -2,8 +2,7 @@
 
 Nonlinear Viscosity Model
 
-The `NonlinearViscosity` class is an abstract class that provides a general nonlinear framework for implementations of
-various viscous type materials, such as a dashpot.
+The `NonlinearViscosity` class is an abstract class that provides a general nonlinear framework for implementations of various viscous type materials, such as a dashpot.
 
 The stress shall be computed by
 
@@ -12,11 +11,9 @@ $$
 \cdot|\dot\varepsilon|^\alpha.
 $$
 
-The so-called viscosity $$\eta\left(\varepsilon,\dot\varepsilon\right)$$ can be a general function of strain and/or
-strain rate.
+The so-called viscosity $$\eta\left(\varepsilon,\dot\varepsilon\right)$$ can be a general function of strain and/or strain rate.
 
-If the target material is not characterized by the classic power-law, it is possible to pass $$\alpha=0$$ to
-the `NonlinearViscosity` class so that the response becomes
+If the target material is not characterized by the classic power-law, it is possible to pass $$\alpha=0$$ to the `NonlinearViscosity` class so that the response becomes
 
 $$
 \sigma=\eta\left(\varepsilon,\dot\varepsilon\right)
@@ -35,8 +32,8 @@ The default constructor is defined to be
  );
 ```
 
-The second parameter is the exponent $$\alpha$$. The third parameter is a non-negative parameter that defines a segment
-of cubic function that approximates the original exponential function to achieve a better numerical performance.
+The second parameter is the exponent $$\alpha$$.
+The third parameter is a non-negative parameter that defines a segment of a cubic function that approximates the original exponential function to achieve a better numerical performance.
 
 ## Things to Override
 

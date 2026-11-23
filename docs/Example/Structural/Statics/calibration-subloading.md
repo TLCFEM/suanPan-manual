@@ -452,7 +452,7 @@ It is not recommended to define a large linear isotropic hardening.
 
 Since the loading phase always incurs accumulation of plasticity, stable one sided cycles will accumulate plasticity, which further results in larger yield surface if the linear isotropic hardening is present.
 
-The following shows an example with a small amount of linear isotropic hardening. 
+The following shows an example with a small amount of linear isotropic hardening.
 
 
 ```python

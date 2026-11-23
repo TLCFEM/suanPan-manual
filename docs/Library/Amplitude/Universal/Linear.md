@@ -6,8 +6,8 @@ $$
 A(t)=V\langle{}t-t_0\rangle\quad\text{for}\quad{}t>t_0.
 $$
 
-The `Ramp` amplitude is in fact a simplified version with unit slope. It adopts unit time length no matter what the
-current step is and remains unity after that.
+The `Ramp` amplitude is in fact a simplified version with unit slope.
+It adopts unit time length no matter what the current step is and remains unity after that.
 
 $$
 A(t)=\left\{\begin{array}{rl}\langle{}t-t_0\rangle,&t<t_0+1,\\1,&t\ge{}t_0+1.\end{array}\right.

@@ -6,9 +6,7 @@ The continuum mechanics based sign convention (tension is positive) is used for 
 
 The `SimpleSand` model is a simple sand hardening model that adopts a bounding surface concept.
 
-Readers can also refer to the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
-for details on the theory.
+Readers can also refer to the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf) for details on the theory.
 
 ## Syntax
 
@@ -62,8 +60,7 @@ $$
 F=|s+p\alpha|+mp,
 $$
 
-where $$s$$ is the deviatoric stress, $$p$$ is the hydrostatic stress, $$\alpha$$ is the back stress ratio and $$m$$ is
-a constant that controls the size of the wedge.
+where $$s$$ is the deviatoric stress, $$p$$ is the hydrostatic stress, $$\alpha$$ is the back stress ratio and $$m$$ is a constant that controls the size of the wedge.
 
 The following is a visualization of the yield surface in the $$p-q$$ plane.
 
@@ -77,11 +74,9 @@ $$
 \Delta\varepsilon^p=\Delta\gamma{}\left(n+\dfrac{1}{3}DI\right),
 $$
 
-where $$n=\dfrac{s+p\alpha}{|s+p\alpha|}$$ is a unit tensor, $$I$$ is the second order unit tensor and $$D=A\left(
-\alpha^d-\alpha:n\right)$$ is the dilatancy parameter.
+where $$n=\dfrac{s+p\alpha}{|s+p\alpha|}$$ is a unit tensor, $$I$$ is the second order unit tensor and $$D=A\left(\alpha^d-\alpha:n\right)$$ is the dilatancy parameter.
 
-Note due to the change of sign convention, a negative $$D$$ leads to contractive response, thus $$A$$ often needs to be
-negative.
+Note due to the change of sign convention, a negative $$D$$ leads to contractive response, thus $$A$$ often needs to be negative.
 
 ### Hardening Rule
 

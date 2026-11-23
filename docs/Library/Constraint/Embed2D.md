@@ -14,6 +14,4 @@ constraint Embed2D (1) (2) (3)
 ## Remarks
 
 1. The `Embed2D` constraint is only implemented with linear formulation.
-2. Currently, the following host element types are supported: [`CP4`](../Element/Membrane/Plane/CP4.md)
-   , [`CP5`](../Element/Membrane/Plane/CP5.md), [`CP7`](../Element/Membrane/Plane/CP7.md)
-   and [`CP8`](../Element/Membrane/Plane/CP8.md).
+2. Currently, the following host element types are supported: [`CP4`](../Element/Membrane/Plane/CP4.md), [`CP5`](../Element/Membrane/Plane/CP5.md), [`CP7`](../Element/Membrane/Plane/CP7.md) and [`CP8`](../Element/Membrane/Plane/CP8.md).

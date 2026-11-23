@@ -1,11 +1,11 @@
 # modifier
 
-The `modifier` objects are used to modify element response that is not considered in the element itself. Typical examples
-include element damping matrix, lumped mass matrix, etc.
+`modifier` objects modify element response that is not considered in the element itself.
+Typical examples include the element damping matrix and the lumped mass matrix.
 
-It shall be noted that if several modifiers are defined, they are applied on the system in a sequential manner based on
-their tags. No parallel execution can be implemented as different orders may lead to different results.
+If several modifiers are defined, they are applied to the system sequentially in tag order.
+They are not executed in parallel because different orders may lead to different results.
 
-Users shall pay extra attention to the order of definition of modifiers.
+Users should pay extra attention to the order in which modifiers are defined.
 
-Please refer to [`Modifier`](../../Library/Element/Modifier/Modifier.md) for available modifiers.
+Please refer to [`Modifier`](../../Library/Element/Modifier/Modifier.md) for the available modifiers.

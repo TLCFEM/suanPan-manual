@@ -1,16 +1,15 @@
 # RestitutionWall
 
-The [`RigidWall`](RigidWall.md) constraint essentially implements artificial springs to alter the trajectories of 
-nodes. The physical implication is clear but the main issue is that the conservation of energy/momentum cannot be 
-guaranteed.
+The [`RigidWall`](RigidWall.md) constraint essentially implements artificial springs to alter the trajectories of nodes.
+The physical implication is clear but the main issue is that the conservation of energy/momentum cannot be guaranteed.
 
-The `RestitutionWall` constraint adopts a different approach to ensure the assigned restitution is satisfied. If the 
-coefficient of restitution is set to unity, conservation of energy/momentum is guaranteed.
+The `RestitutionWall` constraint adopts a different approach to ensure the assigned restitution is satisfied.
+If the coefficient of restitution is set to unity, conservation of energy/momentum is guaranteed.
 
 ## Syntax
 
-The rigid wall constraints are single sided. Travelling against the outer normal direction is not allowed while the 
-other direction is permitted.
+The rigid wall constraints are single sided.
+Travelling against the outer normal direction is not allowed while the other direction is permitted.
 
 ### 1D
 
@@ -53,8 +52,8 @@ constraint finiterestitutionwall (1) (2...3) (4...5) (6) [7]
 
 ### 3D
 
-The 3D version takes the origin and the normal vector as the inputs. Alternatively, two edges can be specified to 
-define a finite wall.
+The 3D version takes the origin and the normal vector as the inputs.
+Alternatively, two edges can be specified to define a finite wall.
 
 ```
 ! infinite rigid wall by penalty
@@ -80,8 +79,9 @@ constraint finiterestitutionwall (1) (2...4) (5...7) (8...10) (11) [12]
 
 ## Assumptions
 
-It is assumed that the collision occurs within a brief time. As a result, the change of acceleration is not 
-reflected at either $$t_n$$ or $$t_{n+1}$$. The assumptions adopted are shown in the following figure.
+It is assumed that the collision occurs within a brief time.
+As a result, the change of acceleration is not reflected at either $$t_n$$ or $$t_{n+1}$$.
+The assumptions adopted are shown in the following figure.
 
 ![assumptions](RestitutionWall.svg)
 

@@ -4,12 +4,14 @@ Lee's frame is shown as follows.
 
 ![Lee's frame](lees-frame.svg)
 
-The model can be downloaded. [lees-frame.supan](lees-frame.supan)
+The model can be downloaded.
+[lees-frame.supan](lees-frame.supan)
 
 ## Model Setup
 
-Since this is an elastic analysis, we use `EB21` element to model this problem. To suppress axial deformation, a large
-area of $$500$$ is assigned. The node and element definitions can be established as follows.
+Since this is an elastic analysis, we use the `EB21` element to model this problem.
+To suppress axial deformation, a large area of $$500$$ is assigned.
+The node and element definitions can be established as follows.
 
 ```
 node 1 0 0
@@ -41,16 +43,17 @@ fix 1 1 1 11
 fix 2 2 1 11
 ```
 
-Both snap-back and snap-through are involved in this example, so the arc length method shall be used. A reference load of
-magnitude $$-1$$ is applied on DoF 2 of node 7.
+Both snap-back and snap-through are involved in this example, so the arc-length method shall be used.
+A reference load of magnitude $$-1$$ is applied on DoF 2 of node 7.
 
 ```
 refload 1 0 -1 2 7
 step arclength 1
 ```
 
-Here the magnitude of reference load matters. A proper selection of reference load may help to converge. By default,
-the algorithm automatically scales the arc length until a stopping criterion is met.
+Here the magnitude of the reference load matters.
+A proper selection of the reference load may help to converge.
+By default, the algorithm automatically scales the arc length until a stopping criterion is met.
 
 To control the solving strategy, one can control arc length by using
 
@@ -60,8 +63,9 @@ set fixed_step_size true
 set max_iteration 1000
 ```
 
-The above command uses a fixed arc length of $$0.5$$. By default, a maximum of $$1000$$ sub
-steps are allowed, this may not be sufficient, to change it the `set` command can be called.
+The above command uses a fixed arc length of $$0.5$$.
+By default, a maximum of $$1000$$ substeps are allowed.
+This may not be sufficient; to change it, the `set` command can be called.
 
 ```
 criterion MinDisplacement 1 7 2 -3.8

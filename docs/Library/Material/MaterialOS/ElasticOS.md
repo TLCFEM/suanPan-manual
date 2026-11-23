@@ -14,7 +14,8 @@ material ElasticOS (1) (2) (3) [4]
 
 ## Remarks
 
-It has two DoFs. The elastic stiffness can be expressed as
+It has two DoFs.
+The elastic stiffness can be expressed as
 
 $$
 \mathbf{K}=\begin{bmatrix}

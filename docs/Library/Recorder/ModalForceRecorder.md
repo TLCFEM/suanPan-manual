@@ -167,8 +167,7 @@ Typical examples are:
 | three-dimensional solid node      | `U1`, `U2`, `U3`                   |
 | three-dimensional beam/shell node | `U1`, `U2`, `U3`, `UR1`, `UR2`, `UR3` |
 
-For a two-node `Spring01` element in a two-dimensional model, the four rows of `E<tag>` are
-`[U1 of node i, U2 of node i, U1 of node j, U2 of node j]`.
+For a two-node `Spring01` element in a two-dimensional model, the four rows of `E<tag>` are `[U1 of node i, U2 of node i, U1 of node j, U2 of node j]`.
 
 The dataset length is the total number of DoFs of the node or element, including constrained DoFs.
 Constrained components are present in both `N<tag>` and `E<tag>`.

@@ -2,13 +2,12 @@
 
 Maxwell Model
 
-The `Damper02` and `Damper04` are Maxwell models that use **displacement** and **velocity** as inputs, that is, 
-element length is not used to compute strain or strain rate.
+The `Damper02` and `Damper04` are Maxwell models that use **displacement** and **velocity** as inputs, that is, element length is not used to compute strain or strain rate.
 
 ## References
 
-The Maxwell model allows combinations of nonlinear springs and dampers. The algorithm implemented is documented in the
-following paper.
+The Maxwell model allows combinations of nonlinear springs and dampers.
+The algorithm implemented is documented in the following paper.
 
 1. [10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795)
 
@@ -45,8 +44,8 @@ element Damper04 (1) (2) (3) (4) (5) [6] [7] [8]
 
 ## Remarks
 
-1. Parameter `[7]` indicates whether to stack diverged increments into next iteration. If $$0$$ is assigned, the material
-   returns a failure flag as long as local iteration fails to converge. If $$n>0$$, a maximum $$n$$ increments are
-   allowed to be stacked before exit due to divergence.
-2. The `[8]` parameter controls the local time integration, $$\beta\in[0,1]$$ shall be defined. The default value
-   $$0.5$$ implies a constant acceleration rule for the spring component in the Maxwell model.
+1. Parameter `[7]` indicates whether to stack diverged increments into next iteration.
+   If $$0$$ is assigned, the material returns a failure flag as long as local iteration fails to converge.
+   If $$n>0$$, a maximum $$n$$ increments are allowed to be stacked before exit due to divergence.
+2. The `[8]` parameter controls the local time integration, $$\beta\in[0,1]$$ shall be defined.
+   The default value $$0.5$$ implies a constant acceleration rule for the spring component in the Maxwell model.

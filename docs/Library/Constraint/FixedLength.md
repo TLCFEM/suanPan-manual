@@ -1,13 +1,12 @@
 # FixedLength
 
-The Lagrange multiplier method can be used to define constraints. Extra storage is required for the so-called auxiliary
-border stiffness matrix. The constraint is satisfied exactly.
+The Lagrange multiplier method can be used to define constraints.
+Extra storage is required for the so-called auxiliary border stiffness matrix.
+The constraint is satisfied exactly.
 
-The `FixedLength2D` and `FixedLength3D` constraints behave similarly to the `Tie` element; the nonlinear constraint is
-implemented via the Lagrange multiplier method.
+The `FixedLength2D` and `FixedLength3D` constraints behave similarly to the `Tie` element; the nonlinear constraint is implemented via the Lagrange multiplier method.
 
-The position $$\mathbf{x}$$ of a given node can be expressed as the summation of coordinate $$\mathbf{d}$$ and
-displacement $$\mathbf{u}$$.
+The position $$\mathbf{x}$$ of a given node can be expressed as the summation of coordinate $$\mathbf{d}$$ and displacement $$\mathbf{u}$$.
 
 $$
 \mathbf{x}=\mathbf{d}+\mathbf{u}.
@@ -19,8 +18,7 @@ $$
 \Big|\mathbf{x}_i-\mathbf{x}_j\Big|=\Big|\mathbf{d}_i-\mathbf{d}_j\Big|.
 $$
 
-It shall not be used with global damping models in dynamic analysis since it alters the frequency distribution, leading
-to an unintended damping response.
+It shall not be used with global damping models in dynamic analysis since it alters the frequency distribution, leading to an unintended damping response.
 Only damping models that do not depend on system properties can be used.
 
 ## Syntax

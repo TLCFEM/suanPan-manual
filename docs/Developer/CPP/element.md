@@ -2,14 +2,15 @@
 
 ## Abstraction
 
-The abstraction of the `Element` class is defined in the `ElementBase` class. Readers can check that header to get an
-overall picture of all methods implemented.
+The abstraction of the `Element` class is defined in the `ElementBase` class.
+Readers can check that header to get an overall picture of all methods implemented.
 
 ## Variables and Methods
 
-The `Element` class manages two states by default: current converged state and trial state. Accordingly, several
-built-in variables are defined, they are grouped in a struct. Some frequently used variables are listed as follows. A
-complete list can be found in the header of `Element` class.
+The `Element` class manages two states by default: current converged state and trial state.
+Accordingly, several built-in variables are defined, and they are grouped in a struct.
+Some frequently used variables are listed as follows.
+A complete list can be found in the header of the `Element` class.
 
 ```cpp
 struct ElementData {
@@ -58,9 +59,10 @@ struct ElementData {
 };
 ```
 
-There are some built-in methods to get nodal information. The purposes are indicated by method names. These methods are
-implemented through the stored node pointers. The same functionalities can be reimplemented manually; otherwise, those
-predefined methods are sufficient in most cases.
+There are some built-in methods to get nodal information.
+The purposes are indicated by method names.
+These methods are implemented through the stored node pointers.
+The same functionalities can be reimplemented manually; otherwise, those predefined methods are sufficient in most cases.
 
 ```cpp
 mat get_coordinate(unsigned) const;
@@ -98,16 +100,16 @@ The most common constructor looks like this.
  );
 ```
 
-Some elements are based on sections while some elements are based on integration points that are directly tied to
-material models. The above is the constructor used for material based elements. The number of nodes and the number of
-DoFs per node shall be passed to `Element` class so that the connected nodes can be correctly initialized, as well as
-all related matrices. Either material tags or section tags shall be passed to define the element. During initialization,
-if no proper material/section tag is provided, the target element will be disabled. Also, the associated
-material/section model will be checked if the dimension matches. The nonlinear geometry switch allows the nonlinear
-version to be implemented in the same class.
+Some elements are based on sections, while others are based on integration points that are directly tied to material models.
+The above is the constructor used for material-based elements.
+The number of nodes and the number of DoFs per node shall be passed to the `Element` class so that the connected nodes and all related matrices can be correctly initialized.
+Either material tags or section tags shall be passed to define the element.
+During initialization, if no proper material/section tag is provided, the target element will be disabled.
+Also, the associated material/section model will be checked to see if the dimension matches.
+The nonlinear geometry switch allows the nonlinear version to be implemented in the same class.
 
-There are some other constructors. The following one can be used to define elements that depend on node groups (a number
-of nodes organized in groups).
+There are some other constructors.
+The following one can be used to define elements that depend on node groups (a number of nodes organized in groups).
 
 ```cpp
  Element(unsigned, // tag
@@ -136,9 +138,9 @@ Any derived element class shall implement the initializer.
 virtual void initialize(const shared_ptr<DomainBase>&) = 0;
 ```
 
-This method takes a `DomainBase` pointer that allows the target element to acquire material/section objects and/or other
-necessary information to initialize the element. A better illustration can be seen in an example element implementation.
-For the moment, we only need to know this must be overridden.
+This method takes a `DomainBase` pointer that allows the target element to acquire material/section objects and/or other necessary information to initialize the element.
+A better illustration can be seen in an example element implementation.
+For the moment, we only need to know that this must be overridden.
 
 The `Element` class itself provides an initializer to initialise common variables.
 
@@ -148,33 +150,33 @@ void initialize_base(const shared_ptr<DomainBase>&) override final;
 
 A number of tasks are performed in the default initialization.
 
-1.  Check if all involved nodes are active, if not, the element will be disabled.
-2.  Check the current number of DoFs of each involved node, if it is smaller than that required by the current element,
-    then reset it.
-3.  Check if there is a valid and active material/section model based on the corresponding tag provided in the
-    constructor, if not, the element will be disabled.
-4.  On the second run, check again if all nodes are active, if not, the element will be disabled.
+1.  Check if all involved nodes are active; if not, the element will be disabled.
+2.  Check the current number of DoFs of each involved node, and if it is smaller than that required by the current element, then reset it.
+3.  Check if there is a valid and active material/section model based on the corresponding tag provided in the constructor; if not, the element will be disabled.
+4.  On the second run, check again if all nodes are active; if not, the element will be disabled.
 
 ## General Procedure
 
-The main task of an element is to provide force response based on the trial nodal displacements. In the meantime, the
-corresponding matrices such as tangent stiffness, or tangent modulus in 1D case, shall be provided.
+The main task of an element is to provide force response based on the trial nodal displacements.
+In the meantime, the corresponding matrices such as tangent stiffness, or tangent modulus in the 1D case, shall be provided.
 
-The only entrance to update an element is the method `update_status()`. All trial state associated variables shall be
-updated in this method. Then several getters are available to return the corresponding variables. This is the default
-strategy adopted by all existing elements. However, there are other options. For some solvers, the number of calls to
-get, for example, trial resistance would be multiples of that to get tangent stiffness. For some algorithms, tangent
-stiffness matrix will only be assembled in the first iteration of each sub-step. In this case, it would be unnecessary
-to update trial stiffness in each call of `update_status()`, rather, it can be implemented in the
-getter `get_trial_stiffness()` to minimize the computational cost. This is not chosen by default to simplify the
-development. Please check the following section for details.
+The only entrance to update an element is the method `update_status()`.
+All trial state associated variables shall be updated in this method.
+Then several getters are available to return the corresponding variables.
+This is the default strategy adopted by all existing elements.
+However, there are other options.
+For some solvers, the number of calls to get, for example, trial resistance would be multiples of that to get tangent stiffness.
+For some algorithms, the tangent stiffness matrix will only be assembled in the first iteration of each sub-step.
+In this case, it would be unnecessary to update trial stiffness in each call of `update_status()`; rather, it can be implemented in the getter `get_trial_stiffness()` to minimize the computational cost.
+This is not chosen by default to simplify development.
+Please check the following section for details.
 
 ## Two Paths
 
 ### If You Decide To Use Predefined Variables
 
-The predefined variables are sufficient to manage element state in most cases. If so, only four methods shall be
-implemented.
+The predefined variables are sufficient to manage element state in most cases.
+If so, only four methods shall be implemented.
 
 ```cpp
 virtual int update_status() = 0; // update trial
@@ -183,20 +185,21 @@ virtual int commit_status() = 0; // commit trial to current
 virtual int reset_status() = 0;  // reset trial to current
 ```
 
-The latter three manage states. Normally it is necessary to call the corresponding methods in all related
-material/section models if the implemented element itself does not store history variables. As the name suggests, we
-need to update the trial state in the first method. A general procedure would be:
+The latter three manage states.
+Normally it is necessary to call the corresponding methods in all related material/section models if the implemented element itself does not store history variables.
+As the name suggests, we need to update the trial state in the first method.
+A general procedure would be:
 
 1.  obtain nodal displacement/velocity vector by calling for example `get_trial_displacement()`,
 2.  compute strain at each integration point,
 3.  update material models using new trial strains,
-4.  get material response and form element resistance and stiffness matrix. If necessary, mass/damping matrix shall be
-    updated according to the new trial state.
+4.  get material response and form element resistance and stiffness matrix.
+    If necessary, the mass/damping matrix shall be updated according to the new trial state.
 
 ### If You Decide To Manage States In Your Way
 
-In this case, probably all built-in variables won't be used. To manage states, following additional methods shall be
-overridden.
+In this case, probably all built-in variables won't be used.
+To manage states, the following additional methods shall be overridden.
 
 ```cpp
 virtual const vec& get_trial_resistance() const;
@@ -223,25 +226,18 @@ virtual const mat& get_initial_secant() const;
 
 As a general guideline, here are some conventions to follow:
 
-1.  It is not recommended to use the second approach, that is, managing internal variables at derived class level, unless
-    all methods are carefully implemented.
-2.  All state updates, including all history variables, shall only happen in the `update_status()` method, as all get
-    methods are declared as `const`.
-3.  It is sometimes useful to update trial strain related variables only in `update_status()` and compute responses in
-    the corresponding getters. In that case, a `const_cast` is required. By doing so, developers must clearly know what
-    the operation means. A typical example would be, for example, the modified Newton algorithm or
-    the [`BFGS`](../../Library/Solver/BFGS.md) method, in which `update_status()` will only be called once and getters of
-    resistances and matrices would be called several times for each iteration in each sub-step. Splitting updater and
-    getters apart will for sure save some computation efforts but is also error-prone.
-4.  Normally the damping matrix and the mass matrix shall only be defined as functions of current state at most --- if
-    they are not constants. Essentially, they cannot be functions of trial strain/displacement if a quadratic convergence
-    rate shall be preserved.
-5.  If the stiffness matrix is constant throughout the analysis, it is recommended to use
-    function `ConstantStiffness(ElementData*)` to declare such a feature in order to save some memory.
-6.  If the damping matrix is constant throughout the analysis, it is recommended to use
-    function `ConstantDamping(ElementData*)` to declare such a feature in order to save some memory.
-7.  If the mass matrix is constant throughout the analysis, it is recommended to use
-    function `ConstantMass(ElementData*)` to declare such a feature in order to save some memory.
+1.  It is not recommended to use the second approach, that is, managing internal variables at the derived class level, unless all methods are carefully implemented.
+2.  All state updates, including all history variables, shall only happen in the `update_status()` method, as all get methods are declared as `const`.
+3.  It is sometimes useful to update trial strain related variables only in `update_status()` and compute responses in the corresponding getters.
+    In that case, a `const_cast` is required.
+    By doing so, developers must clearly know what the operation means.
+    A typical example would be the modified Newton algorithm or the [`BFGS`](../../Library/Solver/BFGS.md) method, in which `update_status()` will only be called once and getters of resistances and matrices would be called several times for each iteration in each sub-step.
+    Splitting the updater and getters apart will surely save some computational effort but is also error-prone.
+4.  Normally the damping matrix and the mass matrix shall only be defined as functions of the current state at most --- if they are not constants.
+    Essentially, they cannot be functions of trial strain/displacement if a quadratic convergence rate shall be preserved.
+5.  If the stiffness matrix is constant throughout the analysis, it is recommended to use the function `ConstantStiffness(ElementData*)` to declare such a feature in order to save some memory.
+6.  If the damping matrix is constant throughout the analysis, it is recommended to use the function `ConstantDamping(ElementData*)` to declare such a feature in order to save some memory.
+7.  If the mass matrix is constant throughout the analysis, it is recommended to use the function `ConstantMass(ElementData*)` to declare such a feature in order to save some memory.
 
 ## Record Response
 
@@ -251,15 +247,14 @@ To record response, simply override
 virtual vector<vec> record(OutputType);
 ```
 
-A number of physical variables can be identified and output accordingly in this method. Except for some special elements
-that store element-wise variables, most elements would directly forward call `record(OutputType)` in the associated
-material objects following the order of integration points and generate and return a `vector<vec>`.
+A number of physical variables can be identified and output accordingly in this method.
+Except for some special elements that store element-wise variables, most elements would directly forward the call to `record(OutputType)` in the associated material objects following the order of integration points and generate and return a `vector<vec>`.
 
 ## Remarks
 
-In general, implementing a new element class is not a difficult task. Basically, there are two things to do: 1)
-initialize the element correctly and 2) update element status using nodal information in a correct, iterative way. The
-remaining is automatically handled by the base class.
+In general, implementing a new element class is not a difficult task.
+Basically, there are two things to do: 1) initialize the element correctly and 2) update element status using nodal information in a correct, iterative way.
+The remainder is automatically handled by the base class.
 
 For different dimensions, here are some very simple elements implemented for reference.
 

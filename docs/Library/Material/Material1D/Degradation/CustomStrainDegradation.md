@@ -2,8 +2,7 @@
 
 Strain History Based Degradation With Custom Rules
 
-This model implements the [universal damage model](Degradation.md) assuming the degradation factor depends on
-the strain history.
+This model implements the [universal damage model](Degradation.md) assuming the degradation factor depends on the strain history.
 
 ## Syntax
 
@@ -26,5 +25,4 @@ D_{pos}=D_{pos}(\varepsilon_{max}),\quad
 D_{neg}=D_{neg}(\varepsilon_{min}).
 $$
 
-In which $$\varepsilon_{max}$$ is the maximum strain (positive) of the whole loading history,
-and $$\varepsilon_{min}$$ is the minimum strain (negative) of the whole loading history.
+Here $$\varepsilon_{max}$$ is the maximum strain (positive) of the whole loading history, and $$\varepsilon_{min}$$ is the minimum strain (negative) of the whole loading history.

@@ -14,4 +14,4 @@ All principal values are identical to the normal ones for uniaxial material mode
 Depending on the specific material model, additional output types may be available.
 
 The history vector is a vector of variadic length that stores the necessary history variables for the material model.
-Different material models may have different history variable storage layout.
+Different material models may have different history variable storage layouts.

@@ -1,10 +1,10 @@
 # load
 
-The `load` command is used to create loads applied on nodes.
+The `load` command creates loads applied to nodes.
 
-Currently, concentrated node based loads can be applied in terms of force, displacement and acceleration. Given that 
-all external forces are eventually converted to concentrated nodal forces, commands for distributed load patterns 
-may not be available in the foreseeable future.
+Currently, concentrated node-based loads can be applied in terms of force, displacement and acceleration.
+All external forces are eventually converted to concentrated nodal forces.
+Commands for distributed load patterns may therefore not be available in the foreseeable future.
 
 All loads are initialised and processed in **parallel** via global mutexes.
 
@@ -18,7 +18,7 @@ load <load_type> <unique_tag> <arguments that define the specific load...>
 
 ### Nodal Load
 
-To apply loads on nodes,
+To apply loads to nodes,
 
 ```text title="nodalload"
 # to apply nodal concentrated force
@@ -47,7 +47,8 @@ The keyword `cload` is the abbreviation for **c**oncentrated **load**.
 
 ### Body Force
 
-Some elements support body force. Indications are given for elements that support body force in the corresponding pages.
+Some elements support body force.
+The corresponding element pages indicate which elements support it.
 
 ```text title="bodyforce"
 bodyforce (1) (2) (3) (4) (5...)
@@ -59,9 +60,9 @@ load bodyforce (1) (2) (3) (4) (5...)
 # (5...) int, element tags
 ```
 
-### Load Applied To Node/Element Groups
+### Load Applied to Node/Element Groups
 
-To apply loads on groups,
+To apply loads to groups,
 
 ```text title="groupload"
 # on node groups
@@ -83,8 +84,8 @@ load groupbodyforce (1) (2) (3) (4) (5...)
 
 ### Support Excitation
 
-For response history analysis, sometimes it is necessary to apply excitations on supports.
-The multi-support excitation is automatically supported if analysts assign different excitations to different supports.
+For response history analysis, it is sometimes necessary to apply excitations to supports.
+Multi-support excitation is automatically supported when different excitations are assigned to different supports.
 
 ```text title="support"
 supportdisplacement (1) (2) (3) (4) (5...)
@@ -100,32 +101,32 @@ load supportacceleration (1) (2) (3) (4) (5...)
 # (5...) int, node tags
 ```
 
-Essentially, `supportdisplacement`, `supportvelocity` and `supportacceleration` are all implemented as displacement
-loads, thus displacement controlled scheme is automatically enabled.
+Essentially, `supportdisplacement`, `supportvelocity` and `supportacceleration` are all implemented as displacement loads.
+A displacement-controlled scheme is therefore enabled automatically.
 
-Although it is designed to be used in response history analysis, it can also be used to apply acceleration/velocity on
-any nodes (not only supports).
+Although designed for response history analysis, these commands can also apply acceleration or velocity to any nodes, not only supports.
 
 !!! warning "difference in explicit and implicit dynamic analysis"
-    Implicit time integration schemes use displacement as the primary variable, thus `supportdisplacement`, `supportvelocity` and `supportacceleration`
-    all convert to the corresponding nodal displacement.
-    However, explicit time integration schemes use acceleration as the primary variable, and there is no way to obtain the corresponding nodal displacement/velocity from the acceleration (because they are explicit methods).
+    Implicit time integration schemes use displacement as the primary variable.
+    Thus, `supportdisplacement`, `supportvelocity` and `supportacceleration` all convert to the corresponding nodal displacement.
+    Explicit time integration schemes use acceleration as the primary variable.
+    Because they are explicit methods, there is no way to obtain the corresponding nodal displacement or velocity from the acceleration.
     Thus, in explicit dynamic analysis, `supportdisplacement` is identical to `supportacceleration`, as both apply acceleration to the nodes.
     `supportvelocity` is not available in explicit dynamic analysis.
 
 #### Validation
 
-The algorithms implemented are **not** some naive integration.
+The algorithms implemented are **not** a naive integration.
 **All support excitations are guaranteed to be consistent with the time integration scheme used.**
-This means, the exact same input can be observed in the output for all interpolating methods.
-Extrapolating methods will not guarantee the exact same input in the output.
+For all interpolating methods, the exact same input can be observed in the output.
+Extrapolating methods do not guarantee the exact same input in the output.
 
 The following validation can be obtained via the [script](support-motion-validation.py).
 It defines a simple column and applies a support motion at the base (fixed) end of the column.
 It measures both the top (free) end displacement and the base (fixed) end acceleration.
 
-Interpolating schemes will produce the same acceleration history at the base as the input.
-Extrapolating schemes yield some difference since they extrapolate.
+Interpolating schemes produce the same acceleration history at the base as the input.
+Extrapolating schemes yield some difference because they extrapolate.
 Such an error may cause spurious responses in the structure.
 This problem is discussed in [this](https://doi.org/10.1080/13632469.2024.2372814) paper.
 
@@ -146,12 +147,12 @@ load lineudl3d (1) (2) (3) (4) (5...)
 # (5...) int, node tags
 ```
 
-The magnitude can be either positive or negative, applying the load to different directions of the assigned DoF.
-Only translational DoFs are supported, thus, use `1`, `2`, `3`, `U1`, `U2`, `U3` only.
+The magnitude can be either positive or negative, which applies the load in different directions of the assigned DoF.
+Only translational DoFs are supported, so use `1`, `2`, `3`, `U1`, `U2` or `U3` only.
 
 ### Reference Load
 
-For arc-length analysis, reference load can be defined via the `RefForce` command.
+For arc-length analysis, a reference load can be defined with the `RefForce` command.
 
 ```text title="refload"
 refforce (1) (2) (3) (4) (5...)
@@ -167,21 +168,20 @@ load refload (1) (2) (3) (4) (5...)
 
 ## Remarks
 
-1.  The leading `load` keyword can often be omitted for simplicity.
-2.  The `acceleration` is by default applied to all active nodes in the model if `[5...]` is not assigned.
-3.  The true load magnitude is the product of nominal magnitude and amplitude. This is similar to ABAQUS.
-4.  The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if
-    a `displacement` or `groupdisplacement` is used.
-5.  Optionally, the displacement can be applied by using [`MPC`](../../Library/Constraint/MPC.md) constraint.
-6.  The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if
-    `supportdisplacement`, `supportvelocity` and/or `supportacceleration` are used.
+1. The leading `load` keyword can often be omitted for simplicity.
+2. By default, `acceleration` is applied to all active nodes in the model if `[5...]` is not assigned.
+3. The true load magnitude is the product of the nominal magnitude and the amplitude.
+   This is similar to ABAQUS.
+4. The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if a `displacement` or `groupdisplacement` is used.
+5. Optionally, the displacement can be applied with an [`MPC`](../../Library/Constraint/MPC.md) constraint.
+6. The multipoint displacement control algorithm [`MPDC`](../../Library/Solver/MPDC.md) is automatically enabled if `supportdisplacement`, `supportvelocity` and/or `supportacceleration` are used.
 
-**It must be noted that nodal displacement loads are only valid for one single step.**
-This means, if a displacement load is defined within a step, it will be activated for that step only.
+**It must be noted that nodal displacement loads are only valid for a single step.**
+If a displacement load is defined within a step, it is activated for that step only.
 
-All other load types will stay active once they are activated.
+All other load types stay active once activated.
 
-The DoF identifier may take the following.
+The DoF identifier can take the following values.
 Accepted inputs vary with the selected element type(s) and the problem type.
 
 | identifier       | implies                                                             | of type                          |

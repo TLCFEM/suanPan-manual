@@ -44,5 +44,5 @@ set fixed_step_size (1)
 
 ## Remarks
 
-1. A [`Ramm`](../Solver/Ramm.md) solver with default parameters is automatically enabled if no valid `Ramm` solver is
-   defined. Not all storage schemes are supported; please check `Ramm` documentation.
+1. A [`Ramm`](../Solver/Ramm.md) solver with default parameters is automatically enabled if no valid `Ramm` solver is defined.
+   Not all storage schemes are supported; please check `Ramm` documentation.

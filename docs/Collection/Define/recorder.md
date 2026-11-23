@@ -2,9 +2,9 @@
 
 Model response can be recorded and output in a tabular fashion.
 
-Currently, there are two main file formats supported:
+Two main file formats are currently supported:
 
 1. plain text,
-2. hdf5 file.
+2. HDF5 file.
 
-Please check [Recorder.md](../../Library/Recorder/Recorder.md) for details.
+Please refer to [Recorder.md](../../Library/Recorder/Recorder.md) for details.

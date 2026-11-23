@@ -1,14 +1,16 @@
 # [★★★★★] Evolutionary Structural Optimization of A Cantilever Beam
 
-In this example, the optimization of a loaded panel is performed by using the BESO method. The model can be
-downloaded [here](evolutionary-structural-optimization.zip).
+In this example, the optimization of a loaded panel is performed by using the BESO method.
+The model can be downloaded [here](evolutionary-structural-optimization.zip).
 
 ## Design Domain
 
-The design domain has dimensions of $$100\times40$$ with left side fully fixed. At the center of the right side, a
-point load is applied. The panel is discretized with $$4000$$ `CP4` elements.
+The design domain has dimensions of $$100\times40$$, with its left side fully fixed.
+At the center of the right side, a point load is applied.
+The panel is discretized with $$4000$$ `CP4` elements.
 
-The node and elements are defined in files `node.supan` and `element.supan`. They can be loaded.
+The nodes and elements are defined in the files `node.supan` and `element.supan`.
+They can be loaded.
 
 ```
 file node.supan
@@ -30,10 +32,8 @@ To perform structural optimization, an [`Optimization`](../../../Library/Step/Op
 step Optimization 1
 ```
 
-To define a proper rule to update the model by adding/deleting elements, one can use
-the [`StrainEnergyEvolution`](../../../Library/Criterion/StrainEnergyEvolution.md) criterion. The following command
-defines a strain energy based evolution rule with an increment step of $$2\%$$ to reach the final design level $$50\%$$,
-that is, to remove $$50\%$$ of the elements.
+To define a proper rule to update the model by adding/deleting elements, one can use the [`StrainEnergyEvolution`](../../../Library/Criterion/StrainEnergyEvolution.md) criterion.
+The following command defines a strain-energy-based evolution rule with an increment step of $$2\%$$ to reach the final design level of $$50\%$$, that is, to remove $$50\%$$ of the elements.
 
 ```
 criterion StrainEnergyEvolution 1 2 50 1 1 40

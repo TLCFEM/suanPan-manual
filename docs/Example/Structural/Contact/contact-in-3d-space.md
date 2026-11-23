@@ -2,16 +2,15 @@
 
 The simplest case in 3D space would be node to triangular facet contact.
 
-In this example, we show how to model 3D contact problems by using both penalty function method and Lagrangian
-multiplier method.
+In this example, we show how to model 3D contact problems by using both the penalty function method and the Lagrangian multiplier method.
 
 The model scripts can be [downloaded](contact-in-3d-space.supan).
 
 ## The Model
 
-The contact itself does not need to be defined on any discrete surfaces of elements. Instead, the facet is always
-formulated by the given three nodes. Thus, contacts can be defined on, for example, plate/shell surfaces,
-cube/tetrahedron surfaces, or even three nodes only.
+The contact itself does not need to be defined on any discrete surfaces of elements.
+Instead, the facet is always formulated by the given three nodes.
+Thus, contacts can be defined on, for example, plate/shell surfaces, cube/tetrahedron surfaces, or even three nodes only.
 
 Here we define a square flat shell with one edge clamped.
 
@@ -58,7 +57,8 @@ Once the deformed free end reaches the shell, contact occurs.
 
 ## Define Contact
 
-The facet is defined by nodes `3`, `6` and `10`. The slave node is `2`.
+The facet is defined by nodes `3`, `6` and `10`.
+The slave node is `2`.
 
 ```
 constraint NodeFacet 3 2 3 6 10

@@ -16,8 +16,10 @@ material MultilinearMises1D (1) (2) (3) ((4) (5)...)
 ## Remarks
 
 1. No kinematic hardening is defined in this model.
-2. The stress will be constant after the last point defined. This means the yield surface does not change its size after
-   the last point. So the stiffness will be singular. This may cause instability issues in analysis.
+2. The stress will be constant after the last point defined.
+   This means the yield surface does not change its size after the last point.
+   So the stiffness will be singular.
+   This may cause instability issues in analysis.
 3. The first plastic strain ***must*** be zero.
 
 ## Usage

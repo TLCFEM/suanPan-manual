@@ -30,8 +30,7 @@ material BilinearOO (1) (2) (3) (4) (5) (6) [7]
 
 ## History Variable Layout
 
-Since it is derived from the [`SimpleHysteresis`](../Hysteresis/SimpleHysteresis.md) model, they share the same history
-variable layout.
+Since it is derived from the [`SimpleHysteresis`](../Hysteresis/SimpleHysteresis.md) model, it shares the same history variable layout.
 
 ## Example
 

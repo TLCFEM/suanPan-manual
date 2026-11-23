@@ -9,7 +9,7 @@ Single Section Analysis
   * Number of DoFs: 3 (AXIAL, STRONG AXIS ROTATION, WEAK AXIS ROTATION)
   * DoF Label: AXIAL, RS, RW
 
-It is often demanded to do a section analysis to see the capacity of the target section, etc.
+It is often necessary to perform a section analysis to determine the capacity of the target section.
 The `SingleSection` element is exactly for this purpose.
 
 To use the element, a proper section shall be defined.

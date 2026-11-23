@@ -1,33 +1,33 @@
 # import
 
-The `import` command is used to load external libraries. Drop the library file `.dll` (or `.so` or `.dylib`) to the same
-folder containing the executable, and one can use the following command to import it.
+The `import` command loads external libraries.
+Place the library file (`.dll`, `.so` or `.dylib`) in the folder containing the executable and use the following command to import it.
 
 ```
 import (1)
 # (1) string, external library name
 ```
 
-There is no need to include file extension.
+The file extension is optional.
 
-If the external library has only one function exported and the name of which coincides with the external library name,
-there is no need to explicitly import the library. It will be done automatically.
+If an external library exports only one function and its name matches the library name, the library does not need to be imported explicitly.
+It is imported automatically.
 
-Say for example, the external library `ElementExample.dll` contains the corresponding function to create an
-external `ElementExample` object. According to the default naming convention, the function will be named
-as `void new_elementexample()`. To define an `ElementExample` element, one can simply use
+For example, the external library `ElementExample.dll` contains the function that creates an external `ElementExample` object.
+By default, the function is named `void new_elementexample()`.
+To define an `ElementExample` element, simply use
 
 ```
 element ElementExample !... element definition goes here
 ```
 
-The program will look up built-in element library to see if `ElementExample` exists. If not, it tries to find a function
-with signature `void new_elementexample()` in the currently loaded external libraries. If still not found, the program
-tries to load `ElementExample.dll`.
+The program first looks in the built-in element library for `ElementExample`.
+If it is not found, the program looks for a function with the signature `void new_elementexample()` in the currently loaded external libraries.
+If it is still not found, the program tries to load `ElementExample.dll`.
 
-If the external library contains more than one function, to use other functions, users need to **explicitly** import the
-library.
+If an external library exports more than one function, users must **explicitly** import the library to use the other functions.
 
-For CPP implementation, a smart pointer, for example `unique_ptr<Element>`, is passed from DLL to main executable. It is
-crucial to ensure both `.dll` and `.exe` are compiled with the same configuration. Otherwise, unexpected errors may
-occur. If possible, always try a C type interface implementation.
+In a C++ implementation, a smart pointer such as `unique_ptr<Element>` is passed from the DLL to the main executable.
+Both the DLL and the executable must be compiled with the same configuration.
+Otherwise, unexpected errors may occur.
+If possible, use a C-type interface instead.

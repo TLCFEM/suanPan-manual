@@ -28,8 +28,8 @@ material MooneyRivlin (1) (2) (3) (4) [5]
 ## Remarks
 
 1. Nonlinear geometry switch shall be turned on in related elements.
-2. The model takes the Green strain as input. To implement any elements that incorporate this material model, the Green
-   strain in Voigt notation shall be passed as strain input.
+2. The model takes the Green strain as input.
+   To implement any elements that incorporate this material model, the Green strain in Voigt notation shall be passed as strain input.
 
 ## Usage
 

@@ -50,8 +50,7 @@ The normal strain is defined according to Alemdar's thesis (Eq. 7.63).
 The shear strains are defined according to Pilkey's book (Eq. 5.3).
 
 Alemdar's thesis and its derivatives use $$\gamma=-2n\phi'$$ to define the shear strain.
-This definition is acceptable for thin-walled sections, where a clear physical implication of parameter $$n$$ can be
-found.
+This definition is acceptable for thin-walled sections, where a clear physical implication of parameter $$n$$ can be found.
 For arbitrary sections, such a definition would be problematic.
 We use a general definition instead.
 Then there are two shear components instead of one.

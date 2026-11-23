@@ -15,14 +15,15 @@ Please note the following.
 
 ## Syntax
 
-**The frequency of the oscillator is used. Its unit is Hertz (Hz).**
+**The frequency of the oscillator is used.**
+**Its unit is Hertz (Hz).**
 
-Please note the natural frequency shall **not** be passed to the command. The natural frequency has a unit of radian per
-second (rad/s).
+The natural frequency must **not** be passed to the command.
+The natural frequency has a unit of radians per second (rad/s).
 
 ### Form A
 
-For an accelerogram record stored in a single column plain text file. The following syntax can be used.
+For an accelerogram record stored in a single-column plain text file, use the following syntax.
 
 ```text title="sdof_response"
 sdof_response (1) (2) (3) (4)
@@ -34,11 +35,11 @@ sdof_response (1) (2) (3) (4)
 
 The accelerogram stores discrete acceleration amplitudes in the first column of the file.
 
-As the accelerogram only provides the amplitudes, the sampling interval must be provided as the `(2)` argument.
+Because the accelerogram only provides the amplitudes, the sampling interval must be provided as the `(2)` argument.
 
 ### Form B
 
-For an accelerogram record stored in a double column plain text file. The following syntax can be used.
+For an accelerogram record stored in a double-column plain text file, use the following syntax.
 
 ```text title="sdof_response"
 sdof_response (1) (2) (3)

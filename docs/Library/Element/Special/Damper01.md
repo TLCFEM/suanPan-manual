@@ -2,8 +2,7 @@
 
 Viscous/Nonviscous Damper
 
-This damper uses **displacement** and **velocity** as inputs, not strain and strain rate, which means element length is
-not used to compute strain or strain rate.
+This damper uses **displacement** and **velocity** as inputs, not strain and strain rate, which means element length is not used to compute strain or strain rate.
 
 ## Damper01
 
@@ -36,5 +35,4 @@ element Damper03 (1) (2) (3) (4)
 
 ## Remarks
 
-Both viscous and nonviscous materials can be used for this element,
-see [Viscosity](../../Material/Material1D/Viscosity/NonlinearViscosity.md).
+Both viscous and nonviscous materials can be used for this element, see [Viscosity](../../Material/Material1D/Viscosity/NonlinearViscosity.md).

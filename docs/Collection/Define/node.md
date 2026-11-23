@@ -1,6 +1,7 @@
 # node
 
-Nodes are basic components in FE models. The `node` command is used to construct nodes.
+Nodes are basic components in FE models.
+The `node` command constructs nodes.
 
 ## Syntax
 
@@ -12,15 +13,15 @@ node (1) [2...]
 
 ## Usage
 
-A unique tag is required to identify different nodes. The tag shall be an unsigned integer, negative values are not
-allowed. Although zero is a valid tag, it is suggested to label nodes starting with one. It is not recommended to use an
-arbitrarily large tag for any node, although the maximum tag is about four billion (`unsigned int`). Any unnecessarily
-large node tag may lead to memory leakage as some functions create matrix depending on the largest node tag to ensure
-all nodes could be stored.
+A unique tag is required to identify different nodes.
+The tag must be an unsigned integer; negative values are not allowed.
+Although zero is a valid tag, it is recommended to number nodes starting from one.
+It is not recommended to use an arbitrarily large tag, although the maximum tag is about four billion (`unsigned int`).
+An unnecessarily large node tag may lead to excessive memory allocation because some functions create matrices sized by the largest node tag to ensure all nodes can be stored.
 
-There is no limitation on the dimension of the node defined.
+There is no limit on the dimension of a node.
 A trivial node (without a location) can be defined as follows.
-Such a node will not be used to define elements in general cases.
+Such a node is generally not used to define elements.
 
 ```
 node 1
@@ -35,9 +36,9 @@ node 3 0.
 node 4 9. 8. 7. 1.
 ```
 
-In fact, during initialisation, the dimension of each node will be double-checked to ensure the connected elements can
-work properly. Meanwhile, excessive dimensions would be ignored (but not discarded) during analysis. If for example one
-is performing a 2D analysis and the model contains the following snippet.
+During initialisation, the dimension of each node is checked to ensure that the connected elements can work properly.
+Any excess dimensions are ignored, but not discarded, during analysis.
+For example, consider a 2D analysis with the following snippet.
 
 ```
 node 1 3.
@@ -45,12 +46,12 @@ node 2 2. 1.
 # later define a 2D element connecting node 1 and node 2
 ```
 
-The dimension of node 1 will be automatically expanded to two with zero filling,
-so node 1 represents node $$(3.0,0.0)$$ in the 2D space.
-If, on the other hand, a 1D analysis is performed, then the second coordinate will be ignored.
+The dimension of node 1 is automatically expanded to two with zero filling.
+Node 1 then represents $$(3.0,0.0)$$ in the 2D space.
+If, on the other hand, a 1D analysis is performed, the second coordinate is ignored.
 
-It is still recommended to define nodes with proper coordinates. Generating a node list from ABAQUS input file is an easy
-task.
+It is still recommended to define nodes with proper coordinates.
+Generating a node list from an ABAQUS input file is straightforward.
 
 ## Output Types
 
@@ -74,13 +75,12 @@ The following quantities can be recorded using the commands similar to `plainrec
 
 ### Remarks
 
-1.  For static analysis, normally only displacement `U` and resistance `RF` are activated. Thus, recording other 
-    quantities returns trivial results.
-2.  If the required quantity is not active, the output will be empty.
-3.  The damping and inertial forces are collected from all the elements in the model. It **must** be noted that the 
-    recorded values do **not** include any contributions that do not stem from elements. For example, the damping 
-    force given by global damping models cannot be split to individual elements; thus it is not reflected in the 
-    nodal damping force. This design is necessary as one may wish to separate contributions from various sources apart.
-4.  To record **global** damping and inertial forces that account for the total force, use `GDF`, `GDF1`, `GDF2`, 
-    `GDF3`, `GDF4`, `GDF5`, `GDF6`, `GIF`, `GIF1`, `GIF2`, `GIF3`, `GIF4`, `GIF5`, `GIF6`, which stand for global 
-    damping force and global inertial force.
+1. For static analysis, normally only displacement `U` and resistance `RF` are activated.
+   Recording other quantities therefore returns trivial results.
+2. If the required quantity is not active, the output is empty.
+3. The damping and inertial forces are collected from all elements in the model.
+   It **must** be noted that the recorded values do **not** include contributions that do not stem from elements.
+   For example, the damping force given by global damping models cannot be split among individual elements, so it is not reflected in the nodal damping force.
+   This design is necessary because one may wish to separate contributions from various sources.
+4. To record **global** damping and inertial forces that account for the total force, use `GDF`, `GDF1`, `GDF2`, `GDF3`, `GDF4`, `GDF5`, `GDF6`, `GIF`, `GIF1`, `GIF2`, `GIF3`, `GIF4`, `GIF5` and `GIF6`.
+   These stand for global damping force and global inertial force.

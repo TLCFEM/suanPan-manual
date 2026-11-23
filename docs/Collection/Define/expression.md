@@ -1,14 +1,14 @@
 # expression
 
-The `expression` command can be used to define mathematical expressions that can be later used to customise relevant material models.
+The `expression` command defines mathematical expressions that can later be used to customise relevant material models.
 
-The `expression` command essentially parses a block of plain text into mathematical expressions.
-The parsing and evaluation functionalities are powered by [`exprtk`](https://github.com/ArashPartow/exprtk).
+The command parses a block of plain text into mathematical expressions.
+The parsing and evaluation functionality is powered by [`exprtk`](https://github.com/ArashPartow/exprtk).
 
-The `exprtk` generates an AST from the input text.
-The evaluation of the expression has performance on par with the native C++ code.
+`exprtk` generates an AST from the input text.
+The evaluation of the expression has performance on par with native C++ code.
 
-But a customisable expression allows for more flexibility and it is easier to experiment with different functions.
+A customisable expression, however, allows more flexibility and makes it easier to experiment with different functions.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ This evaluates a scalar-valued function $$f(x_1,x_2,\cdots,x_n)$$.
 The input arguments can be either scalars or vectors.
 For example, `"x_1|2|x_2"` represents two variables: 1) $$x_1$$ is a vector of size 2 and 2) $$x_2$$ is a scalar.
 The function value is returned as a result.
-The expression should be in the form of, for example, $$x_1^2+x_2^2$$.
+For example, the expression can be $$x_1^2+x_2^2$$.
 
 This form ***supports*** automatic computation of derivatives.
 Thus, it can be used in models that require automatic computation of derivatives.
@@ -50,33 +50,35 @@ Thus, it ***cannot*** be used in models that require automatic computation of de
 
 ## Remarks
 
-1.  The variables in the expression need to be explicitly given as the arguments.
-    It can be either unquoted or quoted by `"`.
-2.  Multiple variables must be separated by vertical bar `|`.
-3.  The expression can be given as a string or as a file name. The program tries to load the file first. If the file
-    does not exist, the program tries to parse the string as an expression.
-4.  No whitespace (including `,`, ` `, etc.) is allowed in any arguments.
+1. The variables in the expression must be explicitly given as arguments.
+   They can be unquoted or enclosed in double quotes `"`.
+2. Multiple variables must be separated by a vertical bar `|`.
+3. The expression can be given as a string or as a file name.
+   The program tries to load the file first.
+   If the file does not exist, the program tries to parse the string as an expression.
+4. No whitespace (including `,` and ` `) is allowed in any argument.
 
-`exprtk` provides very powerful functionalities. It is possible to apply logics and control flows in the expression.
+`exprtk` provides powerful functionality.
+Logical operations and control flow can be used in an expression.
 
 ## Example
 
-Say, for example, one is going to define a uniaxial nonlinear elastic model that uses the following stress-strain
-relationship:
+For example, consider a uniaxial nonlinear elastic model with the following stress-strain relationship:
 
 $$
 \sigma=\varepsilon^3+\varepsilon
 $$
 
-Then the expression can be defined as
+The expression can then be defined as
 
 ```text
 expression SimpleScalar 1 x x^3+x
 ```
 
-Here, we use `x` as the free variable and the corresponding expression is `x^3+x`.
+Here, `x` is used as the free variable and the corresponding expression is `x^3+x`.
 
-For the uniaxial nonlinear elastic model, the input is strain, which maps to `x`, the output maps to stress.
+For the uniaxial nonlinear elastic model, the input is strain, which maps to `x`.
+The output maps to stress.
 
 Alternatively, the expression can be stored in a file and loaded by the program.
 
@@ -84,15 +86,15 @@ Alternatively, the expression can be stored in a file and loaded by the program.
 x^3+x
 ```
 
-Then the expression can be defined as
+The expression can then be defined as
 
 ```text
 expression SimpleScalar 1 x cubic.txt
 ```
 
-For complex expressions, it is convenient to use the file format.
+For complex expressions, using a file is more convenient.
 
-To use the expression, here, [`CustomElastic1D`](../../Library/Material/Material1D/Elastic/CustomElastic1D.md) is used.
+To use the expression, the [`CustomElastic1D`](../../Library/Material/Material1D/Elastic/CustomElastic1D.md) model is used here.
 
 ```text
 # using expression 1
@@ -103,7 +105,7 @@ materialTest1D 1 1E-2 200
 exit
 ```
 
-The response can be tested by [material tester](../Process/materialtest.md).
+The response can be tested with the [material tester](../Process/materialtest.md).
 
 ## Result
 

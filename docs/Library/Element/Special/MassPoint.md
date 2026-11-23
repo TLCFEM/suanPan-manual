@@ -15,9 +15,6 @@ element MassPoint3D (1) (2) (3) [4]
 
 ## Remarks
 
-1. For 2D elements, `DOF::UX` and `DOF::UY` are assigned with the translational mass (equal magnitude), `DOF::URZ` 
-   is assigned with the rotational inertia (optional).
-2. For 3D elements, `DOF::UX`, `DOF::UY`, and `DOF::UZ` are assigned with the translational mass (equal magnitude), 
-   `DOF::URX`, `DOF::URY`, and `DOF::URZ` are assigned with the rotational inertia (optional).
-3. `MassPoint` elements are an alternative to `Mass` elements, which are more abstract and allow more general 
-   assignment of mass.
+1. For 2D elements, `DOF::UX` and `DOF::UY` are assigned with the translational mass (equal magnitude), `DOF::URZ` is assigned with the rotational inertia (optional).
+2. For 3D elements, `DOF::UX`, `DOF::UY`, and `DOF::UZ` are assigned with the translational mass (equal magnitude), `DOF::URX`, `DOF::URY`, and `DOF::URZ` are assigned with the rotational inertia (optional).
+3. `MassPoint` elements are an alternative to `Mass` elements, which are more abstract and allow more general assignment of mass.

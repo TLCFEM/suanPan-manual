@@ -4,8 +4,7 @@ The CDP Model With Tabular Data Support
 
 The formulation is identical to that of the `CDP` model.
 
-The tabular backbones and damage evolution are supported in this model to provide more flexibility in terms of
-customizing the response.
+The tabular backbones and damage evolution are supported in this model to provide more flexibility in terms of customizing the response.
 
 In total, four tables are required.
 

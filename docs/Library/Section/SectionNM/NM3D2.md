@@ -36,8 +36,7 @@ This surface is suitable for I-sections.
 
 ### Option Two
 
-One may wish to customise the surface by assigning different weights and orders; it is possible by using the following
-syntax.
+One may wish to customise the surface by assigning different weights and orders; it is possible by using the following syntax.
 
 ```
 section NM3D2 (1) (2...11) [(12) (13) (14) (15)...]
@@ -58,16 +57,14 @@ section NM3D2 (1) (2...11) [(12) (13) (14) (15)...]
 # (15) double, d_i
 ```
 
-In the above command, parameters `(12)`, `(13)`, `(14)` and `(15)` form a set of parameters and can be appended as many
-groups as the analyst wishes.
+In the above command, parameters `(12)`, `(13)`, `(14)` and `(15)` form a set of parameters and can be appended as many groups as the analyst wishes.
 The surface is assumed to possess the following form,
 
 $$
 f=\sum_{i=1}^na_ip^{b_i}m_s^{c_i}m_w^{d_i}-e.
 $$
 
-For example, the previous surface $$f=1.15p^2+m_s^2+m_w^4+3.67p^2m_s^2+3p^6m_w^2+4.65m_s^4m_w^2-c$$ can be equivalently
-expressed with the second syntax as follows.
+For example, the previous surface $$f=1.15p^2+m_s^2+m_w^4+3.67p^2m_s^2+3p^6m_w^2+4.65m_s^4m_w^2-c$$ can be equivalently expressed with the second syntax as follows.
 
 ```
 section NM3D2 (1) (2...11) \

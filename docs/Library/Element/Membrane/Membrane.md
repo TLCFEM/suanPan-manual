@@ -18,8 +18,7 @@ Try the following decision tree to find the best membrane element to use.
    * speed --- [`CP3`](Plane/CP3.md)
    * accuracy --- [`CP6`](Plane/CP6.md)
 
-Noting that the [`CP3`](Plane/CP3.md) element is very rigid and often requires a very dense mesh to get relatively accurate
-result, it is not recommended for most applications.
+Noting that the [`CP3`](Plane/CP3.md) element is very rigid and often requires a very dense mesh to get relatively accurate results, it is not recommended for most applications.
 
 ## Quadrilateral Elements
 

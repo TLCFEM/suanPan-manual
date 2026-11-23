@@ -2,36 +2,32 @@
 
 Minimum version: v2.6
 
-The model script can be downloaded. [computing-response-spectrum.zip](computing-response-spectrum.zip)
+The model script can be downloaded.
+[computing-response-spectrum.zip](computing-response-spectrum.zip)
 
 ## Introduction
 
-Imagine you are asked to compute the response spectra of a collection of accelerograms which may be obtained from
-some earthquake event. How would you do it?
+Imagine you are asked to compute the response spectra of a collection of accelerograms which may be obtained from some earthquake event.
+How would you do it?
 
-According to the definition, the response spectrum is the maximum response of structures with different natural
-frequencies to the same earthquake.
+According to the definition, the response spectrum is the maximum response of structures with different natural frequencies to the same earthquake.
 
 A natural approach is to:
 
-1. Create a SDOF linear mass-spring-dashpot model with proper parameters that result in the desired natural
-   frequencies and damping ratios.
+1. Create an SDOF linear mass-spring-dashpot model with proper parameters that result in the desired natural frequencies and damping ratios.
 2. Perform full response history analysis for each frequency point.
 3. Compute the maximum response at each frequency point.
 4. Plot the response spectrum.
 
-This is fine, but extremely inefficient. For linear systems, you may have known
-that [Duhamel's integral](https://en.wikipedia.org/wiki/Duhamel%27s_integral)
-can be used to compute the response. Indeed, Duhamel's integral is a de facto practice for computing response
-spectra, especially in the field of seismology.
+This is fine, but extremely inefficient.
+For linear systems, you may have known that [Duhamel's integral](https://en.wikipedia.org/wiki/Duhamel%27s_integral) can be used to compute the response.
+Indeed, Duhamel's integral is a de facto practice for computing response spectra, especially in the field of seismology.
 
-However, even Duhamel's integral is not sufficiently performant. A blazing fast algorithm is proposed
-by [Lee](https://doi.org/10.1016/S0267-7261(05)80015-6).
-The algorithm is implemented as the [`response_spectrum`](../../../Collection/Process/response_spectrum.md) and
-the [`sdof_response`](../../../Collection/Process/sdof_response.md) command.
+However, even Duhamel's integral is not sufficiently performant.
+A blazing-fast algorithm is proposed by [Lee](https://doi.org/10.1016/S0267-7261(05)80015-6).
+The algorithm is implemented as the [`response_spectrum`](../../../Collection/Process/response_spectrum.md) and [`sdof_response`](../../../Collection/Process/sdof_response.md) commands.
 
-In this example, we will demonstrate how to use the `response_spectrum` and `sdof_response` commands to compute the
-response spectra and compare the results with the full response history analysis.
+In this example, we will demonstrate how to use the `response_spectrum` and `sdof_response` commands to compute the response spectra and compare the results with the full response history analysis.
 
 ## Model
 
@@ -92,8 +88,8 @@ $$
 c=2\zeta\sqrt{mk}=a_1k,\quad{}a_1=2\zeta/\omega_n=0.003183098862.
 $$
 
-The provided acceleration is sampled with a sampling interval of $$0.03$$ s. To improve the accuracy of the response
-history analysis, the time step size is set to $$0.01$$ s.
+The provided acceleration is sampled with a sampling interval of $$0.03$$ s.
+To improve the accuracy of the response history analysis, the time step size is set to $$0.01$$ s.
 
 Note since we are applying acceleration as an inertial force, the amplitude of the acceleration is $$-1$$.
 
@@ -165,26 +161,28 @@ The results are shown below.
 
 ![response](computing-response-spectrum-a.png)
 
-It is evident that Lee's algorithm is accurate. If one pays attention to the wall clock time required by the two approaches,
-Lee's algorithm is much faster than the full response history analysis. On an average platform, Lee's algorithm is 
-100 times faster (indicative). There are a few things to note.
+It is evident that Lee's algorithm is accurate.
+If one pays attention to the wall clock time required by the two approaches, Lee's algorithm is much faster than the full response history analysis.
+On an average platform, Lee's algorithm is 100 times faster (indicative).
+There are a few things to note.
 
-1. The response history analysis often requires a small step size --- a fraction of the sampling interval of 
-   the acceleration record. This is to ensure the accuracy of the result.
-2. Lee's algorithm is essentially an IIR filter. It only requires two multiplications per time step. The sampling 
-   interval can be directly used to compute the response.
-3. With Lee's algorithm, in a more general setting, velocity and acceleration responses would be computed as the 
-   scaled difference of displacement and velocity responses, respectively. They are also blazing fast to compute.
-4. To compute response spectrum, as we only need the maximum response, further optimisation can be made. See Lee's 
-   paper for further discussions.
+1. The response history analysis often requires a small step size --- a fraction of the sampling interval of the acceleration record.
+   This is to ensure the accuracy of the result.
+2. Lee's algorithm is essentially an IIR filter.
+   It only requires two multiplications per time step.
+   The sampling interval can be directly used to compute the response.
+3. With Lee's algorithm, in a more general setting, velocity and acceleration responses would be computed as the scaled difference of displacement and velocity responses, respectively.
+   They are also blazing fast to compute.
+4. To compute the response spectrum, as we only need the maximum response, further optimisation can be made.
+   See Lee's paper for further discussion.
 
 ## Response Spectrum
 
 ### Initial Attempt
 
-We have gained some confidence in the reliability of the result. The `response_spectrum` command essentially calls the
-`sdof_response` command to compute the maximum response at each frequency. Now we can use it to compute response 
-spectrum.
+We have gained some confidence in the reliability of the result.
+The `response_spectrum` command essentially calls the `sdof_response` command to compute the maximum response at each frequency.
+Now we can use it to compute the response spectrum.
 
 ```text
 # spectrum.sp
@@ -194,8 +192,9 @@ response_spectrum EZ period 0.02
 exit
 ```
 
-We provide a vector of periods of interest. The result will be saved to `EZ_response_spectrum`. The spectra can be 
-plotted.
+We provide a vector of periods of interest.
+The result will be saved to `EZ_response_spectrum`.
+The spectra can be plotted.
 
 ```python
 import matplotlib.pyplot as plt
@@ -236,11 +235,12 @@ plt.close()
 
 ### Refine the Result
 
-As the sampling interval of the provided acceleration record is $$0.03$$ s, it appears to be too large to obtain 
-an accurate result. How to tell that? Given that the damping ratio is small, SA and PSA should be close.
+As the sampling interval of the provided acceleration record is $$0.03$$ s, it appears to be too large to obtain an accurate result.
+How can we tell?
+Given that the damping ratio is small, SA and PSA should be close.
 
-We can try to refine the result by using a smaller interval. To this end, we first create a new record by linear 
-interpolation.
+We can try to refine the result by using a smaller interval.
+To this end, we first create a new record by linear interpolation.
 
 ```python
 import numpy as np

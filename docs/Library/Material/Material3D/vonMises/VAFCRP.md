@@ -2,9 +2,9 @@
 
 Viscous J2 Steel Model
 
-Before I can find a proper name for it, I would call it `VAFCRP` model. Although the name is a bit weird, it contains
-all the initials of researchers. Similar models are available as: [`ArmstrongFrederick`](ArmstrongFrederick.md)
-, [`ExpJ2`](ExpJ2.md) and [`NonlinearPeric`](NonlinearPeric.md).
+Before I can find a proper name for it, I would call it `VAFCRP` model.
+Although the name is a bit weird, it contains all the initials of researchers.
+Similar models are available as: [`ArmstrongFrederick`](ArmstrongFrederick.md), [`ExpJ2`](ExpJ2.md) and [`NonlinearPeric`](NonlinearPeric.md).
 
 ## References
 
@@ -15,8 +15,8 @@ all the initials of researchers. Similar models are available as: [`ArmstrongFre
 
 ## Theory
 
-The `VAFCRP` model is a von Mises J2 yield criterion based model and uses an associative plasticity flow. The yield
-function is defined as
+The `VAFCRP` model is a von Mises J2 yield criterion based model and uses an associative plasticity flow.
+The yield function is defined as
 
 $$
 F=\sqrt{\dfrac{3}{2}(s-\beta):(s-\beta)}-k=q-k.
@@ -38,22 +38,20 @@ $$
 k=\sigma_y+k_s(1-e^{-mp})+k_lp,
 $$
 
-where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturated stress, $$k_l$$ is the
-linear hardening modulus, $$m$$ is a constant that controls the speed of hardening,
-$$\mathrm{d}p=\sqrt{\dfrac{2}{3}\mathrm{d}\varepsilon^p:\mathrm{d}\varepsilon^p}$$ is the rate of accumulated plastic
-strain $$p$$.
+where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturated stress, $$k_l$$ is the linear hardening modulus, $$m$$ is a constant that controls the speed of hardening, $$\mathrm{d}p=\sqrt{\dfrac{2}{3}\mathrm{d}\varepsilon^p:\mathrm{d}\varepsilon^p}$$ is the rate of accumulated plastic strain $$p$$.
 
 ### AF
 
-The Armstrong-Frederick (1966) kinematic hardening rule is used. The rate form of back stress $$\beta^i$$ is
+The Armstrong-Frederick (1966) kinematic hardening rule is used.
+The rate form of back stress $$\beta^i$$ is
 
 $$
 \mathrm{d}\beta^i=\sqrt{\dfrac{2}{3}}a^i~\mathrm{d}\varepsilon^p-b^i\beta~\mathrm{d}p,
 $$
 
-where $$a^i$$ and $$b^i$$ are material constants. Note here a slightly different definition is adopted as in the
-original literature $$\dfrac{2}{3}$$ is used instead of $$\sqrt{\dfrac{2}{3}}$$. This is purely for a slightly more tidy
-derivation and does not affect anything.
+where $$a^i$$ and $$b^i$$ are material constants.
+Note here a slightly different definition is adopted as in the original literature $$\dfrac{2}{3}$$ is used instead of $$\sqrt{\dfrac{2}{3}}$$.
+This is purely for a slightly more tidy derivation and does not affect anything.
 
 ### CR
 
@@ -81,8 +79,8 @@ $$
 \dfrac{\gamma}{\Delta{}t}=\dot{\gamma}=\dfrac{1}{\mu}\left(\dfrac{q}{k}-1\right)^{\dfrac{1}{\epsilon}},
 $$
 
-is **not** used. It shall in fact be avoided as it is less numerically stable than the Peric definition since it is not
-known whether $$\dfrac{q}{k}-1$$ is greater or smaller than $$1$$.
+is **not** used.
+It shall in fact be avoided as it is less numerically stable than the Peric definition since it is not known whether $$\dfrac{q}{k}-1$$ is greater or smaller than $$1$$.
 
 ## Syntax
 
@@ -107,14 +105,13 @@ material VAFCRP (1) (2) (3) (4) (5) (6) (7) (8) (9) [10 11...] [12]
 
 ## Example
 
-This model is essentially a viscous extension of the [`ArmstrongFrederick`](ArmstrongFrederick.md) model. Only some
-different behaviour is shown here.
+This model is essentially a viscous extension of the [`ArmstrongFrederick`](ArmstrongFrederick.md) model.
+Only some different behaviour is shown here.
 
 ### Viscosity
 
-For static analysis with viscosity material, the step time is not analytical time any more, it represents real time as it
-is used in the computation of viscous response. The step time shall be properly set to be consistent with the material
-parameters used in the model.
+For static analysis with viscosity material, the step time is not analytical time any more, it represents real time as it is used in the computation of viscous response.
+The step time shall be properly set to be consistent with the material parameters used in the model.
 
 ```
 material VAFCRP 1 2E2 .2 .1 0. 0. 0. 1. 0. 50. 500. 100. 600.

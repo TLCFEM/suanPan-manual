@@ -2,7 +2,9 @@
 
 Minimum version: v2.5
 
-In this example, we demonstrate how to use Python to preprocess data by creating a frame structure. This example requires some Python familiarity. However, as we are developing a frame structure which contains mainly frame elements, the procedure is relatively straightforward.
+In this example, we demonstrate how to use Python to preprocess data by creating a frame structure.
+This example requires some Python familiarity.
+However, as we are developing a frame structure which contains mainly frame elements, the procedure is relatively straightforward.
 
 ## Objective
 
@@ -45,7 +47,8 @@ print(section_table.head())
     [5 rows x 84 columns]
 
 
-Section properties such as area and moment of inertia can be extracted from this table using section designations. It is possible to define such a function now.
+Section properties such as area and moment of inertia can be extracted from this table using section designations.
+It is possible to define such a function now.
 
 
 ```python
@@ -61,7 +64,8 @@ def from_table(designation: str):
     return a, sx, ix, zx
 ```
 
-Then we can use this function to extract section properties from the table. For example,
+Then we can use this function to extract section properties from the table.
+For example,
 
 
 ```python
@@ -73,7 +77,9 @@ print(from_table("W44X230"))
 
 ## Geometry of the Frame Structure
 
-For simplicity, we assume the frame structure has the same column/beam section for all the columns/beams on the same floor. Under such a condition, two lists of section designations can be provided so that elements can be created. Similarly, geometry information such as floor height, bay span, as well as floor mass, can be provided in the same way.
+For simplicity, we assume the frame structure has the same column/beam section for all the columns/beams on the same floor.
+Under such a condition, two lists of section designations can be provided so that elements can be created.
+Similarly, geometry information such as floor height, bay span, as well as floor mass, can be provided in the same way.
 
 For example, we can define several lists as follows.
 
@@ -106,7 +112,8 @@ del span, height
     [  0. 240. 480.] [  0. 120. 240. 360.]
 
 
-By using the above coordinates, we can create a grid of nodes. A simple `Node` class is defined to represent nodes.
+By using the above coordinates, we can create a grid of nodes.
+A simple `Node` class is defined to represent nodes.
 
 
 ```python
@@ -305,7 +312,10 @@ with open("column.sp", "r") as f:
 
 ### Fibre Based Elements
 
-A similar procedure can be used to generate fibre based elements with slight modifications. Here we use [`F21`](../../../Library/Element/Beam/F21.md) element. It relies on sections, and designations can be directly used to create sections. In this example, we use [`US2D`](../../../Library/Section/Code/US.md) category.
+A similar procedure can be used to generate fibre-based elements with slight modifications.
+Here we use the [`F21`](../../../Library/Element/Beam/F21.md) element.
+It relies on sections, and designations can be directly used to create sections.
+In this example, we use the [`US2D`](../../../Library/Section/Code/US.md) category.
 
 
 ```python
@@ -350,7 +360,8 @@ with open("fibre_frame.sp", "r") as f:
 
 ### Generate Mass
 
-For simplicity, we only apply horizontal mass to each node, the procedure is similar to that of frame elements.
+For simplicity, we only apply horizontal mass to each node.
+The procedure is similar to that of frame elements.
 
 To keep code modular, we define a mass grid to store mass at each node.
 
@@ -414,7 +425,8 @@ with open("mass.sp", "r") as f:
 
 ## Analysis Settings
 
-The basic geometry of the model is defined in `node.sp`, `beam.sp`, `column.sp` and `mass.sp`. We import those files in the main script.
+The basic geometry of the model is defined in `node.sp`, `beam.sp`, `column.sp` and `mass.sp`.
+We import those files in the main script.
 
 
 ```python
@@ -435,7 +447,9 @@ main_file.write(f"fix 1 E 1 {' '.join(str(tag) for tag in node_grid[0, :])}\n")
 pass
 ```
 
-The ground motion shall be applied. The `ELNS` file contains one of the accelerograms of the 1940 El Centro Earthquake. It is normalised so that the maximum amplitude is unity, we assign a PGA of $$0.5g$$.
+The ground motion shall be applied.
+The `ELNS` file contains one of the accelerograms of the 1940 El Centro Earthquake.
+It is normalised so that the maximum amplitude is unity; we assign a PGA of $$0.5g$$.
 
 
 ```python
@@ -461,7 +475,8 @@ main_file.write(
 pass
 ```
 
-For illustration, we can also record element yield flag at both ends so that the corresponding plastic hinge distribution can be generated. The yield flag is **not** generally available in other elements.
+For illustration, we can also record the element yield flag at both ends so that the corresponding plastic hinge distribution can be generated.
+The yield flag is **not** generally available in other elements.
 
 
 ```python
@@ -606,7 +621,8 @@ run_analysis()
 
 ## Roof Displacement History
 
-The result file will be generated and stored in `.h5` file. We can read the file and plot the results.
+The result file will be generated and stored in an `.h5` file.
+We can read the file and plot the results.
 
 
 ```python

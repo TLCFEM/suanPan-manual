@@ -4,11 +4,21 @@ In this example, we demonstrate how to create arbitrary sections and perform ana
 
 The relevant scripts can be [downloaded](thin-walled-section.zip).
 
-To represent conventional, bending moment only sections numerically, only geometry information, such as location and area, is required. This allows the usage of predefined basic shapes, such as rectangles, circles. And complex sections can be built up by using those basic shapes. However, such an approach is not practical for sections involving torsion and warping, as some important sectional properties can only be obtained by analysing the section as a whole. Hence, a general approach that only focuses on section discretisation is used. The discretisation refers to the division of the section into a number of fibres/cells. Those fibres are the smallest units that are used in numerical integration. The users shall provide the corresponding sectional properties.
+To represent conventional, bending-moment-only sections numerically, only geometry information, such as location and area, is required.
+This allows the usage of predefined basic shapes, such as rectangles and circles.
+Complex sections can be built up by using those basic shapes.
+However, such an approach is not practical for sections involving torsion and warping, as some important sectional properties can only be obtained by analysing the section as a whole.
+Hence, a general approach that only focuses on section discretisation is used.
+The discretisation refers to the division of the section into a number of fibres/cells.
+Those fibres are the smallest units that are used in numerical integration.
+The users shall provide the corresponding sectional properties.
 
-To obtain necessary sectional properties, a section analysis shall be performed. For arbitrary sections, often a general purpose FEA based method shall be used. [This](https://doi.org/10.1002/9780470172667) book provides a thorough discussion on relevant numerical methods.
+To obtain necessary sectional properties, a section analysis shall be performed.
+For arbitrary sections, a general-purpose FEA-based method shall often be used.
+[This](https://doi.org/10.1002/9780470172667) book provides a thorough discussion of the relevant numerical methods.
 
-The [`sectionproperties`](https://sectionproperties.readthedocs.io/en/latest/) library implements such a method. It can be used to prepare data to be used in `suanPan`.
+The [`sectionproperties`](https://sectionproperties.readthedocs.io/en/latest/) library implements such a method.
+It can be used to prepare data to be used in `suanPan`.
 
 ## Theory
 
@@ -48,8 +58,9 @@ $$
 \dfrac{\partial\omega}{\partial{}y},\qquad\dfrac{\partial\omega}{\partial{}z}.
 $$
 
-[Alemdar's thesis](http://hdl.handle.net/1853/22220), and some other derivatives, uses $$\gamma=2n\phi'$$ to approximate shear strain. This is only suitable for thin-walled open sections.
-Here we use general formulation instead for complex, universal, arbitrary sections.
+[Alemdar's thesis](http://hdl.handle.net/1853/22220) and some other derivations use $$\gamma=2n\phi'$$ to approximate shear strain.
+This is only suitable for thin-walled open sections.
+Here we use a general formulation instead for complex, universal, arbitrary sections.
 Interested readers can refer to, for example, [Pilkey's book](https://doi.org/10.1002/9780470172667), for more details.
 
 Two shear strains can be expressed as follows.
@@ -61,7 +72,8 @@ $$
 
 ## A Simple Example
 
-We start with a simple circular example. Let's assume it is centred and has a diameter of $$10$$.
+We start with a simple circular example.
+Let's assume it is centred and has a diameter of $$10$$.
 
 We use built-in functionality to create such a geometry and assign a mesh size of $$0.1$$.
 
@@ -126,7 +138,8 @@ Alternatively, the area can also be computed as the determinant of the Jacobian 
 
 ### Locations
 
-We assume the triangle element is small enough so that the centroid can represent the location of the element. The centroid can be obtained by averaging the coordinates of the first three nodes.
+We assume the triangle element is small enough so that the centroid can represent the location of the element.
+The centroid can be obtained by averaging the coordinates of the first three nodes.
 
 
 ```python
@@ -185,7 +198,8 @@ Since for circular sections, there is no warping, the corresponding derivatives 
 
 ### A Universal Function
 
-It appears to be easy to obtain necessary properties for each element. Here we provide a universal function to generate the required data.
+It appears to be easy to obtain the necessary properties for each element.
+Here we provide a universal function to generate the required data.
 
 One shall adjust it accordingly for specific purposes.
 
@@ -268,7 +282,8 @@ to_file(to_cell3dos(geometry), "circular.sp")
 
 ### Validation
 
-Now it is possible to create a simple single element model to validate the data. Remember to change the material tag accordingly.
+Now it is possible to create a simple single-element model to validate the data.
+Remember to change the material tag accordingly.
 
 ```text
 node 1 0 0 0
@@ -309,7 +324,8 @@ This is about the numerical result $$977.5$$.
 
 ## W-Section Example
 
-In this example, we manually create a W section. It corresponds to the `W36X330` section.
+In this example, we manually create a W section.
+It corresponds to the `W36X330` section.
 
 
 ```python
@@ -568,9 +584,13 @@ with h5py.File("R1-RF4.h5", "r") as f:
     
 
 
-The discretisation introduces some errors. With mesh refinement, the numerical result approaches the analytical solution.
+The discretisation introduces some errors.
+With mesh refinement, the numerical result approaches the analytical solution.
 
 ## Closing Remarks
 
-1. `Cell3DOS` is the basic building block. `Fibre3DOS` collects all cells and defines the section. `B31OS` is the corresponding element.
-2. Sectional integration is always about the origin of the local coordinate system. Shifting of axis can be accounted for by directly defining the section in the shifted position.
+1. `Cell3DOS` is the basic building block.
+   `Fibre3DOS` collects all cells and defines the section.
+   `B31OS` is the corresponding element.
+2. Sectional integration is always about the origin of the local coordinate system.
+   Shifting of axis can be accounted for by directly defining the section in the shifted position.

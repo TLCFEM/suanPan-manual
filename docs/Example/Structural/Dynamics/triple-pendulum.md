@@ -11,7 +11,8 @@ The main purpose of this example is two-fold:
 
 ## Model
 
-Such a model for pendulum can be established using two main approaches. As a triple pendulum, the model has four nodes.
+Such a pendulum model can be established using two main approaches.
+As a triple pendulum, the model has four nodes.
 
 ```text
 node 1 0 0
@@ -26,9 +27,9 @@ The first node is pinned so that it does not move.
 
 ### With Rigid Links
 
-By using rigid truss elements, the inextensible links can be approximated given that the rigidity is sufficiently
-large. Define the corresponding truss elements and point masses. Note here since the fixed node `1` is connected to the
-truss element `1`, there is no need to assign mass to it.
+By using rigid truss elements, the inextensible links can be approximated given that the rigidity is sufficiently large.
+Define the corresponding truss elements and point masses.
+Note here that since the fixed node `1` is connected to the truss element `1`, there is no need to assign mass to it.
 
 ```text
 # with rigid links
@@ -47,8 +48,7 @@ Note the nonlinear geometry switch is on to account for large displacement (but 
 
 ### With Constraints
 
-Alternatively, the [`FixedLength`](../../../Library/Constraint/FixedLength.md) constraint can be used to apply the
-inextensible constraints.
+Alternatively, the [`FixedLength`](../../../Library/Constraint/FixedLength.md) constraint can be used to apply the inextensible constraints.
 
 ```text
 constraint FixedLength2D 10 1 2
@@ -61,10 +61,10 @@ element Mass 3 3 10 1 2
 element Mass 4 4 20 1 2
 ```
 
-Note here, compared to the previous approach, since the fixed node `1` is now not connected to any truss elements, 
-it will be associated with nothing if no point mass is assigned to it. This is not allowed. Such an 'isolated' dummy 
-node will be identified and automatically **disabled** during the initialisation stage. In order to avoid this, it is 
-**necessary** to assign a point mass to it.
+Note here that, compared to the previous approach, since the fixed node `1` is now not connected to any truss elements, it will be associated with nothing if no point mass is assigned to it.
+This is not allowed.
+Such an 'isolated' dummy node will be identified and automatically **disabled** during the initialisation stage.
+In order to avoid this, it is **necessary** to assign a point mass to it.
 
 ### Initial Conditions and Other Setup
 
@@ -83,8 +83,9 @@ cload 2 1 -100 2 3
 cload 3 1 -200 2 4
 ```
 
-There is no essential difference whether to assign the gravity load to node `1` as it is fixed. The applied load 
-will be balanced out by the resistance. This only affects how the results shall be processed.
+There is no essential difference whether to assign the gravity load to node `1`, as it is fixed.
+The applied load will be balanced out by the resistance.
+This only affects how the results shall be processed.
 
 ## Analyse
 
@@ -111,27 +112,28 @@ The animation is presented as follows.
 
 ## What's Next?
 
-Everything seems to be working fine, which appears to be good. So what's next? If the results are carefully examined,
-one would notice some unexpected behaviour. For those who have a good background in dynamics, it must be noticed that 
-the Newmark method has no algorithmic damping. It is also not ideal in terms of energy/momentum conservation.
+Everything seems to be working fine, which appears to be good.
+So what's next?
+If the results are carefully examined, one would notice some unexpected behaviour.
+For those who have a good background in dynamics, it must be noticed that the Newmark method has no algorithmic damping.
+It is also not ideal in terms of energy/momentum conservation.
 
 If one plots the acceleration history, one can notice that the acceleration is not physically meaningful.
 
 ![newmark acceleration](triple-pendulum-newmark.svg)
 
-Given that the Newmark method has no algorithmic damping, the high frequency noise cannot be suppressed. Try the extra 
-two models using [`BatheTwoStep`](../../../Library/Integrator/Implicit/BatheTwoStep.md) and
-[`GSSSS`](../../../Library/Integrator/Implicit/GSSSS.md) methods in the archive.
+Given that the Newmark method has no algorithmic damping, the high-frequency noise cannot be suppressed.
+Try the extra two models using [`BatheTwoStep`](../../../Library/Integrator/Implicit/BatheTwoStep.md) and [`GSSSS`](../../../Library/Integrator/Implicit/GSSSS.md) methods in the archive.
 
-If one instead uses the [`GSSSS`](../../../Library/Integrator/Implicit/GSSSS.md) method with identical spectral radii, which is 
-equivalent to the [`generalised alpha`](../../../Library/Integrator/Implicit/GeneralizedAlpha.md) method, the acceleration 
-history can be plotted as follows.
+If one instead uses the [`GSSSS`](../../../Library/Integrator/Implicit/GSSSS.md) method with identical spectral radii, which is equivalent to the [`generalised alpha`](../../../Library/Integrator/Implicit/GeneralizedAlpha.md) method, the acceleration history can be plotted as follows.
 
 ![generalised alpha acceleration](triple-pendulum-gssss.svg)
 
-All in all, as long as the system may result in high frequency response, the use of the Newmark method is discouraged.
+All in all, as long as the system may result in high-frequency response, the use of the Newmark method is discouraged.
 
-The high frequency response may stem from either very large stiffness or very small mass. The former case may happen 
-when parts of the system are very rigid. The application of penalty method often results in large stiffness 
-components. The latter case may happen when the mass is under-integrated or even lumped. Both are somehow inevitable 
-in practical simulations. One shall consider other time integration methods to obtain more reliable results.
+The high-frequency response may stem from either very large stiffness or very small mass.
+The former case may happen when parts of the system are very rigid.
+The application of the penalty method often results in large stiffness components.
+The latter case may happen when the mass is under-integrated or even lumped.
+Both are somehow inevitable in practical simulations.
+One shall consider other time integration methods to obtain more reliable results.

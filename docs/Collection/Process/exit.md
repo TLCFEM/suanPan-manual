@@ -1,6 +1,6 @@
 # exit
 
-The `exit` command exits.
+The `exit` command terminates the program.
 
 ## Syntax
 

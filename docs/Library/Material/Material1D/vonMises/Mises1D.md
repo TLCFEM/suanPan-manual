@@ -4,8 +4,8 @@ Uniaxial General Model Using von Mises Criterion
 
 This is an abstract class that shall be overridden.
 
-The `Mises1D` is a general model using von Mises yielding criterion and associated flow rule. The hardening rules can be
-customized.
+The `Mises1D` model is a general model using von Mises yielding criterion and associated flow rule.
+The hardening rules can be customized.
 
 ## Theory
 

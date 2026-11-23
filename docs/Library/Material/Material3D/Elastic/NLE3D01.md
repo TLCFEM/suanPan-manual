@@ -23,9 +23,8 @@ W=\dfrac{9}{2}K\varepsilon_v^2+\dfrac{\varepsilon_0\sigma_0}{1-m}\left(\dfrac{\v
 1-m)},
 $$
 
-where $$K$$ is the bulk modulus, $$\varepsilon_0$$ is the reference strain, $$\sigma_0$$ is the reference stress and
-$$m\in[0,1]$$ is an exponent that controls nonlinearity. The volumetric strain $$\varepsilon_v$$ and equivalent strain
-$$\varepsilon_p$$ are expressed as
+where $$K$$ is the bulk modulus, $$\varepsilon_0$$ is the reference strain, $$\sigma_0$$ is the reference stress and $$m\in[0,1]$$ is an exponent that controls nonlinearity.
+The volumetric strain $$\varepsilon_v$$ and equivalent strain $$\varepsilon_p$$ are expressed as
 
 $$
 \varepsilon_v=\text{trace}\left(\varepsilon\right),\qquad\varepsilon_p=\sqrt{\dfrac{2}{3}\varepsilon_d:

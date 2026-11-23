@@ -1,10 +1,10 @@
 # bc
 
-Although called boundary condition, here we only deal with trivial Dirichlet boundary condition.
+Although this is called a boundary condition, only trivial Dirichlet boundary conditions are handled here.
 
 ## Syntax
 
-There are currently several commands to define boundary conditions.
+Several commands are available to define boundary conditions.
 
 ```text title="bc"
 fix (1) (2) (3...)
@@ -16,7 +16,7 @@ penaltybc (1) (2) (3...)
 # (3...) int, tags of nodes that shall be constrained
 ```
 
-To apply BCs to node groups, it is possible to use the following commands.
+To apply boundary conditions to node groups, use the following commands.
 
 ```
 groupmultiplierbc (1) (2) (3...)
@@ -26,21 +26,22 @@ grouppenaltybc (1) (2) (3...)
 # (3...) int, tags of groups that shall be constrained
 ```
 
-## Remark
+## Remarks
 
-1.  Both `fix` and `fix2` serve the same purpose but with different approaches. The `fix` command modifies the
-    corresponding main diagonal term by multiplying a large number, for example $$10^8$$. The `fix2` command erases the
-    column and row of the target DoF and sets the main diagonal to unity. In both cases, the corresponding right hand side
-    entry is erased.
-2.  The `fix` and `penaltybc` commands are computationally efficient but lead to an ill-conditioned matrix. This may not
-    be a problem for direct solvers but will greatly affect the performance of iterative solvers. The penalty number can
-    be controlled by [`set`](../Process/set.md) command via `constraint_multiplier` option.
-3.  The `fix2` and `multiplierbc` commands require more operations but the final matrix is well conditioned.
-4.  The performance difference is almost negligible. Either one can be used with direct solvers. The error won't
-    accumulate as there is a special mechanism to prevent it.
-5.  The nontrivial Dirichlet boundary condition is treated as a displacement load.
+1. Both `fix` and `fix2` serve the same purpose but use different approaches.
+   The `fix` command modifies the corresponding main diagonal term by multiplying it by a large number, for example $$10^8$$.
+   The `fix2` command erases the column and row of the target DoF and sets the main diagonal to unity.
+   In both cases, the corresponding right-hand-side entry is erased.
+2. The `fix` and `penaltybc` commands are computationally efficient but lead to an ill-conditioned matrix.
+   This may not be a problem for direct solvers but can greatly affect the performance of iterative solvers.
+   The penalty number can be controlled with the `constraint_multiplier` option of the [`set`](../Process/set.md) command.
+3. The `fix2` and `multiplierbc` commands require more operations, but the final matrix is well conditioned.
+4. The performance difference is almost negligible.
+   Either one can be used with direct solvers.
+   The error does not accumulate because a special mechanism prevents it.
+5. A nontrivial Dirichlet boundary condition is treated as a displacement load.
 
-The DoF identifier `(2)` may take the following.
+The DoF identifier `(2)` can take the following values.
 Accepted inputs vary with the selected element type(s) and the problem type.
 
 | identifier       | implies                                                             | of type                          |

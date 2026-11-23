@@ -4,21 +4,17 @@ In this example, we illustrate how to perform response history analysis with mul
 
 The model can be downloaded [here](multi-support-excitation.zip).
 
-The multiple support excitation refers to different prescribed motions at various supports. The general discussion of
-linear elastic systems, as presented in typical textbooks (see for
-example [Chopra's textbook](https://www.pearson.com/us/higher-education/program/Chopra-Dynamics-of-Structures-5th-Edition/PGM1101746.html))
-, is somehow not suitable for numerical implementation.
+The multiple support excitation refers to different prescribed motions at various supports.
+The general discussion of linear elastic systems, as presented in typical textbooks (see, for example, [Chopra's textbook](https://www.pearson.com/us/higher-education/program/Chopra-Dynamics-of-Structures-5th-Edition/PGM1101746.html)), is somehow not suitable for numerical implementation.
 
-The implementation in `suanPan` converts whatever support excitations are applied to prescribed displacements and the
-displacement controlled algorithm [`MPDC`](../../../Library/Solver/MPDC.md) is automatically enabled to solve the
-system.
+The implementation in `suanPan` converts whatever support excitations are applied into prescribed displacements, and the displacement-controlled algorithm [`MPDC`](../../../Library/Solver/MPDC.md) is automatically enabled to solve the system.
 
 Thus, support excitations in the forms of displacement, velocity and acceleration are supported.
 
 ## A Simple Model
 
-Here we first create a simple cantilever beam with additional point mass at the free end. The basic geometry related
-commands are stored in file `geometry.sp`.
+Here we first create a simple cantilever beam with an additional point mass at the free end.
+The basic geometry-related commands are stored in the file `geometry.sp`.
 
 ```text title="geometry.sp"
 # geometry.sp
@@ -39,8 +35,8 @@ hdf5recorder 1 Node U1 1 2
 amplitude Tabular 1 EZ
 ```
 
-The analysis setting consists of a dynamic step with a [`Newmark`](../../../Library/Integrator/Implicit/Newmark/Newmark.md)
-integrator. Those settings are stored in `setting.sp` file.
+The analysis setting consists of a dynamic step with a [`Newmark`](../../../Library/Integrator/Implicit/Newmark/Newmark.md) integrator.
+Those settings are stored in the `setting.sp` file.
 
 ```text title="setting.sp"
 # setting.sp
@@ -62,8 +58,7 @@ exit
 
 ### Apply Excitation On All Nodes
 
-To apply acceleration excitation on all nodes, the boundary conditions need to be assigned in a normal, conventional way
-so that no rigid body motion is allowed.
+To apply acceleration excitation on all nodes, the boundary conditions need to be assigned in a normal, conventional way so that no rigid body motion is allowed.
 
 ```text hl_lines="6"
 file geometry.sp
@@ -80,8 +75,8 @@ It shall be noted $$-\ddot{u}_g$$ is applied.
 
 ### Apply Excitation On Support
 
-To apply acceleration excitation on a support, the corresponding DoF should not be constrained. Thus, rigid body motions
-are expected.
+To apply acceleration excitation on a support, the corresponding DoF should not be constrained.
+Thus, rigid body motions are expected.
 
 ```text hl_lines="6"
 file geometry.sp
@@ -103,8 +98,7 @@ Here the displacement of the free end is plotted.
 
 ![displacement history](multi-support-excitation.svg)
 
-It shall be noted that since rigid body motions are present when excitations are applied to the supports, the relative
-displacement needs to be obtained by computing the difference between displacements of target DoF and support.
+It shall be noted that since rigid body motions are present when excitations are applied to the supports, the relative displacement needs to be obtained by computing the difference between the displacements of the target DoF and the support.
 
 All time integration methods are implemented in such a way that both ways of applying excitations would yield the same results if they are equivalent theoretically.
 This is done by applying algorithm-aware conversion among displacement, velocity and acceleration excitations.

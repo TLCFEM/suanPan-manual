@@ -1,6 +1,6 @@
 # save
 
-The `save` command can be used to save data to disk.
+The `save` command saves data to disk.
 
 ## Syntax
 

@@ -1,7 +1,6 @@
 # CoulombFriction
 
-The `CoulombFriction` is a 1D viscous material that shall be used with for
-example [`Damper01`](../../../Element/Special/Damper01.md) element.
+The `CoulombFriction` is a 1D viscous material that shall be used with, for example, the [`Damper01`](../../../Element/Special/Damper01.md) element.
 
 ## Syntax
 

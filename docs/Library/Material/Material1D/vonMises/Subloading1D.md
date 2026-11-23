@@ -20,9 +20,7 @@ Additional material on the same topic can be found in the following literature.
 Prof. Koichi Hashiguchi has published a large number of papers on this topic.
 To find more references, please refer to the monograph and the references therein.
 
-Alternatively, refer to the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
-for implementation details.
+Alternatively, refer to the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf) for implementation details.
 
 ## Theory
 
@@ -46,8 +44,7 @@ $$
 \sigma^y=\sigma^i+k_\text{iso}q+\sigma^s_\text{iso}\left(1-e^{-m^s_\text{iso}q}\right)
 $$
 
-where $$\sigma^i$$ is the initial yield stress, $$k_\text{iso}$$ is the linear hardening modulus, $$\sigma^s_\text{iso}$$ is the saturation stress
-and $$m^s_\text{iso}$$ is the hardening rate.
+where $$\sigma^i$$ is the initial yield stress, $$k_\text{iso}$$ is the linear hardening modulus, $$\sigma^s_\text{iso}$$ is the saturation stress and $$m^s_\text{iso}$$ is the hardening rate.
 
 The history variable $$q$$ is the accumulated plastic strain; conventionally, it is
 
@@ -89,7 +86,7 @@ $$
 \dot{z}=-u\ln\left(z\right)\gamma.
 $$
 
-In which, $$u$$ is a constant that controls the rate of transition.
+Here, $$u$$ is a constant that controls the rate of transition.
 
 ### Evolution of $$d$$
 

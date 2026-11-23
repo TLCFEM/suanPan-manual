@@ -35,15 +35,13 @@ material CDPM2ANISO (1) [2-16]
 
 1. The isotropic damage is implemented.
 2. The anisotropic damage is implemented.
-3. For detailed explanations of parameters, please refer
-   to [10.1016/j.ijsolstr.2013.07.008](https://doi.org/10.1016/j.ijsolstr.2013.07.008).
+3. For detailed explanations of parameters, please refer to [10.1016/j.ijsolstr.2013.07.008](https://doi.org/10.1016/j.ijsolstr.2013.07.008).
 4. The default `CDPM2` uses isotropic damage, which is equivalent to `CDPM2ISO`.
 5. The token `CDPM2ANISO` uses anisotropic damage.
-6. If damage is activated, both tension and compression use the exponential damage model; the degradation is controlled
-   by parameters [14] and [15]. The characteristic length can be accounted for by modifying them.
+6. If damage is activated, both tension and compression use the exponential damage model; the degradation is controlled by parameters [14] and [15].
+   The characteristic length can be accounted for by modifying them.
 
-Details of implementation can be seen in the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
+Details of implementation can be seen in the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 
 !!! warning "maximum element size"
     Based on physical material limits, finite element dimensions for typical concrete cannot exceed half a meter (plain) to one meter (reinforced) if **strict** energy scaling is considered.
@@ -72,8 +70,7 @@ $$
 \mathbf{\sigma}=(1-\omega_c)\mathbf{\bar{\sigma}}_c+(1-\omega_t)\mathbf{\bar{\sigma}}_t.
 $$
 
-In the above expressions, $$\mathbf{\bar{\sigma}}$$ is the effective stress (undamaged),
-$$\mathbf{\bar{\sigma}}_c$$ and $$\mathbf{\bar{\sigma}}_t$$ are compressive and tensile parts of the effective stress.
+In the above expressions, $$\mathbf{\bar{\sigma}}$$ is the effective stress (undamaged), $$\mathbf{\bar{\sigma}}_c$$ and $$\mathbf{\bar{\sigma}}_t$$ are compressive and tensile parts of the effective stress.
 They are computed via eigen decomposition of the effective stress tensor.
 $$\omega_c$$ and $$\omega_t$$ are the compressive and tensile damage variables, respectively.
 
@@ -82,8 +79,7 @@ Depending on the damage type, the model parameters may be adjusted differently.
 
 The reference strains $$e_{ft}$$ and $$e_{fc}$$ affect the degradation of strength.
 
-The following are two examples, using different values of $$e_{ft}$$ and $$e_{fc}$$,
-while all other parameters are the default values.
+The following are two examples, using different values of $$e_{ft}$$ and $$e_{fc}$$, while all other parameters are the default values.
 
 ![compressive](CDPM2.EX1.svg)
 

@@ -1,7 +1,6 @@
 # file
 
-The `file` command is used to load external `suanPan` model files with or without extension `.supan` under the current
-working path.
+The `file` command loads external `suanPan` model files, with or without the `.supan` extension, from the current working directory.
 
 ## Syntax
 
@@ -10,7 +9,7 @@ file (1)
 # (1) string, external file name
 ```
 
-Please note users can use [`pwd`](../Process/pwd.md) to change the current working path.
+Use [`pwd`](../Process/pwd.md) to change the current working directory.
 
 ## Usage
 

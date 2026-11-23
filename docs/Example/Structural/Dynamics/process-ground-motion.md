@@ -6,7 +6,7 @@ For different methods, different considerations shall be taken into account.
 The ground motion record can be one of acceleration, velocity, or displacement.
 Depending on how it is collected, it could either be a processed or raw record.
 Typically, a seismometer collects acceleration, and velocity and displacement are derived from acceleration.
-We assume that analysts are given accelerograms. 
+We assume that analysts are given accelerograms.
 
 ## EOM
 
@@ -258,12 +258,15 @@ From the figure, one can assert that, if the structure responds to 200 Hz signal
 
 In the above example, we have demonstrated two things.
 
-1.  As discussed in [10.1080/13632469.2024.2372814](https://doi.org/10.1080/13632469.2024.2372814), when ground motion is applied in the form of inertial force, linear interpolation of acceleration introduces high frequency noise, the amplitude of which could be relatively large. This would introduce spurious responses.
-2.  When ground motion is applied in the form of support displacement, an inconsistent integration method that is used to integrate acceleration to displacement could introduce high frequency noise as well, if the integration method is different from the one used in response history analysis. This type of spurious response is not significant if the acceleration is not linearly interpolated.
+1. As discussed in [10.1080/13632469.2024.2372814](https://doi.org/10.1080/13632469.2024.2372814), when ground motion is applied in the form of inertial force, linear interpolation of acceleration introduces high-frequency noise, the amplitude of which could be relatively large.
+   This would introduce spurious responses.
+2. When ground motion is applied in the form of support displacement, an inconsistent integration method used to integrate acceleration to displacement could introduce high-frequency noise as well, if the integration method is different from the one used in response history analysis.
+   This type of spurious response is not significant if the acceleration is not linearly interpolated.
 
-In conclusion, analysts shall be aware of two things.
+In conclusion, analysts should be aware of two things.
 
-1.  Linear interpolation is bad. It shall be avoided, or at least cannot be used alone.
-2.  When converting acceleration to displacement, or vice versa, the integration method shall be consistent with the one used in response history analysis.
+1. Linear interpolation is inadequate.
+   It should be avoided, or at least should not be used alone.
+2. When converting acceleration to displacement, or vice versa, the integration method should be consistent with the one used in response history analysis.
 
 No matter what, the applied load, in the form of either inertial force or support displacement, shall be processed based on the time step size used in response history analysis.

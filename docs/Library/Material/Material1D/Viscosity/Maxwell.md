@@ -23,15 +23,14 @@ material Maxwell (1) (2) (3) [4] [5] [6]
 ## Remarks
 
 1. When `[4]` is set to true, the matrix formulation is used, that is, a 3-by-3 matrix is used in local iterations.
-   However, the inverse of the Jacobian is not computed numerically, but analytically. When it is set to false, the
-   scalar iteration is performed. In general, a scalar algorithm requires fewer floating number operations but may be
-   less numerically stable.
-2. The parameter `[5]` can be set to a nonzero positive integer to allow some unconverged substeps to be accumulated to
-   avoid sharp transition regions that may cause numerical issues. As a result, the response may not be as smooth as in
-   other regions.
-3. The parameter `[6]` is used to control how local strain is integrated. A value of $$0.0$$ indicates it would be
-   automatically computed based on the input strain and strain rate increments. A value of $$0.5$$ indicates a linear
-   distribution of spring strain over time.
+   However, the inverse of the Jacobian is not computed numerically, but analytically.
+   When it is set to false, the scalar iteration is performed.
+   In general, a scalar algorithm requires fewer floating number operations but may be less numerically stable.
+2. The parameter `[5]` can be set to a nonzero positive integer to allow some unconverged substeps to be accumulated to avoid sharp transition regions that may cause numerical issues.
+   As a result, the response may not be as smooth as in other regions.
+3. The parameter `[6]` is used to control how local strain is integrated.
+   A value of $$0.0$$ indicates it would be automatically computed based on the input strain and strain rate increments.
+   A value of $$0.5$$ indicates a linear distribution of spring strain over time.
 
 ## Recording
 
@@ -42,8 +41,8 @@ This model supports the following additional history variables to be recorded.
 | SD, SS, S      | stress                  |
 | ED             | damper strain           |
 | VD             | damper strain rate      |
-| ES             | spring strain           | 
+| ES             | spring strain           |
 | VS             | spring strain rate      |
 | E              | total strain            |
-| V              | total strain rate       | 
-| LITR           | local iteration counter | 
+| V              | total strain rate       |
+| LITR           | local iteration counter |

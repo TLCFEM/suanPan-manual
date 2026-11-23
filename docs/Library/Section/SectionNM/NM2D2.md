@@ -23,8 +23,7 @@ section NM2D2 (1) (2...9)
 # (9) double, linear density
 ```
 
-If the `NM2D2` section is defined by using the above command, it is assumed that the $$N$$-$$M$$ interaction surface is
-defined as follows.
+If the `NM2D2` section is defined by using the above command, it is assumed that the $$N$$-$$M$$ interaction surface is defined as follows.
 
 $$
 f=1.15p^2+m_s^2+3.67p^2m_s^2-c
@@ -35,8 +34,7 @@ This surface is suitable for I-sections.
 
 ### Option Two
 
-One may wish to customise the surface by assigning different weights and orders; it is possible by using the following
-syntax.
+One may wish to customise the surface by assigning different weights and orders; it is possible by using the following syntax.
 
 ```
 section NM2D2 (1) (2...9) [(10) (11) (12) ...]
@@ -54,16 +52,14 @@ section NM2D2 (1) (2...9) [(10) (11) (12) ...]
 # (12) double, c_i
 ```
 
-In the above command, parameters `(10)`, `(11)` and `(12)` form a triplet and can be appended as many groups as the
-analyst wishes.
+In the above command, parameters `(10)`, `(11)` and `(12)` form a triplet and can be appended as many groups as the analyst wishes.
 The surface is assumed to possess the following form,
 
 $$
 f=\sum_{i=1}^na_ip^{b_i}m_s^{c_i}-d.
 $$
 
-For example, the previous surface $$f=1.15p^2+m_s^2+3.67p^2m_s^2-c$$ can be equivalently expressed with the second
-syntax as follows.
+For example, the previous surface $$f=1.15p^2+m_s^2+3.67p^2m_s^2-c$$ can be equivalently expressed with the second syntax as follows.
 
 ```
 section NM2D2 (1) (2...9) 1.15 2. 0. 1. 0. 2. 3.67 2. 2.

@@ -1,7 +1,8 @@
 # Element Template
 
-Here we show the built-in element template. Comments explain the template a bit. A detailed guideline could be seen
-elsewhere.
+Here we show the built-in element template.
+Comments explain the template a bit.
+A detailed guideline could be seen elsewhere.
 
 ```cpp
 /**

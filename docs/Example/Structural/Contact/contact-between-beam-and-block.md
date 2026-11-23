@@ -1,12 +1,13 @@
 # [★★★☆☆] Contact Between Beam And Block
 
-In this example, we showcase the simulation of a 2D node-line contact problem. The model can be
-downloaded. [contact-between-beam-and-block.zip](contact-between-beam-and-block.zip)
+In this example, we showcase the simulation of a 2D node-line contact problem.
+The model can be downloaded.
+[contact-between-beam-and-block.zip](contact-between-beam-and-block.zip)
 
 ## The Beam
 
-Suppose there is an elastic cantilever beam with left end at $$(0,0)$$ fully fixed, and right end at $$(2,0)$$. The
-middle point is subjected to a displacement load.
+Suppose there is an elastic cantilever beam with its left end at $$(0,0)$$ fully fixed and its right end at $$(2,0)$$.
+The middle point is subjected to a displacement load.
 
 First, we define some nodes.
 
@@ -18,7 +19,8 @@ node 4 1.5 0
 node 5 2 0
 ```
 
-We use `EB21` element to define the element. Accordingly, an elastic material is attached.
+We use the `EB21` element to define the element.
+Accordingly, an elastic material is attached.
 
 ```
 # E=10
@@ -58,11 +60,10 @@ fix 2 E 6 7
 
 ### Penalty Function Method
 
-The [`Contact2D`](../../../Library/Element/Special/Contact2D.md) element is used to define contact. It requires two node
-groups that define master and slave, respectively.
+The [`Contact2D`](../../../Library/Element/Special/Contact2D.md) element is used to define contact.
+It requires two node groups that define the master and slave, respectively.
 
-Note that the outer normal vector of the master line is defined by rotating the axis by $$\pi/2$$ anticlockwise; the node
-sequence matters.
+Note that the outer normal vector of the master line is defined by rotating the axis by $$\pi/2$$ anticlockwise; the node sequence matters.
 
 ```
 # slave node group
@@ -78,10 +79,9 @@ element Contact2D 6 2 1 1E6
 
 ### Lagrangian Multiplier Method
 
-The [`NodeLine`](../../../Library/Constraint/NodeLine.md) contact constraint can be applied in order to properly account
-for contact interaction. Each constraint requires three nodes: master $$i$$, master $$j$$ and slave $$k$$. Again the
-outer normal vector of the master line is defined by rotating the axis by $$\pi/2$$ anticlockwise; the node sequence
-matters.
+The [`NodeLine`](../../../Library/Constraint/NodeLine.md) contact constraint can be applied in order to properly account for contact interaction.
+Each constraint requires three nodes: master $$i$$, master $$j$$ and slave $$k$$.
+Again, the outer normal vector of the master line is defined by rotating the axis by $$\pi/2$$ anticlockwise; the node sequence matters.
 
 ```
 constraint NodeLine 3 9 8 5
@@ -115,12 +115,10 @@ exit
 
 ## Remarks
 
-The contact itself is implemented as an element thus the contact force cannot be directly spotted in the resistance of
-the corresponding nodes.
+The contact itself is implemented as an element, so the contact force cannot be directly spotted in the resistance of the corresponding nodes.
 
-The master lines and slave nodes do not rely on the specific elements connected. Thus, the node-line contact can be
-applied to any 2D problems with various element types including truss, beam, membrane, etc.
+The master lines and slave nodes do not rely on the specific elements connected.
+Thus, the node-line contact can be applied to any 2D problems with various element types including truss, beam, membrane, etc.
 
-To define a single contact element is not a difficult task but for large scale problems, it may be quite cumbersome as
-all potential contact pairs need to be defined. For better performance, it is recommended to have few master lines in
-each element while a couple of contact elements can be defined so that contact detection can be run in parallel.
+To define a single contact element is not a difficult task, but for large-scale problems, it may be quite cumbersome as all potential contact pairs need to be defined.
+For better performance, it is recommended to have few master lines in each element, while a couple of contact elements can be defined so that contact detection can be run in parallel.

@@ -1,7 +1,6 @@
 # Constraint
 
-In this article, the formulation and implementation of constraints, both single-point and multipoint types, are briefly
-discussed.
+In this article, the formulation and implementation of constraints, both single-point and multipoint types, are briefly discussed.
 
 ## Penalty Method
 
@@ -15,8 +14,7 @@ The easiest approach to implement the constraint with the penalty method is to t
 
 ### Theory
 
-In the most general form, a minimisation problem of function $$f(x)$$ subjected to equality constraint $$g(x)$$ can be
-expressed as
+In the most general form, a minimisation problem of function $$f(x)$$ subjected to equality constraint $$g(x)$$ can be expressed as
 
 $$
 \text{minimise}~f(x)~\text{subjected to}~g(x)=0.
@@ -55,17 +53,14 @@ where $$K$$ is the tangent stiffness of the unconstrained system.
 
 ### Implementation
 
-From the formulation, it is clear that the general implementation of Lagrange multiplier method requires two main parts,
-namely the Hessian matrix and the gradient of constraints $$g_i$$.
+From the formulation, it is clear that the general implementation of the Lagrange multiplier method requires two main parts, namely the Hessian matrix and the gradient of constraints $$g_i$$.
 
-For the Hessian matrix, it can be treated as the corresponding stiffness matrix of the element that connects the nodes
-on which the constraint is applied. It can be computed locally and assembled into the global stiffness matrix with other
-conventional elements.
+For the Hessian matrix, it can be treated as the corresponding stiffness matrix of the element that connects the nodes on which the constraint is applied.
+It can be computed locally and assembled into the global stiffness matrix with other conventional elements.
 
-For the gradient, it is normally stored separately in the so-called border matrix. In a system with multiple constraints
-defined, the number of active constraints may differ from step to step, especially with the presence of inequality
-constraints. Thus, the border matrix, and the corresponding constraint residual (for nonlinear constraints), shall be
-stored locally and later be used to formulate the corresponding global variables in each iteration.
+For the gradient, it is normally stored separately in the so-called border matrix.
+In a system with multiple constraints defined, the number of active constraints may differ from step to step, especially with the presence of inequality constraints.
+Thus, the border matrix, and the corresponding constraint residual (for nonlinear constraints), shall be stored locally and later be used to formulate the corresponding global variables in each iteration.
 
-To consider linear constraints only, the implementation can be greatly simplified. But its applicability would be
-confined.
+To consider linear constraints only, the implementation can be greatly simplified.
+But its applicability would be confined.

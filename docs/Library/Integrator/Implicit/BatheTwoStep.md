@@ -9,7 +9,8 @@ References:
 1. [10.1016/j.compstruc.2006.09.004](https://doi.org/10.1016/j.compstruc.2006.09.004)
 2. [10.1016/j.compstruc.2018.11.001](https://doi.org/10.1016/j.compstruc.2018.11.001)
 
-The implementation follows the original algorithm. The only difference is the step size defined in `suanPan` is the mean step size of two sub-step sizes, that is $$\Delta{}t/2$$ in the references.
+The implementation follows the original algorithm.
+The only difference is the step size defined in `suanPan` is the mean step size of two sub-step sizes, that is $$\Delta{}t/2$$ in the references.
 
 For further discussions on this type of algorithm, one can check the following references.
 
@@ -24,8 +25,7 @@ integrator BatheTwoStep (1) [2] [3]
 # [3] double, sub-step size, gamma, default: 0.5
 ```
 
-Using `integrator BatheTwoStep (1)` with two optional parameters omitted gives the same results as in versions prior 
-to version 2.7.
+Using `integrator BatheTwoStep (1)` with two optional parameters omitted gives the same results as in versions prior to version 2.7.
 
 The spectral radius $$\rho_\infty$$ ranges from 0 to 1, both ends **inclusive**.
 

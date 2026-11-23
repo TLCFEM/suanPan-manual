@@ -6,19 +6,19 @@ The available output types are listed in the [OutputType](OutputType.md) file.
 
 To control the folders to which the recorder will write the output, please check the [OutputFolder](OutputFolder.md) file.
 
-Not all quantities at every time step need to be stored. Only those explicitly specified will be stored as history
-output.
+Not all quantities at every time step need to be stored.
+Only those explicitly specified will be stored as history output.
 
-Currently, there are several types of recorders. Analysts can choose to record either **element response** at
-integration points (strain, stress, etc., some elements support response at elemental nodes) or **nodal response** at
-model nodes (displacement, velocity, acceleration, reaction, etc.). The third type supports the output of the summation
-of the same quantity of several nodes/elements. Alternatively, the analyst can record global quantities such as global
-stiffness/mass, global kinetic energy, etc.
+Currently, there are several types of recorders.
+Analysts can choose to record either **element response** at integration points (strain, stress, etc., some elements support response at elemental nodes) or **nodal response** at model nodes (displacement, velocity, acceleration, reaction, etc.).
+The third type supports the output of the summation of the same quantity of several nodes/elements.
+Alternatively, the analyst can record global quantities such as global stiffness/mass, global kinetic energy, etc.
 
 ## Syntax
 
-Two types of format are supported. The output file can be either plain text or HDF5 file if the program is compiled with
-HDF5 support. The general form to define a record is as follows.
+Two types of format are supported.
+The output file can be either plain text or HDF5 file if the program is compiled with HDF5 support.
+The general form to define a record is as follows.
 
 ```text title="Recorder"
 recorder (1) plain (2) (3) [every 4] [5...]
@@ -170,22 +170,18 @@ The `(3)` can be:
 6. `K`: global stiffness matrix, vectorised
 7. `M`: global mass matrix, vectorised
 
-For energy terms, the recorder records two quantities computed from different sources: the first column is the summation
-of all corresponding energy terms collected from all valid elements; the second column is the global energy term.
+For energy terms, the recorder records two quantities computed from different sources: the first column is the summation of all corresponding energy terms collected from all valid elements; the second column is the global energy term.
 
-The reason to have two different columns is to mainly account for the fact that some models/theories may impose global
-level energy dissipation.
+The reason for having two different columns is mainly to account for the fact that some models/theories may impose global level energy dissipation.
 
-A very direct example is the global damping models used in seismic engineering. Take the `Rayleigh` model as an example.
-Since it can be implemented in two ways, either apply linear combination of stiffness and mass at element level after
-computing elemental stiffness and mass (see Rayleigh [`Modifier`](../Element/Modifier/Modifier.md)), or globally after
-assembling global stiffness and mass (see [`RayleighNewmark`](../Integrator/Implicit/Newmark/RayleighNewmark.md)). If the former
-is selected, each element can record its own energy dissipation term. If the latter is selected, the dissipated energy
-can only be computed from global stored quantities.
+A very direct example is the global damping model used in seismic engineering.
+Take the `Rayleigh` model as an example.
+Since it can be implemented in two ways, either apply linear combination of stiffness and mass at element level after computing elemental stiffness and mass (see Rayleigh [`Modifier`](../Element/Modifier/Modifier.md)), or globally after assembling global stiffness and mass (see [`RayleighNewmark`](../Integrator/Implicit/Newmark/RayleighNewmark.md)).
+If the former is selected, each element can record its own energy dissipation term.
+If the latter is selected, the dissipated energy can only be computed from global stored quantities.
 
-Some other models cannot be applied at element level, resulting in missing energy if those energy terms are only
-collected from elements.
+Some other models cannot be applied at element level, resulting in missing energy if those energy terms are only collected from elements.
 
-As a rule of thumb, often two columns are equal to each other, if there is no global energy 'modifier'. Otherwise, there
-would be a difference between two columns. Depending on whether the elemental energy or global energy is under
-investigation, users can flexibly choose the columns to be compared.
+As a rule of thumb, often two columns are equal to each other, if there is no global energy 'modifier'.
+Otherwise, there would be a difference between the two columns.
+Depending on whether the elemental energy or global energy is under investigation, users can flexibly choose the columns to be compared.

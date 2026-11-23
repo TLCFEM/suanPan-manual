@@ -2,8 +2,7 @@
 
 Bouc-Wen-Baber-Noori Model
 
-The `BWBN` model is an extension of the `BoucWen` model with stiffness degradation, strength degradation and pinching
-effect.
+The `BWBN` model is an extension of the `BoucWen` model with stiffness degradation, strength degradation and pinching effect.
 
 ## Syntax
 
@@ -37,8 +36,8 @@ material BWBN (1) [2...18]
 
 ## Theory
 
-The [Wikipedia](https://en.wikipedia.org/wiki/Bouc–Wen_model_of_hysteresis) page contains sufficient information about
-the formulation of `BWBN` model. Some normalizations are carried out compared to the original model.
+The [Wikipedia](https://en.wikipedia.org/wiki/Bouc–Wen_model_of_hysteresis) page contains sufficient information about the formulation of the `BWBN` model.
+Some normalizations are carried out compared to the original model.
 
 The evolution of internal displacement $$z(t)$$ is governed by the differential equation,
 
@@ -53,8 +52,8 @@ $$
 F=aF_y\dfrac{u}{u_y}+\left(1-a\right)F_yz.
 $$
 
-For state determination, $$z$$ is solved iteratively by using the Newton method. The evolutions of internal functions
-rely on the dissipated energy $$e$$, which is defined to be a **normalized** quantity.
+For state determination, $$z$$ is solved iteratively by using the Newton method.
+The evolutions of internal functions rely on the dissipated energy $$e$$, which is defined to be a **normalized** quantity.
 
 $$
 e=\left(1-a\right)\int{}z~\mathrm{d}u.
@@ -80,11 +79,14 @@ $$
 
 ## Parameters
 
-Strength degradation is controlled by $$\nu$$. To disable it, set $$\delta_\nu=0$$.
+Strength degradation is controlled by $$\nu$$.
+To disable it, set $$\delta_\nu=0$$.
 
-Stiffness degradation is controlled by $$\eta$$. To disable it, set $$\delta_\eta=0$$.
+Stiffness degradation is controlled by $$\eta$$.
+To disable it, set $$\delta_\eta=0$$.
 
-Pinching is controlled by $$h$$. To disable it, set $$\zeta=0$$ or $$p=0$$.
+Pinching is controlled by $$h$$.
+To disable it, set $$\zeta=0$$ or $$p=0$$.
 
 ## Examples
 

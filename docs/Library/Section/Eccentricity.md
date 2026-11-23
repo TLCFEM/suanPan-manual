@@ -3,7 +3,7 @@
 This page discusses the eccentricity of a section.
 
 Consider the following T-section with $$b_f=7.04$$, $$t_f=0.59$$, $$b_w=11.31$$ and $$t_w=0.43$$.
-It is `WT12X31` section in the [AISC](https://www.aisc.org/globalassets/aisc/manual/v15.0-shapes-database/aisc-shapes-database-v15.0.xlsx) table.
+It is a `WT12X31` section in the [AISC](https://www.aisc.org/globalassets/aisc/manual/v15.0-shapes-database/aisc-shapes-database-v15.0.xlsx) table.
 
 ![eccentricity](Eccentricity.svg)
 
@@ -30,7 +30,8 @@ e=\dfrac{7.04\times0.59\times(11.31/2+0.59/2)}{11.31\times0.43+7.04\times0.59}\\
 =2.7408.
 $$
 
-If the default trivial eccentricity is used, then axial loading will lead to transverse displacement. See the following example.
+If the default trivial eccentricity is used, then axial loading will lead to transverse displacement.
+See the following example.
 
 ```text
 node 1 0 0
@@ -143,5 +144,4 @@ This manual adjustment of eccentricity exists since it is beneficial when it com
 But when analysing simple sections alone, it is desired to place the section at its barycenter.
 This is not a problem for symmetric sections, but for asymmetric sections, the default eccentricity would cause unwanted results.
 
-There are `US2DC` and `US3DC` available,
-which automatically adjust the eccentricity so that all forces are applied at the barycenter.
+There are `US2DC` and `US3DC` available, which automatically adjust the eccentricity so that all forces are applied at the barycenter.

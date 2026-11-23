@@ -24,7 +24,8 @@ element PCPE8UC (1) (2...9) (10) (11) (12) (13)
 
 ## Remarks
 
-Only plane strain is supported. Plane stress does not make sense in geotechnical engineering.
+Only plane strain is supported.
+Plane stress does not make sense in geotechnical engineering.
 
 For the fluid phase, an isotropic fluid material can be provided, which mainly provides the bulk modulus of the fluid phase.
 For example,
@@ -34,8 +35,9 @@ For example,
 material Fluid 1 1000. 1E-2
 ```
 
-The $$\alpha$$ parameter `(12)` is often close to unity for soils. The porosity $$n$$ ranges from zero to unity. The
-isotropic permeability is assumed.
+The $$\alpha$$ parameter `(12)` is often close to unity for soils.
+The porosity $$n$$ ranges from zero to unity.
+The isotropic permeability is assumed.
 
 Interactions with other elements (with different arrangements of DoFs) can only be fulfilled via constraints.
 

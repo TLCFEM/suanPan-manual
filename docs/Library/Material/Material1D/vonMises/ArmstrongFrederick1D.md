@@ -19,9 +19,7 @@ $$
 \sigma^y=\sigma^i+Kq+\sigma^s(1-e^{-m^sq}),
 $$
 
-where $$\sigma^i$$ is the initial elastic limit (yielding stress), $$\sigma^s$$ is the saturation stress, $$K$$ is the
-linear hardening modulus, $$m^s$$ is a constant that controls the speed of hardening,
-$$\mathrm{d}q=|\mathrm{d}\varepsilon^p|$$ is the rate of accumulated plastic strain $$q$$.
+where $$\sigma^i$$ is the initial elastic limit (yielding stress), $$\sigma^s$$ is the saturation stress, $$K$$ is the linear hardening modulus, $$m^s$$ is a constant that controls the speed of hardening, $$\mathrm{d}q=|\mathrm{d}\varepsilon^p|$$ is the rate of accumulated plastic strain $$q$$.
 
 ### Kinematic Hardening
 

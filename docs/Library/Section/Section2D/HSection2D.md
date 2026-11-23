@@ -29,8 +29,7 @@ Two integration points are used for web.
 The user assigned number of integration points is used for flanges.
 
 The eccentricity is measured from the centre of the web/flanges.
-If the left and right flanges have different sizes, the default trivial eccentricity will lead to extra bending moments
-when the section is subjected to axial force.
+If the left and right flanges have different sizes, the default trivial eccentricity will lead to extra bending moments when the section is subjected to axial force.
 Eccentricity can be manually adjusted.
 
 See [Eccentricity](../Eccentricity.md) for more details.

@@ -24,8 +24,9 @@ element DCP4 (1) (2...5) (6) (7) (8) [9]
 
 ## Remarks
 
-* The third DoF is the damage variable. Boundary conditions can be assigned.
-* The characteristic length `(7)` can be set to zero to automatically determine the value based on geometry.
+* The third DoF is the damage variable.
+  Boundary conditions can be assigned.
+* The characteristic length `(7)` can be set to a negative value to automatically determine it based on the element geometry.
 
 ## Recording
 

@@ -1,4 +1,12 @@
 # integrator
 
-The `integrator` command is used to construct time integration algorithms. Please refer to the specific type of
-integrators for syntax and details.
+The `integrator` command constructs a time integration algorithm.
+Please refer to the specific integrator types for syntax and details.
+
+## Syntax
+
+```text title="integrator"
+integrator (1) (2) ...
+# (1) string, integrator type
+# (2) int, unique integrator tag
+```

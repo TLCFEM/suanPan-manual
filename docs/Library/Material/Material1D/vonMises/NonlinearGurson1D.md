@@ -4,12 +4,12 @@ Uniaxial Nonlinear General Gurson Porous Model
 
 ## Theory
 
-The yield function, hardening rule, flow rule are identical to that of the 3D version. Please check the
-[`NonlinearGurson`](../../Material3D/vonMises/NonlinearGurson.md) model for details.
+The yield function, hardening rule, flow rule are identical to those of the 3D version.
+Please check the [`NonlinearGurson`](../../Material3D/vonMises/NonlinearGurson.md) model for details.
 
 See also the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 
-The uniaxial version assumes the stress tensor possesses the following voigt form.
+The uniaxial version assumes the stress tensor possesses the following Voigt form.
 
 $$
 \sigma=\begin{bmatrix}\sigma_1&0&0&0&0&0\end{bmatrix},

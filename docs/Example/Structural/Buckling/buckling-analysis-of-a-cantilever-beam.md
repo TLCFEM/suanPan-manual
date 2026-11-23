@@ -2,8 +2,8 @@
 
 We present a buckling analysis of a cantilever beam with validations.
 
-Consider a cantilever beam with a length of $$L=10$$ and a unit square cross-section, viz., $$b=h=1$$. The elastic
-modulus of the material used is assumed to be $$E=1200$$. So that the bending stiffness $$EI$$ is
+Consider a cantilever beam with a length of $$L=10$$ and a unit square cross-section, viz., $$b=h=1$$.
+The elastic modulus of the material used is assumed to be $$E=1200$$, so that the bending stiffness $$EI$$ is
 
 $$
 EI=E\dfrac{bh^3}{12}=1200\times\dfrac{1}{12}=100.
@@ -25,8 +25,9 @@ $$
 
 ## Model Geometry
 
-We use the `B21` element to model the problem. Since `B21` incorporates sections, we need to define a proper
-section, the `Rectangle2D` is used. The geometry is stored in file `geometry.supan`.
+We use the `B21` element to model the problem.
+Since `B21` incorporates sections, we need to define a proper section; the `Rectangle2D` is used.
+The geometry is stored in the file `geometry.supan`.
 
 ```
 ! file name: geometry.supan
@@ -48,14 +49,16 @@ element B21 4 4 5 1 6 1
 element B21 5 5 6 1 6 1
 ```
 
-Note for a buckling analysis, the nonlinear geometry has been turned on, here `B21` uses a corotational formulation.
+Note that for a buckling analysis, the nonlinear geometry has been turned on.
+Here `B21` uses a corotational formulation.
 
 ## Buckling Analysis
 
-The analysis commands are stored in file `analysis.supan`. First we fix the first node and apply a reference axial
-compression. Theoretically, this applied axial compression force could have **arbitrary** magnitude in the context of **
-linear** buckling analysis. However, in `suanPan`, the nonlinear (instead of linear) analysis would be performed first.
-So the result depends on the magnitude of applied force.
+The analysis commands are stored in the file `analysis.supan`.
+First we fix the first node and apply a reference axial compression.
+Theoretically, this applied axial compression force could have **arbitrary** magnitude in the context of **linear** buckling analysis.
+However, in `suanPan`, the nonlinear (instead of linear) analysis would be performed first.
+So the result depends on the magnitude of the applied force.
 
 ```
 ! analysis.supan
@@ -67,9 +70,10 @@ fix 1 E 1
 cload 1 0 -1E-2 1 6
 ```
 
-We could then create a `buckle` step and analyse the problem. Alternatively, the keyword `buckling` could be used. It
-shall be noted, the stiffness in nonlinear analysis may not be positive definite, thus not all matrix storage schemes
-are valid to solve the problem. It is recommended to use asymmetric schemes.
+We could then create a `buckle` step and analyse the problem.
+Alternatively, the keyword `buckling` could be used.
+It shall be noted that the stiffness in nonlinear analysis may not be positive definite; thus, not all matrix storage schemes are valid to solve the problem.
+It is recommended to use asymmetric schemes.
 
 ```
 ! analysis.supan
@@ -104,8 +108,9 @@ $$
 P_{cr}=2.488\times10^2\times1\times10^{-2}=2.488.
 $$
 
-This is close to Euler's solution. Mesh refinement could be applied to obtain a closer value. The effect of different
-magnitudes of initial reference load is shown as below.
+This is close to Euler's solution.
+Mesh refinement could be applied to obtain a closer value.
+The effect of different magnitudes of the initial reference load is shown below.
 
 ![buckling analysis](buckling-analysis-of-a-cantilever-beam.svg)
 

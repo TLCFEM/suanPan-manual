@@ -21,12 +21,14 @@ material ConcreteCM (1) (2) (3) (4) (5) (6) [7] [8] [9] [10]
 ## Remarks
 
 1. The Chang-Mander concrete model uses Tsai's equation as backbone curves for both tension and compression.
-2. Parameters `NC` and `NT` control the shapes of backbone curves. A detailed explanation is presented later.
-3. In the original model, the transition between compression and tension could sometimes have larger stiffness than
-   the initial stiffness. This is unlikely to be true in reality.
-4. A linear behaviour for part of the hysteresis can be applied by turning on the linear transition switch. ***It
-   shall be noted that a linear hysteresis rule is much more stable than the original version.***
-5. The original CM model has some undefined behaviour which may cause stability issues. This is a simplified model.
+2. Parameters `NC` and `NT` control the shapes of backbone curves.
+   A detailed explanation is presented later.
+3. In the original model, the transition between compression and tension could sometimes have larger stiffness than the initial stiffness.
+   This is unlikely to be true in reality.
+4. A linear behaviour for part of the hysteresis can be applied by turning on the linear transition switch.
+   ***It shall be noted that a linear hysteresis rule is much more stable than the original version.***
+5. The original CM model has some undefined behaviour which may cause stability issues.
+   This is a simplified model.
 
 ## History Variable Layout
 
@@ -87,9 +89,9 @@ $$
 y=\dfrac{mx}{1+(m-\dfrac{n}{n-1})x+\dfrac{x^n}{n-1}}.
 $$
 
-where $$x=\varepsilon/\varepsilon_c$$ or $$x=\varepsilon/\varepsilon_t$$ is normalized strain and $$y=f/f_c$$ and
-$$y=f/f_t$$ are normalized stresses. The stress decreases to zero if $$m(n-1)>n$$ and $$n>1$$. The initial stiffness is
-related to $$m_t$$ and $$m_c$$ by
+where $$x=\varepsilon/\varepsilon_c$$ or $$x=\varepsilon/\varepsilon_t$$ is normalized strain and $$y=f/f_c$$ and $$y=f/f_t$$ are normalized stresses.
+The stress decreases to zero if $$m(n-1)>n$$ and $$n>1$$.
+The initial stiffness is related to $$m_t$$ and $$m_c$$ by
 
 $$
 E_0=mE_s=m_t\dfrac{f_t}{\varepsilon_t}=m_c\dfrac{f_c}{\varepsilon_c}.
@@ -97,8 +99,11 @@ $$
 
 Once $$E_0$$ is given, $$m_c$$ and $$m_t$$ are determined automatically.
 
-The parameter $$n$$ controls the slope of descending branch, normally $$n_t>n_c$$. Some empirical expressions are
-available to determine both $$m$$ and $$n$$. But most are unit dependent. Users shall do manual conversion. For example,
+The parameter $$n$$ controls the slope of descending branch, normally $$n_t>n_c$$.
+Some empirical expressions are available to determine both $$m$$ and $$n$$.
+But most are unit dependent.
+Users shall do manual conversion.
+For example,
 
 $$
 m_c=1+\dfrac{17.9}{f_c}\quad{}f_c\text{ in MPa},

@@ -1,6 +1,6 @@
 # sectiontest
 
-This command category can be used to test sections without establishing a FE model.
+This command category tests sections without establishing an FE model.
 
 ## Syntax
 
@@ -26,12 +26,12 @@ sectionTest3D (1) (2...4) (5) [6...]
 
 ## Remarks
 
-1.  The increment size could be either positive or negative.
-2.  The loading direction reverses after given numbers of steps.
-3.  The strain-stress history would be saved to `RESULT.txt`. If `HDF5` is used, the result would be additionally saved
-    to `RESULT.h5`.
-4.  The deformation vector consists of axial deformation, rotation about the strong axis, rotation about the weak axis. 1D, 2D
-    and 3D sections have the first, first two and all three components respectively.
+1. The increment size can be either positive or negative.
+2. The loading direction reverses after the given number of steps.
+3. The deformation-resistance history is saved to `RESULT.txt`.
+   If HDF5 support is enabled, the result is additionally saved to `RESULT.h5`.
+4. The deformation vector consists of axial deformation, rotation about the strong axis and rotation about the weak axis.
+   1D, 2D and 3D sections have the first, first two and all three components, respectively.
 
 ## Example
 
@@ -43,5 +43,5 @@ section US2D W21X68 1 1
 sectiontest2d 1 1E-3 0 100
 ```
 
-For the above example, a W21X68 section is defined with the bilinear hardening model. It is loaded with 100 increments
-of $$0.001$$ axial deformation while the rotation is zero.
+In the example above, a W21X68 section is defined with the bilinear hardening model.
+It is loaded with 100 increments of $$0.001$$ axial deformation while the rotation is zero.

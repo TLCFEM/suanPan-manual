@@ -8,8 +8,8 @@ $$
 W=\sum_{i=1}^nC_{i0}(J_1-3)^i+\sum_{i=1}^nC_{i1}(J_3-1)^{2i}.
 $$
 
-where $$C_{i0}$$ and $$C_{i1}$$ are material constants. $$J_1$$ and $$J_3$$ are reduced invariants of the right
-Cauchy-Green deformation tensor.
+where $$C_{i0}$$ and $$C_{i1}$$ are material constants.
+$$J_1$$ and $$J_3$$ are reduced invariants of the right Cauchy-Green deformation tensor.
 
 ## Syntax
 
@@ -46,8 +46,7 @@ If density is nonzero, say for example $$\rho=10^{-4}$$, then the following comm
 material Yeoh 1 20 4000 1E-4
 ```
 
-For $$i=3$$, let $$C_{10}=20$$, $$C_{20}=30$$, $$C_{30}=40$$, $$C_{11}=2000$$, $$C_{21}=3000$$ and $$C_{31}=4000$$, the
-strain energy density is
+For $$i=3$$, let $$C_{10}=20$$, $$C_{20}=30$$, $$C_{30}=40$$, $$C_{11}=2000$$, $$C_{21}=3000$$ and $$C_{31}=4000$$, the strain energy density is
 
 $$
 W=20(J_1-3)+30(J_1-3)^2+40(J_1-3)^3+2000(J_3-1)^2+3000(J_3-1)^4+4000(J_3-1)^6.

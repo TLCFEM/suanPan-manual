@@ -1,7 +1,6 @@
 # Degradation
 
-The uniaxial degradation model can be implemented separately from the intact material model if the degradation model
-only depends on the input strain history or the output stress and stiffness.
+The uniaxial degradation model can be implemented separately from the intact material model if the degradation model only depends on the input strain history or the output stress and stiffness.
 
 ## Stress
 
@@ -23,7 +22,7 @@ The stiffness can be expressed by applying the chain rule.
 ### Strain Dependent Degradation
 
 Assuming the degradation factor depends on the strain history, namely, $$D=D(\varepsilon_{max})$$.
-In which $$\varepsilon_{max}$$ is the maximum strain of the whole loading history.
+Here $$\varepsilon_{max}$$ is the maximum strain of the whole loading history.
 
 Where damage evolution is activated, the stiffness can be expressed as
 
@@ -36,7 +35,7 @@ where $$\bar{K}$$ is the effective stiffness of the intact material model.
 ### Stress Dependent Degradation
 
 Assuming the degradation factor depends on the stress history, namely, $$D=D(\bar{\sigma}_{max})$$.
-In which $$\bar{\sigma}_{max}$$ is the maximum effective stress of the whole loading history.
+Here $$\bar{\sigma}_{max}$$ is the maximum effective stress of the whole loading history.
 
 Where damage evolution is activated, the stiffness can be expressed as
 

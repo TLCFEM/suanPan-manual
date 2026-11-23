@@ -16,14 +16,12 @@ integrator LeeNewmarkIterative (1) (2) (3) ((4) (5) (6) [7...]...)
 ## Remarks
 
 1. The definition of parameters is **identical** to that of [`LeeNewmarkFull`](LeeNewmarkFull.md).
-2. Instead of unrolling all modes into a single sparse damping matrix, this integrator uses an iterative procedure to
-   solve the system. The convergence rate is **linear**.
-3. Since the convergence rate is linear even with [`Newton`](../../../Solver/Newton.md) method, one may use
-   the [`(L)BFGS`](../../../Solver/BFGS.md) method to achieve a super-linear convergence rate.
+2. Instead of unrolling all modes into a single sparse damping matrix, this integrator uses an iterative procedure to solve the system.
+   The convergence rate is **linear**.
+3. Since the convergence rate is linear even with [`Newton`](../../../Solver/Newton.md) method, one may use the [`(L)BFGS`](../../../Solver/BFGS.md) method to achieve a super-linear convergence rate.
 
-The damping force is obtained via matrix operations, which include matrix inversion. In this phase, some sparse matrices
-will be formed; to control which solver is used to solve the sparse matrices, one can set the subsystem solver via the
-following commands.
+The damping force is obtained via matrix operations, which include matrix inversion.
+In this phase, some sparse matrices will be formed; to control which solver is used to solve the sparse matrices, one can set the subsystem solver via the following commands.
 
 ```text
 set sub_system_solver MUMPS
@@ -34,8 +32,8 @@ set sub_system_solver CUDA ! if CUDA is available
 # currently no iterative solver is available
 ```
 
-It is recommended to use a dense matrix storage for the system with a [`(L)BFGS`](../../../Solver/BFGS.md) solver. This
-configuration can maximize the performance.
+It is recommended to use a dense matrix storage for the system with a [`(L)BFGS`](../../../Solver/BFGS.md) solver.
+This configuration can maximize the performance.
 For example,
 
 ```text
@@ -51,5 +49,6 @@ set sub_system_solver SuperLU
 integrator LeeNewmarkIterative 1 .25 .5 ...
 ```
 
-The above configuration uses a dense banded asymmetric matrix to store the system matrix. The equation of motion will be solved via the SPIKE solver.
+The above configuration uses a dense banded asymmetric matrix to store the system matrix.
+The equation of motion will be solved via the SPIKE solver.
 For damping force computation, the relevant sparse matrices will be solved by the SuperLU solver.

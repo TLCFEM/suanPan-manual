@@ -2,8 +2,8 @@
 
 Kelvin Model
 
-The `Kelvin` model represents a dashpot and a spring in parallel. This material model does respond to both displacement
-and velocity.
+The `Kelvin` model represents a dashpot and a spring in parallel.
+This material model does respond to both displacement and velocity.
 
 ## Syntax
 
@@ -26,10 +26,10 @@ This model supports the following additional history variables to be recorded.
 |----------------|--------------------|
 | S              | total stress       |
 | E              | total strain       |
-| V              | total strain rate  | 
+| V              | total strain rate  |
 | SD             | damper stress      |
 | ED             | damper strain      |
 | VD             | damper strain rate |
 | SS             | spring stress      |
-| ES             | spring strain      | 
+| ES             | spring strain      |
 | VS             | spring strain rate |

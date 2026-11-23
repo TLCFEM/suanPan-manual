@@ -1,7 +1,7 @@
 # materialtest
 
-This command category can be used to test most material models **that depend on strain input only** without establishing a FE
-model. Some wrappers and material models that rely on other material models cannot be tested in this way.
+This command category tests most material models **that depend on strain input only** without establishing an FE model.
+Some wrappers and material models that rely on other material models cannot be tested in this way.
 
 ## Syntax
 
@@ -27,28 +27,29 @@ materialTest3D (1) (2...7) (8) [9...]
 
 ## Remarks
 
-1.  The increment size could be either positive or negative.
-2.  The loading direction reverses after given numbers of steps.
-3.  The strain-stress history would be saved to `RESULT.txt`. If `HDF5` is used, the result would be additionally saved
-    to `RESULT.h5`. Besides, a `gnuplot` file named `RESULT.plt` will be generated.
+1. The increment size can be either positive or negative.
+2. The loading direction reverses after the given number of steps.
+3. The strain-stress history is saved to `RESULT.txt`.
+   If HDF5 support is enabled, the result is additionally saved to `RESULT.h5`.
+   A `gnuplot` file named `RESULT.plt` is also generated.
 
 ## Usage
 
-To use the tester, it is necessary to define a material beforehand. Here a `Bilinear1D` model is defined with elastic
-modulus $$E=1000.0$$, yield stress $$\sigma_y=10.0$$ and a negative hardening ratio $$h=-0.2$$.
+To use the tester, define a material beforehand.
+Here, a `Bilinear1D` model is defined with elastic modulus $$E=1000.0$$, yield stress $$\sigma_y=10.0$$ and a negative hardening ratio $$h=-0.2$$.
 
 ```
 material Bilinear1D 1 1000.0 10.0 -0.2
 ```
 
-The following command loads towards positive strain direction for 300 increments with increment size of $$0.0001$$ then
-negative direction for another 300 increments and eventually 200 increments towards positive direction. The ending
-strain would be $$\varepsilon=0.02$$.
+The following command loads in the positive strain direction for 300 increments of size $$0.0001$$.
+It then loads in the negative direction for another 300 increments and finally in the positive direction for 200 increments.
+The ending strain is $$\varepsilon=0.02$$.
 
 ```
 materialTest1D 1 0.0001 300 300 200
 ```
 
-The output is shown as follows.
+The output is shown below.
 
 ![materialtest example](materialtest.svg)

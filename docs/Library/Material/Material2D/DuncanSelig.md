@@ -71,27 +71,21 @@ $$
 
 ## Numerical Regularization
 
-The model is intended for compressive stress states. Two modifications keep the
-local iteration well-conditioned over a wide strain range.
+The model is intended for compressive stress states.
+Two modifications keep the local iteration well-conditioned over a wide strain range.
 
-1. The confining-stress dependent moduli use the constant plateau for all
-   $$\sigma_3<p_a$$. There is no separate branch at $$\sigma_3=-p_a$$, which
-   would otherwise introduce a large jump in the moduli.
-2. The degradation factor is capped at a small positive residual value once
-   $$\sigma_d\ge\sigma_{d,\max}$$. Without this cap, the parabolic factor
-   increases again beyond failure, which can make the local Newton iteration
-   oscillate between two modulus branches.
+1. The confining-stress dependent moduli use the constant plateau for all $$\sigma_3<p_a$$.
+   There is no separate branch at $$\sigma_3=-p_a$$, which would otherwise introduce a large jump in the moduli.
+2. The degradation factor is capped at a small positive residual value once $$\sigma_d\ge\sigma_{d,\max}$$.
+   Without this cap, the parabolic factor increases again beyond failure, which can make the local Newton iteration oscillate between two modulus branches.
 
-These modifications are required for the local iteration to converge over the
-full $$\pm2$$ reference-strain range used in the iso-error maps below.
+These modifications are required for the local iteration to converge over the full $$\pm2$$ reference-strain range used in the iso-error maps below.
 
 ## Iso-error Map
 
-The following example iso-error maps are obtained via the following script.
-The maps are centred at the undeformed state and cover $$\pm2$$ reference
-strains in both in-plane normal components, with zero shear strain. The
-relative error is undefined at the origin because the reference stress
-vanishes there.
+The following example iso-error maps are obtained via the script below.
+The maps are centred at the undeformed state and cover $$\pm2$$ reference strains in both in-plane normal components, with zero shear strain.
+The relative error is undefined at the origin because the reference stress vanishes there.
 
 ```py
 from plugins import ErrorMap

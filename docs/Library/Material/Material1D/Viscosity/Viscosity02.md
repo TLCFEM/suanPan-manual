@@ -2,11 +2,10 @@
 
 Viscous Damper
 
-This material model does not respond to strain/displacement. To represent materials that respond to both displacement
-and velocity, see [`Maxwell`](Maxwell.md) and [`Kelvin`](Kelvin.md).
+This material model does not respond to strain/displacement.
+To represent materials that respond to both displacement and velocity, see [`Maxwell`](Maxwell.md) and [`Kelvin`](Kelvin.md).
 
-See also damper elements [`Damper01`](../../../Element/Special/Damper01.md)
-and [`Damper02`](../../../Element/Special/Damper02.md).
+See also damper elements [`Damper01`](../../../Element/Special/Damper01.md) and [`Damper02`](../../../Element/Special/Damper02.md).
 
 ## References
 
@@ -16,15 +15,13 @@ and [`Damper02`](../../../Element/Special/Damper02.md).
 
 The quadrant damper is implemented.
 
-The damping force is defined as a function of displacement and velocity (or strain and strain rate, depending on what the
-input is).
+The damping force is defined as a function of displacement and velocity (or strain and strain rate, depending on what the input is).
 
 $$
 \sigma=\text{sign}(\dot\varepsilon)~\eta(\varepsilon,\dot\varepsilon)~|\dot\varepsilon|^\alpha.
 $$
 
-The damping coefficient is a function of strain and strain rate that can be expressed as follows, which shows different
-responses in different quadrants.
+The damping coefficient is a function of strain and strain rate that can be expressed as follows, which shows different responses in different quadrants.
 
 $$
 \begin{align*} \eta\left(\varepsilon,\dot\varepsilon\right)

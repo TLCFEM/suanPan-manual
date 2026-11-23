@@ -10,8 +10,7 @@ $$
 \dot{\gamma}=\dfrac{1}{\mu}\left(\dfrac{q}{\sigma_y}-1\right)^{\dfrac{1}{\epsilon}}
 $$
 
-where $$\epsilon$$ and $$\mu$$ are two material constants, $$\sigma_y$$ is the initial yield stress,
-$$q=\sqrt{\dfrac{3}{2}s:s}=\sqrt{3J_2}$$ is the von Mises stress.
+where $$\epsilon$$ and $$\mu$$ are two material constants, $$\sigma_y$$ is the initial yield stress, $$q=\sqrt{\dfrac{3}{2}s:s}=\sqrt{3J_2}$$ is the von Mises stress.
 
 The yielding surface is identical to that of the von Mises model.
 

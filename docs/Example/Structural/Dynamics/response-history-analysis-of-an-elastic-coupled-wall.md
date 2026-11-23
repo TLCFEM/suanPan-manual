@@ -2,8 +2,7 @@
 
 In this page, we perform eigen analysis and response history analysis of an elastic coupled wall model.
 
-The wall model is a simplified version of the example shown in section 7.2 of this
-paper: [10.1016/j.engstruct.2020.110760](https://doi.org/10.1016/j.engstruct.2020.110760).
+The wall model is a simplified version of the example shown in section 7.2 of this paper: [10.1016/j.engstruct.2020.110760](https://doi.org/10.1016/j.engstruct.2020.110760).
 
 The model can be [downloaded](response-history-analysis-of-an-elastic-coupled-wall.zip).
 
@@ -13,8 +12,8 @@ The geometry is summarized in the following figure.
 
 ![model brief](response-history-analysis-of-an-elastic-coupled-wall.png)
 
-Definitions of nodes, elements, materials, boundary conditions are stored in `node.supan` and `element.supan`. Use
-proper commands to load files.
+Definitions of nodes, elements, materials and boundary conditions are stored in `node.supan` and `element.supan`.
+Use proper commands to load the files.
 
 ```
 file node.supan
@@ -23,9 +22,8 @@ file element.supan
 
 ## Eigen Analysis
 
-Before performing the eigen analysis, the system is double-checked to be symmetric. In fact, as eigen analysis is
-normally conducted on elastic structures, which are most likely to be symmetric, it is in general not problematic as
-long as elasto-plastic behavior is not involved.
+Before performing the eigen analysis, the system is double-checked to be symmetric.
+In fact, as eigen analysis is normally conducted on elastic structures, which are most likely to be symmetric, it is in general not problematic as long as elasto-plastic behavior is not involved.
 
 Now we define a `Frequency` step to compute ten eigenvalues of the generalized eigen problem.
 
@@ -65,10 +63,9 @@ $$
 
 ### Ground Motion
 
-We use one of the recordings of 2011 Christchurch Earthquake, the original raw recording can be obtained from
-this [page](https://www.geonet.org.nz/data/supplementary/nzsmdb). Please
-check [NZStrongMotion](../../../Library/Amplitude/Special/NZStrongMotion.md) for more details. The chosen record has a
-tag of `20110221_235142_LPCC`, the PGA is $$8.91~\mathrm{m/s^2}$$.
+We use one of the recordings of the 2011 Christchurch Earthquake; the original raw recording can be obtained from this [page](https://www.geonet.org.nz/data/supplementary/nzsmdb).
+Please check [NZStrongMotion](../../../Library/Amplitude/Special/NZStrongMotion.md) for more details.
+The chosen record has a tag of `20110221_235142_LPCC`, and the PGA is $$8.91~\mathrm{m/s^2}$$.
 
 After downloading the processed recording file, the following command can be used to define the amplitude.
 
@@ -76,9 +73,10 @@ After downloading the processed recording file, the following command can be use
 amplitude NZStrongMotion 1 20110221_235142_LPCC
 ```
 
-The acceleration is applied to the structure, note `NZStrongMotion` produces normalized (dimensionless) amplitudes, to
-apply an accelerogram of target PGA, the corresponding magnitude shall be adjusted to be equal to that PGA. In this
-example, we assign a PGA of $$0.4g$$.
+The acceleration is applied to the structure.
+Note that `NZStrongMotion` produces normalized (dimensionless) amplitudes.
+To apply an accelerogram of target PGA, the corresponding magnitude shall be adjusted to be equal to that PGA.
+In this example, we assign a PGA of $$0.4g$$.
 
 ```
 acceleration 1 1 3.92 1
@@ -86,9 +84,8 @@ acceleration 1 1 3.92 1
 
 ### Damping Model
 
-[Lee's damping model](../../../Library/Integrator/Implicit/Newmark/LeeNewmark.md) is chosen as an illustration. Knowing that
-$$\omega_1=\sqrt{367.59}=19.17~\mathrm{rad/s}$$, we assign a single basic function at $$\omega_1$$ with $$5\%$$ damping
-ratio.
+[Lee's damping model](../../../Library/Integrator/Implicit/Newmark/LeeNewmark.md) is chosen as an illustration.
+Knowing that $$\omega_1=\sqrt{367.59}=19.17~\mathrm{rad/s}$$, we assign a single basic function at $$\omega_1$$ with a $$5\%$$ damping ratio.
 
 ```
 integrator LeeNewmark 1 .25 .5 .05 19.17
@@ -112,10 +109,10 @@ analyze
 
 ## Some Stats
 
-This example consists of $$83$$ nodes, equivalent to $$249$$ DoFs. With one basic function used in the damping model,
-the size of the matrix solved is about $$500\times500$$. On recent machines, the response history analysis can be done
-within one minute. The solving time increases almost linearly with an increasing number of basic functions used in the
-damping model.
+This example consists of $$83$$ nodes, equivalent to $$249$$ DoFs.
+With one basic function used in the damping model, the size of the matrix solved is about $$500\times500$$.
+On recent machines, the response history analysis can be done within one minute.
+The solving time increases almost linearly with an increasing number of basic functions used in the damping model.
 
 ## Result
 

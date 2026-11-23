@@ -12,8 +12,8 @@ Constant Strain Triangle With Crack Phase
 
 ## References
 
-There are a lot of papers on the phase-field model. A staggered scheme with maximum strain energy is adopted as an
-illustration of implementation.
+There are a lot of papers on the phase-field model.
+A staggered scheme with maximum strain energy is adopted as an illustration of implementation.
 
 * [10.1016/j.commatsci.2016.04.009](https://doi.org/10.1016/j.commatsci.2016.04.009)
 
@@ -31,8 +31,9 @@ element DCP3 (1) (2...4) (5) (6) (7) [8]
 
 ## Remarks
 
-* The third DoF is the damage variable. Boundary conditions can be assigned.
-* The characteristic length `(7)` can be set to zero to automatically determine the value based on geometry.
+* The third DoF is the damage variable.
+  Boundary conditions can be assigned.
+* The characteristic length `(6)` can be set to a negative value to automatically determine it based on the element geometry.
 
 ## Recording
 

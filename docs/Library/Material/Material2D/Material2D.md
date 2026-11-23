@@ -19,7 +19,7 @@ Depending on the specific material model, additional output types may be availab
     All 2D models cannot reliably record those components and all quantities that depend on those.
 
 The history vector is a vector of variadic length that stores the necessary history variables for the material model.
-Different material models may have different history variable storage layout.
+Different material models may have different history variable storage layouts.
 
 !!! warning "better to use wrapper with 3D models"
     It is discouraged to directly use 2D material models unless they are specifically designed for 2D problems.

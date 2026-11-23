@@ -12,8 +12,10 @@ All orthotropic models take nine parameters to define the elasticity.
 
 Using a standard notation (11, 22, 33, 12, 23, 13), the nine parameters needed are listed as follows.
 
-1. Six moduli: $$E_{11}$$, $$E_{22}$$, $$E_{33}$$, $$G_{12}$$, $$G_{23}$$, $$G_{13}$$. Note $$G_{ij}=G_{ji}$$.
-2. Three Poisson's ratios: $$\nu_{12}$$ $$\nu_{23}$$ $$\nu_{13}$$. Note $$\nu_{ij}\neq\nu_{ji}$$.
+1. Six moduli: $$E_{11}$$, $$E_{22}$$, $$E_{33}$$, $$G_{12}$$, $$G_{23}$$, $$G_{13}$$.
+   Note $$G_{ij}=G_{ji}$$.
+2. Three Poisson's ratios: $$\nu_{12}$$ $$\nu_{23}$$ $$\nu_{13}$$.
+   Note $$\nu_{ij}\neq\nu_{ji}$$.
 
 ## Theory
 
@@ -28,8 +30,8 @@ C_4\sigma_{12}^2+C_5\sigma_{23}^2+C_6\sigma_{13}^2+C_7\sigma_{11}+C_8\sigma_{22}
 \end{multline}
 $$
 
-where $$\sigma=[\sigma_{11}~\sigma_{22}~\sigma_{33}~\sigma_{12}~\sigma_{23}~\sigma_{13}]^\mathrm{T}$$ is the stress,
-$$C_1$$ to $$C_9$$ are material constants. $$K(\bar\epsilon_p)$$ is the isotropic hardening function.
+where $$\sigma=[\sigma_{11}~\sigma_{22}~\sigma_{33}~\sigma_{12}~\sigma_{23}~\sigma_{13}]^\mathrm{T}$$ is the stress, $$C_1$$ to $$C_9$$ are material constants.
+$$K(\bar\epsilon_p)$$ is the isotropic hardening function.
 
 The constants are defined as follows.
 
@@ -47,11 +49,12 @@ C_7&=\dfrac{\sigma_{11}^c-\sigma_{11}^t}{\sigma_{11}^t\sigma_{11}^c},\quad{}C_8=
 \end{align*}
 $$
 
-The Hoffman function allows different yield stresses for tension and compression. To recover the original Hill yield
-function, simply set $$\sigma_{ii}^t=\sigma_{ii}^c$$ for $$i=1,~2,~3$$.
+The Hoffman function allows different yield stresses for tension and compression.
+To recover the original Hill yield function, simply set $$\sigma_{ii}^t=\sigma_{ii}^c$$ for $$i=1,~2,~3$$.
 
-The hardening function $$K(\bar\varepsilon_p)$$ can be user defined. It shall be noted that $$K(0)=1$$. The following
-method shall be implemented.
+The hardening function $$K(\bar\varepsilon_p)$$ can be user defined.
+It shall be noted that $$K(0)=1$$.
+The following method shall be implemented.
 
 ```cpp
 virtual double compute_k(double) const = 0;

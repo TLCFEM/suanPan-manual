@@ -1,7 +1,7 @@
 # [★★★☆☆] Vibration of A Displaced Beam
 
-We consider an analysis that combines both static and dynamic steps. A simple cantilever beam with point mass is
-displaced in the static step and released in the dynamic step.
+We consider an analysis that combines both static and dynamic steps.
+A simple cantilever beam with a point mass is displaced in the static step and released in the dynamic step.
 
 The model can be [downloaded](vibration-of-a-displaced-beam.supan).
 
@@ -37,8 +37,8 @@ hdf5recorder 1 Node U2 2
 
 ## Static Step
 
-For the static step, a displacement load is applied on node $$2$$ DoF $$2$$. The absolute increment displacement is
-tested for convergence.
+For the static step, a displacement load is applied on node $$2$$ DoF $$2$$.
+The absolute incremental displacement is tested for convergence.
 
 ```
 step static 1 1
@@ -51,9 +51,11 @@ converger AbsIncreDisp 1 1E-8 3 1
 
 ## Dynamic Step
 
-A dynamic step with a step size of $$2$$ can then be defined. There is no need to define any load in this step. The
-previous displacement load is by default active for only one step. Hence, in this dynamic step, the displacement load is
-automatically suspended. A default `Newmark` integrator will be automatically defined if there is no valid integrator.
+A dynamic step with a step size of $$2$$ can then be defined.
+There is no need to define any load in this step.
+The previous displacement load is by default active for only one step.
+Hence, in this dynamic step, the displacement load is automatically suspended.
+A default `Newmark` integrator will be automatically defined if there is no valid integrator.
 
 ```
 step dynamic 2 2

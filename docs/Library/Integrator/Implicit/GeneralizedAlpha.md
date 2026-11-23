@@ -1,7 +1,6 @@
 # GeneralizedAlpha
 
-The generalized-$$\alpha$$ method provides second order accuracy with controllable algorithmic damping on high frequency
-response.
+The generalized-$$\alpha$$ method provides second order accuracy with controllable algorithmic damping on high frequency response.
 
 ## Syntax
 
@@ -65,8 +64,8 @@ $$
 \gamma=\dfrac{1}{2}-\dfrac{\rho_\infty-1}{\rho_\infty+1},\quad \beta=\dfrac{1}{\left(\rho_\infty+1\right)^2}.
 $$
 
-The resulting algorithm is unconditionally stable and has second order accuracy. The target numerical damping
-for high frequencies is achieved while that of low frequencies is minimized.
+The resulting algorithm is unconditionally stable and has second order accuracy.
+The target numerical damping for high frequencies is achieved while that of low frequencies is minimized.
 
 The recommended values of the spectral radius $$\rho_\infty$$ range from $$0.5$$ to $$0.8$$.
 

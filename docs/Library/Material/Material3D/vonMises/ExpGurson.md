@@ -35,10 +35,8 @@ Note we are using a slightly different notation compared to the one presented in
 
 ## Remarks
 
-Due to that the yield function has the quadratic term $$q^2$$, it shall be noted that the unit of the model shall be
-selected carefully. For example, if the yield stress is $$1000~\mathrm{MPa}$$ and $$\mathrm{Pascal}$$ is used as the
-unit for stress, then the input number is $$10^9$$, the square of which is greater than $$10^{16}$$ so that the yield
-function likely overflows.
+Because the yield function has the quadratic term $$q^2$$, it shall be noted that the unit of the model shall be selected carefully.
+For example, if the yield stress is $$1000~\mathrm{MPa}$$ and $$\mathrm{Pascal}$$ is used as the unit for stress, then the input number is $$10^9$$, the square of which is greater than $$10^{16}$$ so that the yield function likely overflows.
 
 ## Iso-error Map
 

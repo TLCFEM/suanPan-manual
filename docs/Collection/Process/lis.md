@@ -2,7 +2,7 @@
 
 [available from v3.1]
 
-To use iterative solvers, one shall use the following settings:
+To use iterative solvers, use the following settings:
 
 ```text
 set sparse_mat true
@@ -12,14 +12,13 @@ set system_solver lis [1]
 
 The [`Lis`](https://www.ssisc.org/lis/) library is used to provide the functionality.
 
-Please note that although `Lis` provides a wide variety of iterative solvers and preconditioners, not all would yield a
-good performance.
-Whether it is faster than direct solvers depends on different problems.
+`Lis` provides a wide variety of iterative solvers and preconditioners.
+Not all of them yield good performance.
+Whether it is faster than a direct solver depends on the problem.
 
-All possible options, which are copied directly from `Lis` documentation, are listed below.
+All possible options, which are copied directly from the `Lis` documentation, are listed below.
 
-For example, if one wants to use the `BiCGSTAB` solver with `ILU(2)` preconditioner, and wants to print statistics, the
-settings would be:
+For example, to use the `BiCGSTAB` solver with an `ILU(2)` preconditioner and print statistics, use the following settings:
 
 ```text
 set sparse_mat true

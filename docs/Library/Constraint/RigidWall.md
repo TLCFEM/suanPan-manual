@@ -1,7 +1,7 @@
 # RigidWall
 
-The `RigidWall` constraint implements the contact between the model and the assigned rigid walls. The rigid walls can have
-either finite or infinite dimensions.
+The `RigidWall` constraint implements the contact between the model and the assigned rigid walls.
+The rigid walls can have either finite or infinite dimensions.
 
 ## Theory
 
@@ -13,21 +13,22 @@ The implementation is identical to a conventional constraint.
 
 ### Penalty Method
 
-The impenetrable condition is implemented by adding resisting forces to the right hand of the equation. The force $$F$$
-is proportional to the penetration $$U_p$$.
+The impenetrable condition is implemented by adding resisting forces to the right hand of the equation.
+The force $$F$$ is proportional to the penetration $$U_p$$.
 
 $$
 F=\dfrac{\alpha}{\Delta{}t^2}U_p,
 $$
 
-where $$\Delta{}t$$ is the time increment of the current substep, $$\alpha$$ is the multiplier. The denominator
-$$\Delta{}t^2$$ is included to produce (relatively) objective results. The determination of multiplier $$\alpha$$ often
-requires trial and error. In general, too large values shall be avoided.
+where $$\Delta{}t$$ is the time increment of the current substep, $$\alpha$$ is the multiplier.
+The denominator $$\Delta{}t^2$$ is included to produce (relatively) objective results.
+The determination of multiplier $$\alpha$$ often requires trial and error.
+In general, too large values shall be avoided.
 
 ## Syntax
 
-The rigid wall constraints are single sided. Travelling against the outer normal direction is not allowed while the 
-other direction is permitted.
+The rigid wall constraints are single sided.
+Travelling against the outer normal direction is not allowed while the other direction is permitted.
 
 ### 1D
 
@@ -88,8 +89,8 @@ constraint finiterigidwallmultiplier (1) (2...3) (4...5)
 
 ### 3D
 
-The 3D version takes the origin and the normal vector as the inputs. Alternatively, two edges can be specified to 
-define a finite wall.
+The 3D version takes the origin and the normal vector as the inputs.
+Alternatively, two edges can be specified to define a finite wall.
 
 ```
 ! infinite rigid wall by penalty
@@ -127,8 +128,8 @@ constraint finiterigidwallmultiplier (1) (2...4) (5...7) (8...10)
 
 ## Remarks
 
-1. The normal vector of finite rigid walls is computed by cross-product between two edges defined. Beware of the order.
+1. The normal vector of finite rigid walls is computed by cross-product between two edges defined.
+   Beware of the order.
 2. The penalty function method can be used in both static and dynamic analysis.
 3. The multiplier method can only be used in static analysis.
-4. Both methods do not perform well in dynamic analysis to conserve energy and momentum; users may use the 
-   [`RestitutionWall`](RestitutionWall.md) constraint instead.
+4. Both methods do not perform well in dynamic analysis to conserve energy and momentum; users may use the [`RestitutionWall`](RestitutionWall.md) constraint instead.

@@ -17,7 +17,7 @@ Please note the following.
 
 ### Form A
 
-For an accelerogram record stored in a single column plain text file. The following syntax can be used.
+For an accelerogram record stored in a single-column plain text file, use the following syntax.
 
 ```text title="response_spectrum"
 response_spectrum (1) (2) (3) (4)
@@ -29,14 +29,14 @@ response_spectrum (1) (2) (3) (4)
 
 The accelerogram stores discrete acceleration amplitudes in the first column of the file.
 
-The desired period points where the response spectrum is computed are stored in the first column of the period
-file. The period file itself can have multiple columns, but only the first column is used.
+The desired period points where the response spectrum is computed are stored in the first column of the period file.
+The period file itself can have multiple columns, but only the first column is used.
 
-As the accelerogram only provides the amplitudes, the sampling interval must be provided as the `(3)` argument.
+Because the accelerogram only provides the amplitudes, the sampling interval must be provided as the `(3)` argument.
 
 ### Form B
 
-For an accelerogram record stored in a double column plain text file. The following syntax can be used.
+For an accelerogram record stored in a double-column plain text file, use the following syntax.
 
 ```text
 response_spectrum (1) (2) (3)
@@ -49,16 +49,16 @@ The accelerogram stores the time and acceleration amplitudes in the first and se
 
 The time series _**must**_ be equally spaced.
 
-The desired period points where the response spectrum is computed are stored in the first column of the period
-file. The period file itself can have multiple columns, but only the first column is used.
+The desired period points where the response spectrum is computed are stored in the first column of the period file.
+The period file itself can have multiple columns, but only the first column is used.
 
 ## Remarks
 
-The sampling interval is provided as the `(3)` argument in Form A, and is computed from the time series in Form B.
+The sampling interval is provided as the `(3)` argument in Form A and is computed from the time series in Form B.
 
-The same sampling interval is used in Lee's algorithm to compute the response histories. If the provided interval is 
-large, the response spectra may be inaccurate. One can use the [`upsampling`](upsampling.md) command to process the 
-accelerogram before using the `response_spectrum` command.
+The same sampling interval is used in Lee's algorithm to compute the response histories.
+If the provided interval is large, the response spectra may be inaccurate.
+Use the [`upsampling`](upsampling.md) command to process the accelerogram before using the `response_spectrum` command.
 
 ## Example
 

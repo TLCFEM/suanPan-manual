@@ -1,7 +1,7 @@
 # SimpleHysteresis
 
-The `SimpleHysteresis` model is a simplified framework for defining arbitrary backbones with linear unloading/reloading
-behaviour. The residual strain can be customised according to the specific rules.
+The `SimpleHysteresis` model is a simplified framework for defining arbitrary backbones with linear unloading/reloading behaviour.
+The residual strain can be customised according to the specific rules.
 
 ## History Variable Layout
 

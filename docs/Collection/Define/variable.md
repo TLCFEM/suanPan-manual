@@ -1,6 +1,6 @@
 # variable
 
-Although the parser is not intended to function as a scripting language interpreter, it is sometimes useful to have limited macro-like capabilities available.
+Although the parser is not intended to function as a scripting language interpreter, it is sometimes useful to have limited macro-like capabilities.
 
 ## Syntax
 
@@ -12,7 +12,7 @@ variable (1) (2)
 # (2) any read as string, value
 ```
 
-To reference a defined variable, use dollar sign `$` with the variable name.
+To reference a defined variable, use a dollar sign `$` followed by the variable name.
 For example,
 
 ```text
@@ -29,7 +29,7 @@ element GCMQG 1 1 2 8 7 1 1
 
 !!! warning "variable must exist"
     The variable must exist (have been defined) when referenced.
-    Thus the order matters in this situation.
-    This is because the scan and replacement of variables/macros happen during the processing/parsing of the command.
+    Thus, the order matters in this situation.
+    This is because variables and macros are scanned and replaced while the command is being processed.
 
-More advanced scripting functionality shall be fulfilled by other tools.
+More advanced scripting functionality should be provided by other tools.

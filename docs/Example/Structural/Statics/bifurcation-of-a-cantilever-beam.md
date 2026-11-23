@@ -1,13 +1,13 @@
 # [★★★☆☆] Bifurcation of A Cantilever Beam
 
-Here we run a full nonlinear geometry analysis of the cantilever beam shown in another
-page. [Buckling Analysis of A Cantilever Beam](../Buckling/buckling-analysis-of-a-cantilever-beam.md)
+Here we run a full nonlinear geometry analysis of the cantilever beam shown on another page: [Buckling Analysis of A Cantilever Beam](../Buckling/buckling-analysis-of-a-cantilever-beam.md)
 
-To numerically run a bifurcation analysis, initial perturbation must be introduced. Either geometry imperfection or
-initial load can be applied. Here we use initial transverse load.
+To numerically run a bifurcation analysis, an initial perturbation must be introduced.
+Either a geometry imperfection or an initial load can be applied.
+Here we use an initial transverse load.
 
-Since the perturbation does not change its magnitude throughout the analysis procedure, we shall define a constant
-amplitude associated with the initial transverse load. The magnitude of the initial load shall be relatively small.
+Since the perturbation does not change its magnitude throughout the analysis procedure, we shall define a constant amplitude associated with the initial transverse load.
+The magnitude of the initial load shall be relatively small.
 
 ```
 ! load model geometry
@@ -20,9 +20,9 @@ amplitude Constant 1
 cload 2 1 1E-4 2 6
 ```
 
-We use the arc length method to track the behavior, this is not necessary for this particular example as there is no
-snap-through nor snap-back. The reference load is applied on the free end. For stopping criterion, we use minimum
-displacement at the free end.
+We use the arc-length method to track the behaviour; this is not necessary for this particular example as there is no snap-through or snap-back.
+The reference load is applied at the free end.
+As a stopping criterion, we use the minimum displacement at the free end.
 
 ```
 ! reference load of magnitude -1 along DoF 1 of node 6

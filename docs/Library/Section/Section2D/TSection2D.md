@@ -25,8 +25,7 @@ section TSection2D (1) (2...5) (6) [7] [8]
 2. The flange is at the top of the local coordinate system.
 
 The eccentricity is measured from the centre of the web.
-The default trivial eccentricity will lead to extra bending moments when the section is subjected to axial force since
-the section is not symmetric.
+The default trivial eccentricity will lead to extra bending moments when the section is subjected to axial force since the section is not symmetric.
 Eccentricity can be manually adjusted.
 
 See [Eccentricity](../Eccentricity.md) for more details.

@@ -1,13 +1,13 @@
 # magma
 
-The [MAGMA](https://icl.utk.edu/magma/) library provides a vast number of algorithms that can be used to solve sparse
-linear systems on GPUs. To enable MAGMA solver, a valid CUDA installation must be present. The application should be
-compiled with `-DSP_ENABLE_CUDA=ON` and `-DSP_ENABLE_MAGMA=ON` options.
+The [MAGMA](https://icl.utk.edu/magma/) library provides many algorithms for solving sparse linear systems on GPUs.
+To enable the MAGMA solver, a valid CUDA installation must be present.
+The application should be compiled with the `-DSP_ENABLE_CUDA=ON` and `-DSP_ENABLE_MAGMA=ON` options.
 
 ## Compiling MAGMA
 
-Please check MAGMA documentation for the compilation instructions. On Windows, the following options are used, tailored
-for my specific platform only:
+Refer to the MAGMA documentation for compilation instructions.
+On Windows, the following options are used, tailored for one specific platform:
 
 ```json
 {
@@ -28,8 +28,8 @@ for my specific platform only:
 
 ## Compiling `suanPan`
 
-Once MAGMA is compiled, the application should be compiled with `-DSP_ENABLE_CUDA=ON` and `-DSP_ENABLE_MAGMA=ON` options.
-An additional path shall be set to the MAGMA installation directory.
+Once MAGMA is compiled, the application should be compiled with the `-DSP_ENABLE_CUDA=ON` and `-DSP_ENABLE_MAGMA=ON` options.
+An additional path must be set to the MAGMA installation directory.
 
 ```json
 {
@@ -41,12 +41,12 @@ An additional path shall be set to the MAGMA installation directory.
 }
 ```
 
-The following files shall be present: `${MAGMA_PATH}/include/magma.h`, `${MAGMA_PATH}/lib/libmagma.a`
+The following files must be present: `${MAGMA_PATH}/include/magma.h`, `${MAGMA_PATH}/lib/libmagma.a`
 and `${MAGMA_PATH}/lib/libmagma_sparse.a`.
 
 ## Using MAGMA Solver
 
-With MAGMA enabled, one can use the following to enable MAGMA solver:
+With MAGMA enabled, use the following to select the MAGMA solver:
 
 ```text
 set sparse_mat true
@@ -83,4 +83,4 @@ The following key-value options are available to customise the solver:
 | `--psweeps`   | positive integer                                                                            |
 | `--plevels`   | positive integer                                                                            |
 
-One shall note that depending on the different systems, not all iterative solvers are stable and applicable.
+Note that not all iterative solvers are stable and applicable on every system.

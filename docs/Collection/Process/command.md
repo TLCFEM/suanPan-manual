@@ -1,6 +1,6 @@
 # command
 
-The `command` command can be used to list all available commands.
+The `command` command lists all available commands.
 
 ## Syntax
 

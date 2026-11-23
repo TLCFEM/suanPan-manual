@@ -27,8 +27,7 @@ section NM2D3 (1) (2...12) [(13) (14) (15) ...]
 # (15) double, c_i
 ```
 
-In the above command, parameters `(13)`, `(14)` and `(15)` form a triplet and can be appended as many groups as the
-analyst wishes.
+In the above command, parameters `(13)`, `(14)` and `(15)` form a triplet and can be appended as many groups as the analyst wishes.
 The surface is assumed to possess the following form,
 
 $$

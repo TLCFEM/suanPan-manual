@@ -2,21 +2,21 @@
 
 The modified Dafalias--Manzari sand model.
 
-The original model [10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622)) is
-modified slightly. Readers can also refer to the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
-for details on the theory.
+The original model [10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622)) is modified slightly.
+Readers can also refer to the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf) for details on the theory.
 
 The modifications can be summarised as follows.
 
-1. The continuum mechanics convention (tension positive) is used. All volumetric strain and hydrostatic stress related
-   quantities shall flip their signs.
+1. The continuum mechanics convention (tension positive) is used.
+   All volumetric strain and hydrostatic stress related quantities shall flip their signs.
 2. The Lode angle dependency is removed, which is equivalent to setting $$c=1$$ in Eq. (19).
-3. Constants such as $$2/3$$ and $$\sqrt{2/3}$$ are removed. They can be combined with the model parameters.
-4. The hardening related parameter $$h$$ as defined in Eq. (24) causes numerical issues under small cyclic loads. Hence,
-   it is changed to a similar form.
+3. Constants such as $$2/3$$ and $$\sqrt{2/3}$$ are removed.
+   They can be combined with the model parameters.
+4. The hardening related parameter $$h$$ as defined in Eq. (24) causes numerical issues under small cyclic loads.
+   Hence, it is changed to a similar form.
 
-**The algorithm is correct but the theory needs validation. Your collaboration would be much appreciated.**
+**The algorithm is correct but the theory needs validation.**
+**Your collaboration would be much appreciated.**
 
 ## Syntax
 
@@ -53,8 +53,8 @@ $$
 G=G_0\dfrac{\left(2.97-e\right)^2}{1+e}\sqrt{pp_{at}},\qquad K=\dfrac{2}{3}\dfrac{1+\nu}{1-2\nu}G.
 $$
 
-To improve numerical stability, $$G$$ is bounded by $$G_rG_0|p_{at}|$$ where $$G_r$$ is a constant that can be chosen as for
-example $$0.1$$. This is equivalent to defining an elastic response for $$|p|<0.01|p_{at}|$$.
+To improve numerical stability, $$G$$ is bounded by $$G_rG_0|p_{at}|$$ where $$G_r$$ is a constant that can be chosen as for example $$0.1$$.
+This is equivalent to defining an elastic response for $$|p|<0.01|p_{at}|$$.
 
 The void ratio can be associated with strain so that
 
@@ -89,8 +89,7 @@ $$
 \Delta\mathbf{\varepsilon}=\Delta{}\mathbf{e}+\dfrac{1}{3}\Delta\varepsilon_v\mathbf{I},
 $$
 
-where $$\mathbf{s}=\mathrm{dev~}{\mathbf{\sigma}}$$ is the deviatoric stress, $$p=\dfrac{1}{3}\mathrm{tr~
-}{\mathbf{\sigma}}$$ is the hydrostatic stress.
+where $$\mathbf{s}=\mathrm{dev~}{\mathbf{\sigma}}$$ is the deviatoric stress, $$p=\dfrac{1}{3}\mathrm{tr~}{\mathbf{\sigma}}$$ is the hydrostatic stress.
 
 ### Critical State
 
@@ -120,8 +119,8 @@ $$
 F=\big|\mathbf{s}+p\mathbf{\alpha}\big|+mp=\big|\mathbf{\eta}\big|+mp,
 $$
 
-where $$\alpha$$ is the so-called back stress ratio and $$m$$ characterises the size of the wedge. For simplicity, $$m$$
-is assumed to be a constant in this model.
+where $$\alpha$$ is the so-called back stress ratio and $$m$$ characterises the size of the wedge.
+For simplicity, $$m$$ is assumed to be a constant in this model.
 
 By denoting $$\mathbf{\eta}=\mathbf{s}+p\mathbf{\alpha}$$, the directional unit tensor is defined as
 
@@ -144,13 +143,11 @@ D=A_d\left(\alpha^d-m-\mathbf{\alpha}:\mathbf{n}\right)=A_0\left(1+\left\langle\
 \mathbf{n}\right\rangle\right)\left(\alpha_d-m-\mathbf{\alpha}:\mathbf{n}\right).
 $$
 
-Due to the change of sign convention, a negative $$D$$ gives contractive response, thus $$A_0$$ often needs to be
-negative.
+Due to the change of sign convention, a negative $$D$$ gives contractive response, thus $$A_0$$ often needs to be negative.
 
 ### Hardening Rule
 
-The evolution rate of the back stress ratio $$\mathbf{\alpha}$$ is defined in terms of a proper distance measure from
-the bounding surface,
+The evolution rate of the back stress ratio $$\mathbf{\alpha}$$ is defined in terms of a proper distance measure from the bounding surface,
 
 $$
 \Delta\mathbf{\alpha}=\gamma{}h\left(\left(\alpha^b-m\right)\mathbf{n}-\mathbf{\alpha}\right),

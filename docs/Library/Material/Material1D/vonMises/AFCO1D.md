@@ -1,6 +1,6 @@
 # AFCO1D
 
-This is an extension of [`ArmstrongFrederick1D`](ArmstrongFrederick1D.md) model.
+This is an extension of the [`ArmstrongFrederick1D`](ArmstrongFrederick1D.md) model.
 
 The name represents the following.
 
@@ -22,7 +22,7 @@ $$
 h=|\varepsilon^p-\theta|-r
 $$
 
-In which, $$\theta$$ points to the centre of the non-hardening plastic strain region.
+Here, $$\theta$$ points to the centre of the non-hardening plastic strain region.
 It may be called the back plastic strain.
 The field $$r$$ describes the size of this surface.
 It is further used to introduce a reduction term in the isotropic hardening.
@@ -31,8 +31,7 @@ $$
 \sigma^y=\sigma^i+Kq+\sigma^s\left(1-e^{-m^sq}\right)-\sigma^r\left(1-e^{-m^rr}\right).
 $$
 
-Further details can be found in the corresponding section
-in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
+Further details can be found in the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 
 ## Syntax
 

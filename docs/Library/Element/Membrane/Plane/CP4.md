@@ -27,8 +27,7 @@ element CP4 (1) (2...5) (6) [7] [8] [9] [10]
 ## Remarks
 
 * The `CP4` element resembles CPS4 and CPE4 elements in ABAQUS.
-* The full integration scheme uses 2-by-2 Gaussian scheme and the reduced integration uses a single integration point at
-  the center of the element.
+* The full integration scheme uses 2-by-2 Gaussian scheme and the reduced integration uses a single integration point at the center of the element.
 * The reduced integration scheme also imports anti-hourglassing technique.
 
 For the hourglassing control, see [10.1016/0045-7825(84)90067-7](https://doi.org/10.1016/0045-7825(84)90067-7).

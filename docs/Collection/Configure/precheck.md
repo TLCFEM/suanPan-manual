@@ -1,7 +1,8 @@
 # precheck
 
-The `precheck` command initialises all the models created to check for potential errors. However, this command will not run
-analysis. To perform the analysis, please use the [`analyze`](analyze.md) command.
+The `precheck` command initialises all the models created so far to check for potential errors.
+It does not run the analysis.
+To perform the analysis, use the [`analyze`](analyze.md) command.
 
 ## Syntax
 

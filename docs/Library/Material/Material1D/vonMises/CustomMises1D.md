@@ -19,8 +19,7 @@ material CustomMises1D (1) (2) (3) (4) [5]
 
 ## Usage
 
-Both the isotropic and kinematic hardening functions are provided
-by [Expression](../../../../Collection/Define/expression.md) objects.
+Both the isotropic and kinematic hardening functions are provided by [Expression](../../../../Collection/Define/expression.md) objects.
 
 Both hardening functions shall be defined in terms of the equivalent plastic strain.
 

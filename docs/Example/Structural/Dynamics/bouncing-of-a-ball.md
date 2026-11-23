@@ -1,12 +1,12 @@
 # [★★★☆☆] Bouncing of a Ball
 
-In this example we show the application of the [`RigidWall`](../../../Library/Constraint/RigidWall.md) and 
-[`RestitutionWall`](../../../Library/Constraint/RestitutionWall.md) constraints. It is also possible to define a 
-rigid wall with finite dimension. The model script can be [downloaded](bouncing-of-a-ball.supan).
+In this example, we show the application of the [`RigidWall`](../../../Library/Constraint/RigidWall.md) and [`RestitutionWall`](../../../Library/Constraint/RestitutionWall.md) constraints.
+It is also possible to define a rigid wall with finite dimensions.
+The model script can be [downloaded](bouncing-of-a-ball.supan).
 
-A mass point is used to idealize the ball. As this is a dynamics problem of a rigid body, there is no need to define any
-material models to provide stiffness matrix. For this reason, it is possible to just define a point mass at the target
-point.
+A mass point is used to idealize the ball.
+As this is a dynamics problem of a rigid body, there is no need to define any material models to provide a stiffness matrix.
+For this reason, it is possible to just define a point mass at the target point.
 
 ```
 # define a node at (-1,2)
@@ -15,8 +15,8 @@ node 1 -1 2
 mass 1 1 1 1 2
 ```
 
-No matter how the gravity load is applied, it is required to define a constant amplitude that provides a constant level
-of either gravity force or acceleration. We define a proper amplitude first.
+No matter how the gravity load is applied, it is required to define a constant amplitude that provides a constant level of either gravity force or acceleration.
+We define a proper amplitude first.
 
 ```
 amplitude Constant 1
@@ -56,7 +56,8 @@ peek node 1
 exit
 ```
 
-A default Newmark time integration algorithm will be assigned if no valid integrator is defined. The output is
+A default Newmark time integration algorithm will be assigned if no valid integrator is defined.
+The output is
 
 ```
 Node 1:
@@ -79,19 +80,19 @@ $$
 
 ## Rigid Wall Constraint
 
-We define two infinite rigid wall constraints inclined $$\pi/4$$ and $$3\pi/4$$ to form a right angle. The ball can
-bounce between two walls. Two walls are both anchored at the origin and have infinite dimension; the outer normals are
-$$(1,1)$$ and $$(-1,1)$$, respectively. The penalty factor is chosen to be $$0.1$$ in this particular example. 
-Accounting for the time step defined below ($$0.005$$), the actual penalty factor applied to the effective stiffness is
-$$0.1/0005/0.005=4000$$.
+We define two infinite rigid wall constraints inclined $$\pi/4$$ and $$3\pi/4$$ to form a right angle.
+The ball can bounce between the two walls.
+Both walls are anchored at the origin and have infinite dimension; the outer normals are $$(1,1)$$ and $$(-1,1)$$, respectively.
+The penalty factor is chosen to be $$0.1$$ in this particular example.
+Accounting for the time step defined below ($$0.005$$), the actual penalty factor applied to the effective stiffness is $$0.1/0005/0.005=4000$$.
 
 ```
 rigidwall 1 0 0 1 1 1E-1
 rigidwall 2 0 0 -1 1 1E-1
 ```
 
-The penalty factor can be altered to achieve different levels of satisfaction of the constraint. But higher values also
-result in greater high frequency noise.
+The penalty factor can be altered to achieve different levels of satisfaction of the constraint.
+But higher values also result in greater high-frequency noise.
 
 It may be of interest to record the motion of the ball.
 
@@ -117,8 +118,8 @@ The results are shown as follows.
 
 ![bouncing of a ball between two rigid walls](bouncing-of-a-ball.svg)
 
-The energy of the system is **not** conserved. To alleviate this problem, one can use the 
-[`RestitutionWall`](../../../Library/Constraint/RestitutionWall.md) constraint.
+The energy of the system is **not** conserved.
+To alleviate this problem, one can use the [`RestitutionWall`](../../../Library/Constraint/RestitutionWall.md) constraint.
 
 ## Restitution Wall Constraint
 

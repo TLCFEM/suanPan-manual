@@ -1,7 +1,6 @@
 # MaxHistory
 
-The `MaxHistory` criterion tests the specified historical variable, if it **exceeds** (i.e., is greater than) the given value, the corresponding
-element is disabled.
+The `MaxHistory` criterion tests the specified historical variable; if it **exceeds** (i.e., is greater than) the given value, the corresponding element is disabled.
 
 ## Syntax
 

@@ -2,10 +2,9 @@
 
 Objective Concrete Model
 
-The `ConcreteExp` model uses the exponential functions from the Barcelona model (Lubliner, 1989) as the backbones. The
-main advantage is that the area under the backbone has an upper bound and can be explicitly integrated. By associating
-this value with objective quantities, it is possible to obtain a uni-axial concrete model that supports objective
-response.
+The `ConcreteExp` model uses the exponential functions from the Barcelona model (Lubliner, 1989) as the backbones.
+The main advantage is that the area under the backbone has an upper bound and can be explicitly integrated.
+By associating this value with objective quantities, it is possible to obtain a uni-axial concrete model that supports objective response.
 
 ## Syntax
 
@@ -25,8 +24,7 @@ material ConcreteExp (1) (2) (3) (4) (5) (6) (7) (8) [9] [10]
 
 ## History Variable Layout
 
-Since it is derived from the [`SimpleHysteresis`](../Hysteresis/SimpleHysteresis.md) model, they share the same history
-variable layout.
+Since it is derived from the [`SimpleHysteresis`](../Hysteresis/SimpleHysteresis.md) model, it shares the same history variable layout.
 
 ## Theory
 
@@ -36,8 +34,9 @@ $$
 \dfrac{\sigma}{f}=\left(1+a\right)\exp\left(-b\varepsilon_p\right)-a\exp\left(-2b\varepsilon_p\right)
 $$
 
-where $$a$$ and $$b$$ are two material properties that control the shape of the backbone. For tension, $$a<1$$. For
-compression, $$a>1$$.
+where $$a$$ and $$b$$ are two material properties that control the shape of the backbone.
+For tension, $$a<1$$.
+For compression, $$a>1$$.
 
 The area under the backbone is
 
@@ -53,8 +52,8 @@ $$
 
 The model accepts $$g_t$$ and $$g_c$$ in order to obtain objective results.
 
-The parameters $$f_t$$ and $$f_c$$ are elastic limits of tension and compression respectively. **However, the maximum
-strength $$f_{c,m}$$ is taken as an input since for compression there is a hardening response.**
+The parameters $$f_t$$ and $$f_c$$ are elastic limits of tension and compression respectively.
+**However, the maximum strength $$f_{c,m}$$ is taken as an input since for compression there is a hardening response.**
 
 It could be derived that
 
@@ -72,15 +71,17 @@ For other ratios, $$a_c$$ can be determined accordingly.
 
 ## Determination of Parameters
 
-The parameter $$g_t$$ could be associated with the mode one specific fracture energy of the material. For concrete, it
-typically ranges from $$40~\mathrm{N/m}$$ to $$120~\mathrm{N/m}$$ (according to ABAQUS). Values of similar scale can be
-used.
+The parameter $$g_t$$ could be associated with the mode one specific fracture energy of the material.
+For concrete, it typically ranges from $$40~\mathrm{N/m}$$ to $$120~\mathrm{N/m}$$ (according to ABAQUS).
+Values of similar scale can be used.
 
 The counterpart $$g_c$$ can be chosen as several hundred times larger than $$g_t$$.
 
-The $$a_t$$ can be set to $$(0,~1)$$, typically, a value of $$0.7$$ is good for general use. The $$a_c$$ is greater than
-$$1$$. A larger $$a_c$$ has a narrower hardening region and thus degrades more rapidly. For high strength concrete,
-$$a_c$$ can be large. For low strength concrete, $$a_c$$ could be around $$2$$.
+The $$a_t$$ can be set to $$(0,~1)$$, typically, a value of $$0.7$$ is good for general use.
+The $$a_c$$ is greater than $$1$$.
+A larger $$a_c$$ has a narrower hardening region and thus degrades more rapidly.
+For high strength concrete, $$a_c$$ can be large.
+For low strength concrete, $$a_c$$ could be around $$2$$.
 
 ```
 material ConcreteExp 1 3E4 3. .6 4E-3 30. 4. 1E-1 .2

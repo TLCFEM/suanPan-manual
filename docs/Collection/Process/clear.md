@@ -1,6 +1,6 @@
 # clear
 
-The `clear` command clears all information of the current domain.
+The `clear` command clears all information in the current domain.
 
 ## Syntax
 

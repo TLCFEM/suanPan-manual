@@ -1,10 +1,9 @@
 # [★★★☆☆] Double Edge Notched Specimen
 
-The double edge notched specimen was investigated
-by [Nooru-Mohamed (1992)](http://resolver.tudelft.nl/uuid:a6a773f1-dacd-4598-aa6a-960dddf71117).
+The double edge notched specimen was investigated by [Nooru-Mohamed (1992)](http://resolver.tudelft.nl/uuid:a6a773f1-dacd-4598-aa6a-960dddf71117).
 
-This example is taken from the [thesis](https://doi.org/10.5281/zenodo.3731921). The details of the model can be seen in
-Section 6.3.
+This example is taken from the [thesis](https://doi.org/10.5281/zenodo.3731921).
+The details of the model can be seen in Section 6.3.
 
 The model can be downloaded [here](double-edge-notched-specimen.zip).
 
@@ -14,7 +13,8 @@ The definitions of nodes and elements can be seen in `element_f.supan` and `node
 
 To ease the work of defining boundary conditions and load, some node groups can be defined first.
 
-In total four edges will be used, here the `generatebypoint` command is used to find all relevant nodes.
+In total, four edges will be used.
+Here the `generatebypoint` command is used to find all relevant nodes.
 
 ```
 # find all nodes on the line segment defined by (0,0) and (200,0)
@@ -42,7 +42,8 @@ grouppenaltybc 2 1 2
 grouppenaltybc 3 2 1
 ```
 
-Two displacement loads are applied. Two files `h` and `v` are used to define the amplitudes.
+Two displacement loads are applied.
+Two files `h` and `v` are used to define the amplitudes.
 
 ```
 # horizontal displacement to generate a 5kN total horizontal tension force
@@ -59,12 +60,13 @@ If **VTK** is enabled, it is possible to record the distribution of tension dama
 hdf5recorder 1 Visualisation DT width 3 scale 0
 ```
 
-Since we are not interested in the displacement, `scale` is simply set to zero. The output files are automatically
-numbered with a total width of four. It is changed to three in this example. The generated visualisation files can be loaded
-into **ParaView** as a group to generate animations.
+Since we are not interested in the displacement, `scale` is simply set to zero.
+The output files are automatically numbered with a total width of four.
+The width is changed to three in this example.
+The generated visualisation files can be loaded into **ParaView** as a group to generate animations.
 
-The analysis has a duration of two seconds. In the first second, the horizontal tension is applied, then the vertical
-load is applied.
+The analysis has a duration of two seconds.
+In the first second, the horizontal tension is applied; then the vertical load is applied.
 
 ```
 step static 1 2
@@ -84,8 +86,8 @@ Results are shown as follows, which agree with experimental results.
 
 ## Element Deletion
 
-It is possible to further define a criterion so that elements that exceed a certain value of $$d_t$$ are
-removed from the model. This is an approach adopted widely to simulate crack propagation.
+It is possible to further define a criterion so that elements that exceed a certain value of $$d_t$$ are removed from the model.
+This is an approach adopted widely to simulate crack propagation.
 
 ```
 criterion MaxHistory 1 DT .9

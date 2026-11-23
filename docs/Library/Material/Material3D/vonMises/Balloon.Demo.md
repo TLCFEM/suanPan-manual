@@ -7,8 +7,6 @@ In this page, we demonstrate the usage of the Balloon-v1 model.
 We need to run example analyses and extract and plot the generated results.
 This would require some utilities to be at hand.
 
-
-
 ```python
 import os
 import shutil
@@ -160,17 +158,10 @@ for rate in (0, 0.4):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_3_0.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_3_1.png)
-    
-
 
 ## Basic Isotropic Hardening
 
@@ -198,17 +189,10 @@ for rate in (0, 2):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_5_0.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_5_1.png)
-    
-
 
 ## Basic Kinematic Hardening
 
@@ -244,29 +228,16 @@ for saturation, rate in ((0, 0), (0.05, 0), (1, 5), (2, 5)):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_7_0.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_7_1.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_7_2.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_7_3.png)
-    
-
 
 ## Growing Kinematic Hardening Bound
 
@@ -296,17 +267,10 @@ for linear in (0, 2e-2):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_9_0.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_9_1.png)
-    
-
 
 ## Further Enhancement Bauschinger Effect
 
@@ -337,17 +301,10 @@ for saturation, rate in (
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_11_0.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_11_1.png)
-    
-
 
 ## Isotropic Hardening Stagnation
 
@@ -376,23 +333,13 @@ for memory in (1, 2, 5):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_13_0.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_13_1.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_13_2.png)
-    
-
 
 ## Cyclic Isotropic Hardening/Softening
 
@@ -424,17 +371,10 @@ for rate in (1e-1, 5e-2):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_15_0.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_15_1.png)
-    
-
 
 Because the bound itself is evolving with the development of plasticity, this cyclic hardening/softening can occur repeatedly under certain conditions.
 
@@ -459,17 +399,10 @@ for rate in (1e-1, 5e-2):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_17_0.png)
-    
 
 
-
-    
 ![png](Balloon.Demo_files/Balloon.Demo_17_1.png)
-    
-
 
 ## Cyclic Kinematic Hardening/Softening
 

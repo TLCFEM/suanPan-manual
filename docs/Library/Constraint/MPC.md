@@ -13,7 +13,6 @@ If `0` is assigned to `(2)`, a default ramp function will be assigned automatica
 !!! warning "no bc"
     It is not expected to assign boundary conditions via `MPC` constraint or `Tie` element.
 
-
 The `MPC` is a general-purpose constraint that enforces the following condition:
 
 $$

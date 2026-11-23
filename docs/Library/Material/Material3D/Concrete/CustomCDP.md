@@ -51,14 +51,13 @@ The $$f$$ is the actual stress observed as the final output of the model.
 
 By following these imposed rules, users can implement any custom backbone and damage evolution.
 
-Further explanation of the curves can be seen in
-[10.1061/(ASCE)0733-9399(1998)124:8(892)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:8(892)).
+Further explanation of the curves can be seen in [10.1061/(ASCE)0733-9399(1998)124:8(892)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:8(892)).
 
 ## Example
 
 For the purpose of illustration, we provide a simple example, which may not be applicable to real concrete behaviour.
 
-Let's, say, for example, the damage degradation is a linear function of $$\kappa$$, that is
+For example, let the damage degradation be a linear function of $$\kappa$$, that is
 
 $$
 d(\kappa)=\kappa,
@@ -66,7 +65,8 @@ $$
 
 so that $$d(0)=0$$ and $$d(1)=1$$.
 
-Assume the effective stress is a constant, say $$\bar{f}=10$$. The stress is then
+Assume the effective stress is a constant, say $$\bar{f}=10$$.
+The stress is then
 
 $$
 f=\bar{f}(1-d)=10(1-\kappa).
@@ -154,8 +154,7 @@ The curve can be plotted as
 
 ![plastic strain-stress curve](CustomCDP.EX2.svg)
 
-The $$\kappa$$ is the accumulated area under the plastic strain-stress curve over the given $$g$$, in this example,
-$$g=0.2$$.
+The $$\kappa$$ is the accumulated area under the plastic strain-stress curve over the given $$g$$, in this example, $$g=0.2$$.
 
 $$
 \kappa=\dfrac{1}{g}\int_0^{\varepsilon_p^*}\sigma{}d\varepsilon_p

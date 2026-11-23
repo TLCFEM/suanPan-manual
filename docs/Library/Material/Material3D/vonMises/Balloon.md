@@ -47,7 +47,7 @@ The parameter tuple takes $$\chi_0$$, $$k$$, $$\chi_s$$ and $$r$$.
 ### Cyclic Evolution
 
 The key-value tuples indicated by tokens '-fc' and '-ac' control the evolutions of cyclic bounds (scalars).
-The key-value tuples indicated by tokens '-na' and '-nd'  control the evolutions of back stress like quantities (tensors).
+The key-value tuples indicated by tokens '-na' and '-nd' control the evolutions of back stress like quantities (tensors).
 For all four sets, the Armstrong-Frederick style exponential rule is used, and two parameters indicate the saturation target and the corresponding saturation rate.
 
 Typically, the saturation value can be fixed to unity such that those quantities saturate to unity (either scalar or tensor) as the actual magnitudes need to account for the previous bounds.

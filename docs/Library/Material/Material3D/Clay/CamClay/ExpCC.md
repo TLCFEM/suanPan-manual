@@ -20,8 +20,7 @@ $$
 a_0=\dfrac{1}{2}\exp\left(\dfrac{e_1-e_0-\kappa\ln{}p_0}{\lambda-\kappa}\right)
 $$
 
-where $$p_0$$ is the initial value of the equivalent pressure stress and $$e_1$$ is the intercept of the virgin
-consolidation line with the void ratio axis in a plot of void ratio versus equivalent pressure stress.
+where $$p_0$$ is the initial value of the equivalent pressure stress and $$e_1$$ is the intercept of the virgin consolidation line with the void ratio axis in a plot of void ratio versus equivalent pressure stress.
 
 ## Syntax
 

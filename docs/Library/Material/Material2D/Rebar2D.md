@@ -13,5 +13,5 @@ material Rebar2D (1) (2) (3) (4) (5)
 # (5) double, y direction reinforcement ratio
 ```
 
-The uniform reinforcement is defined along global axes. To have arbitrarily aligned layout, users can wrap it into
-a [`Rotation2D`](../Wrapper/Rotation2D.md) wrapper.
+The uniform reinforcement is defined along global axes.
+To have arbitrarily aligned layout, users can wrap it into a [`Rotation2D`](../Wrapper/Rotation2D.md) wrapper.

@@ -2,15 +2,15 @@
 
 Currently, the available types of output variables are listed as follows.
 
-Please note, in principle, it is possible to define any types on any recorders, but if the target recorder does not 
-support the type, trivial/empty values will be returned. If a saving recorder does not create any files on the disk, 
-it means that the output type is not available for the target object. For example, recording strain/stress `E`/`S` 
-values of any nodes is not possible and will lead to no output.
+Please note, in principle, it is possible to define any types on any recorders, but if the target recorder does not support the type, trivial/empty values will be returned.
+If a saving recorder does not create any files on the disk, it means that the output type is not available for the target object.
+For example, recording strain/stress `E`/`S` values of any nodes is not possible and will lead to no output.
 
-The complete support list is still under development. In principle, basic types such as 
-displacement/velocity/acceleration are available for nodes. For elemental response, generally stress/strain and 
-their components are available. Certain elements only support some output types. Please feel free to open 
-an issue if you need more information.
+The complete support list is still under development.
+In principle, basic types such as displacement/velocity/acceleration are available for nodes.
+For elemental response, generally stress/strain and their components are available.
+Certain elements only support some output types.
+Please feel free to open an issue if you need more information.
 
 ## General Node Quantities
 

@@ -1,7 +1,7 @@
 # Frequency
 
-The (generalized) eigenvalue problem is handled in the `Frequency` step. To define a valid step, please use the
-following command.
+The (generalized) eigenvalue problem is handled in the `Frequency` step.
+To define a valid step, please use the following command.
 
 ```
 step frequency (1) [2] [3]
@@ -10,21 +10,22 @@ step frequency (1) [2] [3]
 # [3] string, eigenvalue type, default: s
 ```
 
-To successfully run an eigen analysis, the system shall be symmetric, otherwise complex eigenvalues are computed. This
-typically requires the stiffness matrix to be symmetric. Besides, it must have
+To successfully run an eigen analysis, the system shall be symmetric, otherwise complex eigenvalues are computed.
+This typically requires the stiffness matrix to be symmetric.
+Besides, it must have
 
 1. a positive definite stiffness matrix,
 2. a semi-positive definite mass matrix.
 
 ## Remarks
 
-1. The symmetric banded storage uses the `_pbsv` solver which only accepts a symmetric positive definite banded matrix. If
-   the `Frequency` fails to compute the required eigen modes, please use other storage schemes.
-2. The computed eigenvalue is the eigenvalue of the system. In the field of structural dynamics, it is $$\omega^2$$.
+1. The symmetric banded storage uses the `_pbsv` solver which only accepts a symmetric positive definite banded matrix.
+   If the `Frequency` fails to compute the required eigen modes, please use other storage schemes.
+2. The computed eigenvalue is the eigenvalue of the system.
+   In the field of structural dynamics, it is $$\omega^2$$.
    The (angular) frequency and period can be computed accordingly.
-3. The constrained (generalized) eigenvalue problems cannot be handled when the constraints are implemented via the Lagrange
-   multiplier method. If the system contains constraints, users shall make sure they are applied via the penalty
-   function method.
+3. The constrained (generalized) eigenvalue problems cannot be handled when the constraints are implemented via the Lagrange multiplier method.
+   If the system contains constraints, users shall make sure they are applied via the penalty function method.
 
 ## Modal Properties
 
@@ -42,7 +43,8 @@ save recorder 1
 
 By default, the `ARPACK` solver is used to solve the generalized eigen problem.
 
-The [FEAST Eigenvalue Solver](http://www.feast-solver.org/) can also be used. To switch, one can use
+The [FEAST Eigenvalue Solver](http://www.feast-solver.org/) can also be used.
+To switch, one can use
 
 ```
 solver FEAST (1) (2) (3) [4]
@@ -52,8 +54,8 @@ solver FEAST (1) (2) (3) [4]
 # [4] double, radius, default: centre
 ```
 
-Currently, the `FEAST` solver can be applied to full, banded and sparse storage. For banded storage, it is necessary to
-use the `SPIKE` solver.
+Currently, the `FEAST` solver can be applied to full, banded and sparse storage.
+For banded storage, it is necessary to use the `SPIKE` solver.
 
 ```
 set system_solver SPIKE
@@ -64,8 +66,8 @@ If the radius is not assigned, it defaults to $$c$$, thus the bracket becomes $$
 
 ## Example
 
-Consider a massless elastic cantilever beam with lumped end mass. Assume the length is $$L=2.84$$, the elastic modulus
-is $$E=94.13$$, the moment of inertia is $$I=1.34$$ and the lumped mass is $$M=5.76$$ so that
+Consider a massless elastic cantilever beam with lumped end mass.
+Assume the length is $$L=2.84$$, the elastic modulus is $$E=94.13$$, the moment of inertia is $$I=1.34$$ and the lumped mass is $$M=5.76$$ so that
 
 $$
 \omega^2=\dfrac{3EI}{ML^3}=\dfrac{3\times94.13\times1.34}{5.76\times2.84^3}=2.8680.

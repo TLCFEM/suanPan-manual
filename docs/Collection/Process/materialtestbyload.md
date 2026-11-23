@@ -1,7 +1,7 @@
 # materialtestbyload
 
-This command category can be used to test most material models **that depend on load/stress input only** without establishing
-a FE model. Some wrappers and material models that rely on other material models cannot be tested in this way.
+This command category tests most material models **that depend on load/stress input only** without establishing an FE model.
+Some wrappers and material models that rely on other material models cannot be tested in this way.
 
 ## Syntax
 
@@ -27,5 +27,5 @@ materialTestByLoad3D (1) (2...7) (8) [9...]
 
 ## Remarks
 
-1.  The Newton-Raphson method is implemented to solve the corresponding strain increments.
-    Thus, softening models should not be tested in this way.
+1. The Newton-Raphson method is implemented to solve the corresponding strain increments.
+   Softening models should therefore not be tested in this way.

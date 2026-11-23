@@ -2,16 +2,16 @@
 
 In this example, we demonstrate an example of wave propagation in a 2D solid.
 
-Essentially, it is a 2D dynamics problem. The [CP4](../../Library/Element/Membrane/Plane/CP4.md) element is used to
-model the solid.
+Essentially, it is a 2D dynamics problem.
+The [CP4](../../Library/Element/Membrane/Plane/CP4.md) element is used to model the solid.
 Various time integration methods will be used to compare their performance regarding numerical energy dispersion.
 
 The model script can be downloaded [here](wave-propagation.zip).
 
-**This model contains 16641 nodes and 16384 elements. The memory usage is about 1.2 GB.**
+**This model contains 16641 nodes and 16384 elements.
+The memory usage is about 1.2 GB.**
 
-**Due to the small step size and the need to export visualization data, the full analysis takes around 10 minutes to complete on
-an average PC platform (6 physical cores @ 3 GHz).**
+**Due to the small step size and the need to export visualization data, the full analysis takes around 10 minutes to complete on an average PC platform (6 physical cores @ 3 GHz).**
 
 ## Model
 
@@ -27,8 +27,7 @@ A force load is applied to the top right corner.
 
 ### Material
 
-Whether the plane stress or plane strain assumption is adopted is not the focus of this example, we simply use a plane
-stress element with a unit thickness.
+Whether the plane stress or plane strain assumption is adopted is not the focus of this example; we simply use a plane stress element with a unit thickness.
 The material is defined as follows.
 
 ```text
@@ -98,8 +97,7 @@ step ImplicitDynamic 1 1
 
 #### Explicit
 
-Most explicit methods use acceleration as the primary variable, the equations of motion are often expressed as a
-function of acceleration.
+Most explicit methods use acceleration as the primary variable, so the equations of motion are often expressed as a function of acceleration.
 This differs from implicit methods that often use displacement as the primary variable.
 In order to adopt such a difference, one needs to define an `ExplicitDynamic` step, similar to the setting in ABAQUS.
 
@@ -126,8 +124,7 @@ set linear_system 1
 
 ## Results
 
-For a not-so-rigorous comparison, different spectral radii are used for different methods, mainly for the purpose of
-showcasing different methods.
+For a not-so-rigorous comparison, different spectral radii are used for different methods, mainly for the purpose of showcasing different methods.
 
 Also, the chosen model parameters are quite arbitrary.
 Sufficiently accurate results often require an accurate estimation of the highest frequency of the model, which governs the time step size.
@@ -157,8 +154,7 @@ The explicit methods show better numerical dispersion.
 
 The [Tchamwa](../../Library/Integrator/Explicit/Tchamwa.md) method is first-order accurate, and does not require a corrector.
 
-The [Noh-Bathe](../../Library/Integrator/Explicit/BatheExplicit.md) two-step explicit method, as discussed in the original
-reference, shows superior performance.
+The [Noh-Bathe](../../Library/Integrator/Explicit/BatheExplicit.md) two-step explicit method, as discussed in the original reference, shows superior performance.
 However, it requires a corrector step, which requires an additional element-wise computation for each substep.
 This increases the computational cost.
 

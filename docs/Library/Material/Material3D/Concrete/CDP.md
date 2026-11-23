@@ -49,19 +49,20 @@ material CDP (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) [15]
 ## Remarks
 
 1. Poisson's ratio shall be smaller than $$0.5$$, a typical value for concrete is around $$0.2$$.
-2. Crack stress shall be greater than zero while crush stress shall be smaller than zero. But the program automatically
-   sets the signs for both stresses.
-3. Normalized crack energy $$g_t=G_F/l_c$$ equals the first mode crack energy $$G_F$$ over the characteristic length
-   $$l_c$$. For SI (millimeter) unit system, typical values are of order $$10^{-3}$$. The compression conjugate $$g_c$$
-   is typically greater than $$g_t$$ by the order of $$10^2$$.
-4. Hardening parameters control tension degradation slope and compression hardening shape. Values $$a_t\approx0.5$$ and
-   $$a_c\approx2$$ to $$a_c\approx5$$ give good results.
-5. Dilatancy parameter can be set to $$0.2$$. Comparisons can be seen in Lee's doctoral dissertation.
-6. Biaxial compression ratio is defined as the ratio between biaxial and uniaxial compression strengths. According to
-   Kupfer et al. (1969), a value of $$1.16$$ is recommended.
+2. Crack stress shall be greater than zero while crush stress shall be smaller than zero.
+   But the program automatically sets the signs for both stresses.
+3. Normalized crack energy $$g_t=G_F/l_c$$ equals the first mode crack energy $$G_F$$ over the characteristic length $$l_c$$.
+   For SI (millimeter) unit system, typical values are of order $$10^{-3}$$.
+   The compression conjugate $$g_c$$ is typically greater than $$g_t$$ by the order of $$10^2$$.
+4. Hardening parameters control tension degradation slope and compression hardening shape.
+   Values $$a_t\approx0.5$$ and $$a_c\approx2$$ to $$a_c\approx5$$ give good results.
+5. Dilatancy parameter can be set to $$0.2$$.
+   Comparisons can be seen in Lee's doctoral dissertation.
+6. Biaxial compression ratio is defined as the ratio between biaxial and uniaxial compression strengths.
+   According to Kupfer et al. (1969), a value of $$1.16$$ is recommended.
 7. Initial stiffness recovery factor controls the amount of stiffness recovery when loading direction changes.
-8. Theoretically, $$g_t$$ and $$g_c$$ shall be scaled according to the size of mesh grid. Practically, they cannot be
-   arbitrarily small due to numerical stability issues, meaning that the mesh grid cannot be arbitrarily large.
+8. Theoretically, $$g_t$$ and $$g_c$$ shall be scaled according to the size of mesh grid.
+   Practically, they cannot be arbitrarily small due to numerical stability issues, meaning that the mesh grid cannot be arbitrarily large.
 
 The dilatancy parameter is associated with an internal angle,
 
@@ -90,7 +91,7 @@ Smaller values likewise risk non-physical negative plasticity development.
     $$
 
 !!! warning "trade-off"
-    If $$g_c$$ and/or $$g_t$$ is too small, it may be impossible to obtain both physically valid while numerically robust response.
+    If $$g_c$$ and/or $$g_t$$ is too small, it may be impossible to obtain a response that is both physically valid and numerically robust.
 
 !!! warning "maximum element size"
     Based on physical material limits, finite element dimensions for typical concrete cannot exceed half a meter (plain) to one meter (reinforced) if **strict** energy scaling is considered.

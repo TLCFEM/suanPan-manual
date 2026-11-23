@@ -30,4 +30,5 @@ element PS (1) (2...5) (6) [7]
 
 1. The original five-parameter stress field is used for stress interpolation.
 2. The mixed framework is used to extend the original formulation to accommodate elastoplastic applications.
-3. As there is no enhanced strain, no local iteration is required. Hence `PS` is faster than elements such as `QE2`.
+3. As there is no enhanced strain, no local iteration is required.
+   Hence `PS` is faster than elements such as `QE2`.

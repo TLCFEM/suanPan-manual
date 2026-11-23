@@ -16,8 +16,7 @@ material CustomViscosity (1) (2)
 
 ## Remarks
 
-The expression needed takes strain and strain rate as the inputs and returns the damping coefficient and its derivatives
-as the outputs.
+The expression needed takes strain and strain rate as the inputs and returns the damping coefficient and its derivatives as the outputs.
 
 The input size shall be 2 and the output size shall be 3.
 
@@ -37,5 +36,4 @@ expression SimpleVector 1 x|2 y|3 y[0]:=1234*x[1];y[1]:=0;y[2]:=1234;
 
 The strain maps to `x[0]` and the strain rate maps to `x[1]`.
 
-The stress output maps to `y[0]` and its derivatives regarding strain and strain rate map to `y[1]` and `y[2]`
-respectively.
+The stress output maps to `y[0]` and its derivatives regarding strain and strain rate map to `y[1]` and `y[2]` respectively.

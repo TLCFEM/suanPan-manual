@@ -16,5 +16,6 @@ element Mass (1) (2) (3) (4...)
 # (4...) int, dof tag
 ```
 
-Point mass is implemented via element interface that connects only one node. No stiffness is defined within that
-element. Thus, a `Mass` object shares the same tag pool with the other elements.
+Point mass is implemented via an element interface that connects only one node.
+No stiffness is defined within that element.
+Thus, a `Mass` object shares the same tag pool with the other elements.

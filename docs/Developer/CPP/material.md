@@ -2,22 +2,21 @@
 
 ## Things to Know
 
-1.  There is no need to write wrappers. Various wrappers are available to wrap 3D material models for 1D and 2D
-    applications.
-2.  Unless the 2D material model is formulated directly in the 2D space, for example the plane stress space (such as the
-    Barlat-Lian model), developers are not encouraged to write any 2D versions of 3D models.
+1.  There is no need to write wrappers.
+    Various wrappers are available to wrap 3D material models for 1D and 2D applications.
+2.  Unless the 2D material model is formulated directly in the 2D space, for example the plane stress space (such as the Barlat-Lian model), developers are not encouraged to write any 2D versions of 3D models.
 
 ## Main Tasks of a Material Model
 
-The material model is often associated with the integration point to compute the material response. As a general
-purpose computation framework, in general, most material models are not tied to any specific element types.
+The material model is often associated with the integration point to compute the material response.
+As a general-purpose computation framework, most material models are not tied to any specific element types.
 
-The main task of a material model is to compute the response based on the input(s). The input may be displacement,
-strain, velocity, strain rate, etc. The corresponding response could be force, stress and stiffness.
+The main task of a material model is to compute the response based on the input(s).
+The input may be displacement, strain, velocity, strain rate, etc.
+The corresponding response could be force, stress and stiffness.
 
-Hence, the associated element would call the material model to pass, for example, the trial strain to update the trial
-state. The material model shall compute the response of the trial state based on current state and stored history
-variables.
+Hence, the associated element would call the material model to pass, for example, the trial strain to update the trial state.
+The material model shall compute the response of the trial state based on the current state and stored history variables.
 
 ## Abstraction
 
@@ -25,7 +24,7 @@ The abstraction of the `Material` class is given in the `MaterialBase` class.
 
 ## Data Storage
 
-All data is stored in a `struct` named as `MaterialData`.
+All data is stored in a `struct` named `MaterialData`.
 
 ```cpp
 struct MaterialData {
@@ -62,18 +61,19 @@ struct MaterialData {
 };
 ```
 
-Two states are stored. The current state is the converged state while the trial state should be updated for each
-iteration. The difference between two states is also stored, given that some material models are formulated based on an
-incremental form.
+Two states are stored.
+The current state is the converged state, while the trial state should be updated for each iteration.
+The difference between the two states is also stored, given that some material models are formulated based on an incremental form.
 
-The variable `initial_history` can be used to assign initial conditions. A detailed layout shall be provided in the
-corresponding manual page.
+The variable `initial_history` can be used to assign initial conditions.
+A detailed layout shall be provided in the corresponding manual page.
 
-***It is not compulsory to use pre-defined variables. It is possible to use user-defined variables to manage states.
-However, several methods shall be overridden, which makes codes longer.***
+***It is not compulsory to use pre-defined variables.
+It is possible to use user-defined variables to manage states.
+However, several methods shall be overridden, which makes the code longer.***
 
-***To save memory, it is recommended to reset pre-defined variables during the initialization if user-defined variables
-are used. Details will be covered in the discussion of the corresponding methods.***
+***To save memory, it is recommended to reset pre-defined variables during initialization if user-defined variables are used.
+Details will be covered in the discussion of the corresponding methods.***
 
 ## Pure Virtual Methods
 
@@ -89,33 +89,35 @@ Some methods are labelled as pure virtual methods, meaning that they need to be 
  virtual int reset_status() = 0; // state control
 ```
 
-Apart from those five methods, the updater shall be overridden as well. Two methods are defined. The first one accepts
-trial strain as input. **This method has no default behaviour, so it needs to be implemented in all derived classes
-otherwise it throws an exception.**
+Apart from those five methods, the updater shall be overridden as well.
+Two methods are defined.
+The first one accepts trial strain as input.
+**This method has no default behaviour, so it needs to be implemented in all derived classes; otherwise, it throws an exception.**
 
 ```cpp
  virtual int update_trial_status(const vec&);
 ```
 
-The second one accepts trial strain and trial strain rate as inputs. By default, this method calls the above method with
-trial strain. If the material model is rate independent, this method can be left unchanged.
+The second one accepts trial strain and trial strain rate as inputs.
+By default, this method calls the above method with trial strain.
+If the material model is rate independent, this method can be left unchanged.
 
 ```cpp
  virtual int update_trial_status(const vec&, const vec&);
 ```
 
-Some element models may call the material model with increments. The corresponding methods are defined as well.
+Some element models may call the material model with increments.
+The corresponding methods are defined as well.
 
 ```cpp
  virtual int update_incre_status(const vec&);
  virtual int update_incre_status(const vec&, const vec&);
 ```
 
-By default, these two methods compute the trial state by adding increments to the current state and call the
-corresponding `update_trial_status()` method.
+By default, these two methods compute the trial state by adding increments to the current state and call the corresponding `update_trial_status()` method.
 
-For 1D material models, often the trial strain (rate) is directly stored in a scalar. So the scalar versions of the
-above four methods are defined.
+For 1D material models, the trial strain (rate) is often directly stored in a scalar.
+So the scalar versions of the above four methods are defined.
 
 ```cpp
  int update_incre_status(double);
@@ -124,17 +126,16 @@ above four methods are defined.
  int update_trial_status(double, double);
 ```
 
-By default, these methods wrap the input scalars into `vec` variables and call the corresponding vector versions of
-these methods. If there are no special considerations, these four methods do not need to be overridden.
+By default, these methods wrap the input scalars into `vec` variables and call the corresponding vector versions of these methods.
+If there are no special considerations, these four methods do not need to be overridden.
 
 ## Material In Details
 
 ### Initialization
 
-The initialization procedure is performed before the analysis. The main task is to formulate for example the initial
-stiffness, initialize the corresponding history variables (if any), etc. The pointer of the domain that the current
-material model is defined in is sent to the initialization method in case any other resources are required by the
-current material model.
+The initialization procedure is performed before the analysis.
+The main task is to formulate, for example, the initial stiffness and initialize the corresponding history variables (if any).
+The pointer of the domain in which the current material model is defined is sent to the initialization method in case any other resources are required by the current material model.
 
 As the material model is the bottom layer of FEA, most models are independent of other components of the problem domain.
 
@@ -148,24 +149,23 @@ void NonlinearJ2::initialize(const shared_ptr<DomainBase>&) {
 }
 ```
 
-In this method, the initial/current/trial stiffness matrix is set to the isotropic elastic matrix by calling the
-function `tensor::isotropic_stiffness` with elastic modulus and Poisson's ratio.
+In this method, the initial/current/trial stiffness matrix is set to the isotropic elastic matrix by calling the function `tensor::isotropic_stiffness` with elastic modulus and Poisson's ratio.
 
-Then the history variables are initialized. A scalar (accumulated plastic strain) and a six-component vector (back
-stress) are required so the total size of history variables is 7.
+Then the history variables are initialized.
+A scalar (accumulated plastic strain) and a six-component vector (back stress) are required, so the total size of history variables is 7.
 
-***It shall be noted that, if the model is designed to support nonzero initial history, viz., initial conditions,
-history variables cannot be initialized by directly calling the `zeros()` method. The method `initialize_history()` shall
-be called instead. This method checks if the initial history is set. If yes, the initial condition will be retained.***
+***It shall be noted that, if the model is designed to support nonzero initial history, viz., initial conditions, history variables cannot be initialized by directly calling the `zeros()` method.
+The method `initialize_history()` shall be called instead.
+This method checks if the initial history is set.
+If yes, the initial condition will be retained.***
 
-By default, strain, stress and stiffness will be initialized in the base class implementation of `initialize()`. If any
-of those variables are not used, it is possible to reset them to save memory in the derived implementation
-of `initialize()`.
+By default, strain, stress and stiffness will be initialized in the base class implementation of `initialize()`.
+If any of those variables are not used, it is possible to reset them to save memory in the derived implementation of `initialize()`.
 
 ### Copier
 
-By implementing the copy constructor (if necessary), the copier can be written in one line. Each integration point needs
-a material object for local use.
+By implementing the copy constructor (if necessary), the copier can be written in one line.
+Each integration point needs a material object for local use.
 
 ```cpp
 unique_ptr<Material> DerivedClassName::get_copy() { return make_unique<DerivedClassName>(*this); }
@@ -173,8 +173,8 @@ unique_ptr<Material> DerivedClassName::get_copy() { return make_unique<DerivedCl
 
 ### State Control
 
-Although when the built-in variables are used, the state control methods can be implemented in a universal approach. For
-example,
+When the built-in variables are used, the state control methods can be implemented in a universal approach.
+For example,
 
 ```cpp
 int Material::clear_status() {
@@ -217,5 +217,5 @@ int Material::reset_status() {
 }
 ```
 
-Developers can still choose to manage state variables on their own. Similar to elements, all state updates, including all
-history variables, shall only happen in the `update_trial_status()` method to keep a simple and clean structure.
+Developers can still choose to manage state variables on their own.
+Similar to elements, all state updates, including all history variables, shall only happen in the `update_trial_status()` method to keep a simple and clean structure.

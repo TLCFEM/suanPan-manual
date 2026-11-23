@@ -1,10 +1,10 @@
 # benchmark
 
-The `benchmark` command can be used to benchmark the platform to provide a performance baseline.
+The `benchmark` command benchmarks the platform to provide a performance baseline.
 
-The routine preallocates a square matrix of size 5120 and repeatedly solves it 50 times. Unlike other approaches
-that normally rely on the `dgemm` subroutine, here the `dgesv` subroutine is used as, for FEM, the main operations are solving
-matrices rather than multiplying matrices.
+The routine preallocates a square matrix of size 5120 and solves it 50 times.
+Unlike other approaches that normally rely on the `dgemm` subroutine, it uses `dgesv`.
+For FEM, the main operations are solving matrices rather than multiplying them.
 
 ## Syntax
 
@@ -14,13 +14,13 @@ benchmark
 
 ## Notes
 
-The basic idea of the benchmark resembles that of [linpack](http://www.netlib.org/utk/people/JackDongarra/faq-linpack.html),
-but it is not intended to be as versatile as linpack. Thus, it does not provide any configurable options.
+The basic idea of the benchmark resembles that of [linpack](http://www.netlib.org/utk/people/JackDongarra/faq-linpack.html).
+It is not intended to be as versatile as linpack, so it does not provide any configurable options.
 
-The theoretical maximum GFLOPS is not often achievable in practical applications. Modern hardware is often bounded 
-by other factors such as memory bandwidth.
+The theoretical maximum GFLOPS is rarely achievable in practical applications.
+Modern hardware is often bounded by other factors such as memory bandwidth.
 
-One can `perf` this benchmark to reveal the GFLOPS, for example,
+For example, use `perf` on this benchmark to measure the GFLOPS:
 
 ```bash
 echo "benchmark" >>b
@@ -64,9 +64,10 @@ Time Wasted: 39.3980 Seconds.
 ```
 
 This roughly gives 114 GFLOPS, which is around $$60\%$$ of the [theoretical](https://www.intel.com/content/dam/support/us/en/documents/processors/APP-for-Intel-Core-Processors.pdf)
-maximum GFLOPS of an `i7-1185G7` processor. Of course, the actual performance depends on many other factors. Here the 
-numbers are indicative. A rate of $$2n$$ means the platform is two times faster than a rate of $$n$$.
+maximum GFLOPS of an `i7-1185G7` processor.
+Of course, the actual performance depends on many other factors.
+The numbers here are indicative.
+A rate of $$2n$$ means the platform is two times faster than a rate of $$n$$.
 
-The practical FEM involves other processes such as updating elemental stiffness (small matrix manipulations) and 
-assembling global stiffness (random memory accesses). As a result, the performance of analysis would further be a 
-fraction of GFLOPS of this benchmark test.
+Practical FEM involves other processes such as updating elemental stiffness (small matrix manipulations) and assembling global stiffness (random memory accesses).
+As a result, the performance of an analysis is a fraction of the GFLOPS of this benchmark test.

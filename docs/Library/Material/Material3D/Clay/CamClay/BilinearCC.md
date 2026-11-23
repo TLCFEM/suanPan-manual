@@ -10,8 +10,7 @@ $$
 a(\alpha)=a_0+H\alpha\ge0,
 $$
 
-in which $$H$$ is the hardening modulus; note that $$\alpha=\varepsilon_p=\varepsilon_1+\varepsilon_2+\varepsilon_3$$ is the
-volumetric plastic strain.
+in which $$H$$ is the hardening modulus; note that $$\alpha=\varepsilon_p=\varepsilon_1+\varepsilon_2+\varepsilon_3$$ is the volumetric plastic strain.
 
 The hardening modulus could be either positive or negative.
 

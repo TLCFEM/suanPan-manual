@@ -1,24 +1,24 @@
 # pwd
 
-The `pwd` command resembles the same command in Unix-like systems, which can be used to print/set the current working path.
+The `pwd` command resembles its counterpart in Unix-like systems.
+It can print or set the current working directory.
 
-To load files from another path while to save the keystrokes at the same time, users can set the current working path to
-the folder containing the desired model script first.
+To load files from another path while saving keystrokes, set the current working directory to the folder containing the model script first.
 
 ## Syntax
 
-To check the current working path, please use
+To check the current working directory, use
 
 ```text title="pwd"
 pwd
 ```
 
-To change the current working path, please use
+To change the current working directory, use
 
 ```
 pwd (1)
 # (1) string, new absolute working path
 ```
 
-Please note in Windows, `\` needs to be changed to `\\` or `/`. Relative paths are resolved against the current working
-path.
+On Windows, `\` must be written as `\\` or `/`.
+Relative paths are resolved against the current working directory.

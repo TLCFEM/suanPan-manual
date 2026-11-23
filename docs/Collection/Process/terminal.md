@@ -1,13 +1,13 @@
 # terminal
 
-The `terminal` command can be used to execute external commands.
+The `terminal` command executes external commands.
 
 ```
 terminal (1)
 # (1) string, external command to be executed
 ```
 
-The `terminal` command can only be used for external non-interactive commands. It invokes `std::system` function to
-execute commands in the host environment's command processor.
+The `terminal` command can only be used for external non-interactive commands.
+It invokes the `std::system` function to execute commands in the host environment's command processor.
 
-Commands such as `chdir` will not work as the spawned process will quit when the command is executed.
+Commands such as `chdir` do not work because the spawned process exits when the command is executed.

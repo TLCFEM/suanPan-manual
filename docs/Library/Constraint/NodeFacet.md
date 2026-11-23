@@ -2,8 +2,7 @@
 
 The `NodeFacet` constraint implements 3D node-facet (triangular) contact via the Lagrangian multiplier method.
 
-The relevant theoretical formulation on both multiplier and penalty methods is briefly discussed in [this](FACET.pdf)
-document.
+The relevant theoretical formulation on both multiplier and penalty methods is briefly discussed in [this](FACET.pdf) document.
 
 ## Syntax
 

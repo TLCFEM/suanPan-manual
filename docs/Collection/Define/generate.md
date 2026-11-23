@@ -1,12 +1,12 @@
 # generate
 
-The `generate` command is used to generate node/element groups according to predefined rules.
+The `generate` command creates node or element groups according to predefined rules.
 
-For custom rules, please refer to [`CustomNodeGroup`](../../Library/Group/CustomNodeGroup.md).
+For custom rules, refer to [`CustomNodeGroup`](../../Library/Group/CustomNodeGroup.md).
 
 !!! warning "precision"
     For all forms, whenever floating-point operations are involved, the criterion is evaluated within machine precision (machine epsilon).
-    Therefore, coordinates should be specified as accurately as possible, with at least 16 significant digits.
+    Coordinates should therefore be specified as accurately as possible, with at least 16 significant digits.
 
 ## form one: generate based on a fixed interval
 
@@ -33,7 +33,7 @@ generate elementgroup (1) (2) (3) (4)
 # (4) int, ending object tag
 ```
 
-It shall be noted that the starting tag does not have to be smaller than the ending tag.
+Note that the starting tag does not have to be smaller than the ending tag.
 
 ## form two: generate a node group based on polynomial
 
@@ -50,9 +50,9 @@ $$
 \sum{}a_nx^n=0,
 $$
 
-where $$x$$ is the coordinate of the target DoF of the target node.
+Here, $$x$$ is the coordinate of the target DoF of the target node.
 
-For example, if one wants to select all nodes on the line $$y=200$$, then the following command can be defined.
+For example, to select all nodes on the line $$y=200$$, use the following command.
 
 ```
 generatebyrule nodegroup 1 2 1. -200.
@@ -60,7 +60,7 @@ generatebyrule nodegroup 1 2 1. -200.
 
 ## form three: generate a node group based on the line segment
 
-It is sometimes useful to select all nodes that lie in a straight line segment. The following command can be used.
+To select all nodes that lie on a straight line segment, use the following command.
 
 ```
 generatebypoint nodegroup (1) [(2)...]
@@ -68,8 +68,8 @@ generatebypoint nodegroup (1) [(2)...]
 # [(2)...] double, coordinates of two end points
 ```
 
-There is no restriction on the size of each point defined, but the sizes of two points must match. If one wants to
-select all points that lie on the line segment between points $$(3,~4)$$ and $$(8,~7)$$, then
+There is no restriction on the number of coordinates of each point, but the two points must have the same number of coordinates.
+For example, to select all points on the line segment between $$(3,~4)$$ and $$(8,~7)$$, use
 
 ```
 generatebypoint nodegroup 1 3. 4. 8. 7.
@@ -89,7 +89,7 @@ $$
 \sum{}a_ix_i+b=0,
 $$
 
-where $$x_i$$ are coordinates and $$a_i$$ are the corresponding constants, $$b$$ is constant.
+Here, $$x_i$$ are coordinates, $$a_i$$ are the corresponding coefficients, and $$b$$ is a constant.
 
 For example, a plane can be defined as
 
@@ -103,15 +103,15 @@ Then
 generatebyplane nodegroup 1 3. 2. -1. 7.
 ```
 
-finds all nodes that fall in this plane and groups them.
+This finds all nodes that lie on the plane and groups them.
 
-There is no restriction on the number of coordinates used. So it is possible to define a hyper-plane, or a line.
-However, the last parameter will always be the constant. For example, the following command defines the line
-$$x+2y-3=0$$ in the 2D plane.
+There is no restriction on the number of coordinates used, so it is possible to define a hyperplane or a line.
+The last parameter is always the constant.
+For example, the following command defines the line $$x+2y-3=0$$ in the 2D plane.
 
 ```
 generatebyplane nodegroup 1 1. 2. -3.
 ```
 
-If this is used to find nodes to define a group in a 3D problem, then the $$z$$ coordinates of all nodes will be
-automatically skipped so that nodes such as $$(2,1,0)$$ and $$(2,1,10)$$ will be added to the group.
+If this is used to find nodes for a group in a 3D problem, the $$z$$ coordinates of all nodes are automatically skipped.
+Nodes such as $$(2,1,0)$$ and $$(2,1,10)$$ are then both added to the group.

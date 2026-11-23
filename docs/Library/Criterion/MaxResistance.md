@@ -1,7 +1,6 @@
 # MaxResistance
 
-The `MaxResistance` criterion tests the resistance of the specified node, if it is **greater** than the given value, the
-analysis is terminated.
+The `MaxResistance` criterion tests the resistance of the specified node; if it is **greater** than the given value, the analysis is terminated.
 
 ## Syntax
 

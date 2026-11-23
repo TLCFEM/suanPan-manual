@@ -1,13 +1,16 @@
 # [★☆☆☆☆] Linear Analysis of A Truss Roof
 
-The model can be downloaded. [truss-roof.zip](truss-roof.zip)
+The model can be downloaded.
+[truss-roof.zip](truss-roof.zip)
 
 ## Model
 
 ### Node
 
-A 2D truss model is developed. To define nodes, use the [`node`](../../../Collection/Define/node.md) command. As this is
-a 2D model, each node is defined by two coordinates, thus the command looks like this: `node <tag> <x> <y>`.
+A 2D truss model is developed.
+To define nodes, use the [`node`](../../../Collection/Define/node.md) command.
+As this is a 2D model, each node is defined by two coordinates.
+Thus the command looks like this: `node <tag> <x> <y>`.
 
 ```text
 # file: node
@@ -29,12 +32,13 @@ node  15  20  0
 node  16  40  0
 ```
 
-Here we define 16 nodes. The truss roof has a span of 40 and an apex height of 7.5.
+Here we define 16 nodes.
+The truss roof has a span of 40 and an apex height of 7.5.
 
 ### Element
 
-To model truss elements, we use the [`T2D2`](../../../Library/Element/Truss/T2D2.md) element. (Yes! The same designation
-as in ABAQUS!)
+To model truss elements, we use the [`T2D2`](../../../Library/Element/Truss/T2D2.md) element.
+(Yes, the same designation as in ABAQUS!)
 
 ```text
 # file: element
@@ -46,17 +50,18 @@ element T2D2 5 6 5 1 0.2
 # ...
 ```
 
-Here the first five elements are shown. The cross sectional area can be directly specified
-with [`T2D2`](../../../Library/Element/Truss/T2D2.md). Alternatively, the truss section can be built up manually using
-basic shapes, see the [`T2D2S`](../../../Library/Element/Truss/T2D2S.md) element for details.
+Here the first five elements are shown.
+The cross-sectional area can be directly specified with [`T2D2`](../../../Library/Element/Truss/T2D2.md).
+Alternatively, the truss section can be built up manually using basic shapes; see the [`T2D2S`](../../../Library/Element/Truss/T2D2S.md) element for details.
 
-You may have noticed that the material model used is not defined. Do not worry, for model definitions, the order is not
-important, see [Structure](../../../Basic/GettingStarted/Structure.md) for explanation.
+You may have noticed that the material model used is not defined.
+Do not worry; for model definitions, the order is not important.
+See [Structure](../../../Basic/GettingStarted/Structure.md) for an explanation.
 
 ### Load and BC
 
-Definitions of nodes and elements are stored in files `node` and `element`. We load it first
-using [`file`](../../../Collection/Define/file.md) command.
+Definitions of nodes and elements are stored in files `node` and `element`.
+We load them first using the [`file`](../../../Collection/Define/file.md) command.
 
 ```text
 # file: truss-roof.supan
@@ -72,10 +77,10 @@ material with a Young's modulus of $$3E4$$.
 material Elastic1D 1 30E3
 ```
 
-The left-most node `14` is fixed, while the right-most node `16` is roller supported. This means for node `14`, both x
-and y displacements are fixed, while for node `16`, only y displacement is fixed. One can use
-either [`fix`](../../../Collection/Define/bc.md) (penalty method) or [`fix2`](../../../Collection/Define/bc.md)
-(multiplier method) to apply homogeneous boundary conditions. Both shall lead to the same result.
+The left-most node `14` is fixed, while the right-most node `16` is roller supported.
+This means that, for node `14`, both x and y displacements are fixed, while for node `16`, only y displacement is fixed.
+One can use either [`fix`](../../../Collection/Define/bc.md) (penalty method) or [`fix2`](../../../Collection/Define/bc.md) (multiplier method) to apply homogeneous boundary conditions.
+Both shall lead to the same result.
 
 ```text
 # file: truss-roof.supan
@@ -90,8 +95,8 @@ For load, we apply a vertical [`displacement`](../../../Collection/Define/load.m
 displacement 1 0 -1 2 3 ! a displacement load with tag 1 on node 3 dof 2 (vertical) with a magnitude of -1
 ```
 
-The second parameter `0` is a placeholder for [`amplitude`](../../../Collection/Define/amplitude.md), a `0` means a
-default [`Ramp`](../../../Library/Amplitude/Universal/Linear.md) is used.
+The second parameter `0` is a placeholder for [`amplitude`](../../../Collection/Define/amplitude.md).
+A `0` means a default [`Ramp`](../../../Library/Amplitude/Universal/Linear.md) is used.
 
 ### Analysis
 
@@ -108,9 +113,9 @@ analyze ! perform analysis
 
 ### Probe Result
 
-It is possible to probe the simple results of the analysis, for example, one can check the displacement and resistance
-of node `3` by using the [`peek`](../../../Collection/Process/peek.md) command. To record various results, one may want
-to use [`recorder`](../../../Collection/Define/recorder.md) command.
+It is possible to probe the simple results of the analysis.
+For example, one can check the displacement and resistance of node `3` by using the [`peek`](../../../Collection/Process/peek.md) command.
+To record various results, one may want to use the [`recorder`](../../../Collection/Define/recorder.md) command.
 
 ```text
 peek node 3

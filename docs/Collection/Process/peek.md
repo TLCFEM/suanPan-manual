@@ -1,7 +1,7 @@
 # peek
 
-The `peek` command can be used to print out predefined information. This command has no effect if global screen print is
-switched off.
+The `peek` command prints predefined information.
+It has no effect if global screen output is switched off.
 
 ## Syntax
 

@@ -1,11 +1,11 @@
 # plot
 
-The `plot` command can be used to plot and save visualization as files.
+The `plot` command plots and saves visualisations as files.
 
-**Only binaries compiled with VTK libraries can use this command. Otherwise, it does nothing.**
+**Only binaries compiled with VTK libraries can use this command.**
+**Otherwise, it does nothing.**
 
-Since `Paraview` can be used to perform all kinds of post-processing, the objective is not to implement a full-featured
-visualisation support.
+Since `Paraview` can perform all kinds of post-processing, the objective here is not to provide full-featured visualisation support.
 
 ## Syntax
 
@@ -17,22 +17,33 @@ plot [-keyword [-parameters]...]
 
 Available keywords and corresponding parameters are listed as follows.
 
-1. `scale` controls the scale of deformed configuration. A single double value is required as parameter. Default is zero (undeformed). Example: `scale 2`
-2. `type` controls which quantity shall be extracted and plotted. A single string is required as parameter. Available
-   values can be seen in output types. Example: `type U1`
-3. `fontsize` controls the font size of the legend, title, etc. This has no effect if the plot is saved.
+1. `scale` controls the scale of the deformed configuration.
+   A single double value is required as a parameter.
+   The default is zero (undeformed).
+   Example: `scale 2`
+2. `type` controls which quantity is extracted and plotted.
+   A single string is required as a parameter.
+   The available values can be found in the output types.
+   Example: `type U1`
+3. `fontsize` controls the font size of the legend, title, etc.
+   This has no effect if the plot is saved.
    Example: `fontsize 14`
 4. `nobar` disables the legend in the plot window.
-5. `size` controls the size of the plot window. Two double values are required. Examples: `size 300 400`
-6. `save` indicates the file name. A string value is required. The extension suffix will be automatically appended. Example: `save S11`
+5. `size` controls the size of the plot window.
+   Two double values are required.
+   Example: `size 300 400`
+6. `save` specifies the file name.
+   A string value is required.
+   The extension suffix is appended automatically.
+   Example: `save S11`
 
 ## Remarks
 
 Invoking this command with proper parameters spawns an interactive rendering window using VTK.
 It offers a quick view of the model.
-The spawned window can be closed by pressing `q` key.
-The spawned window does not block the application so it is possible to plot multiple quantities at the same time.
-However, new analysis won't be performed until all the windows are closed.
+The window can be closed by pressing the `q` key.
+The window does not block the application, so multiple quantities can be plotted at the same time.
+However, a new analysis is not performed until all windows are closed.
 
 ## Example
 

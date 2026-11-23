@@ -24,5 +24,6 @@ element CP3 (1) (2...4) (5) [6] [7]
 
 ## Remarks
 
-* The `CP3` element resembles CPS3 and CPE3 elements in ABAQUS. It is a constant strain element.
+* The `CP3` element resembles CPS3 and CPE3 elements in ABAQUS.
+  It is a constant strain element.
 * A single integration point at the center of the element is used for integration.

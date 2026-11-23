@@ -6,8 +6,7 @@ $$
 A(t)=A_0\Pi_{i=1}^{n}\sin(2\pi\omega_i{}(t-t_0))\quad\text{for}\quad{}t>t_0.
 $$
 
-In the above definition, $$t_0$$ is the (pseudo) start time of the step in which the amplitude is defined, $$\omega_i$$
-is the circular frequency.
+In the above definition, $$t_0$$ is the (pseudo) start time of the step in which the amplitude is defined, $$\omega_i$$ is the circular frequency.
 
 ## Syntax
 

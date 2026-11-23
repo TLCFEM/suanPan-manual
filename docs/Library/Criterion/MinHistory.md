@@ -1,7 +1,6 @@
 # MinHistory
 
-The `MinHistory` criterion tests the specified historical variable, if it **exceeds** (i.e., is smaller than) the given value, the corresponding
-element is disabled.
+The `MinHistory` criterion tests the specified historical variable; if it **exceeds** (i.e., is smaller than) the given value, the corresponding element is disabled.
 
 ## Syntax
 

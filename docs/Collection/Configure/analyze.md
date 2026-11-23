@@ -1,9 +1,10 @@
 # analyze
 
-The `analyze` or `analyse` command will trigger the analysis. The model will be initialized by initializing, for example,
-elements and the global storage of matrices.
+The `analyze` (or `analyse`) command triggers the analysis.
+The model is initialized by setting up the elements, the global matrix storage and other components.
 
-All steps will be analysed. It is possible to define subsequent steps after performing the analysis.
+All steps are analysed.
+Subsequent steps can be defined after performing the analysis.
 
 ## Syntax
 
@@ -12,19 +13,15 @@ analyze
 analyse
 ```
 
+Before executing the analysis, the application checks for warnings and errors.
+If any are found, the analysis is not performed.
+
+Warnings and errors can be ignored with the `--ignore-warnings` and `--ignore-errors` options.
 [available from v3.1]
 
-Before executing the analysis, the application checks if there are any warnings or errors.
-If any, the analysis will not be performed.
-
-It is possible to ignore warnings and errors by using the `--ignore-warnings` or `--ignore-errors` option.
-Given that errors generally imply that the model is incorrect, it is not recommended to ignore errors.
-
-Use the following syntax to ignore warnings and errors.
-
-## Syntax
-
-```text title="analyze"
+```text title="analyze with options"
 analyze [--ignore-warnings] [--ignore-errors]
 analyse [--ignore-warnings] [--ignore-errors]
 ```
+
+Given that errors generally imply that the model is incorrect, ignoring them is not recommended.

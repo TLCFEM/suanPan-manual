@@ -23,9 +23,7 @@ First, we define an arbitrary node, coordinates do not matter.
 node 1 0 0
 ```
 
-For material models, we use a simple concrete model that adopts Tsai's
-backbone [`ConcreteTsai`](../../../Library/Material/Material1D/Concrete/ConcreteTsai.md) and
-the [`MPF`](../../../Library/Material/Material1D/Hysteresis/MPF.md) steel model.
+For material models, we use a simple concrete model that adopts Tsai's backbone [`ConcreteTsai`](../../../Library/Material/Material1D/Concrete/ConcreteTsai.md) and the [`MPF`](../../../Library/Material/Material1D/Hysteresis/MPF.md) steel model.
 
 Note there is a breaking change introduced in `v3.3` which changed the syntax of [`ConcreteTsai`](../../../Library/Material/Material1D/Concrete/ConcreteTsai.md).
 
@@ -123,13 +121,13 @@ The maximum moment under such a loading configuration is about $$170~\text{kNm}$
 
 One can quickly compute a rough estimate of the moment capacity.
 The compression depth of the concrete section can be calculated via axial equilibrium.
-Assuming only the bottom rebars are effective, the steel tension force shall be equal to the concrete compression force, this gives the depth of compression region as
+Assuming only the bottom rebars are effective, the steel tension force shall be equal to the concrete compression force; this gives the depth of the compression region as
 
 $$
 d'=\dfrac{400~\text{MPa}\times900~\text{mm}^2}{400~\text{mm}\times30~\text{MPa}}=30~\text{mm}.
 $$
 
-Taking moment about the center of the compression region, the moment capacity is
+Taking the moment about the center of the compression region, the moment capacity is
 
 $$
 M=400~\text{MPa}\times900~\text{mm}^2\times\left(500~\text{mm}-30~\text{mm}-15~\text{mm}\right)=164~\text{kNm}.

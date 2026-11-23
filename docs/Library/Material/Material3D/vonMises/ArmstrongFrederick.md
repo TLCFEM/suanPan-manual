@@ -27,14 +27,12 @@ $$
 k=\sigma_y+k_s(1-e^{-mp})+k_lp,
 $$
 
-where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturation stress, $$k_l$$ is the
-linear hardening modulus, $$m$$ is a constant that controls the speed of hardening,
-$$\mathrm{d}p=\sqrt{\dfrac{2}{3}\mathrm{d}\varepsilon^p:\mathrm{d}\varepsilon^p}$$ is the rate of accumulated plastic
-strain $$p$$.
+where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturation stress, $$k_l$$ is the linear hardening modulus, $$m$$ is a constant that controls the speed of hardening, $$\mathrm{d}p=\sqrt{\dfrac{2}{3}\mathrm{d}\varepsilon^p:\mathrm{d}\varepsilon^p}$$ is the rate of accumulated plastic strain $$p$$.
 
 ### Kinematic Hardening
 
-The Armstrong-Frederick type rule is used. Multiple back stresses are defined,
+The Armstrong-Frederick type rule is used.
+Multiple back stresses are defined,
 
 $$
 \beta=\sum\beta^i
@@ -46,9 +44,9 @@ $$
 \mathrm{d}\beta^i=\sqrt{\dfrac{2}{3}}a^i~\mathrm{d}\varepsilon^p-b^i\beta~\mathrm{d}p,
 $$
 
-where $$a^i$$ and $$b^i$$ are material constants. Note here a slightly different definition is adopted as in the
-original literature $$\dfrac{2}{3}$$ is used instead of $$\sqrt{\dfrac{2}{3}}$$. This is purely for a slightly more tidy
-derivation and does not affect anything.
+where $$a^i$$ and $$b^i$$ are material constants.
+Note here a slightly different definition is adopted as in the original literature $$\dfrac{2}{3}$$ is used instead of $$\sqrt{\dfrac{2}{3}}$$.
+This is purely for a slightly more tidy derivation and does not affect anything.
 
 ## Syntax
 
@@ -84,8 +82,7 @@ Here a few examples are shown.
 
 ### Isotropic Hardening Only
 
-There is no difference between the classic J2 plasticity model and this AF steel model if only isotropic hardening is
-defined.
+There is no difference between the classic J2 plasticity model and this AF steel model if only isotropic hardening is defined.
 
 ```
 material ArmstrongFrederick 1 2E2 .2 .1 1. .05 1000.
@@ -95,8 +92,9 @@ material ArmstrongFrederick 1 2E2 .2 .1 1. .05 1000.
 
 ### Kinematic Hardening Only
 
-If $$a\neq0$$ and $$b=0$$, there is no difference between the classic J2 plasticity model and this AF steel model. A
-linear kinematic hardening rule is implied. Normally at least one set of $$a^1$$ and $$b^1$$ is defined.
+If $$a\neq0$$ and $$b=0$$, there is no difference between the classic J2 plasticity model and this AF steel model.
+A linear kinematic hardening rule is implied.
+Normally at least one set of $$a^1$$ and $$b^1$$ is defined.
 
 ```
 material ArmstrongFrederick 1 2E2 .2 .1 0. 0. 0. 50. 500.

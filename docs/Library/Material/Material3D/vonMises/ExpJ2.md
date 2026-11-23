@@ -12,8 +12,8 @@ $$
 \sigma=\sigma_y\left(\left(1+a\right)e^{-b\varepsilon_p}-ae^{-2b\varepsilon_p}\right),
 $$
 
-where $$a$$ and $$b$$ are two constants that control the shape of the backbone. The initial stiffness $$\sigma'|_
-{\varepsilon_p=0}=\sigma_y(a-1)b$$.
+where $$a$$ and $$b$$ are two constants that control the shape of the backbone.
+The initial stiffness $$\sigma'|_{\varepsilon_p=0}=\sigma_y(a-1)b$$.
 
 ## Syntax
 

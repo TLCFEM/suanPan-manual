@@ -2,8 +2,7 @@
 
 Stress History Based Degradation With Custom Rules
 
-This model implements the [universal damage model](Degradation.md) assuming the degradation factor depends on
-the stress history.
+This model implements the [universal damage model](Degradation.md) assuming the degradation factor depends on the stress history.
 
 ## Syntax
 
@@ -19,8 +18,7 @@ material CustomStressDegradation (1) (2) (3) [4]
 
 It is possible to assign different degradation evolution rules for tension and compression.
 
-The degradation expression shall take one scalar input and return a vector of two scalars, of which the first is the 
-degradation factor while the second is the derivative of the degradation factor with respect to the input.
+The degradation expression shall take one scalar input and return a vector of two scalars, of which the first is the degradation factor while the second is the derivative of the degradation factor with respect to the input.
 
 The degradations for positive/negative stresses are defined separately.
 
@@ -29,8 +27,7 @@ D_{pos}=D_{pos}(\bar{\sigma}_{max}),\quad
 D_{neg}=D_{neg}(\bar{\sigma}_{min}).
 $$
 
-In which $$\bar{\sigma}_{max}$$ is the maximum stress (positive) of the whole loading history,
-and $$\bar{\sigma}_{min}$$ is the minimum stress (negative) of the whole loading history.
+Here $$\bar{\sigma}_{max}$$ is the maximum stress (positive) of the whole loading history, and $$\bar{\sigma}_{min}$$ is the minimum stress (negative) of the whole loading history.
 
 ## Example
 
@@ -66,8 +63,7 @@ To use it, one shall use the [`SimpleVector`](../../../../Collection/Define/expr
 expression SimpleVector 1 x y|2 exp_t
 ```
 
-Here we use $$x$$ as the input ($$\bar{\sigma}$$) and $$y[0]$$ as the degradation ($$D$$), $$y[1]$$ as the derivative 
-($$\dfrac{\mathrm{d}D}{\mathrm{d}\bar{\sigma}}$$).
+Here we use $$x$$ as the input ($$\bar{\sigma}$$) and $$y[0]$$ as the degradation ($$D$$), $$y[1]$$ as the derivative ($$\dfrac{\mathrm{d}D}{\mathrm{d}\bar{\sigma}}$$).
 
 ### Same Degradation for Tension and Compression
 

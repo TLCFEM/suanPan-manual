@@ -2,8 +2,8 @@
 
 Bouc-Wen Model
 
-The `BoucWen` model is a phenomenological model. Compared to the original formulation, the following modifications are
-applied.
+The `BoucWen` model is a phenomenological model.
+Compared to the original formulation, the following modifications are applied.
 
 1. $$A=1$$.
 2. $$\gamma+\beta=1$$.
@@ -39,8 +39,8 @@ material BoucWen (1) (2) (3) (4) (5) (6)
 
 ## Caveat
 
-Since it is a phenomenological model, the non-observable internal "displacement" $$z$$ has no physical meaning. For
-small loops, it violates plasticity postulates.
+Since it is a phenomenological model, the non-observable internal "displacement" $$z$$ has no physical meaning.
+For small loops, it violates plasticity postulates.
 
 It is recommended to use a value greater than unity for $$n$$.
 

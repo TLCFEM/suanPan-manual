@@ -99,8 +99,8 @@ $$
 t=\dfrac{2\pi}{\sqrt{11.2068}}\approx1.877~\mathrm{s}.
 $$
 
-There is a difference of about $$5\%$$, which may stem from flexible beam. Meanwhile, the computed moment of inertia may
-be different from the values given in section property table.
+There is a difference of about $$5\%$$, which may stem from a flexible beam.
+Meanwhile, the computed moment of inertia may be different from the values given in the section property table.
 
 ## Dynamic Analysis
 

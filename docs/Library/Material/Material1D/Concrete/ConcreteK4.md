@@ -36,8 +36,7 @@ The name K4 comes from the fact that the four authors' last names all start with
 
 The model implements the proposed hardening laws and crack closing mechanism.
 But the damage evolution is different from the original formulation.
-Specifically, the original linear damage evolution is replaced by an exponential law that would alleviate potential
-numerical issues, as the numerical world does not like exact zeros.
+Specifically, the original linear damage evolution is replaced by an exponential law that would alleviate potential numerical issues, as the numerical world does not like exact zeros.
 
 ### Additive Split
 
