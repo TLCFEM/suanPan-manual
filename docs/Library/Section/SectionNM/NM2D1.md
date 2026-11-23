@@ -4,7 +4,7 @@ $$N$$-$$M$$ Interaction Elastic Section
 
 ## References
 
-1. [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176)
+1. [10.1061/JSENDH.STENG-12176](https://doi.org/10.1061/JSENDH.STENG-12176)
 
 ## Background
 

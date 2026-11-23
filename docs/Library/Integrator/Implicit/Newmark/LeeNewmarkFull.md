@@ -7,7 +7,7 @@ Please check the references for theory.
 1. [10.1016/j.jsv.2020.115312](https://doi.org/10.1016/j.jsv.2020.115312)
 2. [10.1016/j.engstruct.2020.110178](https://doi.org/10.1016/j.engstruct.2020.110178)
 3. [10.1016/j.compstruc.2020.106423](https://doi.org/10.1016/j.compstruc.2020.106423)
-4. [10.1016/j.compstruc.2021.106663](http://dx.doi.org/10.1016/j.compstruc.2021.106663)
+4. [10.1016/j.compstruc.2021.106663](https://doi.org/10.1016/j.compstruc.2021.106663)
 
 **For the moment, MPC cannot be considered in all global damping models.**
 

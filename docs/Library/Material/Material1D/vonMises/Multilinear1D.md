@@ -2,6 +2,25 @@
 
 Uniaxial Multilinear Material Using J2 Plasticity
 
+## Background
+
+The isotropic backbone $$k(p)$$ is a piecewise-linear interpolant of the control points $$(\varepsilon_i^p,\sigma_i)$$ supplied on the command line.
+On the interval between two adjacent points,
+
+$$
+k(p)=\sigma_i+\dfrac{\sigma_{i+1}-\sigma_i}{\varepsilon_{i+1}^p-\varepsilon_i^p}\left(p-\varepsilon_i^p\right),\qquad \varepsilon_i^p\leqslant p\leqslant\varepsilon_{i+1}^p.
+$$
+
+The slope is precomputed for every segment at construction time, and the slope of the final segment is forced to zero.
+Thus beyond the last control point the yield radius remains at the last tabulated stress, giving a perfectly plastic response.
+The kinematic function is identically zero, so the model is the isotropic special case of [`Mises1D`](Mises1D.md).
+The derivative $$\mathrm{d}k/\mathrm{d}p$$ is the slope of the active segment, which makes the local Newton corrector of the base class exact on each segment.
+
+!!! warning "implementation limitation"
+    The constructor throws an exception unless the first plastic strain is exactly zero and exactly two columns are supplied.
+    The slope of the final segment is overwritten with zero, regardless of the last two tabulated points.
+    The plastic modulus beyond the last point is therefore zero and the algorithmic tangent vanishes there.
+
 ## Syntax
 
 ```text title="Multilinear1D"
@@ -21,6 +40,18 @@ material MultilinearMises1D (1) (2) (3) ((4) (5)...)
    So the stiffness will be singular.
    This may cause instability issues in analysis.
 3. The first plastic strain ***must*** be zero.
+4. The registered material token is `MultilinearMises1D`, not `Multilinear1D`; the latter is only the file and page name.
+5. The density `(3)` is compulsory in the parser, even though it is not used by a quasi-static analysis.
+6. Control points must be given in strictly increasing plastic strain order, since the segment search stops at the first point whose strain exceeds $$p$$.
+7. The stress of the first control point is the initial yield stress; its value is also the radius of the initial yield surface.
+8. The zero slope assigned to the last segment means the consistent tangent drops to zero outside the tabulated range, which is the source of the singularity noted above.
+9. Smooth hardening data can be supplied to [`CustomMises1D`](CustomMises1D.md) if a differentiable expression is available.
+
+!!! warning "implementation limitation"
+    Using `Multilinear1D` as a material token does not select this model, so the command fails at material creation.
+
+!!! note "developer note"
+    Unknown tokens are forwarded to the external-module hook.
 
 ## Usage
 
@@ -43,3 +74,7 @@ The above command defines the backbone using the following data.
 ### Examples
 
 ![Example](Multilinear1D.EX1.svg)
+
+## References
+
+1. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

@@ -6,6 +6,22 @@ J2 Plasticity Model With Custom Hardening
 
 This model is an implementation of the [`Mises1D`](Mises1D.md) abstract model.
 
+The isotropic function supplies the yield radius $$k(p)$$ and the kinematic function supplies the magnitude $$h(p)$$ of the back stress, with $$p$$ the accumulated plastic strain.
+The base class calls both the value and the derivative of each function through the expression interface,
+
+$$
+k(p)=f_k(p),\quad \dfrac{\mathrm{d}k}{\mathrm{d}p}=f_k'(p),\qquad h(p)=f_h(p),\quad \dfrac{\mathrm{d}h}{\mathrm{d}p}=f_h'(p).
+$$
+
+These four quantities enter the return mapping and the consistent tangent exactly as described in [`Mises1D`](Mises1D.md).
+
+!!! warning "implementation limitation"
+    Both expressions must have exactly one input and one output, and the kinematic expression must evaluate to zero at zero plastic strain.
+    The kinematic function is still a prescribed function of the accumulated plastic strain, not an independently evolving back stress.
+
+!!! note "developer note"
+    The expression class must implement `gradient()`, since the base class calls it instead of approximating the derivative itself.
+
 ## Syntax
 
 ```text title="CustomMises1D"
@@ -95,3 +111,18 @@ $$
 ![kinematic hardening](CustomMises1D.EX2.svg)
 
 With custom functions, it is possible to define arbitrary hardening rules.
+
+## Remarks
+
+Both expressions must be univariate, with one input and one output.
+The kinematic expression must evaluate to zero at zero plastic strain, otherwise initialisation fails with an error message.
+The isotropic expression evaluated at zero plastic strain defines the initial yield stress.
+The expression objects must implement `gradient()`, since the base class calls it rather than a finite-difference approximation.
+Expressions are looked up by tag during `initialize`, so they must be defined before the material is first used.
+The returned history layout is the same as that of [`Mises1D`](Mises1D.md), namely accumulated plastic strain followed by back stress.
+Smooth functions are strongly preferred because kinks make the Newton corrector of the base class converge slowly or fail.
+For tabulated or piecewise-linear hardening without expression derivatives use [`MultilinearMises1D`](Multilinear1D.md) instead.
+
+## References
+
+1. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

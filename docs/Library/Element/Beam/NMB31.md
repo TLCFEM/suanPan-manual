@@ -6,9 +6,24 @@
 * Number of DoFs: 6 (Translation, Translation, Translation, Rotation, Rotation, Rotation)
 * DoF Label: U1, U2, U3, UR1, UR2, UR3
 
+## Background
+
+`NMB31` is the three-dimensional member of the concentrated-plasticity NMB family and is described in full on the [NMB21](NMB21.md) page.
+The attached `NM3D*` [SectionNM](../../Section/SectionNM/SectionNM.md) model works with element-level deformations of both ends and defines an interaction surface in the space of axial force $N$ and bending moments $M_y$, $M_z$.
+
+The rigid-body-removal transformation produces six local deformation components, which are divided by the element length $L$ before being sent to the section.
+The section tangent $\mathbf k_s$ and resistance $\mathbf r_s$ are converted to the element quantities by $\mathbf k_e=\mathbf k_s/L$ and $\mathbf r_e=\mathbf r_s$ and then transformed to the global system.
+Torsion does not participate in the interaction surface and is treated as elastic, so biaxial bending and axial force are coupled while the torsional response is not.
+
+!!! warning "implementation limitation"
+    The `NM3D*` section assigns the torsional stiffness a penalty value of $10^3\max(4EI_S,4EI_W,EA)$ rather than a physical $GJ$, so neither torsional deformation nor torsional yielding is represented.
+    Six local deformation components are passed to the section, but only the axial and two bending components enter the interaction surface.
+
+The `B3DL` orientation is used for linear geometry and `B3DC` for the corotational formulation, and the orientation flag must match the element nonlinear geometry switch.
+
 ## References
 
-1. [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176)
+1. [10.1061/JSENDH.STENG-12176](https://doi.org/10.1061/JSENDH.STENG-12176)
 
 ## Syntax
 
@@ -32,6 +47,8 @@ element NMB31 (1) (2) (3) (4) (5) [6]
    But for compatibility with general purpose beam transformation, six components are computed and stored at the element level as usual.
    The first five are sent to the section for computation of response.
    The torsion response is assumed to be elastic.
+4. The element has no integration points along its length, so it should be used as a lumped-plasticity member with one element per hinge region.
+5. The treatment of torsion is analogous to that of the force-based beam [F31](F31.md), which also keeps torsion elastic.
 
 See [SectionNM](../../Section/SectionNM/SectionNM.md) for more information about the section.
 

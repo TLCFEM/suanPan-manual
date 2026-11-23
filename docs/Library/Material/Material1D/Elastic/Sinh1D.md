@@ -20,3 +20,27 @@ $$
 $$
 
 where $$E$$ is the elastic modulus and $$\epsilon$$ is the strain.
+
+The tangent stiffness is the derivative of the backbone,
+
+$$
+E_T=\frac{\mathrm{d}\sigma}{\mathrm{d}\varepsilon}=E\cosh(\varepsilon).
+$$
+
+Since $$\cosh(\varepsilon)\ge 1$$, the tangent stiffness is always at least $$E$$ and grows without bound as $$|\varepsilon|$$ increases.
+The backbone is odd, path independent and has no saturation stress, so it represents progressive stiffening rather than yielding.
+
+## Remarks
+
+The keyword in a command is `Sinh1D`; the `material Elastic1D` line in the syntax block is a typographical error.
+The elastic modulus `(2)` is the initial tangent stiffness at zero strain and is used as given.
+
+!!! warning "implementation limitation"
+    A negative modulus input gives a negative initial tangent and a backbone that stiffens in the negative direction.
+
+!!! note "developer note"
+    The constructor stores the modulus without applying `fabs`.
+
+The density `(3)` defaults to zero.
+The exponential growth of the backbone can produce very large stresses at moderate strains, which may cause convergence problems or numerical overflow.
+For a saturating backbone use [`Tanh1D`](Tanh1D.md), and for a fitted polynomial use [`PolyElastic1D`](PolyElastic1D.md).

@@ -2,6 +2,27 @@
 
 To model metals, von Mises yielding criterion based models are often used.
 
+## Background
+
+Metal plasticity is usually described by a yield criterion, a flow rule and hardening rules for the size and the centre of the yield surface.
+The von Mises criterion is appropriate for ductile metals because yielding is nearly insensitive to hydrostatic pressure.
+Isotropic hardening changes the radius of the yield surface and captures an increase of the monotonic yield stress, but it cannot reproduce the Bauschinger effect.
+Kinematic hardening translates the yield surface and is the standard way to model the reduced reverse yield stress after a load reversal.
+Nonlinear kinematic hardening of Armstrong--Frederick type introduces a saturating backstress and is needed when many reverse cycles must be reproduced.
+Rate-dependent metals use an overstress formulation in which the stress may exceed the yield surface by an amount that grows with the strain rate.
+Phenomenological hysteresis models describe the observed loop directly without tracking a yield surface and are useful when only cyclic test data are available.
+
+!!! info "deviation from theory"
+    The 1D models represent a single axial stress component and a scalar yield condition, so they cannot enforce multiaxial von Mises equivalence or capture non-proportional loading.
+
+## Choosing a Model
+
+Use [`Bilinear1D`](../Material1D/vonMises/Bilinear1D.md) for a first estimate of monotonic or simple cyclic response and when only a yield stress and a hardening modulus are known.
+Use [`ArmstrongFrederick1D`](../Material1D/vonMises/ArmstrongFrederick1D.md) when reverse yielding and the Bauschinger effect matter, and [`VAFCRP1D`](../Material1D/vonMises/VAFCRP1D.md) when the same response is also rate dependent.
+Use [`SteelBRB`](../Material1D/Hysteresis/SteelBRB.md) for buckling-restrained braces, whose asymmetric tension and compression response is part of the design.
+Use [`MPF`](../Material1D/Hysteresis/MPF.md) or [`RambergOsgood`](../Material1D/Hysteresis/RambergOsgood.md) when a smooth hysteresis loop must be fitted to experimental cycles.
+Move to a 3D model when multiaxial stress states, shear or non-proportional loading are important, since a 1D model cannot represent those effects.
+
 ## 1D
 
 The simplest von Mises bilinear hardening model with/without linear kinematic hardening rule (Prager's rule) can be used for simple analysis tasks.
@@ -27,3 +48,13 @@ The Bouc-Wen family ([`BoucWen`](../Material1D/Hysteresis/BoucWen.md) and [`BWBN
 ## 3D
 
 Apart from the [`MPF`](../Material1D/Hysteresis/MPF.md) model and the [`RambergOsgood`](../Material1D/Hysteresis/RambergOsgood.md) model, other models have the corresponding 3D versions.
+
+## Remarks
+
+The 1D models are intended for truss, beam and fiber-section applications where a single axial stress component is sufficient.
+The 3D counterparts include [`ArmstrongFrederick`](../Material3D/vonMises/ArmstrongFrederick.md) and [`VAFCRP`](../Material3D/vonMises/VAFCRP.md), while [`BilinearJ2`](../Material3D/vonMises/BilinearJ2.md) and [`ExpJ2`](../Material3D/vonMises/ExpJ2.md) correspond to the simpler 1D hardening laws.
+Hardening parameters should be calibrated against the specific heat treatment and strain range of interest, since the same steel can behave quite differently after cyclic softening.
+
+## References
+
+1. [10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6)

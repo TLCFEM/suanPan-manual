@@ -6,7 +6,7 @@ Minimum version: v2.6
 
 Reference:
 
-1. [https://doi.org/10.1016/S0267-7261(05)80015-6](https://doi.org/10.1016/S0267-7261(05)80015-6)
+1. [10.1016/S0267-7261(05)80015-6](https://doi.org/10.1016/S0267-7261(05)80015-6)
 
 Please note the following.
 

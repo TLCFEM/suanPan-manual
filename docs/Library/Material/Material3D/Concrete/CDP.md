@@ -9,6 +9,9 @@ Concrete Damage Plasticity Model
 3. [10.1002/1097-0207(20010120)50:2<487::AID-NME44>3.0.CO;2-N](https://doi.org/10.1002/1097-0207(20010120)50:2%3C487::AID-NME44%3E3.0.CO;2-N)
 4. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)
 5. [10.1016/j.acme.2019.07.003](https://doi.org/10.1016/j.acme.2019.07.003)
+6. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume
+7. [10.1016/j.ijsolstr.2006.06.032](https://doi.org/10.1016/j.ijsolstr.2006.06.032)
+8. Behavior of concrete under biaxial stresses
 
 !!! warning "automatic regularization"
     The `CDP` model automatically regularizes the input arguments to avoid ill-shaped backbones.
@@ -24,6 +27,119 @@ Apart from the listed references, readers can also refer to the corresponding se
 The following shows the backbone of effective stress and the corresponding damage variable as functions of $$\kappa$$.
 
 <iframe src="https://www.desmos.com/calculator/5qxxcya0jt?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+## Background
+
+The model is a rate-independent plastic-damage formulation for quasi-brittle materials such as concrete.
+It combines a pressure-dependent yield surface with nonassociated plastic flow and two scalar damage variables that degrade the elastic stiffness.
+The formulation follows Lubliner et al. [4] and the cyclic-loading modification of Lee and Fenves [1], and the return mapping is taken from [3].
+
+### Effective stress and damage
+
+The total strain is split into elastic and plastic parts,
+
+$$
+\boldsymbol\varepsilon=\boldsymbol\varepsilon^e+\boldsymbol\varepsilon^p,\qquad
+\bar{\boldsymbol\sigma}=\boldsymbol D_0:\boldsymbol\varepsilon^e=\boldsymbol D_0:(\boldsymbol\varepsilon-\boldsymbol\varepsilon^p),
+$$
+
+where $\boldsymbol D_0$ is the initial isotropic elastic stiffness and $\bar{\boldsymbol\sigma}$ is the effective stress carried by the undamaged material.
+The nominal stress is the effective stress degraded by the tensile and compressive damage indices $d_t$ and $d_c$.
+The implementation uses the Lee--Fenves crack-closing form detailed below, so that a reversal into compression can partially restore the stiffness lost by tensile cracking.
+
+### Yield function
+
+The yield function is the Lubliner criterion with the Lee--Fenves correction for independent tension and compression strengths,
+
+$$
+F=\alpha I_1+\sqrt{3J_2}-\left(1-\alpha\right)\bar\sigma_c+\beta\left\langle\bar\sigma_{\max}\right\rangle-\zeta\left\langle-\bar\sigma_{\max}\right\rangle,
+$$
+
+where $I_1=\mathrm{tr}\,\bar{\boldsymbol\sigma}$ is the first stress invariant, $\bar{\boldsymbol s}=\bar{\boldsymbol\sigma}-I_1\boldsymbol I/3$ is the deviatoric stress, $J_2=\frac12\bar{\boldsymbol s}:\bar{\boldsymbol s}$, and $\bar\sigma_{\max}$ is the algebraically largest principal value of $\bar{\boldsymbol\sigma}$.
+The Macaulay bracket is $\left\langle x\right\rangle=\max(0,x)$, so the $\beta$ term is active in tension and the $\zeta$ term in triaxial compression.
+Here $\bar\sigma_t$ and $\bar\sigma_c$ denote the positive effective tensile and compressive cohesion magnitudes, obtained from the uniaxial backbones divided by $1-d_t$ and $1-d_c$.
+
+The two shape coefficients are
+
+$$
+\alpha=\dfrac{\sigma_{b0}/\sigma_{c0}-1}{2\sigma_{b0}/\sigma_{c0}-1},\qquad
+\beta=(1-\alpha)\dfrac{\bar\sigma_c}{\bar\sigma_t}-(1+\alpha),\qquad
+\zeta=\dfrac{3(1-K_c)}{2K_c-1}.
+$$
+
+The input biaxial compression ratio (8) is $\sigma_{b0}/\sigma_{c0}$, and $\alpha$ is computed in the constructor as $(\text{ratio}-1)/(2\text{ratio}-1)$.
+The parameter $K_c$ is the ratio of the second deviatoric invariant on the tensile meridian to that on the compressive meridian; this model fixes $K_c=1$, giving $\zeta=0$, and only [`AbaqusCDP`](AbaqusCDP.md) exposes $K_c$ as an input.
+The first invariant is taken with the tension-positive convention used throughout suanPan.
+
+!!! info "deviation from theory"
+    The standard Lee--Fenves yield function retains the $K_c$ term for triaxial compression.
+    This model fixes $K_c=1$, so $\zeta=0$ and the deviatoric section is circular.
+    The effect of the tensile-to-compressive meridian ratio is available only in [`AbaqusCDP`](AbaqusCDP.md).
+
+### Flow rule and dilatancy
+
+Plastic flow is nonassociated and governed by a linear Drucker--Prager potential,
+
+$$
+G=\left\|\bar{\boldsymbol s}\right\|+\alpha_p I_1,\qquad
+\Delta\boldsymbol\varepsilon^p=\lambda\left(\dfrac{\bar{\boldsymbol s}}{\left\|\bar{\boldsymbol s}\right\|}+\alpha_p\boldsymbol I\right).
+$$
+
+The parameter $\alpha_p$ is the dilatancy parameter (12) and equals $\tan\psi$, where $\psi$ is the dilation angle measured in the pressure--shear plane.
+The volumetric plastic increment is $\Delta\varepsilon_v^p=3\lambda\alpha_p$, so positive $\alpha_p$ produces dilation under shear.
+The potential is a cone with a singular apex; unlike the Abaqus hyperbolic potential it has no eccentricity parameter.
+
+!!! info "deviation from theory"
+    The Abaqus implementation adopts a smooth hyperbolic Drucker--Prager potential with an eccentricity parameter that removes the apex singularity.
+    This implementation instead uses the linear cone potential shown above, so the flow direction is not unique at the hydrostatic axis.
+    The parameter $\alpha_p$ is used directly as the slope of that cone, not as the dilation angle of the hyperbolic potential.
+
+### Backbones and damage evolution
+
+Both uniaxial backbones use the exponential form derived in [4],
+
+$$
+\sigma(\kappa)=\sigma_0\,s(\kappa)\,b(\kappa),\qquad
+s(\kappa)=\sqrt{1+a(a+2)\kappa},\qquad
+b(\kappa)=\dfrac{1+a-s(\kappa)}{a},
+$$
+
+with $a=a_t$ in tension and $a=a_c$ in compression.
+In tension $\sigma_0=f_t$ and the response softens monotonically for $a_t<1$.
+In compression the input crush stress is rescaled to the peak value $\sigma_0=-|f_c|\,4a_c/(1+a_c)^2$, and $a_c>1$ gives initial hardening followed by softening.
+The damage index follows $d=1-b^{c_b}$, and the effective stress is $\bar\sigma=\sigma/(1-d)$.
+The exponent $c_b$ is solved from the requested degradation ratios (10) and (11), namely the stiffness remaining at half the crack stress and at the compressive peak.
+
+The internal variable $\kappa$ is the plastic energy normalised by the fracture energy per unit crack-band area, $g_t=G_F/l_c$ in tension and its compressive analogue $g_c$.
+This normalisation is what makes the softening response objective with respect to the element size when the crack band is resolved.
+
+### Stiffness recovery
+
+A stress-state factor based on the principal effective stresses is defined as
+
+$$
+r=\dfrac12\left(1+\dfrac{\sum_i\bar\sigma_i}{\sum_i\left|\bar\sigma_i\right|}\right),
+$$
+
+which is zero for purely compressive states and one for purely tensile states.
+The recovered tensile damage factor uses
+
+$$
+s(r)=s_0+r(1-s_0),\qquad
+\boldsymbol\sigma=\left[1-s(r)d_t\right]\left[1-d_c\right]\bar{\boldsymbol\sigma},
+$$
+
+where $s_0$ is the stiffness recovery factor (14).
+Compression damage is never recovered in this implementation, and the damage factors are multiplied by $0.999$ internally to avoid a singular fully degraded tangent.
+
+!!! info "deviation from theory"
+    Lee and Fenves use two independent recovery parameters, one for tension and one for compression.
+    This implementation exposes only one factor $s_0$, and the recovery factor multiplies the tensile damage index alone.
+
+!!! note "developer note"
+    Both damage indices are scaled by $0.999$ so that the tangent never vanishes completely.
+
+The classes [`TableCDP`](TableCDP.md) and [`CustomCDP`](CustomCDP.md) share this return mapping and only replace the backbone functions, while [`CDPM2`](CDPM2.md) uses a different two-surface plasticity formulation.
 
 ## Syntax
 
@@ -96,6 +212,20 @@ Smaller values likewise risk non-physical negative plasticity development.
 !!! warning "maximum element size"
     Based on physical material limits, finite element dimensions for typical concrete cannot exceed half a meter (plain) to one meter (reinforced) if **strict** energy scaling is considered.
     The numbers are only indicative.
+
+### Implementation and calibration notes
+
+- The parser defaults are $E=3\times10^4$, $\nu=0.2$, $f_t=3$, $f_c=30$, $g_t=5\times10^{-4}$, $g_c=5\times10^{-2}$, $a_t=0.2$, $a_c=2$, $1-d_t=0.5$, $1-d_c=0.65$, $\alpha_p=0.2$, $\sigma_{b0}/\sigma_{c0}=1.16$, $s_0=0.5$ and density $2400\times10^{-12}$; the class-header defaults are different and are not used by the `material` command.
+- Poisson's ratio is clamped to $0.2$ if it is not smaller than $0.5$, and the elastic modulus, energies and dilatancy parameter are converted to absolute values in the constructor.
+- The crush stress argument (5) is a positive magnitude on input but is stored as a negative peak stress internally, consistent with the tension-positive sign convention.
+- The Lubliner coefficient $\alpha$ is derived from argument (13) as $(\text{ratio}-1)/(2\text{ratio}-1)$, while $\zeta$ is fixed to zero; use [`AbaqusCDP`](AbaqusCDP.md) if the $K_c$ meridian ratio must be specified.
+- A dilatancy parameter above unity corresponds to a dilation angle above $45\text{\textdegree}$, which is unusual for concrete and triggers a debug warning.
+- The local return mapping uses a Newton loop with a Ridders bisection fallback and a tolerance of $10^{-13}$; convergence failure is reported rather than silently accepted.
+- The tensile and compressive damage variables are multiplied by $0.999$ so that a fully damaged state is never exactly reached and the consistent tangent remains invertible.
+- Stiffness recovery $s_0$ affects only the tensile damage factor; compressive damage is not recovered after load reversal.
+- For tabulated experimental backbones use [`TableCDP`](TableCDP.md), for expression-defined backbones use [`CustomCDP`](CustomCDP.md), and for a two-surface model with independent tension and compression damage use [`CDPM2`](CDPM2.md).
+- The material is intended for solid elements such as `C3D8`; reinforced concrete can be assembled by stacking it with [`Rebar3D`](Rebar3D.md) through [`Stacked`](../../Wrapper/Stacked.md).
+- Reinforced or confined members often need a dilation angle near the lower end of the recommended range, since a high value overpredicts the confinement benefit.
 
 ## History Layout
 

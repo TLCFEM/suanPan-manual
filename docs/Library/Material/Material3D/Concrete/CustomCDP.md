@@ -6,6 +6,28 @@ The formulation is identical to that of the `CDP` model.
 
 The user should provide the backbones and damage evolutions via expressions.
 
+## Background
+
+This class inherits the return mapping, yield function, flow rule and stiffness-recovery treatment of [`CDP`](CDP.md).
+Only the uniaxial tension and compression backbones are supplied by the user instead of the built-in exponential functions, so the theory of the base model applies unchanged and is not repeated here.
+
+At each local iteration the solver passes the internal variable $\kappa$, the damage index $d$, the nominal stress $f=(1-d)\bar f$ and the effective stress $\bar f=f/(1-d)$ between the expressions and the plasticity algorithm.
+The tension expression must return a positive nominal stress and the compression expression a negative one; the implementation flips the sign of the returned stresses and their derivatives if necessary.
+Each expression is a function of a single argument $\kappa\in[0,1]$ and must return six components,
+
+$$
+\left[d,\;f,\;\bar f,\;\dfrac{\mathrm{d}d}{\mathrm{d}\kappa},\;\dfrac{\mathrm{d}f}{\mathrm{d}\kappa},\;\dfrac{\mathrm{d}\bar f}{\mathrm{d}\kappa}\right],
+$$
+
+because the Newton iteration uses the analytical derivatives of the backbone.
+The normalised energies (6) and (7) are required to convert the accumulated plastic work into $\kappa=\kappa_\aleph$ and must be of the order of the area under the stress--plastic-strain curve.
+See the [`CDP`](CDP.md) page for the yield function, the Lubliner coefficient, the dilatancy parameter and the stiffness-recovery factor.
+
+!!! info "deviation from theory"
+    The sign of the returned stress is overridden by the implementation rather than being checked by the user.
+    The tension expression is forced to return a positive nominal and effective stress and the compression expression a negative one, together with the corresponding derivatives.
+    This variant also inherits the fixed $K_c=1$ and the linear Drucker--Prager potential of [`CDP`](CDP.md).
+
 ## Syntax
 
 ```text title="CustomCDP"
@@ -163,3 +185,16 @@ $$
 The $$\kappa$$-$$\sigma$$ curve can be processed as
 
 ![kappa-stress curve](CustomCDP.EX3.svg)
+
+## Remarks
+
+- The parser defaults are $E=3\times10^4$, $\nu=0.2$, $g_t=5\times10^{-4}$, $g_c=5\times10^{-2}$, $\alpha_p=0.2$, $\sigma_{b0}/\sigma_{c0}=1.16$, $w=0.5$ and density $2400\times10^{-12}$.
+- The expression tags are read as integer arguments before the numeric parameters, and initialization fails if either expression is missing or is not a map from one input to six outputs.
+- Derivatives must be consistent with the returned values; the local Newton iteration uses them and may fail to converge if they are inconsistent.
+- This variant fixes $K_c=1$ and therefore has $\zeta=0$, so the yield surface is circular in the deviatoric plane; use [`AbaqusCDP`](AbaqusCDP.md) if $K_c$ must be specified.
+- For tabulated data use [`TableCDP`](TableCDP.md) instead, and for the built-in exponential backbones use [`CDP`](CDP.md).
+
+## References
+
+1. [10.1061/(ASCE)0733-9399(1998)124:8(892)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:8(892))
+2. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)

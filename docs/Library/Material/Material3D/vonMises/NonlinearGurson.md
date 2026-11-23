@@ -4,6 +4,24 @@ Nonlinear General Gurson Porous Model
 
 See also the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 
+## Theory
+
+This abstract model implements Gurson-Tvergaard-Needleman porous plasticity for a von Mises matrix.
+Damage is represented by the void volume fraction $$f$$, so the yield condition depends on the hydrostatic stress $$p$$ as well as the equivalent stress $$q$$.
+The model assumes isotropic hardening of the matrix, an associated flow rule and approximately spherical voids.
+The parameters $$q_1$$ and $$q_2$$ calibrate the original Gurson upper-bound criterion against unit-cell calculations for interacting voids, with the original model recovered at $$q_1=q_2=1$$.
+The heat-like cohesive term makes the response sensitive to stress triaxiality, which is the ratio $$p/q$$.
+The current implementation includes void growth and strain-controlled nucleation but no void coalescence or loss of load-carrying capacity.
+
+!!! warning "implementation limitation"
+    The Tvergaard-Needleman coalescence stage and the critical void fraction for final failure are not implemented.
+    The response softens through void growth alone and does not drop to zero stress at a fully damaged state.
+
+The return mapping treats the plastic multiplier, the hydrostatic stress, the equivalent plastic strain and the void fraction as unknowns of one coupled Newton system.
+The consistent tangent is obtained from the same Jacobian by premultiplying with the elastic stiffness, which makes the overall tangent generally non-symmetric.
+A derived class supplies the matrix yield stress $$\sigma_y(\varepsilon_m^p)$$ and its derivative through the virtual `compute_hardening` method.
+The concrete variants are [`ExpGurson`](ExpGurson.md), [`CustomGurson`](CustomGurson.md) and [`TableGurson`](TableGurson.md).
+
 ## Yield Function
 
 An extended yield function is used,
@@ -64,6 +82,10 @@ Parameters $$f_N$$, $$s_N$$ and $$\varepsilon_N$$ control the normal distributio
 
 There is no consideration of coalescence in the current implementation.
 
+!!! warning "implementation limitation"
+    The void volume fraction is clamped to the interval from zero to one.
+    A trial increment that would exceed these bounds is truncated rather than rejected.
+
 ## Recording
 
 This model supports the following additional history variables to be recorded.
@@ -71,3 +93,25 @@ This model supports the following additional history variables to be recorded.
 | variable label | physical meaning |
 |----------------|------------------|
 | VF             | volume fraction  |
+
+## Remarks
+
+This is an abstract class and cannot be selected directly by a material token.
+The history has two entries, the equivalent plastic strain in `initial_history(0)` and the void volume fraction in `initial_history(1)`.
+There is no initial void fraction material parameter, so a nonzero initial value must be set with the `initial material history` command.
+
+!!! warning "implementation limitation"
+    The initial void fraction defaults to zero when no history is supplied.
+    Omitting the history definition silently gives a fully dense material even when nucleation is activated.
+
+With $$f_N=0$$ and a zero initial void fraction the void fraction stays zero and the model reduces to ordinary von Mises plasticity.
+Void nucleation uses a normal distribution in plastic strain with mean $$\varepsilon_N$$ and standard deviation $$s_N$$, and the total nucleated fraction is $$f_N$$.
+Because the yield function contains $$q^2$$ and $$\sigma_y^2$$, choose a stress unit that avoids overflow when the input numbers are squared.
+Small strain increments are recommended near the peak load, where the softening due to void growth is rapid.
+Use a three-dimensional solid element such as `C3D8`, and consider `set symm_mat 0` if the non-symmetric tangent affects convergence.
+Record `VF` with a recorder to visualise the evolution of porosity.
+
+## References
+
+1. [10.1115/1.3443401](https://doi.org/10.1115/1.3443401)
+2. [10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X)

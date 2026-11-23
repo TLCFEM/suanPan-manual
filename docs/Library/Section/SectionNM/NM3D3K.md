@@ -4,7 +4,7 @@ $$N$$-$$M$$ Interaction Inelastic Section (Nonlinear Hardening)
 
 ## References
 
-1. [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176)
+1. [10.1061/JSENDH.STENG-12176](https://doi.org/10.1061/JSENDH.STENG-12176)
 
 ## Syntax
 
@@ -35,5 +35,4 @@ section NM3D3K (1) (2...18) [(19) (20) (21) (22)...]
 ```
 
 This model implements the hardening rule defined in the appendix of the reference.
-
 

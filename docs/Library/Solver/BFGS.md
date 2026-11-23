@@ -7,7 +7,7 @@ Alternatively, the limited memory version can also be switched on.
 
 The implementation is based on Algorithm 7.4.
 
-1. [Numerical Optimization](https://doi.org/10.1007/978-0-387-40065-5)
+1. [10.1007/978-0-387-40065-5](https://doi.org/10.1007/978-0-387-40065-5)
 
 ## Syntax
 

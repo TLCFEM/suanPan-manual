@@ -5,8 +5,8 @@ The model scripts can be downloaded from [here](notched-beam-under-cyclic-loadin
 This example is taken from section 1.1.7 in the manual "ABAQUS Example Problems Guide".
 Additional references are available:
 
-1. [https://doi.org/10.1002/nme.1620362210](https://doi.org/10.1002/nme.1620362210)
-2. [https://doi.org/10.1002/cnm.1630040606](https://doi.org/10.1002/cnm.1630040606)
+1. [10.1002/nme.1620362210](https://doi.org/10.1002/nme.1620362210)
+2. [10.1002/cnm.1630040606](https://doi.org/10.1002/cnm.1630040606)
 
 ## Geometry
 

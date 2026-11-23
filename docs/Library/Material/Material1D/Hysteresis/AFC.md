@@ -8,6 +8,18 @@ The `AFC` model is a bilinear hardening model with an unloading stiffness that d
 The term AFC comes from "asymmetric friction connection" which is a type of energy dissipater.
 But this model can be used in other applications.
 
+The monotonic backbone of each sign is bilinear, with a yield stress $$\sigma_y^{+}$$ in tension and $$\sigma_y^{-}$$ in compression and a post-yield slope given by the corresponding hardening modulus $$E_h$$.
+The initial slope is the elastic modulus $$E$$, and the yield strain is $$\varepsilon_y=\sigma_y/E$$.
+Unloading does not follow the initial slope but a distinct unloading modulus $$E_u$$, which is the feature that produces the asymmetric friction-connection loop.
+At a load reversal the implementation computes the strain $$\varepsilon_r=\varepsilon-\sigma/E_u$$ at which the stress would fall to zero.
+It then computes the intersection of the unloading line with the opposite backbone analytically, and the response between the reversal point and this intersection is a straight line when the degradation parameter is zero.
+The sign of the strain increment together with the sign of the current stress selects one of four branches, so the response is path dependent through the stored reversal strain, start point and intersection point.
+The [AFCN](AFCN.md) variant replaces this straight transition by a power-law transition and adds stiffness degradation.
+
+!!! info "deviation from theory"
+    The hardening and unloading arguments are absolute moduli and not the dimensionless hardening ratios used by the bilinear hysteresis models.
+    The branch endpoints are computed algebraically from the bilinear backbones, so no contact or friction interface law is integrated.
+
 ## Syntax
 
 ```text title="AFC"
@@ -49,6 +61,12 @@ material AFC01 (1) (2) (3) (4) (5) (6) (7) (8) [9]
 
 1. `AFC02` is a wrapper of `AFC01`.
    It provides a symmetric behavior while `AFC01` provides an asymmetric behavior.
+2. `AFC` and `AFC01` select the asymmetric form with eight required parameters, while `AFC02` and `AFCS` select the symmetric form with five required parameters.
+3. The elastic modulus, the yield stresses, the hardening moduli and the unloading moduli are converted to absolute values by the constructor.
+4. The hardening and unloading arguments are slopes, that is, moduli, rather than dimensionless ratios as in the [BilinearOO](BilinearOO.md) family.
+5. A typical choice places the unloading modulus between the post-yield hardening modulus and the elastic modulus, so that the loop is narrower than a bilinear kinematic loop.
+6. The state consists of seven history variables, including the load sign, the largest strain and the start and intersection points of the current branch.
+7. Use the [AFCN](AFCN.md) variant when a smooth nonlinear transition and stiffness degradation are required.
 
 ## Examples
 

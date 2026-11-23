@@ -44,6 +44,19 @@ In which $$q$$ is the proper accumulated plastic strain.
 Effectively, it has three parts: 1) initial value $$\chi_0$$, 2) linear part $$kq$$ and 3) saturation part $$\chi_s\left(1-\exp\left(-rq\right)\right)$$.
 The parameter tuple takes $$\chi_0$$, $$k$$, $$\chi_s$$ and $$r$$.
 
+The model extends the [subloading surface](Subloading.md) framework with a split of the accumulated plastic strain into a monotonic part and a cyclic part.
+The split ratio $$k_r$$ controls how much of each increment feeds the monotonic branch, and the remaining fraction feeds the cyclic branch.
+
+!!! info "deviation from theory"
+    The standard subloading surface model drives all hardening from a single accumulated plastic strain.
+    This model splits that strain according to the distance between the current yield ratio and the memorised reversal ratio.
+
+The bound $$u$$ scales the normal yield surface, $$f_m$$ and $$f_c$$ scale the monotonic and cyclic isotropic hardening, and $$a_m$$ and $$a_c$$ scale the corresponding kinematic hardening.
+The normal yield ratio $$z$$ evolves towards unity under plastic flow, which gives a smooth elastic-to-plastic transition like the parent model.
+The memory buffer stores a limited number of previous load reversal ratios, and its content is used as the reference for the monotonic-cyclic split.
+Four sets of back-stress-like tensors are available, two scalar bounds are driven by the cyclic branch and two by the monotonic branch.
+The return mapping solves two coupled residuals for the plastic multiplier and the yield ratio and uses the resulting consistent tangent.
+
 ### Cyclic Evolution
 
 The key-value tuples indicated by tokens '-fc' and '-ac' control the evolutions of cyclic bounds (scalars).
@@ -54,6 +67,27 @@ Typically, the saturation value can be fixed to unity such that those quantities
 For the same quantity, more than one tuple can be defined.
 For example, `-fc .4 100 -fc .6 200` means there are two components, one saturates to 0.4 with a rate of 100 and the other saturates to 0.6 with a rate of 200.
 The two parts are summed up so $$F_c$$ will eventually saturate to 1.0.
+
+## Remarks
+
+The fourth input is the load reversal memory size, and the parser also accepts a `-memory` token followed by `minimum`, `maximum` or `mean`.
+The default memory type is `mean`, which averages the stored reversal ratios.
+
+!!! warning "implementation limitation"
+    Only the minimum, maximum and mean of the stored reversal ratios are available as memory types.
+    The yield ratio is bounded below by a small positive value and above by unity, and the scalar bounds are clamped to zero when negative.
+
+!!! note "developer note"
+    The lower bound on the yield ratio is $$10^{-15}$$.
+
+A zero rate in any `-fc`, `-ac`, `-na` or `-nd` tuple gives a linear evolution instead of an exponential saturation.
+The scalar bounds are clamped to zero when they would become negative, so a strongly negative saturation stress is truncated.
+The fourth bound argument of each tuple is the rate, and it controls how quickly the corresponding part approaches its bound.
+The history stores the iteration counter, the loading flag, the accumulated plastic strain, its monotonic part and the yield ratio, followed by the scalar and tensor internal variables.
+The local solver uses a tight tolerance and a hard limit of twenty iterations, so use small strain increments around load reversals.
+All parameter meanings are shared with [`Balloon1D`](../../Material1D/vonMises/Balloon1D.md).
+The [demo page](Balloon.Demo.md) illustrates each parameter with a uniaxial example.
+Use a three-dimensional solid element such as `C3D8` with this material.
 
 ## Iso-error Map
 

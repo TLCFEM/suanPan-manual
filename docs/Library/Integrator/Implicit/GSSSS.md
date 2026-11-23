@@ -6,7 +6,7 @@ The GSSSS approach unifies various time integration methods in a single framewor
 
 ## References
 
-1. [Advances in Computational Dynamics of Particles, Materials and Structures](https://www.wiley.com/en-us/Advances+in+Computational+Dynamics+of+Particles%2C+Materials+and+Structures-p-9780470749807)
+1. [ISBN 978-0-470-74980-7](https://search.worldcat.org/search?q=bn:9780470749807)
 2. [10.1002/nme.89](https://doi.org/10.1002/nme.89)
 3. [10.1002/nme.873](https://doi.org/10.1002/nme.873)
 

@@ -33,11 +33,38 @@ $$
 
 Note we are using a slightly different notation compared to the one presented in [10.1002/nme.1620240713](https://doi.org/10.1002/nme.1620240713).
 
+This model is a concrete implementation of the abstract [`NonlinearGurson`](NonlinearGurson.md) family and supplies the matrix hardening law.
+Writing $$K=\sigma_y/\sigma_y^0$$, $$C=3G/\sigma_y^0$$ and $$\bar p=\varepsilon_m^p$$, the implicit relation is $$K=(K+C\bar p)^n$$.
+Differentiating gives the slope needed by the local Newton corrector,
+
+$$
+\dfrac{\mathrm{d}K}{\mathrm{d}\bar p}=\dfrac{n\left(K+C\bar p\right)^{n-1}}{1-n\left(K+C\bar p\right)^{n-1}}\,C.
+$$
+
+The implementation solves the implicit equation by Newton iteration before each plastic corrector step.
+The exponent is clipped to $$n\leqslant1$$ in the constructor.
+
+!!! warning "implementation limitation"
+    An exponent larger than unity is silently reduced to unity rather than rejected.
+    If the hardening law cannot be solved, the radius and slope default to unity for that step.
+
+The void evolution and the coupled return mapping are inherited unchanged from [`NonlinearGurson`](NonlinearGurson.md).
+
 ## Remarks
 
 Because the yield function has the quadratic term $$q^2$$, it shall be noted that the unit of the model shall be selected carefully.
 For example, if the yield stress is $$1000~\mathrm{MPa}$$ and $$\mathrm{Pascal}$$ is used as the unit for stress, then the input number is $$10^9$$, the square of which is greater than $$10^{16}$$ so that the yield function likely overflows.
 
+The parameters $$q_1$$, $$q_2$$, $$f_N$$, $$s_N$$ and $$\varepsilon_N$$ have the same meaning as in [`NonlinearGurson`](NonlinearGurson.md).
+There is no initial void fraction parameter, so set `initial_history(1)` with the `initial material history` command when a nonzero initial porosity is needed.
+The uniaxial version is [`ExpGurson1D`](../../Material1D/vonMises/ExpGurson1D.md).
+For a user-defined hardening curve use [`CustomGurson`](CustomGurson.md), and for a tabulated curve use [`TableGurson`](TableGurson.md).
+Use a three-dimensional solid element such as `C3D8` with this material.
+
+## References
+
+1. [10.1115/1.3443401](https://doi.org/10.1115/1.3443401)
+2. [10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X)
 ## Iso-error Map
 
 The following example iso-error maps are obtained via the following script.

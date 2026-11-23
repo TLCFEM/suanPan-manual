@@ -13,9 +13,10 @@ The implementation is based on the following paper.
 
 Additional material on the same topic can be found in the following literature.
 
-1. [10.1007/978-3-030-93138-4](https://doi.org/10.1007/978-3-030-93138-4)
-2. [10.1007/s11831-023-10022-1](https://doi.org/10.1007/s11831-023-10022-1)
-3. [10.1007/s11831-022-09880-y](https://doi.org/10.1007/s11831-022-09880-y)
+2. [10.1016/0020-7683(89)90038-3](https://doi.org/10.1016/0020-7683(89)90038-3)
+3. [10.1007/978-3-030-93138-4](https://doi.org/10.1007/978-3-030-93138-4)
+4. [10.1007/s11831-023-10022-1](https://doi.org/10.1007/s11831-023-10022-1)
+5. [10.1007/s11831-022-09880-y](https://doi.org/10.1007/s11831-022-09880-y)
 
 Prof. Koichi Hashiguchi has published a large number of papers on this topic.
 To find more references, please refer to the monograph and the references therein.
@@ -88,6 +89,14 @@ $$
 
 Here, $$u$$ is a constant that controls the rate of transition.
 
+!!! info "deviation from theory"
+    Hashiguchi's original subloading surface model uses a cotangent function of the normal yield ratio.
+    The logarithmic form above is a deliberate replacement used throughout this implementation.
+    The original lower bound on the normal yield ratio is not imposed in the model.
+
+!!! note "developer note"
+    The logarithm is floored numerically in the code.
+
 ### Evolution of $$d$$
 
 The evolution of $$d$$ resembles that of $$\alpha$$.
@@ -97,6 +106,51 @@ $$
 $$
 
 in which $$c_e$$ and $$z_e<1$$ are two constants.
+
+### Numerical Solution
+
+The implicit update solves for the plastic multiplier $$\gamma$$, the normal yield ratio $$z$$ and the viscous ratio $$z_v$$ simultaneously.
+With the elastic predictor $$\sigma^\text{tr}=\sigma_n+E\Delta\varepsilon$$, the residual system is
+
+$$
+\begin{aligned}
+R_1&=\left|\sigma^\text{tr}-En\gamma-a^y\sum_i\alpha_i+(z-1)\sigma^y\sum_jd_j\right|-z_v\sigma^y,\\
+R_2&=z-z_\text{start}+u\ln(z)\gamma,\\
+R_3&=z_v-\left[1+\dfrac{\mu}{\Delta t}\left(c_vz-z_v\right)\gamma\right]^{n_v}z.
+\end{aligned}
+$$
+
+Here $$n=\operatorname{sign}(\cdot)$$ is the direction of the shifted stress evaluated at the trial state, $$r_i$$ and $$\bar\alpha_i$$ are the rate and bound of the $$i$$-th back-stress saturation, and $$s_j$$ and $$\bar d_j$$ are the rate and bound of the $$j$$-th elastic-core saturation.
+These saturation bounds are distinct from the kinematic hardening rate $$b$$ and the elastic-core ratio $$z_e$$.
+The plastic strain components are updated by backward Euler,
+
+$$
+\alpha_i=\dfrac{\alpha_i^n+r_i\bar\alpha_i n\gamma}{1+r_i\gamma},\qquad d_j=\dfrac{d_j^n+s_j\bar d_j n\gamma}{1+s_j\gamma}.
+$$
+
+In the rate-independent case $$z_v=z$$ and only the first two equations remain.
+The accumulated plastic strain increments as $$q=q_n+\gamma$$ in one dimension, whereas the three-dimensional model uses $$\sqrt{2/3}\gamma$$.
+
+!!! info "deviation from theory"
+    The one-dimensional multiplier equals the increment of accumulated plastic strain because $|\mathrm{d}\varepsilon^p|=\mathrm{d}\gamma$ in uniaxial flow.
+    The three-dimensional implementation uses the von Mises norm and therefore scales the multiplier by $\sqrt{2/3}$.
+    Identical parameter sets do not give identical hardening rates in the two implementations unless this factor is accounted for.
+
+The consistent tangent is obtained by statically condensing the $$z$$--$$z_v$$ block out of the Newton Jacobian, giving
+
+$$
+E^{ep}=E+\dfrac{E^2}{\det J}\det J_{zz}.
+$$
+
+A special check at the first iteration detects elastic unloading, in which case $$z$$ is reduced directly and no plastic flow is generated.
+The logarithm in $$R_2$$ is replaced by a constant rate below $$z=10^{-15}$$ to avoid a singularity at zero.
+
+!!! warning "implementation limitation"
+    The initial saturation bounds are unity for the back stress and the supplied elastic-core ratio for the core when this token is used.
+
+!!! note "developer note"
+    The elastic-unloading detection at the first iteration uses a heuristic load factor computed from the committed stress and the trial stress.
+    It is not a general consistency check and is specific to the one-dimensional update.
 
 ## Syntax
 
@@ -118,6 +172,17 @@ material Subloading1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (1
 # (14) double, limit elastic core ratio, 1>z_e>=0
 # [15] double, density, default: 0.0
 ```
+
+## Remarks
+
+All fourteen numerical inputs are optional in the parser and default to $$E=2\times10^5$$, $$\sigma^i=200$$, $$k_\text{iso}=0$$, $$\sigma^s=200$$, $$m^s=10$$, $$a^i=200$$, $$k_\text{kin}=0$$, $$a^s=200$$, $$m^s_\text{kin}=10$$, $$u=10$$, $$b=10$$, $$c_e=10$$ and $$z_e=0.7$$.
+The isotropic and kinematic saturation rates must be non-negative, otherwise the parser rejects the definition.
+The elastic-core bound is capped just below unity, so the elastic core never fully vanishes.
+The normal yield ratio starts at unity and is clamped to $$[0,1]$$ during iteration.
+A single back-stress saturation with unit bound and a single elastic-core saturation are installed by this token.
+The implementation is rate independent unless viscosity parameters are supplied through the [`SubloadingViscous1D`](SubloadingViscous1D.md) token.
+The history layout below assumes one back-stress and one elastic-core component; each additional saturation term in [`MultiSubloading1D`](MultiSubloading1D.md) appends one more slot.
+The three-dimensional counterpart [`Subloading`](../../Material3D/vonMises/Subloading.md) uses the same framework with a von Mises norm and $$\sqrt{2/3}\gamma$$ as the plastic strain increment.
 
 ## Variants
 

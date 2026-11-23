@@ -2,6 +2,25 @@
 
 The uniaxial degradation model can be implemented separately from the intact material model if the degradation model only depends on the input strain history or the output stress and stiffness.
 
+## Background
+
+The wrappers in this family implement scalar isotropic damage for one-dimensional materials.
+A damage variable $$d\in[0,1]$$ reduces the effective stress of an intact host material through $$\sigma=(1-d)\bar\sigma=D\bar\sigma$$.
+The intact or effective stress $$\bar\sigma$$ is computed by the host model from the same strain, so the wrapper adds only a multiplicative factor.
+The factor is irreversible because it is driven by the extreme value seen in the history, which is stored in two history variables.
+Two independent factors are kept for tension and compression and are reported as `DT` and `DC`.
+
+!!! info "deviation from theory"
+    Classical scalar isotropic damage uses a single damage variable for both loading directions.
+    The wrappers here use two independent envelope variables and switch between them according to the sign of the undamaged stress.
+    The result is closer to a unilateral damage formulation than to a single isotropic scalar.
+
+The secant stiffness of the damaged response is $$D\bar K$$, whereas the tangent stiffness contains an additional term whenever the damage is evolving.
+This distinction matters in a Newton--Raphson solution because only the tangent provides quadratic convergence.
+The wrapper evaluates the host model independently and does not modify the host history, so the intact and degraded states are advanced in parallel.
+The effective stress concept originates in the creep damage theory of Kachanov, in which the stress acting on the intact area is $\bar\sigma=\sigma/D$.
+A scalar factor implies isotropic damage, so directional effects such as crack closure must be handled by using separate tension and compression envelopes.
+
 ## Stress
 
 The general expression of a degradation model can be expressed as
@@ -14,6 +33,7 @@ where $$D$$ and $$d$$ are degradation factors, $$\bar\sigma$$ is the stress of t
 It is often called the effective stress.
 Whether to use $$D$$ or $$(1-d)$$ relies on the specific definition of degradation.
 Here we focus on the first expression.
+The factor $$D=1$$ denotes an intact material and $$D=0$$ denotes a complete loss of stress.
 
 ## Stiffness
 
@@ -31,6 +51,7 @@ K=\dfrac{\mathrm{d}\sigma}{\mathrm{d}\varepsilon}=\dfrac{\partial{}D}{\partial\v
 $$
 
 where $$\bar{K}$$ is the effective stiffness of the intact material model.
+In the implementation the derivative term is omitted when no new extreme is reached, so unloading and reloading are governed by the secant factor alone.
 
 ### Stress Dependent Degradation
 
@@ -61,6 +82,14 @@ In general, the computation procedure of a degradation model can be listed as fo
 
 Such a formulation is only valid for the damage models that do not depend on plasticity history.
 
+!!! warning "implementation limitation"
+    The degradation factor only scales the host stress and stiffness, so damage cannot alter yielding, plastic flow or the size of the yield surface.
+    Host models that require such coupling should use an integrated plastic-damage material instead of this wrapper.
+
+!!! note "developer note"
+    The wrapper calls the host model with the strain and then multiplies its returned stress and stiffness.
+    It never modifies the host history variables.
+
 ## Recording
 
 This model (and its derivatives) supports the following additional history variables to be recorded.
@@ -69,3 +98,21 @@ This model (and its derivatives) supports the following additional history varia
 |----------------|--------------------|
 | DT             | tensile damage     |
 | DC             | compressive damage |
+
+The recorded quantities are the current degradation factors, not the complementary damage indices.
+
+## Remarks
+
+The host material must be defined before the wrapper and is referenced by its tag in all derived models.
+The wrapper copies the density from the host material, so no density argument appears in wrapper commands.
+The tension and compression branches are selected by the sign of the intact stress, and their envelope variables are the extreme strain or the extreme intact stress.
+The initial stiffness is scaled by the degradation factor evaluated at zero, which is unity for all built-in wrappers.
+The formulation is intended for host models whose degradation does not depend on plasticity history, such as [`Elastic1D`](../Elastic/Elastic1D.md) or [`MPF`](../Hysteresis/MPF.md).
+The custom variants [`CustomStrainDegradation`](CustomStrainDegradation.md) and [`CustomStressDegradation`](CustomStressDegradation.md) allow arbitrary evolution laws through expressions.
+The built-in [`TrilinearStrainDegradation`](TrilinearStrainDegradation.md) and [`Dhakal`](Dhakal.md) wrappers provide piecewise laws without expressions.
+
+## References
+
+1. Time of the rupture process under creep conditions
+2. [ISBN 978-0-521-32853-1](https://search.worldcat.org/search?q=bn:9780521328531)
+3. [10.1061/(ASCE)0733-9399(1989)115:2(345)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:2(345))
