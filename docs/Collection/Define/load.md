@@ -166,6 +166,20 @@ load refload (1) (2) (3) (4) (5...)
 # (5...) int, node tags
 ```
 
+## Short Forms
+
+The leading `load` keyword can be replaced by a dedicated first-level command with the same arguments.
+
+`disp` and `dispload` are equivalent to `displacement`.
+
+`groupdisp` and `groupdispload` are equivalent to `groupdisplacement`.
+
+`refforce`, `refload` and `refereceload` are equivalent to the `ReferenceLoad` type.
+
+`grouprefforce`, `grouprefload` and `grouprefereceload` are equivalent to the `GroupReferenceLoad` type.
+
+The misspelling `refereceload` is intentional in the implementation.
+
 ## Remarks
 
 1. The leading `load` keyword can often be omitted for simplicity.

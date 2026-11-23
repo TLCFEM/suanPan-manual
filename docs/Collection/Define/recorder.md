@@ -8,3 +8,5 @@ Two main file formats are currently supported:
 2. HDF5 file.
 
 Please refer to [Recorder.md](../../Library/Recorder/Recorder.md) for details.
+
+The `hdf5recorder` and `plainrecorder` commands are shortcuts that create an HDF5 or plain text recorder directly, without the file type argument.

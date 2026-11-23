@@ -1,5 +1,11 @@
 # ArcLength
 
+## Background
+
+Arc-length control follows a nonlinear equilibrium path by treating the load level as an additional unknown.
+It can trace post-peak and snap-back responses that ordinary force control cannot pass.
+A [`Criterion`](../Criterion/Criterion.md) governs the path by issuing an exit flag when a target response is reached.
+
 ## Syntax
 
 ### Prior to v3.2.0
@@ -46,3 +52,4 @@ set fixed_step_size (1)
 
 1. A [`Ramm`](../Solver/Ramm.md) solver with default parameters is automatically enabled if no valid `Ramm` solver is defined.
    Not all storage schemes are supported; please check `Ramm` documentation.
+2. Arc-length analysis is limited on both SMP and DMP, mainly due to the lack of determinant computation.

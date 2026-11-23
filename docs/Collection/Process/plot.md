@@ -36,6 +36,15 @@ Available keywords and corresponding parameters are listed as follows.
    A string value is required.
    The extension suffix is appended automatically.
    Example: `save S11`
+7. `element` groups the plotted quantity by element.
+   It requires no parameter.
+   Example: `element`
+8. `material` groups the plotted quantity by material.
+   It is mutually exclusive with `section`.
+   Example: `material`
+9. `section` groups the plotted quantity by section.
+   It is mutually exclusive with `material`.
+   Example: `section`
 
 ## Remarks
 

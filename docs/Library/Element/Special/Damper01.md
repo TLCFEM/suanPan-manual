@@ -36,3 +36,8 @@ element Damper03 (1) (2) (3) (4)
 ## Remarks
 
 Both viscous and nonviscous materials can be used for this element, see [Viscosity](../../Material/Material1D/Viscosity/NonlinearViscosity.md).
+
+## Variants
+
+`Damper05` is the revised 2D damper: `element Damper05 (1) (2) (3) (4)` takes only the two nodes and one damper material tag, and feeds the material the relative velocity alone instead of both displacement and velocity, so the element length is not used.
+`Damper06` is the 3D counterpart with the same four arguments and three translational DoFs per node.

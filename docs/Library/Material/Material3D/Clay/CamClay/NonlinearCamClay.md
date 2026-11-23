@@ -45,3 +45,10 @@ Please note in practical applications, this value is negative as soil is often i
 | location             | parameter                  |
 |----------------------|----------------------------|
 | `initial_history(0)` | accumulated plastic strain |
+
+## Variants
+
+The `CustomCC` token subclasses `NonlinearCamClay` and supplies the hardening function $$a(\alpha)$$ and its derivative from a user-defined scalar [Expression](../../../../../Collection/Define/expression.md).
+It takes the elastic modulus, Poisson's ratio, $$\beta$$, $$M$$ and $$p_t$$ as above, then an expression tag and an optional density.
+The expression must be univariate (one input, one output) and must be able to compute derivatives; its input is the volumetric plastic strain $$\alpha$$.
+See [`CustomCC`](CustomCC.md) for the exact syntax.

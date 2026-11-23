@@ -13,6 +13,7 @@ CDPM2 Model for Concrete Material
 material CDPM2 (1) [2-16]
 material CDPM2ISO (1) [2-16]
 material CDPM2ANISO (1) [2-16]
+material CDPM2NO (1) [2-16]
 # (1) int, unique material tag
 # [2] double, elastic modulus, default: 3E4
 # [3] double, Poisson's ratio, default: 0.3
@@ -40,6 +41,8 @@ material CDPM2ANISO (1) [2-16]
 5. The token `CDPM2ANISO` uses anisotropic damage.
 6. If damage is activated, both tension and compression use the exponential damage model; the degradation is controlled by parameters [14] and [15].
    The characteristic length can be accounted for by modifying them.
+7. The token `CDPM2NO` disables damage entirely: it selects the `NODAMAGE` damage type, for which the damage computation is skipped and the response reduces to the plasticity part with no stiffness or strength degradation.
+   It takes the same 16 arguments as `CDPM2` and is useful as a damage-free reference or when degradation is not wanted.
 
 Details of implementation can be seen in the corresponding section in [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
 

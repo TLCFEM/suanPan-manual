@@ -49,3 +49,8 @@ element Damper04 (1) (2) (3) (4) (5) [6] [7] [8]
    If $$n>0$$, a maximum $$n$$ increments are allowed to be stacked before exit due to divergence.
 2. The `[8]` parameter controls the local time integration, $$\beta\in[0,1]$$ shall be defined.
    The default value $$0.5$$ implies a constant acceleration rule for the spring component in the Maxwell model.
+
+## Variants
+
+`Damper05` is the revised 2D damper: `element Damper05 (1) (2) (3) (4)` takes two nodes and a damper material tag only, unlike `Damper02` it has no spring, delay or beta arguments, and it updates the material from the relative velocity alone.
+`Damper06` is the same revised update in 3D, with three translational DoFs per node; see [Damper01](Damper01.md).

@@ -33,3 +33,15 @@ If the top and bottom flanges have different sizes, the default trivial eccentri
 Eccentricity can be manually adjusted.
 
 See [Eccentricity](../Eccentricity.md) for more details.
+
+## Variants
+
+The `ISection2DC` variant builds the same section but places its reference axis at the barycenter.
+
+It is registered as `new_isection2d<true>`, which computes the eccentricity from the section dimensions instead of reading it from the command.
+
+This removes the default zero eccentricity that would otherwise introduce extra bending moments under axial force when the flanges differ in size.
+
+The integration point argument is still accepted, but any user-supplied eccentricity is ignored.
+
+See [Eccentricity](../Eccentricity.md) for more details.

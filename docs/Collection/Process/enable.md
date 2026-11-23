@@ -16,7 +16,13 @@ remove (1) [2...]
 # [2...] int, tags
 ```
 
-For object types, possible values are: `domain`, `step`, `converger`, `constraint`, `load`, `element`, `node`, `recorder`, `modifier` and `expression`.
+For object types, possible values are: `amplitude`, `constraint`, `converger`, `criterion`, `domain`, `element`, `expression`, `group`, `integrator`, `load`, `material`, `modifier`, `node`, `orientation`, `recorder`, `section`, `solver` and `step`.
+
+The `mute` command is an alias of `disable`.
+
+The `erase` and `delete` commands are aliases of `remove`.
+
+The special object type `all` is accepted by `enable` only and activates every object in the current domain.
 
 ## Enable/Disable Print Output
 

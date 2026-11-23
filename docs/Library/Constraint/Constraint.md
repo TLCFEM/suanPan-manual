@@ -18,6 +18,33 @@ However, the system tends to become ill-conditioned with large penalty factors.
 The Lagrange multiplier method uses the border matrices to exactly enforce the constraint.
 The solving cost is higher than the penalty function method, as it is not known in advance if the specific constraint (especially the inequality constraints) should be active or not before the unconstrained system is solved.
 
+## Aliases and Short Forms
+
+The `constraint` command dispatches on a set of registered tokens, several of which are equivalent spellings of the same class.
+
+| Token(s) | Maps to |
+|----------|---------|
+| `PenaltyBC` | `PenaltyBC`, the penalty-form homogeneous Dirichlet condition |
+| `MultiplierBC` | `MultiplierBC`, the Lagrange-multiplier form of the same condition |
+| `GroupPenaltyBC` | `GroupPenaltyBC`, the penalty-form condition applied to node groups |
+| `GroupMultiplierBC` | `GroupMultiplierBC`, the multiplier-form condition applied to node groups |
+| `R2D2`, `R3D2` | `FixedLength2D`, `FixedLength3D` |
+| `FiniteRigidWall`, `FiniteRigidWallPenalty` | finite rigid wall using the penalty method |
+| `FiniteRigidWallMultiplier` | finite rigid wall using the multiplier method |
+| `FiniteRestitutionWall`, `FiniteRestitutionWallPenalty` | finite restitution wall using the penalty method |
+| `RestitutionWallPenalty` | infinite restitution wall using the penalty method, same as `RestitutionWall` |
+| `RigidWallPenalty` | infinite rigid wall using the penalty method, same as `RigidWall` |
+| `RigidWallMultiplier` | infinite rigid wall using the multiplier method |
+| `MaximumForce2D`, `MaxForce2D` | `MaxForce2D` |
+| `MaximumForce3D`, `MaxForce3D` | `MaxForce3D` |
+| `MaximumGap2D`, `MaxGap2D` | `MaximumGap2D` |
+| `MaximumGap3D`, `MaxGap3D` | `MaximumGap3D` |
+| `MinimumGap2D`, `MinGap2D` | `MinimumGap2D` |
+| `MinimumGap3D`, `MinGap3D` | `MinimumGap3D` |
+
+The `constraint` dispatch keywords and the standalone `fix` and `fix2` commands are separate entry points.
+Both `fix` and `fix2` reach the same factory and create `PenaltyBC` and `MultiplierBC` objects respectively.
+
 ## Difference Between the Two Methods With Examples
 
 Here we show a very simple example to illustrate the difference between the two methods.

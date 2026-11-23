@@ -40,7 +40,7 @@ For example,
 step dynamic 1 10
 solver LBFGS 1 50
 # the following are the default
-set banded_mat true
+set band_mat true
 set symm_mat false
 set sparse_mat false
 set system_solver SPIKE

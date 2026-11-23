@@ -30,3 +30,15 @@ section ISection3D (1) (2) (3) (4) (5) (6) (7) (8) [9] [10] [11]
 3. If the web thickness exceeds 10% of the larger flange width, the web will use two integration point layers through its thickness.
 
 See [Eccentricity](../Eccentricity.md) for more details.
+
+## Variants
+
+The `ISection3DC` variant builds the same section but places its reference axis at the barycenter.
+
+It is registered as `new_isection3d<true>`, which computes the eccentricity along the y axis from the section dimensions instead of reading the eccentricity arguments from the command.
+
+This removes the default zero eccentricity that would otherwise introduce extra bending moments under axial force when the flanges differ in size.
+
+The integration point argument is still accepted, but any user-supplied eccentricity is ignored.
+
+See [Eccentricity](../Eccentricity.md) for more details.

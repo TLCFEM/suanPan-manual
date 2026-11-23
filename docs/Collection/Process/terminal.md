@@ -2,6 +2,8 @@
 
 The `terminal` command executes external commands.
 
+The `t` command is an alias of `terminal`.
+
 ```
 terminal (1)
 # (1) string, external command to be executed

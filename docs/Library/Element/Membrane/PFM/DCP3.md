@@ -43,3 +43,6 @@ This model supports the following additional history variables to be recorded.
 |----------------|------------------|
 | DAMAGE         | damage variable  |
 
+## Variants
+
+`DCP3M` uses the same command `element DCP3M (1) (2...4) (5) (6) (7) [8]` as `DCP3`, but solves displacement and damage monolithically by adding their coupling blocks to the stiffness matrix instead of using a staggered update.

@@ -145,6 +145,22 @@ recorder (1) hdf5 GroupElement (3) [every 4] [5...]
 
 If `GroupElement` is used, then the tags of element groups shall be used.
 
+## Amplitude Recorder
+
+The `Amplitude` recorder records the `AMP` output for the listed amplitude tags.
+
+It writes the value of each referenced amplitude at the current time, together with the current time.
+
+The referenced amplitudes must be defined in the model, otherwise the recorder is disabled.
+
+```
+recorder (1) plain Amplitude [every 4] [5...]
+recorder (1) hdf5 Amplitude [every 4] [5...]
+# (1) int, unique recorder tag
+# [4] int, optional argument with leading keyword "every" to indicate the interval of recording
+# [5...] int, tags of amplitudes
+```
+
 ## Global Recorder
 
 Sometimes, it is necessary to record global quantities.

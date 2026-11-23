@@ -23,6 +23,22 @@ initial material history (1) [2...]
 # [2...] double, initial history vector
 ```
 
+## Short Forms
+
+The keywords `disp`, `vel` and `acc` are short forms of `displacement`, `velocity` and `acceleration` respectively.
+
+The `angularvelocity` (or `avel`) keyword initialises a rigid-body rotation about a reference node.
+
+```text title="initial"
+initial angularvelocity (1) (2) [3...]
+initial avel (1) (2) [3...]
+# (1) double, three components of the angular velocity vector
+# (2) int, reference node tag
+# [3...] int, tags of nodes whose initial velocities are set
+```
+
+The velocity assigned to each listed node is the cross product of the angular velocity vector and the node position relative to the reference node.
+
 ## Remarks
 
 Proper initial nodal conditions are important for dynamic analysis.

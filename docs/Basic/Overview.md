@@ -3,6 +3,25 @@
 This section introduces the fundamentals of using `suanPan`.
 It follows a guided path from obtaining the application to running an analysis and, when necessary, compiling it from source.
 
+## Features
+
+`suanPan` is an open-source finite element simulation platform for solid mechanics and civil, structural and seismic engineering.
+It is written in modern C++ and aims to provide an efficient, concise, flexible and reliable simulation environment.
+
+Its main capabilities are summarised below.
+
+| Area | Highlights |
+|:-----|:-----------|
+| Analysis | static, dynamic, arc-length, frequency, buckling and optimization steps |
+| Elements | beams, trusses, membranes, plates, shells, 3D solids, contact, joints, mass and springs |
+| Materials | elasticity, metal plasticity, concrete damage, orthotropic, hysteresis and user-defined models |
+| Sections | structural, fibre, NM and code-based design sections |
+| Constraints | MPC, rigid and restitution walls, embedding, node-line/facet and gap constraints |
+| Integrators | implicit (Newmark, generalized-α, Bathe, GSSSS) and explicit (Bathe, Tchamwa, GSSE, WAT2) schemes |
+| Parallelism | shared-memory (TBB), distributed-memory (MPI) and GPU acceleration (CUDA / MAGMA) |
+
+A complete catalogue of commands and models is available in the [model library](../Library/Overview.md) and the [command collection](../Collection/Overview.md).
+
 ## Learning Path
 
 1. [Obtain the Application](GettingStarted/Obtain.md) explains how to install or download a ready-to-run copy.

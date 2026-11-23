@@ -26,3 +26,15 @@ section TSection3D (1) (2) (3) (4) (5) (6) [7] [8] [9]
    The web, top flange and bottom flange share the same number of integration points over the height/width no matter how wide/tall the section is.
 
 See [Eccentricity](../Eccentricity.md) for more details.
+
+## Variants
+
+The `TSection3DC` variant builds the same section but places its reference axis at the barycenter.
+
+It is registered as `new_tsection3d<true>`, which computes the eccentricity along the y axis from the section dimensions instead of reading the eccentricity arguments from the command.
+
+This removes the default zero eccentricity that would otherwise introduce extra bending moments under axial force since the section is not symmetric.
+
+The integration point argument is still accepted, but any user-supplied eccentricity is ignored.
+
+See [Eccentricity](../Eccentricity.md) for more details.

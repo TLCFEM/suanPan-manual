@@ -36,3 +36,6 @@ This model supports the following additional history variables to be recorded.
 |----------------|------------------|
 | DAMAGE         | damage variable  |
 
+## Variants
+
+`DCP4M` uses the same command `element DCP4M (1) (2...5) (6) (7) (8) [9]` as `DCP4`, but solves displacement and damage monolithically by adding their coupling blocks to the stiffness matrix instead of using a staggered update.

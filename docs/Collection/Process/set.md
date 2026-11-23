@@ -16,6 +16,9 @@ set verbose_output (2)
 
 The output folder can be changed with `set output_folder`, which is described in [OutputFolder](../../Library/Recorder/OutputFolder.md).
 
+`set num_nodes` sets the number of compute nodes reported by `peek num_nodes`.
+It defaults to the size of the MPI communicator.
+
 ## Linear Elastic Simplification
 
 In a general non-linear context, each substep requires at least two system solving steps: one for the initial guess and one for the convergence test.
@@ -111,6 +114,16 @@ Details are covered in the summary table.
 set system_solver (1)
 # (1) string, system solver name
 ```
+
+Some integrators solve additional systems alongside the global one.
+Use `set sub_system_solver` to select the solver for those auxiliary systems.
+
+```
+set sub_system_solver (1)
+# (1) string, auxiliary system solver name
+```
+
+Accepted values are `LAPACK`, `SPIKE`, `SUPERLU`, `LIS`, `MUMPS`, `CUDA`, `PARDISO` and `FGMRES`, subject to the libraries available in the build.
 
 #### Mixed Precision Algorithm
 
@@ -276,3 +289,14 @@ One can then set
 ```
 set fgmres_tolerance 1E-6
 ```
+
+## Eigen Analysis
+
+For a [`Frequency`](../../Library/Step/Frequency.md) step, the number of requested eigenvalues can be specified with
+
+```
+set eigen_number (1)
+# (1) int, number of eigenvalues
+```
+
+This setting has no effect on other step types.

@@ -55,6 +55,16 @@ Consequently, its computational cost is slightly higher than that of the [`Gener
 
 There are other methods implemented as well.
 
+Most of them are Newmark variants that introduce different damping models.
+
+* [`UDDNewmark`](Implicit/Newmark/UDNewmark.md), documented on the `UDNewmark` page, applies a uniform damping kernel to the restoring and inertial forces through convolution.
+* [`UDANewmark`](Implicit/Newmark/UDANewmark.md) applies the same universal damping kernel to the inertial force only.
+* [`LeeNewmark`](Implicit/Newmark/LeeNewmark.md), [`LeeNewmarkIterative`](Implicit/Newmark/LeeNewmarkIterative.md), [`LeeElementalNewmark`](Implicit/Newmark/LeeElementalNewmark.md) and [`LeeNewmarkFull`](Implicit/Newmark/LeeNewmarkFull.md) implement the Lee damping model with different mode sets and stiffness treatments.
+* [`NonviscousNewmark`](Implicit/Newmark/NonviscousNewmark.md) uses a nonviscous damping model that convolutes the velocity vector.
+* [`RayleighNewmark`](Implicit/Newmark/RayleighNewmark.md) applies Rayleigh damping at the global level.
+* [`WilsonPenzienNewmark`](Implicit/Newmark/WilsonPenzienNewmark.md) incorporates the Wilson-Penzien damping model.
+* [`OALTS`](Implicit/OALTS.md) is an optimal A-stable linear two-step method.
+
 ## Explicit Methods
 
 Explicit methods utilize acceleration as the primary unknown variable rather than displacement.
@@ -94,6 +104,13 @@ The [explicit](Explicit/GeneralizedAlphaExplicit.md) version of the generalized-
 ### Others
 
 There are other methods as well.
+
+These are formulated in terms of acceleration and keep the stiffness matrix out of the effective matrix.
+
+* [`GSSE`](Explicit/GSSE.md) is a general explicit integration algorithm.
+* [`ICL`](Explicit/ICL.md) is an improved Chung and Lee method.
+* [`WAT2`](Explicit/WAT2.md) is the second scheme of Wang, Adams and Tamma in a generalized explicit Runge-Kutta-Nyström framework.
+* [`GeneralizedAlphaExplicit`](Explicit/GeneralizedAlphaExplicit.md) is the explicit counterpart of the generalized-$$\alpha$$ method.
 
 ## Does Order of Accuracy Matter?
 

@@ -39,3 +39,8 @@ $$
 
 In the above, $$\mathbf{\gamma}$$ is identical to Eq. (19) in the reference paper.
 Thus, $$\mu$$ shall be set to some value proportional to the elastic modulus.
+
+## Variants
+
+`CP4R` forces reduced integration with hourglassing control, so the reduced-integration switch is dropped: `element CP4R (1) (2...5) (6) [7] [8] [9]` reads thickness, nonlinear-geometry switch and hourglassing penalty multiplier.
+`NonlocalCP4` is the nonlocal-damage variant; `element NonlocalCP4 (1) (2...5) (6) [7]` takes the material tag and optional thickness (default 1.0), requires a material with exactly one nonlocal variable, and adds an NL1 DoF at every node.

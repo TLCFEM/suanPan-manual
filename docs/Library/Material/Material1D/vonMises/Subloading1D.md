@@ -119,6 +119,18 @@ material Subloading1D (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (1
 # [15] double, density, default: 0.0
 ```
 
+## Variants
+
+`MultiSubloading1D` uses the same subloading backbone but replaces the single back-stress and elastic-core saturation terms with sums of user-defined exponential saturation terms.
+It takes the first ten parameters above (through `u`), then a compulsory density, then any number of `-back (rate) (bound)` and `-core (rate) (bound)` groups; each pair adds one saturation term.
+This gives finer control over cyclic hardening and softening.
+
+`SubloadingViscous1D` adds rate dependence through a viscous normal yield ratio $$z_v$$ that is confined to $$z\leqslant z_v\leqslant c_v z$$.
+After `u` it takes the viscous limit $$c_v$$, the viscosity $$\mu$$, the exponent $$n_v$$, then the back-saturation rate, the core-saturation rate and the core bound, plus an optional density.
+Viscosity is active only when both $$\mu>0$$ and $$n_v>0$$; otherwise the response reduces to the rate-independent `Subloading1D`, and $$c_v$$ must be at least unity.
+
+See [`MultiSubloading1D`](MultiSubloading1D.md) and [`SubloadingViscous1D`](SubloadingViscous1D.md) for full syntax.
+
 ## History Layout
 
 | location             | parameter                         |
