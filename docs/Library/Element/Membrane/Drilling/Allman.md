@@ -17,7 +17,7 @@ Flat shell elements combine a membrane with a plate that provides the two bendin
 
 Allman's device is to start from a complete quadratic displacement field and to express the midside displacement of each edge in terms of the translations and rotations at the two adjacent vertices.
 
-Let node $i$ have translation $(u_i,v_i)$ and drilling rotation $\theta_i$, and let the edge from $i$ to $j$ have length $\ell_{ij}$ and unit normal $\mathbf n_{ij}=(-(y_j-y_i),\,x_j-x_i)/\ell_{ij}$.
+Let node $$i$$ have translation $$(u_i,v_i)$$ and drilling rotation $$\theta_i$$, and let the edge from $$i$$ to $$j$$ have length $$\ell_{ij}$$ and unit normal $$\mathbf n_{ij}=(-(y_j-y_i),\,x_j-x_i)/\ell_{ij}$$.
 
 The midside displacement used in the implementation is
 
@@ -27,7 +27,7 @@ $$
 
 The first term is the average of the vertex translations, and the second term is the Allman correction that couples the drilling rotation to the edge-normal displacement.
 
-The complete quadratic basis $\{1,x,y,xy,x^2,y^2\}$ is fitted through the three corner points and the three mid-edge points, giving the displacement field $\mathbf u=[u,v]^{\mathsf T}=\mathbf N\mathbf d$ with $\mathbf d=(u_1,v_1,\theta_1,u_2,v_2,\theta_2,u_3,v_3,\theta_3)^{\mathsf T}$.
+The complete quadratic basis $$\{1,x,y,xy,x^2,y^2\}$$ is fitted through the three corner points and the three mid-edge points, giving the displacement field $$\mathbf u=[u,v]^{\mathsf T}=\mathbf N\mathbf d$$ with $$\mathbf d=(u_1,v_1,\theta_1,u_2,v_2,\theta_2,u_3,v_3,\theta_3)^{\mathsf T}$$.
 
 Differentiating this field gives the three in-plane strains
 
@@ -35,9 +35,9 @@ $$
 \mathbf\varepsilon=\begin{bmatrix}u_{,x}\\ v_{,y}\\ u_{,y}+v_{,x}\end{bmatrix}=\mathbf B\mathbf d ,
 $$
 
-and the element stiffness is the usual $\mathbf K=\int_A\mathbf B^{\mathsf T}\mathbf D\mathbf B\,t\,dA$, where $\mathbf D$ is the two-dimensional material stiffness and $t$ the thickness.
+and the element stiffness is the usual $$\mathbf K=\int_A\mathbf B^{\mathsf T}\mathbf D\mathbf B\,t\,dA$$, where $$\mathbf D$$ is the two-dimensional material stiffness and $$t$$ the thickness.
 
-The integration is performed at the three midside points with equal weight $At/3$, where $A$ is the triangle area; this is the origin of the `3-Point Mid-edge` label.
+The integration is performed at the three midside points with equal weight $$At/3$$, where $$A$$ is the triangle area; this is the origin of the `3-Point Mid-edge` label.
 
 The same mid-edge idea underlies the quadrilateral drilling elements [GQ12](GQ12.md) and [GCMQ](GCMQ.md), while the plate-side discrete Kirchhoff interpolation used in shells is described on [DKT3](../../Plate/DKT3.md).
 

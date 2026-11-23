@@ -24,7 +24,7 @@ material Maxwell (1) (2) (3) [4] [5] [6]
 
 ## Theory
 
-A Maxwell element consists of a spring of stiffness $E$ and a dashpot of viscosity $\eta$ in series, so that both carry the same stress $\sigma$ and the total strain is the sum of the two internal strains.
+A Maxwell element consists of a spring of stiffness $$E$$ and a dashpot of viscosity $$\eta$$ in series, so that both carry the same stress $$\sigma$$ and the total strain is the sum of the two internal strains.
 
 $$
 \sigma=E\varepsilon_s=\eta\dot\varepsilon_d,\qquad \varepsilon=\varepsilon_s+\varepsilon_d.
@@ -36,21 +36,21 @@ $$
 \dot\varepsilon=\dfrac{\dot\sigma}{E}+\dfrac{\sigma}{\eta}.
 $$
 
-A suddenly imposed strain $\varepsilon_0$ produces an exponentially decaying stress,
+A suddenly imposed strain $$\varepsilon_0$$ produces an exponentially decaying stress,
 
 $$
 \sigma(t)=E\varepsilon_0\exp\left(-\dfrac{t}{\tau}\right),\qquad \tau=\dfrac{\eta}{E},
 $$
 
-where $\tau$ is the relaxation time.
+where $$\tau$$ is the relaxation time.
 Under constant stress the dashpot creeps indefinitely, so a single Maxwell element behaves as a fluid at long time.
 The implementation solves three local unknowns, namely the spring strain increment, the dashpot strain increment and the dashpot strain-rate increment, by Newton iteration on strain compatibility and stress equality.
-The dashpot strain rate is integrated with a $\beta$-method whose local target is $\Delta t(\dot\varepsilon_n-\dot\varepsilon_{d,n})+\beta\Delta t\,\Delta\dot\varepsilon$, so $\beta=0.5$ corresponds to a linear distribution of spring strain over the step.
+The dashpot strain rate is integrated with a $$\beta$$-method whose local target is $$\Delta t(\dot\varepsilon_n-\dot\varepsilon_{d,n})+\beta\Delta t\,\Delta\dot\varepsilon$$, so $$\beta=0.5$$ corresponds to a linear distribution of spring strain over the step.
 The scalar algorithm condenses the three equations to one unknown and is cheaper per iteration but less robust for strongly nonlinear dashpots.
 The stress reported by the material is the average of the spring and dashpot stresses, which coincide once the local iteration converges.
 
 !!! note "developer note"
-    The local Newton iteration stops after 20 steps with a tolerance of $5\times10^{-13}$ rather than solving the continuous Maxwell equation exactly.
+    The local Newton iteration stops after 20 steps with a tolerance of $$5\times10^{-13}$$ rather than solving the continuous Maxwell equation exactly.
     The spring and damper tangents are held at their trial values during each local iteration, so nonlinear constituents are treated with a linearised local solve.
     When `[5]` is positive, a failed local solve is silently reset to the last committed state for a limited number of steps instead of failing immediately.
     The reported stress is an average of the two constituent stresses rather than a single equilibrium force.

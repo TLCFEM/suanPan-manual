@@ -17,7 +17,7 @@ You can also drag the initial guess (red dot) to see how the first four iteratio
 
 Such a failure pattern could commonly happen for hardening materials under cyclic loading.
 
-In the following example, we define a bilinear hardening material with $1\%$ hardening.
+In the following example, we define a bilinear hardening material with $$1\%$$ hardening.
 A cyclic load (loading and unloading) is applied to a truss element.
 The complete script can be [downloaded](advanced-solver.zip).
 

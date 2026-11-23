@@ -10,14 +10,14 @@
 `Embedded3D` is the spatial counterpart of [`Embedded2D`](Embedded2D.md).
 It ties the three translations of a slave node to the displacement interpolated by a solid host element at that node's position, using the same penalty formulation.
 
-With host shape functions $N_a$ evaluated at the natural coordinates $\mathbf\xi=(\xi,\eta,\zeta)$ of the embedded point, the constraint force is
+With host shape functions $$N_a$$ evaluated at the natural coordinates $$\mathbf\xi=(\xi,\eta,\zeta)$$ of the embedded point, the constraint force is
 
 $$
 \mathbf R_e=\alpha\left(\mathbf u_s-\sum_a N_a\mathbf u_a\right)
 \begin{bmatrix}1&-N_1&\cdots&-N_{n_h}\end{bmatrix}.
 $$
 
-The point $\mathbf\xi$ is located once at initialisation by Newton iteration on $\mathbf J^{-1}(\mathbf x_s-\mathbf N\mathbf X_h)$, where $\mathbf J=\partial\mathbf N/\partial\mathbf\xi\,\mathbf X_h$ is the host Jacobian, and the resulting tangent $\alpha\,\mathbf w^{\mathrm T}\mathbf w$ is kept constant for the analysis.
+The point $$\mathbf\xi$$ is located once at initialisation by Newton iteration on $$\mathbf J^{-1}(\mathbf x_s-\mathbf N\mathbf X_h)$$, where $$\mathbf J=\partial\mathbf N/\partial\mathbf\xi\,\mathbf X_h$$ is the host Jacobian, and the resulting tangent $$\alpha\,\mathbf w^{\mathrm T}\mathbf w$$ is kept constant for the analysis.
 The full derivation and the choice of penalty factor are discussed on the [`Embedded2D`](Embedded2D.md) page.
 
 !!! warning "implementation limitation"

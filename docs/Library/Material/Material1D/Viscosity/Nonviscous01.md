@@ -43,8 +43,8 @@ Details can be seen in the referenced paper.
 
 By defining a uniaxial material model, it can be used in 1D analyses with damper elements.
 
-For the exponential kernel used here each complex pole $s_i$ contributes an internal state that is updated recursively.
-With a step size $\Delta t$ the implementation forms
+For the exponential kernel used here each complex pole $$s_i$$ contributes an internal state that is updated recursively.
+With a step size $$\Delta t$$ the implementation forms
 
 $$
 t_i=2+\Delta t\,s_i,\qquad
@@ -52,7 +52,7 @@ p_i=\dfrac{4-t_i}{t_i}=\dfrac{2-\Delta t\,s_i}{2+\Delta t\,s_i},\qquad
 q_i=\dfrac{\Delta t\,m_i}{t_i},
 $$
 
-and advances a complex internal variable $z_i$ according to
+and advances a complex internal variable $$z_i$$ according to
 
 $$
 z_{i,n+1}=z_{i,n}p_i+q_i\left(\dot u_n+\dot u_{n+1}\right),
@@ -64,9 +64,9 @@ $$
 F_{d,n+1}=\operatorname{Re}\left(\sum_i z_{i,n+1}\right).
 $$
 
-The factor $p_i$ has modulus below one for a decaying kernel, which makes the recursion stable.
-The tangent damping returned to the element is $\operatorname{Re}\sum_i q_i$, and its initial value depends on the initial step size through $\operatorname{Re}\sum_i \Delta t_0 m_i/(2+\Delta t_0 s_i)$.
-A viscous dashpot corresponds to the distributional limit $g(t)=\eta\,\delta(t)$, so the exponential-kernel representation generalises [`Viscosity01`](Viscosity01.md).
+The factor $$p_i$$ has modulus below one for a decaying kernel, which makes the recursion stable.
+The tangent damping returned to the element is $$\operatorname{Re}\sum_i q_i$$, and its initial value depends on the initial step size through $$\operatorname{Re}\sum_i \Delta t_0 m_i/(2+\Delta t_0 s_i)$$.
+A viscous dashpot corresponds to the distributional limit $$g(t)=\eta\,\delta(t)$$, so the exponential-kernel representation generalises [`Viscosity01`](Viscosity01.md).
 
 !!! warning "implementation limitation"
     The kernel is restricted to a finite sum of complex exponentials, so a general kernel has to be fitted by such a sum before use.
@@ -75,12 +75,12 @@ A viscous dashpot corresponds to the distributional limit $g(t)=\eta\,\delta(t)$
 
 ## Remarks
 
-The parameters are supplied in groups of four, namely the real and imaginary parts of $m_i$ followed by the real and imaginary parts of $s_i$.
+The parameters are supplied in groups of four, namely the real and imaginary parts of $$m_i$$ followed by the real and imaginary parts of $$s_i$$.
 The imaginary parts may be set to zero to obtain a purely real exponential kernel, as in the example below.
-The real parts of the decay parameters $s_i$ should be positive so that the kernel fades with time.
+The real parts of the decay parameters $$s_i$$ should be positive so that the kernel fades with time.
 The number of terms controls both the accuracy of the kernel approximation and the cost of each step.
 The material depends only on strain rate and ignores strain, like the other dashpots in this section.
-Because the tangent damping depends on the step size through $\Delta t$, large changes in time step change the apparent damping.
+Because the tangent damping depends on the step size through $$\Delta t$$, large changes in time step change the apparent damping.
 Use an element that supplies strain rate, such as [`Damper01`](../../../Element/Special/Damper01.md) or [`Damper02`](../../../Element/Special/Damper02.md).
 
 ## Example

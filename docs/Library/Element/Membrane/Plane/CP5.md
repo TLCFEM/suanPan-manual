@@ -14,12 +14,12 @@ Five-Point Quadrilateral
 ## Background
 
 [`CP5`](CP5.md) is a five-node quadrilateral obtained from the bilinear quad [`CP4`](CP4.md) by adding one midside node on the bottom edge.
-The shape functions are $N_5=\tfrac14(1-\xi^2)(1-\eta)$ and $N_a=\tfrac14(1\pm\xi)(1\pm\eta)-\tfrac12N_5$ for the two corner nodes of that edge, while the other two corner functions remain bilinear.
-The added function is a quadratic bubble that vanishes on three edges and is symmetric about $\xi=0$, so the interpolated displacement is quadratic along the bottom edge and linear elsewhere.
+The shape functions are $$N_5=\tfrac14(1-\xi^2)(1-\eta)$$ and $$N_a=\tfrac14(1\pm\xi)(1\pm\eta)-\tfrac12N_5$$ for the two corner nodes of that edge, while the other two corner functions remain bilinear.
+The added function is a quadratic bubble that vanishes on three edges and is symmetric about $$\xi=0$$, so the interpolated displacement is quadratic along the bottom edge and linear elsewhere.
 This makes [`CP5`](CP5.md) a transition element: it can share the midside node with a quadratic [`CP8`](CP8.md) on one edge and a plain [`CP4`](CP4.md) on the others.
-The nodes are ordered counter-clockwise from $(\xi,\eta)=(-1,-1)$ and node 5 lies at $(0,-1)$.
-A five-point Irons rule is used, with one point at the centre and four points at $(\pm1,0)$ and $(0,\pm1)$, which is exact to polynomial degree five.
-The stiffness is assembled as $\mathbf K^e=\sum_q t\,J_qw_q\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$, exactly as in [`CP4`](CP4.md).
+The nodes are ordered counter-clockwise from $$(\xi,\eta)=(-1,-1)$$ and node 5 lies at $$(0,-1)$$.
+A five-point Irons rule is used, with one point at the centre and four points at $$(\pm1,0)$$ and $$(0,\pm1)$$, which is exact to polynomial degree five.
+The stiffness is assembled as $$\mathbf K^e=\sum_q t\,J_qw_q\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$$, exactly as in [`CP4`](CP4.md).
 Adding the further midside nodes gives [`CP6`](CP6.md) and [`CP7`](CP7.md).
 
 ## Syntax

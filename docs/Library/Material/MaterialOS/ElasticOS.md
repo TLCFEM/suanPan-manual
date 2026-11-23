@@ -8,12 +8,12 @@ The `ElasticOS` model provides linear elastic resultants for open-section beam e
 
 Open-section beam elements reduce the three-dimensional continuum to a small set of section resultants, typically the axial force and the two transverse shear resultants.
 The corresponding material strain vector has three entries, an axial strain and two engineering shear strains, and the constitutive matrix relates them to the conjugate stress resultants.
-With $G=E/[2(1+\nu)]$, the source assembles
+With $$G=E/[2(1+\nu)]$$, the source assembles
 $$
 \mathbf D^{\mathrm{OS}}=\begin{bmatrix}E&0&0\\0&G&0\\0&0&G\end{bmatrix},\qquad \mathbf s^{\mathrm{OS}}=\mathbf D^{\mathrm{OS}}\mathbf e^{\mathrm{OS}}.
 $$
 This is the diagonal restriction of isotropic elasticity to the axial and two shear modes, with no Poisson coupling and no dependence on the cross-sectional shape.
-The [`OS146`](../Wrapper/OS146.md) wrapper shows the corresponding mapping from a 3D material: it extracts components $(0,3,5)$ of the six-component Voigt vector, namely the axial strain and the two shear strains.
+The [`OS146`](../Wrapper/OS146.md) wrapper shows the corresponding mapping from a 3D material: it extracts components $$(0,3,5)$$ of the six-component Voigt vector, namely the axial strain and the two shear strains.
 No warping degree of freedom is introduced by this material, so restrained warping and torsional warping stresses are not represented.
 
 !!! warning "implementation limitation"
@@ -44,7 +44,7 @@ $$
 
 !!! info "deviation from theory"
     The two-by-two matrix above is not the matrix used by the material.
-    The material uses a three-by-three diagonal matrix with entries $E$, $G$ and $G$, where $G=E/[2(1+\nu)]$.
+    The material uses a three-by-three diagonal matrix with entries $$E$$, $$G$$ and $$G$$, where $$G=E/[2(1+\nu)]$$.
 
 * The three strain entries are the axial strain and two engineering shear strains, and the material is used with open-section beam elements that expect this resultant layout.
 * The parser takes absolute values of both the elastic modulus and Poisson's ratio, so negative inputs cannot be used to change the sign of the stiffness.

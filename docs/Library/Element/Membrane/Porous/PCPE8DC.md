@@ -14,7 +14,7 @@ Quadratic Quadrilateral With Pore Pressure (Drained)
 
 This is the eight-node quadratic companion of [PCPE4DC](PCPE4DC.md) in the drained consolidation family.
 
-It uses the same $u$--$U$ formulation, the same pressure coefficient $q=K_sK_f/[nK_s+(\alpha-n)K_f]$, the same four-block fluid stiffness and the same relative-velocity Darcy damping matrix, so refer to the [PCPE4DC](PCPE4DC.md) theory page for the derivation.
+It uses the same $$u$$--$$U$$ formulation, the same pressure coefficient $$q=K_sK_f/[nK_s+(\alpha-n)K_f]$$, the same four-block fluid stiffness and the same relative-velocity Darcy damping matrix, so refer to the [PCPE4DC](PCPE4DC.md) theory page for the derivation.
 
 !!! info "deviation from theory"
     As in the bilinear variant, pore pressure is not a nodal unknown and drainage is represented by a velocity-proportional Darcy damping matrix.

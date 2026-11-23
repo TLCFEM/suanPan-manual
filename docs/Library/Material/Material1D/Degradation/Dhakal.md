@@ -88,7 +88,7 @@ Because the constant 100 MPa is embedded in the calibration, the yield strength 
 
 !!! warning "implementation limitation"
     The geometry parameter is not dimensionless in an arbitrary unit system because the calibration embeds a 100 MPa divisor.
-    Scaling all stresses by a constant changes $r_b$ and therefore changes $\varepsilon_i$, $D_i$ and $\varepsilon_f$.
+    Scaling all stresses by a constant changes $$r_b$$ and therefore changes $$\varepsilon_i$$, $$D_i$$ and $$\varepsilon_f$$.
     The same unit system must be used consistently across the host material and the wrapper.
 
 Degradation is applied only in compression, so the tension envelope of the host material is left unchanged.

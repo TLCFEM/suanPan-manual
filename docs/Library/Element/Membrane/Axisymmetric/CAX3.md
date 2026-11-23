@@ -9,13 +9,13 @@ Axisymmetric Linear Triangle
 ## Background
 
 [`CAX3`](CAX3.md) is the three-node constant-strain triangle of the axisymmetric family.
-Its nodal DoFs are the radial and axial displacements, and the strain vector is $\mathbf\varepsilon=[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]^\mathrm T$, with $\varepsilon_{\theta\theta}=u_r/r$ and $\gamma_{rz}=\partial u_r/\partial z+\partial u_z/\partial r$.
-The triangle uses area coordinates so the in-plane derivatives $\partial N_a/\partial r$ and $\partial N_a/\partial z$ are constant, derived from the inverse of the $3\times3$ coordinate matrix.
-The hoop strain is evaluated at the element centroid radius $r_c=(r_1+r_2+r_3)/3$, so this element is one-point integrated.
-The integration weight is $2\pi r_c A$, with $A$ the area of the meridian triangle.
+Its nodal DoFs are the radial and axial displacements, and the strain vector is $$\mathbf\varepsilon=[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]^\mathrm T$$, with $$\varepsilon_{\theta\theta}=u_r/r$$ and $$\gamma_{rz}=\partial u_r/\partial z+\partial u_z/\partial r$$.
+The triangle uses area coordinates so the in-plane derivatives $$\partial N_a/\partial r$$ and $$\partial N_a/\partial z$$ are constant, derived from the inverse of the $$3\times3$$ coordinate matrix.
+The hoop strain is evaluated at the element centroid radius $$r_c=(r_1+r_2+r_3)/3$$, so this element is one-point integrated.
+The integration weight is $$2\pi r_c A$$, with $$A$$ the area of the meridian triangle.
 
 !!! warning "implementation limitation"
-    The hoop strain uses one centroid radius for the whole triangle, so elements that span a large radial extent approximate the variation of $u_r/r$ by a single value.
+    The hoop strain uses one centroid radius for the whole triangle, so elements that span a large radial extent approximate the variation of $$u_r/r$$ by a single value.
     A centroid at or near zero radius makes the strain row singular.
 
 The stiffness is

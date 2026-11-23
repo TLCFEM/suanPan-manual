@@ -33,11 +33,11 @@ $$
 so that even powers also contribute an odd and continuous backbone.
 
 !!! info "deviation from theory"
-    A power term with even $i$ is not the ordinary polynomial $a_i\varepsilon^i$ but $a_i\operatorname{sign}(\varepsilon)|\varepsilon|^i$.
-    Thus the coefficient $a_2$ contributes $a_2\varepsilon|\varepsilon|$ and not $a_2\varepsilon^2$.
+    A power term with even $$i$$ is not the ordinary polynomial $$a_i\varepsilon^i$$ but $$a_i\operatorname{sign}(\varepsilon)|\varepsilon|^i$$.
+    Thus the coefficient $$a_2$$ contributes $$a_2\varepsilon|\varepsilon|$$ and not $$a_2\varepsilon^2$$.
 
 !!! note "developer note"
-    The odd extension is obtained by forming all powers of $|\varepsilon|$ and negating the accumulated stress when the strain is negative.
+    The odd extension is obtained by forming all powers of $$|\varepsilon|$$ and negating the accumulated stress when the strain is negative.
 
 The consistent tangent stiffness is
 

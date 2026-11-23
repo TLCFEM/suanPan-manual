@@ -7,8 +7,8 @@ Alters the inclination of the 2D host material model and is typically used with 
 ## Theory
 
 A two-dimensional anisotropic material stores its constitutive matrix in a local frame whose axes need not coincide with the global element axes.
-Let $\theta$ be the counter-clockwise angle from the global axis $x_1$ to the local material axis $x'_1$, and write $c=\cos 2\theta$ and $s=\sin 2\theta$.
-In the engineering-shear Voigt convention $\mathbf e=(\varepsilon_{11},\varepsilon_{22},\gamma_{12})$ with $\gamma_{12}=2\varepsilon_{12}$, the global-to-local strain transformation used by the implementation is
+Let $$\theta$$ be the counter-clockwise angle from the global axis $$x_1$$ to the local material axis $$x'_1$$, and write $$c=\cos 2\theta$$ and $$s=\sin 2\theta$$.
+In the engineering-shear Voigt convention $$\mathbf e=(\varepsilon_{11},\varepsilon_{22},\gamma_{12})$$ with $$\gamma_{12}=2\varepsilon_{12}$$, the global-to-local strain transformation used by the implementation is
 
 $$
 \mathbf T(\theta)=
@@ -21,8 +21,8 @@ $$
 \mathbf e'=\mathbf T\,\mathbf e.
 $$
 
-The shear row and column carry factors that differ by two because the same physical shear appears as $\gamma=2\varepsilon_{12}$ in the vector but as $\varepsilon_{12}$ in the tensor.
-Consequently $\mathbf T$ is not orthogonal, and work conjugacy requires the stress to be mapped back with its transpose rather than its inverse,
+The shear row and column carry factors that differ by two because the same physical shear appears as $$\gamma=2\varepsilon_{12}$$ in the vector but as $$\varepsilon_{12}$$ in the tensor.
+Consequently $$\mathbf T$$ is not orthogonal, and work conjugacy requires the stress to be mapped back with its transpose rather than its inverse,
 
 $$
 \mathbf s=\mathbf T^{\mathrm T}\,\mathbf s',
@@ -30,10 +30,10 @@ $$
 \mathbf D=\mathbf T^{\mathrm T}\,\mathbf D'\,\mathbf T.
 $$
 
-The identity $\mathbf s\cdot\mathbf e=(\mathbf T^{\mathrm T}\mathbf s')\cdot\mathbf e=\mathbf s'\cdot(\mathbf T\mathbf e)=\mathbf s'\cdot\mathbf e'$ confirms that energy is invariant under the change of axes.
+The identity $$\mathbf s\cdot\mathbf e=(\mathbf T^{\mathrm T}\mathbf s')\cdot\mathbf e=\mathbf s'\cdot(\mathbf T\mathbf e)=\mathbf s'\cdot\mathbf e'$$ confirms that energy is invariant under the change of axes.
 The initial, current and trial stiffnesses are all rotated with the same expression, so the wrapper preserves the consistency of the host tangent.
 The transformation is a fixed rotation of material axes for small-strain tensors, not a finite-rotation or corotational formulation.
-The three-dimensional analogue is [Rotation3D](Rotation3D.md), which uses an Euler vector and a $6\times6$ transformation built from a rotation matrix.
+The three-dimensional analogue is [Rotation3D](Rotation3D.md), which uses an Euler vector and a $$6\times6$$ transformation built from a rotation matrix.
 
 ## Syntax
 

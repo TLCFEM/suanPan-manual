@@ -24,14 +24,14 @@ The viscosity is scaled by the inverse of the time increment, and a unit increme
 The remaining two residuals of the implicit system are identical to those of [`Subloading1D`](Subloading1D.md).
 
 !!! warning "implementation limitation"
-    Setting either $\mu=0$ or $n_v=0$ removes viscosity entirely and the model reduces exactly to [`Subloading1D`](Subloading1D.md).
+    Setting either $$\mu=0$$ or $$n_v=0$$ removes viscosity entirely and the model reduces exactly to [`Subloading1D`](Subloading1D.md).
     With a unit time increment the viscosity has no physical time scale.
-    The parser rejects a viscous limit $c_v$ below unity.
+    The parser rejects a viscous limit $$c_v$$ below unity.
 
 !!! info "deviation from theory"
     The standard Perzyna overstress is an explicit power law in the distance to the yield surface.
-    Here the viscous ratio is bounded by $c_vz$.
-    Viscosity is scaled by $\mu/\Delta t$, so the response is tied to the analysis time increment.
+    Here the viscous ratio is bounded by $$c_vz$$.
+    Viscosity is scaled by $$\mu/\Delta t$$, so the response is tied to the analysis time increment.
 
 !!! note "developer note"
     The viscous ratio is confined by clamping after every Newton update.

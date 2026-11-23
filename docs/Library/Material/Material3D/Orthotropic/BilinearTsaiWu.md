@@ -10,11 +10,11 @@ The only difference is the isotropic hardening law, which is piecewise linear in
 
 ## Theory
 
-The hardening function is $K(\bar\varepsilon_p)=1+H\bar\varepsilon_p$, where $H$ is the hardening ratio supplied as `(20)`.
-For $H>0$ the yield surface grows linearly, $H=0$ gives perfect plasticity and $H<0$ gives linear softening.
+The hardening function is $$K(\bar\varepsilon_p)=1+H\bar\varepsilon_p$$, where $$H$$ is the hardening ratio supplied as `(20)`.
+For $$H>0$$ the yield surface grows linearly, $$H=0$$ gives perfect plasticity and $$H<0$$ gives linear softening.
 
 !!! warning "implementation limitation"
-    For negative `H` the hardening function is clamped to zero once $\bar\varepsilon_p$ exceeds $-1/H$.
+    For negative `H` the hardening function is clamped to zero once $$\bar\varepsilon_p$$ exceeds $$-1/H$$.
     The surface cannot shrink below zero size, so the softening branch ends abruptly.
 
 ## References
@@ -36,7 +36,7 @@ material BilinearTsaiWu (1) (2...7) (8...10) (11...19) [20] [21]
 
 ## Remarks
 
-The nine yield stresses are ordered as $\sigma_{11}^t,\sigma_{11}^c,\sigma_{22}^t,\sigma_{22}^c,\sigma_{33}^t,\sigma_{33}^c,\sigma_{12}^0,\sigma_{23}^0,\sigma_{13}^0$.
-The six moduli are ordered as $E_1,E_2,E_3,G_{12},G_{23},G_{13}$ and the three Poisson's ratios as $\nu_{12},\nu_{23},\nu_{13}$.
+The nine yield stresses are ordered as $$\sigma_{11}^t,\sigma_{11}^c,\sigma_{22}^t,\sigma_{22}^c,\sigma_{33}^t,\sigma_{33}^c,\sigma_{12}^0,\sigma_{23}^0,\sigma_{13}^0$$.
+The six moduli are ordered as $$E_1,E_2,E_3,G_{12},G_{23},G_{13}$$ and the three Poisson's ratios as $$\nu_{12},\nu_{23},\nu_{13}$$.
 No input is converted to absolute value, so positive elastic and strength parameters must be supplied.
 Use [`Rotation3D`](../../Wrapper/Rotation3D.md) to align the material axes with a rotated layup.

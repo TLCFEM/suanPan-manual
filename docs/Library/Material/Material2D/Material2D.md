@@ -15,7 +15,7 @@ Depending on the specific material model, additional output types may be availab
 
 !!! warning "incomplete response"
     It is difficult, if not impossible, to track the magnitudes of the out-of-plane components.
-    Here, we are referring to $\sigma_{33}$ in plane strain models and $\varepsilon_{33}$ in plane stress models.
+    Here, we are referring to $$\sigma_{33}$$ in plane strain models and $$\varepsilon_{33}$$ in plane stress models.
     All 2D models cannot reliably record those components and all quantities that depend on those.
 
 The history vector is a vector of variadic length that stores the necessary history variables for the material model.
@@ -28,13 +28,13 @@ Different material models may have different history variable storage layouts.
 ## Background
 
 A two-dimensional material receives a three-component strain vector and returns a three-component stress vector.
-The components are ordered as $(\varepsilon_{11},\varepsilon_{22},\gamma_{12})$ and $(\sigma_{11},\sigma_{22},\tau_{12})$, where $\gamma_{12}=2\varepsilon_{12}$ is the engineering shear strain and $\tau_{12}=\sigma_{12}$ is the shear stress.
+The components are ordered as $$(\varepsilon_{11},\varepsilon_{22},\gamma_{12})$$ and $$(\sigma_{11},\sigma_{22},\tau_{12})$$, where $$\gamma_{12}=2\varepsilon_{12}$$ is the engineering shear strain and $$\tau_{12}=\sigma_{12}$$ is the shear stress.
 Using engineering shear makes the stiffness matrix symmetric for isotropic linear elasticity and allows the same Voigt notation as the six-component 3D case.
 
 Three reduction assumptions are used in suanPan.
-Under plane stress, $\sigma_{33}=\tau_{23}=\tau_{13}=0$ and $\varepsilon_{33}$ is a dependent quantity, so the stress vector is complete but the out-of-plane strain is not recorded.
-Under plane strain, $\varepsilon_{33}=\gamma_{23}=\gamma_{13}=0$ and $\sigma_{33}$ is a dependent quantity, so the strain vector is complete but the out-of-plane stress is not recorded unless the material reconstructs it explicitly, as [`Elastic2D`](Elastic2D.md) does for `MISES` and `S` output.
-Under axisymmetry, the vector is $(\varepsilon_{rr},\varepsilon_{\theta\theta},\varepsilon_{zz},\gamma_{rz})$ and may contain four entries, as in [`AxisymmetricElastic`](AxisymmetricElastic.md), and the element must generate the hoop strain $u_r/r$.
+Under plane stress, $$\sigma_{33}=\tau_{23}=\tau_{13}=0$$ and $$\varepsilon_{33}$$ is a dependent quantity, so the stress vector is complete but the out-of-plane strain is not recorded.
+Under plane strain, $$\varepsilon_{33}=\gamma_{23}=\gamma_{13}=0$$ and $$\sigma_{33}$$ is a dependent quantity, so the strain vector is complete but the out-of-plane stress is not recorded unless the material reconstructs it explicitly, as [`Elastic2D`](Elastic2D.md) does for `MISES` and `S` output.
+Under axisymmetry, the vector is $$(\varepsilon_{rr},\varepsilon_{\theta\theta},\varepsilon_{zz},\gamma_{rz})$$ and may contain four entries, as in [`AxisymmetricElastic`](AxisymmetricElastic.md), and the element must generate the hoop strain $$u_r/r$$.
 
 The base class tags each material with a `PlaneType`, namely `S` for plane stress, `E` for plane strain, `A` for axisymmetry and `N` for models that are not tied to either in-plane assumption.
 The tag controls which derived output quantities the base class can produce: `S` and `SP` are available for `PlaneType::S`, while `E` and `EP` are available for `PlaneType::E`.
@@ -56,7 +56,7 @@ Native 2D models should be reserved for formulations that are genuinely two-dime
 
 !!! warning "implementation limitation"
     A native 2D model cannot recover the out-of-plane component once it has been eliminated from the strain vector.
-    Quantities that depend on $\sigma_{33}$ in plane strain or on $\varepsilon_{33}$ in plane stress are therefore unavailable or reconstructed approximately.
+    Quantities that depend on $$\sigma_{33}$$ in plane strain or on $$\varepsilon_{33}$$ in plane stress are therefore unavailable or reconstructed approximately.
 
 Use membrane elements from the [CP4](../../Element/Membrane/Plane/CP4.md) and [CP8](../../Element/Membrane/Plane/CP8.md) families for plane problems, and [CAX4](../../Element/Membrane/Axisymmetric/CAX4.md) or [CAX8](../../Element/Membrane/Axisymmetric/CAX8.md) for axisymmetric problems.
 The element does not decide between plane stress and plane strain in suanPan; the material's plane type does, and a plane-strain material forces unit thickness in elements that otherwise accept a thickness argument.

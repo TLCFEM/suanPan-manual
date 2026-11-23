@@ -29,35 +29,35 @@ material Concrete22 (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) [12]
 
 ## Theory
 
-Let $\theta$ be the crack angle stored in `trial_history(0)` and let $\mathbf T(\theta)$ be the corresponding transformation matrix.
-The trial strain is projected into these axes, $\hat{\mathbf\varepsilon}=\mathbf T\mathbf\varepsilon$, and the two normal components drive two independent uniaxial concrete models.
-The source also records the largest tensile principal strain $\varepsilon_{t,\max}$ and the smallest compressive principal strain $\varepsilon_{c,\max}$ in `trial_history(1)` and `trial_history(2)`.
-The angle is updated from the current strain only while $\varepsilon_{t,\max}<\varepsilon_{cr}$ and $\varepsilon_{c,\max}>\varepsilon_{pk}$, where $\varepsilon_{cr}$ and $\varepsilon_{pk}$ are the tensile cracking and compressive peak strains.
+Let $$\theta$$ be the crack angle stored in `trial_history(0)` and let $$\mathbf T(\theta)$$ be the corresponding transformation matrix.
+The trial strain is projected into these axes, $$\hat{\mathbf\varepsilon}=\mathbf T\mathbf\varepsilon$$, and the two normal components drive two independent uniaxial concrete models.
+The source also records the largest tensile principal strain $$\varepsilon_{t,\max}$$ and the smallest compressive principal strain $$\varepsilon_{c,\max}$$ in `trial_history(1)` and `trial_history(2)`.
+The angle is updated from the current strain only while $$\varepsilon_{t,\max}<\varepsilon_{cr}$$ and $$\varepsilon_{c,\max}>\varepsilon_{pk}$$, where $$\varepsilon_{cr}$$ and $$\varepsilon_{pk}$$ are the tensile cracking and compressive peak strains.
 Once either cracking or crushing is detected the angle is frozen, which is the precise sense in which this model has fixed cracks.
 
 !!! info "deviation from theory"
     A classical fixed crack model fixes the orientation at the first cracking event.
     This implementation keeps the axes rotating until the recorded tensile strain reaches the cracking strain or the compressive strain reaches the peak strain, and only then locks them.
 
-The normal stress components are $\hat\sigma_i=f(\hat\varepsilon_i)$ with $f$ the selected uniaxial backbone.
-The shear response is initially elastic with modulus $G=E/2$ until the shear strain reaches $\gamma_s=\tau_s/G$, where $\tau_s$ is the input shear stress.
-Beyond that threshold the shear modulus is reduced to $\beta_s G$ and the shear stress continues as
+The normal stress components are $$\hat\sigma_i=f(\hat\varepsilon_i)$$ with $$f$$ the selected uniaxial backbone.
+The shear response is initially elastic with modulus $$G=E/2$$ until the shear strain reaches $$\gamma_s=\tau_s/G$$, where $$\tau_s$$ is the input shear stress.
+Beyond that threshold the shear modulus is reduced to $$\beta_s G$$ and the shear stress continues as
 $$
 \hat\tau=\operatorname{sign}(\hat\gamma)\left[\tau_s+\left(|\hat\gamma|-\gamma_s\right)\beta_s G\right],
 $$
-with $\beta_s$ the shear retention factor.
+with $$\beta_s$$ the shear retention factor.
 
 !!! warning "implementation limitation"
     The shear retention factor is constant and the model has no crack-slip, aggregate-interlock or shear-dilatancy law.
     After the orientation is locked, continuing changes in the principal strain direction produce shear stress even though no new crack direction is created.
 
-The stress and stiffness are finally rotated back to global axes by $\mathbf\sigma=\mathbf T^{\mathrm T}\hat{\mathbf\sigma}$ and $\mathbf K=\mathbf T^{\mathrm T}\hat{\mathbf K}\mathbf T$.
+The stress and stiffness are finally rotated back to global axes by $$\mathbf\sigma=\mathbf T^{\mathrm T}\hat{\mathbf\sigma}$$ and $$\mathbf K=\mathbf T^{\mathrm T}\hat{\mathbf K}\mathbf T$$.
 
 ## Remarks
 
-* `(10)` is the shear stress $\tau_s$ at which shear degradation starts, and `(11)` is the shear retention factor $\beta_s$ that multiplies the elastic shear modulus after cracking.
+* `(10)` is the shear stress $$\tau_s$$ at which shear degradation starts, and `(11)` is the shear retention factor $$\beta_s$$ that multiplies the elastic shear modulus after cracking.
 * A retention factor of zero removes all shear transfer across the crack, while a value of one gives no shear degradation at all.
-* The initial shear modulus is $E/2$, so the transition strain is $\gamma_s=2\tau_s/E$ and no Poisson's ratio is needed.
+* The initial shear modulus is $$E/2$$, so the transition strain is $$\gamma_s=2\tau_s/E$$ and no Poisson's ratio is needed.
 * The crack angle is not frozen from the very first step; the axes rotate with the principal strains until the recorded tensile or compressive strain exceeds its cracking or peak value.
 * The two independent uniaxial backbones imply no biaxial strength interaction and no Poisson effect, so biaxial compression confinement is not represented.
 * The model is tagged `PlaneType::N`, so only `HIST` and `YF` are available as standard output from [Material2D](Material2D.md).

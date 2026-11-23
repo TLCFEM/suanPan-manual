@@ -30,19 +30,19 @@ The `Damper04` is the 3D version.
 ## Background
 
 A Maxwell model connects a spring and a dashpot in series.
-For a prescribed end displacement $\epsilon$ and velocity $\dot\epsilon$, the two components carry the same force $N$ but share the deformation,
+For a prescribed end displacement $$\epsilon$$ and velocity $$\dot\epsilon$$, the two components carry the same force $$N$$ but share the deformation,
 
 $$
 \epsilon=\epsilon_s+\epsilon_d,\qquad
 N=f_s(\epsilon_s)=f_d(\dot\epsilon_d).
 $$
 
-Eliminating $\epsilon_d$ gives a scalar evolution equation for the internal spring strain $\epsilon_s$, which has to be solved locally at every trial state.
+Eliminating $$\epsilon_d$$ gives a scalar evolution equation for the internal spring strain $$\epsilon_s$$, which has to be solved locally at every trial state.
 The implementation uses the Newton--Raphson based state-determination algorithm of Chang and Lee, so the spring may be a rate-independent nonlinear model and the dashpot coefficient may depend on both displacement and velocity.
 
-The element projects the end displacements and velocities onto the initial axis $\mathbf c$ and passes $u=\mathbf c\cdot(\mathbf u_j-\mathbf u_i)$ and $v=\mathbf c\cdot(\mathbf v_j-\mathbf v_i)$ to the Maxwell material, so the element length is again not used.
-With $\beta$ the local time-integration parameter and $\Delta t$ the time increment, the factor $\beta\Delta t$ controls how the spring strain is interpolated over the increment; $\beta=0.5$ corresponds to a linear spring strain history.
-The element assembles the resulting force as $\mathbf R_j=\mathbf c\,N$, $\mathbf R_i=-\mathbf R_j$, and forms both a trial tangent stiffness and a trial damping matrix from the Maxwell material.
+The element projects the end displacements and velocities onto the initial axis $$\mathbf c$$ and passes $$u=\mathbf c\cdot(\mathbf u_j-\mathbf u_i)$$ and $$v=\mathbf c\cdot(\mathbf v_j-\mathbf v_i)$$ to the Maxwell material, so the element length is again not used.
+With $$\beta$$ the local time-integration parameter and $$\Delta t$$ the time increment, the factor $$\beta\Delta t$$ controls how the spring strain is interpolated over the increment; $$\beta=0.5$$ corresponds to a linear spring strain history.
+The element assembles the resulting force as $$\mathbf R_j=\mathbf c\,N$$, $$\mathbf R_i=-\mathbf R_j$$, and forms both a trial tangent stiffness and a trial damping matrix from the Maxwell material.
 
 !!! info "deviation from theory"
     As in [`Damper01`](Damper01.md), the raw projected displacement and velocity are passed to the material without division by the element length.

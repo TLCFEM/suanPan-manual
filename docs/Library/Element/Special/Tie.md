@@ -14,19 +14,19 @@ $$
 \sum_a w_a\,u_a=b ,
 $$
 
-where $b$ is the right-hand side and $w_a$ is the weight of the $a$-th DoF.
-The penalty energy $\Pi=\tfrac12\alpha\big(\sum_a w_a u_a-b\big)^2$ gives the rank-one element stiffness and residual
+where $$b$$ is the right-hand side and $$w_a$$ is the weight of the $$a$$-th DoF.
+The penalty energy $$\Pi=\tfrac12\alpha\big(\sum_a w_a u_a-b\big)^2$$ gives the rank-one element stiffness and residual
 
 $$
 \mathbf K_e=\alpha\,\mathbf w\mathbf w^{\mathrm T},\qquad
 \mathbf R_e=\alpha\,\mathbf w\big(\mathbf w^{\mathrm T}\mathbf u-b\big).
 $$
 
-As $\alpha\to\infty$ the constraint is enforced exactly, but a very large penalty makes the global system ill conditioned.
+As $$\alpha\to\infty$$ the constraint is enforced exactly, but a very large penalty makes the global system ill conditioned.
 
 !!! info "deviation from theory"
     The penalty form enforces the constraint only approximately.
-    The residual of the weighted sum is generally nonzero and scales as $1/\alpha$.
+    The residual of the weighted sum is generally nonzero and scales as $$1/\alpha$$.
 
 The element is purely algebraic, so it does not use nodal coordinates and the tied DoFs need not have the same type or belong to the same dimension.
 A geometric constraint that attaches a node to a line is provided by [`TranslationConnector`](TranslationConnector.md).

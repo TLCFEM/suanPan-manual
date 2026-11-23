@@ -13,16 +13,16 @@ $$J_1$$ and $$J_3$$ are reduced invariants of the right Cauchy-Green deformation
 
 ## Background
 
-With $\mathbf C=\mathbf F^\mathrm T\mathbf F$, $I_1=\mathrm{tr}\,\mathbf C$ and $J=\sqrt{\det\mathbf C}$, the arguments of the energy are $J_1=I_1J^{-2/3}$ and $J_3=J$.
-Using the reduced invariant $J_1$ separates the distortional response from the volumetric response of an isotropic material.
-The first sum is the reduced-polynomial form introduced by Yeoh and the second sum is a volumetric penalty built from even powers of $J-1$.
+With $$\mathbf C=\mathbf F^\mathrm T\mathbf F$$, $$I_1=\mathrm{tr}\,\mathbf C$$ and $$J=\sqrt{\det\mathbf C}$$, the arguments of the energy are $$J_1=I_1J^{-2/3}$$ and $$J_3=J$$.
+Using the reduced invariant $$J_1$$ separates the distortional response from the volumetric response of an isotropic material.
+The first sum is the reduced-polynomial form introduced by Yeoh and the second sum is a volumetric penalty built from even powers of $$J-1$$.
 
 !!! info "deviation from theory"
-    The original Yeoh model is formulated for incompressible rubber and contains only powers of $I_1-3$.
-    This implementation uses the reduced invariant $J_1$ and adds a volumetric series in $J-1$, so it is a regularised compressible variant.
+    The original Yeoh model is formulated for incompressible rubber and contains only powers of $$I_1-3$$.
+    This implementation uses the reduced invariant $$J_1$$ and adds a volumetric series in $$J-1$$, so it is a regularised compressible variant.
 
-At small strain the initial shear modulus is $\mu_0=2C_{10}$ and the initial bulk modulus is $K_0=2C_{11}$.
-A negative $C_{20}$ followed by a positive $C_{30}$ reproduces the softening at small strain and the stiffening at large strain observed in filled rubber.
+At small strain the initial shear modulus is $$\mu_0=2C_{10}$$ and the initial bulk modulus is $$K_0=2C_{11}$$.
+A negative $$C_{20}$$ followed by a positive $$C_{30}$$ reproduces the softening at small strain and the stiffening at large strain observed in filled rubber.
 The second Piola-Kirchhoff stress and the consistent tangent are obtained by differentiating the energy with respect to the Green strain.
 
 ## Syntax
@@ -43,12 +43,12 @@ material Yeoh (1) (2...)
 !!! warning "implementation limitation"
     The coefficient list is split into two equal halves, so the deviatoric and volumetric series must have the same number of terms.
 
-5. The coefficients are not converted to absolute values, so the sign of $C_{20}$ and $C_{30}$ is meaningful.
+5. The coefficients are not converted to absolute values, so the sign of $$C_{20}$$ and $$C_{30}$$ is meaningful.
 6. The model takes the Green-Lagrange strain in Voigt notation and requires nonlinear geometry in the host element.
 7. The third invariant is floored at machine epsilon to avoid a singularity when the volume ratio vanishes.
 
 !!! warning "implementation limitation"
-    Flooring $I_3$ at machine epsilon modifies the volumetric penalty as $J$ approaches zero.
+    Flooring $$I_3$$ at machine epsilon modifies the volumetric penalty as $$J$$ approaches zero.
     The exact strain energy is not recovered near vanishing volume ratio.
 
 8. For a two-parameter deviatoric response with a single volumetric term use [`MooneyRivlin`](MooneyRivlin.md), and for compressible foam use [`BlatzKo`](BlatzKo.md).

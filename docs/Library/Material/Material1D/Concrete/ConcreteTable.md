@@ -29,7 +29,7 @@ The hysteresis rules, residual strains and crack-closing transition are inherite
     The model does not read the element characteristic length, so tabulated softening must be scaled by the analyst for mesh objectivity.
 
 !!! note "developer note"
-    Beyond the last tabulated point the tangent is set to $10^{-10}$.
+    Beyond the last tabulated point the tangent is set to $$10^{-10}$$.
 
 ## Remarks
 
@@ -37,7 +37,7 @@ Both files must contain exactly two columns, with strains in the first column an
 The compression file is normally written with negative strain and stress values, but the parser takes absolute values and reapplies the signs internally.
 The tension file should contain monotonically increasing positive strains and stresses so that interpolation and crack-strain detection behave as intended.
 The first two rows of each table set the initial stiffness, so they should lie in the elastic range.
-The middle point parameter `[4]` is clamped to $[0,1]$ and controls the size of the hysteresis loop in the inherited rules.
+The middle point parameter `[4]` is clamped to $$[0,1]$$ and controls the size of the hysteresis loop in the inherited rules.
 A denser table gives a smoother backbone at the cost of slower interpolation.
 The density `[5]` defaults to zero.
 

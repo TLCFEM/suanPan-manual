@@ -7,8 +7,8 @@ Timber Plastic-Damage Model
 The model couples the bilinear Hoffman plasticity of [`BilinearHoffman`](BilinearHoffman.md) with two independent scalar damage variables, one for tensile stress and one for compressive stress.
 The trial stress is split into tensile and compressive parts by an eigen-decomposition of the stress tensor.
 Each part is filtered by a Hill-type equivalent measure built from the corresponding set of tensile or compressive strengths.
-The thresholds $r_t$ and $r_c$ are the largest equivalent stresses observed so far and are stored as history variables.
-The final stress is $(1-\omega_t)\mathbf\sigma_t+(1-\omega_c)\mathbf\sigma_c$, where $\mathbf\sigma_t$ and $\mathbf\sigma_c$ are the tensile and compressive parts.
+The thresholds $$r_t$$ and $$r_c$$ are the largest equivalent stresses observed so far and are stored as history variables.
+The final stress is $$(1-\omega_t)\mathbf\sigma_t+(1-\omega_c)\mathbf\sigma_c$$, where $$\mathbf\sigma_t$$ and $$\mathbf\sigma_c$$ are the tensile and compressive parts.
 
 !!! info "deviation from theory"
     The damage driving measures are Hill-type equivalent stresses of the split stress, not the Hoffman yield function used for the plastic backbone.
@@ -68,10 +68,10 @@ $$
 The parameter $$b_c$$ will be clamped to $$0\leq{}b_c\leq1$$.
 
 !!! warning "implementation limitation"
-    The parameters $b_t$ and $b_c$ are clamped to $[0,1]$.
+    The parameters $$b_t$$ and $$b_c$$ are clamped to $$[0,1]$$.
 
 !!! note "developer note"
-    The initial thresholds $r_t^0$ and $r_c^0$ are floored at machine epsilon.
+    The initial thresholds $$r_t^0$$ and $$r_c^0$$ are floored at machine epsilon.
 
 View and edit parameters to see how they affect the damage evolution.
 

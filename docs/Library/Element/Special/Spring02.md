@@ -8,15 +8,15 @@ Spring Using Strain
 ## Background
 
 `Spring02` is the strain-based counterpart of [`Spring01`](Spring01.md).
-The initial node separation $L=\lVert\mathbf x_j-\mathbf x_i\rVert$ is computed at initialisation, and a separation below $10^{-10}$ is replaced by $L=1$ to avoid division by zero.
-With $\mathbf d=\mathbf x_j-\mathbf x_i$, the scaled direction $\mathbf b=\mathbf d/L^2$ gives the scalar input
+The initial node separation $$L=\lVert\mathbf x_j-\mathbf x_i\rVert$$ is computed at initialisation, and a separation below $$10^{-10}$$ is replaced by $$L=1$$ to avoid division by zero.
+With $$\mathbf d=\mathbf x_j-\mathbf x_i$$, the scaled direction $$\mathbf b=\mathbf d/L^2$$ gives the scalar input
 
 $$
 \epsilon=\mathbf b\cdot(\mathbf u_j-\mathbf u_i)
 =\dfrac{\mathbf d\cdot(\mathbf u_j-\mathbf u_i)}{L^2}=\dfrac{\Delta}{L},
 $$
 
-so the material receives the axial strain $\epsilon$ and returns a stress $\sigma$ and tangent stiffness $k$.
+so the material receives the axial strain $$\epsilon$$ and returns a stress $$\sigma$$ and tangent stiffness $$k$$.
 The assembled stiffness and internal force are
 
 $$
@@ -25,14 +25,14 @@ $$
 \mathbf R_j=\dfrac{\sigma}{L}\mathbf c,\qquad \mathbf R_i=-\mathbf R_j,
 $$
 
-where $\mathbf c=\mathbf d/L$ is the initial unit direction.
+where $$\mathbf c=\mathbf d/L$$ is the initial unit direction.
 The derivation of the rank-one projection and the remarks on fixed geometry are given on the [`Spring01`](Spring01.md) page.
 
 !!! info "deviation from theory"
     For coincident or nearly coincident nodes the resulting strain is not physically meaningful.
 
 !!! note "developer note"
-    An initial length at or below $10^{-10}$ is replaced by $L=1$ before the direction vector is scaled.
+    An initial length at or below $$10^{-10}$$ is replaced by $$L=1$$ before the direction vector is scaled.
 
 ## Syntax
 

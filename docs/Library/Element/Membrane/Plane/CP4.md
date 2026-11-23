@@ -14,13 +14,13 @@ Bilinear Quadrilateral
 ## Background
 
 [`CP4`](CP4.md) is the four-node isoparametric quadrilateral, also known as the bilinear quad or Q4.
-Its shape functions in parent coordinates $(\xi,\eta)\in[-1,1]^2$ are
+Its shape functions in parent coordinates $$(\xi,\eta)\in[-1,1]^2$$ are
 $$
 N_1=\tfrac14(1-\xi)(1-\eta),\quad N_2=\tfrac14(1+\xi)(1-\eta),\quad N_3=\tfrac14(1+\xi)(1+\eta),\quad N_4=\tfrac14(1-\xi)(1+\eta).
 $$
-The nodes are ordered counter-clockwise starting at $(\xi,\eta)=(-1,-1)$, so node 5 of a quadratic edge is inserted between nodes 1 and 2 in [`CP5`](CP5.md).
-The isoparametric map $\mathbf x=\sum_aN_a\mathbf x_a$ gives the Jacobian $\mathbf J=\partial\mathbf x/\partial\mathbf\xi$, and the physical shape-function gradients are $\nabla N_a=\mathbf J^{-\mathrm T}\nabla_{\!\xi}N_a$.
-The small-strain vector is $\mathbf\varepsilon=\mathbf B\mathbf a$, with
+The nodes are ordered counter-clockwise starting at $$(\xi,\eta)=(-1,-1)$$, so node 5 of a quadratic edge is inserted between nodes 1 and 2 in [`CP5`](CP5.md).
+The isoparametric map $$\mathbf x=\sum_aN_a\mathbf x_a$$ gives the Jacobian $$\mathbf J=\partial\mathbf x/\partial\mathbf\xi$$, and the physical shape-function gradients are $$\nabla N_a=\mathbf J^{-\mathrm T}\nabla_{\!\xi}N_a$$.
+The small-strain vector is $$\mathbf\varepsilon=\mathbf B\mathbf a$$, with
 $$
 \mathbf B=\begin{bmatrix}
 N_{1,x}&0&N_{2,x}&0&N_{3,x}&0&N_{4,x}&0\\
@@ -28,23 +28,23 @@ N_{1,x}&0&N_{2,x}&0&N_{3,x}&0&N_{4,x}&0\\
 N_{1,y}&N_{1,x}&N_{2,y}&N_{2,x}&N_{3,y}&N_{3,x}&N_{4,y}&N_{4,x}
 \end{bmatrix}.
 $$
-The stiffness and internal force are assembled as $\mathbf K^e=\sum_q t\,J_qw_q\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$ and $\mathbf f^e=\sum_q t\,J_qw_q\,\mathbf B_q^\mathrm T\mathbf\sigma_q$.
+The stiffness and internal force are assembled as $$\mathbf K^e=\sum_q t\,J_qw_q\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$$ and $$\mathbf f^e=\sum_q t\,J_qw_q\,\mathbf B_q^\mathrm T\mathbf\sigma_q$$.
 
-Full integration uses a $2\times2$ Gauss rule, which is exact for the bilinear stiffness of a parallelogram.
+Full integration uses a $$2\times2$$ Gauss rule, which is exact for the bilinear stiffness of a parallelogram.
 Reduced integration uses one point at the element centre, where the strain sampled is the mean strain of the element.
-One-point integration admits the two hourglass displacement patterns $\mathbf h=[1,-1,1,-1]$ in the $x$ and $y$ directions, which produce no strain at the centre and would otherwise make the stiffness matrix rank deficient.
+One-point integration admits the two hourglass displacement patterns $$\mathbf h=[1,-1,1,-1]$$ in the $$x$$ and $$y$$ directions, which produce no strain at the centre and would otherwise make the stiffness matrix rank deficient.
 
 The stabilisation follows the orthogonal hourglass projection of Flanagan, Belytschko and co-workers.
-The physical hourglass vector is obtained by projecting the algebraic mode $\mathbf h$ orthogonal to the rigid-body and constant-strain modes,
+The physical hourglass vector is obtained by projecting the algebraic mode $$\mathbf h$$ orthogonal to the rigid-body and constant-strain modes,
 $$
 \mathbf\gamma=\mathbf h-(\mathbf h\cdot\mathbf x)\,\mathbf b_1-(\mathbf h\cdot\mathbf y)\,\mathbf b_2.
 $$
-Here $\mathbf b_1$ and $\mathbf b_2$ are the centre-point shape-function gradients divided by $\texttt{double\_area}$, the quantity computed from the nodal coordinates that equals twice the element area $A$.
-The stabilisation matrix is added to the stiffness as $\mu\,(2t/A)\,\mathbf\gamma\mathbf\gamma^\mathrm T$, and the corresponding hourglass force is $\mu\,(2t/A)(\mathbf\gamma^\mathrm T\mathbf a)\mathbf\gamma$.
+Here $$\mathbf b_1$$ and $$\mathbf b_2$$ are the centre-point shape-function gradients divided by $$\texttt{double\_area}$$, the quantity computed from the nodal coordinates that equals twice the element area $$A$$.
+The stabilisation matrix is added to the stiffness as $$\mu\,(2t/A)\,\mathbf\gamma\mathbf\gamma^\mathrm T$$, and the corresponding hourglass force is $$\mu\,(2t/A)(\mathbf\gamma^\mathrm T\mathbf a)\mathbf\gamma$$.
 
 When the nonlinear geometry switch is set, the element uses a Total Lagrangian formulation.
-The trial deformation gradient is $\mathbf F=\mathbf I+\sum_a\mathbf u_a\otimes\nabla N_a$, and the Green-Lagrange strain $\mathbf E=(\mathbf F^\mathrm T\mathbf F-\mathbf I)/2$ is passed to the material.
-The second Piola-Kirchhoff stress returned by the material is contracted with the nonlinear strain-displacement matrix $\mathbf B_{NL}$, and an initial-stress geometric stiffness is assembled from that stress and the shape-function gradients.
+The trial deformation gradient is $$\mathbf F=\mathbf I+\sum_a\mathbf u_a\otimes\nabla N_a$$, and the Green-Lagrange strain $$\mathbf E=(\mathbf F^\mathrm T\mathbf F-\mathbf I)/2$$ is passed to the material.
+The second Piola-Kirchhoff stress returned by the material is contracted with the nonlinear strain-displacement matrix $$\mathbf B_{NL}$$, and an initial-stress geometric stiffness is assembled from that stress and the shape-function gradients.
 
 ## Syntax
 
@@ -73,7 +73,7 @@ element CP4 (1) (2...5) (6) [7] [8] [9] [10]
 * The full integration scheme uses 2-by-2 Gaussian scheme and the reduced integration uses a single integration point at the center of the element.
 * The reduced integration scheme also imports anti-hourglassing technique.
 * The thickness `(7)` is ignored and forced to unity when the material uses plane strain.
-* The characteristic length used by nonlocal or damage materials is $\sqrt{A}$, with $A$ the element area computed by the shoelace formula.
+* The characteristic length used by nonlocal or damage materials is $$\sqrt{A}$$, with $$A$$ the element area computed by the shoelace formula.
 * The nonlinear geometry switch `(9)` activates the Total Lagrangian formulation with Green-Lagrange strain and a geometric stiffness.
 * Full integration is prone to shear and volumetric locking in bending and nearly incompressible plasticity; reduced integration with hourglass control is the cheaper alternative.
 * For assumed-stress and enhanced-strain alternatives that do not need hourglass control, see [`PS`](../Mixed/PS.md), [`QE2`](../Mixed/QE2.md) and [`CP4I`](CP4I.md).
@@ -87,7 +87,7 @@ $$
 
 In the above, $$\mathbf{\gamma}$$ is identical to Eq. (19) in the reference paper.
 Thus, $$\mu$$ shall be set to some value proportional to the elastic modulus.
-The code forms the hourglass vectors with the centre gradients divided by $\texttt{double\_area}=2A$, then multiplies $\mathbf\gamma\mathbf\gamma^\mathrm T$ by $2t\mu/A$.
+The code forms the hourglass vectors with the centre gradients divided by $$\texttt{double\_area}=2A$$, then multiplies $$\mathbf\gamma\mathbf\gamma^\mathrm T$$ by $$2t\mu/A$$.
 The penalty argument is converted to its absolute value, so a negative entry has the same effect as a positive one.
 
 !!! warning "implementation limitation"

@@ -186,11 +186,11 @@ $$
 
 ### Parameter summary
 
-- $G_0$ and $\nu$ set the small-strain elastic stiffness through $G=G_0(2.97-e)^2/(1+e)\sqrt{|pp_{at}|}$ and $K=2(1+\nu)G/[3(1-2\nu)]$.
-- $\alpha^c$ is the critical-state stress ratio, $\lambda_c$ and $\xi$ define the critical-state line, and $e_0$ is the initial void ratio.
-- $m$ is the small yield-surface size in stress-ratio space, $h_0$, $h_1$ and $c_h$ control the hardening rate, and $n^b$ and $n^d$ set the distances to the bounding and dilatancy surfaces.
-- $A_0$ is the dilatancy constant and is normally negative in this sign convention, $n^d$ controls its state dependence, and $z_{max}$ and $c_z$ control the fabric contribution.
-- $p_{at}$ is the atmospheric pressure used for normalisation and is entered as a negative number, and $G_r$ is the fraction of $G_0|p_{at}|$ used as the lower bound on the shear modulus.
+- $$G_0$$ and $$\nu$$ set the small-strain elastic stiffness through $$G=G_0(2.97-e)^2/(1+e)\sqrt{|pp_{at}|}$$ and $$K=2(1+\nu)G/[3(1-2\nu)]$$.
+- $$\alpha^c$$ is the critical-state stress ratio, $$\lambda_c$$ and $$\xi$$ define the critical-state line, and $$e_0$$ is the initial void ratio.
+- $$m$$ is the small yield-surface size in stress-ratio space, $$h_0$$, $$h_1$$ and $$c_h$$ control the hardening rate, and $$n^b$$ and $$n^d$$ set the distances to the bounding and dilatancy surfaces.
+- $$A_0$$ is the dilatancy constant and is normally negative in this sign convention, $$n^d$$ controls its state dependence, and $$z_{max}$$ and $$c_z$$ control the fabric contribution.
+- $$p_{at}$$ is the atmospheric pressure used for normalisation and is entered as a negative number, and $$G_r$$ is the fraction of $$G_0|p_{at}|$$ used as the lower bound on the shear modulus.
 
 !!! warning "implementation limitation"
     A tensile or near-zero trial pressure makes the yield surface undefined, so the model caps the response at zero mean stress and returns a deviatoric-only stress with the floor shear modulus $$G_rG_0|p_{at}|$$.
@@ -198,9 +198,9 @@ $$
 
 ## Remarks
 
-- The parser defaults are $G_0=125$, $\nu=0.05$, $\alpha^c=1.25$, $\lambda_c=0.02$, $e_0=0.9$, $\xi=0.7$, $m=0.01$, $h_0=7$, $h_1=0.1$, $c_h=0.9$, $n^b=1.1$, $A_0=-0.7$, $n^d=3.5$, $z_{max}=4$, $c_z=600$, $p_{at}=-130$ and $G_r=0.2$.
-- Most input arguments are converted to absolute values in the constructor; only the dilatancy constant $A_0$ keeps its sign and $p_{at}$ is forced negative.
-- The parameter set was calibrated for Toyoura sand and is often reused for other sands, with $m$, $h_0$, $c_h$, $n^b$ and $n^d$ commonly treated as constants.
+- The parser defaults are $$G_0=125$$, $$\nu=0.05$$, $$\alpha^c=1.25$$, $$\lambda_c=0.02$$, $$e_0=0.9$$, $$\xi=0.7$$, $$m=0.01$$, $$h_0=7$$, $$h_1=0.1$$, $$c_h=0.9$$, $$n^b=1.1$$, $$A_0=-0.7$$, $$n^d=3.5$$, $$z_{max}=4$$, $$c_z=600$$, $$p_{at}=-130$$ and $$G_r=0.2$$.
+- Most input arguments are converted to absolute values in the constructor; only the dilatancy constant $$A_0$$ keeps its sign and $$p_{at}$$ is forced negative.
+- The parameter set was calibrated for Toyoura sand and is often reused for other sands, with $$m$$, $$h_0$$, $$c_h$$, $$n^b$$ and $$n^d$$ commonly treated as constants.
 - The Lode-angle dependence of the original model is absent, so true triaxial stress states are approximated by a circular deviatoric section.
 - The state parameter is computed from the void ratio obtained from the trace of the total strain, so large strains or large volumetric errors directly affect the dilatancy and bounding surfaces.
 - For a simpler bounding-surface sand model without fabric effects use [`SimpleSand`](SimpleSand.md).

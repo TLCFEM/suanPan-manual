@@ -7,7 +7,7 @@ Combines multiple 3D material models into a single one.
 ## Theory
 
 A stacked material is the three-dimensional form of the iso-strain or Voigt assumption.
-Every constituent is subjected to the same six-component Voigt strain $\mathbf e=(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\gamma_{12},\gamma_{23},\gamma_{13})$, and the overall stress and tangent are the sums of the constituent quantities,
+Every constituent is subjected to the same six-component Voigt strain $$\mathbf e=(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\gamma_{12},\gamma_{23},\gamma_{13})$$, and the overall stress and tangent are the sums of the constituent quantities,
 
 $$
 \mathbf s(\mathbf e)=\sum_{k=1}^{n}\mathbf s^{(k)}(\mathbf e),
@@ -15,10 +15,10 @@ $$
 \mathbf D(\mathbf e)=\sum_{k=1}^{n}\mathbf D^{(k)}(\mathbf e).
 $$
 
-For constituents with volume fractions $f_k$ the physical mixture rule is $\mathbf s=\sum_k f_k\mathbf s^{(k)}$, so the fractions must be included in the material parameters because the wrapper applies no weighting.
+For constituents with volume fractions $$f_k$$ the physical mixture rule is $$\mathbf s=\sum_k f_k\mathbf s^{(k)}$$, so the fractions must be included in the material parameters because the wrapper applies no weighting.
 
 !!! info "deviation from theory"
-    The wrapper sums stresses and tangents with unit weight, so the Voigt mixture rule is recovered only when all volume fractions $f_k$ are equal.
+    The wrapper sums stresses and tangents with unit weight, so the Voigt mixture rule is recovered only when all volume fractions $$f_k$$ are equal.
     Any weighting must be built into the constituent parameters or the section assigned to the element, since no fraction is read from the input.
 
 The rule is the upper bound on the effective stiffness of a composite, complementary to the iso-stress lower bound represented in one dimension by [Sequential](Sequential.md).

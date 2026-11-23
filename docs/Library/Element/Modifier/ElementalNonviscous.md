@@ -18,7 +18,7 @@ The parameters $$m_i$$ and $$s_i$$ are complex numbers.
 
 A nonviscous damping force is the convolution of the velocity history with a kernel, as described on the [`Modifier`](Modifier.md) page.
 For an exponential kernel the convolution can be updated recursively instead of storing the whole velocity history.
-With $\Delta t$ the time increment, the implementation forms the complex coefficients
+With $$\Delta t$$ the time increment, the implementation forms the complex coefficients
 
 $$
 p_i=\dfrac{2}{\Delta t}+s_i,\qquad
@@ -33,7 +33,7 @@ $$
 +\big(\dot{\mathbf u}_e^{n}+\dot{\mathbf u}_e^{n+1}\big)\mathbf m'^{\mathrm T}.
 $$
 
-A diagonal tangent $\operatorname{Re}\big(\sum_i m_i'\big)\mathbf I$ is added to the element damping matrix.
+A diagonal tangent $$\operatorname{Re}\big(\sum_i m_i'\big)\mathbf I$$ is added to the element damping matrix.
 Only matrix--vector products are needed, so the cost per step is low and no velocity history is stored.
 
 !!! warning "implementation limitation"
@@ -80,7 +80,7 @@ $$
 
 ## Remarks
 
-1. The four coefficients are supplied in the order real and imaginary parts of $m_i$, then real and imaginary parts of $s_i$, and this group is repeated for each exponential term.
+1. The four coefficients are supplied in the order real and imaginary parts of $$m_i$$, then real and imaginary parts of $$s_i$$, and this group is repeated for each exponential term.
 2. The imaginary parts must form conjugate pairs, and the kernel must decay to zero, otherwise the parser rejects the modifier.
 3. `ElementalNonviscousGroup` takes an element group tag instead of a single element tag and applies the same kernel to all elements in that group.
 4. Repeated element tags are detected at initialisation and disable the modifier, since each element can carry only one such history.

@@ -25,9 +25,9 @@ G=\dfrac{E}{2(1+\nu)},\qquad
 \lambda=\dfrac{E\nu}{(1+\nu)(1-2\nu)}.
 $$
 
-Here $E$ is the Young's modulus, $\nu$ is Poisson's ratio, $G$ is the shear modulus, and $\lambda$ is the first Lamé constant.
-The second Lamé constant is $\mu=G$.
-Splitting the strain into a volumetric part and a deviatoric part, $\mathbf\varepsilon=\tfrac13\varepsilon_v\mathbf I+\mathbf\varepsilon_d$ with $\varepsilon_v=\mathrm{tr}(\mathbf\varepsilon)$ and $\mathrm{tr}(\mathbf\varepsilon_d)=0$, gives the equivalent form
+Here $$E$$ is the Young's modulus, $$\nu$$ is Poisson's ratio, $$G$$ is the shear modulus, and $$\lambda$$ is the first Lamé constant.
+The second Lamé constant is $$\mu=G$$.
+Splitting the strain into a volumetric part and a deviatoric part, $$\mathbf\varepsilon=\tfrac13\varepsilon_v\mathbf I+\mathbf\varepsilon_d$$ with $$\varepsilon_v=\mathrm{tr}(\mathbf\varepsilon)$$ and $$\mathrm{tr}(\mathbf\varepsilon_d)=0$$, gives the equivalent form
 
 $$
 \mathbf\sigma=K\varepsilon_v\mathbf I+2G\mathbf\varepsilon_d,\qquad
@@ -40,10 +40,10 @@ $$
 W=\dfrac12K\varepsilon_v^2+G\mathbf\varepsilon_d:\mathbf\varepsilon_d.
 $$
 
-Positive definiteness requires $G>0$ and $K>0$, which gives the thermodynamic bounds $-1<\nu<\tfrac12$.
-As $\nu\to\tfrac12$ the bulk modulus diverges and the response becomes incompressible, so nearly incompressible values produce volumetric locking in displacement-only low-order elements.
+Positive definiteness requires $$G>0$$ and $$K>0$$, which gives the thermodynamic bounds $$-1<\nu<\tfrac12$$.
+As $$\nu\to\tfrac12$$ the bulk modulus diverges and the response becomes incompressible, so nearly incompressible values produce volumetric locking in displacement-only low-order elements.
 Negative Poisson's ratios are admissible in theory but cannot be entered through the command line because the constructor replaces both moduli by their absolute values.
-In the Voigt convention $(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\gamma_{12},\gamma_{23},\gamma_{13})$ used by the 3D elements, $\gamma_{ij}=2\varepsilon_{ij}$ is the engineering shear strain and the shear entries of the stiffness matrix equal $G$.
+In the Voigt convention $$(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\gamma_{12},\gamma_{23},\gamma_{13})$$ used by the 3D elements, $$\gamma_{ij}=2\varepsilon_{ij}$$ is the engineering shear strain and the shear entries of the stiffness matrix equal $$G$$.
 
 !!! warning "implementation limitation"
     Both `E` and `nu` are converted to their absolute values, so auxetic materials with negative Poisson's ratio cannot be represented.
@@ -58,13 +58,13 @@ For direction-dependent stiffness use [`OrthotropicElastic3D`](OrthotropicElasti
 
 `Elastic3D` is accepted as a short alias for `IsotropicElastic3D` and takes the same arguments.
 
-The implementation evaluates $\lambda=G\nu/(0.5-\nu)$ in `tensor::isotropic_stiffness`, which is algebraically identical to the expression given above.
-A value of $\nu$ at or above $0.5$ makes the denominator vanish or change sign and must be avoided.
+The implementation evaluates $$\lambda=G\nu/(0.5-\nu)$$ in `tensor::isotropic_stiffness`, which is algebraically identical to the expression given above.
+A value of $$\nu$$ at or above $$0.5$$ makes the denominator vanish or change sign and must be avoided.
 The response is path independent and the tangent matrix is constant, so no history variables are stored.
 Use [`OrthotropicElastic3D`](OrthotropicElastic3D.md) when the stiffness differs along material axes.
 Use [`NonlocalIsotropicElastic3D`](NonlocalIsotropicElastic3D.md) when a gradient-regularised softening response is required.
 For finite-strain rubber-like behaviour use [`MooneyRivlin`](MooneyRivlin.md), [`Yeoh`](Yeoh.md) or [`BlatzKo`](BlatzKo.md) with nonlinear geometry enabled in the element.
-Any consistent unit system may be used, but $E$, $\lambda$ and $K$ must share the stress units of the model and the optional density must match the mass units.
+Any consistent unit system may be used, but $$E$$, $$\lambda$$ and $$K$$ must share the stress units of the model and the optional density must match the mass units.
 
 ## Example
 

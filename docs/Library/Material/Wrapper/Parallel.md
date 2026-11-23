@@ -7,7 +7,7 @@ Combines multiple 1D material models into a single one.
 ## Theory
 
 A parallel rheological arrangement connects several constitutive elements between the same pair of nodes, so every element undergoes the same deformation.
-Compatibility therefore gives $\varepsilon^{(k)}=\varepsilon$ for every constituent $k$, while equilibrium of the nodal forces requires the stresses to add,
+Compatibility therefore gives $$\varepsilon^{(k)}=\varepsilon$$ for every constituent $$k$$, while equilibrium of the nodal forces requires the stresses to add,
 
 $$
 \sigma(\varepsilon)=\sum_{k=1}^{n}\sigma^{(k)}(\varepsilon),
@@ -15,9 +15,9 @@ $$
 D(\varepsilon)=\dfrac{\partial\sigma}{\partial\varepsilon}=\sum_{k=1}^{n}D^{(k)}(\varepsilon),
 $$
 
-where $D^{(k)}=\partial\sigma^{(k)}/\partial\varepsilon^{(k)}$ is the tangent of constituent $k$.
-For a unit-volume representative element with volume fractions $f_k$ the same relations read $\sigma=\sum_k f_k\sigma^{(k)}$ and $D=\sum_k f_k D^{(k)}$, so the parallel arrangement is the iso-strain or Voigt assumption and gives an upper bound on the effective stiffness.
-For linear springs this reduces to $E_{\mathrm{eq}}=\sum_k f_k E_k$, and the free energies of the constituents add.
+where $$D^{(k)}=\partial\sigma^{(k)}/\partial\varepsilon^{(k)}$$ is the tangent of constituent $$k$$.
+For a unit-volume representative element with volume fractions $$f_k$$ the same relations read $$\sigma=\sum_k f_k\sigma^{(k)}$$ and $$D=\sum_k f_k D^{(k)}$$, so the parallel arrangement is the iso-strain or Voigt assumption and gives an upper bound on the effective stiffness.
+For linear springs this reduces to $$E_{\mathrm{eq}}=\sum_k f_k E_k$$, and the free energies of the constituents add.
 
 The implementation stores a copy of every listed 1D material and drives all copies with the identical trial strain.
 It accumulates the trial stress, the trial tangent and, when present, the trial damping from every constituent.

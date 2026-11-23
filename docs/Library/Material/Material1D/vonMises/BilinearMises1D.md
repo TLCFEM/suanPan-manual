@@ -19,8 +19,8 @@ $$
 where $$H$$ is the input hardening ratio and $$p$$ is the accumulated plastic strain.
 
 !!! warning "implementation limitation"
-    The conversion divides by $1-H$, and the code does not check that $H$ differs from unity.
-    With $H=0$ the plastic modulus vanishes and the base class returns a zero tangent during plastic loading.
+    The conversion divides by $$1-H$$, and the code does not check that $$H$$ differs from unity.
+    With $$H=0$$ the plastic modulus vanishes and the base class returns a zero tangent during plastic loading.
     The elastic modulus and the yield stress are converted to absolute values in the constructor.
 
 Both derivatives required by the base class are constants, $$\mathrm{d}k/\mathrm{d}p=H_\text{iso}$$ and $$\mathrm{d}h/\mathrm{d}p=0$$.

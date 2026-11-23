@@ -42,14 +42,14 @@ The method shall return a vector of size six with the following values computed.
 | $$4$$     | $$\dfrac{\partial^2W}{\partial\varepsilon_v\partial\varepsilon_s}$$ |
 | $$5$$     | $$\dfrac{\partial^2W}{\partial\varepsilon_s\partial\varepsilon_v}$$ |
 
-The volumetric strain and the squared equivalent strain are work-conjugate to $\partial W/\partial\varepsilon_v$ and $\partial W/\partial\varepsilon_s$, respectively.
-Writing $\varepsilon_s=\varepsilon_p^2$ removes the square root from the derivatives and keeps the tangent defined at $\varepsilon_p=0$, at the cost of an energy that is even in the deviatoric strain.
+The volumetric strain and the squared equivalent strain are work-conjugate to $$\partial W/\partial\varepsilon_v$$ and $$\partial W/\partial\varepsilon_s$$, respectively.
+Writing $$\varepsilon_s=\varepsilon_p^2$$ removes the square root from the derivatives and keeps the tangent defined at $$\varepsilon_p=0$$, at the cost of an energy that is even in the deviatoric strain.
 
 !!! info "deviation from theory"
-    Because the potential depends only on $\varepsilon_s=\varepsilon_p^2$, the deviatoric response is even in $\varepsilon_p$.
+    Because the potential depends only on $$\varepsilon_s=\varepsilon_p^2$$, the deviatoric response is even in $$\varepsilon_p$$.
     Tension-compression asymmetry in the deviatoric response cannot be represented by this framework.
 
-With $\mathbf I$ the identity and $\mathbf P_\mathrm{dev}$ the fourth-order deviatoric projector, the chain rule gives
+With $$\mathbf I$$ the identity and $$\mathbf P_\mathrm{dev}$$ the fourth-order deviatoric projector, the chain rule gives
 
 $$
 \mathbf\sigma=\dfrac{\partial W}{\partial\varepsilon_v}\mathbf I+\dfrac{\partial W}{\partial\varepsilon_s}\dfrac{\partial\varepsilon_s}{\partial\mathbf\varepsilon},
@@ -68,7 +68,7 @@ $$
 +\dfrac{\partial^2W}{\partial\varepsilon_s}\dfrac43\mathbf P_\mathrm{dev}.
 $$
 
-The two mixed derivatives at indices 4 and 5 occupy the two off-diagonal blocks of $\mathbb D$ and coincide for a smooth potential.
+The two mixed derivatives at indices 4 and 5 occupy the two off-diagonal blocks of $$\mathbb D$$ and coincide for a smooth potential.
 
 ## Remarks
 
@@ -84,7 +84,7 @@ The method `compute_derivative` is called at zero strain during initialisation t
 The squared equivalent strain is floored at machine epsilon in derived implementations, which keeps the derivative finite when the power-law exponent is negative.
 
 !!! warning "implementation limitation"
-    Flooring $\varepsilon_s$ at machine epsilon replaces the exact power-law derivative by a regularised value near zero strain.
+    Flooring $$\varepsilon_s$$ at machine epsilon replaces the exact power-law derivative by a regularised value near zero strain.
     The tangent at the origin is therefore finite but depends on the floor value.
 
 The response is isotropic by construction, so the [`Rotation3D`](../../Wrapper/Rotation3D.md) wrapper has no effect on the elastic response.

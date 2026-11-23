@@ -28,7 +28,7 @@ In that case this model is identical to the [`ArmstrongFrederick1D`](ArmstrongFr
 
 !!! info "deviation from theory"
     The equation above is a rate law, while the code solves a single implicit algebraic equation per increment.
-    The time increment enters only through the factor $\mu/\Delta t$, and a unit increment is substituted when no positive increment is available.
+    The time increment enters only through the factor $$\mu/\Delta t$$, and a unit increment is substituted when no positive increment is available.
     The overstress is therefore tied to the analysis step size rather than being integrated as an independent evolution equation.
 
 Using the backward-Euler approximation $$\dot\gamma\approx\gamma/\Delta t$$, the implementation solves the discrete overstress equation
@@ -51,7 +51,7 @@ The consistent tangent has the same form as in [`ArmstrongFrederick1D`](Armstron
     Stress relaxation at fixed strain is possible when viscosity is active, but it is completely absent when either viscosity parameter is zero.
 
 !!! note "developer note"
-    The constructor tightens the local Newton tolerance to $10^{-15}$, which is much stricter than the global convergence tolerance.
+    The constructor tightens the local Newton tolerance to $$10^{-15}$$, which is much stricter than the global convergence tolerance.
     Unlike [`ArmstrongFrederick1D`](ArmstrongFrederick1D.md), this model does not return early for a zero strain increment.
 
 ## Syntax

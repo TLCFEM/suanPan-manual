@@ -14,9 +14,9 @@ Seven-Point Quadrilateral
 ## Background
 
 [`CP7`](CP7.md) is a seven-node quadrilateral obtained from [`CP5`](CP5.md) by adding midside nodes on the right and top edges.
-The three bubble functions are $N_5=\tfrac14(1-\xi^2)(1-\eta)$, $N_6=\tfrac14(1+\xi)(1-\eta^2)$ and $N_7=\tfrac14(1-\xi^2)(1+\eta)$, with the corner-node functions reduced by one half of the bubble function on the corresponding edge.
+The three bubble functions are $$N_5=\tfrac14(1-\xi^2)(1-\eta)$$, $$N_6=\tfrac14(1+\xi)(1-\eta^2)$$ and $$N_7=\tfrac14(1-\xi^2)(1+\eta)$$, with the corner-node functions reduced by one half of the bubble function on the corresponding edge.
 The left edge remains linear, so the element is a transition between the quadratic [`CP8`](CP8.md) and the bilinear [`CP4`](CP4.md).
-The nodes are ordered counter-clockwise from $(\xi,\eta)=(-1,-1)$, followed by the bottom, right and top midside nodes.
+The nodes are ordered counter-clockwise from $$(\xi,\eta)=(-1,-1)$$, followed by the bottom, right and top midside nodes.
 A five-point Irons rule is used, giving polynomial degree five accuracy for the stiffness integral.
 The interpolation and quadrature are the same as in [`CP5`](CP5.md), with one additional midside mode.
 

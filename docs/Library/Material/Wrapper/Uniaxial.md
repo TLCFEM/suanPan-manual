@@ -9,9 +9,9 @@ It is assumed that $$\sigma_{22}=\sigma_{33}=\tau_{12}=\tau_{23}=\tau_{31}=0$$.
 ## Theory
 
 A uniaxial stress state is the one-dimensional limit of the plane stress condensation implemented by [PlaneStress](PlaneStress.md).
-Only the axial component $\sigma_{11}$ is active, so the five remaining stress components are prescribed to vanish.
-Writing the host stress and tangent in the Voigt ordering $(\sigma_{11},\sigma_{22},\sigma_{33},\tau_{12},\tau_{23},\tau_{13})$, the wrapper partitions the strain vector into the axial entry and the five constrained entries.
-Given the axial strain $\varepsilon_{11}$ from a truss or beam fibre, it solves
+Only the axial component $$\sigma_{11}$$ is active, so the five remaining stress components are prescribed to vanish.
+Writing the host stress and tangent in the Voigt ordering $$(\sigma_{11},\sigma_{22},\sigma_{33},\tau_{12},\tau_{23},\tau_{13})$$, the wrapper partitions the strain vector into the axial entry and the five constrained entries.
+Given the axial strain $$\varepsilon_{11}$$ from a truss or beam fibre, it solves
 
 $$
 \mathbf s_O(\varepsilon_{11},\mathbf e_O)=\mathbf 0,
@@ -19,9 +19,9 @@ $$
 \mathbf e_O=(\varepsilon_{22},\varepsilon_{33},\gamma_{12},\gamma_{23},\gamma_{13}),
 $$
 
-using the host tangent block $\mathbf D_{OO}$ and the same Newton correction as in plane stress.
-The reduced stress and tangent are $\sigma^{\mathrm{1D}}=\sigma_{11}-\mathbf D_{1O}\mathbf D_{OO}^{-1}\mathbf s_O$ and $D^{\mathrm{1D}}=D_{11}-\mathbf D_{1O}\mathbf D_{OO}^{-1}\mathbf D_{O1}$.
-For a linear isotropic host this recovers $\sigma_{11}=E\varepsilon_{11}$ with lateral strains $\varepsilon_{22}=\varepsilon_{33}=-\nu\varepsilon_{11}$.
+using the host tangent block $$\mathbf D_{OO}$$ and the same Newton correction as in plane stress.
+The reduced stress and tangent are $$\sigma^{\mathrm{1D}}=\sigma_{11}-\mathbf D_{1O}\mathbf D_{OO}^{-1}\mathbf s_O$$ and $$D^{\mathrm{1D}}=D_{11}-\mathbf D_{1O}\mathbf D_{OO}^{-1}\mathbf D_{O1}$$.
+For a linear isotropic host this recovers $$\sigma_{11}=E\varepsilon_{11}$$ with lateral strains $$\varepsilon_{22}=\varepsilon_{33}=-\nu\varepsilon_{11}$$.
 
 The implementation is the `StressWrapper` base class with `F1={0}`, so it shares its condensation, local iteration and nonlocal-history handling with [PlaneStress](PlaneStress.md) and [OS146](OS146.md).
 With the default `[3]=1` only one Newton update is made, while larger values trigger local iterations until the constrained stress residual is small.

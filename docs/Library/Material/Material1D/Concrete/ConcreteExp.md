@@ -61,16 +61,16 @@ $$
 \dfrac{f_c}{f_{c,m}}=\dfrac{4a_c}{\left(1+a_c\right)^2}.
 $$
 
-The coefficients $b_t$ and $b_c$ are not entered directly.
-The implementation derives them from the supplied energies as $b=(1+a/2)f/g$, where $f$ is the corresponding elastic limit.
-Because strain appears inside the exponential through the elastic offset $\sigma/E$, the backbone is evaluated by a local Newton iteration at each trial strain.
-The area $g$ has units of energy per unit area, so it must be associated with a length measure when a mesh-objective softening response is required.
+The coefficients $$b_t$$ and $$b_c$$ are not entered directly.
+The implementation derives them from the supplied energies as $$b=(1+a/2)f/g$$, where $$f$$ is the corresponding elastic limit.
+Because strain appears inside the exponential through the elastic offset $$\sigma/E$$, the backbone is evaluated by a local Newton iteration at each trial strain.
+The area $$g$$ has units of energy per unit area, so it must be associated with a length measure when a mesh-objective softening response is required.
 
 !!! info "deviation from theory"
     The model does not read the element characteristic length, so the energy parameters must be scaled by the analyst to obtain mesh objectivity.
 
 !!! note "developer note"
-    The backbone is evaluated by a local Newton iteration because the strain appears through the elastic offset $\sigma/E$, rather than by direct evaluation of an explicit stress--strain formula.
+    The backbone is evaluated by a local Newton iteration because the strain appears through the elastic offset $$\sigma/E$$, rather than by direct evaluation of an explicit stress--strain formula.
 
 If, as normally assumed, the elastic limit is $$80~\%$$ of the maximum strength, then
 
@@ -109,11 +109,11 @@ And the following compression response.
 ## Remarks
 
 All strength, energy and shape inputs are converted to positive magnitudes in the constructor, so their signs do not matter.
-The parameter `(6)` is the peak compressive strength $f_{c,m}$, while the elastic limit is derived internally as $f_c=4a_c f_{c,m}/(1+a_c)^2$.
-The ratio $f_c/f_{c,m}=0.8$ gives $a_c\approx3.73$, and $a_c$ must exceed one to produce a compression branch that hardens before softening.
-The tensile shape parameter $a_t$ should lie in $(0,1)$, with a value near 0.7 being a practical starting point.
-The energies $g_t$ and $g_c$ have units of force per length, and this class does not read the element characteristic length, so the analyst must scale them with the element size when a mesh-objective response is required.
-The middle point parameter `[9]` controls the size of the hysteresis loop in the inherited [`SimpleHysteresis`](../Hysteresis/SimpleHysteresis.md) rules and is clamped to $[0,1]$.
+The parameter `(6)` is the peak compressive strength $$f_{c,m}$$, while the elastic limit is derived internally as $$f_c=4a_c f_{c,m}/(1+a_c)^2$$.
+The ratio $$f_c/f_{c,m}=0.8$$ gives $$a_c\approx3.73$$, and $$a_c$$ must exceed one to produce a compression branch that hardens before softening.
+The tensile shape parameter $$a_t$$ should lie in $$(0,1)$$, with a value near 0.7 being a practical starting point.
+The energies $$g_t$$ and $$g_c$$ have units of force per length, and this class does not read the element characteristic length, so the analyst must scale them with the element size when a mesh-objective response is required.
+The middle point parameter `[9]` controls the size of the hysteresis loop in the inherited [`SimpleHysteresis`](../Hysteresis/SimpleHysteresis.md) rules and is clamped to $$[0,1]$$.
 The density `[10]` defaults to zero.
 The objective energy formulation follows the Barcelona damage model of Lubliner et al. (1989).
 

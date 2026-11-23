@@ -11,16 +11,16 @@
 It enforces frictionless node-to-facet contact between slave nodes and the triangular facets formed from the master node group using the same penalty idea.
 The full derivation of the penalty method, the gap definition and the consistent tangent is given on the [`Contact2D`](Contact2D.md) page, so only the 3D-specific geometry is summarised here.
 
-Three consecutive master nodes $(\mathbf r_i,\mathbf r_j,\mathbf r_k)$ define one planar facet with outward unit normal $\mathbf n_f$ and area $A_f$.
-For a slave node at $\mathbf r_s$, the signed normal gap is
+Three consecutive master nodes $$(\mathbf r_i,\mathbf r_j,\mathbf r_k)$$ define one planar facet with outward unit normal $$\mathbf n_f$$ and area $$A_f$$.
+For a slave node at $$\mathbf r_s$$, the signed normal gap is
 
 $$
 g=\mathbf n_f\cdot(\mathbf r_s-\mathbf r_i)\le 0.
 $$
 
-The projection is accepted only when it falls inside the triangle, which the implementation tests with three edge-based quantities $h_i$, $h_j$ and $h_k$ formed from the edge normals.
-If any $h$ is positive, the closest point lies outside the facet and the pair is skipped.
-The nodal weights are the barycentric coordinates $n_i=h_i/A_f$, $n_j=h_j/A_f$ and $n_k=h_k/A_f$.
+The projection is accepted only when it falls inside the triangle, which the implementation tests with three edge-based quantities $$h_i$$, $$h_j$$ and $$h_k$$ formed from the edge normals.
+If any $$h$$ is positive, the closest point lies outside the facet and the pair is skipped.
+The nodal weights are the barycentric coordinates $$n_i=h_i/A_f$$, $$n_j=h_j/A_f$$ and $$n_k=h_k/A_f$$.
 The penalty resistance is assembled as
 
 $$
@@ -30,7 +30,7 @@ $$
 \mathbf F_k=\alpha\,n_k\,g\,\mathbf n_f.
 $$
 
-The consistent tangent contains the derivatives of $\mathbf n_f$ with respect to all three master nodes as well as the derivatives of the barycentric weights.
+The consistent tangent contains the derivatives of $$\mathbf n_f$$ with respect to all three master nodes as well as the derivatives of the barycentric weights.
 All facets and slave positions are updated from the current trial configuration before the contact check.
 
 !!! warning "implementation limitation"

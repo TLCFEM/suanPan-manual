@@ -9,14 +9,14 @@
 ## Background
 
 `NMB31` is the three-dimensional member of the concentrated-plasticity NMB family and is described in full on the [NMB21](NMB21.md) page.
-The attached `NM3D*` [SectionNM](../../Section/SectionNM/SectionNM.md) model works with element-level deformations of both ends and defines an interaction surface in the space of axial force $N$ and bending moments $M_y$, $M_z$.
+The attached `NM3D*` [SectionNM](../../Section/SectionNM/SectionNM.md) model works with element-level deformations of both ends and defines an interaction surface in the space of axial force $$N$$ and bending moments $$M_y$$, $$M_z$$.
 
-The rigid-body-removal transformation produces six local deformation components, which are divided by the element length $L$ before being sent to the section.
-The section tangent $\mathbf k_s$ and resistance $\mathbf r_s$ are converted to the element quantities by $\mathbf k_e=\mathbf k_s/L$ and $\mathbf r_e=\mathbf r_s$ and then transformed to the global system.
+The rigid-body-removal transformation produces six local deformation components, which are divided by the element length $$L$$ before being sent to the section.
+The section tangent $$\mathbf k_s$$ and resistance $$\mathbf r_s$$ are converted to the element quantities by $$\mathbf k_e=\mathbf k_s/L$$ and $$\mathbf r_e=\mathbf r_s$$ and then transformed to the global system.
 Torsion does not participate in the interaction surface and is treated as elastic, so biaxial bending and axial force are coupled while the torsional response is not.
 
 !!! warning "implementation limitation"
-    The `NM3D*` section assigns the torsional stiffness a penalty value of $10^3\max(4EI_S,4EI_W,EA)$ rather than a physical $GJ$, so neither torsional deformation nor torsional yielding is represented.
+    The `NM3D*` section assigns the torsional stiffness a penalty value of $$10^3\max(4EI_S,4EI_W,EA)$$ rather than a physical $$GJ$$, so neither torsional deformation nor torsional yielding is represented.
     Six local deformation components are passed to the section, but only the axial and two bending components enter the interaction surface.
 
 The `B3DL` orientation is used for linear geometry and `B3DC` for the corotational formulation, and the orientation flag must match the element nonlinear geometry switch.

@@ -10,16 +10,16 @@
 The `Contact2D` element enforces frictionless unilateral contact between a slave node and the master line segments formed by consecutive nodes of a master group.
 It is implemented as a finite element so that both the contact force and its consistent tangent are assembled directly into the global residual and stiffness.
 
-Let $\mathbf r_1$ and $\mathbf r_2$ be the current positions of the two master nodes of one segment and $\mathbf r_3$ that of the slave node, each position being the sum of the original coordinate and the trial displacement.
-The segment axis is $\mathbf l=\mathbf r_2-\mathbf r_1$ with length $l=\lVert\mathbf l\rVert$.
-The outward unit normal is obtained by rotating the normalised axis by $\pi/2$,
+Let $$\mathbf r_1$$ and $$\mathbf r_2$$ be the current positions of the two master nodes of one segment and $$\mathbf r_3$$ that of the slave node, each position being the sum of the original coordinate and the trial displacement.
+The segment axis is $$\mathbf l=\mathbf r_2-\mathbf r_1$$ with length $$l=\lVert\mathbf l\rVert$$.
+The outward unit normal is obtained by rotating the normalised axis by $$\pi/2$$,
 
 $$
 \mathbf n=\mathbf T\dfrac{\mathbf l}{l},\qquad
 \mathbf T=\begin{bmatrix}0&-1\\1&0\end{bmatrix}.
 $$
 
-Define $\mathbf s=\mathbf r_3-\mathbf r_1$.
+Define $$\mathbf s=\mathbf r_3-\mathbf r_1$$.
 Contact is active only when the penetration and the parametric coordinate satisfy
 
 $$
@@ -27,13 +27,13 @@ u=\mathbf s\cdot\mathbf n\le 0,\qquad
 t=\dfrac{\mathbf s\cdot\mathbf l}{\mathbf l\cdot\mathbf l}\in[0,1].
 $$
 
-The parameter $t$ is the closest-point projection of the slave node onto the segment, and the condition $0\le t\le 1$ excludes the extensions beyond the two end nodes.
+The parameter $$t$$ is the closest-point projection of the slave node onto the segment, and the condition $$0\le t\le 1$$ excludes the extensions beyond the two end nodes.
 
 !!! warning "implementation limitation"
     A slave node whose closest projection falls outside a segment is ignored even if it penetrates near an end node.
     Corner and edge contact are not treated.
 
-The penalty method replaces the exact impenetrability constraint $u=0$ by a contact spring of stiffness $\alpha$ that resists penetration.
+The penalty method replaces the exact impenetrability constraint $$u=0$$ by a contact spring of stiffness $$\alpha$$ that resists penetration.
 The resistance on the slave node is
 
 $$
@@ -47,17 +47,17 @@ $$
 \mathbf F_1=\alpha\,(t-1)\,u\,\mathbf n.
 $$
 
-The distribution $(1-t):t$ is the linear interpolation of the contact force to the segment end nodes, which is the classical 2D node-to-segment weighting.
-The tangent stiffness is the consistent linearisation $\mathbf K_e=-\partial\mathbf F/\partial\mathbf r$ of the three nodal resistance vectors.
-Because $\mathbf n$ depends on the orientation of the segment, its derivative
+The distribution $$(1-t):t$$ is the linear interpolation of the contact force to the segment end nodes, which is the classical 2D node-to-segment weighting.
+The tangent stiffness is the consistent linearisation $$\mathbf K_e=-\partial\mathbf F/\partial\mathbf r$$ of the three nodal resistance vectors.
+Because $$\mathbf n$$ depends on the orientation of the segment, its derivative
 
 $$
 \dfrac{\partial\mathbf n}{\partial\mathbf l}=\dfrac{1}{l}\left(\mathbf T-\mathbf n\otimes\dfrac{\mathbf l}{l}\right)
 $$
 
 is retained, so the tangent remains symmetric and quadratic convergence of the Newton iteration is preserved.
-A positive $\alpha$ gives a repulsive force opposite to $\mathbf n$ for $u<0$.
-The gap is not enforced exactly: the residual penetration is of order $1/\alpha$, so increasing $\alpha$ reduces penetration at the cost of conditioning.
+A positive $$\alpha$$ gives a repulsive force opposite to $$\mathbf n$$ for $$u<0$$.
+The gap is not enforced exactly: the residual penetration is of order $$1/\alpha$$, so increasing $$\alpha$$ reduces penetration at the cost of conditioning.
 No tangential traction is included, so the contact is frictionless.
 
 !!! warning "implementation limitation"
@@ -80,7 +80,7 @@ element Contact2D (1) (2) (3) [4]
    The parameter `[4]` controls the magnitude of penalty.
 2. No matter whether the `nlgeom` switch is on or off for connected elements, the contact detection itself is always conducted in a nonlinear manner, similar to the total Lagrangian formulation.
 3. The node-line contact detection is performed for all nodes defined in slave group and lines defined by nodes in master group.
-   There are $n-1$ line segments for $n$ nodes in master group.
+   There are $$n-1$$ line segments for $$n$$ nodes in master group.
 4. Master nodes can penetrate lines formed in slave group.
    To prevent this, define a new `Contact2D` element by swapping the order of slave and master groups.
 5. Example usage can be seen in the [example](../../../Example/Structural/Contact/contact-between-beam-and-block.md).

@@ -8,17 +8,17 @@ Theories can be seen in Chapter 10 in [Computational Methods for Plasticity: The
 ## Background
 
 Modified Cam-Clay is an elastoplastic critical-state model for saturated clays formulated in effective stresses.
-The critical state is the asymptotic state reached under continued shear, where the soil deforms at constant effective mean stress $p'$, constant deviatoric stress $q$ and constant specific volume $v$.
-The locus of such states is the critical state line, given by $q=M p'$ and $v=\Gamma-\lambda\ln p'$, and its slope $M$ is related to the triaxial compression friction angle by $M=6\sin\phi'/(3-\sin\phi')$.
-The virgin consolidation line and the unloading-reloading line in the $v$--$\ln p'$ plane have slopes $-\lambda$ and $-\kappa$, respectively, with $\lambda>\kappa>0$.
-The overconsolidation ratio $OCR=p'_c/p'$ measures how far the current mean stress lies from the preconsolidation pressure $p'_c$.
-A normally consolidated soil has $OCR=1$ and starts on the wet side of critical, while an overconsolidated soil starts on the dry side and may soften during shearing.
+The critical state is the asymptotic state reached under continued shear, where the soil deforms at constant effective mean stress $$p'$$, constant deviatoric stress $$q$$ and constant specific volume $$v$$.
+The locus of such states is the critical state line, given by $$q=M p'$$ and $$v=\Gamma-\lambda\ln p'$$, and its slope $$M$$ is related to the triaxial compression friction angle by $$M=6\sin\phi'/(3-\sin\phi')$$.
+The virgin consolidation line and the unloading-reloading line in the $$v$$--$$\ln p'$$ plane have slopes $$-\lambda$$ and $$-\kappa$$, respectively, with $$\lambda>\kappa>0$$.
+The overconsolidation ratio $$OCR=p'_c/p'$$ measures how far the current mean stress lies from the preconsolidation pressure $$p'_c$$.
+A normally consolidated soil has $$OCR=1$$ and starts on the wet side of critical, while an overconsolidated soil starts on the dry side and may soften during shearing.
 Hardening is driven solely by plastic volumetric strain, so compression grows the yield surface and dilation shrinks it.
 The original Cam-Clay of Schofield and Wroth uses a logarithmic spiral yield locus, whereas the modified Cam-Clay of Roscoe and Burland replaces it by an ellipse that is far more convenient for numerical integration.
 
 !!! warning "implementation limitation"
     Classical Cam-Clay uses stress-dependent porous elasticity with logarithmic volumetric compression, but this class uses constant isotropic elasticity from an elastic modulus and a Poisson's ratio.
-    The swelling and virgin compression lines of the $v$--$\ln p'$ plot are therefore not reproduced by the elastic part of the model.
+    The swelling and virgin compression lines of the $$v$$--$$\ln p'$$ plot are therefore not reproduced by the elastic part of the model.
     No pore pressure or effective-stress calculation is performed, so the stresses must already be interpreted as effective stresses.
 
 This model resembles the one in ABAQUS but the third stress invariant does not enter yield surface.
@@ -58,31 +58,31 @@ Please note in practical applications, this value is negative as soil is often i
 
 ### Return mapping and consistent tangent
 
-The elastic predictor is $\mathbf\sigma^{\mathrm{tr}}=\mathbf\sigma_n+\mathbf D^e\Delta\mathbf\varepsilon$, where $\mathbf D^e$ is the constant isotropic stiffness built from the elastic modulus and Poisson's ratio.
-The two local unknowns of the backward-Euler update are the plastic multiplier $\gamma$ and the change of the volumetric plastic strain, $\alpha-\alpha_n$.
-The first residual enforces the yield condition at the end of the step and the second one enforces the flow rule for the volumetric component, $\alpha-\alpha_n=2\gamma(p-p_t+a)/b^2$.
-Since suanPan uses tension-positive stresses, a compressive mean stress is negative and the resulting increment of $\alpha$ is negative, consistent with soil compaction.
+The elastic predictor is $$\mathbf\sigma^{\mathrm{tr}}=\mathbf\sigma_n+\mathbf D^e\Delta\mathbf\varepsilon$$, where $$\mathbf D^e$$ is the constant isotropic stiffness built from the elastic modulus and Poisson's ratio.
+The two local unknowns of the backward-Euler update are the plastic multiplier $$\gamma$$ and the change of the volumetric plastic strain, $$\alpha-\alpha_n$$.
+The first residual enforces the yield condition at the end of the step and the second one enforces the flow rule for the volumetric component, $$\alpha-\alpha_n=2\gamma(p-p_t+a)/b^2$$.
+Since suanPan uses tension-positive stresses, a compressive mean stress is negative and the resulting increment of $$\alpha$$ is negative, consistent with soil compaction.
 
 !!! info "deviation from theory"
     Soil mechanics normally takes compression as positive and defines the hardening variable from the compressive volumetric plastic strain.
-    This implementation records the tension-positive logarithmic volumetric plastic strain, so $\alpha$ is negative for the compaction that grows the yield surface.
-The two residual equations are solved by Newton iteration with equilibration, and the stress is pulled back by $\mathbf\sigma=\mathbf\sigma^{\mathrm{tr}}-\gamma\,\partial G/\partial\mathbf\sigma$ at convergence.
+    This implementation records the tension-positive logarithmic volumetric plastic strain, so $$\alpha$$ is negative for the compaction that grows the yield surface.
+The two residual equations are solved by Newton iteration with equilibration, and the stress is pulled back by $$\mathbf\sigma=\mathbf\sigma^{\mathrm{tr}}-\gamma\,\partial G/\partial\mathbf\sigma$$ at convergence.
 The returned `trial_stiffness` is the consistent tangent obtained by linearising the converged local equations, not the elastic or the continuum elastoplastic stiffness.
-The state at critical has $p-p_t+a=0$ and $q=Ma$, where the associative flow rule gives zero plastic volumetric strain.
-The parameter $\beta$ gives a different ellipse radius on the compressive side of the critical state line, with $b=1$ when $p-p_t+a\geq0$ and $b=\beta$ otherwise, producing the two-arc surface used in the Abaqus critical-state model.
-The third stress invariant does not enter the yield function, so the yield surface is a surface of revolution about the hydrostatic axis and its $\pi$-plane section is a circle.
+The state at critical has $$p-p_t+a=0$$ and $$q=Ma$$, where the associative flow rule gives zero plastic volumetric strain.
+The parameter $$\beta$$ gives a different ellipse radius on the compressive side of the critical state line, with $$b=1$$ when $$p-p_t+a\geq0$$ and $$b=\beta$$ otherwise, producing the two-arc surface used in the Abaqus critical-state model.
+The third stress invariant does not enter the yield function, so the yield surface is a surface of revolution about the hydrostatic axis and its $$\pi$$-plane section is a circle.
 
 !!! info "deviation from theory"
     The third stress invariant is absent, so the model has no Lode-angle dependence and predicts the same critical stress ratio in triaxial compression and extension.
-    The Abaqus critical-state model instead includes a shape parameter that can make the $\pi$-plane section non-circular.
+    The Abaqus critical-state model instead includes a shape parameter that can make the $$\pi$$-plane section non-circular.
 
 ## Remarks
 
 * The input elastic modulus and Poisson's ratio define constant isotropic elasticity, not the logarithmic porous elasticity of classical Cam-Clay, so the bulk modulus does not increase with compression.
-* suanPan reports $p$ as tension-positive, so the soil-mechanics effective mean stress is $p'=-p$ and the compressive preconsolidation pressure magnitude is $p_c=a(1+b)-p_t$, which reduces to $2a-p_t$ when $b=1$.
-* A tensile intercept $p_t>0$ gives the ellipse a finite extent in hydrostatic tension, but soils cannot sustain such tension, so $p_t=0$ is the usual choice.
-* The slope $M$ of the critical state line sets the ultimate stress ratio, and $M=1$ corresponds to a friction angle of about $25^\circ$ in triaxial compression.
-* The hardening variable is the volumetric plastic strain $\alpha$, stored in `initial_history(0)`, and it is negative for the compression that dominates soil response.
+* suanPan reports $$p$$ as tension-positive, so the soil-mechanics effective mean stress is $$p'=-p$$ and the compressive preconsolidation pressure magnitude is $$p_c=a(1+b)-p_t$$, which reduces to $$2a-p_t$$ when $$b=1$$.
+* A tensile intercept $$p_t>0$$ gives the ellipse a finite extent in hydrostatic tension, but soils cannot sustain such tension, so $$p_t=0$$ is the usual choice.
+* The slope $$M$$ of the critical state line sets the ultimate stress ratio, and $$M=1$$ corresponds to a friction angle of about $$25^\circ$$ in triaxial compression.
+* The hardening variable is the volumetric plastic strain $$\alpha$$, stored in `initial_history(0)`, and it is negative for the compression that dominates soil response.
 * The source derives `compute_a` and `compute_da` from each subclass, so the hardening curve must be smooth enough for the local Newton iteration and must remain non-negative.
 * Because the consistent tangent is generally non-symmetric for this formulation, the shipped examples use `set symm_mat 0` to avoid enforcing symmetry in the global solver.
 * Use three-dimensional solid elements such as [C3D8](../../../../Element/Cube/C3D8.md), or embed the model in a plane analysis with the [`PlaneStrain`](../../../Wrapper/PlaneStrain.md) wrapper.
@@ -91,7 +91,7 @@ The third stress invariant does not enter the yield function, so the yield surfa
 
 !!! warning "implementation limitation"
     Abaqus repositions the initial yield surface so that a prescribed initial stress lies on it, but this class performs no such adjustment.
-    The initial stress and the initial value of $a$ must be chosen consistently by the user before the first load step.
+    The initial stress and the initial value of $$a$$ must be chosen consistently by the user before the first load step.
 
 ## References
 

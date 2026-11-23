@@ -25,9 +25,9 @@ H_\text{iso}=\beta\,E\,\dfrac{H}{1-H},\qquad H_\text{kin}=(1-\beta)\,E\,\dfrac{H
 $$
 
 !!! warning "implementation limitation"
-    The parser clamps the mixing factor `beta` to the interval $[0,1]$ before the moduli are computed.
-    The conversion is singular at $H=1$, and the code does not guard against that value.
-    Both $E$ and the yield stress are replaced by their absolute values, so a negative input cannot encode a sign convention.
+    The parser clamps the mixing factor `beta` to the interval $$[0,1]$$ before the moduli are computed.
+    The conversion is singular at $$H=1$$, and the code does not guard against that value.
+    Both $$E$$ and the yield stress are replaced by their absolute values, so a negative input cannot encode a sign convention.
 
 Thus the sum $$H_\text{iso}+H_\text{kin}=EH/(1-H)$$ gives a total post-yield stiffness of exactly $$EH$$.
 For a purely isotropic case ($$\beta=1$$) the back stress stays zero and the yield surface expands.

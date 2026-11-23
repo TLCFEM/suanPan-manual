@@ -27,7 +27,7 @@ $$
 This is the simplest member of the element-level damping framework described on the [`Modifier`](Modifier.md) page, where more general damping matrices are discussed.
 
 !!! warning "implementation limitation"
-    The damping matrix is diagonal with the same $\mu$ on every DoF.
+    The damping matrix is diagonal with the same $$\mu$$ on every DoF.
     A full viscous tensor with cross-coupling between directions is not supported.
 
 ## Remarks

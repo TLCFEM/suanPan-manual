@@ -11,8 +11,8 @@
 `NMB21E` extends the concentrated-plasticity model [NMB21](NMB21.md) by releasing the bending moment at one end of the member.
 The general formulation of the element and its `SectionNM` interaction law are described on the [NMB21](NMB21.md) page.
 
-Let $a$ denote the released deformation component, which is the rotation at node $i$ for `NMB21EL` and the rotation at node $j$ for `NMB21EH`, and let $b$ collect the remaining components.
-After the section returns its trial tangent $\mathbf k_s$ and resistance $\mathbf r_s$, the released deformation is adjusted so that the released moment vanishes,
+Let $$a$$ denote the released deformation component, which is the rotation at node $$i$$ for `NMB21EL` and the rotation at node $$j$$ for `NMB21EH`, and let $$b$$ collect the remaining components.
+After the section returns its trial tangent $$\mathbf k_s$$ and resistance $$\mathbf r_s$$, the released deformation is adjusted so that the released moment vanishes,
 $$
 d_a\leftarrow d_a-\dfrac{r_{s,a}L+\mathbf k_{s,ab}\Delta\mathbf d_b}{k_{s,aa}}.
 $$

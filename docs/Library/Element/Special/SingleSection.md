@@ -17,7 +17,7 @@ To use the element, a proper section shall be defined.
 ## Background
 
 A fibre section represents a cross-section by a set of integration points, each carrying a uniaxial material law.
-For an axial strain $\epsilon$ and a curvature $\kappa$ about the bending axis, the strain at a fibre with lever arm $y$ from the reference axis is
+For an axial strain $$\epsilon$$ and a curvature $$\kappa$$ about the bending axis, the strain at a fibre with lever arm $$y$$ from the reference axis is
 
 $$
 \epsilon_f=\epsilon+y\,\kappa .
@@ -30,7 +30,7 @@ N=\int_A\sigma(\epsilon_f)\,\mathrm dA,\qquad
 M=\int_A y\,\sigma(\epsilon_f)\,\mathrm dA,
 $$
 
-and the section tangent is the corresponding integral of the fibre tangents weighted by $1$ and $y$.
+and the section tangent is the corresponding integral of the fibre tangents weighted by $$1$$ and $$y$$.
 The sign of the lever arm follows the convention of the chosen section model.
 
 The `SingleSection` element exposes one such section directly at a single node.

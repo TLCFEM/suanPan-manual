@@ -18,7 +18,7 @@ Two independent factors are kept for tension and compression and are reported as
 The secant stiffness of the damaged response is $$D\bar K$$, whereas the tangent stiffness contains an additional term whenever the damage is evolving.
 This distinction matters in a Newton--Raphson solution because only the tangent provides quadratic convergence.
 The wrapper evaluates the host model independently and does not modify the host history, so the intact and degraded states are advanced in parallel.
-The effective stress concept originates in the creep damage theory of Kachanov, in which the stress acting on the intact area is $\bar\sigma=\sigma/D$.
+The effective stress concept originates in the creep damage theory of Kachanov, in which the stress acting on the intact area is $$\bar\sigma=\sigma/D$$.
 A scalar factor implies isotropic damage, so directional effects such as crack closure must be handled by using separate tension and compression envelopes.
 
 ## Stress

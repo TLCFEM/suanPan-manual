@@ -15,10 +15,10 @@ Quadratic Triangle
 
 [`CP6`](CP6.md) is the six-node quadratic triangle.
 Nodes 1 to 3 are the vertices and nodes 4 to 6 are the midpoints of edges 1-2, 2-3 and 3-1.
-The interpolation uses the complete quadratic monomial vector $[1,x,y,xy,x^2,y^2]$, so the displacement is quadratic and the strain varies linearly over the triangle.
-The implementation inverts the $6\times6$ matrix built from the six nodal coordinate vectors to obtain the shape functions and their derivatives directly in the global frame.
-Three integration points are placed at the three midside nodes with weights $A\,t/3$ each, which integrates the quadratic strain energy exactly.
-The stiffness is $\mathbf K^e=\sum_{q=1}^{3}\tfrac{1}{3}A\,t\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$.
+The interpolation uses the complete quadratic monomial vector $$[1,x,y,xy,x^2,y^2]$$, so the displacement is quadratic and the strain varies linearly over the triangle.
+The implementation inverts the $$6\times6$$ matrix built from the six nodal coordinate vectors to obtain the shape functions and their derivatives directly in the global frame.
+Three integration points are placed at the three midside nodes with weights $$A\,t/3$$ each, which integrates the quadratic strain energy exactly.
+The stiffness is $$\mathbf K^e=\sum_{q=1}^{3}\tfrac{1}{3}A\,t\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$$.
 
 !!! info "deviation from theory"
     The same three-point rule is reused for the mass matrix.
@@ -40,7 +40,7 @@ element CP6 (1) (2...7) (8) [9] [10]
 ## Remarks
 
 * The first three nodes are the triangle vertices and the last three are the corresponding edge midpoints.
-* The characteristic length used by regularisation models is $\sqrt{A}$, with $A$ the triangle area.
+* The characteristic length used by regularisation models is $$\sqrt{A}$$, with $$A$$ the triangle area.
 * The thickness argument is ignored when the material declares plane strain.
 * The nonlinear geometry switch activates a Total Lagrangian update.
 * Midside nodes must be placed at the actual edge midpoints to keep the quadratic mapping well behaved.

@@ -41,9 +41,9 @@ For $$b_i=0$$ the dynamic recovery vanishes and the $$i$$-th component reduces t
 Each component saturates at $$a_i/b_i$$ under monotonic proportional plastic flow, so the total back stress saturates at $$\sum_i a_i/b_i$$.
 
 !!! info "deviation from theory"
-    The equation above writes the recovery in terms of the total back stress $\beta$.
-    The source instead applies the recovery to each component separately as $b_i\beta_i$, which is the usual Chaboche superposition rule.
-    The accumulated plastic strain is $q=|\varepsilon^p|$ in one dimension.
+    The equation above writes the recovery in terms of the total back stress $$\beta$$.
+    The source instead applies the recovery to each component separately as $$b_i\beta_i$$, which is the usual Chaboche superposition rule.
+    The accumulated plastic strain is $$q=|\varepsilon^p|$$ in one dimension.
 
 !!! note "developer note"
     The signed plastic strain and the accumulated plastic strain are distinct history variables.
@@ -58,9 +58,9 @@ $$
 $$
 
 !!! info "deviation from theory"
-    The exact solution of the Armstrong--Frederick equation over a plastic strain increment $\gamma$ is exponential, namely $\beta_i=a_i/b_i+(\beta_i^n-a_i/b_i)e^{-b_i\gamma}$.
+    The exact solution of the Armstrong--Frederick equation over a plastic strain increment $$\gamma$$ is exponential, namely $$\beta_i=a_i/b_i+(\beta_i^n-a_i/b_i)e^{-b_i\gamma}$$.
     The implementation uses the backward-Euler rational approximation instead.
-    For large increments with large $b_i\gamma$ the two differ, so step-size refinement is needed when $b_i$ is large.
+    For large increments with large $$b_i\gamma$$ the two differ, so step-size refinement is needed when $$b_i$$ is large.
 
 The residual solved at each iteration is
 

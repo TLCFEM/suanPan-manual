@@ -14,7 +14,7 @@ Quadratic Quadrilateral With Pore Pressure (Undrained)
 
 This is the eight-node quadratic companion of [PCPE4UC](PCPE4UC.md) in the undrained porous family.
 
-It imposes the same undrained constraint $\mathbf u_f=\mathbf u_s$, giving the added stiffness $\mathbf K_u=\int q\alpha^2\mathbf B^{\mathsf T}\mathbf m\mathbf m^{\mathsf T}\mathbf B\,dV$ with $q=K_sK_f/[nK_s+(\alpha-n)K_f]$ and $\mathbf m=(1,1,0)^{\mathsf T}$, and it records $p=-\alpha q\,\nabla\cdot\mathbf u_s$.
+It imposes the same undrained constraint $$\mathbf u_f=\mathbf u_s$$, giving the added stiffness $$\mathbf K_u=\int q\alpha^2\mathbf B^{\mathsf T}\mathbf m\mathbf m^{\mathsf T}\mathbf B\,dV$$ with $$q=K_sK_f/[nK_s+(\alpha-n)K_f]$$ and $$\mathbf m=(1,1,0)^{\mathsf T}$$, and it records $$p=-\alpha q\,\nabla\cdot\mathbf u_s$$.
 
 !!! info "deviation from theory"
     The undrained response is obtained by tying the fluid displacement to the solid one, so pore pressure is recovered from volumetric strain rather than solved as a nodal field.
@@ -66,7 +66,7 @@ Interactions with other elements (with different arrangements of DoFs) can only 
 
 * The eight nodes are ordered with four corners first and four midside nodes afterwards, as indicated by the element encoding figure.
 * No permeability argument is taken, and no Darcy damping matrix is assembled, because relative fluid motion is suppressed.
-* The mixture density $(1-n)\rho_s+n\rho_f$ is used for the consistent mass matrix.
+* The mixture density $$(1-n)\rho_s+n\rho_f$$ is used for the consistent mass matrix.
 * Use [PCPE8DC](PCPE8DC.md) if drainage and consolidation over time are required.
 
 ## Recording

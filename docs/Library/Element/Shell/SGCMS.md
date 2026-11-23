@@ -16,11 +16,11 @@ A planar shell element uses SGCMQ for membrane action and the DKT4 element for p
 
 SGCMS is a four-node flat shell assembled by [ShellBase](ShellBase.md) from the simplified generalized conforming membrane [SGCMQ](../Membrane/Drilling/GCMQ.md) and the discrete Kirchhoff plate [DKT4](../Plate/DKT4.md).
 
-The membrane part uses a twelve-parameter local stress expansion and a five-point Irons rule, as described on the [GCMQ](../Membrane/Drilling/GCMQ.md) page, and supplies the drilling rotation $UR_3$.
+The membrane part uses a twelve-parameter local stress expansion and a five-point Irons rule, as described on the [GCMQ](../Membrane/Drilling/GCMQ.md) page, and supplies the drilling rotation $$UR_3$$.
 
 The plate part imposes the Kirchhoff condition at the four edge midpoints and uses 2-by-2 Gauss points in the plane with three Gauss layers through the thickness.
 
-At a fibre of coordinate $z$ the strain is $\mathbf\varepsilon=\mathbf B_m\mathbf d_m+z\,\mathbf B_p\mathbf d_p$, which produces the coupled membrane--bending stiffness blocks described on [ShellBase](ShellBase.md).
+At a fibre of coordinate $$z$$ the strain is $$\mathbf\varepsilon=\mathbf B_m\mathbf d_m+z\,\mathbf B_p\mathbf d_p$$, which produces the coupled membrane--bending stiffness blocks described on [ShellBase](ShellBase.md).
 
 Unlike [S4](S4.md), no transverse shear strain is retained, so the plate is a thin-plate model that is free of shear locking.
 

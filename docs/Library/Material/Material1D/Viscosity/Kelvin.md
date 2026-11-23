@@ -16,7 +16,7 @@ material Kelvin (1) (2) (3)
 
 ## Theory
 
-The Kelvin or Kelvin--Voigt element places a spring of stiffness $E$ and a dashpot of viscosity $\eta$ in parallel, so that both components share the same strain $\varepsilon$ and strain rate $\dot\varepsilon$.
+The Kelvin or Kelvin--Voigt element places a spring of stiffness $$E$$ and a dashpot of viscosity $$\eta$$ in parallel, so that both components share the same strain $$\varepsilon$$ and strain rate $$\dot\varepsilon$$.
 
 $$
 \sigma=\sigma_s+\sigma_d=E\varepsilon+\eta\dot\varepsilon.
@@ -29,7 +29,7 @@ $$
 $$
 
 sets the time scale over which creep strain accumulates.
-Under a suddenly applied constant stress $\sigma_0$ the strain approaches $\sigma_0/E$ according to
+Under a suddenly applied constant stress $$\sigma_0$$ the strain approaches $$\sigma_0/E$$ according to
 
 $$
 \varepsilon(t)=\dfrac{\sigma_0}{E}\left[1-\exp\left(-\dfrac{t}{\tau_r}\right)\right].
@@ -41,7 +41,7 @@ A nonlinear spring or a nonlinear dashpot can be supplied through the correspond
 The model captures creep but not stress relaxation under fixed strain, so use [`Maxwell`](Maxwell.md) when relaxation is important.
 
 !!! info "deviation from theory"
-    The stress is the sum of whatever the two tagged constituents return, so the closed form $E\varepsilon+\eta\dot\varepsilon$ holds only when both tags are linear.
+    The stress is the sum of whatever the two tagged constituents return, so the closed form $$E\varepsilon+\eta\dot\varepsilon$$ holds only when both tags are linear.
     The assembled tangent stiffness adds any strain stiffness reported by the damper to the spring stiffness, whereas the textbook Kelvin--Voigt tangent with respect to strain is the spring stiffness alone.
 
 ## Remarks

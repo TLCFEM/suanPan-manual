@@ -12,15 +12,15 @@ The `Joint` is a joint element that uses **displacement** as inputs.
 A joint connects two nodes that may occupy the same coordinates with a set of independent nonlinear springs, one per connected degree of freedom.
 Because the nodes can coincide, the element is effectively zero length: no axis or element length is used and the relative displacement is passed directly to each material as a scalar deformation.
 
-For the $k$-th connected DoF, let $u_i^{(k)}$ and $u_j^{(k)}$ be the displacement components of the two nodes.
+For the $$k$$-th connected DoF, let $$u_i^{(k)}$$ and $$u_j^{(k)}$$ be the displacement components of the two nodes.
 The material receives
 
 $$
 \Delta^{(k)}=u_i^{(k)}-u_j^{(k)},
 $$
 
-and returns a force $N^{(k)}$ with tangent stiffness $k^{(k)}=\mathrm dN^{(k)}/\mathrm d\Delta^{(k)}$.
-The element assembles $R_i^{(k)}=N^{(k)}$, $R_j^{(k)}=-N^{(k)}$ and the two-by-two block
+and returns a force $$N^{(k)}$$ with tangent stiffness $$k^{(k)}=\mathrm dN^{(k)}/\mathrm d\Delta^{(k)}$$.
+The element assembles $$R_i^{(k)}=N^{(k)}$$, $$R_j^{(k)}=-N^{(k)}$$ and the two-by-two block
 
 $$
 \begin{bmatrix}1&-1\\-1&1\end{bmatrix}k^{(k)}
@@ -28,7 +28,7 @@ $$
 
 for each connected DoF.
 
-The number of material tags equals the number of connected DoFs per node, so $m$ material tags create $2m$ element DoFs and the materials act in the order in which the tags are given.
+The number of material tags equals the number of connected DoFs per node, so $$m$$ material tags create $$2m$$ element DoFs and the materials act in the order in which the tags are given.
 No geometric transformation is applied, so the connected DoFs are the global directions encoded on the nodes.
 This is the multi-DoF generalisation of the single-direction [`Spring01`](Spring01.md) element.
 

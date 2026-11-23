@@ -43,7 +43,7 @@ This model differs from [`ExpGurson1D`](ExpGurson1D.md) only in the way the pair
 !!! warning "implementation limitation"
     The assigned expression must return exactly two values, the yield stress and its derivative with respect to the matrix equivalent plastic strain.
     There is no void coalescence term and no automatic fracture or element-deletion criterion.
-    The void fraction is clamped to $[0,1]$ during the return mapping, and the $f^2$ coefficient is fixed to $q_1^2$.
+    The void fraction is clamped to $$[0,1]$$ during the return mapping, and the $$f^2$$ coefficient is fixed to $$q_1^2$$.
 
 ## Remarks
 

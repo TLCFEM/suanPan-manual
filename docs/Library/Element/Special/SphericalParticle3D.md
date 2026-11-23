@@ -14,17 +14,17 @@ The element defines no stiffness of its own; it contributes a constant diagonal 
 ## Background
 
 `SphericalParticle3D` is the spatial counterpart of [`SphericalParticle2D`](SphericalParticle2D.md).
-It attaches a sphere of radius $R$ to one node and carries the elastic modulus, Poisson ratio, damping and mass used by the pairwise DEM contact law.
-The element has no stiffness of its own and contributes $\mathrm{diag}(m,m,m)$ or $\mathrm{diag}(m,m,m,I,I,I)$ if inertia is supplied.
+It attaches a sphere of radius $$R$$ to one node and carries the elastic modulus, Poisson ratio, damping and mass used by the pairwise DEM contact law.
+The element has no stiffness of its own and contributes $$\mathrm{diag}(m,m,m)$$ or $$\mathrm{diag}(m,m,m,I,I,I)$$ if inertia is supplied.
 
-For a pair with centre distance $d$, the overlap $\delta=R_i+R_j-d$ activates a frictionless Hertzian force along the line of centres,
+For a pair with centre distance $$d$$, the overlap $$\delta=R_i+R_j-d$$ activates a frictionless Hertzian force along the line of centres,
 
 $$
 \mathbf F_i=\left[\dfrac43 E^*\sqrt{R^*\,\delta}\,\delta + \eta^*\dot\delta\right]\hat{\mathbf r}_{ij},
 $$
 
-where $\hat{\mathbf r}_{ij}$ points from particle $j$ to particle $i$, $\dot\delta$ is the relative normal approach velocity and the pair properties $E^*$, $R^*$ and $\eta^*$ are defined on the [`SphericalParticle2D`](SphericalParticle2D.md) page.
-The equal and opposite force acts on particle $j$, and the consistent linearisation supplies tangent stiffness and damping terms for implicit integration.
+where $$\hat{\mathbf r}_{ij}$$ points from particle $$j$$ to particle $$i$$, $$\dot\delta$$ is the relative normal approach velocity and the pair properties $$E^*$$, $$R^*$$ and $$\eta^*$$ are defined on the [`SphericalParticle2D`](SphericalParticle2D.md) page.
+The equal and opposite force acts on particle $$j$$, and the consistent linearisation supplies tangent stiffness and damping terms for implicit integration.
 Contact is normal only; no tangential spring or friction law is implemented in the current interaction.
 
 !!! warning "implementation limitation"

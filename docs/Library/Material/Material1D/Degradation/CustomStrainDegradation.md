@@ -49,7 +49,7 @@ If the compression expression is omitted, the tension expression is reused with 
 
 !!! info "deviation from theory"
     When the compression expression is omitted, the tension expression is evaluated with the absolute value of the strain and its derivative is negated.
-    A single expression therefore always defines a symmetric law in $|\varepsilon|$, even if the expression itself is asymmetric.
+    A single expression therefore always defines a symmetric law in $$|\varepsilon|$$, even if the expression itself is asymmetric.
 
 !!! note "developer note"
     The default case is handled by `compute_negative_degradation`, which calls the tension expression with `fabs(t_strain)` and flips the sign of the returned derivative.

@@ -17,18 +17,18 @@ The energy functional is
 $$
 \Psi=\int_\Omega (1-d)^2\,\psi(\mathbf\varepsilon)\,\mathrm d\Omega+G_c\int_\Omega\left[\frac{d^2}{2l}+\frac{l}{2}|\nabla d|^2\right]\mathrm d\Omega,
 $$
-with $d$ the damage field, $G_c$ the energy release rate and $l$ the characteristic length.
+with $$d$$ the damage field, $$G_c$$ the energy release rate and $$l$$ the characteristic length.
 The displacement and damage fields share the bilinear shape functions, so each node carries `U1`, `U2` and `DAMAGE`.
-At each of the four Gauss points the strain is $\mathbf\varepsilon=\mathbf B\mathbf a$ and the local damage is $d=\sum_aN_ad_a$, which gives the degradation $g=(1-d)^2$.
-The stiffness contributions are $g\,\mathbf B^\mathrm T\mathbf D\mathbf B$ for the displacement block and $G_c\big(l^{-1}\mathbf N^\mathrm T\mathbf N+l\,\mathbf B^\mathrm T\mathbf B\big)$ for the damage block.
-The history field $\mathcal H=\max\psi$ drives damage evolution and prevents healing.
+At each of the four Gauss points the strain is $$\mathbf\varepsilon=\mathbf B\mathbf a$$ and the local damage is $$d=\sum_aN_ad_a$$, which gives the degradation $$g=(1-d)^2$$.
+The stiffness contributions are $$g\,\mathbf B^\mathrm T\mathbf D\mathbf B$$ for the displacement block and $$G_c\big(l^{-1}\mathbf N^\mathrm T\mathbf N+l\,\mathbf B^\mathrm T\mathbf B\big)$$ for the damage block.
+The history field $$\mathcal H=\max\psi$$ drives damage evolution and prevents healing.
 
 !!! info "deviation from theory"
-    The implementation uses the total strain energy $\tfrac12\mathbf\varepsilon^\mathrm T\mathbf\sigma$ as the history field.
+    The implementation uses the total strain energy $$\tfrac12\mathbf\varepsilon^\mathrm T\mathbf\sigma$$ as the history field.
     No tensile-compressive spectral split is applied, so a compressive stress state can also increase the damage-driving variable.
 
-The staggered version omits the displacement-damage coupling blocks, while `DCP4M` includes the term $-2(1-d)\mathbf B^\mathrm T\mathbf\sigma\mathbf N^\mathrm T$ in the off-diagonal blocks for a monolithic solve.
-A $2\times2$ Gauss rule is used, and a negative characteristic length is replaced by $2\sqrt{A}$ from the element area.
+The staggered version omits the displacement-damage coupling blocks, while `DCP4M` includes the term $$-2(1-d)\mathbf B^\mathrm T\mathbf\sigma\mathbf N^\mathrm T$$ in the off-diagonal blocks for a monolithic solve.
+A $$2\times2$$ Gauss rule is used, and a negative characteristic length is replaced by $$2\sqrt{A}$$ from the element area.
 See [`DCP3`](DCP3.md) for the derivation of the coupled equations and the role of the history variable.
 
 ## Syntax
@@ -48,10 +48,10 @@ element DCP4 (1) (2...5) (6) (7) (8) [9]
 * The third DoF is the damage variable.
   Boundary conditions can be assigned.
 * The characteristic length `(7)` can be set to a negative value to automatically determine it based on the element geometry.
-* The energy release rate `(8)` is the fracture toughness $G_c$ used in the crack-surface energy.
+* The energy release rate `(8)` is the fracture toughness $$G_c$$ used in the crack-surface energy.
 * The damage DoF has zero mass entries, so the formulation is intended for quasi-static crack growth.
 * One history variable is stored per Gauss point and is updated to the maximum strain energy seen so far.
-* Use at least four to eight elements across the expected crack width $l$ for a smooth damage field.
+* Use at least four to eight elements across the expected crack width $$l$$ for a smooth damage field.
 * [`DCP4M`](DCP4.md) adds the coupling blocks for a monolithic solution, while the default `DCP4` uses a staggered scheme.
 
 ## Recording

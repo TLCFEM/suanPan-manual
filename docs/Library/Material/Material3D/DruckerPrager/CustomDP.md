@@ -12,7 +12,7 @@ F=\sqrt{J_2}+\eta_y p-\xi c(\bar\varepsilon_p),\qquad
 \bar\varepsilon_p=\xi\gamma,
 $$
 
-where $c(\bar\varepsilon_p)$ is supplied by a user expression.
+where $$c(\bar\varepsilon_p)$$ is supplied by a user expression.
 At every local iteration the solver calls the expression once for its value and once for its gradient with respect to the accumulated plastic strain.
 Both the value and the derivative enter the consistency equation, so a wrong or discontinuous derivative degrades the quadratic convergence of the local Newton loop.
 

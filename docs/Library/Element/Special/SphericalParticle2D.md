@@ -14,16 +14,16 @@ The element defines no stiffness of its own; it contributes a constant diagonal 
 ## Background
 
 The discrete element method (DEM) represents a particulate assembly as individual bodies whose motion is integrated in time and whose interactions are evaluated pairwise at contacts.
-A `SphericalParticle2D` element attaches a circular disc of radius $R$ to one node and stores the parameters needed to evaluate a contact, but it defines no stiffness of its own.
-It contributes only a constant diagonal mass matrix, $\mathrm{diag}(m,m)$, or $\mathrm{diag}(m,m,I)$ when rotational inertia is supplied.
+A `SphericalParticle2D` element attaches a circular disc of radius $$R$$ to one node and stores the parameters needed to evaluate a contact, but it defines no stiffness of its own.
+It contributes only a constant diagonal mass matrix, $$\mathrm{diag}(m,m)$$, or $$\mathrm{diag}(m,m,I)$$ when rotational inertia is supplied.
 
-For two particles $i$ and $j$ with centre distance $d$, the overlap or compression is
+For two particles $$i$$ and $$j$$ with centre distance $$d$$, the overlap or compression is
 
 $$
 \delta=R_i+R_j-d .
 $$
 
-A contact exists only for $\delta>0$.
+A contact exists only for $$\delta>0$$.
 The implementation uses a Hertzian normal law, with pair properties
 
 $$
@@ -34,7 +34,7 @@ R^*=\left[\dfrac1{R_i}+\dfrac1{R_j}\right]^{-1},
 \eta^*=\dfrac{\eta_i+\eta_j}{2}.
 $$
 
-The elastic normal force magnitude is $\frac43 E^*\sqrt{R^*\,\delta}\,\delta$, and a viscous contribution proportional to the relative normal velocity is superposed, so the contact force is repulsive along the line of centres and the damping opposes the relative approach.
+The elastic normal force magnitude is $$\frac43 E^*\sqrt{R^*\,\delta}\,\delta$$, and a viscous contribution proportional to the relative normal velocity is superposed, so the contact force is repulsive along the line of centres and the damping opposes the relative approach.
 The contact force is distributed to the two nodes with equal magnitude and opposite sign, and its linearisation contributes to the global stiffness and damping matrices.
 
 General DEM formulations often add a tangential spring and Coulomb friction, but the current `Hertzian` interaction is frictionless and acts only along the line of centres.

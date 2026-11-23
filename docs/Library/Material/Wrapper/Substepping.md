@@ -8,7 +8,7 @@ Splits a strain increment into smaller subincrements when the host model fails t
 
 Rate-independent constitutive integrations based on a return mapping are usually accurate only for sufficiently small strain increments.
 When a single increment crosses a sharp yield surface or a rapid softening branch, the local Newton iteration may fail or produce a poor state.
-An automatic substepping strategy applies the total increment $\Delta\mathbf e$ as a sequence of fractions,
+An automatic substepping strategy applies the total increment $$\Delta\mathbf e$$ as a sequence of fractions,
 
 $$
 \mathbf e_{k+1}=\mathbf e_k+\delta_k\,\Delta\mathbf e,
@@ -16,11 +16,11 @@ $$
 \sum_k\delta_k=1,
 $$
 
-and adjusts the fraction $\delta_k$ according to whether the host succeeds.
+and adjusts the fraction $$\delta_k$$ according to whether the host succeeds.
 The implementation keeps two copies of the host, one representing the committed state and one representing the trial state.
-At the start of an update the trial copy is recreated from the committed copy, the fraction is initialised to one, and the host is asked to update to $\mathbf e_{\mathrm{current}}+(\alpha+\delta)\Delta\mathbf e$, where $\alpha$ is the accumulated fraction.
+At the start of an update the trial copy is recreated from the committed copy, the fraction is initialised to one, and the host is asked to update to $$\mathbf e_{\mathrm{current}}+(\alpha+\delta)\Delta\mathbf e$$, where $$\alpha$$ is the accumulated fraction.
 A failed trial resets the success counter and halves the fraction, while a successful trial is committed immediately and advances the accumulated fraction.
-Every three consecutive successes the fraction is multiplied by $1.2$, and it is always capped by the remaining fraction $1-\alpha$.
+Every three consecutive successes the fraction is multiplied by $$1.2$$, and it is always capped by the remaining fraction $$1-\alpha$$.
 The process ends when the next fraction falls below the internal tolerance, meaning the full increment has been applied.
 Every attempt, successful or not, counts towards `(3)`, and reaching the limit is reported as an error.
 

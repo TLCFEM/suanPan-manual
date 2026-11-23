@@ -25,7 +25,7 @@ $$
 $$
 
 with assembled mass, damping and stiffness matrices.
-A modifier acts on the element matrices $\mathbf M_e$, $\mathbf C_e$ and $\mathbf K_e$ before assembly, so it can implement choices that an individual element cannot make on its own.
+A modifier acts on the element matrices $$\mathbf M_e$$, $$\mathbf C_e$$ and $$\mathbf K_e$$ before assembly, so it can implement choices that an individual element cannot make on its own.
 
 The mass matrix is not unique.
 The consistent form
@@ -34,7 +34,7 @@ $$
 \mathbf M_e^c=\int_{\Omega_e}\rho\,\mathbf N^{\mathrm T}\mathbf N\,\mathrm d\Omega_e
 $$
 
-uses the same shape functions $\mathbf N$ as the displacement interpolation and preserves the kinetic energy of the interpolated field, but it couples neighbouring DoFs.
+uses the same shape functions $$\mathbf N$$ as the displacement interpolation and preserves the kinetic energy of the interpolated field, but it couples neighbouring DoFs.
 A lumped matrix keeps the total mass while removing the coupling,
 
 $$
@@ -42,19 +42,19 @@ M^{l}_{ii}=\sum_j M^c_{ij}.
 $$
 
 Diagonal mass is cheaper and is required by many explicit integrators, while consistent mass is usually more accurate for wave propagation.
-Rotational DoFs carry entries representing the rigid-body kinetic energy $\tfrac12\mathbf\omega\cdot\mathbf I\mathbf\omega$; the point-mass elements on the [`Mass`](../Special/Mass.md) page are already lumped.
+Rotational DoFs carry entries representing the rigid-body kinetic energy $$\tfrac12\mathbf\omega\cdot\mathbf I\mathbf\omega$$; the point-mass elements on the [`Mass`](../Special/Mass.md) page are already lumped.
 
 The damping matrix is even less uniquely defined.
-Rayleigh damping assumes $\mathbf C=a\mathbf M+b\mathbf K$, and the general form used below is a linear combination of mass, initial, current and trial stiffness matrices.
+Rayleigh damping assumes $$\mathbf C=a\mathbf M+b\mathbf K$$, and the general form used below is a linear combination of mass, initial, current and trial stiffness matrices.
 The weights depend on global modal properties and therefore cannot be chosen inside an element; a modifier computes the element damping matrices once and lets the assembly build the global matrix.
 
-Nonviscous damping replaces $\mathbf C\dot{\mathbf u}$ by a hereditary convolution,
+Nonviscous damping replaces $$\mathbf C\dot{\mathbf u}$$ by a hereditary convolution,
 
 $$
 \mathbf f_d(t)=\int_0^t\mathbf g(t-\tau)\dot{\mathbf u}(\tau)\,\mathrm d\tau .
 $$
 
-With an exponential kernel $\mathbf g(t)=\sum_k\mathbf m_k e^{-s_k t}$ the integral can be advanced recursively from the current and previous velocities without storing the whole history, which is the idea behind [`ElementalNonviscous`](ElementalNonviscous.md).
+With an exponential kernel $$\mathbf g(t)=\sum_k\mathbf m_k e^{-s_k t}$$ the integral can be advanced recursively from the current and previous velocities without storing the whole history, which is the idea behind [`ElementalNonviscous`](ElementalNonviscous.md).
 A related approach forms a bell-shaped frequency-dependent damping ratio from mass and stiffness matrices at element level, as in [`ElementalLee`](ElementalLee.md), whereas [`LinearViscosity`](LinearViscosity.md) simply sets a diagonal element damping matrix proportional to velocity.
 
 !!! info "deviation from theory"
@@ -96,8 +96,8 @@ C=aM+bK_C+cK_I+dK_T,
 $$
 
 where $$M$$ is the mass matrix, $$K_C$$ is the current tangent stiffness matrix (converged from the last step), $$K_I$$ is the initial stiffness and $$K_T$$ is the trial stiffness of current iteration.
-To retain quadratic convergence rate, one shall only use $K_I$ and $K_C$.
-But $K_I$ also leads to unwanted response.
+To retain quadratic convergence rate, one shall only use $$K_I$$ and $$K_C$$.
+But $$K_I$$ also leads to unwanted response.
 
 ```
 modifier Rayleigh (1) (2) (3) (4) (5) (6...)

@@ -14,19 +14,19 @@ Bilinear Quadrilateral With Pore Pressure (Undrained)
 
 This is the four-node undrained member of the porous family described in full on [PCPE4DC](PCPE4DC.md).
 
-It eliminates the fluid displacement field by imposing $\mathbf u_f=\mathbf u_s$, so that the fluid moves with the skeleton and no relative seepage is possible.
+It eliminates the fluid displacement field by imposing $$\mathbf u_f=\mathbf u_s$$, so that the fluid moves with the skeleton and no relative seepage is possible.
 
 !!! info "deviation from theory"
     The undrained condition is imposed algebraically by tying the fluid displacement to the solid one.
     Pore pressure is recovered from the volumetric strain rather than solved as an independent field, so no pressure DoF or flow equation is present.
 
-With $K_s$, $K_f$, $n$ and $\alpha$ as defined on the canonical page, the same pressure coefficient is used.
+With $$K_s$$, $$K_f$$, $$n$$ and $$\alpha$$ as defined on the canonical page, the same pressure coefficient is used.
 
 $$
 q=\dfrac{K_sK_f}{nK_s+(\alpha-n)K_f}.
 $$
 
-Substituting $\varepsilon_f=\varepsilon_s$ into the pore energy of [PCPE4DC](PCPE4DC.md) gives the undrained constraint energy $\Psi_u=\tfrac12 q\alpha^2(\nabla\cdot\mathbf u_s)^2$ and the pore pressure $p=-\alpha q\,\nabla\cdot\mathbf u_s$.
+Substituting $$\varepsilon_f=\varepsilon_s$$ into the pore energy of [PCPE4DC](PCPE4DC.md) gives the undrained constraint energy $$\Psi_u=\tfrac12 q\alpha^2(\nabla\cdot\mathbf u_s)^2$$ and the pore pressure $$p=-\alpha q\,\nabla\cdot\mathbf u_s$$.
 
 The added stiffness is therefore
 
@@ -34,11 +34,11 @@ $$
 \mathbf K_u=\int_V q\alpha^2\,\mathbf B^{\mathsf T}\mathbf m\mathbf m^{\mathsf T}\mathbf B\,dV ,
 $$
 
-which is exactly the `meta_k` matrix of the implementation, with $\mathbf m=(1,1,0)^{\mathsf T}$.
+which is exactly the `meta_k` matrix of the implementation, with $$\mathbf m=(1,1,0)^{\mathsf T}$$.
 
-The element has no permeability argument and no viscous Darcy matrix, and its mass uses the mixture density $(1-n)\rho_s+n\rho_f$.
+The element has no permeability argument and no viscous Darcy matrix, and its mass uses the mixture density $$(1-n)\rho_s+n\rho_f$$.
 
-The recorded pore pressure `PP` is $-\alpha q$ times the volumetric strain at each of the four Gauss points.
+The recorded pore pressure `PP` is $$-\alpha q$$ times the volumetric strain at each of the four Gauss points.
 
 ## Syntax
 
@@ -79,7 +79,7 @@ Interactions with other elements (with different arrangements of DoFs) can only 
     Only plane strain and an isotropic fluid are accepted, and no permeability argument exists.
     The undrained constraint is exact for the chosen interpolation, but it cannot represent partial drainage or transient pore pressure dissipation.
 
-* The fluid bulk modulus still affects the response through $q$ even though no fluid flow is modelled.
+* The fluid bulk modulus still affects the response through $$q$$ even though no fluid flow is modelled.
 * Use [PCPE4DC](PCPE4DC.md) when drainage or time-dependent consolidation must be captured, and [PCPE8UC](PCPE8UC.md) for a quadratic undrained element.
 
 ## Recording

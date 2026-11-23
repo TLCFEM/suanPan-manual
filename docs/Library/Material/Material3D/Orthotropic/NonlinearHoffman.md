@@ -66,7 +66,7 @@ virtual double compute_dk(double) const = 0;
 ```
 
 !!! info "deviation from theory"
-    The yield condition uses $K^2(\bar\varepsilon_p)$ rather than $K(\bar\varepsilon_p)$.
+    The yield condition uses $$K^2(\bar\varepsilon_p)$$ rather than $$K(\bar\varepsilon_p)$$.
     The hardening function therefore scales the square of the yield surface.
 
 ## History Layout
@@ -76,8 +76,8 @@ virtual double compute_dk(double) const = 0;
 | `initial_history(0)`   | equivalent plastic strain |
 | `initial_history(1:7)` | plastic strain            |
 
-The plastic flow is associative with $\Delta\mathbf\varepsilon_p=\Delta\gamma\,\partial F/\partial\mathbf\sigma$.
-The equivalent plastic strain is accumulated as $\Delta\bar\varepsilon_p=\sqrt{2/3}\lVert\Delta\mathbf\varepsilon_p\rVert$.
+The plastic flow is associative with $$\Delta\mathbf\varepsilon_p=\Delta\gamma\,\partial F/\partial\mathbf\sigma$$.
+The equivalent plastic strain is accumulated as $$\Delta\bar\varepsilon_p=\sqrt{2/3}\lVert\Delta\mathbf\varepsilon_p\rVert$$.
 The elastic predictor uses the orthotropic stiffness and the consistency condition is solved by Newton iteration for the plastic multiplier and the stress.
 
 !!! note "developer note"
@@ -86,8 +86,8 @@ The elastic predictor uses the orthotropic stiffness and the consistency conditi
 
 ## Remarks
 
-The nine yield stresses are ordered as $\sigma_{11}^t,\sigma_{11}^c,\sigma_{22}^t,\sigma_{22}^c,\sigma_{33}^t,\sigma_{33}^c,\sigma_{12}^0,\sigma_{23}^0,\sigma_{13}^0$.
-The six moduli are ordered as $E_1,E_2,E_3,G_{12},G_{23},G_{13}$ and the three Poisson's ratios as $\nu_{12},\nu_{23},\nu_{13}$.
+The nine yield stresses are ordered as $$\sigma_{11}^t,\sigma_{11}^c,\sigma_{22}^t,\sigma_{22}^c,\sigma_{33}^t,\sigma_{33}^c,\sigma_{12}^0,\sigma_{23}^0,\sigma_{13}^0$$.
+The six moduli are ordered as $$E_1,E_2,E_3,G_{12},G_{23},G_{13}$$ and the three Poisson's ratios as $$\nu_{12},\nu_{23},\nu_{13}$$.
 None of the inputs are converted to absolute values, so positive moduli and strengths must be supplied.
 Use [`Rotation3D`](../../Wrapper/Rotation3D.md) to align the material axes with a rotated layup.
 The exponential, bilinear and expression-driven variants are [`ExpHoffman`](ExpHoffman.md), [`BilinearHoffman`](BilinearHoffman.md) and [`CustomHoffman`](CustomHoffman.md).

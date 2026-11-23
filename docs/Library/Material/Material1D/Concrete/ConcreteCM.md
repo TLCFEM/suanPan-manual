@@ -27,9 +27,9 @@ $$
 y=\dfrac{m x}{1+\left(m-\dfrac{n}{n-1}\right)x+\dfrac{x^n}{n-1}},
 $$
 
-with $x=\varepsilon/\varepsilon_c$ or $\varepsilon/\varepsilon_t$ and $y=\sigma/f_c$ or $\sigma/f_t$.
-Here $f_c$ and $\varepsilon_c$ are the compressive strength and its strain, $f_t$ and $\varepsilon_t$ are the tensile strength and its strain, $m$ is fixed by the initial stiffness and $n>1$ controls the slope of the descending branch.
-The implementation sets $m_c=E\varepsilon_c/f_c$ and $m_t=E\varepsilon_t/f_t$, so the initial tangent modulus is exactly $E$ on both backbones.
+with $$x=\varepsilon/\varepsilon_c$$ or $$\varepsilon/\varepsilon_t$$ and $$y=\sigma/f_c$$ or $$\sigma/f_t$$.
+Here $$f_c$$ and $$\varepsilon_c$$ are the compressive strength and its strain, $$f_t$$ and $$\varepsilon_t$$ are the tensile strength and its strain, $$m$$ is fixed by the initial stiffness and $$n>1$$ controls the slope of the descending branch.
+The implementation sets $$m_c=E\varepsilon_c/f_c$$ and $$m_t=E\varepsilon_t/f_t$$, so the initial tangent modulus is exactly $$E$$ on both backbones.
 Unloading generates a residual strain and a degraded residual stiffness, and the unload--reload branches are governed by separate rules for tension and compression.
 A transition branch connects the two residual states to represent crack closing when the strain changes sign.
 The original rule set can produce a transition stiffness larger than the initial modulus, so a linear transition option is provided for improved stability.
@@ -51,11 +51,11 @@ The original rule set can produce a transition stiffness larger than the initial
 5. The original CM model has some undefined behaviour which may cause stability issues.
    This is a simplified model.
 
-6. The parser requires $|\varepsilon_c|>|f_c|/E$ and $|\varepsilon_t|>|f_t|/E$ so that the secant stiffness at each peak is below the initial stiffness and the corresponding $m$ is greater than one.
+6. The parser requires $$|\varepsilon_c|>|f_c|/E$$ and $$|\varepsilon_t|>|f_t|/E$$ so that the secant stiffness at each peak is below the initial stiffness and the corresponding $$m$$ is greater than one.
 
 7. The parameters `NC` and `NT` are clamped to values greater than unity in the constructor.
 
-8. A typical choice is $n_c$ between 2 and 6 and $n_t>n_c$, with larger values giving a steeper descending branch.
+8. A typical choice is $$n_c$$ between 2 and 6 and $$n_t>n_c$$, with larger values giving a steeper descending branch.
 
 9. The strength and strain inputs are sign insensitive because their absolute values are taken and the signs are restored internally.
 

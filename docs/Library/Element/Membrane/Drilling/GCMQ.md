@@ -14,17 +14,17 @@ Generalised Conforming Mixed Quadrilateral With Drilling DoFs
 
 The GCMQ family is a four-node drilling membrane derived from a modified Hu--Washizu principle, in which displacement, strain and stress fields are treated as independent variables.
 
-The same drilling interpolation idea as [Allman](Allman.md) and [GQ12](GQ12.md) is used, but the discrete equations are built in a 12-parameter local stress space with the linear stress modes $\{1,x,y,xy\}$.
+The same drilling interpolation idea as [Allman](Allman.md) and [GQ12](GQ12.md) is used, but the discrete equations are built in a 12-parameter local stress space with the linear stress modes $$\{1,x,y,xy\}$$.
 
-Write the local stress as $\mathbf\sigma=\mathbf P\mathbf\alpha$, with $\mathbf\alpha$ the 12 stress parameters, and the local strain as $\mathbf\varepsilon=\mathbf P_\varepsilon\mathbf\beta$.
+Write the local stress as $$\mathbf\sigma=\mathbf P\mathbf\alpha$$, with $$\mathbf\alpha$$ the 12 stress parameters, and the local strain as $$\mathbf\varepsilon=\mathbf P_\varepsilon\mathbf\beta$$.
 
-The compatibility and equilibrium equations reduce to solving small systems with matrices $\mathbf H$, $\mathbf N$ and $\mathbf M$ assembled from the integration points, after which the element stiffness is condensed to the nodal DoFs.
+The compatibility and equilibrium equations reduce to solving small systems with matrices $$\mathbf H$$, $$\mathbf N$$ and $$\mathbf M$$ assembled from the integration points, after which the element stiffness is condensed to the nodal DoFs.
 
-The full `GCMQ` adds three enhanced strain modes to avoid excessive stiffness on coarse or distorted meshes: a quadratic dilatational mode $(3x^2-1,\,3y^2-1)$, a quadratic shear mode $x^2-y^2$ and a complementary mode $x^2+y^2-2/3$.
+The full `GCMQ` adds three enhanced strain modes to avoid excessive stiffness on coarse or distorted meshes: a quadratic dilatational mode $$(3x^2-1,\,3y^2-1)$$, a quadratic shear mode $$x^2-y^2$$ and a complementary mode $$x^2+y^2-2/3$$.
 
 !!! info "deviation from theory"
     The enhanced strain basis is a fixed set of three quadratic polynomials rather than a general assumed-strain expansion.
-    The complementary mode $x^2+y^2-2/3$ is included specifically to keep the two shear modes frame invariant, so the basis is tailored to this element rather than being the standard EAS choice.
+    The complementary mode $$x^2+y^2-2/3$$ is included specifically to keep the two shear modes frame invariant, so the basis is tailored to this element rather than being the standard EAS choice.
 
 The simplified `SGCMQ` omits these modes and the associated internal variables, giving a cheaper displacement-like element that is the membrane part of the shell [SGCMS](../../Shell/SGCMS.md).
 

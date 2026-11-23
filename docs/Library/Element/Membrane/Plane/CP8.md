@@ -18,11 +18,11 @@ The four corner shape functions are the bilinear functions minus one half of the
 $$
 N_5=\tfrac12(1-\xi^2)(1-\eta),\quad N_6=\tfrac12(1+\xi)(1-\eta^2),\quad N_7=\tfrac12(1-\xi^2)(1+\eta),\quad N_8=\tfrac12(1-\xi)(1-\eta^2).
 $$
-The nodes are ordered counter-clockwise from $(\xi,\eta)=(-1,-1)$, with midside nodes on the bottom, right, top and left edges.
+The nodes are ordered counter-clockwise from $$(\xi,\eta)=(-1,-1)$$, with midside nodes on the bottom, right, top and left edges.
 The quadratic interpolation allows curved edges and a strain field that varies linearly within each element.
-The strain is assembled as $\mathbf\varepsilon=\mathbf B\mathbf a$ with the same Voigt pattern as [`CP4`](CP4.md), and the stiffness is $\mathbf K^e=\sum_q t\,J_qw_q\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$.
-In the source the full scheme is the five-point Irons rule, which is exact to polynomial degree five and therefore comparable in accuracy to the $3\times3$ Gauss rule mentioned in the remarks.
-Reduced integration uses $2\times2$ Gauss points.
+The strain is assembled as $$\mathbf\varepsilon=\mathbf B\mathbf a$$ with the same Voigt pattern as [`CP4`](CP4.md), and the stiffness is $$\mathbf K^e=\sum_q t\,J_qw_q\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$$.
+In the source the full scheme is the five-point Irons rule, which is exact to polynomial degree five and therefore comparable in accuracy to the $$3\times3$$ Gauss rule mentioned in the remarks.
+Reduced integration uses $$2\times2$$ Gauss points.
 
 ## Syntax
 
@@ -40,7 +40,7 @@ element CP8 (1) (2...9) (10) [11] [12] [13]
 
 * The `CP8` element resembles CPS8, CPE8, CPS8R and CPE8R elements in ABAQUS.
 * The full integration scheme uses 3-by-3 Gauss scheme and the reduced integration uses a 2-by-2 scheme.
-* In the current source the full rule is the five-point Irons pattern, exact to degree five, while the reduced rule is $2\times2$ Gauss.
+* In the current source the full rule is the five-point Irons pattern, exact to degree five, while the reduced rule is $$2\times2$$ Gauss.
 
 !!! note "developer note"
     The original remark above states that full integration uses a 3-by-3 Gauss scheme.

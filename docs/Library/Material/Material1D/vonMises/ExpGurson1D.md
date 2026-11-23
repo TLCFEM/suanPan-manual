@@ -26,12 +26,12 @@ $$
 At zero plastic strain $$k=1$$, so the initial matrix yield stress equals the input parameter $$\sigma_{y0}$$.
 
 !!! warning "implementation limitation"
-    The implicit relation $k=(k+c\varepsilon_m^p)^n$ is not the usual explicit power-law hardening form.
-    The hardening-law derivative is singular at $n=1$.
+    The implicit relation $$k=(k+c\varepsilon_m^p)^n$$ is not the usual explicit power-law hardening form.
+    The hardening-law derivative is singular at $$n=1$$.
 
 !!! note "developer note"
     The implicit relation is solved locally by Newton iteration with a cap of 20 iterations.
-    If the iteration fails, the code prints an error and falls back to $k=1$ with the derivative evaluated as $nc/(1-n)$.
+    If the iteration fails, the code prints an error and falls back to $$k=1$$ with the derivative evaluated as $$nc/(1-n)$$.
 
 ## Syntax
 

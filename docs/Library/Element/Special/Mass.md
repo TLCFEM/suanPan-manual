@@ -7,13 +7,13 @@ Point Mass
 
 ## Background
 
-In a dynamic analysis the inertia contribution to equilibrium is $\mathbf M\ddot{\mathbf u}$, where the element consistent mass matrix is
+In a dynamic analysis the inertia contribution to equilibrium is $$\mathbf M\ddot{\mathbf u}$$, where the element consistent mass matrix is
 
 $$
 \mathbf M_e^c=\int_{\Omega_e}\rho\,\mathbf N^{\mathrm T}\mathbf N\,\mathrm d\Omega_e .
 $$
 
-It is built from the same displacement interpolation $\mathbf N$ as the stiffness, so it reproduces the kinetic energy of the interpolated field, but it couples neighbouring DoFs.
+It is built from the same displacement interpolation $$\mathbf N$$ as the stiffness, so it reproduces the kinetic energy of the interpolated field, but it couples neighbouring DoFs.
 A lumped mass matrix replaces it by a diagonal matrix whose row sums preserve the total mass,
 
 $$
@@ -22,7 +22,7 @@ M^{l}_{ii}=\sum_j M^c_{ij},\qquad
 $$
 
 A diagonal mass matrix is cheaper and is required by many explicit time integrators, whereas a consistent matrix is generally more accurate for wave propagation.
-The `Mass`, `Mass2D` and `Mass3D` elements are already lumped: each selected DoF receives the same scalar magnitude $m$ on the diagonal and there is no off-diagonal coupling.
+The `Mass`, `Mass2D` and `Mass3D` elements are already lumped: each selected DoF receives the same scalar magnitude $$m$$ on the diagonal and there is no off-diagonal coupling.
 
 For a rigid body the kinetic energy is
 
@@ -31,12 +31,12 @@ T=\dfrac12 m\,\dot{\mathbf u}\cdot\dot{\mathbf u}+\dfrac12\mathbf\omega\cdot\mat
 $$
 
 so rotational inertia appears as additional diagonal entries on the rotation DoFs.
-[`MassPoint2D`](MassPoint.md) and [`MassPoint3D`](MassPoint.md) place the translational mass $m$ on the translation DoFs and an optional scalar inertia $I$ on the rotation DoFs, giving $\mathrm{diag}(m,m,I)$ in 2D and $\mathrm{diag}(m,m,m,I,I,I)$ in 3D.
-Because a single scalar $I$ is used, the inertia tensor is isotropic, which is appropriate for a point-like or spherically symmetric mass lump.
+[`MassPoint2D`](MassPoint.md) and [`MassPoint3D`](MassPoint.md) place the translational mass $$m$$ on the translation DoFs and an optional scalar inertia $$I$$ on the rotation DoFs, giving $$\mathrm{diag}(m,m,I)$$ in 2D and $$\mathrm{diag}(m,m,m,I,I,I)$$ in 3D.
+Because a single scalar $$I$$ is used, the inertia tensor is isotropic, which is appropriate for a point-like or spherically symmetric mass lump.
 
 !!! warning "implementation limitation"
     A full inertia tensor with distinct principal moments is not supported by the point-mass elements.
-    Each assigned DoF receives the same magnitude $m$, so off-diagonal mass coupling is absent.
+    Each assigned DoF receives the same magnitude $$m$$, so off-diagonal mass coupling is absent.
 
 A point mass can also be represented as an external D'Alembert inertia load or as an attribute of a node.
 Defining it as an element makes the mass matrix available during assembly, before loads are applied, and keeps point masses in the same tag pool as the other elements.

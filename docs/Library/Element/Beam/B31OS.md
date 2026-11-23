@@ -10,12 +10,12 @@
 
 [`B31OS`](B31OS.md) is the inelastic three-dimensional beam element for thin-walled open sections and extends the kinematic framework of [`B31`](B31.md) with a warping degree of freedom.
 Here "OS" denotes open section, as in the `B3DOSL` and `B3DOSC` orientations.
-Following Vlasov theory, the twist $\phi$ of an open section is accompanied by an axial warping displacement, so that the section response includes the bimoment $B=-EI_w\phi''$ and the Wagner stress resultant in addition to the St. Venant torque.
-The element maps the seven nodal DoFs $(U_1,U_2,U_3,UR_1,UR_2,UR_3,WARP)$ to nine local deformations comprising uniform axial elongation, near- and far-end strong- and weak-axis bending rotations, near- and far-end twists and near- and far-end warping rates.
+Following Vlasov theory, the twist $$\phi$$ of an open section is accompanied by an axial warping displacement, so that the section response includes the bimoment $$B=-EI_w\phi''$$ and the Wagner stress resultant in addition to the St. Venant torque.
+The element maps the seven nodal DoFs $$(U_1,U_2,U_3,UR_1,UR_2,UR_3,WARP)$$ to nine local deformations comprising uniform axial elongation, near- and far-end strong- and weak-axis bending rotations, near- and far-end twists and near- and far-end warping rates.
 Those nine quantities are interpolated to the twelve section strains listed in the remarks below.
-The twist $\phi$ is interpolated with cubic Hermite functions, which is the circumvention of membrane locking reported in the reference and noted in the remarks below.
-The section returns the six resultants $\begin{bmatrix}P&M_z&M_y&W&B&T_{sv}\end{bmatrix}$, and the tangent and resistance are assembled with a Lobatto rule in the same way as [`B31`](B31.md).
-For a purely elastic response with directly supplied $E$, $G$, $A$, $I_z$, $I_y$, $J$ and $I_w$, use [`EB31OS`](EB31OS.md) instead.
+The twist $$\phi$$ is interpolated with cubic Hermite functions, which is the circumvention of membrane locking reported in the reference and noted in the remarks below.
+The section returns the six resultants $$\begin{bmatrix}P&M_z&M_y&W&B&T_{sv}\end{bmatrix}$$, and the tangent and resistance are assembled with a Lobatto rule in the same way as [`B31`](B31.md).
+For a purely elastic response with directly supplied $$E$$, $$G$$, $$A$$, $$I_z$$, $$I_y$$, $$J$$ and $$I_w$$, use [`EB31OS`](EB31OS.md) instead.
 
 ## References
 

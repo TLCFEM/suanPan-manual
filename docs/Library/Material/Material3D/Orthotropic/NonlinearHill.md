@@ -14,7 +14,7 @@ The two share the same implementation; `NonlinearHill` simply assigns equal tens
 The Hoffman criterion admits different yield stresses in tension and compression.
 Setting $$\sigma_{ii}^t=\sigma_{ii}^c$$ for $$i=1,~2,~3$$ removes its linear terms and recovers the original Hill criterion.
 `NonlinearHill` applies this reduction internally: it passes each of the three normal strengths as a paired tensile/compressive value to the Hoffman projection, followed by the three shear strengths.
-The nine strengths are thus passed as $\sigma_1,\sigma_1,\sigma_2,\sigma_2,\sigma_3,\sigma_3,\sigma_{12},\sigma_{23},\sigma_{13}$.
+The nine strengths are thus passed as $$\sigma_1,\sigma_1,\sigma_2,\sigma_2,\sigma_3,\sigma_3,\sigma_{12},\sigma_{23},\sigma_{13}$$.
 
 !!! note "developer note"
     For equal tensile and compressive strengths the Hoffman and Hill quadratic forms coincide.

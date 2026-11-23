@@ -132,8 +132,8 @@ In the rate-independent case $$z_v=z$$ and only the first two equations remain.
 The accumulated plastic strain increments as $$q=q_n+\gamma$$ in one dimension, whereas the three-dimensional model uses $$\sqrt{2/3}\gamma$$.
 
 !!! info "deviation from theory"
-    The one-dimensional multiplier equals the increment of accumulated plastic strain because $|\mathrm{d}\varepsilon^p|=\mathrm{d}\gamma$ in uniaxial flow.
-    The three-dimensional implementation uses the von Mises norm and therefore scales the multiplier by $\sqrt{2/3}$.
+    The one-dimensional multiplier equals the increment of accumulated plastic strain because $$|\mathrm{d}\varepsilon^p|=\mathrm{d}\gamma$$ in uniaxial flow.
+    The three-dimensional implementation uses the von Mises norm and therefore scales the multiplier by $$\sqrt{2/3}$$.
     Identical parameter sets do not give identical hardening rates in the two implementations unless this factor is accounted for.
 
 The consistent tangent is obtained by statically condensing the $$z$$--$$z_v$$ block out of the Newton Jacobian, giving

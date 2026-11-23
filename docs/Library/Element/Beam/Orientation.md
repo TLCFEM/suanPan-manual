@@ -21,11 +21,11 @@ For 2D beam elements, the local $$z$$-axis is defined to be the global $$z$$-axi
 ## Background
 
 An orientation object is a coordinate transformation attached to a beam or truss element.
-Given the user-supplied vector $\mathbf n$ and the element chord direction $\mathbf e_x$, the local triad is built as $\mathbf e_y=\mathbf n\times\mathbf e_x$ followed by $\mathbf e_z=\mathbf e_x\times\mathbf e_y$, which re-orthogonalises the supplied vector against the chord and yields a right-handed frame.
-The three basis vectors form the rotation matrix $\mathbf R=\begin{bmatrix}\mathbf e_x&\mathbf e_y&\mathbf e_z\end{bmatrix}^\mathrm T$, so that first-order quantities transform as $\mathbf a_l=\mathbf R\mathbf a_g$ and $\mathbf a_g=\mathbf R^\mathrm T\mathbf a_l$, while stiffness matrices transform as $\mathbf K_g=\mathbf R^\mathrm T\mathbf K_l\mathbf R$.
-A linear orientation (`B3DL`, `B3DOSL`, or the internal 2D `B2DL`) keeps $\mathbf R$ fixed at the initial configuration and is appropriate for small-displacement analysis.
-A corotational orientation (`B3DC` or `B3DOSC`, and the internal `B2DC`) updates $\mathbf R$ from the current chord and additionally subtracts the chord rotation from the nodal rotations, so that the element only sees the small straining deformation discussed in the [Beam Element Overview](Beam.md).
-For the two-dimensional case the local deformations are $u=L-L_0$ and $\Theta_i=\theta_i+\beta_0-\beta$, and the geometric stiffness contribution is $\mathbf K_g^{(\mathrm{geo})}=\sum_i f_{l,i}\,\partial^2\Theta_i/\partial\mathbf v^2$.
+Given the user-supplied vector $$\mathbf n$$ and the element chord direction $$\mathbf e_x$$, the local triad is built as $$\mathbf e_y=\mathbf n\times\mathbf e_x$$ followed by $$\mathbf e_z=\mathbf e_x\times\mathbf e_y$$, which re-orthogonalises the supplied vector against the chord and yields a right-handed frame.
+The three basis vectors form the rotation matrix $$\mathbf R=\begin{bmatrix}\mathbf e_x&\mathbf e_y&\mathbf e_z\end{bmatrix}^\mathrm T$$, so that first-order quantities transform as $$\mathbf a_l=\mathbf R\mathbf a_g$$ and $$\mathbf a_g=\mathbf R^\mathrm T\mathbf a_l$$, while stiffness matrices transform as $$\mathbf K_g=\mathbf R^\mathrm T\mathbf K_l\mathbf R$$.
+A linear orientation (`B3DL`, `B3DOSL`, or the internal 2D `B2DL`) keeps $$\mathbf R$$ fixed at the initial configuration and is appropriate for small-displacement analysis.
+A corotational orientation (`B3DC` or `B3DOSC`, and the internal `B2DC`) updates $$\mathbf R$$ from the current chord and additionally subtracts the chord rotation from the nodal rotations, so that the element only sees the small straining deformation discussed in the [Beam Element Overview](Beam.md).
+For the two-dimensional case the local deformations are $$u=L-L_0$$ and $$\Theta_i=\theta_i+\beta_0-\beta$$, and the geometric stiffness contribution is $$\mathbf K_g^{(\mathrm{geo})}=\sum_i f_{l,i}\,\partial^2\Theta_i/\partial\mathbf v^2$$.
 The corotational transformation follows Crisfield's work with the modifications of de Souza, and the mass matrix is deliberately left untransformed so that it remains constant.
 
 !!! warning "implementation limitation"

@@ -119,11 +119,11 @@ with ErrorMap(
 ## Remarks
 
 - There are no parser defaults for this model: all seven numeric arguments are required, and density is the only optional argument and defaults to zero.
-- The ratio $\sigma_{b0}/\sigma_{c0}$ is not an input here; $\eta_y$ and $\xi$ must be supplied directly, using the fitting formulas on the [`NonlinearDruckerPrager`](NonlinearDruckerPrager.md) page.
-- A positive $H$ gives monotonic hardening and is typical for soils; a negative $H$ gives softening towards zero cohesion and is typical for concrete.
-- The accumulated plastic strain is $\bar\varepsilon_p=\xi\gamma$, so the slope $H$ is measured against this scaled internal variable rather than against the equivalent plastic strain of classical von Mises plasticity.
-- Setting $\eta_y=\eta_f=0$ gives von Mises plasticity, for which the yield stress is $\sqrt3\,\xi c_0$ and the plastic hardening modulus with respect to axial plastic strain is $3\xi^2H$.
-- This class inherits no tension-cutoff surface from the base class; the cone apex at $p=\xi c/\eta_y$ is the only tension limit.
+- The ratio $$\sigma_{b0}/\sigma_{c0}$$ is not an input here; $$\eta_y$$ and $$\xi$$ must be supplied directly, using the fitting formulas on the [`NonlinearDruckerPrager`](NonlinearDruckerPrager.md) page.
+- A positive $$H$$ gives monotonic hardening and is typical for soils; a negative $$H$$ gives softening towards zero cohesion and is typical for concrete.
+- The accumulated plastic strain is $$\bar\varepsilon_p=\xi\gamma$$, so the slope $$H$$ is measured against this scaled internal variable rather than against the equivalent plastic strain of classical von Mises plasticity.
+- Setting $$\eta_y=\eta_f=0$$ gives von Mises plasticity, for which the yield stress is $$\sqrt3\,\xi c_0$$ and the plastic hardening modulus with respect to axial plastic strain is $$3\xi^2H$$.
+- This class inherits no tension-cutoff surface from the base class; the cone apex at $$p=\xi c/\eta_y$$ is the only tension limit.
 - For an exponential cohesion law use [`ExpDP`](ExpDP.md), and for a user-defined law use [`CustomDP`](CustomDP.md).
 
 ## References

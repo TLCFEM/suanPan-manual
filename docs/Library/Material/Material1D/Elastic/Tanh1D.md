@@ -39,7 +39,7 @@ Because a single parameter fixes both the initial slope and the plateau, the tra
 
 !!! warning "implementation limitation"
     The law has no separate yield or transition strain parameter, unlike a regularised elastoplastic plateau.
-    A common tanh-based fit with $\sigma=\sigma_s\tanh(\varepsilon/\varepsilon_0)$ cannot be reproduced unless $\sigma_s=E$ and $\varepsilon_0=1$ are acceptable.
+    A common tanh-based fit with $$\sigma=\sigma_s\tanh(\varepsilon/\varepsilon_0)$$ cannot be reproduced unless $$\sigma_s=E$$ and $$\varepsilon_0=1$$ are acceptable.
     A negative modulus input gives a negative tangent.
 
 !!! note "developer note"

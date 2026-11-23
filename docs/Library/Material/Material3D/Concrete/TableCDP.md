@@ -18,21 +18,21 @@ $$
 F=\alpha I_1+\sqrt{3J_2}-\left(1-\alpha\right)\bar\sigma_c+\beta\left\langle\bar\sigma_{\max}\right\rangle,
 $$
 
-with $\alpha=(\sigma_{b0}/\sigma_{c0}-1)/(2\sigma_{b0}/\sigma_{c0}-1)$ and $\beta=(1-\alpha)\bar\sigma_c/\bar\sigma_t-(1+\alpha)$.
-The internal variable $\kappa$ is the cumulative plastic work divided by the normalised fracture energy $g_t$ or $g_c$.
+with $$\alpha=(\sigma_{b0}/\sigma_{c0}-1)/(2\sigma_{b0}/\sigma_{c0}-1)$$ and $$\beta=(1-\alpha)\bar\sigma_c/\bar\sigma_t-(1+\alpha)$$.
+The internal variable $$\kappa$$ is the cumulative plastic work divided by the normalised fracture energy $$g_t$$ or $$g_c$$.
 
 The parser converts the Abaqus-style plastic-strain input into this internal variable.
-For each backbone the area under the stress--plastic-strain curve is integrated by the trapezoidal rule to give $g$, and the abscissa of each point is replaced by the cumulative area divided by $g$.
-The damage table is interpolated onto the same $\kappa$ values, and the final point is extended to complete damage at $\kappa=1$ by an exponential tail that preserves the terminal slope of the backbone.
+For each backbone the area under the stress--plastic-strain curve is integrated by the trapezoidal rule to give $$g$$, and the abscissa of each point is replaced by the cumulative area divided by $$g$$.
+The damage table is interpolated onto the same $$\kappa$$ values, and the final point is extended to complete damage at $$\kappa=1$$ by an exponential tail that preserves the terminal slope of the backbone.
 Consequently the tabulated curves are reparameterised internally, and the response can deviate slightly from the tabulated shape if the tables are too short or too coarse.
 
-This variant fixes $K_c=1$, giving $\zeta=0$ in the yield function, exactly as [`CDP`](CDP.md) does.
-The [`AbaqusCDP`](AbaqusCDP.md) variant is the counterpart that exposes $K_c$ and uses the Abaqus defaults for the dilatancy and recovery parameters.
+This variant fixes $$K_c=1$$, giving $$\zeta=0$$ in the yield function, exactly as [`CDP`](CDP.md) does.
+The [`AbaqusCDP`](AbaqusCDP.md) variant is the counterpart that exposes $$K_c$$ and uses the Abaqus defaults for the dilatancy and recovery parameters.
 
 !!! warning "implementation limitation"
     The tabulated plastic strain is not used directly as the internal variable; it is converted to cumulative plastic work by trapezoidal integration.
     A backbone without a decaying tail is rejected, and the appended exponential extension can distort the response near complete damage.
-    As in [`CDP`](CDP.md), the potential is a linear cone with $K_c=1$ and there is a single recovery factor acting on tensile damage only.
+    As in [`CDP`](CDP.md), the potential is a linear cone with $$K_c=1$$ and there is a single recovery factor acting on tensile damage only.
 
 ## Syntax
 
@@ -92,10 +92,10 @@ The red curve depicts the damage index evolution:
 
 ### Implementation notes
 
-- The parser defaults are $E=3\times10^4$, $\nu=0.2$, $\alpha_p=0.2$, $\sigma_{b0}/\sigma_{c0}=1.16$, $w=0.5$ and density $2400\times10^{-12}$.
+- The parser defaults are $$E=3\times10^4$$, $$\nu=0.2$$, $$\alpha_p=0.2$$, $$\sigma_{b0}/\sigma_{c0}=1.16$$, $$w=0.5$$ and density $$2400\times10^{-12}$$.
 - The first column of every table is converted to its absolute value, and the first plastic strain must be zero.
 - A backbone whose last two points do not form a decaying tail is rejected by the parser.
-- The normalised energies $g_t$ and $g_c$ are computed from the tables and are not independent input arguments.
+- The normalised energies $$g_t$$ and $$g_c$$ are computed from the tables and are not independent input arguments.
 - The stiffness recovery factor applies only to the tensile damage index, and the compression damage index is never recovered.
 - The four table file names are not interchangeable: the first two files must be the backbones and the last two the damage curves.
 

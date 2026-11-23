@@ -89,11 +89,11 @@ E^{ep}=E\,\dfrac{H}{E+H},\qquad H=\dfrac{\mathrm{d}k}{\mathrm{d}p}+\dfrac{\mathr
 $$
 
 !!! warning "implementation limitation"
-    A perfectly plastic definition with $H=0$ gives a zero algorithmic tangent during plastic loading.
+    A perfectly plastic definition with $$H=0$$ gives a zero algorithmic tangent during plastic loading.
     The yield radius is also clamped to zero, so a hardening function that becomes negative cannot drive the radius below zero.
 
 !!! note "developer note"
-    The source multiplies the elastic stiffness by $H/(E+H)$ directly.
+    The source multiplies the elastic stiffness by $$H/(E+H)$$ directly.
 
 ## Implementation
 

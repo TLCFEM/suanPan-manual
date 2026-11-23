@@ -7,7 +7,7 @@ Combines multiple 2D material models into a single one.
 ## Theory
 
 A laminate is an assembly of layers bonded together so that all layers share the same in-plane deformation.
-For a two-dimensional strain vector $\mathbf e=(\varepsilon_{11},\varepsilon_{22},\gamma_{12})$, the iso-strain assumption gives $\mathbf e^{(k)}=\mathbf e$ for every layer $k$, and the resultant stress and tangent are obtained by summation,
+For a two-dimensional strain vector $$\mathbf e=(\varepsilon_{11},\varepsilon_{22},\gamma_{12})$$, the iso-strain assumption gives $$\mathbf e^{(k)}=\mathbf e$$ for every layer $$k$$, and the resultant stress and tangent are obtained by summation,
 
 $$
 \mathbf s(\mathbf e)=\sum_{k=1}^{n}\mathbf s^{(k)}(\mathbf e),
@@ -15,13 +15,13 @@ $$
 \mathbf D(\mathbf e)=\sum_{k=1}^{n}\mathbf D^{(k)}(\mathbf e).
 $$
 
-If the layers have thicknesses $t_k$, a physical laminate stress resultant is $\mathbf N=\sum_k t_k\mathbf s^{(k)}$, so the thickness weighting must be absorbed into the parameters or the section assigned to the element, since the wrapper performs an unweighted sum.
-Classical lamination theory instead builds extensional, coupling and bending matrices from the through-thickness distribution of $\mathbf D^{(k)}$; this wrapper does not compute those matrices and is intended for membrane-like layers sharing a strain.
+If the layers have thicknesses $$t_k$$, a physical laminate stress resultant is $$\mathbf N=\sum_k t_k\mathbf s^{(k)}$$, so the thickness weighting must be absorbed into the parameters or the section assigned to the element, since the wrapper performs an unweighted sum.
+Classical lamination theory instead builds extensional, coupling and bending matrices from the through-thickness distribution of $$\mathbf D^{(k)}$$; this wrapper does not compute those matrices and is intended for membrane-like layers sharing a strain.
 
 !!! info "deviation from theory"
-    The wrapper adds layer stresses and tangents with unit weight, so the result is a membrane stress per unit thickness rather than the thickness-weighted resultant $\mathbf N=\sum_k t_k\mathbf s^{(k)}$ of a physical laminate.
+    The wrapper adds layer stresses and tangents with unit weight, so the result is a membrane stress per unit thickness rather than the thickness-weighted resultant $$\mathbf N=\sum_k t_k\mathbf s^{(k)}$$ of a physical laminate.
     Any thickness or volume weighting must be absorbed into the layer parameters or the section assigned to the element.
-    No $A$, $B$ or $D$ matrix is formed, so the wrapper cannot represent the bending stiffness of a stacked laminate.
+    No $$A$$, $$B$$ or $$D$$ matrix is formed, so the wrapper cannot represent the bending stiffness of a stacked laminate.
 
 The implementation copies each listed 2D material, evaluates all copies with the identical trial strain, and accumulates their stresses and tangents.
 Densities are summed during initialization, and recorded histories are concatenated in tag order.

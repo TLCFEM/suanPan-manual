@@ -43,8 +43,8 @@ Setting $$q_1=q_2=1$$ recovers the original Gurson criterion, while $$q_1=0$$ re
 The bulk modulus used in the volumetric part is $$K=E/[3(1-2\nu)]$$.
 
 !!! warning "implementation limitation"
-    The coefficient of the $f^2$ term is fixed to $q_3=q_1^2$ and cannot be set independently.
-    Only the uniaxial stress state $\sigma_2=\sigma_3=0$ is represented, so multiaxial triaxiality effects cannot be prescribed directly.
+    The coefficient of the $$f^2$$ term is fixed to $$q_3=q_1^2$$ and cannot be set independently.
+    Only the uniaxial stress state $$\sigma_2=\sigma_3=0$$ is represented, so multiaxial triaxiality effects cannot be prescribed directly.
 
 !!! note "developer note"
     The matrix hardening law is not defined in this class but must be supplied by a derived class.
@@ -85,7 +85,7 @@ There is no void coalescence term in this implementation.
 !!! warning "implementation limitation"
     The standard Gurson--Tvergaard--Needleman model adds a coalescence acceleration once the void fraction exceeds a critical value.
     This implementation stops at growth and nucleation, and there is no fracture or element-deletion criterion.
-    The void fraction is clamped to $[0,1]$ after each Newton update to prevent overshoot.
+    The void fraction is clamped to $$[0,1]$$ after each Newton update to prevent overshoot.
 
 ### Implicit Integration
 

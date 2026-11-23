@@ -63,7 +63,7 @@ The argument `(3)` is the yield stress magnitude and `(4)` is the hardening rati
 
 !!! info "deviation from theory"
     The syntax block labels `(4)` as a hardening modulus, but the input is actually a hardening ratio.
-    The post-yield slope used is $|E|\,b$, so the input is dimensionless.
+    The post-yield slope used is $$|E|\,b$$, so the input is dimensionless.
 
 !!! note "developer note"
     `new_bilinearelastic1d` passes `(4)` to the constructor as a ratio.

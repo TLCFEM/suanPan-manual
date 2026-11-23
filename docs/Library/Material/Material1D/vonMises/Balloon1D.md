@@ -68,11 +68,11 @@ $$
 This memory branch is the feature that gives the Balloon model its enhanced cyclic behaviour compared with the plain subloading surface model.
 
 !!! info "deviation from theory"
-    The reference $z_r$ is chosen as the minimum, maximum or mean of past normal yield ratios.
+    The reference $$z_r$$ is chosen as the minimum, maximum or mean of past normal yield ratios.
     It is not obtained from a continuously integrated plastic-strain memory surface.
 
 !!! note "developer note"
-    The reference $z_r$ is extracted from a finite ring buffer of past normal yield ratios.
+    The reference $$z_r$$ is extracted from a finite ring buffer of past normal yield ratios.
     The one-dimensional model uses scalar back-stress and elastic-core variables, while the three-dimensional formulation uses tensor-valued quantities.
 
 The implicit system is solved for the plastic multiplier and $$z$$ by Newton iteration, and the consistent tangent is formed by condensing the $$z$$ equation out of the Jacobian.

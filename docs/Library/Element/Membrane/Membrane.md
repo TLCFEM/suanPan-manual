@@ -6,14 +6,14 @@ For other special purpose elements, there are not many options anyway.
 ## Background
 
 A membrane element models a two-dimensional continuum that carries in-plane normal and shear stress.
-The displacement field is $\mathbf u=[u_1,u_2]^\mathrm T$ and the small-strain tensor is $\mathbf\varepsilon=\operatorname{sym}\nabla\mathbf u$.
-In Voigt order the strain vector is $\mathbf\varepsilon=[\varepsilon_{11},\varepsilon_{22},\gamma_{12}]^\mathrm T$ with $\gamma_{12}=2\varepsilon_{12}$, so that $\mathbf\sigma^\mathrm T\mathbf\varepsilon=\sigma_{11}\varepsilon_{11}+\sigma_{22}\varepsilon_{22}+\tau_{12}\gamma_{12}$.
-The governing equation is $\nabla\cdot\mathbf\sigma+\mathbf b=\mathbf 0$ and the constitutive law is $\mathbf\sigma=\mathbf D\mathbf\varepsilon$, with $\mathbf D$ supplied by the assigned material.
+The displacement field is $$\mathbf u=[u_1,u_2]^\mathrm T$$ and the small-strain tensor is $$\mathbf\varepsilon=\operatorname{sym}\nabla\mathbf u$$.
+In Voigt order the strain vector is $$\mathbf\varepsilon=[\varepsilon_{11},\varepsilon_{22},\gamma_{12}]^\mathrm T$$ with $$\gamma_{12}=2\varepsilon_{12}$$, so that $$\mathbf\sigma^\mathrm T\mathbf\varepsilon=\sigma_{11}\varepsilon_{11}+\sigma_{22}\varepsilon_{22}+\tau_{12}\gamma_{12}$$.
+The governing equation is $$\nabla\cdot\mathbf\sigma+\mathbf b=\mathbf 0$$ and the constitutive law is $$\mathbf\sigma=\mathbf D\mathbf\varepsilon$$, with $$\mathbf D$$ supplied by the assigned material.
 
 The plane assumption is selected by the material rather than by the element token.
-Under plane stress $\sigma_{33}=0$ and $\varepsilon_{33}=-\nu(\varepsilon_{11}+\varepsilon_{22})/(1-\nu)$ follows from the constitutive law.
-Under plane strain $\varepsilon_{33}=0$ and a reaction stress $\sigma_{33}=\nu(\sigma_{11}+\sigma_{22})$ develops, so the thickness argument is overridden to unity in the implementation.
-The axisymmetric family uses a four-component strain vector $[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]$ and replaces $\varepsilon_{33}$ by the hoop strain $\varepsilon_{\theta\theta}=u_r/r$.
+Under plane stress $$\sigma_{33}=0$$ and $$\varepsilon_{33}=-\nu(\varepsilon_{11}+\varepsilon_{22})/(1-\nu)$$ follows from the constitutive law.
+Under plane strain $$\varepsilon_{33}=0$$ and a reaction stress $$\sigma_{33}=\nu(\sigma_{11}+\sigma_{22})$$ develops, so the thickness argument is overridden to unity in the implementation.
+The axisymmetric family uses a four-component strain vector $$[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]$$ and replaces $$\varepsilon_{33}$$ by the hoop strain $$\varepsilon_{\theta\theta}=u_r/r$$.
 
 !!! info "deviation from theory"
     Most membrane elements have a single element token per geometry; plane stress and plane strain are distinguished by the material plane type.
@@ -22,19 +22,19 @@ The axisymmetric family uses a four-component strain vector $[\varepsilon_{rr},\
     ABAQUS-style names such as CPS4, CPE3 and CPS8R are only descriptive in the source class comments.
     The element parser registers a single token per geometry for most membrane elements, with plane stress and plane strain distinguished by the material plane type.
 
-All elements on this page are isoparametric, meaning geometry and displacement use the same nodal shape functions $N_a(\xi,\eta)$.
+All elements on this page are isoparametric, meaning geometry and displacement use the same nodal shape functions $$N_a(\xi,\eta)$$.
 $$
 \mathbf x=\sum_{a=1}^{n}N_a(\xi,\eta)\,\mathbf x_a,\qquad \mathbf u=\sum_{a=1}^{n}N_a(\xi,\eta)\,\mathbf u_a,\qquad \mathbf\varepsilon=\mathbf B\mathbf a.
 $$
-Here $\mathbf a$ collects the nodal displacements and $B_{ia}=\partial N_a/\partial x_i$ is assembled in Voigt form, with physical derivatives obtained from $\mathbf J^{-1}\partial N_a/\partial\mathbf\xi$ and $\mathbf J=\partial\mathbf x/\partial\mathbf\xi$.
+Here $$\mathbf a$$ collects the nodal displacements and $$B_{ia}=\partial N_a/\partial x_i$$ is assembled in Voigt form, with physical derivatives obtained from $$\mathbf J^{-1}\partial N_a/\partial\mathbf\xi$$ and $$\mathbf J=\partial\mathbf x/\partial\mathbf\xi$$.
 The element stiffness is evaluated by numerical quadrature,
 $$
 \mathbf K^e=\int_{\Omega^e}\mathbf B^\mathrm T\mathbf D\mathbf B\,t\,\mathrm d\Omega=\sum_{q=1}^{n_q}\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q\,t\,J_q\,w_q,
 $$
-where $J_q$ is the Jacobian determinant, $w_q$ the quadrature weight, $t$ the thickness and $n_q$ the number of integration points.
+where $$J_q$$ is the Jacobian determinant, $$w_q$$ the quadrature weight, $$t$$ the thickness and $$n_q$$ the number of integration points.
 
 The node-ordering convention is counter-clockwise around the element.
-For quadrilaterals node 1 is at $(\xi,\eta)=(-1,-1)$ and nodes 2, 3, 4 follow counter-clockwise.
+For quadrilaterals node 1 is at $$(\xi,\eta)=(-1,-1)$$ and nodes 2, 3, 4 follow counter-clockwise.
 The 5-, 6- and 7-node quadrilaterals add midside nodes on the bottom, right and top edges in that order, while the 8-node quadrilateral adds the left-edge midside node as well.
 For triangles nodes 1 to 3 occupy the vertices and nodes 4 to 6 the corresponding edge midpoints.
 

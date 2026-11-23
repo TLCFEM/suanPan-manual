@@ -7,7 +7,7 @@ Combines multiple 1D material models into a single one.
 ## Theory
 
 A series rheological arrangement places several constitutive elements end to end along the same load path.
-Equilibrium of the force transmitted through the chain means every constituent carries the same stress, $\sigma^{(k)}=\sigma$, while compatibility makes the total elongation the sum of the individual ones,
+Equilibrium of the force transmitted through the chain means every constituent carries the same stress, $$\sigma^{(k)}=\sigma$$, while compatibility makes the total elongation the sum of the individual ones,
 
 $$
 \varepsilon=\sum_{k=1}^{n}\varepsilon^{(k)}(\sigma),
@@ -17,19 +17,19 @@ S(\sigma)=\dfrac{\partial\varepsilon}{\partial\sigma}=\sum_{k=1}^{n}S^{(k)}(\sig
 D=\left(\sum_{k=1}^{n}\dfrac{1}{D^{(k)}}\right)^{-1},
 $$
 
-where $S^{(k)}=1/D^{(k)}$ is the tangent compliance of constituent $k$.
-With volume fractions the same statement becomes $S=\sum_k f_k S^{(k)}$, which is the iso-stress or Reuss assumption and gives a lower bound on the effective stiffness.
-For two linear springs this reproduces the harmonic average $E_{\mathrm{eq}}=E_1E_2/(E_1+E_2)$ when no fractions are supplied.
+where $$S^{(k)}=1/D^{(k)}$$ is the tangent compliance of constituent $$k$$.
+With volume fractions the same statement becomes $$S=\sum_k f_k S^{(k)}$$, which is the iso-stress or Reuss assumption and gives a lower bound on the effective stiffness.
+For two linear springs this reproduces the harmonic average $$E_{\mathrm{eq}}=E_1E_2/(E_1+E_2)$$ when no fractions are supplied.
 
 !!! info "deviation from theory"
-    The wrapper adds the constituent compliances with unit weight, so the Reuss average is obtained only when all volume fractions $f_k$ are equal.
+    The wrapper adds the constituent compliances with unit weight, so the Reuss average is obtained only when all volume fractions $$f_k$$ are equal.
     No area or volume fraction is read from the input, so any weighting must already be embedded in the constituent parameters.
 
 For a prescribed total strain the local strains of the constituents are not known in advance, so the implementation solves a small nonlinear system at each trial state.
-The unknowns are the strains $\varepsilon^{(k)}$ of all $n$ constituents, the first residual enforces $\varepsilon-\sum_k\varepsilon^{(k)}=0$, and the remaining $n-1$ residuals enforce equality of neighbouring stresses $\sigma^{(k)}-\sigma^{(k+1)}=0$.
+The unknowns are the strains $$\varepsilon^{(k)}$$ of all $$n$$ constituents, the first residual enforces $$\varepsilon-\sum_k\varepsilon^{(k)}=0$$, and the remaining $$n-1$$ residuals enforce equality of neighbouring stresses $$\sigma^{(k)}-\sigma^{(k+1)}=0$$.
 The Jacobian is assembled from the host tangent stiffnesses with signs consistent with these residuals, and the Newton correction is added to each local strain until the correction or the residual falls below the tolerance.
 The maximum number of local iterations is fixed at 20 in the class, and failure is reported as an error.
-The wrapper stiffness is the harmonic sum $1/\sum_k 1/D^{(k)}$, and the reported stress is that of the first constituent, which equals the common series stress at convergence.
+The wrapper stiffness is the harmonic sum $$1/\sum_k 1/D^{(k)}$$, and the reported stress is that of the first constituent, which equals the common series stress at convergence.
 
 This wrapper is the 1D series counterpart of [Parallel](Parallel.md), which imposes equal strain instead.
 It is useful for building Maxwell-type or generalised rheological arrangements from rate-independent 1D laws, although the viscosity-free restriction below still applies.

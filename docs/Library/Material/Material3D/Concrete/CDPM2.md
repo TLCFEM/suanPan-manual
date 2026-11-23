@@ -17,15 +17,15 @@ The complete derivation is given in [1]; the implementation is also documented i
 
 ### Effective stress and yield surface
 
-The elastic response is computed from the effective stress $\bar{\mathbf\sigma}=\mathbf D_e:(\mathbf\varepsilon-\mathbf\varepsilon^p)$, and the nominal stress is obtained by the degradation rules given in the Examples section below.
-The yield surface is written in Haigh--Westergaard coordinates, namely the volumetric stress $\sigma_V=I_1/3$, the deviatoric norm $\rho=\sqrt{2J_2}$ and the Lode angle $\theta$,
+The elastic response is computed from the effective stress $$\bar{\mathbf\sigma}=\mathbf D_e:(\mathbf\varepsilon-\mathbf\varepsilon^p)$$, and the nominal stress is obtained by the degradation rules given in the Examples section below.
+The yield surface is written in Haigh--Westergaard coordinates, namely the volumetric stress $$\sigma_V=I_1/3$$, the deviatoric norm $$\rho=\sqrt{2J_2}$$ and the Lode angle $$\theta$$,
 
 $$
 f_p=\left\{\left[1-q_{h1}\right]\left(\dfrac{\rho}{\sqrt{6}f_c}+\dfrac{\sigma_V}{f_c}\right)^2+\sqrt{\dfrac32}\dfrac{\rho}{f_c}\right\}^2
 +m_0q_{h1}^2q_{h2}\left[\dfrac{\rho}{\sqrt{6}f_c}r(\cos\theta)+\dfrac{\sigma_V}{f_c}\right]-q_{h1}^2q_{h2}^2.
 $$
 
-The function $r(\cos\theta)$ is the Willam--Warnke shape function that interpolates the deviatoric section between a triangle at low confinement and a circle at high confinement; its eccentricity $e$ is computed internally from $f_t$, $f_c$ and the biaxial ratio $1.16$.
+The function $$r(\cos\theta)$$ is the Willam--Warnke shape function that interpolates the deviatoric section between a triangle at low confinement and a circle at high confinement; its eccentricity $$e$$ is computed internally from $$f_t$$, $$f_c$$ and the biaxial ratio $$1.16$$.
 The friction parameter is
 
 $$
@@ -34,22 +34,22 @@ $$
 
 !!! info "deviation from theory"
     The published model treats the Willam--Warnke eccentricity as an independent calibration parameter.
-    The implementation derives it from $f_t$, $f_c$ and a fixed biaxial compression ratio of $1.16$, so it cannot be set independently.
-    The friction parameter $m_0$ is likewise computed rather than supplied.
+    The implementation derives it from $$f_t$$, $$f_c$$ and a fixed biaxial compression ratio of $$1.16$$, so it cannot be set independently.
+    The friction parameter $$m_0$$ is likewise computed rather than supplied.
 
-The two dimensionless hardening functions $q_{h1}(\kappa_p)$ and $q_{h2}(\kappa_p)$ control the size of the loading surface and the ratio between the tensile and compressive strengths.
-For $q_{h2}=1$ the formulation reduces to the single-surface CDPM model.
-The hardening variable $\kappa_p$ grows with the norm of the plastic strain divided by a ductility measure $x_h(\sigma_V)$, which gives greater strain capacity under confined compression than under tension.
+The two dimensionless hardening functions $$q_{h1}(\kappa_p)$$ and $$q_{h2}(\kappa_p)$$ control the size of the loading surface and the ratio between the tensile and compressive strengths.
+For $$q_{h2}=1$$ the formulation reduces to the single-surface CDPM model.
+The hardening variable $$\kappa_p$$ grows with the norm of the plastic strain divided by a ductility measure $$x_h(\sigma_V)$$, which gives greater strain capacity under confined compression than under tension.
 
 ### Damage
 
 Damage is driven by equivalent strains that depend on the effective stress and on a split between tensile and compressive loading.
-Two exponential softening laws, governed by $e_{ft}$ and $e_{fc}$, map the damage history variables to $\omega_t$ and $\omega_c$.
+Two exponential softening laws, governed by $$e_{ft}$$ and $$e_{fc}$$, map the damage history variables to $$\omega_t$$ and $$\omega_c$$.
 These reference strains control the slope of the softening branch and are the parameters through which the element size can be accounted for.
-The isotropic variant degrades the whole effective stress by $(1-\omega_t)(1-\omega_c)$, whereas the anisotropic variant degrades the positive and negative spectral parts separately.
+The isotropic variant degrades the whole effective stress by $$(1-\omega_t)(1-\omega_c)$$, whereas the anisotropic variant degrades the positive and negative spectral parts separately.
 
 !!! warning "implementation limitation"
-    Damage is skipped entirely while both damage history variables remain below the threshold $\varepsilon_0=f_t/E$, and the `CDPM2NO` token disables damage for the whole analysis.
+    Damage is skipped entirely while both damage history variables remain below the threshold $$\varepsilon_0=f_t/E$$, and the `CDPM2NO` token disables damage for the whole analysis.
     The default `CDPM2` token selects isotropic damage, so `CDPM2ANISO` must be requested explicitly.
 
 !!! note "developer note"
@@ -94,10 +94,10 @@ material CDPM2NO (1) [2-16]
 
 ### Implementation and calibration notes
 
-- The parser validates the initial hardening ratio $q_{h0}$ to be in $[0,1]$ and requires the hardening ratio $h_p$ to satisfy $h_p<1-q_{h0}$.
-- The default strengths are $f_t=3$ and $f_c=30$, and the biaxial compression ratio used to derive the Willam--Warnke eccentricity is fixed at $1.16$.
-- The parameters $q_{h0}$ and $h_p$ control the evolution of the two yield surfaces; $a_h$, $b_h$, $c_h$ and $d_h$ define the ductility measure that scales the hardening rate with confinement.
-- The parameter $a_s$ controls the shear-related ductility of the compressive damage evolution.
+- The parser validates the initial hardening ratio $$q_{h0}$$ to be in $$[0,1]$$ and requires the hardening ratio $$h_p$$ to satisfy $$h_p<1-q_{h0}$$.
+- The default strengths are $$f_t=3$$ and $$f_c=30$$, and the biaxial compression ratio used to derive the Willam--Warnke eccentricity is fixed at $$1.16$$.
+- The parameters $$q_{h0}$$ and $$h_p$$ control the evolution of the two yield surfaces; $$a_h$$, $$b_h$$, $$c_h$$ and $$d_h$$ define the ductility measure that scales the hardening rate with confinement.
+- The parameter $$a_s$$ controls the shear-related ductility of the compressive damage evolution.
 - Unlike [`CDP`](CDP.md), the strengths here are entered as positive magnitudes and the model uses a Lode-angle-dependent surface rather than the Lubliner cone.
 - The material is intended for solid elements such as `C3D8`; combine it with [`Rebar3D`](Rebar3D.md) through [`Stacked`](../../Wrapper/Stacked.md) for reinforced concrete.
 

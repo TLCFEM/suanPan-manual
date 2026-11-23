@@ -8,7 +8,7 @@ Internally `NLE1D01` instantiates [`BilinearElastic1D`](BilinearElastic1D.md) wi
 
 !!! info "deviation from theory"
     Only the monotonic first-loading branch of the Menegotto--Pinto equation is used.
-    The curvature parameter $R$ is the constant supplied as `(5)`, with no reversal detection, no evolution of $R$, no Bauschinger effect and no isotropic hardening.
+    The curvature parameter $$R$$ is the constant supplied as `(5)`, with no reversal detection, no evolution of $$R$$, no Bauschinger effect and no isotropic hardening.
     The model is therefore an elastic backbone, not the cyclic hysteretic model from which the transition formula originates.
 
 ## Theory

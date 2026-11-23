@@ -21,7 +21,7 @@ Because the hardening function is supplied to [`NonlinearCamClay`](NonlinearCamC
     The hardening derivative is obtained numerically rather than analytically, so very steep hardening laws or sharp transitions can give an inaccurate consistent tangent.
 
 !!! note "developer note"
-    The derivative passed to the return mapping comes from `Expression::gradient`, which uses a fixed finite step of $10^{-4}$ instead of analytic differentiation.
+    The derivative passed to the return mapping comes from `Expression::gradient`, which uses a fixed finite step of $$10^{-4}$$ instead of analytic differentiation.
 
 ## Syntax
 
