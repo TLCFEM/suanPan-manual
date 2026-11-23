@@ -17,6 +17,8 @@ The stiffness is written in terms of $E$ and $B$ rather than $E$ and $\nu$, with
     The model is incrementally nonlinear elastic and accumulates no plastic strain.
     The Mohr--Coulomb expression only caps the tangent modulus and does not define an associated yield surface or a flow rule.
 
+A worked example covering parameter selection, a comparison with [`BilinearDP`](../Material3D/DruckerPrager/BilinearDP.md), and a strip footing settlement checked against a conventional 1D computation is given in [Triaxial Compression and Strip Footing Settlement of Sand](../../../Example/Geotechnical/triaxial-compression-and-strip-footing-settlement.md).
+
 ## References
 
 1. [10.3141/2511-07](https://doi.org/10.3141/2511-07)

@@ -1,4 +1,4 @@
-# [★★★☆☆] Duncan–Selig Soil Model: Triaxial Benchmark and Strip Footing Settlement
+# [★★★☆☆] Triaxial Compression and Strip Footing Settlement of Sand
 
 The [`DuncanSelig`](../../Library/Material/Material2D/DuncanSelig.md) model combines the hyperbolic Young's modulus of Duncan and Chang with the stress-dependent bulk modulus of Selig.
 It is a *nonlinear elastic* plane-strain model: the tangent stiffness changes with the current stress level, but no plastic strain is accumulated and unloading/reloading follows the initial (undegraded) modulus.
@@ -8,7 +8,7 @@ This example has three parts.
 2. The same test is repeated with [`BilinearDP`](../../Library/Material/Material3D/DruckerPrager/BilinearDP.md) wrapped by [`PlaneStrain`](../../Library/Material/Wrapper/PlaneStrain.md), and the two curves are compared.
 3. A 2 m wide strip footing is analysed and its settlement is checked against a conventional 1D layer-wise (textbook) computation based on the Boussinesq stress distribution.
 
-The model scripts can be [downloaded](duncan-selig-soil-model.zip).
+The model scripts can be [downloaded](triaxial-compression-and-strip-footing-settlement.zip).
 
 ## The Model in Brief
 
@@ -107,14 +107,14 @@ The constants are calibrated as follows.
 * $\eta_f=0.173$ is the potential (dilatancy) parameter fitted with a dilation angle $\psi=10°$. Associative flow ($\eta_f=\eta_y$) would produce about 32% lateral strain at 10% axial strain — roughly three times the measured dilation of dense sand. Non-associated flow also makes the tangent nonsymmetric, another reason for `set symm_mat 0`.
 * $c_0=3~\mathrm{kPa}$ is the same cohesion as in the hyperbolic model, and $H=500~\mathrm{kPa}$ is chosen so that the two curves nearly match again at 10% axial strain (1131 versus 1173 kPa). This is a calibration to the curve, not a strength parameter.
 
-![deviator stress versus axial strain](duncan-selig-triaxial.svg)
+![deviator stress versus axial strain](triaxial-compression-and-strip-footing-settlement-triaxial.svg)
 
 The two curves are close, but for different reasons.
 `DuncanSelig` is smoothly nonlinear from the first increment: the tangent modulus decays as the stress level $q/\sigma_{d,\max}$ rises, and there is no distinct yield event.
 `BilinearDP` is linear until the yield surface is reached at about 2% strain (visible as the kink), then hardens with a constant plastic slope.
 The agreement at 10% strain is a consequence of choosing $H$; it does not imply that either model predicts the same response for a different confinement or load path.
 
-![lateral strain versus axial strain](duncan-selig-lateral.svg)
+![lateral strain versus axial strain](triaxial-compression-and-strip-footing-settlement-lateral.svg)
 
 The lateral strains differ more than the deviatoric stresses: the elastoplastic cone dilates about 1.4 times as much as the hyperbolic model at 10% axial strain.
 Use `recorder 3 hdf5 Element PE 1` to see the accumulated plastic strain in the DP case — the corresponding history entry of `DuncanSelig` only stores the maximum deviatoric stress ever reached and is **not** a yield indicator.
@@ -185,7 +185,7 @@ The 2D finite element result is 1.29 times the 1D value.
 This is the expected order of magnitude: layer-wise summation suppresses lateral spreading and shear under a finite strip, so it is well known to underestimate footing settlement; correction factors of about 1.2–1.5 are common in practice.
 The remaining difference also reflects the coarse mesh and the artificial lateral boundaries at $x=\pm4~\mathrm{m}$.
 
-![settlement profile](duncan-selig-footing.svg)
+![settlement profile](triaxial-compression-and-strip-footing-settlement-footing.svg)
 
 The surface profile shapes agree well: both methods give a broad dish with a maximum under the footing and a rapid decay outside it.
 The steeper FE profile near the edges comes from the shear distortions that the 1D method cannot represent.

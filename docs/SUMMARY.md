@@ -37,7 +37,7 @@
     * [wave propagation](Example/Solid/wave-propagation.md)
 * Geotechnical
     * [triaxial compression of sand](Example/Geotechnical/triaxial-compression-of-sand.md)
-    * [Duncan–Selig soil model](Example/Geotechnical/duncan-selig-soil-model.md)
+    * [triaxial compression and strip footing settlement](Example/Geotechnical/triaxial-compression-and-strip-footing-settlement.md)
     * [slope analysis](Example/Geotechnical/slope-analysis.md)
 * Structural
     * Statics
