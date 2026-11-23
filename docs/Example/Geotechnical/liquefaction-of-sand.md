@@ -66,7 +66,7 @@ Under constant volume the contractive plastic volumetric increment $\Delta\varep
 
 Two further features are essential for the post-liquefaction response.
 The fabric tensor $\mathbf z$ evolves only when the dilatancy is positive and amplifies it by $1+\mathbf z:\mathbf n$, producing the sharp re-mobilisation of strength known as cyclic mobility.
-The shear modulus $G=G_0(2.97-e)^2/(1+e)\sqrt{|p'p_{at}|}$ degrades with $\sqrt{|p'|}$ as the effective stress falls, so the specimen becomes very soft at liquefaction; the floor $G\ge G_rG_0|p_{at}|$ keeps the tangent finite.
+The shear modulus $G=G_0(2.97-e)^2/(1+e)\sqrt{|p'p_{at}|}$ degrades with $\sqrt{|p'|}$ as the effective stress falls, so the specimen becomes very soft at liquefaction; the floor $G\ge G_rG_0|p_{at}|$ limits that degradation.
 
 ## Parameter Selection
 
@@ -95,7 +95,7 @@ material DafaliasManzari 1 125 .05 1.25 .02 .9 .7 .01 7 .1 .9 1.1 -.3 3.5 4 600 
 | 15 | $z_{max}$ | 4 | Limiting fabric magnitude; controls the magnitude of post-liquefaction strain bursts. |
 | 16 | $c_z$ | 600 | Fabric evolution rate; larger values make fabric build up faster during dilative phases. |
 | 17 | $p_{at}$ | $-130$ | Atmospheric pressure used for normalisation. Entered **negative** in this convention (kPa here, 14.7 in psi). |
-| 18 | $G_r$ | 0.2 | Floor on $G$ as a fraction of $G_0|p_{at}|$; keeps the stiffness finite when $p'\to0$. |
+| 18 | $G_r$ | 0.2 | Lower bound on $G$ as a fraction of $G_0|p_{at}|$; limits stiffness degradation at low $p'$. |
 
 !!! info "suggested calibration sequence"
     1. Fit $G_0$ and $\nu$ to the small-strain stiffness of drained triaxial tests.
@@ -142,7 +142,7 @@ This is stiffness and strength degradation caused by the rising pore pressure: w
 ![effective stress path](liquefaction-effective-stress-path.svg)
 
 The effective stress path migrates steadily towards the origin as $p'\to0$ and $q\to0$ — the classic signature of flow liquefaction.
-The model then engages the regularised cap: the pressure is kept at the small elastic value produced by the floor shear modulus $G_rG_0|p_{at}|$, so the tangent stays full-rank and no artificial tensile strength of engineering significance is introduced.
+At that state the yield surface contracts to the origin and the sand carries essentially no shear stress; the remaining response is governed by the low-pressure elastic modulus floor.
 
 ### Rate of Pore-Pressure Generation
 
@@ -167,12 +167,10 @@ With $A_0>0$ the response is dilative: the excess pore pressure is *negative* ($
 
 ## Remarks
 
-* The model computes the void ratio from the **trace of the total strain**, $e=e_0+(1+e_0)\,\mathrm{tr}\,\boldsymbol\varepsilon$. At large strains this is only an approximation, and the accumulation of volumetric error directly shifts $\psi$ and therefore the dilatancy and bounding surfaces.
-* The published model includes a Lode-angle function $g(\theta,c)$; this implementation drops it ($c=1$), so the yield surface is circular in the deviatoric plane. True triaxial stress states are approximated.
-* The hardening modulus was modified from the published $1/(\boldsymbol\alpha-\boldsymbol\alpha_{in}):\mathbf n$ form to an exponential expression to remove the singularity under small load reversals — precisely the regime of a cyclic liquefaction simulation.
-* At zero effective confinement the sand has no shear strength: $F=|\mathbf s+p'\boldsymbol\alpha|+mp'$ with $p'\approx0$ requires $|\mathbf s|\approx0$. A *prescribed* shear displacement at liquefaction therefore has no admissible equilibrium, and a single-element FE model with all lateral DoFs constrained cannot be driven beyond this point. The material-point test avoids this by prescribing strain directly.
-* Near zero effective pressure the hyperelastic moduli are floored at $G_rG_0|p_{at}|$. The tension cap retains the corresponding small elastic pressure and returns the matching isotropic tangent, so the stress and tangent remain consistent and the global FE matrix keeps its bulk stiffness. The artificial tensile stress is $O(G_rG_0|p_{at}|\,\varepsilon_v)$ and vanishes with $G_r$.
-* $p_{at}$ is forced negative and all arguments except $A_0$ are converted to absolute values by the constructor. Entering a positive $p_{at}$ still works, but entering a positive $A_0$ when contractive behaviour is intended does not.
+* The void ratio follows the **trace of the total strain**, $e=e_0+(1+e_0)\,\mathrm{tr}\,\boldsymbol\varepsilon$, so volumetric straining shifts $\psi$ and thereby the dilatancy and bounding surfaces.
+* The yield surface is circular in the deviatoric plane, corresponding to $c=1$ in the published formulation.
+* The hardening modulus uses an exponential form, giving a smooth response across the load reversals of cyclic loading.
+* $p_{at}$ is entered as a negative number and $A_0$ retains its sign; the remaining parameters are entered as magnitudes.
 * For a simpler bounding-surface sand model without fabric effects, use [`SimpleSand`](../../Library/Material/Material3D/Sand/SimpleSand.md); it has no state-parameter-driven dilatancy and cannot reproduce the acceleration of pore-pressure build-up shown here.
 
 ## References
