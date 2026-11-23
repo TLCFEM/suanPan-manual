@@ -23,6 +23,12 @@ materialTest3D (1) (2...7) (8) [9...]
 # (2...7) double, size of per strain increment
 # (8) int, number of steps along increment direction
 # [9...] int, optional numbers of steps for strain history
+
+materialTestWithBase3D (1) (2...7) (8) [9...]
+# (1) int, unique tag of the material model to use
+# (2...7) double, base strain vector applied in a single increment before cycling
+# (8) double, size of per strain increment during cycling
+# [9...] int, optional numbers of steps for strain history
 ```
 
 ## Remarks
@@ -32,6 +38,9 @@ materialTest3D (1) (2...7) (8) [9...]
 3. The strain-stress history is saved to `RESULT.txt`.
    If HDF5 support is enabled, the result is additionally saved to `RESULT.h5`.
    A `gnuplot` file named `RESULT.plt` is also generated.
+4. The `WithBase` variants first apply the given base strain in one increment, then cycle with the specified increment.
+   This is useful for materials whose response depends strongly on an initial confinement, such as sand: the base strain establishes the mean effective stress before undrained shearing begins.
+   For example, [liquefaction of sand](../../Example/Geotechnical/liquefaction-of-sand.md) uses `materialTestWithBase3D` to consolidate a material point and then apply constant-volume cyclic simple shear.
 
 ## Usage
 

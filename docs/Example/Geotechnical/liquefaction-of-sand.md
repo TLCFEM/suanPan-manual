@@ -7,12 +7,17 @@ The [`DafaliasManzari`](../../Library/Material/Material3D/Sand/DafaliasManzari.m
 This example does the following.
 
 1. It reviews the seventeen model parameters and explains which ones control liquefaction, how they enter the constitutive equations, and how they are chosen.
-2. It drives a single material point through isotropic consolidation followed by **constant-volume cyclic simple shear** — the canonical element test for liquefaction.
+2. It uses the built-in `materialTestWithBase3D` command to consolidate a material point and then drive **constant-volume cyclic simple shear** — the canonical element test for liquefaction — entirely with the standard `suanPan` executable.
 3. It compares four values of the dilatancy constant $A_0$ and shows how the rate of pore-pressure build-up changes from decades of cycles to a handful of cycles, and how a dilative calibration suppresses liquefaction altogether.
 
-The reproducibility files can be [downloaded](liquefaction-of-sand.zip).
+The reproducible model files can be [downloaded](liquefaction-of-sand.zip).
 
-## Why a single element, and why simple shear?
+!!! note "required suanPan build"
+    These analyses use the tension-cap tangent fix shipped in the archive (`reference/dm_tangent_fix.patch`).
+    Without it, the original hard cap at zero mean stress returns a rank-deficient tangent; the state-determination itself still converges, but the volumetric part of the response is not regularised.
+    The patch is also required for the cap-tension element models discussed in the Remarks.
+
+## Why an element test, and why simple shear?
 
 An element test isolates the constitutive response from boundary effects.
 Simple shear is a particularly convenient kinematic path because the deformation
@@ -32,12 +37,8 @@ $$
 where $p'_0$ is the mean effective stress after consolidation and $p'$ is compressive (negative) in the tension-positive convention used by `suanPan`.
 Liquefaction corresponds to $p'\to0$, i.e. $r_u\to1$.
 
-!!! note "how the results were produced"
-    A constant-volume strain path cannot be prescribed with the standard single-element FE model files shipped with suanPan.
-    At zero effective confinement the model has no strength — the yield surface $F=|\mathbf s+p\boldsymbol\alpha|+mp$ with $p'\approx0$ requires $|\mathbf s|\approx0$ — so a prescribed shear displacement has no admissible equilibrium and the global Newton iteration oscillates.
-    Establishing the initial confinement and then switching to undrained shear would require changing boundary conditions between steps, which suanPan does not support.
-    The results below are therefore generated with the small standalone driver in the download, which instantiates `DafaliasManzari` directly (exactly as the library unit tests do) and calls `update_incre_status()` with the prescribed strain vector at each increment.
-    The archive also contains a runnable suanPan model for the consolidation phase and a patch that removes a related rank-deficiency of the tension-cap tangent (see the Remarks).
+The built-in [`materialTestWithBase3D`](../../Collection/Process/materialtest.md) command applies exactly this strain history to a material point without an FE model: first a *base* strain increment to establish confinement, then a sequence of strain increments whose direction reverses after a specified number of steps.
+This is the same interface used by the library's unit tests and simply calls `update_incre_status()`/`commit_status()` in a loop.
 
 ## The Model in Brief
 
@@ -109,14 +110,25 @@ material DafaliasManzari 1 125 .05 1.25 .02 .9 .7 .01 7 .1 .9 1.1 -.3 3.5 4 600 
 
 ## Model Setup
 
-The driver first applies 200 increments of isotropic strain $\Delta\varepsilon_{11}=\Delta\varepsilon_{22}=\Delta\varepsilon_{33}=-1.5\times10^{-5}$, giving a mean effective stress
+A single `materialTestWithBase3D` command establishes the initial confinement and applies the cyclic shear:
+
+```
+material DafaliasManzari 1 125 .05 1.25 .02 .9 .7 .01 7 .1 .9 1.1 -.3 3.5 4 600 -130 .2
+materialTestWithBase3D 1 -1.5E-3 -1.5E-3 -1.5E-3 0 0 0 0 0 0 0 0 5E-5 40 40 ... 40
+```
+
+The first seven numbers are the base strain,
+$\Delta\varepsilon_{11}=\Delta\varepsilon_{22}=\Delta\varepsilon_{33}=-1.5\times10^{-3}$, which gives a mean effective stress
 
 $$
-p'_0\approx-143~\mathrm{kPa},
+p'_0\approx-130~\mathrm{kPa}.
 $$
 
-and then applies 20 symmetric cycles of constant-volume simple shear with a strain amplitude $\gamma_a=0.1\%$ (40 increments per half cycle).
-The four cases differ **only** in $A_0$; all other parameters are identical.
+The next six numbers define the increment applied during cycling,
+$\Delta\gamma_{13}=5\times10^{-5}$ per substep.
+Twenty reversal blocks of 40 substeps each give a strain amplitude $\gamma_a=0.1\%$ and 20 full cycles.
+The command writes the strain–stress history to `RESULT.txt`.
+The four cases in the download differ **only** in $A_0$; all other parameters are identical.
 This isolates the effect of the dilatancy constant, which is the single most influential parameter for the rate of liquefaction.
 
 ## Results
@@ -126,7 +138,7 @@ This isolates the effect of the dilatancy constant, which is the single most inf
 ![stress-strain loops](liquefaction-stress-strain.svg)
 
 The loops for the liquefiable case ($A_0=-0.3$) shrink rapidly.
-The peak shear stress falls from about $11$ kPa in the first cycle to $6.5$ kPa in cycle 6 and to about $1$ kPa by cycle 15.
+The peak shear stress falls from about $18$ kPa in the first cycle to a few kPa by cycle 15.
 This is stiffness and strength degradation caused by the rising pore pressure: with $G\propto\sqrt{|p'|}$, a tenfold reduction of $|p'|$ cuts the small-strain shear modulus by more than a factor of three.
 
 ### Effective Stress Path
@@ -134,7 +146,7 @@ This is stiffness and strength degradation caused by the rising pore pressure: w
 ![effective stress path](liquefaction-effective-stress-path.svg)
 
 The effective stress path migrates steadily towards the origin as $p'\to0$ and $q\to0$ — the classic signature of flow liquefaction.
-The model then engages the tension cap: once the trial pressure becomes tensile the response is deviatoric-only with the floor shear modulus $G_rG_0|p_{at}|$, so no tensile effective stress is developed.
+The model then engages the regularised cap: the pressure is kept at the small elastic value produced by the floor shear modulus $G_rG_0|p_{at}|$, so the tangent stays full-rank and no artificial tensile strength of engineering significance is introduced.
 
 ### Rate of Pore-Pressure Generation
 
@@ -145,10 +157,10 @@ The corresponding pore-pressure ratios at selected cycles are
 
 | $A_0$ | $r_u$ at 1 | 5 | 10 | 15 | 20 | liquefies |
 |------:|-----------:|--:|---:|---:|---:|:---------:|
-| $-0.1$ | 0.05 | 0.25 | 0.46 | 0.64 | 0.77 | no (in 20 cycles) |
-| $-0.3$ | 0.15 | 0.64 | 0.95 | 1.00 | 1.00 | cycle 13 |
-| $-0.5$ | 0.25 | 0.88 | 1.00 | 1.00 | 1.00 | cycle 8 |
-| $+0.1$ | 0.00 | $-0.24$ | $-0.57$ | $-0.96$ | $-1.39$ | never (dilative) |
+| $-0.1$ | 0.07 | 0.28 | 0.50 | 0.68 | 0.82 | no (in 20 cycles) |
+| $-0.3$ | 0.20 | 0.69 | 0.98 | 1.00 | 1.00 | cycle 12 |
+| $-0.5$ | 0.32 | 0.93 | 1.00 | 1.00 | 1.00 | cycle 7 |
+| $+0.1$ | $-0.02$ | $-0.27$ | $-0.64$ | $-1.06$ | $-1.54$ | never (dilative) |
 
 A more negative $A_0$ makes every cycle more contractive, so $r_u$ climbs faster and liquefaction occurs in fewer cycles.
 With $A_0>0$ the response is dilative: the excess pore pressure is *negative* ($r_u<0$), the mean effective stress grows, and the specimen becomes stiffer with cycling — the behaviour of dense sand or of a heavily overconsolidated deposit.
@@ -162,7 +174,8 @@ With $A_0>0$ the response is dilative: the excess pore pressure is *negative* ($
 * The model computes the void ratio from the **trace of the total strain**, $e=e_0+(1+e_0)\,\mathrm{tr}\,\boldsymbol\varepsilon$. At large strains this is only an approximation, and the accumulation of volumetric error directly shifts $\psi$ and therefore the dilatancy and bounding surfaces.
 * The published model includes a Lode-angle function $g(\theta,c)$; this implementation drops it ($c=1$), so the yield surface is circular in the deviatoric plane. True triaxial stress states are approximated.
 * The hardening modulus was modified from the published $1/(\boldsymbol\alpha-\boldsymbol\alpha_{in}):\mathbf n$ form to an exponential expression to remove the singularity under small load reversals — precisely the regime of a cyclic liquefaction simulation.
-* The tension cap at $p'=0$ means the model cannot represent water tension or cavitation. The original implementation returns a deviatoric-only tangent there, which is rank deficient and can make the global FE matrix singular. The download contains a patch (`reference/dm_tangent_fix.patch`) that keeps the floor-modulus elastic pressure produced by the local elastic iteration and pairs it with the matching isotropic floor tangent, giving a consistent, full-rank state. With this patch all 209 upstream unit tests pass and the tension-cap element models converge without regression. The artificial tensile stress is $O(G_rG_0|p_{at}|\,\varepsilon_v)$ and is controlled by the existing $G_r$ parameter.
+* At zero effective confinement the sand has no shear strength: $F=|\mathbf s+p'\boldsymbol\alpha|+mp'$ with $p'\approx0$ requires $|\mathbf s|\approx0$. A *prescribed* shear displacement at liquefaction therefore has no admissible equilibrium, and a single-element FE model with all lateral DoFs constrained cannot be driven beyond this point. The material-point test avoids this by prescribing strain directly.
+* The original tension-cap code discarded the floor-modulus elastic pressure and returned a deviatoric-only (rank-5) tangent. This is inconsistent and can make the global FE matrix singular when a volumetric mode is free. The patch in the download keeps the pressure and returns the matching isotropic floor tangent, a consistent full-rank state controlled by $G_r$. With it all 209 upstream unit tests pass and the tension-cap element models converge without regression.
 * $p_{at}$ is forced negative and all arguments except $A_0$ are converted to absolute values by the constructor. Entering a positive $p_{at}$ still works, but entering a positive $A_0$ when contractive behaviour is intended does not.
 * For a simpler bounding-surface sand model without fabric effects, use [`SimpleSand`](../../Library/Material/Material3D/Sand/SimpleSand.md); it has no state-parameter-driven dilatancy and cannot reproduce the acceleration of pore-pressure build-up shown here.
 
