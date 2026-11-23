@@ -37,6 +37,7 @@
     * [wave propagation](Example/Solid/wave-propagation.md)
 * Geotechnical
     * [triaxial compression of sand](Example/Geotechnical/triaxial-compression-of-sand.md)
+    * [liquefaction of sand under cyclic simple shear](Example/Geotechnical/liquefaction-of-sand.md)
     * [slope analysis](Example/Geotechnical/slope-analysis.md)
 * Structural
     * Statics

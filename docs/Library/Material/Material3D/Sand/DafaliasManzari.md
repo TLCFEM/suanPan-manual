@@ -23,6 +23,9 @@ The modifications can be summarised as follows.
 **The algorithm is correct but the theory needs validation.**
 **Your collaboration would be much appreciated.**
 
+!!! note "worked example"
+    See [Liquefaction of Sand Under Cyclic Simple Shear](../../../../Example/Geotechnical/liquefaction-of-sand.md) for a calibrated single-element example, a parameter-by-parameter selection guide focused on liquefaction, and a study of the dilatancy constant $A_0$.
+
 ## Syntax
 
 ```text title="DafaliasManzari"
