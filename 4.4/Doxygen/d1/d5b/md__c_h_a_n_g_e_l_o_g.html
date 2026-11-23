@@ -119,6 +119,11 @@ $(function(){initNavTree('d1/d5b/md__c_h_a_n_g_e_l_o_g.html','../../',''); });
 <li>refactor command parsers with token registries, factory functions and centralized tag extraction, with improved error handling <a href="https://github.com/TLCFEM/suanPan/pull/406">#406</a> <a href="https://github.com/TLCFEM/suanPan/pull/407">#407</a> <a href="https://github.com/TLCFEM/suanPan/pull/409">#409</a> <a href="https://github.com/TLCFEM/suanPan/pull/410">#410</a></li>
 <li>use an RAII wrapper for <span class="tt">HDF5</span> handling and remove the <span class="tt">hdf5_hl</span> dependency <a href="https://github.com/TLCFEM/suanPan/pull/398">#398</a></li>
 <li>update <span class="tt">VTK</span> to version <span class="tt">9.7.2</span></li>
+<li>add asynchronous printing support with a dedicated worker thread for ordered, non-blocking output in batch runs, with an <span class="tt">AsyncPrintGuard</span> RAII helper and improved <span class="tt"><a class="el" href="../../d3/dce/classthread__pool.html" title="A fixed-size thread pool for asynchronous task execution.">thread_pool</a></span> thread safety <a href="https://github.com/TLCFEM/suanPan/pull/413">#413</a></li>
+<li>refactor <span class="tt"><a class="el" href="../../de/d0b/class_duncan_selig.html" title="A DuncanSelig material class.">DuncanSelig</a></span> local iteration for modularity and stability, seed the iteration with an elastic predictor and add coverage tests <a href="https://github.com/TLCFEM/suanPan/pull/412">#412</a></li>
+<li>update <span class="tt">Armadillo</span> to version <span class="tt">15.8.0</span></li>
+<li>add adjusted steel section registries <span class="tt">US2DA</span>, <span class="tt">US3DA</span>, <span class="tt">US2DAC</span>, <span class="tt">US3DAC</span>, <span class="tt">EU2DA</span>, <span class="tt">EU3DA</span>, <span class="tt">NZ2DA</span> and <span class="tt">NZ3DA</span>, with dimensions optimized against tabulated <span class="tt">AISC</span>, <span class="tt">EN 10365</span> and NZ properties</li>
+<li>replace manual Euclidean norm computations with <span class="tt">std::hypot</span> for improved numerical robustness</li>
 </ol>
 <h1>version 4.3</h1>
 <ol type="1">
