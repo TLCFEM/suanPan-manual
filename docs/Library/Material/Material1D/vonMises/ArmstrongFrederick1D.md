@@ -147,5 +147,5 @@ with ErrorLine(
 
 ## References
 
-1. A mathematical representation of the multiaxial Bauschinger effect, CEGB Report
+1. A mathematical representation of the multiaxial Bauschinger effect
 2. [10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6)

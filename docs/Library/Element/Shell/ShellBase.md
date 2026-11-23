@@ -77,7 +77,7 @@ Use one of its derived elements instead: [`DKTS3`](DKTS3.md), [`S4`](S4.md) or [
 
 ## References
 
-1. [ISBN 978-0-9790049-5-7](https://search.worldcat.org/search?q=bn:9780979004957)
-2. [ISBN 978-0-7506-5051-9](https://search.worldcat.org/search?q=bn:9780750650519)
+1. [ISBN 978-0-13-301458-7](https://search.worldcat.org/search?q=bn:9780133014587)
+2. [ISBN 978-0-7506-5050-2](https://search.worldcat.org/search?q=bn:9780750650502)
 3. [ISBN 978-0-471-35605-9](https://search.worldcat.org/search?q=bn:9780471356059)
 4. [10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2)

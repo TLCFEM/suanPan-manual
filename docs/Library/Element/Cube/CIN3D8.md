@@ -23,7 +23,7 @@ It is normally coupled to ordinary finite elements such as [C3D8](C3D8.md) or [C
 ## References
 
 1. [10.1016/0045-7949(84)90019-1](https://doi.org/10.1016/0045-7949(84)90019-1)
-2. International Journal for Numerical Methods in Engineering
+2. Infinite elements
 3. [10.1002/nme.1620210705](https://doi.org/10.1002/nme.1620210705)
 
 ## Syntax

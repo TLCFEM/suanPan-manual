@@ -58,4 +58,4 @@ element DKT4 (1) (2...5) (6) (7) [8]
 ## References
 
 1. [10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205)
-2. Batoz, J.-L. and Tahar, M.B. (1982), Evaluation of a new quadrilateral thin plate
+2. Evaluation of a new quadrilateral thin plate bending element

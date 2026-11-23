@@ -9,9 +9,9 @@ Concrete Damage Plasticity Model
 3. [10.1002/1097-0207(20010120)50:2<487::AID-NME44>3.0.CO;2-N](https://doi.org/10.1002/1097-0207(20010120)50:2%3C487::AID-NME44%3E3.0.CO;2-N)
 4. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)
 5. [10.1016/j.acme.2019.07.003](https://doi.org/10.1016/j.acme.2019.07.003)
-6. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in
+6. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume
 7. [10.1016/j.ijsolstr.2006.06.032](https://doi.org/10.1016/j.ijsolstr.2006.06.032)
-8. Behavior of concrete under biaxial stresses, ACI Journal, 66(8), 656--666
+8. Behavior of concrete under biaxial stresses
 
 !!! warning "automatic regularization"
     The `CDP` model automatically regularizes the input arguments to avoid ill-shaped backbones.

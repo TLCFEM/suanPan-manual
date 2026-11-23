@@ -46,4 +46,4 @@ material CustomDP (1) (2) (3) (4) (5) (6) (7) [8]
 
 ## References
 
-1. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in
+1. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume

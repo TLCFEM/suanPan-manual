@@ -52,4 +52,4 @@ This is the configuration used in `Example/Material/ConcreteTable.supan`.
 
 ## References
 
-1. [Chang, T. L. (2023), Constitutive Modelling Cookbook, online](https://github.com/TLCFEM/constitutive-modelling-cookbook)
+1. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook)

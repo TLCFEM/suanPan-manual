@@ -7,7 +7,7 @@ CDPM2 Model for Concrete Material
 1. [10.1016/j.ijsolstr.2013.07.008](https://doi.org/10.1016/j.ijsolstr.2013.07.008)
 2. [10.1016/j.ijsolstr.2005.05.038](https://doi.org/10.1016/j.ijsolstr.2005.05.038)
 3. [10.1016/j.ijsolstr.2006.06.032](https://doi.org/10.1016/j.ijsolstr.2006.06.032)
-4. A triaxial failure criterion for concrete and its generalization, ACI Structural
+4. A triaxial failure criterion for concrete and its generalization
 
 ## Background
 

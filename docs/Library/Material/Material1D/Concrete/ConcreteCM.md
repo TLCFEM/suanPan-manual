@@ -154,7 +154,7 @@ $$
 
 ## References
 
-1. Seismic Energy Based Fatigue Damage Analysis of Bridge Columns, Part I: Evaluation of
+1. Seismic Energy Based Fatigue Damage Analysis of Bridge Columns, Part I: Evaluation of Seismic Capacity
 
 2. [10.1061/(ASCE)0733-9445(1988)114:8(1804)](https://doi.org/10.1061/(ASCE)0733-9445(1988)114:8(1804))
 

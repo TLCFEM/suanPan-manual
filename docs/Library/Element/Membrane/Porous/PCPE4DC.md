@@ -153,4 +153,4 @@ This model supports the following additional history variables to be recorded.
 
 1. [10.1063/1.1712886](https://doi.org/10.1063/1.1712886)
 2. [10.1680/geot.1980.30.4.385](https://doi.org/10.1680/geot.1980.30.4.385)
-3. [ISBN 978-0-7506-5051-9](https://search.worldcat.org/search?q=bn:9780750650519)
+3. [ISBN 978-0-7506-5055-7](https://search.worldcat.org/search?q=bn:9780750650557)

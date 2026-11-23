@@ -139,4 +139,4 @@ with ErrorMap(
 ## References
 
 1. [10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622))
-2. A state parameter for sands, Geotechnique, 35(2), 99--112
+2. A state parameter for sands

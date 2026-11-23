@@ -212,4 +212,4 @@ $$
 ## References
 
 1. [10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622))
-2. A two-surface plasticity model for sand, Geotechnique, 47(2), 255--272
+2. A two-surface plasticity model for sand

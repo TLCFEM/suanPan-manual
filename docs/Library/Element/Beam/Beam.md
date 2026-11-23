@@ -153,7 +153,7 @@ For purely elastic members use [`EB21`](EB21.md) or [`EB31OS`](EB31OS.md), which
 
 1. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
 2. [ISBN 978-0-7506-5049-6](https://search.worldcat.org/search?q=bn:9780750650496)
-3. [10.1016/0045-7825(78)90013-0](https://doi.org/10.1016/0045-7825(78)90013-0)
+3. [10.1016/0045-7825(78)90005-1](https://doi.org/10.1016/0045-7825(78)90005-1)
 4. [10.1002/(SICI)1096-9845(199607)25:7<711::AID-EQE576>3.0.CO;2-9](https://doi.org/10.1002/(SICI)1096-9845(199607)25:7%3C711::AID-EQE576%3E3.0.CO;2-9)
 5. [ISBN 0-471-92956-5](https://search.worldcat.org/search?q=bn:0471929565)
 6. [Thin-Walled Elastic Beams](https://search.worldcat.org/search?q=ti:Thin-Walled+Elastic+Beams)

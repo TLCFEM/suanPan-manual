@@ -128,5 +128,5 @@ with ErrorMap(
 
 ## References
 
-1. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in
+1. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume
 2. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)

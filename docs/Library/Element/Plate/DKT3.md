@@ -108,4 +108,4 @@ element DKT3 1 1 2 3 1 0.01 3
 
 1. [10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205)
 2. [ISBN 978-0-07-064779-4](https://search.worldcat.org/search?q=bn:9780070647794)
-3. [ISBN 978-0-9790049-5-7](https://search.worldcat.org/search?q=bn:9780979004957)
+3. [ISBN 978-0-13-301458-7](https://search.worldcat.org/search?q=bn:9780133014587)

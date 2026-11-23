@@ -57,4 +57,4 @@ material ExpDP (1) (2) (3) (4) (5) (6) (7) (8) (9) [10]
 ## References
 
 1. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)
-2. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in
+2. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume

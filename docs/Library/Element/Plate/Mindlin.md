@@ -73,7 +73,7 @@ element Mindlin (1) (2...5) (6) (7) [8]
 
 ## References
 
-1. Mindlin, R.D. (1951), Influence of rotary inertia and shear on flexural motions of
-2. Reissner, E. (1945), The effect of transverse shear deformation on the bending of
-3. [10.1016/0045-7825(78)90051-1](https://doi.org/10.1016/0045-7825(78)90051-1)
+1. Influence of rotary inertia and shear on flexural motions of isotropic elastic plates
+2. The effect of transverse shear deformation on the bending of elastic plates
+3. [10.1016/0045-7825(78)90005-1](https://doi.org/10.1016/0045-7825(78)90005-1)
 4. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)

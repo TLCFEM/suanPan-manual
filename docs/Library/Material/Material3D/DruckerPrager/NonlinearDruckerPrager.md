@@ -134,6 +134,6 @@ For frictional materials $\phi$ and $c_0$ should come from triaxial or direct sh
 
 ## References
 
-1. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in
+1. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume
 2. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)
 3. [10.1016/j.mechrescom.2011.04.001](https://doi.org/10.1016/j.mechrescom.2011.04.001)

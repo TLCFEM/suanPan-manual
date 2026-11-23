@@ -21,7 +21,7 @@ The stiffness is written in terms of $E$ and $B$ rather than $E$ and $\nu$, with
 
 1. [10.3141/2511-07](https://doi.org/10.3141/2511-07)
 2. [10.1061/JSFEAQ.0001458](https://doi.org/10.1061/JSFEAQ.0001458)
-3. Strength, Stress-Strain and Bulk Modulus Parameters for Finite Element Analysis of
+3. Strength, Stress-Strain and Bulk Modulus Parameters for Finite Element Analysis of Stresses and Movements in Soil Masses
 
 ## Syntax
 

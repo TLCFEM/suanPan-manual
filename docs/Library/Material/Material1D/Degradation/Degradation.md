@@ -113,6 +113,6 @@ The built-in [`TrilinearStrainDegradation`](TrilinearStrainDegradation.md) and [
 
 ## References
 
-1. Izvestia Akademii Nauk USSR, Otdelenie Tekhnicheskich Nauk
+1. Time of the rupture process under creep conditions
 2. [ISBN 978-0-521-32853-1](https://search.worldcat.org/search?q=bn:9780521328531)
 3. [10.1061/(ASCE)0733-9399(1989)115:2(345)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:2(345))

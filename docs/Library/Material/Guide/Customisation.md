@@ -71,4 +71,4 @@ The density reported by `Parallel` is the sum of the constituent densities, whic
 
 ## References
 
-1. [Chang, T. L. (2023), Constitutive Modelling Cookbook, online](https://github.com/TLCFEM/constitutive-modelling-cookbook)
+1. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook)

@@ -117,4 +117,4 @@ Compared to the original Abaqus' CDP implementation, the following features are 
 
 1. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)
 2. [10.1061/(ASCE)0733-9399(1998)124:8(892)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:8(892))
-3. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in
+3. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume

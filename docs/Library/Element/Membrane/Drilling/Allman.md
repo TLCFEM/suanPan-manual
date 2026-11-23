@@ -76,4 +76,4 @@ element Allman (1) (2...4) (5) [6]
 
 1. [10.1016/0045-7949(84)90197-4](https://doi.org/10.1016/0045-7949(84)90197-4)
 2. [10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2)
-3. Ibrahimbegovic, A., Taylor, R.L. and Wilson, E.L. (1990), A robust quadrilateral
+3. A robust quadrilateral membrane finite element with drilling degrees of freedom

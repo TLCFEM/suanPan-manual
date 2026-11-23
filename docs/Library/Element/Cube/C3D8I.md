@@ -58,5 +58,5 @@ For finite-strain analysis use [C3D8](C3D8.md) with the nonlinear-geometry switc
 ## References
 
 1. [10.1016/B978-0-12-253250-4.50008-7](https://doi.org/10.1016/B978-0-12-253250-4.50008-7)
-2. International Journal for Numerical Methods in Engineering
+2. A non-conforming element for stress analysis
 3. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

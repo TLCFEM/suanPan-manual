@@ -77,7 +77,7 @@ Use [`VAFCRP1D`](VAFCRP1D.md) when viscosity should be applied to an Armstrong--
 ## References
 
 1. [10.1016/0020-7683(89)90038-3](https://doi.org/10.1016/0020-7683(89)90038-3)
-2. Advances in Applied Mechanics
+2. Fundamental problems in viscoplasticity
 3. [10.1002/nme.1620360807](https://doi.org/10.1002/nme.1620360807)
 
 ## Example

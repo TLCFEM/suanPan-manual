@@ -63,4 +63,4 @@ Use the sharp-corner [`BilinearElastic1D`](BilinearElastic1D.md) when a distinct
 
 ## References
 
-1. Proceedings of the IABSE Symposium on Resistance and Ultimate Deformability of
+1. Method of analysis for cyclically loaded reinforced concrete plane frames including changes in geometry and non-elastic behaviour of elements under combined normal force and bending

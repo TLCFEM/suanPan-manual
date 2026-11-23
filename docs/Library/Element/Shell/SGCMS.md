@@ -61,4 +61,4 @@ element SGCMS (1) (2...5) (6) [7] [8]
 
 1. [10.1002/nme.6066](https://doi.org/10.1002/nme.6066)
 2. [10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205)
-3. Batoz, J.-L. and Tahar, M.B. (1982), Evaluation of a new quadrilateral thin plate
+3. Evaluation of a new quadrilateral thin plate bending element
