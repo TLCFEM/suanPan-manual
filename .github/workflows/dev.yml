@@ -37,7 +37,7 @@ jobs:
         name: Deploy
         run: |
           mkdocs build
-          svgo -rf site -o site
+          svgo -rf site -o site --exclude inherit_graph.*
       - if: ${{ github.event_name == 'push' }}
         name: Publish
         run: |
