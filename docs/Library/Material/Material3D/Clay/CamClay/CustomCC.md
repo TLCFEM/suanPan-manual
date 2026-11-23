@@ -15,6 +15,11 @@ $$
 
 Here the hardening function $$a$$ and its derivative $$\mathrm{d}a/\mathrm{d}\alpha$$ are evaluated by the assigned expression at the volumetric plastic strain $$\alpha$$.
 Any smooth hardening or softening law can therefore be used, as long as it can be differentiated.
+Because the hardening function is supplied to [`NonlinearCamClay`](NonlinearCamClay.md), the constant elastic predictor, the tension-positive mean stress, the associative flow rule and the two-equation return mapping are all inherited unchanged.
+
+!!! info "deviation from theory"
+    The derivative passed to the return mapping is obtained from `Expression::gradient`, which differentiates numerically with a finite step rather than analytically.
+    The step is fixed at $10^{-4}$ in the source, so very steep hardening laws or sharp transitions can give an inaccurate consistent tangent.
 
 ## Syntax
 
@@ -35,6 +40,13 @@ material CustomCC (1) (2) (3) (4) (5) (6) (7) [8]
 The assigned expression must be univariate: exactly one input and one output.
 It must also be able to compute derivatives, since the consistent stiffness uses $$\mathrm{d}a/\mathrm{d}\alpha$$.
 The input is the volumetric plastic strain $$\alpha$$, which is negative in compression.
+The expression must return a non-negative value of $$a$$ for every strain reached in the analysis, since a negative value would invert the yield surface.
+No check is performed on the sign of the returned hardening function, so an unsuitable expression can silently produce a non-physical response.
+The initial value is not prescribed independently; it is simply the expression evaluated at $$\alpha=0$$ at the start of the analysis.
+
+!!! warning "implementation limitation"
+    Classical Cam-Clay derives hardening from the compression and recompression indices and the void ratio.
+    This variant replaces that relation entirely by the user expression and does not enforce monotonic growth in compression.
 
 ## Example
 
@@ -45,3 +57,8 @@ material CustomCC 1 1E6 .4 .8 .8 20. 1
 ```
 
 This defines the linear hardening law $$a(\alpha)=100+2\times10^5\alpha$$.
+
+## References
+
+1. Roscoe, K. H. and Burland, J. B. (1968), "On the Generalised Stress-Strain Behaviour of 'Wet' Clay", in "Engineering Plasticity", Cambridge University Press, 535--609.
+2. Schofield, A. N. and Wroth, C. P. (1968), "Critical State Soil Mechanics", McGraw-Hill, London.

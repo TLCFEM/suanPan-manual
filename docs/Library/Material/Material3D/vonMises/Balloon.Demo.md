@@ -2,6 +2,17 @@
 
 In this page, we demonstrate the usage of the Balloon-v1 model.
 
+## Background
+
+The demos use [`Balloon1D`](../../Material1D/vonMises/Balloon1D.md), the uniaxial counterpart of the three-dimensional [`Balloon`](Balloon.md) model.
+The first five numbers after the elastic modulus are the split ratio and the load reversal memory size followed by the bound $$u$$ that scales the yield surface.
+The four-number groups supply the bounds for the isotropic monotonic part $$f_m$$, the isotropic cyclic part $$f_c$$, the kinematic monotonic part $$a_m$$ and the kinematic cyclic part $$a_c$$.
+Each group is ordered as initial value, linear coefficient, saturation value and saturation rate.
+The optional `-fc`, `-ac`, `-na` and `-nd` tokens add Armstrong-Frederick style components with a saturation target and a rate.
+A zero rate reduces the corresponding component to a linear evolution, as shown in the kinematic hardening demo.
+The memory size controls how many previous reverse points are retained and therefore when isotropic hardening stagnates under cyclic loading.
+The three-dimensional formulation and the full parameter definitions are given on the [`Balloon`](Balloon.md) page.
+
 ## Utilities
 
 We need to run example analyses and extract and plot the generated results.

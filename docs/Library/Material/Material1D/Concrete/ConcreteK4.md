@@ -6,6 +6,7 @@ A Uniaxial Plastic-Damage Concrete Model
 
 1. [10.1061/(ASCE)ST.1943-541X.0002592](https://doi.org/10.1061/(ASCE)ST.1943-541X.0002592)
 2. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
+3. Lemaître, J., and Chaboche, J.-L. (1990), Mechanics of Solid Materials, Cambridge University Press.
 
 ## Syntax
 
@@ -104,6 +105,38 @@ e_{r,c}=\dfrac{f_c}{\zeta_cE},
 $$
 
 in which $$\zeta_t$$ and $$\zeta_c$$ are `(10)` and `(11)` respectively.
+
+### Crack Closing and Objective Damage
+
+When the stress changes from tension to compression, previously opened cracks must close before the compressive stiffness is fully recovered.
+The implementation activates a dedicated branch when the trial stress is compressive, the strain increment is compressive and the stored tensile plastic strain exceeds the closing strain accumulated so far.
+The crack-closing increment is capped by the available tensile plastic strain, which prevents the crack from closing beyond its original opening.
+Damage is evaluated on the effective stress and multiplies both the stress and the consistent tangent by $1-d$.
+When objective damage is enabled, each zeta parameter is replaced by a length-dependent scale,
+
+$$
+\zeta_{\mathrm{eff}}=\dfrac{2a}{\sqrt{1+\dfrac{4}{l_c}\left[\left(\dfrac{a}{\zeta}\right)^2+\dfrac{a}{\zeta}\right]}-1},
+$$
+
+where $l_c$ is the element characteristic length and $a$ is the corresponding hardening modulus.
+The characteristic length defaults to unity in the material base class and is normally supplied by the element, so mesh objectivity requires an element that sets it.
+
+!!! warning "implementation limitation"
+    The damage evolution is exponential instead of the linear law of the original K4 formulation, so the tangent never vanishes exactly.
+    The crack-closing increment is capped by the previously accumulated tensile plastic strain.
+    Objective damage is opt-in and uses the element characteristic length, which defaults to unity when the element does not set it.
+
+## Remarks
+
+The parameter `(2)` is the elastic modulus and `(3)` is the crack-closing stiffness ratio, which is clamped to $[10^{-4},1]$ and multiplied by $E$ internally.
+The ratios `(4)` and `(5)` multiply the elastic modulus to give the tensile hardening modulus $h_t$ and the post-peak compressive modulus $h_d$.
+The strength inputs `(6)` and `(7)` and the crush strain `(8)` are converted to absolute values.
+The compressive hardening modulus before the peak is computed internally as $h_c=(f_c-f_y)/k_0$, where $f_y$ is `(9)` times $f_c$.
+The parameters `(10)` and `(11)` are dimensionless zeta values that are multiplied by $E$ internally, so a larger zeta gives a smaller reference strain and faster damage growth.
+After the density `[12]` the parser accepts three optional boolean flags that enable damage, enable crack closing and enable objective damage, with defaults true, true and false respectively.
+The implementation replaces the original linear damage evolution by an exponential law so that the tangent never becomes exactly zero, which improves numerical stability.
+The local return map uses a maximum of 20 iterations.
+Unlike the rule-based [`ConcreteCM`](ConcreteCM.md) and [`ConcreteTsai`](ConcreteTsai.md), this is a damage-plasticity model with an explicit yield surface and an evolving damage variable.
 
 ## Examples
 

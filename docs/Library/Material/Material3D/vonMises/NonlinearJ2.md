@@ -62,6 +62,33 @@ It is also called J2 plasticity model.
 A detailed discussion can be seen elsewhere.
 $$\beta(\bar\varepsilon_p)=H(\bar\varepsilon_p)$$ and $$\sigma_y(\bar\varepsilon_p)=K(\bar\varepsilon_p)$$.
 
+### Return Mapping
+
+The implementation evaluates the trial deviatoric stress and forms the trial shifted stress $$\boldsymbol\xi=\mathrm{dev}\,\boldsymbol\sigma^{tr}-\boldsymbol\beta_n$$ with norm $$r=\lVert\boldsymbol\xi\rVert$$.
+The elastic trial residual is $$\Psi=r-\sqrt{2/3}\,K(p_n)$$.
+When the residual is positive the following scalar equation is solved by Newton iteration,
+
+$$
+\Psi(\Delta\gamma)=r-2G\Delta\gamma-\sqrt{\dfrac{2}{3}}\left[K\left(p_n+\sqrt{\dfrac{2}{3}}\Delta\gamma\right)+H\left(p_n+\sqrt{\dfrac{2}{3}}\Delta\gamma\right)-H(p_n)\right]=0,
+$$
+
+with the correction $$\delta\Delta\gamma=\Psi/[2G+\dfrac{2}{3}(K'+H')]$$.
+The stress, back stress and plastic strain are then updated by radial return,
+
+$$
+\boldsymbol\sigma=\boldsymbol\sigma^{tr}-2G\Delta\gamma\,\dfrac{\boldsymbol\xi}{r},\qquad \boldsymbol\beta=\boldsymbol\beta_n+\sqrt{\dfrac{2}{3}}\left[H(p)-H(p_n)\right]\dfrac{\boldsymbol\xi}{r},\qquad p=p_n+\sqrt{\dfrac{2}{3}}\Delta\gamma.
+$$
+
+The consistent tangent is formed from the same denominator and the fourth-order deviatoric projector.
+
+!!! info "deviation from theory"
+    The implementation absorbs the factor $$\sqrt{2/3}$$ into the plastic multiplier so that the plastic strain increment equals $$\Delta\gamma$$ times the unit normal.
+    The accumulated plastic strain therefore grows by $$\sqrt{2/3}\Delta\gamma$$ rather than by $$\Delta\gamma$$.
+
+!!! warning "implementation limitation"
+    A negative isotropic radius is replaced by zero and its derivative is discarded.
+    The kinematic back stress is restricted to a single direction tied to the cumulative plastic strain.
+
 ## History Layout
 
 | location               | parameter                  |

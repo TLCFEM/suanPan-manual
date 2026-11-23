@@ -6,9 +6,22 @@
 * Number of DoFs: 7 (Translation, Translation, Translation, Rotation, Rotation, Rotation, Warping)
 * DoF Label: U1, U2, U3, UR1, UR2, UR3, WARP
 
+## Background
+
+[`B31OS`](B31OS.md) is the inelastic three-dimensional beam element for thin-walled open sections and extends the kinematic framework of [`B31`](B31.md) with a warping degree of freedom.
+Here "OS" denotes open section, as in the `B3DOSL` and `B3DOSC` orientations.
+Following Vlasov theory, the twist $\phi$ of an open section is accompanied by an axial warping displacement, so that the section response includes the bimoment $B=-EI_w\phi''$ and the Wagner stress resultant in addition to the St. Venant torque.
+The element maps the seven nodal DoFs $(U_1,U_2,U_3,UR_1,UR_2,UR_3,WARP)$ to nine local deformations comprising uniform axial elongation, near- and far-end strong- and weak-axis bending rotations, near- and far-end twists and near- and far-end warping rates.
+Those nine quantities are interpolated to the twelve section strains listed in the remarks below.
+The twist $\phi$ is interpolated with cubic Hermite functions, which is the circumvention of membrane locking reported in the reference and noted in the remarks below.
+The section returns the six resultants $\begin{bmatrix}P&M_z&M_y&W&B&T_{sv}\end{bmatrix}$, and the tangent and resistance are assembled with a Lobatto rule in the same way as [`B31`](B31.md).
+For a purely elastic response with directly supplied $E$, $G$, $A$, $I_z$, $I_y$, $J$ and $I_w$, use [`EB31OS`](EB31OS.md) instead.
+
 ## References
 
 1. [Distributed plasticity analysis of steel building structural systems](https://www.proquest.com/dissertations-theses/distributed-plasticity-analysis-steel-building/docview/304696456/se-2)
+2. V. Z. Vlasov, *Thin-Walled Elastic Beams*, 2nd edition, Israel Program for Scientific Translations, 1961.
+3. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover Publications, 2000, ISBN 978-0-486-41181-1.
 
 ## Syntax
 

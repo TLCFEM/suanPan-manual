@@ -4,6 +4,20 @@ Stress History Based Degradation With Custom Rules
 
 This model implements the [universal damage model](Degradation.md) assuming the degradation factor depends on the stress history.
 
+## Background
+
+This wrapper is the stress-driven member of the [degradation family](Degradation.md).
+It scales the intact stress of a host material by a factor that evolves with extreme values of that intact stress.
+Let $$\bar\sigma$$ denote the stress returned by the host material.
+The wrapper records $$\bar\sigma_{\max}$$ and $$\bar\sigma_{\min}$$ over the loading history and sets $$D_+=D_+(\bar\sigma_{\max})$$ and $$D_-=D_-(\bar\sigma_{\min})$$.
+On a new extreme the tangent stiffness follows the stress-dependent chain rule given in [`Degradation`](Degradation.md),
+
+$$
+K=\left(D+\bar\sigma\frac{\mathrm{d}D}{\mathrm{d}\bar\sigma_{\text{ext}}}\right)\bar K,
+$$
+
+while unloading below the previous extreme gives $$K=D\bar K$$.
+
 ## Syntax
 
 ```text title="CustomStressDegradation"
@@ -28,6 +42,17 @@ D_{neg}=D_{neg}(\bar{\sigma}_{min}).
 $$
 
 Here $$\bar{\sigma}_{max}$$ is the maximum stress (positive) of the whole loading history, and $$\bar{\sigma}_{min}$$ is the minimum stress (negative) of the whole loading history.
+
+The host material tag `(2)` must refer to an already defined one-dimensional material.
+If the compression expression is omitted, the tension expression is reused with the absolute value of the stress as input and the derivative negated, so a single expression defines a symmetric law.
+
+!!! info "deviation from theory"
+    With one expression the code evaluates it at $|\bar\sigma|$ and negates the derivative instead of passing the negative stress directly.
+    This means the compression law is the mirror image of the tension law and cannot be calibrated independently with a single expression.
+
+The branch is selected by the sign of the intact stress returned by the host material.
+The wrapper inherits the density of the host and records the two degradation factors as `DT` and `DC`.
+For a strain-driven law use [`CustomStrainDegradation`](CustomStrainDegradation.md).
 
 ## Example
 

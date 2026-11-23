@@ -2,6 +2,12 @@
 
 Bilinear Hardening Modified Cam-Clay Model
 
+## Background
+
+`BilinearCC` is a variant of [`NonlinearCamClay`](NonlinearCamClay.md) and shares its yield surface, associative flow rule and return-mapping algorithm.
+Only the hardening law is replaced, so all of the critical-state concepts of the canonical page apply here.
+The hardening parameter $a$ controls the size of the yield ellipse and equals half the compressive preconsolidation pressure when $p_t=0$ and $\beta=1$.
+
 ## Theory
 
 This model defines a bilinear hardening rule for $$a(\alpha)$$, which is a non-negative function.
@@ -15,6 +21,16 @@ in which $$H$$ is the hardening modulus; note that $$\alpha=\varepsilon_p=\varep
 The hardening modulus could be either positive or negative.
 
 **This hardening rule does not imply any physical soil behavior.**
+
+### Implementation of the hardening law
+
+The source evaluates $a(\alpha)=\max(0,a_0+H\alpha)$, so the yield surface can never become negative even when softening is requested.
+For $H>0$ the linear branch is truncated at $\alpha=-a_0/H$, and for $H<0$ it is truncated at $\alpha=a_0/|H|$, beyond which both $a$ and $\mathrm da/\mathrm d\alpha$ are zero.
+Both the function and its derivative are passed to the local Newton iteration, so the truncation point is a kink at which differentiability is lost.
+
+!!! info "deviation from theory"
+    Physical soil hardens in compression, but $\alpha$ is negative in compression, so a positive $H$ makes the yield surface shrink.
+    To obtain compression hardening the user must supply a negative slope, which is the opposite of the usual soil-mechanics convention.
 
 ## Syntax
 
@@ -30,6 +46,21 @@ material BilinearCC (1) (2) (3) (4) (5) (6) (7) (8) [9]
 # (8) double, H, slope of hardening function
 # [9] double, density, default: 0.0
 ```
+
+## Remarks
+
+* The first six arguments are the elastic modulus, Poisson's ratio, $\beta$, $M$, $p_t$ and $a_0$ as defined on the [`NonlinearCamClay`](NonlinearCamClay.md) page.
+* Because suanPan's volumetric plastic strain is negative in compression, a positive $H$ makes the yield surface shrink during compression, whereas a negative $H$ makes it grow.
+* The slope $H$ has units of stress per unit volumetric strain, and $a_0$ has units of stress.
+* Setting $\beta=1$ gives a single ellipse, while $\beta<1$ reduces the radius of the compressive half of the yield surface.
+* Use `set symm_mat 0` because the consistent tangent is not generally symmetric, as in the shipped Cam-Clay examples.
+* This hardening law is a convenient numerical test case but does not reproduce the logarithmic compression of real soil, for which [`ExpCC`](ExpCC.md) is appropriate.
+
+## References
+
+1. Roscoe, K. H. and Burland, J. B. (1968), "On the Generalised Stress-Strain Behaviour of 'Wet' Clay", in "Engineering Plasticity", Cambridge University Press, 535--609.
+2. Schofield, A. N. and Wroth, C. P. (1968), "Critical State Soil Mechanics", McGraw-Hill, London.
+3. Chen, W. F. and Han, D. J. (2007), "Plasticity for Structural Engineers", J. Ross Publishing, ISBN 978-1-932159-75-2, Chapter 5.
 
 ## Iso-error Map
 

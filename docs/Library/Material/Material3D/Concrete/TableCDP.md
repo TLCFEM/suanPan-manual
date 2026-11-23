@@ -8,6 +8,32 @@ The tabular backbones and damage evolution are supported in this model to provid
 
 In total, four tables are required.
 
+## Background
+
+This model shares the return mapping, yield function, flow rule and damage treatment of [`CDP`](CDP.md).
+The only difference is that the tension and compression backbones and their damage evolutions are read from tables instead of the built-in exponential functions, so the theoretical derivation is not repeated here.
+The yield function is the Lubliner criterion modified by Lee and Fenves,
+
+$$
+F=\alpha I_1+\sqrt{3J_2}-\left(1-\alpha\right)\bar\sigma_c+\beta\left\langle\bar\sigma_{\max}\right\rangle,
+$$
+
+with $\alpha=(\sigma_{b0}/\sigma_{c0}-1)/(2\sigma_{b0}/\sigma_{c0}-1)$ and $\beta=(1-\alpha)\bar\sigma_c/\bar\sigma_t-(1+\alpha)$.
+The internal variable $\kappa$ is the cumulative plastic work divided by the normalised fracture energy $g_t$ or $g_c$.
+
+The parser converts the Abaqus-style plastic-strain input into this internal variable.
+For each backbone the area under the stress--plastic-strain curve is integrated by the trapezoidal rule to give $g$, and the abscissa of each point is replaced by the cumulative area divided by $g$.
+The damage table is interpolated onto the same $\kappa$ values, and the final point is extended to complete damage at $\kappa=1$ by an exponential tail that preserves the terminal slope of the backbone.
+Consequently the tabulated curves are reparameterised internally, and the response can deviate slightly from the tabulated shape if the tables are too short or too coarse.
+
+This variant fixes $K_c=1$, giving $\zeta=0$ in the yield function, exactly as [`CDP`](CDP.md) does.
+The [`AbaqusCDP`](AbaqusCDP.md) variant is the counterpart that exposes $K_c$ and uses the Abaqus defaults for the dilatancy and recovery parameters.
+
+!!! warning "implementation limitation"
+    The tabulated plastic strain is not used directly as the internal variable; it is converted to cumulative plastic work by trapezoidal integration.
+    A backbone without a decaying tail is rejected, and the appended exponential extension can distort the response near complete damage.
+    As in [`CDP`](CDP.md), the potential is a linear cone with $K_c=1$ and there is a single recovery factor acting on tensile damage only.
+
 ## Syntax
 
 ```text title="TableCDP"
@@ -63,6 +89,15 @@ The red curve depicts the damage index evolution:
 !!! warning "shape distortion"
     Because the mapping from $$\kappa_\aleph$$ to plastic strain is non-linear and includes an appended exponential tail, the actual material response slightly deviates from the defined curve.
     To minimize this error: 1) extend the input tables across a sufficiently wide plastic strain range, and 2) increase data point density to reduce linear interpolation distortion.
+
+### Implementation notes
+
+- The parser defaults are $E=3\times10^4$, $\nu=0.2$, $\alpha_p=0.2$, $\sigma_{b0}/\sigma_{c0}=1.16$, $w=0.5$ and density $2400\times10^{-12}$.
+- The first column of every table is converted to its absolute value, and the first plastic strain must be zero.
+- A backbone whose last two points do not form a decaying tail is rejected by the parser.
+- The normalised energies $g_t$ and $g_c$ are computed from the tables and are not independent input arguments.
+- The stiffness recovery factor applies only to the tensile damage index, and the compression damage index is never recovered.
+- The four table file names are not interchangeable: the first two files must be the backbones and the last two the damage curves.
 
 The above example can be defined using the following line.
 
@@ -135,3 +170,8 @@ save recorder 1 2 3 4 5
 
 exit
 ```
+
+## References
+
+1. Lee, J. and Fenves, G. L. (1998) Plastic-damage model for cyclic loading of concrete structures, Journal of Engineering Mechanics, 124(8), 892--900, [10.1061/(ASCE)0733-9399(1998)124:8(892)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:8(892)).
+2. Lubliner, J., Oliver, J., Oller, S. and Onate, E. (1989) A plastic-damage model for concrete, International Journal of Solids and Structures, 25(3), 299--326, [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4).

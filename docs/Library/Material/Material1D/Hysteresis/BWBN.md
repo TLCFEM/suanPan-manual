@@ -52,6 +52,18 @@ $$
 F=aF_y\dfrac{u}{u_y}+\left(1-a\right)F_yz.
 $$
 
+The model is the Bouc-Wen-Baber-Noori extension of [BoucWen](BoucWen.md), in which three energy-dependent degradation functions and a pinching function modify the evolution of $$z$$.
+Here $$E$$ is the elastic modulus, $$F_y$$ the yield force, $$u_y=F_y/E$$ and $$a$$ the ratio of the post-yield to the initial stiffness.
+The variable $$\nu\ge0$$ governs strength degradation, $$\eta>0$$ governs stiffness degradation and $$A$$, initially unity, governs the loss of hysteretic force amplitude.
+The factor $$h\in[0,1]$$ produces pinching by reducing the evolution rate of $$z$$ near deformation reversals, and the exponent $$n$$ controls the sharpness of the loop.
+The implementation again fixes $$\gamma=1-\beta$$, so the basic loop shape is set by $$\beta$$ and $$n$$.
+The parameters $$\zeta$$ and $$p$$ control the magnitude and the energy-driven growth of the pinching, $$\phi_0$$ and $$\delta_\phi$$ set the pinching width, and $$q$$ and $$\lambda$$ shift and scale its centre.
+All degradation functions evolve with the normalised dissipated energy, so setting every degradation slope to zero recovers the ordinary [BoucWen](BoucWen.md) response.
+
+!!! info "deviation from theory"
+    The general BWBN formulation treats the initial amplitude $$A_0$$ as an independent parameter.
+    suanPan pins $$A_0=1$$ and lets $$A$$ decay as $$1-\delta_Ae$$, and it also enforces $$\gamma=1-\beta$$ as in [BoucWen](BoucWen.md).
+
 For state determination, $$z$$ is solved iteratively by using the Newton method.
 The evolutions of internal functions rely on the dissipated energy $$e$$, which is defined to be a **normalized** quantity.
 
@@ -77,6 +89,16 @@ h&=1-\zeta_1\exp\left(-\left(\dfrac{z\cdot\text{sign}\left(\Delta{}u\right)-qz_u
 z_u&=\sqrt[n]{\dfrac{1}{\nu}}=\nu^{-1/n}. \end{align*}
 $$
 
+The energy increment is evaluated with the trapezoidal rule, and the coupled nonlinear equations for $$z$$ and $$e$$ are solved by Newton iteration with at most 20 iterations.
+The tangent stiffness returned to the global solver is the consistent algorithmic stiffness obtained by differentiating the converged equations.
+
+!!! info "deviation from theory"
+    The dissipated energy is normalised by the yield deformation, so $$e=(1-a)\int z\,\mathrm d\varepsilon$$ is dimensionless rather than a physical energy.
+    The strength, stiffness and amplitude degradation laws are driven by this normalised scalar instead of by physical hysteretic energy.
+
+!!! warning "implementation limitation"
+    The coupled solve has no bracketed fallback and terminates with an error if the Newton iteration does not converge within 20 iterations.
+
 ## Parameters
 
 Strength degradation is controlled by $$\nu$$.
@@ -87,6 +109,16 @@ To disable it, set $$\delta_\eta=0$$.
 
 Pinching is controlled by $$h$$.
 To disable it, set $$\zeta=0$$ or $$p=0$$.
+
+## Remarks
+
+- The parser accepts the tag followed by up to 16 optional parameters and an optional density, with omitted values taking the defaults listed in the syntax block.
+- The first five parameters are the same as in [BoucWen](BoucWen.md), namely $$E$$, $$F_y$$, $$a$$, $$\beta$$ and $$n$$.
+- Strength degradation is switched off with $$\delta_\nu=0$$, stiffness degradation with $$\delta_\eta=0$$, amplitude degradation with $$\delta_A=0$$, and pinching with either $$\zeta=0$$ or $$p=0$$.
+- The initial values $$\nu_0$$, $$\eta_0$$ and $$\phi_0$$ should be positive, and physical solutions require the derived quantities $$A>0$$, $$\eta>0$$ and $$\nu>0$$ throughout the loading history.
+- The pinching parameters normally satisfy $$0\le\zeta<1$$, $$p>0$$, $$q\ge0$$ and $$\lambda>0$$, because a non-positive width parameter makes the Gaussian pinching function singular.
+- The internal state consists of two history variables, namely $$z$$ and the accumulated normalised energy $$e$$, both initialised to zero.
+- Use the model with one-dimensional truss or beam elements and calibrate the degradation parameters with `materialTest1D` before structural analysis.
 
 ## Examples
 
@@ -142,3 +174,10 @@ materialtest1d 1 1E-3 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 80
 ```
 
 ![pinching effect](BWBN.EX5.svg)
+
+## References
+
+- Bouc, R. (1967), "Forced vibration of mechanical systems with hysteresis", Proceedings of the Fourth Conference on Nonlinear Oscillations, Prague, p. 315.
+- Wen, Y.-K. (1976), "Method for random vibration of hysteretic systems", Journal of the Engineering Mechanics Division, ASCE, 102(2), 249-263, doi:10.1061/JMCEA3.0002106.
+- Baber, T. T. and Wen, Y.-K. (1981), "Random vibration of hysteretic, degrading systems", Journal of the Engineering Mechanics Division, ASCE, 107(6), 1069-1087.
+- Baber, T. T. and Noori, M. N. (1985), "Random vibration of degrading, pinching systems", Journal of Engineering Mechanics, ASCE, 111(8), 1010-1016, doi:10.1061/(ASCE)0733-9399(1985)111:8(1010).

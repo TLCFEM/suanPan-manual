@@ -51,6 +51,12 @@ material SteelBRB (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) [11]
    Thus, the monotonic loading response is similar to that of the `RambergOsgood` material.
 2. In the original model, the elastic and plastic moduli could be different under tension and compression.
    The implemented model uses identical values for these two parameters.
+3. The symmetric form uses the tension values for both signs, and the parser accepts either six required parameters plus an optional density or nine required parameters plus an optional density.
+4. The plastic modulus argument is a true modulus, so the value $$0.01E$$ is obtained by multiplying the elastic modulus by the desired hardening ratio.
+5. The saturated stress must exceed the initial yield stress for the isotropic hardening law to raise the yield stress monotonically.
+6. A larger $$\delta_r$$ delays saturation and a larger $$\alpha$$ sharpens the transition.
+7. Plastic flow is taken when the elastic trial stress and the strain increment share a sign, and the response is elastic unloading otherwise.
+8. Calibrate the model against cyclic brace tests with `materialTest1D`, and compare with [RambergOsgood](RambergOsgood.md) for a simpler smooth steel law.
 
 ## History Variable Layout
 
@@ -99,6 +105,20 @@ The development of plastic strain $$\varepsilon_p$$ is activated when
 $$
 \dot\varepsilon\sigma<0
 $$
+
+In the code the branch is decided from the sign of the elastic trial stress relative to the strain increment, so a negative product marks elastic unloading and plastic flow is taken when the product is positive.
+The initial yield stress is the parameter (3), and the saturated stresses are chosen above it so that the exponential term decays from the initial offset.
+The accumulated plastic strain $$\mu$$ and the plastic strain $$\varepsilon_p$$ are the two history variables.
+Tension and compression can have different saturated stresses, decay constants $$\delta_r$$ and exponents $$\alpha$$, while $$E$$, $$H$$ and the initial yield stress are shared.
+The implicit plastic-strain equation is solved by Newton iteration with a Ridders bracketed fallback.
+
+!!! info "deviation from theory"
+    The published BRB model includes an initial linear segment before yielding, which is disabled in suanPan so the monotonic curve is Ramberg-Osgood-like from the origin.
+    The elastic and plastic moduli are forced to be identical in tension and compression, although the original model allows them to differ.
+
+!!! warning "implementation limitation"
+    Plastic flow is active only when the elastic trial stress and the strain increment have the same sign.
+    The displayed condition $$\dot\varepsilon\sigma<0$$ corresponds to elastic unloading in the implemented branch logic.
 
 ## Example
 

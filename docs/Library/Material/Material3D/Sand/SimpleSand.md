@@ -78,6 +78,11 @@ where $$n=\dfrac{s+p\alpha}{|s+p\alpha|}$$ is a unit tensor, $$I$$ is the second
 
 Note due to the change of sign convention, a negative $$D$$ leads to contractive response, thus $$A$$ often needs to be negative.
 
+!!! info "deviation from theory"
+    The implementation actually uses $$D=A\left(\alpha^d-m-\alpha:\mathbf n\right)$$, that is, the distance from the stress-ratio point to the dilatancy surface measured relative to the wedge size $$m$$.
+    The expression shown above omits the $$-m$$ term.
+    This form makes $$D$$ vanish when the stress ratio reaches the dilatancy surface at $$\alpha:\mathbf n=\alpha^d-m$$.
+
 ### Hardening Rule
 
 The evolution of $$\alpha$$ is similar to the Armstrong-Frederick hardening law.
@@ -87,6 +92,20 @@ $$
 $$
 
 where $$h$$ is a constant that controls the speed of hardening.
+
+## Remarks
+
+- The parser defaults are $E=10^5$, $\nu=0.2$, $m=0.01$, $A=-0.7$, $h=5$, $\alpha_c=1.25$, $n_b=1.1$, $n_d=3.5$, $v_c=1.915$, $p_c=-130$, $\lambda_c=0.02$, $v_0=2$ and density zero.
+- The constructor converts $m$, $n_b$, $n_d$, $v_c$, $\lambda_c$ and $v_0$ to absolute values and forces $p_c$ to be negative.
+- The size parameter $m$ and the dilatancy constant $A$ are dimensionless, while $p_c$ and the elastic modulus have stress units and $v_0$ and $v_c$ are specific volumes.
+- Because the sign convention is tension positive, a negative $A$ is required for contractive response during shearing of loose sand.
+- The yield surface has no Lode-angle dependence, so its deviatoric section is a circle rather than the triangular shape of true sand failure surfaces.
+- Only the six components of the back stress ratio are stored as history variables; the plastic strain tensor is not recorded.
+- This is a simplified relative of [`DafaliasManzari`](DafaliasManzari.md): it uses linear elasticity instead of pressure- and void-ratio-dependent hyperelasticity and omits the fabric tensor and load-reversal memory.
+
+!!! warning "implementation limitation"
+    The state parameter is evaluated with a smoothed lower bound on the pressure so that the logarithm remains finite near zero confinement.
+    When the trial pressure exceeds a small fraction of $|p_c|$ the model returns a deviatoric-only stress with no plastic correction, so no tensile strength is available.
 
 ## Example
 
@@ -116,3 +135,8 @@ with ErrorMap(
 ```
 
 ![relative error uniaxial](simple.sand.uniaxial.rel.error.svg)
+
+## References
+
+1. Dafalias, Y. F. and Manzari, M. T. (2004) Simple plasticity sand model accounting for fabric change effects, Journal of Engineering Mechanics, 130(6), 622--634, [10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622)).
+2. Been, K. and Jefferies, M. G. (1985) A state parameter for sands, Geotechnique, 35(2), 99--112.

@@ -11,6 +11,26 @@ The element defines no stiffness of its own; it contributes a constant diagonal 
 * Element Type: DEM
 * Constant Mass Matrix, No Stiffness
 
+## Background
+
+`SphericalParticle3D` is the spatial counterpart of [`SphericalParticle2D`](SphericalParticle2D.md).
+It attaches a sphere of radius $R$ to one node and carries the elastic modulus, Poisson ratio, damping and mass used by the pairwise DEM contact law.
+The element has no stiffness of its own and contributes $\mathrm{diag}(m,m,m)$ or $\mathrm{diag}(m,m,m,I,I,I)$ if inertia is supplied.
+
+For a pair with centre distance $d$, the overlap $\delta=R_i+R_j-d$ activates a frictionless Hertzian force along the line of centres,
+
+$$
+\boldsymbol F_i=\left[\dfrac43 E^*\sqrt{R^*\,\delta}\,\delta + \eta^*\dot\delta\right]\hat{\boldsymbol r}_{ij},
+$$
+
+where $\hat{\boldsymbol r}_{ij}$ points from particle $j$ to particle $i$, $\dot\delta$ is the relative normal approach velocity and the pair properties $E^*$, $R^*$ and $\eta^*$ are defined on the [`SphericalParticle2D`](SphericalParticle2D.md) page.
+The equal and opposite force acts on particle $j$, and the consistent linearisation supplies tangent stiffness and damping terms for implicit integration.
+Contact is normal only; no tangential spring or friction law is implemented in the current interaction.
+
+!!! warning "implementation limitation"
+    Only the normal Hertzian law is available.
+    The DEM constraint uses translational velocities only, so the optional rotational inertia does not enter the contact force.
+
 ## Syntax
 
 ```text title="SphericalParticle3D"
@@ -31,6 +51,9 @@ element SphericalParticle3D (1) (2) (3) (4) (5) (6) (7) [8]
 2. If the inertia `(8)` is given, `InertialSphericalParticle3D` is created instead: the rotational DoFs UR1, UR2 and UR3 are added and the mass matrix becomes $$\mathrm{diag}(m,m,m,I,I,I)$$.
 3. The radius, damping, elastic modulus and Poisson ratio are read by DEM interactions to build the effective radius, damping and modulus of a particle pair, so use a unit system consistent with the rest of the model.
 4. Use this element together with an [interaction](../../../Collection/Define/interaction.md) and a `MolecularDynamics3D` constraint, as in the `Other/MD3D` example.
+5. The cell size used for neighbour search is twice the largest particle radius, so a particle moving more than that distance in one step triggers a speed warning.
+6. Use a `full`, `sparse` or `sparse symmetric` storage scheme so that the contact stiffness and damping can be assembled.
+7. See [`SphericalParticle2D`](SphericalParticle2D.md) for the derivation of the Hertzian law and for the reference list.
 
 ## Example
 

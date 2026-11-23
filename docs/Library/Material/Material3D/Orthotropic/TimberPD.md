@@ -2,6 +2,17 @@
 
 Timber Plastic-Damage Model
 
+## Background
+
+The model couples the bilinear Hoffman plasticity of [`BilinearHoffman`](BilinearHoffman.md) with two independent scalar damage variables, one for tensile stress and one for compressive stress.
+The trial stress is split into tensile and compressive parts by an eigen-decomposition of the stress tensor.
+Each part is filtered by a Hill-type equivalent measure built from the corresponding set of tensile or compressive strengths.
+The thresholds $r_t$ and $r_c$ are the largest equivalent stresses observed so far and are stored as history variables.
+The final stress is $(1-\omega_t)\boldsymbol\sigma_t+(1-\omega_c)\boldsymbol\sigma_c$, where $\boldsymbol\sigma_t$ and $\boldsymbol\sigma_c$ are the tensile and compressive parts.
+
+!!! info "deviation from theory"
+    The damage driving measures are Hill-type equivalent stresses of the split stress, not the Hoffman yield function used for the plastic backbone.
+
 ## References
 
 1. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
@@ -56,7 +67,15 @@ $$
 
 The parameter $$b_c$$ will be clamped to $$0\leq{}b_c\leq1$$.
 
+!!! warning "implementation limitation"
+    The initial thresholds $r_t^0$ and $r_c^0$ are floored at machine epsilon.
+    The parameters $b_t$ and $b_c$ are clamped to $[0,1]$ by the constructor.
+
 View and edit parameters to see how they affect the damage evolution.
+
+!!! warning "implementation limitation"
+    The damage evolution is local and has no intrinsic length scale.
+    Softening results can therefore depend on mesh refinement.
 
 <iframe src="https://www.desmos.com/calculator/8v6hsu3iga?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
 

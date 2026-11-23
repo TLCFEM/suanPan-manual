@@ -2,6 +2,46 @@
 
 Bilinear J2 Plasticity
 
+## Theory
+
+The `BilinearJ2` model is a J2 plasticity model with a bilinear stress-strain curve and a hardening response that can be split between isotropic and kinematic parts.
+It is the three-dimensional counterpart of [`Bilinear1D`](../../Material1D/vonMises/Bilinear1D.md) and a special case of the framework described in [`CustomJ2`](CustomJ2.md).
+
+The yield function is
+
+$$
+F=\sqrt{\dfrac{3}{2}(\boldsymbol s-\boldsymbol\beta):(\boldsymbol s-\boldsymbol\beta)}-\left(\sigma_y+H_\text{iso}p\right),
+$$
+
+in which $$\boldsymbol s=\mathrm{dev}\,\boldsymbol\sigma$$, $$\boldsymbol\beta$$ is the back stress, and $$p$$ is the accumulated plastic strain.
+The input hardening ratio $$h$$ is converted to a plastic modulus $$E_p=Eh/(1-h)$$, which is then split as
+
+$$
+H_\text{iso}=\beta E_p,\qquad H_\text{kin}=(1-\beta)E_p.
+$$
+
+Thus $$\beta=1$$ gives pure isotropic hardening and $$\beta=0$$ gives pure linear kinematic hardening.
+
+!!! warning "implementation limitation"
+    The yield radius is clamped to zero when the linear isotropic branch would become negative.
+    A negative hardening ratio therefore gives a truncated softening response rather than a negative yield radius.
+
+A radial return is used.
+With the trial shifted stress $$\boldsymbol\xi=\mathrm{dev}\,\boldsymbol\sigma^{tr}-\boldsymbol\beta_n$$ and $$G=E/[2(1+\nu)]$$, the multiplier is obtained in closed form from
+
+$$
+\Delta\gamma=\dfrac{\lVert\boldsymbol\xi\rVert-\sqrt{2/3}\,(\sigma_y+H_\text{iso}p_n)}{2G+\dfrac{2}{3}\left(H_\text{iso}+H_\text{kin}\right)}.
+$$
+
+The updates are $$\boldsymbol\sigma=\boldsymbol\sigma^{tr}-2G\Delta\gamma\,\boldsymbol n$$, $$\boldsymbol\beta=\boldsymbol\beta_n+\dfrac{2}{3}H_\text{kin}\Delta\gamma\,\boldsymbol n$$ and $$p=p_n+\sqrt{2/3}\Delta\gamma$$, with $$\boldsymbol n=\boldsymbol\xi/\lVert\boldsymbol\xi\rVert$$.
+
+!!! info "deviation from theory"
+    The multiplier is normalised so that the plastic strain increment equals $$\Delta\gamma$$ times the unit normal.
+    The accumulated plastic strain therefore increases by $$\sqrt{2/3}\Delta\gamma$$ rather than by $$\Delta\gamma$$.
+
+The consistent tangent is assembled from the same denominator $$2G+\dfrac{2}{3}(H_\text{iso}+H_\text{kin})$$.
+The stored history is the accumulated plastic strain followed by the six back-stress components.
+
 ## Syntax
 
 ```text title="BilinearJ2"
@@ -23,3 +63,18 @@ It requires seven compulsory parameters: the elastic modulus, Poisson's ratio an
 The reference length sets the gradient length scale and the diffusion rate controls spatial coupling of the nonlocal field.
 It must be used with a nonlocal element such as `NonlocalC3D8`.
 A minimal invocation is `material NonlocalBilinearJ2 1 1E4 .2 200 .1 5. 1. 100. .02`.
+
+## Remarks
+
+The elastic modulus and the yield stress are converted to absolute values in the constructor.
+The hardening ratio must be smaller than unity because the plastic modulus contains the factor $$1/(1-h)$$.
+A negative hardening ratio gives linear softening, and the yield radius is clamped to zero once it becomes negative.
+The parameter `beta` is not a Lode-angle parameter here, it only splits the plastic modulus between isotropic and kinematic hardening.
+The default `beta=1` reproduces the isotropic-only law of [`BilinearMises1D`](../../Material1D/vonMises/BilinearMises1D.md).
+For a general nonlinear hardening curve derive a model from [`NonlinearJ2`](NonlinearJ2.md) or use [`CustomJ2`](CustomJ2.md) instead.
+The default hardening ratio of zero gives perfect plasticity, which can localise into a single element layer under softening conditions.
+Use a three-dimensional solid element such as `C3D8` with this material.
+
+## References
+
+1. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, Section 3.6, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).

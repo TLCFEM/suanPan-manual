@@ -5,6 +5,25 @@ Prestrain Wrapper
 Wraps a uniaxial host material model so that a prestrain can be applied.
 This may be useful for modelling prestressed reinforced concrete or similar multiphase materials.
 
+## Background
+
+An imposed or eigenstrain is a strain that develops without a corresponding stress in a free body, such as thermal expansion, shrinkage or the strain imposed by a tensioning operation.
+The wrapper evaluates the host at a shifted strain,
+
+$$
+\varepsilon_{\mathrm{host}}(t)=\varepsilon_{\mathrm{element}}+\alpha(t)\,\varepsilon_0,
+\qquad
+\sigma=\sigma_{\mathrm{host}}\!\left(\varepsilon_{\mathrm{host}}\right),
+\qquad
+D=D_{\mathrm{host}}\!\left(\varepsilon_{\mathrm{host}}\right),
+$$
+
+where $\varepsilon_0$ is the magnitude `(4)`, $\alpha(t)$ is the value of the amplitude at the current trial time, and $\varepsilon_{\mathrm{element}}$ is the strain reported by the element.
+The stress returned to the element is simply the host stress at the shifted strain, so a restrained bar develops stress while a free bar deforms by $-\alpha\varepsilon_0$ to cancel it.
+Because the wrapper shifts the strain rather than the stress, any prescribed prestress must first be converted to an equivalent prestrain by a uniaxial calibration.
+Setting the amplitude tag to zero selects a built-in ramp that grows linearly with time, and an unusable nonzero tag also falls back to a ramp with a warning.
+The strain rate passed to a rate-dependent host is not shifted, only the strain itself.
+
 ## Syntax
 
 ```text title="Prestrain"
@@ -22,6 +41,12 @@ The amplitude is in charge of applying the designated prestrain (of the specifie
 
 If only a prestress is available, one can always develop a uniaxial test model to compute the prestrain from the prestress.
 Thus, we do not provide a `Prestress` counterpart.
+
+The host must be a registered 1D material, and the wrapper inherits its density, stiffness and damping.
+The amplitude is evaluated at the trial analysis time and multiplied by the magnitude, so the prestrain can be ramped, stepped or given any user-defined time history.
+The wrapper adds the prestrain to the element strain before calling the host, so a positive magnitude produces a positive host stress at zero element strain and drives node 2 in the negative direction in the self-equilibrated example above.
+Recorded quantities are forwarded to the host and therefore refer to the shifted strain state, not to the element strain alone.
+Use a [Parallel](Parallel.md) container to combine a prestrained constituent with other 1D constituents, or [Sequential](Sequential.md) when the constituents must share a stress instead.
 
 ## Example
 
@@ -55,3 +80,13 @@ The prestrain $$0.01$$ will be gradually (linearly increasing from zero to the s
 The system balances itself without any external load.
 
 The final displacement of node 2 should be $$0.005$$ since both elements share the same section properties.
+
+!!! warning "sign of the example displacement"
+    Running this exact input with the suanPan binary gives a final displacement of $-0.005$ at node 2, not $+0.005$.
+    The wrapper evaluates the host at $\varepsilon+\alpha\varepsilon_0$, so a positive amplitude drives the bar in the negative direction when no external load is applied.
+    The magnitude $0.005$ is correct because the two identical bars share the imposed deformation equally, but the sign in the original statement is reversed.
+
+## References
+
+- T. Mura, *Micromechanics of Defects in Solids*, 2nd ed., Martinus Nijhoff, 1987.
+- A. F. Bower, *Applied Mechanics of Solids*, CRC Press, 2009.

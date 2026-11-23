@@ -2,6 +2,11 @@
 
 Parabolic Hardening Modified Cam-Clay Model
 
+## Background
+
+`ParabolicCC` shares the yield surface, flow rule and integration algorithm of [`NonlinearCamClay`](NonlinearCamClay.md) and differs only in the hardening law.
+The parabolic law depends on the square of the volumetric plastic strain and is therefore symmetric in compression and dilation, which is a mathematical convenience rather than a representation of soil physics.
+
 ## Theory
 
 This model defines a parabolic hardening rule for $$a(\alpha)$$, which is a non-negative function.
@@ -15,6 +20,17 @@ in which $$H$$ is the hardening modulus; note that $$\alpha=\varepsilon_p=\varep
 The hardening modulus could be either positive or negative.
 
 **This hardening rule does not imply any physical soil behavior.**
+
+### Implementation of the hardening law
+
+The source evaluates $a(\alpha)=a_0+H\alpha^2$ with derivative $\mathrm da/\mathrm d\alpha=2H\alpha$.
+For a negative hardening modulus the function is clamped to zero, together with its derivative, once $|\alpha|>\sqrt{a_0/|H|}$.
+The clamp prevents the quadratic term from driving $a$ negative and inverting the yield surface.
+For a positive hardening modulus there is no clamp, so $a$ grows without bound as volumetric plastic strain accumulates.
+
+!!! info "deviation from theory"
+    The quadratic law is symmetric in $\alpha$, so it hardens or softens in the same way under compression and dilation.
+    Real soils harden under compaction and soften under dilation, which cannot be represented by this single even function.
 
 ## Syntax
 
@@ -30,3 +46,18 @@ material ParabolicCC (1) (2) (3) (4) (5) (6) (7) (8) [9]
 # (8) double, H, slope of hardening function
 # [9] double, density, default: 0.0
 ```
+
+## Remarks
+
+* The first six arguments are the elastic modulus, Poisson's ratio, $\beta$, $M$, $p_t$ and $a_0$ as defined on the [`NonlinearCamClay`](NonlinearCamClay.md) page.
+* The slope $H$ has units of stress per unit volumetric strain squared, and $a_0$ has units of stress.
+* Because the law depends on $\alpha^2$, it grows for both compression and dilation when $H>0$, which is not the behaviour of a real soil.
+* A negative $H$ produces softening followed by a complete loss of the yield surface once the strain magnitude exceeds $\sqrt{a_0/|H|}$.
+* Use `set symm_mat 0` because the consistent tangent is not generally symmetric.
+* For a hardening law derived from the void ratio and the compression and recompression indices, use [`ExpCC`](ExpCC.md).
+
+## References
+
+1. Roscoe, K. H. and Burland, J. B. (1968), "On the Generalised Stress-Strain Behaviour of 'Wet' Clay", in "Engineering Plasticity", Cambridge University Press, 535--609.
+2. Schofield, A. N. and Wroth, C. P. (1968), "Critical State Soil Mechanics", McGraw-Hill, London.
+3. Chen, W. F. and Han, D. J. (2007), "Plasticity for Structural Engineers", J. Ross Publishing, ISBN 978-1-932159-75-2, Chapter 5.

@@ -56,10 +56,32 @@ The parameters $$a_3$$ and $$a_4$$ control isotropic hardening, thus are only us
 
 The governing equation defines a smooth transition curve that asymptotically approaches a limit (linear hardening bound) controlled by the height (reference stress magnitude) and the corresponding hardening ratio.
 
+In the implementation the transition is written in normalised form relative to the last reversal point $$(\varepsilon_r,\sigma_r)$$ and the asymptote point $$(\varepsilon_i,\sigma_i)$$.
+With $$b$$ the hardening ratio, the trial stress is
+
+$$
+\sigma=\sigma_r+\left(b+(1-b)\left(1+\varepsilon_n^{R}\right)^{-1/R}\right)\varepsilon_n\left(\sigma_i-\sigma_r\right),\qquad
+\varepsilon_n=\dfrac{\varepsilon-\varepsilon_r}{\varepsilon_i-\varepsilon_r}.
+$$
+
+The radius decreases with the excursion measure $$\xi=|\varepsilon_r-\varepsilon_{i,\mathrm{prev}}|/\varepsilon_{y,0}$$ according to $$R=R_0-A_1\xi/(A_2+\xi)$$, which produces the Bauschinger effect.
+When isotropic hardening is enabled, the asymptote stress is shifted by $$\max\left(0,A_3\sigma_y(|\varepsilon|_{\max}/\varepsilon_y-A_4)\right)$$, which is Filippou's extension of the original Menegotto-Pinto rule.
+The Bauschinger effect can be removed with the constant-radius switch and the isotropic hardening can be removed with the corresponding switch.
+
+!!! info "deviation from theory"
+    The normalised strain is floored at `datum::eps` before the transition curve is evaluated.
+    This avoids the singularity at the reversal point but replaces the exact curve by a constant value for negative normalised strain.
+    The isotropic hardening modification shifts the asymptote stress and does not change the initial yield stress or the elastic branch.
+
 ## Remarks
 
 1. The isotropic hardening switch can be turned on to use Filippou's modification.
 2. If constant radius switch is on, $$R=R_0=20.0$$ is unchanged.
+3. The defaults are $$b=0.05$$, $$R_0=20$$, $$A_1=18.5$$, $$A_2=0.15$$, $$A_3=0.01$$ and $$A_4=7$$, with both switches false.
+4. A larger $$R_0$$ gives a sharper knee at a reversal, while a smaller $$R_0$$ gives a rounder transition.
+5. The isotropic-hardening switch activates $$A_3$$ and $$A_4$$, whereas the constant-radius switch freezes $$R=R_0$$ and removes the Bauschinger effect.
+6. Seven history variables store the reversal point, the asymptote point, the previous asymptote strain, the maximum strain and the load sign.
+7. Use the model with one-dimensional truss or beam elements for reinforcing steel, and compare with [SlipLock](SlipLock.md) for a nonlinear elastic stiffening response.
 
 ## Example
 
@@ -69,3 +91,8 @@ materialTest1D 1 0.001 40 40 60 60
 ```
 
 ![example one](MPF.EX1.svg)
+
+## References
+
+- Menegotto, M. and Pinto, P. E. (1973), "Method of analysis for cyclically loaded RC plane frames including changes in geometry and non-elastic behavior of elements under combined normal force and bending", IABSE Symposium, Lisbon.
+- Filippou, F. C., Popov, E. P. and Bertero, V. V. (1983), "Effects of bond deterioration on hysteretic behavior of reinforced concrete joints", Report EERC 83-19, University of California, Berkeley.
