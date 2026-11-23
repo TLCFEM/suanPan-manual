@@ -10,12 +10,8 @@ This example does the following.
 2. It uses the built-in `materialTestWithBase3D` command to consolidate a material point and then drive **constant-volume cyclic simple shear** — the canonical element test for liquefaction — entirely with the standard `suanPan` executable.
 3. It compares four values of the dilatancy constant $A_0$ and shows how the rate of pore-pressure build-up changes from decades of cycles to a handful of cycles, and how a dilative calibration suppresses liquefaction altogether.
 
-The reproducible model files can be [downloaded](liquefaction-of-sand.zip).
-
-!!! note "required suanPan build"
-    These analyses use the tension-cap tangent fix shipped in the archive (`reference/dm_tangent_fix.patch`).
-    Without it, the original hard cap at zero mean stress returns a rank-deficient tangent; the state-determination itself still converges, but the volumetric part of the response is not regularised.
-    The patch is also required for the cap-tension element models discussed in the Remarks.
+The four runnable model files can be [downloaded](liquefaction-of-sand.zip).
+Each produces its own `RESULT.txt`; no external scripts or data files are needed.
 
 ## Why an element test, and why simple shear?
 
@@ -175,7 +171,7 @@ With $A_0>0$ the response is dilative: the excess pore pressure is *negative* ($
 * The published model includes a Lode-angle function $g(\theta,c)$; this implementation drops it ($c=1$), so the yield surface is circular in the deviatoric plane. True triaxial stress states are approximated.
 * The hardening modulus was modified from the published $1/(\boldsymbol\alpha-\boldsymbol\alpha_{in}):\mathbf n$ form to an exponential expression to remove the singularity under small load reversals — precisely the regime of a cyclic liquefaction simulation.
 * At zero effective confinement the sand has no shear strength: $F=|\mathbf s+p'\boldsymbol\alpha|+mp'$ with $p'\approx0$ requires $|\mathbf s|\approx0$. A *prescribed* shear displacement at liquefaction therefore has no admissible equilibrium, and a single-element FE model with all lateral DoFs constrained cannot be driven beyond this point. The material-point test avoids this by prescribing strain directly.
-* The original tension-cap code discarded the floor-modulus elastic pressure and returned a deviatoric-only (rank-5) tangent. This is inconsistent and can make the global FE matrix singular when a volumetric mode is free. The patch in the download keeps the pressure and returns the matching isotropic floor tangent, a consistent full-rank state controlled by $G_r$. With it all 209 upstream unit tests pass and the tension-cap element models converge without regression.
+* Near zero effective pressure the hyperelastic moduli are floored at $G_rG_0|p_{at}|$. The tension cap retains the corresponding small elastic pressure and returns the matching isotropic tangent, so the stress and tangent remain consistent and the global FE matrix keeps its bulk stiffness. The artificial tensile stress is $O(G_rG_0|p_{at}|\,\varepsilon_v)$ and vanishes with $G_r$.
 * $p_{at}$ is forced negative and all arguments except $A_0$ are converted to absolute values by the constructor. Entering a positive $p_{at}$ still works, but entering a positive $A_0$ when contractive behaviour is intended does not.
 * For a simpler bounding-surface sand model without fabric effects, use [`SimpleSand`](../../Library/Material/Material3D/Sand/SimpleSand.md); it has no state-parameter-driven dilatancy and cannot reproduce the acceleration of pore-pressure build-up shown here.
 
