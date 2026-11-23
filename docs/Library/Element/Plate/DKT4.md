@@ -46,7 +46,10 @@ element DKT4 (1) (2...5) (6) (7) [8]
 
 !!! warning "implementation limitation"
     A plane-strain material gives a different bending stiffness because the matrix is integrated rather than prescribed.
-    Only the thickness Gauss rule is configurable, and the in-plane rule is fixed.
+    Only the thickness Gauss rule is configurable.
+
+!!! note "developer note"
+    The in-plane rule is fixed.
 
 * The thickness must be supplied explicitly and sets both the fibre coordinates $z=\xi t/2$ and the layer weights.
 * The optional argument controls only the through-thickness Gauss rule; the in-plane 2-by-2 rule is fixed.
@@ -54,5 +57,5 @@ element DKT4 (1) (2...5) (6) (7) [8]
 
 ## References
 
-1. Batoz, J.-L., Bathe, K.-J. and Ho, L.-W. (1980), A study of three-node triangular plate bending elements, International Journal for Numerical Methods in Engineering 15(12), 1771--1812, [doi:10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205).
-2. Batoz, J.-L. and Tahar, M.B. (1982), Evaluation of a new quadrilateral thin plate bending element, International Journal for Numerical Methods in Engineering 18(11), 1655--1677.
+1. [10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205)
+2. Batoz, J.-L. and Tahar, M.B. (1982), Evaluation of a new quadrilateral thin plate

@@ -41,4 +41,4 @@ For the two-dimensional counterpart see [PatchQuad](PatchQuad.md), and for conve
 
 ## References
 
-1. T. J. R. Hughes, J. A. Cottrell and Y. Bazilevs, Isogeometric analysis: CAD, finite elements, NURBS, exact geometry and mesh refinement, *Computer Methods in Applied Mechanics and Engineering* 194(39-41):4135-4195, 2005, [doi:10.1016/j.cma.2004.10.008](https://doi.org/10.1016/j.cma.2004.10.008).
+1. [10.1016/j.cma.2004.10.008](https://doi.org/10.1016/j.cma.2004.10.008)

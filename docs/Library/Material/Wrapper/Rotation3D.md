@@ -77,14 +77,17 @@ For an isotropic host the rotated response is identical to the unrotated one, so
 The constructor evaluates $\sin(\Theta/2)/\Theta$ directly, so a zero rotation vector is not a safe way to request the identity transformation; omit the wrapper in that case.
 
 !!! warning "implementation limitation"
-    For $\Theta=0$ the quotient $\sin(\Theta/2)/\Theta$ is evaluated as $0/0$, so a zero rotation vector fills the transformation matrix with NaN values rather than producing the identity.
+    A zero rotation vector fills the transformation matrix with NaN values rather than producing the identity.
     Omit the wrapper entirely when the material axes need no rotation.
+
+!!! note "developer note"
+    For $\Theta=0$ the quotient $\sin(\Theta/2)/\Theta$ is evaluated as $0/0$.
 
 The wrapper forwards `record` calls to the host, so recorded stresses are expressed in the material axes and may differ from the global stresses returned to the element.
 Nested use with dimension-reducing wrappers is possible, for example a rotated host wrapped by [PlaneStress](PlaneStress.md), provided the intended material axes are tracked explicitly.
 
 ## References
 
-- H. Goldstein, *Classical Mechanics*, 2nd ed., Addison-Wesley, 1980.
-- K. Shoemake, Animating rotation with quaternion curves, *ACM SIGGRAPH Computer Graphics*, 19(3):245–254, 1985, doi:10.1145/325165.325242.
-- T. Belytschko, W. K. Liu and B. Moran, *Nonlinear Finite Elements for Continua and Structures*, Wiley, 2000.
+- [ISBN 978-0-201-02918-5](https://search.worldcat.org/search?q=bn:9780201029185)
+- [10.1145/325165.325242](https://doi.org/10.1145/325165.325242)
+- [ISBN 978-0-471-98774-1](https://search.worldcat.org/search?q=bn:9780471987741)

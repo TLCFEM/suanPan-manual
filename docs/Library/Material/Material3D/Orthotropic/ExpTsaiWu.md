@@ -7,7 +7,7 @@ Exponential Hardening Tsai-Wu Model
 1. [Tsai-Wu failure criterion](https://en.wikipedia.org/wiki/Tsai%E2%80%93Wu_failure_criterion)
 2. [10.1016/S0045-7825(02)00605-9](https://doi.org/10.1016/S0045-7825(02)00605-9)
 
-3. S. W. Tsai and E. M. Wu, *A General Theory of Strength for Anisotropic Materials*, Journal of Composite Materials, 5(1):58–80, 1971, [10.1177/002199837100500106](https://doi.org/10.1177/002199837100500106).
+3. [10.1177/002199837100500106](https://doi.org/10.1177/002199837100500106)
 
 ## Background
 
@@ -46,8 +46,7 @@ The function starts from $K(0)=1$ and saturates at $1+a$, so $b$ sets the plasti
 The yield surface is scaled by $K^2$, hence its size approaches $(1+a)^2$ at saturation.
 
 !!! warning "implementation limitation"
-    The parameters `a` and `b` are passed to the constructor without taking absolute values.
-    A negative `a` produces unbounded softening instead of saturation.
+    The parameters `a` and `b` are not converted to absolute values, so a negative `a` produces unbounded softening instead of saturation.
 
 ## Syntax
 

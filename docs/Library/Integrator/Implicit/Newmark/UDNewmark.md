@@ -84,7 +84,6 @@ The following function converts from one to another.
 ```py
 import numpy as np
 
-
 def map(m, s):
     """
     Transform damping coefficients between UDD and UDA.
@@ -101,7 +100,6 @@ def map(m, s):
     s = poles / scalar
 
     return ms * s, s
-
 
 print(map([-2], [10]))  # UDD -> UDA
 ```

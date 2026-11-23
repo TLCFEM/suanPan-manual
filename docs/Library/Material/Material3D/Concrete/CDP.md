@@ -9,9 +9,9 @@ Concrete Damage Plasticity Model
 3. [10.1002/1097-0207(20010120)50:2<487::AID-NME44>3.0.CO;2-N](https://doi.org/10.1002/1097-0207(20010120)50:2%3C487::AID-NME44%3E3.0.CO;2-N)
 4. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)
 5. [10.1016/j.acme.2019.07.003](https://doi.org/10.1016/j.acme.2019.07.003)
-6. Drucker, D. C. and Prager, W. (1952) Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume, Quarterly of Applied Mathematics, 10(2), 157--165.
-7. Grassl, P. and Jirasek, M. (2006) Damage-plastic model for concrete failure, International Journal of Solids and Structures, 43(22--23), 7166--7196, [10.1016/j.ijsolstr.2006.06.032](https://doi.org/10.1016/j.ijsolstr.2006.06.032).
-8. Kupfer, H., Hilsdorf, H. K. and Rusch, H. (1969) Behavior of concrete under biaxial stresses, ACI Journal, 66(8), 656--666.
+6. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in
+7. [10.1016/j.ijsolstr.2006.06.032](https://doi.org/10.1016/j.ijsolstr.2006.06.032)
+8. Behavior of concrete under biaxial stresses, ACI Journal, 66(8), 656--666
 
 !!! warning "automatic regularization"
     The `CDP` model automatically regularizes the input arguments to avoid ill-shaped backbones.
@@ -73,7 +73,7 @@ The first invariant is taken with the tension-positive convention used throughou
 
 !!! info "deviation from theory"
     The standard Lee--Fenves yield function retains the $K_c$ term for triaxial compression.
-    This class hard-codes $K_c=1$ in the constructor, so $\zeta=0$ and the deviatoric section is circular.
+    This model fixes $K_c=1$, so $\zeta=0$ and the deviatoric section is circular.
     The effect of the tensile-to-compressive meridian ratio is available only in [`AbaqusCDP`](AbaqusCDP.md).
 
 ### Flow rule and dilatancy
@@ -135,7 +135,9 @@ Compression damage is never recovered in this implementation, and the damage fac
 !!! info "deviation from theory"
     Lee and Fenves use two independent recovery parameters, one for tension and one for compression.
     This implementation exposes only one factor $s_0$, and the recovery factor multiplies the tensile damage index alone.
-    The $0.999$ scaling of both damage indices is an additional numerical device that prevents the tangent from vanishing completely.
+
+!!! note "developer note"
+    Both damage indices are scaled by $0.999$ so that the tangent never vanishes completely.
 
 The classes [`TableCDP`](TableCDP.md) and [`CustomCDP`](CustomCDP.md) share this return mapping and only replace the backbone functions, while [`CDPM2`](CDPM2.md) uses a different two-surface plasticity formulation.
 

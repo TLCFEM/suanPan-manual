@@ -45,6 +45,8 @@ The bulk modulus used in the volumetric part is $$K=E/[3(1-2\nu)]$$.
 !!! warning "implementation limitation"
     The coefficient of the $f^2$ term is fixed to $q_3=q_1^2$ and cannot be set independently.
     Only the uniaxial stress state $\sigma_2=\sigma_3=0$ is represented, so multiaxial triaxiality effects cannot be prescribed directly.
+
+!!! note "developer note"
     The matrix hardening law is not defined in this class but must be supplied by a derived class.
 
 ### Flow Rule and Damage Evolution
@@ -102,7 +104,7 @@ $$
 The hardening pair $$(\sigma_y,\mathrm{d}\sigma_y/\mathrm{d}\varepsilon_m^p)$$ is supplied by the derived class.
 The consistent tangent is obtained by solving the Jacobian once more with the derivative of the residuals with respect to the trial strain as the right-hand side.
 
-!!! info "deviation from theory"
+!!! note "developer note"
     The first iteration tests the yield function with the trial stress and returns immediately with an elastic answer if it is negative.
     The Newton loop is capped at 20 iterations and returns a failure code if the system does not converge.
     A single four-by-four linear solve is used per iteration, so a singular Jacobian terminates the step.
@@ -121,8 +123,8 @@ The full three-dimensional formulation is available as [`NonlinearGurson`](../..
 
 ## References
 
-1. A. L. Gurson, Continuum theory of ductile rupture by void nucleation and growth, Part I: yield criteria and flow rules for porous ductile media, *Journal of Engineering Materials and Technology* 99 (1977) 2--15, [doi:10.1115/1.3443401](https://doi.org/10.1115/1.3443401).
-2. V. Tvergaard and A. Needleman, Analysis of the cup-cone fracture in a round tensile bar, *Acta Metallurgica* 32 (1984) 157--169, [doi:10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X).
+1. [10.1115/1.3443401](https://doi.org/10.1115/1.3443401)
+2. [10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X)
 
 ## Recording
 

@@ -75,7 +75,10 @@ The default memory type is `mean`, which averages the stored reversal ratios.
 
 !!! warning "implementation limitation"
     Only the minimum, maximum and mean of the stored reversal ratios are available as memory types.
-    The yield ratio is bounded below by $$10^{-15}$$ and above by unity, and the scalar bounds are clamped to zero when negative.
+    The yield ratio is bounded below by a small positive value and above by unity, and the scalar bounds are clamped to zero when negative.
+
+!!! note "developer note"
+    The lower bound on the yield ratio is $$10^{-15}$$.
 
 A zero rate in any `-fc`, `-ac`, `-na` or `-nd` tuple gives a linear evolution instead of an exponential saturation.
 The scalar bounds are clamped to zero when they would become negative, so a strongly negative saturation stress is truncated.

@@ -30,8 +30,11 @@ The remaining two residuals of the implicit system are identical to those of [`S
 
 !!! info "deviation from theory"
     The standard Perzyna overstress is an explicit power law in the distance to the yield surface.
-    Here the viscous ratio is bounded by $c_vz$ and is confined by clamping after every Newton update.
+    Here the viscous ratio is bounded by $c_vz$.
     Viscosity is scaled by $\mu/\Delta t$, so the response is tied to the analysis time increment.
+
+!!! note "developer note"
+    The viscous ratio is confined by clamping after every Newton update.
 
 ## Syntax
 
@@ -73,9 +76,9 @@ Use [`VAFCRP1D`](VAFCRP1D.md) when viscosity should be applied to an Armstrong--
 
 ## References
 
-1. K. Hashiguchi, Subloading surface model in unconventional plasticity, *International Journal of Solids and Structures* 25 (1989) 917--945, [doi:10.1016/0020-7683(89)90038-3](https://doi.org/10.1016/0020-7683(89)90038-3).
-2. P. Perzyna, Fundamental problems in viscoplasticity, *Advances in Applied Mechanics* 9 (1966) 243--377.
-3. D. Perić, On a class of constitutive equations in viscoplasticity: formulation and computational issues, *International Journal for Numerical Methods in Engineering* 36 (1993) 1365--1393, [doi:10.1002/nme.1620360807](https://doi.org/10.1002/nme.1620360807).
+1. [10.1016/0020-7683(89)90038-3](https://doi.org/10.1016/0020-7683(89)90038-3)
+2. Advances in Applied Mechanics
+3. [10.1002/nme.1620360807](https://doi.org/10.1002/nme.1620360807)
 
 ## Example
 

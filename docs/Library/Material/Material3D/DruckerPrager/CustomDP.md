@@ -46,4 +46,4 @@ material CustomDP (1) (2) (3) (4) (5) (6) (7) [8]
 
 ## References
 
-1. Drucker, D. C. and Prager, W. (1952) Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume, Quarterly of Applied Mathematics, 10(2), 157--165.
+1. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in

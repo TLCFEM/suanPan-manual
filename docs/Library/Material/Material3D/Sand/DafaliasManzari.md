@@ -181,7 +181,7 @@ $$
 $$
 
 !!! info "deviation from theory"
-    With the tension-positive convention the source evaluates this increment as $$\Delta\mathbf z=c_z\gamma D\left(z_m\mathbf n-\mathbf z\right)$$ for positive dilatancy $$D$$, since $$\Delta\varepsilon^p_v=\gamma D$$.
+    With the tension-positive convention the model evaluates this increment as $$\Delta\mathbf z=c_z\gamma D\left(z_m\mathbf n-\mathbf z\right)$$ for positive dilatancy $$D$$, since $$\Delta\varepsilon^p_v=\gamma D$$.
     This is the sign-reversed counterpart of the compression-positive expression published by Dafalias and Manzari.
 
 ### Parameter summary
@@ -193,7 +193,7 @@ $$
 - $p_{at}$ is the atmospheric pressure used for normalisation and is entered as a negative number, and $G_r$ is the fraction of $G_0|p_{at}|$ used as the lower bound on the shear modulus.
 
 !!! warning "implementation limitation"
-    A tensile or near-zero trial pressure makes the yield surface undefined, so the implementation caps the response at zero mean stress and returns a deviatoric-only stress with the floor shear modulus $$G_rG_0|p_{at}|$$.
+    A tensile or near-zero trial pressure makes the yield surface undefined, so the model caps the response at zero mean stress and returns a deviatoric-only stress with the floor shear modulus $$G_rG_0|p_{at}|$$.
     No tensile strength or cap surface is available for sand in this model.
 
 ## Remarks
@@ -207,9 +207,9 @@ $$
 
 !!! warning "implementation limitation"
     The values annotated with `==>` in the syntax block are illustrative and are not the parser defaults.
-    In particular the constructor uses $$\alpha^c=1.25$$ rather than $$1.5$$ and $$G_r=0.2$$ rather than $$0.1$$.
+    In particular the model uses $$\alpha^c=1.25$$ rather than $$1.5$$ and $$G_r=0.2$$ rather than $$0.1$$.
 
 ## References
 
-1. Dafalias, Y. F. and Manzari, M. T. (2004) Simple plasticity sand model accounting for fabric change effects, Journal of Engineering Mechanics, 130(6), 622--634, [10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622)).
-2. Manzari, M. T. and Dafalias, Y. F. (1997) A two-surface plasticity model for sand, Geotechnique, 47(2), 255--272.
+1. [10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622))
+2. A two-surface plasticity model for sand, Geotechnique, 47(2), 255--272

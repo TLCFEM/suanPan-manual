@@ -18,6 +18,8 @@ The parser selects this `DEV_TENSILE` measure, while the `TOTAL` and `TENSILE` v
 
 !!! warning "implementation limitation"
     The `TOTAL` and `TENSILE` energy measures are unreachable from the input file.
+
+!!! note "developer note"
     The parser always passes `EnergyType::DEV_TENSILE` to the constructor.
 
 The nonlocal field $k$ is carried by the seventh material degree of freedom and enters a gradient term with coefficient $s=[h\ln(1+k)+1]/l$, where $h$ is the diffusion rate and $l$ is the reference length.
@@ -50,8 +52,7 @@ The parser fixes the energy measure to the deviatoric tensile part of the stress
 All six numerical parameters are converted to their absolute values.
 
 !!! warning "implementation limitation"
-    The constructor applies `fabs` to all six numerical arguments.
-    Negative values are silently converted rather than rejected.
+    All six numerical arguments are converted to their absolute values, so negative values are silently replaced rather than rejected.
 
 Below the maximum energy the response is ordinary isotropic elasticity.
 The reference length $l$ and diffusion rate $h$ together set the gradient length scale $s$, so a larger $l$ spreads the degradation over a wider zone.

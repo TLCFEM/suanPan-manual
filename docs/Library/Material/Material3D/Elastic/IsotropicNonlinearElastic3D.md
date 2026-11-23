@@ -91,5 +91,5 @@ The response is isotropic by construction, so the [`Rotation3D`](../../Wrapper/R
 
 ## References
 
-1. G. A. Holzapfel, *Nonlinear Solid Mechanics*, Wiley, 2000, Chapter 3.
-2. R. W. Ogden, *Non-linear Elastic Deformations*, Dover, 1997, Chapter 2.
+1. [ISBN 978-0-471-82319-3](https://search.worldcat.org/search?q=bn:9780471823193)
+2. [ISBN 978-0-486-69648-5](https://search.worldcat.org/search?q=bn:9780486696485)

@@ -8,7 +8,7 @@ Internally `NLE1D01` instantiates [`BilinearElastic1D`](BilinearElastic1D.md) wi
 
 !!! info "deviation from theory"
     Only the monotonic first-loading branch of the Menegotto--Pinto equation is used.
-    The curvature parameter $R$ is the constant supplied as `(5)`, and the code contains no reversal detection, no evolution of $R$, no Bauschinger effect and no isotropic hardening.
+    The curvature parameter $R$ is the constant supplied as `(5)`, with no reversal detection, no evolution of $R$, no Bauschinger effect and no isotropic hardening.
     The model is therefore an elastic backbone, not the cyclic hysteretic model from which the transition formula originates.
 
 ## Theory
@@ -63,4 +63,4 @@ Use the sharp-corner [`BilinearElastic1D`](BilinearElastic1D.md) when a distinct
 
 ## References
 
-1. Menegotto, M. and Pinto, P. E. (1973). Method of analysis for cyclically loaded reinforced concrete plane frames including changes in geometry and non-elastic behaviour of elements under combined normal force and bending. In *Proceedings of the IABSE Symposium on Resistance and Ultimate Deformability of Structures Acted on by Well-Defined Repeated Loads*, Lisbon.
+1. Proceedings of the IABSE Symposium on Resistance and Ultimate Deformability of

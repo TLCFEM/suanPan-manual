@@ -88,7 +88,7 @@ material ExpCC (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) [11]
 
 ## References
 
-1. Roscoe, K. H. and Burland, J. B. (1968), "On the Generalised Stress-Strain Behaviour of 'Wet' Clay", in "Engineering Plasticity", Cambridge University Press, 535--609.
-2. Schofield, A. N. and Wroth, C. P. (1968), "Critical State Soil Mechanics", McGraw-Hill, London.
-3. Muir Wood, D. (1991), "Soil Behaviour and Critical State Soil Mechanics", Cambridge University Press, [10.1017/CBO9781139878272](https://doi.org/10.1017/CBO9781139878272).
-4. Abaqus Theory Guide, Section 4.4.3 "Critical state models".
+1. On the Generalised Stress-Strain Behaviour of 'Wet' Clay
+2. [ISBN 978-0-641-94048-4](https://search.worldcat.org/search?q=bn:9780641940484)
+3. [ISBN 978-0-521-33782-3](https://search.worldcat.org/search?q=bn:9780521337823)
+4. [Critical state models](https://search.worldcat.org/search?q=ti:Critical+state+models)

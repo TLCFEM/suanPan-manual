@@ -50,4 +50,7 @@ The density stored by a material is used for mass and inertia calculations and d
 The characteristic length defaults to unity and is normally set by the element, which matters for objective damage laws.
 
 !!! info "deviation from theory"
-    The characteristic length stored by the material base class defaults to unity, so an objective damage law is only mesh objective when the element overwrites this value.
+    The characteristic length defaults to unity, so an objective damage law is only mesh objective when the element overwrites this value.
+
+!!! note "developer note"
+    The characteristic length is stored by the material base class.

@@ -33,7 +33,7 @@ in which $$c_0$$ is the initial cohesion (similar to the initial yield stress), 
 
 !!! info "deviation from theory"
     For negative $$H$$ the cohesion is not allowed to become negative.
-    The implementation switches to zero cohesion once $$\bar{\varepsilon_p}$$ exceeds the critical value $$-c_0/H$$, leaving a purely frictional cone at the origin.
+    Cohesion is set to zero once $$\bar{\varepsilon_p}$$ exceeds the critical value $$-c_0/H$$, leaving a purely frictional cone at the origin.
 
 ### More
 
@@ -128,5 +128,5 @@ with ErrorMap(
 
 ## References
 
-1. Drucker, D. C. and Prager, W. (1952) Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume, Quarterly of Applied Mathematics, 10(2), 157--165.
-2. Chen, W. F. and Han, D. J. (2007) Plasticity for Structural Engineers, J. Ross Publishing, Chapter 6.
+1. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in
+2. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)

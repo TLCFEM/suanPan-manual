@@ -73,6 +73,6 @@ As with all wrappers, `record` forwards to the host, so recorded 3D stresses inc
 
 ## References
 
-- A. F. Bower, *Applied Mechanics of Solids*, CRC Press, 2009.
-- O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann, 2013.
-- T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover Publications, 2000.
+- [ISBN 978-1-4398-0247-2](https://search.worldcat.org/search?q=bn:9781439802472)
+- [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)
+- [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)

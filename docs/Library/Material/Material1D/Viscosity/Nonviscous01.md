@@ -14,8 +14,6 @@ $$
 
 The parameters $$m_i$$ and $$s_i$$ are complex numbers.
 
-2. Chang, T. L., and Lee, C.-L. (2024), "A strategy for fast evaluation of nonviscously damped systems with arbitrary kernels," Mechanical Systems and Signal Processing, 210, 111156, [doi:10.1016/j.ymssp.2024.111156](https://doi.org/10.1016/j.ymssp.2024.111156).
-
 ## Syntax
 
 ```text title="Nonviscous01"

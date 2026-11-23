@@ -51,5 +51,5 @@ To embed a three-dimensional material in a two-dimensional problem, use the [`Pl
 
 ## References
 
-1. Hughes, T. J. R. (2000), "The Finite Element Method: Linear Static and Dynamic Finite Element Analysis", Dover Publications, Sections 4.2--4.4.
-2. Simo, J. C. and Hughes, T. J. R. (1998), "Computational Inelasticity", Springer, Chapter 3.
+1. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
+2. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

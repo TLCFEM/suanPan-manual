@@ -31,8 +31,8 @@ When the nonlinear geometry switch is on, the corotational transformation `B2DC`
 
 ## References
 
-1. [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176)
-2. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, 1998.
+1. [10.1061/JSENDH.STENG-12176](https://doi.org/10.1061/JSENDH.STENG-12176)
+2. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)
 
 ## Syntax
 

@@ -23,7 +23,7 @@ The `B3DL` orientation is used for linear geometry and `B3DC` for the corotation
 
 ## References
 
-1. [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176)
+1. [10.1061/JSENDH.STENG-12176](https://doi.org/10.1061/JSENDH.STENG-12176)
 
 ## Syntax
 

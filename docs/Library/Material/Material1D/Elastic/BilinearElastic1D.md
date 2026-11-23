@@ -32,8 +32,11 @@ The secant stiffness $$E_S=\sigma/\varepsilon$$ decreases continuously from $$E$
 
 !!! warning "implementation limitation"
     Despite the yield terminology, this is a nonlinear elastic backbone and not an elastoplastic model.
-    No yield surface, plastic strain or history variable is stored, and a stress reversal simply retraces the backbone.
+    No yield surface or plastic strain is modelled, and a stress reversal simply retraces the backbone.
     It cannot reproduce residual strains, hysteresis or the Bauschinger effect.
+
+!!! note "developer note"
+    The model stores no yield surface, plastic strain or history variable.
 
 ## Syntax
 
@@ -59,8 +62,11 @@ material BilinearElastic1D 1 100 50 0.1
 The argument `(3)` is the yield stress magnitude and `(4)` is the hardening ratio $$b=H/E$$, not an absolute hardening modulus.
 
 !!! info "deviation from theory"
-    The syntax block labels `(4)` as a hardening modulus, but `new_bilinearelastic1d` passes it to the constructor as a ratio.
-    The post-yield slope actually used is $|E|\,b$, so the input is dimensionless.
+    The syntax block labels `(4)` as a hardening modulus, but the input is actually a hardening ratio.
+    The post-yield slope used is $|E|\,b$, so the input is dimensionless.
+
+!!! note "developer note"
+    `new_bilinearelastic1d` passes `(4)` to the constructor as a ratio.
 
 The constructor converts the elastic modulus and the yield stress to absolute values and forms the hardening modulus as $$|E|\,b$$.
 A hardening ratio of zero gives an elastic--perfectly-plastic backbone, while values approaching one recover nearly linear elastic behaviour.

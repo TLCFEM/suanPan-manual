@@ -47,8 +47,8 @@ The host material tag `(2)` must refer to an already defined one-dimensional mat
 If the compression expression is omitted, the tension expression is reused with the absolute value of the stress as input and the derivative negated, so a single expression defines a symmetric law.
 
 !!! info "deviation from theory"
-    With one expression the code evaluates it at $|\bar\sigma|$ and negates the derivative instead of passing the negative stress directly.
-    This means the compression law is the mirror image of the tension law and cannot be calibrated independently with a single expression.
+    With one expression it is evaluated at $|\bar\sigma|$ and the derivative is negated instead of passing the negative stress directly.
+    The compression law is therefore the mirror image of the tension law and cannot be calibrated independently with a single expression.
 
 The branch is selected by the sign of the intact stress returned by the host material.
 The wrapper inherits the density of the host and records the two degradation factors as `DT` and `DC`.

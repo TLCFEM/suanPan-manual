@@ -12,7 +12,7 @@ The name represents the following.
 1. [1840.20/26854](http://www.lib.ncsu.edu/resolver/1840.20/26854)
 2. [10.1016/0013-7944(85)90095-5](https://doi.org/10.1016/0013-7944(85)90095-5)
 3. [10.1115/1.3162603](https://doi.org/10.1115/1.3162603)
-4. N. Ohno, Material models of cyclic plasticity with extended isotropic hardening: a review, *Mechanical Engineering Reviews* 2 (2015) 14--00425, [doi:10.1299/mer.14-00425](https://doi.org/10.1299/mer.14-00425).
+4. [10.1299/mer.14-00425](https://doi.org/10.1299/mer.14-00425)
 
 ## Theory
 
@@ -48,9 +48,11 @@ $$
 When $$\Delta h\leqslant0$$ both $$r$$ and $$\theta$$ retain their previous values.
 
 !!! info "deviation from theory"
+    Large steps across a strongly growing memory surface should be checked by step refinement.
+
+!!! note "developer note"
     At every Newton iteration the update above is recomputed from the step-committed radius and centre rather than from the values obtained at the previous iteration.
     The memory surface is therefore advanced by a first-order frozen-surface update instead of being integrated together with the plastic multiplier.
-    Large steps across a strongly growing memory surface should be checked by step refinement.
 
 The constant $$c\in[0,1]$$ splits the overshoot into growth of the radius and translation of the centre.
 Because the reduction term $$-\sigma^r(1-e^{-m^rr})$$ grows with $$r$$, expansion of the memory surface reduces the isotropic radius and produces the cyclic softening seen in the second example below.

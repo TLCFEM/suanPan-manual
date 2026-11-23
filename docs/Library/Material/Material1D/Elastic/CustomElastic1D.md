@@ -19,9 +19,13 @@ The initial stiffness is set to the gradient evaluated at zero strain.
 Because the expression is evaluated only from the current strain, the response is path independent provided the expression itself is a pure function.
 
 !!! warning "implementation limitation"
-    The tangent stiffness is taken from the `gradient` method of the expression and no finite-difference fallback is provided.
     An expression whose gradient is undefined at zero strain gives an invalid initial stiffness, and a discontinuous gradient prevents quadratic convergence.
-    The material stores no history, so an expression with hidden state would violate the assumed path independence.
+    An expression with hidden internal state would violate the assumed path independence.
+
+!!! note "developer note"
+    The tangent stiffness is taken from the `gradient` method of the expression and no finite-difference fallback is provided.
+    The material stores no history variables.
+
 A user-defined expression can therefore implement any of the built-in backbones, such as those of [`PolyElastic1D`](PolyElastic1D.md) or [`Tanh1D`](Tanh1D.md), as well as custom laws.
 
 ## Syntax

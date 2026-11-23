@@ -79,7 +79,7 @@ where $$n=\dfrac{s+p\alpha}{|s+p\alpha|}$$ is a unit tensor, $$I$$ is the second
 Note due to the change of sign convention, a negative $$D$$ leads to contractive response, thus $$A$$ often needs to be negative.
 
 !!! info "deviation from theory"
-    The implementation actually uses $$D=A\left(\alpha^d-m-\alpha:\mathbf n\right)$$, that is, the distance from the stress-ratio point to the dilatancy surface measured relative to the wedge size $$m$$.
+    The model uses $$D=A\left(\alpha^d-m-\alpha:\mathbf n\right)$$, that is, the distance from the stress-ratio point to the dilatancy surface measured relative to the wedge size $$m$$.
     The expression shown above omits the $$-m$$ term.
     This form makes $$D$$ vanish when the stress ratio reaches the dilatancy surface at $$\alpha:\mathbf n=\alpha^d-m$$.
 
@@ -138,5 +138,5 @@ with ErrorMap(
 
 ## References
 
-1. Dafalias, Y. F. and Manzari, M. T. (2004) Simple plasticity sand model accounting for fabric change effects, Journal of Engineering Mechanics, 130(6), 622--634, [10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622)).
-2. Been, K. and Jefferies, M. G. (1985) A state parameter for sands, Geotechnique, 35(2), 99--112.
+1. [10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622))
+2. A state parameter for sands, Geotechnique, 35(2), 99--112

@@ -31,12 +31,18 @@ The tangent modulus equals $$E$$ in the active elastic branch and zero in both t
 No compression is transmitted, so the stress is clamped at zero for any negative trial value.
 
 !!! info "deviation from theory"
-    The yield cap is applied by clamping the trial stress rather than by a plastic return algorithm, so the tangent jumps directly from $$E$$ to zero at the yield stress.
-    The gap offset is introduced through a stored residual strain that is updated only while unloading from a stressed state.
+    The tangent jumps directly from $$E$$ to zero at the yield stress.
+    The gap offset is updated only while unloading from a stressed state.
+
+!!! note "developer note"
+    The yield cap is applied by clamping the trial stress rather than by a plastic return algorithm.
+    The gap offset is introduced through a stored residual strain.
 
 !!! warning "implementation limitation"
+    Small floating-point residuals can delay the re-activation of tensile stiffness.
+
+!!! note "developer note"
     The code detects a closed gap by comparing the current stress with zero exactly.
-    Small floating-point residuals can therefore delay the re-activation of tensile stiffness.
 
 ## Remarks
 

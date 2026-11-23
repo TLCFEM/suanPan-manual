@@ -27,9 +27,9 @@ The material is intended for large deformations of compressible rubber-like soli
 
 ## References
 
-1.  [10.1007/978-1-4419-1746-1](https://doi.org/10.1007/978-1-4419-1746-1) Chapter 3.5.2.1
-2.  [10.1063/1.1712836](https://doi.org/10.1063/1.1712836)
-3.  [10.1098/rsta.1948.0024](https://doi.org/10.1098/rsta.1948.0024)
+1. [10.1007/978-1-4419-1746-1](https://doi.org/10.1007/978-1-4419-1746-1)
+2. [10.1063/1.1712836](https://doi.org/10.1063/1.1712836)
+3. [10.1098/rsta.1948.0024](https://doi.org/10.1098/rsta.1948.0024)
 
 ## Syntax
 
@@ -50,7 +50,7 @@ material MooneyRivlin (1) (2) (3) (4) [5]
 3. The three material parameters are replaced by their absolute values, so only positive $K$, $A_{10}$ and $A_{01}$ can be entered.
 
 !!! warning "implementation limitation"
-    The constructor applies `fabs` to all three parameters, so negative coefficients sometimes used to fit rubber data cannot be supplied.
+    Negative coefficients, sometimes used to fit rubber data, cannot be supplied because all three parameters are replaced by their absolute values.
 
 4. The third invariant is floored at machine epsilon to avoid a singularity when the volume ratio vanishes.
 

@@ -58,9 +58,9 @@ The model captures creep but not stress relaxation under fixed strain, so use [`
 
 ## References
 
-1. Christensen, R. M. (1982), Theory of Viscoelasticity: An Introduction, 2nd edition, Academic Press.
+1. [ISBN 978-0-12-174250-8](https://search.worldcat.org/search?q=bn:9780121742508)
 
-2. Kelly, D. (2013), "Solid Mechanics Part I: An Introduction to Solid Mechanics," Chapter 10 Viscoelasticity, University of Auckland.
+2. Solid Mechanics Part I: An Introduction to Solid Mechanics
 
 ## Recording
 

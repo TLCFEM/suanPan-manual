@@ -34,8 +34,10 @@ so that even powers also contribute an odd and continuous backbone.
 
 !!! info "deviation from theory"
     A power term with even $i$ is not the ordinary polynomial $a_i\varepsilon^i$ but $a_i\operatorname{sign}(\varepsilon)|\varepsilon|^i$.
-    The implementation wins this odd extension by forming all powers of $|\varepsilon|$ and negating the accumulated stress when the strain is negative.
     Thus the coefficient $a_2$ contributes $a_2\varepsilon|\varepsilon|$ and not $a_2\varepsilon^2$.
+
+!!! note "developer note"
+    The odd extension is obtained by forming all powers of $|\varepsilon|$ and negating the accumulated stress when the strain is negative.
 
 The consistent tangent stiffness is
 
@@ -61,8 +63,11 @@ material PolyElastic1D 1 4. 6. 2.
 Please note density is not supported in this model.
 
 !!! warning "implementation limitation"
-    `new_polyelastic1d` hard-codes the density to zero and forwards every remaining token as a polynomial coefficient.
+    Every numeric argument after the tag is treated as a polynomial coefficient, and the density is fixed at zero.
     There is no way to supply a density through this command, so the model cannot contribute mass in a dynamic analysis.
+
+!!! note "developer note"
+    `new_polyelastic1d` hard-codes the density to zero and forwards every remaining token as a polynomial coefficient.
 
 ## Remarks
 

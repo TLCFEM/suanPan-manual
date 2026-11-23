@@ -22,9 +22,9 @@ It is normally coupled to ordinary finite elements such as [C3D8](C3D8.md) or [C
 
 ## References
 
-1. J. M. M. C. Marques and D. R. J. Owen, Infinite elements in quasi-static materially nonlinear problems, *Computers & Structures* 18(4):739-751, 1984, [doi:10.1016/0045-7949(84)90019-1](https://doi.org/10.1016/0045-7949(84)90019-1).
-2. P. Bettess, Infinite elements, *International Journal for Numerical Methods in Engineering* 11(1):53-64, 1977.
-3. O. C. Zienkiewicz, D. W. Kelly and P. Bettess, Mapped infinite elements for exterior wave problems, *International Journal for Numerical Methods in Engineering* 21(7):1229-1251, 1985, [doi:10.1002/nme.1620210705](https://doi.org/10.1002/nme.1620210705).
+1. [10.1016/0045-7949(84)90019-1](https://doi.org/10.1016/0045-7949(84)90019-1)
+2. International Journal for Numerical Methods in Engineering
+3. [10.1002/nme.1620210705](https://doi.org/10.1002/nme.1620210705)
 
 ## Syntax
 

@@ -59,7 +59,10 @@ element Mindlin (1) (2...5) (6) (7) [8]
 
 !!! warning "implementation limitation"
     The element is restricted to four-node quadrilaterals and requires a material that reports a nonzero shear modulus.
-    The through-thickness integration is the only adjustable rule, and the one-point shear penalty is hard-coded.
+    The through-thickness integration is the only adjustable rule.
+
+!!! note "developer note"
+    The one-point shear penalty is hard-coded.
 
 * The thickness is required and scales both the shear penalty and the through-thickness fibre coordinates.
 * The optional argument selects the through-thickness Gauss rule and defaults to five points, while the in-plane rule for bending is a fixed 2-by-2 Gauss rule.
@@ -70,7 +73,7 @@ element Mindlin (1) (2...5) (6) (7) [8]
 
 ## References
 
-1. Mindlin, R.D. (1951), Influence of rotary inertia and shear on flexural motions of isotropic elastic plates, Journal of Applied Mechanics 18, 31--38.
-2. Reissner, E. (1945), The effect of transverse shear deformation on the bending of elastic plates, Journal of Applied Mechanics 12, A69--A77.
-3. Malkus, D.S. and Hughes, T.J.R. (1978), Mixed finite element methods---reduced and selective integration techniques: a unification of concepts, Computer Methods in Applied Mechanics and Engineering 15(1), 63--81, [doi:10.1016/0045-7825(78)90051-1](https://doi.org/10.1016/0045-7825(78)90051-1).
-4. Hughes, T.J.R., The Finite Element Method: Linear Static and Dynamic Finite Element Analysis, Prentice Hall, 1987.
+1. Mindlin, R.D. (1951), Influence of rotary inertia and shear on flexural motions of
+2. Reissner, E. (1945), The effect of transverse shear deformation on the bending of
+3. [10.1016/0045-7825(78)90051-1](https://doi.org/10.1016/0045-7825(78)90051-1)
+4. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)

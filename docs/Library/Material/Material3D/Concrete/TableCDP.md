@@ -173,5 +173,5 @@ exit
 
 ## References
 
-1. Lee, J. and Fenves, G. L. (1998) Plastic-damage model for cyclic loading of concrete structures, Journal of Engineering Mechanics, 124(8), 892--900, [10.1061/(ASCE)0733-9399(1998)124:8(892)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:8(892)).
-2. Lubliner, J., Oliver, J., Oller, S. and Onate, E. (1989) A plastic-damage model for concrete, International Journal of Solids and Structures, 25(3), 299--326, [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4).
+1. [10.1061/(ASCE)0733-9399(1998)124:8(892)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:8(892))
+2. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)

@@ -51,4 +51,4 @@ For the hexahedral counterpart see [DC3D8](DC3D8.md) and its monolithic alias `D
 
 ## References
 
-1. C. Miehe, F. Welschinger and M. Hofacker, Thermodynamically consistent phase-field models of fracture: variational principles and multi-field FE implementations, *International Journal for Numerical Methods in Engineering* 83(10):1273-1311, 2010, [doi:10.1002/nme.2861](https://doi.org/10.1002/nme.2861).
+1. [10.1002/nme.2861](https://doi.org/10.1002/nme.2861)

@@ -57,4 +57,4 @@ For a friction damper with post-yield hardening use [`BilinearViscosity`](Biline
 
 ## References
 
-1. Wriggers, P. (2006), Computational Contact Mechanics, Springer, [doi:10.1007/3-540-30315-4](https://doi.org/10.1007/3-540-30315-4).
+1. [ISBN 978-3-540-32608-3](https://search.worldcat.org/search?q=bn:9783540326083)

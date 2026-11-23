@@ -46,7 +46,7 @@ The exponent is clipped to $$n\leqslant1$$ in the constructor.
 
 !!! warning "implementation limitation"
     An exponent larger than unity is silently reduced to unity rather than rejected.
-    If the local Newton iteration for the hardening law fails, the implementation falls back to unit radius and unit slope for that step.
+    If the hardening law cannot be solved, the radius and slope default to unity for that step.
 
 The void evolution and the coupled return mapping are inherited unchanged from [`NonlinearGurson`](NonlinearGurson.md).
 
@@ -63,8 +63,8 @@ Use a three-dimensional solid element such as `C3D8` with this material.
 
 ## References
 
-1. A. L. Gurson, Continuum theory of ductile rupture by void nucleation and growth, Part I: yield criteria and flow rules for porous ductile media, *Journal of Engineering Materials and Technology* 99 (1977) 2--15, [doi:10.1115/1.3443401](https://doi.org/10.1115/1.3443401).
-2. V. Tvergaard and A. Needleman, Analysis of the cup-cone fracture in a round tensile bar, *Acta Metallurgica* 32 (1984) 157--169, [doi:10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X).
+1. [10.1115/1.3443401](https://doi.org/10.1115/1.3443401)
+2. [10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X)
 ## Iso-error Map
 
 The following example iso-error maps are obtained via the following script.

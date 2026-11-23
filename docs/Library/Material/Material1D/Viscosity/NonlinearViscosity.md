@@ -45,6 +45,7 @@ so that the replacement $a v^2+b$ matches $|v|^{\alpha-1}$ in value and $\alpha|
 !!! info "deviation from theory"
     The exact power law is replaced by a $C^1$ cubic only for $0<\alpha<1$ and $|v|<L$.
     Outside that window the exact power law is used, so the model is not a single power law over the full velocity range.
+
 The trial stress and the two tangents are assembled as
 
 $$
@@ -61,8 +62,12 @@ For $\alpha=0$ the stress is simply $\eta$, with $k=\partial\eta/\partial\vareps
 For $\alpha=1$ the stress is $\eta v$, with $k=v\,\partial\eta/\partial\varepsilon$ and $c=\eta+v\,\partial\eta/\partial v$.
 
 !!! warning "implementation limitation"
-    For $\alpha=0$ the base class sets the power-law factor to one and returns $\eta$ directly, so the sign of the strain rate is lost.
-    This is a framework convention used by the derived classes and is not a physical power-law dashpot.
+    For $\alpha=0$ the stress is $\eta$ directly and the sign of the strain rate is lost.
+    This is a framework convention rather than a physical power-law dashpot.
+
+!!! note "developer note"
+    For $\alpha=0$ the base class sets the power-law factor to one.
+    The convention is used by the derived classes.
 
 ## Things to Pass to Ctor
 

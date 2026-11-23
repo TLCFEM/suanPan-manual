@@ -36,8 +36,10 @@ The keyword in a command is `Sinh1D`; the `material Elastic1D` line in the synta
 The elastic modulus `(2)` is the initial tangent stiffness at zero strain and is used as given.
 
 !!! warning "implementation limitation"
+    A negative modulus input gives a negative initial tangent and a backbone that stiffens in the negative direction.
+
+!!! note "developer note"
     The constructor stores the modulus without applying `fabs`.
-    A negative input gives a negative initial tangent and a backbone that stiffens in the negative direction.
 
 The density `(3)` defaults to zero.
 The exponential growth of the backbone can produce very large stresses at moderate strains, which may cause convergence problems or numerical overflow.

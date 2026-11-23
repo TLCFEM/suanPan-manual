@@ -12,8 +12,6 @@ The backbone is governed by a normalized function which is controlled by two par
 
 <iframe src="https://www.desmos.com/calculator/l5lebk1toq?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
 
-2. Tsai, W. T. (1988), "Uniaxial Compressional Stress-Strain Relation of Concrete," Journal of Structural Engineering, 114(9), 2133--2136, [doi:10.1061/(ASCE)0733-9445(1988)114:9(2133)](https://doi.org/10.1061/(ASCE)0733-9445(1988)114:9(2133)).
-
 ## Syntax
 
 ```text title="ConcreteTsai"

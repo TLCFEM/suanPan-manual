@@ -41,8 +41,11 @@ For $H=0$ the force saturates at $S$ and the law becomes an elastic-perfectly-pl
 
 !!! info "deviation from theory"
     The post-yield slope is not an independent input.
-    The constructor forms it as $|C|H$, so $H$ is a fraction of the initial damping coefficient rather than a second viscosity.
-    There is no internal state or return mapping, so the yield force does not evolve with cyclic loading.
+    It is $|C|H$, so $H$ is a fraction of the initial damping coefficient rather than a second viscosity.
+    The yield force does not evolve with cyclic loading.
+
+!!! note "developer note"
+    The model has no internal state or return mapping.
 
 ## Remarks
 
@@ -65,7 +68,3 @@ element Damper02 2 1 2 2 1 true 0 .5
 ```
 
 This is the configuration used in `Example/Material/BilinearViscosity.supan`.
-
-## References
-
-1. Akcelyan, S., Lignos, D. G., and Hikino, T. (2018), "Adaptive numerical method algorithms for nonlinear viscous and bilinear oil damper models subjected to dynamic loading," Soil Dynamics and Earthquake Engineering, 113, 488--502, [doi:10.1016/j.soildyn.2018.06.021](https://doi.org/10.1016/j.soildyn.2018.06.021).

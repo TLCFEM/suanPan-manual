@@ -68,8 +68,11 @@ $$
 This memory branch is the feature that gives the Balloon model its enhanced cyclic behaviour compared with the plain subloading surface model.
 
 !!! info "deviation from theory"
-    The reference $z_r$ is extracted from a finite ring buffer of past normal yield ratios using the minimum, maximum or mean.
+    The reference $z_r$ is chosen as the minimum, maximum or mean of past normal yield ratios.
     It is not obtained from a continuously integrated plastic-strain memory surface.
+
+!!! note "developer note"
+    The reference $z_r$ is extracted from a finite ring buffer of past normal yield ratios.
     The one-dimensional model uses scalar back-stress and elastic-core variables, while the three-dimensional formulation uses tensor-valued quantities.
 
 The implicit system is solved for the plastic multiplier and $$z$$ by Newton iteration, and the consistent tangent is formed by condensing the $$z$$ equation out of the Jacobian.
@@ -81,8 +84,10 @@ All twenty-three numerical inputs and the density are compulsory in the parser.
 
 !!! warning "implementation limitation"
     An incomplete parameter list causes a parse error rather than reverting to defaults.
-    The load-reversal memory size is cast to an unsigned integer without a range check.
     The `-memory` group takes a type name and not a saturation bound and rate.
+
+!!! note "developer note"
+    The load-reversal memory size is cast to an unsigned integer without a range check.
 
 The load reversal memory size is converted to an unsigned integer and the memory type defaults to `mean`.
 The `-memory` group takes one of `minimum`, `maximum` or `mean` and does not take saturation or rate numbers.

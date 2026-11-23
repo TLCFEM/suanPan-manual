@@ -37,8 +37,11 @@ The first column is the equivalent plastic strain and the second column is the m
 For a strain inside the table the implementation returns the linearly interpolated stress together with the slope of the current segment.
 
 !!! warning "implementation limitation"
-    Beyond the last row the implementation returns the last strain coordinate as the yield stress and uses a slope of $$10^{-12}$$.
+    Beyond the last row the yield stress is set to the last strain coordinate and the slope is essentially zero.
     The stress is not extrapolated from the second column, so the tabulated range must cover all expected plastic strain.
+
+!!! note "developer note"
+    The slope used beyond the last row is $$10^{-12}$$.
 
 These two values enter the yield function and the Newton Jacobian of the coupled return mapping.
 The void evolution and all other aspects of the response are inherited from [`NonlinearGurson`](NonlinearGurson.md).
@@ -56,5 +59,5 @@ Use a three-dimensional solid element such as `C3D8` with this material.
 
 ## References
 
-1. A. L. Gurson, Continuum theory of ductile rupture by void nucleation and growth, Part I: yield criteria and flow rules for porous ductile media, *Journal of Engineering Materials and Technology* 99 (1977) 2--15, [doi:10.1115/1.3443401](https://doi.org/10.1115/1.3443401).
-2. V. Tvergaard and A. Needleman, Analysis of the cup-cone fracture in a round tensile bar, *Acta Metallurgica* 32 (1984) 157--169, [doi:10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X).
+1. [10.1115/1.3443401](https://doi.org/10.1115/1.3443401)
+2. [10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X)

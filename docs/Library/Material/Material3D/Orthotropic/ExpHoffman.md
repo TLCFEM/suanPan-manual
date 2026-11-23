@@ -54,8 +54,7 @@ The function starts from $K(0)=1$ and saturates at $1+a$, so $b$ sets the plasti
 The yield surface is scaled by $K^2$, hence its size approaches $(1+a)^2$ at saturation.
 
 !!! warning "implementation limitation"
-    The parameters `a` and `b` are passed to the constructor without taking absolute values.
-    A negative `a` produces unbounded softening instead of saturation.
+    The parameters `a` and `b` are not converted to absolute values, so a negative `a` produces unbounded softening instead of saturation.
 
 ## Syntax
 
@@ -81,5 +80,5 @@ Related variants are [`BilinearHoffman`](BilinearHoffman.md), [`CustomHoffman`](
 
 ## References
 
-1. O. Hoffman, *The Brittle Strength of Orthotropic Materials*, Journal of Composite Materials, 1(2):200–206, 1967, [10.1177/002199836700100210](https://doi.org/10.1177/002199836700100210).
-2. *Constitutive Modelling Cookbook*, [online](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf).
+1. [10.1177/002199836700100210](https://doi.org/10.1177/002199836700100210)
+2. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)

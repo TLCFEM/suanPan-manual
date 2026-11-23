@@ -48,9 +48,10 @@ The resulting nonlinear equation for the trial value of $$z$$ is solved by Newto
 
 !!! info "deviation from theory"
     The smooth differential equation is integrated approximately, and the chosen rule depends on the load-step size through $$|\Delta u/u_y|<0.25$$.
-    The backward Euler branch evaluates the nonlinear term at the trial value of $$z$$, so the computed loop has a small step-size dependence.
+    The computed loop has a small step-size dependence.
 
-!!! warning "implementation limitation"
+!!! note "developer note"
+    The backward Euler branch evaluates the nonlinear term at the trial value of $$z$$.
     The local solve is capped at 20 iterations before the Ridders fallback is attempted.
     The update returns a failure flag if both the Newton iteration and the fallback fail to converge.
 
@@ -102,6 +103,6 @@ materialTest1D 1 1E-3 10 20 30 40 50 60 30
 
 ## References
 
-- Bouc, R. (1967), "Forced vibration of mechanical systems with hysteresis", Proceedings of the Fourth Conference on Nonlinear Oscillations, Prague, p. 315.
-- Wen, Y.-K. (1976), "Method for random vibration of hysteretic systems", Journal of the Engineering Mechanics Division, ASCE, 102(2), 249-263, doi:10.1061/JMCEA3.0002106.
-- Baber, T. T. and Wen, Y.-K. (1981), "Random vibration of hysteretic, degrading systems", Journal of the Engineering Mechanics Division, ASCE, 107(6), 1069-1087.
+- Forced vibration of mechanical systems with hysteresis
+- [10.1061/JMCEA3.0002106](https://doi.org/10.1061/JMCEA3.0002106)
+- Random vibration of hysteretic, degrading systems

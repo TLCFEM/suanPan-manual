@@ -46,4 +46,4 @@ The model is rate independent and returns the same loop for the same strain hist
 
 ## References
 
-- Ibarra, L. F., Medina, R. A. and Krawinkler, H. (2005), "Hysteretic models that incorporate strength and stiffness deterioration", Earthquake Engineering and Structural Dynamics, 34(12), 1489-1511, doi:10.1002/eqe.495.
+- [10.1002/eqe.495](https://doi.org/10.1002/eqe.495)

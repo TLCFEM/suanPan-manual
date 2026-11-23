@@ -31,8 +31,10 @@ The total normalised quantities are $$\alpha=\sum_i\alpha_i$$ and $$d=\sum_jd_j$
 The implicit residual system is the same three-equation system as in [`Subloading1D`](Subloading1D.md), with the sums above replacing the single terms.
 
 !!! info "deviation from theory"
-    The code does not normalise the saturation bounds, so the user must choose them so that each group sums to a meaningful total.
+    The saturation bounds are not normalised, so the user must choose them so that each group sums to a meaningful total.
     The logarithmic evolution of the normal yield ratio and its numerical floor are inherited unchanged from [`Subloading1D`](Subloading1D.md).
+
+!!! note "developer note"
     This token reuses the same `Subloading1D` C++ class as the single-saturation model.
 
 ## Syntax
@@ -61,6 +63,8 @@ The `-back` and `-core` groups may appear in any order and may be repeated.
 !!! warning "implementation limitation"
     The parser reads all twelve numbers with strict parsing, including the density at position `(12)`.
     An omitted density causes a parse error rather than defaulting to zero.
+
+!!! note "developer note"
     The number of `-back` and `-core` groups determines the amount of allocated history space.
 
 ## Remarks
@@ -75,8 +79,8 @@ The consistent tangent is obtained by the same static condensation of the Newton
 
 ## References
 
-1. K. Hashiguchi, Subloading surface model in unconventional plasticity, *International Journal of Solids and Structures* 25 (1989) 917--945, [doi:10.1016/0020-7683(89)90038-3](https://doi.org/10.1016/0020-7683(89)90038-3).
-2. The implementation paper cited in [`Subloading1D`](Subloading1D.md), [doi:10.1007/s00707-025-04339-0](https://doi.org/10.1007/s00707-025-04339-0).
+1. [10.1016/0020-7683(89)90038-3](https://doi.org/10.1016/0020-7683(89)90038-3)
+2. [10.1007/s00707-025-04339-0](https://doi.org/10.1007/s00707-025-04339-0)
 
 ## Example
 

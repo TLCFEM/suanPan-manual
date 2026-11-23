@@ -42,11 +42,13 @@ element CAX3 (1) (2...4) (5) [6]
 * The optional nonlinear-geometry switch is parsed, but the current implementation evaluates only the small-strain strain measure.
 
 !!! info "deviation from theory"
+    Supplying a true nonlinear-geometry switch does not activate a Total Lagrangian axisymmetric formulation.
+
+!!! note "developer note"
     The `CAX3` constructor forwards the nonlinear-geometry flag to the base class, yet `update_status` never branches on it.
-    Supplying a true nonlinear-geometry switch therefore does not activate a Total Lagrangian axisymmetric formulation.
 
 * A Gauss point at zero radius is singular, so keep the centroid away from the axis of revolution.
 
 ## References
 
-1. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann (2013), Chapter 9.
+1. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)

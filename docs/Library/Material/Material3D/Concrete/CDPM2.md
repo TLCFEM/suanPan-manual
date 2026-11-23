@@ -6,8 +6,8 @@ CDPM2 Model for Concrete Material
 
 1. [10.1016/j.ijsolstr.2013.07.008](https://doi.org/10.1016/j.ijsolstr.2013.07.008)
 2. [10.1016/j.ijsolstr.2005.05.038](https://doi.org/10.1016/j.ijsolstr.2005.05.038)
-3. Grassl, P. and Jirasek, M. (2006) Damage-plastic model for concrete failure, International Journal of Solids and Structures, 43(22--23), 7166--7196, [10.1016/j.ijsolstr.2006.06.032](https://doi.org/10.1016/j.ijsolstr.2006.06.032).
-4. Menetrey, P. and Willam, K. J. (1995) A triaxial failure criterion for concrete and its generalization, ACI Structural Journal, 92(3), 311--318.
+3. [10.1016/j.ijsolstr.2006.06.032](https://doi.org/10.1016/j.ijsolstr.2006.06.032)
+4. A triaxial failure criterion for concrete and its generalization, ACI Structural
 
 ## Background
 
@@ -34,7 +34,7 @@ $$
 
 !!! info "deviation from theory"
     The published model treats the Willam--Warnke eccentricity as an independent calibration parameter.
-    The implementation derives it internally from $f_t$, $f_c$ and a fixed biaxial compression ratio of $1.16$, so it cannot be set independently.
+    The implementation derives it from $f_t$, $f_c$ and a fixed biaxial compression ratio of $1.16$, so it cannot be set independently.
     The friction parameter $m_0$ is likewise computed rather than supplied.
 
 The two dimensionless hardening functions $q_{h1}(\kappa_p)$ and $q_{h2}(\kappa_p)$ control the size of the loading surface and the ratio between the tensile and compressive strengths.
@@ -50,7 +50,10 @@ The isotropic variant degrades the whole effective stress by $(1-\omega_t)(1-\om
 
 !!! warning "implementation limitation"
     Damage is skipped entirely while both damage history variables remain below the threshold $\varepsilon_0=f_t/E$, and the `CDPM2NO` token disables damage for the whole analysis.
-    The default `CDPM2` token selects isotropic damage even though the class member initialises to anisotropic, so `CDPM2ANISO` must be requested explicitly.
+    The default `CDPM2` token selects isotropic damage, so `CDPM2ANISO` must be requested explicitly.
+
+!!! note "developer note"
+    The damage-type member is initialised to anisotropic in the class.
 
 ## Syntax
 

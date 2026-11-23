@@ -20,8 +20,10 @@ Both cases can be written in the unified form $\mathbf D=E'/[(1-\nu'^2)]\begin{b
 The source implements exactly this substitution and then sets the shear entry to $G=E/[2(1+\nu)]$, so the material response is linear and path independent.
 
 !!! warning "implementation limitation"
-    Only the three in-plane components are stored as material state.
     The out-of-plane component is reconstructed from the in-plane strain for recording and is not used in the stress update.
+
+!!! note "developer note"
+    Only the three in-plane components are stored as material state.
 
 ## Syntax
 

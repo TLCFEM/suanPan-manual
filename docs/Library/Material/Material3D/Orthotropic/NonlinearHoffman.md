@@ -3,9 +3,8 @@
 Orthotropic Hoffman Material
 
 !!! warning "availability of the command token"
-    The current `MaterialParser.cpp` does not register a `NonlinearHoffman` token.
-    A `material NonlinearHoffman ...` command therefore cannot create this model in a build that uses the stock parser.
-    The formulas below describe the behaviour of the corresponding C++ class and may require a custom module or a parser update to be used.
+    The `NonlinearHoffman` token is not registered, so a `material NonlinearHoffman ...` command cannot create this model.
+    The formulas below describe the model behaviour and may require a custom module or a parser update to be used.
 
 ## References
 
@@ -81,9 +80,9 @@ The plastic flow is associative with $\Delta\boldsymbol\varepsilon_p=\Delta\gamm
 The equivalent plastic strain is accumulated as $\Delta\bar\varepsilon_p=\sqrt{2/3}\lVert\Delta\boldsymbol\varepsilon_p\rVert$.
 The elastic predictor uses the orthotropic stiffness and the consistency condition is solved by Newton iteration for the plastic multiplier and the stress.
 
-!!! warning "implementation limitation"
-    The code switches between a trapezoidal and a backward-Euler return mapping at an empirical threshold built from the strengths divided by the moduli.
-    After 20 failed Newton iterations it falls back to a Ridders bisection.
+!!! note "developer note"
+    The return mapping switches between a trapezoidal and a backward-Euler rule at an empirical threshold built from the strengths divided by the moduli.
+    After 20 failed Newton iterations the solver falls back to a Ridders bisection.
 
 ## Remarks
 

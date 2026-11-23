@@ -89,9 +89,11 @@ E^{ep}=E\,\dfrac{H}{E+H},\qquad H=\dfrac{\mathrm{d}k}{\mathrm{d}p}+\dfrac{\mathr
 $$
 
 !!! warning "implementation limitation"
-    The source multiplies the elastic stiffness by $H/(E+H)$ directly.
-    A perfectly plastic definition with $H=0$ therefore returns a zero algorithmic tangent during plastic loading.
+    A perfectly plastic definition with $H=0$ gives a zero algorithmic tangent during plastic loading.
     The yield radius is also clamped to zero, so a hardening function that becomes negative cannot drive the radius below zero.
+
+!!! note "developer note"
+    The source multiplies the elastic stiffness by $H/(E+H)$ directly.
 
 ## Implementation
 
@@ -107,8 +109,10 @@ The concrete models in this family are [`BilinearMises1D`](BilinearMises1D.md), 
 Use one of the concrete models listed above, or derive a new class from `NonlinearMises1D`.
 
 !!! warning "implementation limitation"
-    The token registry in `MaterialParser.cpp` contains no entry named `Mises1D`.
-    An unknown token is passed to the external-module hook, so a misspelled name fails at material creation rather than falling back to this base class.
+    The `Mises1D` token is not registered, so a misspelled name fails at material creation instead of selecting this model.
+
+!!! note "developer note"
+    The token registry in `MaterialParser.cpp` contains no entry named `Mises1D`, and unknown tokens are passed to the external-module hook rather than falling back to this base class.
 
 The elastic modulus passed to the constructor is converted to its absolute value.
 The yield radius is evaluated as $$\max(0,k(p))$$, so a negative isotropic function cannot produce a negative radius.
@@ -129,5 +133,5 @@ For general stress states use the three-dimensional counterparts such as [`Nonli
 
 ## References
 
-1. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, Section 1.4.4, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
-2. J. L. Chaboche, Constitutive equations for cyclic plasticity and cyclic viscoplasticity, *International Journal of Plasticity* 5 (1989) 247--301, [doi:10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6).
+1. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)
+2. [10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6)

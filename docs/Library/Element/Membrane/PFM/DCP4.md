@@ -68,5 +68,5 @@ This model supports the following additional history variables to be recorded.
 
 ## References
 
-1. G. Liu, G. Li, Q. M. Li, K. Zhang and L. Wang, *Abaqus implementation of monolithic and staggered schemes for quasi-static and dynamic fracture phase-field model*, Computational Materials Science 121, 35-47 (2016), [doi:10.1016/j.commatsci.2016.04.009](https://doi.org/10.1016/j.commatsci.2016.04.009).
-2. C. Miehe, M. Hofacker and F. Welschinger, *A phase field model for rate-independent crack propagation: robust algorithmic implementation based on operator splits*, Computer Methods in Applied Mechanics and Engineering 199(45-48), 2765-2778 (2010), [doi:10.1016/j.cma.2010.04.016](https://doi.org/10.1016/j.cma.2010.04.016).
+1. [10.1016/j.commatsci.2016.04.009](https://doi.org/10.1016/j.commatsci.2016.04.009)
+2. [10.1016/j.cma.2010.04.016](https://doi.org/10.1016/j.cma.2010.04.016)

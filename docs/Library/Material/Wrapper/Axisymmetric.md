@@ -53,6 +53,6 @@ Recorded quantities are forwarded to the 3D host, so the hoop stress appears as 
 
 ## References
 
-- O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann, 2013.
-- A. F. Bower, *Applied Mechanics of Solids*, CRC Press, 2009.
-- Dassault Systèmes, *Abaqus Theory Guide*, "Axisymmetric elements".
+- [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)
+- [ISBN 978-1-4398-0247-2](https://search.worldcat.org/search?q=bn:9781439802472)
+- [Axisymmetric elements](https://search.worldcat.org/search?q=ti:Axisymmetric+elements)

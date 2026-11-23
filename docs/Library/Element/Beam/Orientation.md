@@ -97,5 +97,5 @@ exit
 
 ## References
 
-1. M. A. Crisfield, *Non-Linear Finite Element Analysis of Solids and Structures, Volume 1: Essentials*, John Wiley & Sons, 1991, ISBN 0-471-92956-5.
-2. R. M. de Souza, *Force-based Finite Element for Large Displacement Inelastic Analysis of Structures*, PhD thesis, University of California at Berkeley, 2000.
+1. [ISBN 0-471-92956-5](https://search.worldcat.org/search?q=bn:0471929565)
+2. Force-based Finite Element for Large Displacement Inelastic Analysis of Structures

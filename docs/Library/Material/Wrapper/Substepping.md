@@ -28,8 +28,11 @@ This is a success-driven adaptive scheme rather than the truncation-error-contro
 
 !!! info "deviation from Sloan's substepping"
     Sloan's method estimates the local truncation error of the stress integration and chooses the substep size to meet a prescribed tolerance.
-    The suanPan `Substepping` wrapper instead halves the fraction after any failed host update and increases it by a factor of 1.2 after every three successes, without computing an error estimate.
+    The suanPan `Substepping` wrapper does not compute an error estimate, so the substep size follows a fixed heuristic rather than a truncation-error target.
     The reference is included for background only, and the wrapper does not reproduce that algorithm.
+
+!!! note "developer note"
+    The wrapper halves the fraction after any failed host update and increases it by a factor of 1.2 after every three successes.
 
 The wrapper forwards material type, density and all state getters and setters to the appropriate host copy, so it can wrap a model of any dimensionality.
 Only the strain-based overload of `update_trial_status` is implemented, so rate-dependent hosts that require a strain rate are not driven through their rate overload.
@@ -61,5 +64,5 @@ Combine with [PlaneStress](PlaneStress.md) or [Uniaxial](Uniaxial.md) only when 
 
 ## References
 
-- S. W. Sloan, Substepping schemes for the numerical integration of elastoplastic stress–strain relations, *International Journal for Numerical Methods in Engineering*, 24(5):893–911, 1987, doi:10.1002/nme.1620240505.
-- J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, 1998, doi:10.1007/b98904.
+- [10.1002/nme.1620240505](https://doi.org/10.1002/nme.1620240505)
+- [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

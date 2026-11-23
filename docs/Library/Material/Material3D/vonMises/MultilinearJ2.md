@@ -19,7 +19,7 @@ The derivative $$k'(p)$$ is the slope of the current segment and is zero beyond 
     This implementation sets the final slope to zero, so the curve becomes a perfectly plastic plateau instead of continuing to harden.
 
 !!! warning "implementation limitation"
-    The constructor requires the first plastic strain to be exactly zero and rejects a table with any other starting strain.
+    The first plastic strain must be exactly zero; a table with any other starting strain is rejected.
 
 The kinematic contribution is $$h(p)=0$$.
 The return mapping solves the same discrete consistency condition as [`CustomJ2`](CustomJ2.md), using the current segment slope in the Newton denominator.
@@ -50,4 +50,4 @@ Use a three-dimensional solid element such as `C3D8` with this material.
 
 ## References
 
-1. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
+1. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

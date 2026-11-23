@@ -29,8 +29,10 @@ where $\boldsymbol c=\boldsymbol d/L$ is the initial unit direction.
 The derivation of the rank-one projection and the remarks on fixed geometry are given on the [`Spring01`](Spring01.md) page.
 
 !!! info "deviation from theory"
+    For coincident or nearly coincident nodes the resulting strain is not physically meaningful.
+
+!!! note "developer note"
     An initial length at or below $10^{-10}$ is replaced by $L=1$ before the direction vector is scaled.
-    For coincident or nearly coincident nodes the resulting strain is therefore not physically meaningful.
 
 ## Syntax
 

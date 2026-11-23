@@ -40,7 +40,10 @@ Because a single parameter fixes both the initial slope and the plateau, the tra
 !!! warning "implementation limitation"
     The law has no separate yield or transition strain parameter, unlike a regularised elastoplastic plateau.
     A common tanh-based fit with $\sigma=\sigma_s\tanh(\varepsilon/\varepsilon_0)$ cannot be reproduced unless $\sigma_s=E$ and $\varepsilon_0=1$ are acceptable.
-    The modulus is also stored without `fabs`, so a negative input gives a negative tangent.
+    A negative modulus input gives a negative tangent.
+
+!!! note "developer note"
+    The modulus is stored without `fabs`.
 
 Use [`CustomElastic1D`](CustomElastic1D.md) if the saturation stress and the initial slope must be specified separately.
 For a stiffening backbone use [`Sinh1D`](Sinh1D.md).

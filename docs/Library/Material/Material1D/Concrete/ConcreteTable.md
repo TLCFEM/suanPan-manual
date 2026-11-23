@@ -25,8 +25,11 @@ The hysteresis rules, residual strains and crack-closing transition are inherite
 
 !!! warning "implementation limitation"
     The backbone is piecewise linear, so the tangent is discontinuous at every tabulated point.
-    Beyond the last tabulated point the tangent is set to $10^{-10}$ and the returned stress is taken from the last entry of the strain column rather than the stress column.
+    Beyond the last tabulated point the returned stress is taken from the last entry of the strain column rather than the stress column, and the tangent is effectively zero.
     The model does not read the element characteristic length, so tabulated softening must be scaled by the analyst for mesh objectivity.
+
+!!! note "developer note"
+    Beyond the last tabulated point the tangent is set to $10^{-10}$.
 
 ## Remarks
 
@@ -49,4 +52,4 @@ This is the configuration used in `Example/Material/ConcreteTable.supan`.
 
 ## References
 
-1. Chang, T. L. (2023), Constitutive Modelling Cookbook, [online](https://github.com/TLCFEM/constitutive-modelling-cookbook).
+1. [Chang, T. L. (2023), Constitutive Modelling Cookbook, online](https://github.com/TLCFEM/constitutive-modelling-cookbook)

@@ -61,8 +61,11 @@ element Allman (1) (2...4) (5) [6]
 * For a plane-strain material the thickness argument is overridden to 1.0 during initialization, so it only has an effect for plane-stress materials.
 
 !!! warning "implementation limitation"
-    The three integration points are fixed at the edge midpoints, and the thickness argument is silently overwritten for plane strain.
+    The thickness argument is silently overwritten for plane strain.
     The element does not assemble a drilling stabilization term, so the UR3 DoF must be restrained where it is not constrained by adjacent elements.
+
+!!! note "developer note"
+    The three integration points are fixed at the edge midpoints.
 
 * The midside correction depends on rotation differences only, so a uniform drilling rotation produces no membrane strain and no drilling stiffness from a single element.
 * Restrain the UR3 DoF where necessary, since the Allman interpolation gives no stiffness to a uniform drilling rotation.
@@ -71,6 +74,6 @@ element Allman (1) (2...4) (5) [6]
 
 ## References
 
-1. Allman, D.J. (1984), A compatible triangular element including vertex rotations for plane elasticity analysis, Computers \& Structures 19(1--2), 1--8, [doi:10.1016/0045-7949(84)90197-4](https://doi.org/10.1016/0045-7949(84)90197-4).
-2. Hughes, T.J.R. and Brezzi, F. (1989), On drilling degrees of freedom, Computer Methods in Applied Mechanics and Engineering 72(1), 105--121, [doi:10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2).
-3. Ibrahimbegovic, A., Taylor, R.L. and Wilson, E.L. (1990), A robust quadrilateral membrane finite element with drilling degrees of freedom, International Journal for Numerical Methods in Engineering 30(3), 445--457.
+1. [10.1016/0045-7949(84)90197-4](https://doi.org/10.1016/0045-7949(84)90197-4)
+2. [10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2)
+3. Ibrahimbegovic, A., Taylor, R.L. and Wilson, E.L. (1990), A robust quadrilateral

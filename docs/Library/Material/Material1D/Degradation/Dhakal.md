@@ -14,7 +14,7 @@ The intact response is supplied by a host steel model such as [`MPF`](../Hystere
 ## References
 
 1. [10.1061/(ASCE)0733-9445(2002)128:9(1139)](https://doi.org/10.1061/(ASCE)0733-9445(2002)128:9(1139))
-2. Dhakal, R. P. and Maekawa, K. (2002). Path-dependent cyclic stress--strain relationship of reinforcing bar including buckling. *Engineering Structures*, 24(11), 1383--1396. [doi:10.1016/S0141-0296(02)00080-9](https://doi.org/10.1016/S0141-0296(02)00080-9)
+2. [10.1016/S0141-0296(02)00080-9](https://doi.org/10.1016/S0141-0296(02)00080-9)
 
 ## Syntax
 
@@ -87,7 +87,7 @@ The argument `(4)` is the dimensionless buckling parameter $$r_b=\sqrt{f_y/100~\
 Because the constant 100 MPa is embedded in the calibration, the yield strength used to compute `(4)` must be expressed in MPa and the host stress units should be consistent.
 
 !!! warning "implementation limitation"
-    The geometry parameter is not dimensionless in an arbitrary unit system because of the hard-coded 100 MPa divisor.
+    The geometry parameter is not dimensionless in an arbitrary unit system because the calibration embeds a 100 MPa divisor.
     Scaling all stresses by a constant changes $r_b$ and therefore changes $\varepsilon_i$, $D_i$ and $\varepsilon_f$.
     The same unit system must be used consistently across the host material and the wrapper.
 

@@ -35,8 +35,7 @@ The three available integration rules are a five-point Irons rule, a third-order
 1. [10.1002/nme.6066](https://doi.org/10.1002/nme.6066)
 2. [10.1016/j.engstruct.2019.109592](https://doi.org/10.1016/j.engstruct.2019.109592)
 3. [10.1016/j.engstruct.2020.110760](https://doi.org/10.1016/j.engstruct.2020.110760)
-4. Chang, T.L., Lee, C.-L., Carr, A.J., Dhakal, R.P. and Pampanin, S. (2019), A new drilling quadrilateral membrane element with high coarse-mesh accuracy using a modified Hu--Washizu principle, International Journal for Numerical Methods in Engineering, [doi:10.1002/nme.6066](https://doi.org/10.1002/nme.6066).
-5. Hughes, T.J.R. and Brezzi, F. (1989), On drilling degrees of freedom, Computer Methods in Applied Mechanics and Engineering 72(1), 105--121, [doi:10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2).
+4. [10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2)
 
 ## Syntax
 

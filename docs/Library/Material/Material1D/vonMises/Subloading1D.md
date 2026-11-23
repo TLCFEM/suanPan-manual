@@ -13,10 +13,10 @@ The implementation is based on the following paper.
 
 Additional material on the same topic can be found in the following literature.
 
-1. K. Hashiguchi, Subloading surface model in unconventional plasticity, *International Journal of Solids and Structures* 25 (1989) 917--945, [doi:10.1016/0020-7683(89)90038-3](https://doi.org/10.1016/0020-7683(89)90038-3).
-2. [10.1007/978-3-030-93138-4](https://doi.org/10.1007/978-3-030-93138-4)
-2. [10.1007/s11831-023-10022-1](https://doi.org/10.1007/s11831-023-10022-1)
-3. [10.1007/s11831-022-09880-y](https://doi.org/10.1007/s11831-022-09880-y)
+2. [10.1016/0020-7683(89)90038-3](https://doi.org/10.1016/0020-7683(89)90038-3)
+3. [10.1007/978-3-030-93138-4](https://doi.org/10.1007/978-3-030-93138-4)
+4. [10.1007/s11831-023-10022-1](https://doi.org/10.1007/s11831-023-10022-1)
+5. [10.1007/s11831-022-09880-y](https://doi.org/10.1007/s11831-022-09880-y)
 
 Prof. Koichi Hashiguchi has published a large number of papers on this topic.
 To find more references, please refer to the monograph and the references therein.
@@ -92,7 +92,10 @@ Here, $$u$$ is a constant that controls the rate of transition.
 !!! info "deviation from theory"
     Hashiguchi's original subloading surface model uses a cotangent function of the normal yield ratio.
     The logarithmic form above is a deliberate replacement used throughout this implementation.
-    The original lower bound on the normal yield ratio is not imposed in the theoretical update, although the code floors the logarithm numerically.
+    The original lower bound on the normal yield ratio is not imposed in the model.
+
+!!! note "developer note"
+    The logarithm is floored numerically in the code.
 
 ### Evolution of $$d$$
 
@@ -143,9 +146,11 @@ A special check at the first iteration detects elastic unloading, in which case 
 The logarithm in $$R_2$$ is replaced by a constant rate below $$z=10^{-15}$$ to avoid a singularity at zero.
 
 !!! warning "implementation limitation"
+    The initial saturation bounds are unity for the back stress and the supplied elastic-core ratio for the core when this token is used.
+
+!!! note "developer note"
     The elastic-unloading detection at the first iteration uses a heuristic load factor computed from the committed stress and the trial stress.
     It is not a general consistency check and is specific to the one-dimensional update.
-    The initial saturation bounds are hard-coded to unity for the back stress and to the supplied elastic-core ratio for the core when this token is used.
 
 ## Syntax
 

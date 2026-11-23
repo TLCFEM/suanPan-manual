@@ -64,5 +64,5 @@ Reduced integration avoids volumetric locking for nearly incompressible plane-st
 
 ## References
 
-1. Hughes, T. J. R. (2000), "The Finite Element Method: Linear Static and Dynamic Finite Element Analysis", Dover Publications, Sections 4.2--4.4.
-2. Chen, W. F. and Han, D. J. (2007), "Plasticity for Structural Engineers", J. Ross Publishing, ISBN 978-1-932159-75-2, Chapter 3.
+1. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
+2. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)

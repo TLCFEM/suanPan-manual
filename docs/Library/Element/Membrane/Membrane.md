@@ -16,6 +16,9 @@ Under plane strain $\varepsilon_{33}=0$ and a reaction stress $\sigma_{33}=\nu(\
 The axisymmetric family uses a four-component strain vector $[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]$ and replaces $\varepsilon_{33}$ by the hoop strain $\varepsilon_{\theta\theta}=u_r/r$.
 
 !!! info "deviation from theory"
+    Most membrane elements have a single element token per geometry; plane stress and plane strain are distinguished by the material plane type.
+
+!!! note "developer note"
     ABAQUS-style names such as CPS4, CPE3 and CPS8R are only descriptive in the source class comments.
     The element parser registers a single token per geometry for most membrane elements, with plane stress and plane strain distinguished by the material plane type.
 
@@ -84,6 +87,6 @@ Noting that the [`CP3`](Plane/CP3.md) element is very rigid and often requires a
 
 ## References
 
-1. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann (2013), Chapters 8 and 9.
-2. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover (2000), Chapters 3 and 4.
-3. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer (1998), Chapter 9.
+1. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)
+2. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
+3. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

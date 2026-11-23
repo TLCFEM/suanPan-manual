@@ -45,8 +45,10 @@ With $\beta$ the local time-integration parameter and $\Delta t$ the time increm
 The element assembles the resulting force as $\boldsymbol R_j=\boldsymbol c\,N$, $\boldsymbol R_i=-\boldsymbol R_j$, and forms both a trial tangent stiffness and a trial damping matrix from the Maxwell material.
 
 !!! info "deviation from theory"
-    The series spring--dashpot state is found by a local iterative solution rather than by an analytical integration of the governing ODE.
     As in [`Damper01`](Damper01.md), the raw projected displacement and velocity are passed to the material without division by the element length.
+
+!!! note "developer note"
+    The series spring--dashpot state is found by a local iterative solution rather than by an analytical integration of the governing ODE.
 
 ## Syntax
 
@@ -73,9 +75,10 @@ element Damper04 (1) (2) (3) (4) (5) [6] [7] [8]
 3. The parameter `[6]` selects the local solver, with `true` giving a three-by-three matrix Newton iteration and `false` a scalar iteration; the matrix form is more robust but costs more per iteration.
 4. When `[7]=n>1`, a failed local iteration resets the trial state and is counted against the limit, so up to $$n-1$$ consecutive failures are tolerated before the state determination is declared divergent.
 
-!!! warning "implementation limitation"
+!!! note "developer note"
     The wording that diverged increments are stacked into the next iteration does not reflect the implementation.
     On a tolerated local failure the code resets the trial state to the converged state and continues the analysis.
+
 5. Both a tangent stiffness and a damping matrix are returned by the Maxwell material, in contrast to [`Damper01`](Damper01.md) where the spring is optional.
 6. This element sets `modify_viscous` to false, so element damping modifiers such as [`LinearViscosity`](../Modifier/LinearViscosity.md) skip it.
 

@@ -28,7 +28,7 @@ $$
 $$
 The residual is condensed in the same way, with the internal amplitudes recovered locally from $\boldsymbol a=-\boldsymbol K_{aa}^{-1}(\boldsymbol K_{ua}^{\mathrm T}\boldsymbol u_e+\boldsymbol r_a)$, where $\boldsymbol r_a=\sum_g w_g\det\boldsymbol J_g\,\boldsymbol B_2^{\mathrm T}\boldsymbol\sigma$.
 
-!!! warning "implementation limitation"
+!!! note "developer note"
     The internal-mode amplitudes are not recovered by iteration: the stress is evaluated with a zero enhanced strain and condensed once with the current tangent, so for nonlinear materials the orthogonality condition $\boldsymbol r_a=0$ is only approximately enforced.
 
 The formulation is the three-dimensional analogue of the Wilson incompatible-mode element and belongs to the enhanced-strain family of Taylor and Simo.
@@ -57,7 +57,6 @@ For finite-strain analysis use [C3D8](C3D8.md) with the nonlinear-geometry switc
 
 ## References
 
-1. E. L. Wilson, R. L. Taylor, W. P. Doherty and J. Ghaboussi, Incompatible displacement models, in *Numerical and Computer Methods in Structural Mechanics*, S. J. Fenves et al. eds., Academic Press, 1973, pp. 43-57, [doi:10.1016/B978-0-12-253250-4.50008-7](https://doi.org/10.1016/B978-0-12-253250-4.50008-7).
-2. R. L. Taylor, P. J. Beresford and E. L. Wilson, A non-conforming element for stress analysis, *International Journal for Numerical Methods in Engineering* 10(6):1211-1220, 1976.
-3. J. C. Simo and M. S. Rifai, A class of assumed strain methods and the method of incompatible modes, *International Journal for Numerical Methods in Engineering* 29(8):1595-1638, 1990.
-4. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, 1998.
+1. [10.1016/B978-0-12-253250-4.50008-7](https://doi.org/10.1016/B978-0-12-253250-4.50008-7)
+2. International Journal for Numerical Methods in Engineering
+3. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

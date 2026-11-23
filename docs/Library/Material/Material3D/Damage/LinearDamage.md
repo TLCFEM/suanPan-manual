@@ -64,8 +64,6 @@ Inside the linear branch the derivative required by the tangent is $\partial d/\
 !!! warning "implementation limitation"
     The equivalent strain contains only the deviatoric part of the strain, so hydrostatic compression alone cannot initiate damage.
     Many quasi-brittle damage models use a positive-part or energy-based equivalent strain that is sensitive to tensile hydrostatic stress, which is not available here.
-
-!!! warning "implementation limitation"
     The outer product $\bar{\boldsymbol\sigma}\otimes\partial d/\partial\boldsymbol\varepsilon$ makes the consistent tangent non-symmetric.
     The shipped example therefore uses `set symm_mat 0`, and using a symmetric solver assumption can prevent convergence.
 
@@ -81,8 +79,8 @@ Inside the linear branch the derivative required by the tangent is $\partial d/\
 
 ## References
 
-1. Kachanov, L. M. (1958), "On the Time to Failure under Creep Conditions", Izvestiya Akad. Nauk SSSR, Otd. Tekh. Nauk, 8, 26--31.
-2. Rabotnov, Y. N. (1963), "Creep Problems in Structural Members", North-Holland, Amsterdam.
-3. Lemaitre, J. and Chaboche, J.-L. (1990), "Mechanics of Solid Materials", Cambridge University Press.
-4. Mazars, J. and Pijaudier-Cabot, G. (1989), "Continuum Damage Theory: Application to Concrete", Journal of Engineering Mechanics, 115(2), 345--365, [10.1061/(ASCE)0733-9399(1989)115:2(345)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:2(345)).
-5. Chen, W. F. and Han, D. J. (2007), "Plasticity for Structural Engineers", J. Ross Publishing, ISBN 978-1-932159-75-2.
+1. On the Time to Failure under Creep Conditions
+2. [ISBN 978-0-7204-2357-0](https://search.worldcat.org/search?q=bn:9780720423570)
+3. [ISBN 978-0-521-32853-1](https://search.worldcat.org/search?q=bn:9780521328531)
+4. [10.1061/(ASCE)0733-9399(1989)115:2(345)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:2(345))
+5. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)

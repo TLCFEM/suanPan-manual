@@ -49,7 +49,10 @@ There is no strain dependence, so the model contributes no tangent stiffness.
 
 !!! info "deviation from theory"
     For $0<\alpha<1$ and $|v|<L$ the power law is replaced by a cubic polynomial, so the tangent damping is finite at zero velocity instead of singular.
-    For $\alpha=0$ the framework returns a constant stress independent of the sign of velocity, which is a convention of the base class rather than a dashpot law.
+    For $\alpha=0$ the stress is constant and independent of the sign of velocity, which is a framework convention rather than a dashpot law.
+
+!!! note "developer note"
+    The $\alpha=0$ convention is defined in the base class.
 
 ## Remarks
 
@@ -63,4 +66,4 @@ For a force with a yield plateau use [`BilinearViscosity`](BilinearViscosity.md)
 
 ## References
 
-1. Chang, T. L., and Lee, C.-L. (2022), "Numerical simulation of generalised Maxwell-type viscous dampers with an efficient iterative algorithm," Mechanical Systems and Signal Processing, 170, 108795, [doi:10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795).
+1. [10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795)

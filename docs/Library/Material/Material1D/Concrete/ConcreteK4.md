@@ -6,7 +6,7 @@ A Uniaxial Plastic-Damage Concrete Model
 
 1. [10.1061/(ASCE)ST.1943-541X.0002592](https://doi.org/10.1061/(ASCE)ST.1943-541X.0002592)
 2. [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf)
-3. Lemaître, J., and Chaboche, J.-L. (1990), Mechanics of Solid Materials, Cambridge University Press.
+3. [ISBN 978-0-521-32853-1](https://search.worldcat.org/search?q=bn:9780521328531)
 
 ## Syntax
 

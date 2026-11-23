@@ -20,8 +20,8 @@ For a purely elastic response with directly supplied $E$, $G$, $A$, $I_z$, $I_y$
 ## References
 
 1. [Distributed plasticity analysis of steel building structural systems](https://www.proquest.com/dissertations-theses/distributed-plasticity-analysis-steel-building/docview/304696456/se-2)
-2. V. Z. Vlasov, *Thin-Walled Elastic Beams*, 2nd edition, Israel Program for Scientific Translations, 1961.
-3. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover Publications, 2000, ISBN 978-0-486-41181-1.
+2. [Thin-Walled Elastic Beams](https://search.worldcat.org/search?q=ti:Thin-Walled+Elastic+Beams)
+3. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
 
 ## Syntax
 
@@ -110,7 +110,6 @@ The cantilever beam with the angle section is under an axial load applied at the
 2. The axial load is applied at the shear centre.
    The section is defined in the local coordinate system in which the shear centre is the origin.
 
-
 ```python
 from subprocess import run
 import shutil
@@ -136,14 +135,11 @@ to_fibre_section(geom, save_to="angle.sp", material_mapping={"default": 1})
 pass
 ```
 
-
     
 ![png](B31OS.BENCHMARK_files/B31OS.BENCHMARK_1_0.png)
     
 
-
 We use the following model to test.
-
 
 ```python
 from matplotlib import pyplot as plt
@@ -214,16 +210,13 @@ if is_run:
     plt.show()
 ```
 
-
     
 ![png](B31OS.BENCHMARK_files/B31OS.BENCHMARK_3_0.png)
     
 
-
 ### Flat Bar
 
 ![cantilever beam with flat bar](Flat.svg)
-
 
 ```python
 from sectionproperties.pre.library import rectangular_section
@@ -237,14 +230,11 @@ to_fibre_section(geom, save_to="flat.sp", material_mapping={"default": 1})
 pass
 ```
 
-
     
 ![png](B31OS.BENCHMARK_files/B31OS.BENCHMARK_5_0.png)
     
 
-
 Here we use the arc-length algorithm to solve the problem.
-
 
 ```python
 model = """# cantilever beam with angle section
@@ -309,14 +299,11 @@ if is_run:
     plt.show()
 ```
 
-
     
 ![png](B31OS.BENCHMARK_files/B31OS.BENCHMARK_7_0.png)
     
 
-
 ### Flat Bar Twisting
-
 
 ```python
 geom = rectangular_section(d=200, b=10).shift_section(-5, -100)
@@ -328,12 +315,9 @@ to_fibre_section(geom, save_to="flat2.sp", material_mapping={"default": 1})
 pass
 ```
 
-
     
 ![png](B31OS.BENCHMARK_files/B31OS.BENCHMARK_9_0.png)
     
-
-
 
 ```python
 model = """# cantilever beam with angle section
@@ -395,9 +379,7 @@ if is_run:
     plt.show()
 ```
 
-
     
 ![png](B31OS.BENCHMARK_files/B31OS.BENCHMARK_10_0.png)
     
-
 

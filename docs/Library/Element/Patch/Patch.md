@@ -39,5 +39,5 @@ For conventional hexahedral elements with polynomial shape functions see [C3D8](
 
 ## References
 
-1. T. J. R. Hughes, J. A. Cottrell and Y. Bazilevs, Isogeometric analysis: CAD, finite elements, NURBS, exact geometry and mesh refinement, *Computer Methods in Applied Mechanics and Engineering* 194(39-41):4135-4195, 2005, [doi:10.1016/j.cma.2004.10.008](https://doi.org/10.1016/j.cma.2004.10.008).
-2. J. A. Cottrell, T. J. R. Hughes and Y. Bazilevs, *Isogeometric Analysis: Toward Integration of CAD and FEA*, Wiley, 2009, [doi:10.1002/9780470749081](https://doi.org/10.1002/9780470749081).
+1. [10.1016/j.cma.2004.10.008](https://doi.org/10.1016/j.cma.2004.10.008)
+2. [ISBN 978-0-470-74908-1](https://search.worldcat.org/search?q=bn:9780470749081)

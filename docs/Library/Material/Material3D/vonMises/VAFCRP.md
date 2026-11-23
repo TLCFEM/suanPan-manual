@@ -8,11 +8,11 @@ Similar models are available as: [`ArmstrongFrederick`](ArmstrongFrederick.md), 
 
 ## References
 
-1. [https://doi.org/10.1017/S0368393100118759](https://doi.org/10.1017/S0368393100118759)
-2. [https://doi.org/10.1179/096034007X207589](https://doi.org/10.1179/096034007X207589)
-3. [https://doi.org/10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6)
-4. [https://doi.org/10.1002/nme.1620360807](https://doi.org/10.1002/nme.1620360807)
-5. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
+1. [10.1017/S0368393100118759](https://doi.org/10.1017/S0368393100118759)
+2. [10.1179/096034007X207589](https://doi.org/10.1179/096034007X207589)
+3. [10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6)
+4. [10.1002/nme.1620360807](https://doi.org/10.1002/nme.1620360807)
+5. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)
 
 ## Theory
 
@@ -62,7 +62,7 @@ $$
 where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturated stress, $$k_l$$ is the linear hardening modulus, $$m$$ is a constant that controls the speed of hardening, $$\mathrm{d}p=\sqrt{\dfrac{2}{3}\mathrm{d}\varepsilon^p:\mathrm{d}\varepsilon^p}$$ is the rate of accumulated plastic strain $$p$$.
 
 !!! warning "implementation limitation"
-    A negative value of the isotropic radius is clamped to zero and its derivative is discarded in the local iteration.
+    A negative value of the isotropic radius is clamped to zero and its derivative is discarded.
 
 ### AF
 
@@ -141,8 +141,8 @@ The current parser assigns the fifth input to the saturation stress and the sixt
 Verify the two isotropic inputs with a simple monotonic test before calibrating a full set.
 
 !!! warning "implementation limitation"
-    The three-dimensional parser and the syntax comments disagree on the order of the linear and saturation inputs.
-    This discrepancy is present in the current source and is not resolved by the documentation.
+    The order of the linear and saturation inputs differs from the syntax block shown above.
+    This discrepancy is not resolved by the documentation.
 
 The viscosity parameter $$\mu$$ has units of time and $$\epsilon$$ is dimensionless.
 Either $$\mu=0$$ or $$\epsilon=0$$ disables viscosity and recovers the [`ArmstrongFrederick`](ArmstrongFrederick.md) response.

@@ -86,5 +86,5 @@ materialTest1D 1 1E-4 50 100 150 200 250 300 150
 
 ## References
 
-- Clough, R. W. and Johnston, S. B. (1966), "Effect of stiffness degradation on earthquake ductility requirements", Report 66-16, University of California, Berkeley.
-- Ibarra, L. F., Medina, R. A. and Krawinkler, H. (2005), "Hysteretic models that incorporate strength and stiffness deterioration", Earthquake Engineering and Structural Dynamics, 34(12), 1489-1511, doi:10.1002/eqe.495.
+- Effect of stiffness degradation on earthquake ductility requirements
+- [10.1002/eqe.495](https://doi.org/10.1002/eqe.495)

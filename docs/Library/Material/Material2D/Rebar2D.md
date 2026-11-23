@@ -45,7 +45,7 @@ To have arbitrarily aligned layout, users can wrap it into a [`Rotation2D`](../W
 * The model has `PlaneType::S`, so it must be used with plane-stress elements such as [CP4](../../Element/Membrane/Plane/CP4.md); for a three-dimensional reinforcement layout use `Rebar3D`.
 
 !!! info "deviation from theory"
-    The two bar directions are fixed to the global axes by the class itself.
+    The two bar directions are fixed to the global axes.
     Inclined reinforcement is only obtained by wrapping the whole layer in [`Rotation2D`](../Wrapper/Rotation2D.md), which rotates the strain into the local bar axes before calling the steel models.
 
 ## Example

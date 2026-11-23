@@ -82,7 +82,7 @@ $$
 The consistent tangent is formed from the same denominator and the fourth-order deviatoric projector.
 
 !!! info "deviation from theory"
-    The implementation absorbs the factor $$\sqrt{2/3}$$ into the plastic multiplier so that the plastic strain increment equals $$\Delta\gamma$$ times the unit normal.
+    The factor $$\sqrt{2/3}$$ is absorbed into the plastic multiplier so that the plastic strain increment equals $$\Delta\gamma$$ times the unit normal.
     The accumulated plastic strain therefore grows by $$\sqrt{2/3}\Delta\gamma$$ rather than by $$\Delta\gamma$$.
 
 !!! warning "implementation limitation"

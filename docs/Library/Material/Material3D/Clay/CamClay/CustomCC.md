@@ -18,8 +18,10 @@ Any smooth hardening or softening law can therefore be used, as long as it can b
 Because the hardening function is supplied to [`NonlinearCamClay`](NonlinearCamClay.md), the constant elastic predictor, the tension-positive mean stress, the associative flow rule and the two-equation return mapping are all inherited unchanged.
 
 !!! info "deviation from theory"
-    The derivative passed to the return mapping is obtained from `Expression::gradient`, which differentiates numerically with a finite step rather than analytically.
-    The step is fixed at $10^{-4}$ in the source, so very steep hardening laws or sharp transitions can give an inaccurate consistent tangent.
+    The hardening derivative is obtained numerically rather than analytically, so very steep hardening laws or sharp transitions can give an inaccurate consistent tangent.
+
+!!! note "developer note"
+    The derivative passed to the return mapping comes from `Expression::gradient`, which uses a fixed finite step of $10^{-4}$ instead of analytic differentiation.
 
 ## Syntax
 
@@ -60,5 +62,5 @@ This defines the linear hardening law $$a(\alpha)=100+2\times10^5\alpha$$.
 
 ## References
 
-1. Roscoe, K. H. and Burland, J. B. (1968), "On the Generalised Stress-Strain Behaviour of 'Wet' Clay", in "Engineering Plasticity", Cambridge University Press, 535--609.
-2. Schofield, A. N. and Wroth, C. P. (1968), "Critical State Soil Mechanics", McGraw-Hill, London.
+1. On the Generalised Stress-Strain Behaviour of 'Wet' Clay
+2. [ISBN 978-0-641-94048-4](https://search.worldcat.org/search?q=bn:9780641940484)

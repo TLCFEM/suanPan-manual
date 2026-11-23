@@ -83,7 +83,7 @@ Parameters $$f_N$$, $$s_N$$ and $$\varepsilon_N$$ control the normal distributio
 There is no consideration of coalescence in the current implementation.
 
 !!! warning "implementation limitation"
-    The void volume fraction is clamped into the interval from zero to one after every Newton update.
+    The void volume fraction is clamped to the interval from zero to one.
     A trial increment that would exceed these bounds is truncated rather than rejected.
 
 ## Recording
@@ -113,5 +113,5 @@ Record `VF` with a recorder to visualise the evolution of porosity.
 
 ## References
 
-1. A. L. Gurson, Continuum theory of ductile rupture by void nucleation and growth, Part I: yield criteria and flow rules for porous ductile media, *Journal of Engineering Materials and Technology* 99 (1977) 2--15, [doi:10.1115/1.3443401](https://doi.org/10.1115/1.3443401).
-2. V. Tvergaard and A. Needleman, Analysis of the cup-cone fracture in a round tensile bar, *Acta Metallurgica* 32 (1984) 157--169, [doi:10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X).
+1. [10.1115/1.3443401](https://doi.org/10.1115/1.3443401)
+2. [10.1016/0001-6160(84)90213-X](https://doi.org/10.1016/0001-6160(84)90213-X)

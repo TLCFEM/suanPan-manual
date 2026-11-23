@@ -96,7 +96,7 @@ The tangent stiffness returned to the global solver is the consistent algorithmi
     The dissipated energy is normalised by the yield deformation, so $$e=(1-a)\int z\,\mathrm d\varepsilon$$ is dimensionless rather than a physical energy.
     The strength, stiffness and amplitude degradation laws are driven by this normalised scalar instead of by physical hysteretic energy.
 
-!!! warning "implementation limitation"
+!!! note "developer note"
     The coupled solve has no bracketed fallback and terminates with an error if the Newton iteration does not converge within 20 iterations.
 
 ## Parameters
@@ -177,7 +177,7 @@ materialtest1d 1 1E-3 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 80
 
 ## References
 
-- Bouc, R. (1967), "Forced vibration of mechanical systems with hysteresis", Proceedings of the Fourth Conference on Nonlinear Oscillations, Prague, p. 315.
-- Wen, Y.-K. (1976), "Method for random vibration of hysteretic systems", Journal of the Engineering Mechanics Division, ASCE, 102(2), 249-263, doi:10.1061/JMCEA3.0002106.
-- Baber, T. T. and Wen, Y.-K. (1981), "Random vibration of hysteretic, degrading systems", Journal of the Engineering Mechanics Division, ASCE, 107(6), 1069-1087.
-- Baber, T. T. and Noori, M. N. (1985), "Random vibration of degrading, pinching systems", Journal of Engineering Mechanics, ASCE, 111(8), 1010-1016, doi:10.1061/(ASCE)0733-9399(1985)111:8(1010).
+- Forced vibration of mechanical systems with hysteresis
+- [10.1061/JMCEA3.0002106](https://doi.org/10.1061/JMCEA3.0002106)
+- Random vibration of hysteretic, degrading systems
+- [10.1061/(ASCE)0733-9399(1985)111:8(1010)](https://doi.org/10.1061/(ASCE)0733-9399(1985)111:8(1010))

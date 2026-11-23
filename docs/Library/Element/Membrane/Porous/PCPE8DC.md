@@ -25,8 +25,12 @@ The differences are the quadratic eight-node interpolation and the five-point Ir
 The characteristic length is taken from the area of the quadrilateral formed by the first four corner nodes.
 
 !!! warning "implementation limitation"
-    The quadratic element uses a fixed five-point Irons rule and accepts only a plane-strain solid and an isotropic fluid with nonzero bulk moduli.
-    The permeability is a single scalar, and the characteristic length ignores the four midside nodes.
+    The quadratic element accepts only a plane-strain solid and an isotropic fluid with nonzero bulk moduli.
+    The permeability is a single scalar, so anisotropy and tensor permeability cannot be represented.
+
+!!! note "developer note"
+    The quadratic element uses a fixed five-point Irons integration rule.
+    The characteristic length is computed from the four corner nodes and ignores the four midside nodes.
 
 ## Syntax
 
@@ -76,5 +80,5 @@ This model supports the following additional history variables to be recorded.
 
 ## References
 
-1. Biot, M.A. (1941), General theory of three-dimensional consolidation, Journal of Applied Physics 12(2), 155--164, [doi:10.1063/1.1712886](https://doi.org/10.1063/1.1712886).
-2. Zienkiewicz, O.C., Chang, C.T. and Bettess, P. (1980), Drained, undrained, consolidating and dynamic behaviour assumptions in soils, G\'eotechnique 30(4), 385--395, [doi:10.1680/geot.1980.30.4.385](https://doi.org/10.1680/geot.1980.30.4.385).
+1. [10.1063/1.1712886](https://doi.org/10.1063/1.1712886)
+2. [10.1680/geot.1980.30.4.385](https://doi.org/10.1680/geot.1980.30.4.385)

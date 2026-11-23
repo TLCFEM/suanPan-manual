@@ -151,10 +151,10 @@ For purely elastic members use [`EB21`](EB21.md) or [`EB31OS`](EB31OS.md), which
 
 ## References
 
-1. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover Publications, 2000, ISBN 978-0-486-41181-1.
-2. O. C. Zienkiewicz and R. L. Taylor, *The Finite Element Method*, 5th edition, Butterworth–Heinemann, 2000.
-3. D. S. Malkus and T. J. R. Hughes, "Mixed finite element methods — reduced and selective integration techniques: a unification of concepts", *Computer Methods in Applied Mechanics and Engineering*, 15(1):63–81, 1978, [doi:10.1016/0045-7825(78)90013-0](https://doi.org/10.1016/0045-7825(78)90013-0).
-4. E. Spacone, F. C. Filippou and F. F. Taucer, "Fibre beam-column model for non-linear analysis of R/C frames: Part I. Formulation", *Earthquake Engineering and Structural Dynamics*, 25(7):711–725, 1996, [doi:10.1002/(SICI)1096-9845(199607)25:7<711::AID-EQE576>3.0.CO;2-9](https://doi.org/10.1002/(SICI)1096-9845(199607)25:7%3C711::AID-EQE576%3E3.0.CO;2-9).
-5. M. A. Crisfield, *Non-Linear Finite Element Analysis of Solids and Structures, Volume 1: Essentials*, John Wiley & Sons, 1991, ISBN 0-471-92956-5.
-6. V. Z. Vlasov, *Thin-Walled Elastic Beams*, 2nd edition, Israel Program for Scientific Translations, 1961.
-7. R. M. de Souza, *Force-based Finite Element for Large Displacement Inelastic Analysis of Structures*, PhD thesis, University of California at Berkeley, 2000.
+1. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
+2. [ISBN 978-0-7506-5049-6](https://search.worldcat.org/search?q=bn:9780750650496)
+3. [10.1016/0045-7825(78)90013-0](https://doi.org/10.1016/0045-7825(78)90013-0)
+4. [10.1002/(SICI)1096-9845(199607)25:7<711::AID-EQE576>3.0.CO;2-9](https://doi.org/10.1002/(SICI)1096-9845(199607)25:7%3C711::AID-EQE576%3E3.0.CO;2-9)
+5. [ISBN 0-471-92956-5](https://search.worldcat.org/search?q=bn:0471929565)
+6. [Thin-Walled Elastic Beams](https://search.worldcat.org/search?q=ti:Thin-Walled+Elastic+Beams)
+7. Force-based Finite Element for Large Displacement Inelastic Analysis of Structures

@@ -80,7 +80,7 @@ The consistent tangent returned to the global solver is $$E/\left(1+n\alpha\left
     The classical Ramberg-Osgood equation describes a monotonic curve, whereas suanPan extends it to cyclic loading with a Masing rule based on the latest reversal point.
     When the previous reversal stress is small, the normalising yield stress is replaced by the larger of the reversal-stress difference and the initial yield stress.
 
-!!! warning "implementation limitation"
+!!! note "developer note"
     The local Newton iteration uses a hard-coded tolerance of $$10^{-13}$$ and a maximum of 20 iterations.
     The update returns a failure flag if convergence is not reached within that limit.
 
@@ -112,4 +112,4 @@ exit
 
 ## References
 
-- Ramberg, W. and Osgood, W. R. (1943), "Description of stress-strain curves by three parameters", National Advisory Committee for Aeronautics, Technical Note No. 902.
+- Description of stress-strain curves by three parameters

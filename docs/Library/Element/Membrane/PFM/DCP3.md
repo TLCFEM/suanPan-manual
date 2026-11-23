@@ -41,8 +41,8 @@ The quadrilateral counterpart with $2\times2$ Gauss integration is [`DCP4`](DCP4
 There are a lot of papers on the phase-field model.
 A staggered scheme with maximum strain energy is adopted as an illustration of implementation.
 
-* G. Liu, G. Li, Q. M. Li, K. Zhang and L. Wang, *Abaqus implementation of monolithic and staggered schemes for quasi-static and dynamic fracture phase-field model*, Computational Materials Science 121, 35-47 (2016), [doi:10.1016/j.commatsci.2016.04.009](https://doi.org/10.1016/j.commatsci.2016.04.009).
-* C. Miehe, M. Hofacker and F. Welschinger, *A phase field model for rate-independent crack propagation: robust algorithmic implementation based on operator splits*, Computer Methods in Applied Mechanics and Engineering 199(45-48), 2765-2778 (2010), [doi:10.1016/j.cma.2010.04.016](https://doi.org/10.1016/j.cma.2010.04.016).
+* [10.1016/j.commatsci.2016.04.009](https://doi.org/10.1016/j.commatsci.2016.04.009)
+* [10.1016/j.cma.2010.04.016](https://doi.org/10.1016/j.cma.2010.04.016)
 
 ## Syntax
 

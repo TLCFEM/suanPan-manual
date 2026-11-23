@@ -35,7 +35,7 @@ The potential is supplied to the abstract framework [`IsotropicNonlinearElastic3
 The volumetric derivative implemented in the code is $\partial W/\partial\varepsilon_v=9K\varepsilon_v$, because the constructor stores the internal value `bulk = 9K`.
 
 !!! info "deviation from theory"
-    The constructor multiplies the input `K` by nine, so the volumetric energy is $\tfrac92K\varepsilon_v^2$ instead of the conventional $\tfrac12K\varepsilon_v^2$.
+    The volumetric energy is $\tfrac92K\varepsilon_v^2$ instead of the conventional $\tfrac12K\varepsilon_v^2$.
     The command-line argument `K` is therefore not the usual small-strain bulk modulus.
 
 The deviatoric derivative returned by the code is
@@ -48,7 +48,7 @@ By the chain rule $\partial W/\partial\varepsilon_p=2\varepsilon_p\,\partial W/\
 The implemented deviatoric exponent is therefore $1+m$ rather than the $1-m$ printed in the expression above, and the code should be consulted when calibrating $m$.
 
 !!! warning "implementation limitation"
-    The displayed strain energy uses the exponent $1-m$, but the derivative returned by `compute_derivative` integrates to the power $1+m$.
+    The displayed strain energy uses the exponent $1-m$, but the implemented derivative integrates to the power $1+m$.
     Calibrate `m` against the implemented derivative rather than against the displayed expression.
 
 ## Remarks
@@ -57,8 +57,7 @@ The order is `(2)` bulk modulus $K$, `(3)` reference strain $\varepsilon_0$, `(4
 The parameters $\varepsilon_0$ and $\sigma_0$ are converted to absolute values and $m$ is clamped to $[0,1]$.
 
 !!! warning "implementation limitation"
-    The constructor applies `fabs` to the reference strain and stress and clamps `m` to $[0,1]$.
-    A negative `m` or a negative reference quantity is silently replaced rather than rejected.
+    The reference strain and stress are converted to their absolute values and `m` is clamped to $[0,1]$, so negative values are silently replaced rather than rejected.
 
 The internal bulk modulus is nine times the input $K$, so the input is not the conventional bulk modulus of linear elasticity and must be calibrated against the given energy definition.
 At $\varepsilon_p=\varepsilon_0$ the equivalent stress equals $\sigma_0$, which gives a direct way to determine the reference stress from a uniaxial curve.
@@ -73,4 +72,4 @@ This is a small-strain model based on the infinitesimal strain tensor, so nonlin
 
 ## References
 
-1. R. W. Ogden, *Non-linear Elastic Deformations*, Dover, 1997, Chapter 2.
+1. [ISBN 978-0-486-69648-5](https://search.worldcat.org/search?q=bn:9780486696485)

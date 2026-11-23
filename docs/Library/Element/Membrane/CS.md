@@ -48,9 +48,11 @@ element CSMQ8 (1) (2...*) (3) [4] [5]
 3. Currently, only [`Elastic2D`](../../Material/Material2D/Elastic2D.md) is supported.
 
 !!! warning "implementation limitation"
+    The elements use only the elastic modulus and Poisson's ratio from the material, so inelastic materials are not supported even though the underlying six-field formulation is materially general.
+
+!!! note "developer note"
     The elements read the elastic modulus and Poisson's ratio from the material and build an `IsotropicCouple` tangent internally instead of using the material's own stiffness matrix.
     Under plane stress the modulus and Poisson's ratio are first converted to $E/(1-\nu^2)$ and $\nu/(1-\nu)$.
-    Inelastic materials are therefore not supported even though the underlying six-field formulation is materially general.
 
 4. The drilling rotation is a genuine kinematic DoF here, unlike the fictitious rotation used in [`Allman`](Drilling/Allman.md) or [`GQ12`](Drilling/GQ12.md).
 5. The characteristic length controls the couple-stress contribution; larger values stiffen the rotational response.

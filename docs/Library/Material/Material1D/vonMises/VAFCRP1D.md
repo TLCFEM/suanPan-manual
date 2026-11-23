@@ -48,9 +48,11 @@ The viscosity enters through the dimensionless ratio $$\mu/\Delta t$$, so a chan
 The consistent tangent has the same form as in [`ArmstrongFrederick1D`](ArmstrongFrederick1D.md), namely $$E^{ep}=E+E^2/J$$ with $$J$$ the derivative of the residual above.
 
 !!! warning "implementation limitation"
+    Stress relaxation at fixed strain is possible when viscosity is active, but it is completely absent when either viscosity parameter is zero.
+
+!!! note "developer note"
     The constructor tightens the local Newton tolerance to $10^{-15}$, which is much stricter than the global convergence tolerance.
     Unlike [`ArmstrongFrederick1D`](ArmstrongFrederick1D.md), this model does not return early for a zero strain increment.
-    Stress relaxation at fixed strain is therefore possible when viscosity is active, but it is completely absent when either viscosity parameter is zero.
 
 ## Syntax
 

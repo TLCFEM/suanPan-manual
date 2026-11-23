@@ -20,8 +20,8 @@ The stiffness is written in terms of $E$ and $B$ rather than $E$ and $\nu$, with
 ## References
 
 1. [10.3141/2511-07](https://doi.org/10.3141/2511-07)
-2. Duncan, J. M. and Chang, C. Y. (1970), "Nonlinear Analysis of Stress and Strain in Soils", Journal of the Soil Mechanics and Foundations Division, 96(SM5), 1629--1653, [10.1061/JSFEAQ.0001458](https://doi.org/10.1061/JSFEAQ.0001458).
-3. Duncan, J. M., Byrne, P., Wong, K. S. and Mabry, P. (1980), "Strength, Stress-Strain and Bulk Modulus Parameters for Finite Element Analysis of Stresses and Movements in Soil Masses", Report UCB/GT/80-01, University of California, Berkeley.
+2. [10.1061/JSFEAQ.0001458](https://doi.org/10.1061/JSFEAQ.0001458)
+3. Strength, Stress-Strain and Bulk Modulus Parameters for Finite Element Analysis of
 
 ## Syntax
 
@@ -104,7 +104,7 @@ The consistent tangent is obtained from the same Jacobian, so it is the derivati
 In the source the degradation factor is floored at $0.1$, so the tangent modulus never drops below $10\%$ of the initial modulus, and the power laws are frozen at $\sigma_3/p_a\leq0.1$.
 
 !!! info "deviation from theory"
-    The constant plateau is entered when $\sigma_3/p_a\leq0.1$ in the source, which is stricter than the $\sigma_3<p_a$ statement in the regularization section below.
+    The constant plateau is entered when $\sigma_3/p_a\leq0.1$, which is stricter than the $\sigma_3<p_a$ statement in the regularization section below.
     The parabolic degradation factor is additionally truncated at $0.1$, so the tangent modulus retains at least $10\%$ of its initial value even beyond the Mohr--Coulomb limit.
 
 ## Remarks

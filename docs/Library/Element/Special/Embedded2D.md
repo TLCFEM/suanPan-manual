@@ -27,7 +27,10 @@ The shape functions are then frozen, so the penalty stiffness remains constant t
 
 !!! warning "implementation limitation"
     The natural coordinates are found once from the initial geometry and are not updated as the host element deforms.
-    Initialization fails if the inverse mapping has not converged within 20 iterations.
+    Initialization fails if the inverse mapping does not converge.
+
+!!! note "developer note"
+    The inverse mapping is capped at 20 iterations.
 
 !!! info "deviation from theory"
     Only translational DoFs are tied.

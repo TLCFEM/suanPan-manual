@@ -27,8 +27,6 @@ The kinematic expression supplies the magnitude $$h(p)=\lVert\boldsymbol\beta\rV
 !!! warning "implementation limitation"
     A negative value returned by the isotropic expression is clamped to zero and its derivative is discarded.
     A custom expression that becomes negative therefore loses its slope information instead of being accepted.
-
-!!! warning "implementation limitation"
     The kinematic rule is restricted to one back stress whose direction follows the cumulative deviatoric plastic strain.
     A decomposition into several independently evolving back stresses is not available in this framework.
     Use ArmstrongFrederick when several Armstrong-Frederick back stresses are needed.
@@ -116,5 +114,5 @@ Use a three-dimensional solid element such as `C3D8` with this material.
 
 ## References
 
-1. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
-2. J. L. Chaboche, Constitutive equations for cyclic plasticity and cyclic viscoplasticity, *International Journal of Plasticity* 5 (1989) 247--301, [doi:10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6).
+1. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)
+2. [10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6)

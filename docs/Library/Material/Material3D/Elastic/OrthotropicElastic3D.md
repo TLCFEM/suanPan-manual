@@ -61,7 +61,7 @@ The shear ordering follows the element Voigt convention $(\gamma_{12},\gamma_{23
 Unlike [`IsotropicElastic3D`](IsotropicElastic3D.md), the constructor does not take absolute values, so negative or zero inputs are not corrected and can produce a non-positive-definite stiffness.
 
 !!! warning "implementation limitation"
-    The elastic constants are not validated at construction or initialization.
+    The elastic constants are not validated.
     A singular compliance matrix or inconsistent Poisson ratios therefore produce a non-physical stiffness without a diagnostic.
 
 Setting all $E_i=E$, all $G_{ij}=E/[2(1+\nu)]$ and all $\nu_{ij}=\nu$ recovers isotropic elasticity.
@@ -75,5 +75,5 @@ material OrthotropicElastic3D 1 1.2E5 1E4 1E4 7E3 3.5E3 7E3 0.3 0.4 0.3
 
 ## References
 
-1. R. M. Jones, *Mechanics of Composite Materials*, 2nd ed., Taylor & Francis, 1999, Chapter 2.
-2. J. N. Reddy, *Mechanics of Composite Laminates*, Springer, 2004, Chapter 2.
+1. [ISBN 978-1-56032-712-7](https://search.worldcat.org/search?q=bn:9781560327127)
+2. [ISBN 978-0-8493-1592-3](https://search.worldcat.org/search?q=bn:9780849315923)

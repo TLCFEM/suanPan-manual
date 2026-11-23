@@ -16,6 +16,9 @@ The radius is interpolated with the eight-term quadratic monomial vector $[1,\xi
 The default rule is $3\times3$ Gauss; the parser currently constructs the element with reduced integration disabled.
 
 !!! warning "implementation limitation"
+    Reduced integration and nonlinear geometry cannot be selected from an `element CAX8` command.
+
+!!! note "developer note"
     No parser token exposes reduced integration for `CAX8`, and the nonlinear-geometry argument is left at its default false.
     The class contains branches for both options, but they cannot be selected from an `element CAX8` command.
 
@@ -40,4 +43,4 @@ element CAX8 (1) (2...9) (10)
 
 ## References
 
-1. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann (2013), Chapter 9.
+1. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)

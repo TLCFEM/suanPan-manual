@@ -13,9 +13,9 @@ The implementation is based on the following paper.
 
 Additional material on the same topic can be found in the following literature.
 
-1. [10.1007/978-3-030-93138-4](https://doi.org/10.1007/978-3-030-93138-4)
-2. [10.1007/s11831-023-10022-1](https://doi.org/10.1007/s11831-023-10022-1)
-3. [10.1007/s11831-022-09880-y](https://doi.org/10.1007/s11831-022-09880-y)
+2. [10.1007/978-3-030-93138-4](https://doi.org/10.1007/978-3-030-93138-4)
+3. [10.1007/s11831-023-10022-1](https://doi.org/10.1007/s11831-023-10022-1)
+4. [10.1007/s11831-022-09880-y](https://doi.org/10.1007/s11831-022-09880-y)
 
 Prof. Koichi Hashiguchi has published a large number of papers on this topic.
 To find more references, please refer to the monograph and the references therein.
@@ -44,8 +44,11 @@ $$
 where $$u\geqslant0$$ is the yield ratio evolution rate.
 
 !!! warning "implementation limitation"
-    The yield ratio is bounded below by $$10^{-15}$$ and above by unity.
-    Below that lower bound the driving term $$-\ln z$$ is replaced by the finite value $$-\ln 10^{-15}$$ instead of growing without limit.
+    The yield ratio is bounded below by a small positive value and above by unity.
+    Near the lower bound the driving term $$-\ln z$$ is replaced by a finite value instead of growing without limit.
+
+!!! note "developer note"
+    The lower bound on the yield ratio is $$10^{-15}$$.
 
 The isotropic and kinematic bounds follow the common form
 
@@ -57,7 +60,7 @@ with separate parameter sets for the two bounds.
 
 !!! warning "implementation limitation"
     The isotropic and kinematic bounds are clamped to zero when their evaluated value becomes negative.
-    The elastic core size is capped just below unity by the parser.
+    The elastic core size is capped just below unity.
 
 The normalised back stress $$\boldsymbol\alpha$$ and the normalised elastic core $$\boldsymbol d$$ evolve with Armstrong-Frederick type rules, saturating towards the kinematic bound and towards the elastic core size $$z_e$$, respectively.
 The elastic core is a second internal tensor of Hashiguchi's extended model that improves the description of reverse loading.

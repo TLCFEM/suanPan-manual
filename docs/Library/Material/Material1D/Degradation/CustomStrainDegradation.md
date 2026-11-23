@@ -48,16 +48,21 @@ The tension expression `(3)` and optional compression expression `(4)` must each
 If the compression expression is omitted, the tension expression is reused with the absolute value of the strain as input and the derivative negated, giving a symmetric law.
 
 !!! info "deviation from theory"
-    The default case does not evaluate the tension expression at the negative strain.
-    Instead `compute_negative_degradation` calls it with `fabs(t_strain)` and flips the sign of the returned derivative.
+    When the compression expression is omitted, the tension expression is evaluated with the absolute value of the strain and its derivative is negated.
     A single expression therefore always defines a symmetric law in $|\varepsilon|$, even if the expression itself is asymmetric.
+
+!!! note "developer note"
+    The default case is handled by `compute_negative_degradation`, which calls the tension expression with `fabs(t_strain)` and flips the sign of the returned derivative.
 
 The branch is selected by the sign of the intact stress from the host material, not by the sign of the strain.
 
 !!! warning "implementation limitation"
-    `StrainDegradation::update_trial_status` tests `trial_stress(0) > 0`, where the stress is the undamaged stress returned by the host.
+    The tension or compression envelope is selected by the sign of the undamaged stress returned by the host, not by the sign of the strain.
     A host with a compression offset or a non-symmetric backbone can therefore route a strain of a given sign to the opposite envelope.
     The envelope variable is updated only when the strain moves further in the direction selected by that stress sign.
+
+!!! note "developer note"
+    `StrainDegradation::update_trial_status` tests `trial_stress(0) > 0` against the undamaged stress returned by the host.
 
 The wrapper inherits the density of the host material and records the two degradation factors as `DT` and `DC`.
 See [`CustomStressDegradation`](CustomStressDegradation.md) for the stress-driven counterpart and [`TrilinearStrainDegradation`](TrilinearStrainDegradation.md) for a built-in piecewise law.

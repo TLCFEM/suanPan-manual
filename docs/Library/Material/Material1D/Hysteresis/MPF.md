@@ -69,9 +69,11 @@ When isotropic hardening is enabled, the asymptote stress is shifted by $$\max\l
 The Bauschinger effect can be removed with the constant-radius switch and the isotropic hardening can be removed with the corresponding switch.
 
 !!! info "deviation from theory"
-    The normalised strain is floored at `datum::eps` before the transition curve is evaluated.
-    This avoids the singularity at the reversal point but replaces the exact curve by a constant value for negative normalised strain.
+    The singularity at the reversal point is avoided by replacing the exact curve with a constant value for negative normalised strain.
     The isotropic hardening modification shifts the asymptote stress and does not change the initial yield stress or the elastic branch.
+
+!!! note "developer note"
+    The normalised strain is floored at `datum::eps` before the transition curve is evaluated.
 
 ## Remarks
 
@@ -94,5 +96,5 @@ materialTest1D 1 0.001 40 40 60 60
 
 ## References
 
-- Menegotto, M. and Pinto, P. E. (1973), "Method of analysis for cyclically loaded RC plane frames including changes in geometry and non-elastic behavior of elements under combined normal force and bending", IABSE Symposium, Lisbon.
-- Filippou, F. C., Popov, E. P. and Bertero, V. V. (1983), "Effects of bond deterioration on hysteretic behavior of reinforced concrete joints", Report EERC 83-19, University of California, Berkeley.
+- Method of analysis for cyclically loaded RC plane frames including changes in geometry
+- Effects of bond deterioration on hysteretic behavior of reinforced concrete joints

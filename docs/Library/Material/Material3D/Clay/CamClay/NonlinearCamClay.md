@@ -95,10 +95,10 @@ The third stress invariant does not enter the yield function, so the yield surfa
 
 ## References
 
-1. Roscoe, K. H. and Burland, J. B. (1968), "On the Generalised Stress-Strain Behaviour of 'Wet' Clay", in "Engineering Plasticity", Heyman, J. and Leckie, F. A. (eds.), Cambridge University Press, 535--609.
-2. Schofield, A. N. and Wroth, C. P. (1968), "Critical State Soil Mechanics", McGraw-Hill, London.
-3. Muir Wood, D. (1991), "Soil Behaviour and Critical State Soil Mechanics", Cambridge University Press, [10.1017/CBO9781139878272](https://doi.org/10.1017/CBO9781139878272).
-4. Chen, W. F. and Han, D. J. (2007), "Plasticity for Structural Engineers", J. Ross Publishing, ISBN 978-1-932159-75-2, Chapter 5.
+1. On the Generalised Stress-Strain Behaviour of 'Wet' Clay
+2. [ISBN 978-0-641-94048-4](https://search.worldcat.org/search?q=bn:9780641940484)
+3. [ISBN 978-0-521-33782-3](https://search.worldcat.org/search?q=bn:9780521337823)
+4. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)
 
 ## History Layout
 

@@ -38,9 +38,11 @@ Its DoFs are passed unchanged to the section as the section deformation, and the
 This isolates sectional behaviour from any spatial discretisation, so the element can be used to generate moment--curvature or axial force--strain curves and to validate a section definition before using it in a beam or shell model.
 
 !!! warning "implementation limitation"
-    The section is copied when the element is initialized.
     Later changes to the original section are not reflected in this element.
     The element has no geometric stiffness of its own.
+
+!!! note "developer note"
+    The section is copied when the element is initialized.
 
 ## Syntax
 

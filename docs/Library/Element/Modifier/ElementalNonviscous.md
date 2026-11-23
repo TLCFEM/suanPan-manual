@@ -37,8 +37,11 @@ A diagonal tangent $\operatorname{Re}\big(\sum_i m_i'\big)\boldsymbol I$ is adde
 Only matrix--vector products are needed, so the cost per step is low and no velocity history is stored.
 
 !!! warning "implementation limitation"
-    The added tangent is diagonal and uses only the real part of the summed coefficients.
+    The added tangent is diagonal.
     Off-diagonal coupling between DoFs in the nonviscous kernel is not represented.
+
+!!! note "developer note"
+    The tangent uses only the real part of the summed coefficients.
     The convolution history is advanced with a trapezoidal combination of the current and previous velocities.
 
 The parser requires the coefficients to form conjugate pairs and checks that the kernel decays to zero; a kernel that does not satisfy these conditions is rejected.

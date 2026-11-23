@@ -46,8 +46,11 @@ element CP3 (1) (2...4) (5) [6] [7]
   It is a constant strain element.
 
 !!! info "deviation from theory"
-    The ABAQUS-style names CPS3 and CPE3 are descriptive only; the element parser registers a single token `CP3` for both plane stress and plane strain.
+    Only `CP3` is accepted as an element token for both plane stress and plane strain; the names CPS3 and CPE3 are descriptive only and are not registered as commands.
     The material plane type decides whether thickness is applied.
+
+!!! note "developer note"
+    The ABAQUS-style names CPS3 and CPE3 are descriptive only; the element parser registers a single token `CP3` for both plane stress and plane strain.
 
 * A single integration point at the center of the element is used for integration.
 * The characteristic length used by material regularisation is $\sqrt{A}$, with $A$ the area of the triangle.
@@ -58,5 +61,5 @@ element CP3 (1) (2...4) (5) [6] [7]
 
 ## References
 
-1. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann (2013), Chapter 8.
-2. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover (2000), Chapter 3.
+1. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)
+2. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)

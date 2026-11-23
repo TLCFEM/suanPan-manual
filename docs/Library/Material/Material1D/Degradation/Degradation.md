@@ -83,9 +83,12 @@ In general, the computation procedure of a degradation model can be listed as fo
 Such a formulation is only valid for the damage models that do not depend on plasticity history.
 
 !!! warning "implementation limitation"
-    The wrapper calls the host model with the strain and then multiplies its stress and stiffness.
-    It never modifies the host history variables, so damage cannot alter yielding, plastic flow or the size of the yield surface.
+    The degradation factor only scales the host stress and stiffness, so damage cannot alter yielding, plastic flow or the size of the yield surface.
     Host models that require such coupling should use an integrated plastic-damage material instead of this wrapper.
+
+!!! note "developer note"
+    The wrapper calls the host model with the strain and then multiplies its returned stress and stiffness.
+    It never modifies the host history variables.
 
 ## Recording
 
@@ -110,6 +113,6 @@ The built-in [`TrilinearStrainDegradation`](TrilinearStrainDegradation.md) and [
 
 ## References
 
-1. Kachanov, L. M. (1958). Time of the rupture process under creep conditions. *Izvestia Akademii Nauk USSR, Otdelenie Tekhnicheskich Nauk*, 8, 26--31.
-2. Lemaitre, J. and Chaboche, J.-L. (1990). *Mechanics of Solid Materials*. Cambridge University Press.
-3. Mazars, J. and Pijaudier-Cabot, G. (1989). Continuum damage theory: application to concrete. *Journal of Engineering Mechanics*, 115(2), 345--365. [doi:10.1061/(ASCE)0733-9399(1989)115:2(345)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:2(345)).
+1. Izvestia Akademii Nauk USSR, Otdelenie Tekhnicheskich Nauk
+2. [ISBN 978-0-521-32853-1](https://search.worldcat.org/search?q=bn:9780521328531)
+3. [10.1061/(ASCE)0733-9399(1989)115:2(345)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:2(345))

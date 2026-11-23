@@ -40,9 +40,11 @@ The branch is selected by the sign of the trial strain, with zero strain assigne
 Both moduli are used as given, without conversion to absolute values, so positive inputs should be used.
 
 !!! warning "implementation limitation"
+    A negative modulus input produces a negative stiffness on that branch.
+    The tangent jumps from one modulus to the other at zero strain without a transition region.
+
+!!! note "developer note"
     The constructor stores both moduli without `fabs`, unlike [`BilinearElastic1D`](BilinearElastic1D.md).
-    A negative input therefore produces a negative stiffness on that branch.
-    The tangent also jumps from one modulus to the other at zero strain without a transition region.
 
 The density `(4)` defaults to zero.
 The stiffness is discontinuous at $$\varepsilon=0$$, which can slow convergence if the solution oscillates about zero strain.

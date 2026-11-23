@@ -20,6 +20,8 @@ The first column enhances $\varepsilon_{xx}$ with $\partial f/\partial x$, the s
 
 !!! info "deviation from theory"
     The classical Wilson or Q6 element adds two incompatible displacement modes $(1-\xi^2)$ and $(1-\eta^2)$, whereas this implementation adds four assumed strain modes derived from one quadratic function.
+
+!!! note "developer note"
     The element name and the documentation retain the incompatible-mode terminology even though the enhancement enters through the strain interpolation.
 
 The mixed equilibrium equations are
@@ -55,6 +57,6 @@ element CP4I (1) (2...5) (6) [7]
 
 ## References
 
-1. E. L. Wilson, R. L. Taylor, W. P. Doherty and J. Ghaboussi, *Incompatible displacement models*, in *Numerical and Computer Methods in Structural Mechanics*, Academic Press (1973), pp. 43-57.
-2. R. L. Taylor, P. J. Beresford and E. L. Wilson, *A non-conforming element for stress analysis*, International Journal for Numerical Methods in Engineering 10(6), 1211-1219 (1976), [doi:10.1002/nme.1620100602](https://doi.org/10.1002/nme.1620100602).
-3. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover (2000), Section 4.7.
+1. Incompatible displacement models
+2. [10.1002/nme.1620100602](https://doi.org/10.1002/nme.1620100602)
+3. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)

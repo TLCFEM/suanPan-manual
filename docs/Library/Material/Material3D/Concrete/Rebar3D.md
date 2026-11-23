@@ -52,4 +52,4 @@ To have an arbitrarily aligned layout, users can wrap it into a [`Rotation3D`](.
 
 ## References
 
-1. Ngo, D. and Scordelis, A. C. (1967) Finite element analysis of reinforced concrete beams, ACI Journal, 64(3), 152--163.
+1. Finite element analysis of reinforced concrete beams, ACI Journal, 64(3), 152--163

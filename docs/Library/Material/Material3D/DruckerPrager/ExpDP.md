@@ -24,7 +24,7 @@ For $a>1$ the cohesion first increases and then softens, which reproduces the ha
 The peak occurs at $\kappa=\ln[2a/(1+a)]/b$ and equals $c\,(1+a)^2/(4a)$.
 
 !!! info "deviation from theory"
-    When $a>1$ the input cohesion (7) is interpreted as the peak value and is rescaled to $c\,4a/(1+a)^2$ in the constructor.
+    When $a>1$ the input cohesion (7) is interpreted as the peak value and is rescaled to $c\,4a/(1+a)^2$.
     When $a\le1$ the input is used directly as the initial cohesion.
     This rescaling mirrors the compression-strength normalisation in [`CDP`](../Concrete/CDP.md) but differs from the raw coefficient of the published exponential law.
 
@@ -56,5 +56,5 @@ material ExpDP (1) (2) (3) (4) (5) (6) (7) (8) (9) [10]
 
 ## References
 
-1. Lubliner, J., Oliver, J., Oller, S. and Onate, E. (1989) A plastic-damage model for concrete, International Journal of Solids and Structures, 25(3), 299--326, [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4).
-2. Drucker, D. C. and Prager, W. (1952) Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume, Quarterly of Applied Mathematics, 10(2), 157--165.
+1. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)
+2. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in

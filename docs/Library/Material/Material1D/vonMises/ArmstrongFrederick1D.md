@@ -43,7 +43,10 @@ Each component saturates at $$a_i/b_i$$ under monotonic proportional plastic flo
 !!! info "deviation from theory"
     The equation above writes the recovery in terms of the total back stress $\beta$.
     The source instead applies the recovery to each component separately as $b_i\beta_i$, which is the usual Chaboche superposition rule.
-    The accumulated plastic strain is $q=|\varepsilon^p|$ in one dimension, so the signed plastic strain and the accumulated plastic strain are distinct history variables.
+    The accumulated plastic strain is $q=|\varepsilon^p|$ in one dimension.
+
+!!! note "developer note"
+    The signed plastic strain and the accumulated plastic strain are distinct history variables.
 
 ### Numerical Integration
 
@@ -144,5 +147,5 @@ with ErrorLine(
 
 ## References
 
-1. P. J. Armstrong and C. O. Frederick, A mathematical representation of the multiaxial Bauschinger effect, CEGB Report RD/B/N731, 1966.
-2. J. L. Chaboche, Constitutive equations for cyclic plasticity and cyclic viscoplasticity, *International Journal of Plasticity* 5 (1989) 247--301, [doi:10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6).
+1. A mathematical representation of the multiaxial Bauschinger effect, CEGB Report
+2. [10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6)

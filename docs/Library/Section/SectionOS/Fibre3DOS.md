@@ -5,7 +5,7 @@
 ## References
 
 1. [Distributed plasticity analysis of steel building structural systems](https://www.proquest.com/dissertations-theses/distributed-plasticity-analysis-steel-building/docview/304696456/se-2)
-2. [Analysis and Design of Elastic Beams: Computational Methods](https://doi.org/10.1002/9780470172667)
+2. [ISBN 978-0-470-17266-7](https://search.worldcat.org/search?q=bn:9780470172667)
 
 ## Syntax
 

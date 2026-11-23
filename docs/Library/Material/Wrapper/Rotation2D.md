@@ -57,6 +57,6 @@ A wrapper can be stacked with [Laminated](Laminated.md) if several differently o
 
 ## References
 
-- T. Belytschko, W. K. Liu and B. Moran, *Nonlinear Finite Elements for Continua and Structures*, Wiley, 2000.
-- H. Goldstein, *Classical Mechanics*, 2nd ed., Addison-Wesley, 1980.
-- O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann, 2013.
+- [ISBN 978-0-471-98774-1](https://search.worldcat.org/search?q=bn:9780471987741)
+- [ISBN 978-0-201-02918-5](https://search.worldcat.org/search?q=bn:9780201029185)
+- [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)

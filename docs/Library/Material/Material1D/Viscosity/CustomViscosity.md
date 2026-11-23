@@ -34,9 +34,12 @@ The expression is evaluated once for each of the three outputs during a trial up
 Initialization fails if the expression tag cannot be found in the domain or if the expression does not have exactly two inputs and three outputs.
 
 !!! warning "implementation limitation"
-    The exponent is fixed at zero by the constructor, so the expression must supply any rate exponent and the correct sign of the response itself.
-    The base class calls the expression three times per trial update, once for each output, so side effects inside an expression will corrupt the returned tangent.
+    The exponent is fixed at zero, so the expression must supply any rate exponent and the correct sign of the response itself.
+    Side effects inside the expression will corrupt the returned tangent, so the expression must be a pure function of its inputs.
     The derivatives are used without any numerical verification.
+
+!!! note "developer note"
+    The base class calls the expression three times per trial update, once for each output.
 
 ## Remarks
 
@@ -66,7 +69,3 @@ The derivatives are used directly to form the global tangent, so an inconsistent
 Sign conventions, saturation and hardening must all be encoded in the expression itself, since this class applies no further transformation to the returned stress.
 As with the other dashpots in this section, the material must be attached to an element that supplies strain rate, for example [`Damper01`](../../../Element/Special/Damper01.md) or [`Damper02`](../../../Element/Special/Damper02.md).
 The generalised viscous damper formulation behind this class is due to Chang and Lee (2022).
-
-## References
-
-1. Chang, T. L., and Lee, C.-L. (2022), "Numerical simulation of generalised Maxwell-type viscous dampers with an efficient iterative algorithm," Mechanical Systems and Signal Processing, 170, 108795, [doi:10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795).

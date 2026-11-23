@@ -48,8 +48,10 @@ element SGCMS (1) (2...5) (6) [7] [8]
 * Use a plane-stress two-dimensional material such as [`Elastic2D`](../../Material/Material2D/Elastic2D.md) so that the through-thickness integration yields the correct thin-plate bending stiffness.
 
 !!! warning "implementation limitation"
-    The five-point Irons membrane rule and the three-layer plate rule are hard-coded.
     A plane-strain material changes the synthesized bending stiffness, and the uniform drilling mode has no explicit stabilization.
+
+!!! note "developer note"
+    The five-point Irons membrane rule and the three-layer plate rule are hard-coded.
 
 * The membrane and plate integrations are fixed by the formulation and are not command-line arguments.
 * The drilling rotation comes from the SGCMQ interpolation and can still lack stiffness in a uniform drilling mode, as noted on [Allman](../Membrane/Drilling/Allman.md).
@@ -57,6 +59,6 @@ element SGCMS (1) (2...5) (6) [7] [8]
 
 ## References
 
-1. Chang, T.L., Lee, C.-L., Carr, A.J., Dhakal, R.P. and Pampanin, S. (2019), A new drilling quadrilateral membrane element with high coarse-mesh accuracy using a modified Hu--Washizu principle, International Journal for Numerical Methods in Engineering, [doi:10.1002/nme.6066](https://doi.org/10.1002/nme.6066).
-2. Batoz, J.-L., Bathe, K.-J. and Ho, L.-W. (1980), A study of three-node triangular plate bending elements, International Journal for Numerical Methods in Engineering 15(12), 1771--1812, [doi:10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205).
-3. Batoz, J.-L. and Tahar, M.B. (1982), Evaluation of a new quadrilateral thin plate bending element, International Journal for Numerical Methods in Engineering 18(11), 1655--1677.
+1. [10.1002/nme.6066](https://doi.org/10.1002/nme.6066)
+2. [10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205)
+3. Batoz, J.-L. and Tahar, M.B. (1982), Evaluation of a new quadrilateral thin plate

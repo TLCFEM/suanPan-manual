@@ -21,9 +21,9 @@ This is a plane-stress-type material with `PlaneType::N`, and it is intended for
 
 ## References
 
-1. Crisfield, M. A. and Wills, J. (1989), "Analysis of R/C Panels Using Different Concrete Models", Journal of Engineering Mechanics, 115(3), 578--597, [10.1061/(ASCE)0733-9399(1989)115:3(578)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:3(578)).
-2. Jirásek, M. and Zimmermann, T. (1998), "Rotating Crack Model with Transition to Scalar Damage", Journal of Engineering Mechanics, 124(3), 277--284, [10.1061/(ASCE)0733-9399(1998)124:3(277)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:3(277)).
-3. Chen, W. F. and Han, D. J. (2007), "Plasticity for Structural Engineers", J. Ross Publishing, ISBN 978-1-932159-75-2, Chapter 7.
+1. [10.1061/(ASCE)0733-9399(1989)115:3(578)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:3(578))
+2. [10.1061/(ASCE)0733-9399(1998)124:3(277)](https://doi.org/10.1061/(ASCE)0733-9399(1998)124:3(277))
+3. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)
 
 ## Syntax
 
@@ -94,7 +94,10 @@ The shear entry of $\hat{\mathbf K}$ is the secant $\tfrac12(\hat\sigma_1-\hat\s
 
 !!! warning "implementation limitation"
     The shear term is a secant between the two principal responses and is not the exact derivative of the rotated stress update when the principal axes move.
-    The fallback to $E/2$ at equal principal strains shows that this entry is a regularised approximation rather than a consistent tangent.
+    This entry is a regularised approximation rather than a consistent tangent.
+
+!!! note "developer note"
+    The shear entry falls back to $E/2$ at equal principal strains.
 
 Because the two uniaxial laws carry their own loading and unloading history, the rotating crack model reproduces hysteretic behaviour under load reversal without any additional two-dimensional hardening rule.
 

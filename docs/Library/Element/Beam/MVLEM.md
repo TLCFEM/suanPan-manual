@@ -92,6 +92,6 @@ element MVLEM 1 1 2 3 .4 .2 1 .02 1 2 .2 1 .02 1 2
 
 ## References
 
-1. A. Vulcano, V. V. Bertero and V. Colotti, "Analytical modeling of R/C structural walls," *Proceedings of the 9th World Conference on Earthquake Engineering*, vol. 6, pp. 41-46, 1988.
-2. "Nonlinear seismic analysis of structural walls using the multiple-vertical-line-element model," in *Nonlinear Seismic Analysis and Design of Reinforced Concrete Buildings*, pp. 199-210, 1992. [doi:10.1201/9781482296662-15](https://doi.org/10.1201/9781482296662-15)
-3. L. Massone, K. Orakcal and J. Wallace, "Modeling of squat structural walls controlled by shear," *ACI Structural Journal*, vol. 106, no. 5, 2009. [doi:10.14359/51663105](https://doi.org/10.14359/51663105)
+1. Analytical modeling of R/C structural walls
+2. [10.1201/9781482296662-15](https://doi.org/10.1201/9781482296662-15)
+3. [10.14359/51663105](https://doi.org/10.14359/51663105)

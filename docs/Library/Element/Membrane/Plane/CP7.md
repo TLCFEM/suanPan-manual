@@ -46,4 +46,4 @@ element CP7 (1) (2...8) (9) [10] [11]
 
 ## References
 
-1. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann (2013), Chapter 8.
+1. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)

@@ -61,6 +61,9 @@ element CAX4 (1) (2...5) (6)
 * The parser hardcodes the nonlinear-geometry switch to false, so the current command path evaluates only the small-strain axisymmetric formulation.
 
 !!! info "deviation from theory"
+    No parser token exposes a Total Lagrangian option for `CAX4`, so nonlinear geometry cannot be selected from an `element CAX4` command.
+
+!!! note "developer note"
     The element print routine reports a Total Lagrangian option, but no parser token exposes that switch for `CAX4`.
     The nonlinear branch exists in the class but is unreachable from an `element CAX4` command.
 
@@ -68,6 +71,6 @@ element CAX4 (1) (2...5) (6)
 
 ## References
 
-1. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann (2013), Chapter 9.
-2. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover (2000), Section 3.8.
-3. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer (1998), Chapter 9.
+1. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)
+2. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
+3. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

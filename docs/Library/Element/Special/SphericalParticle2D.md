@@ -45,8 +45,12 @@ Neighbour search is performed with a cell list whose cell size is twice the larg
     Tangential springs and Coulomb friction, which are standard in DEM, are absent.
 
 !!! warning "implementation limitation"
-    Rotational inertia is stored on the particle, but the contact law uses only translational positions and velocities.
-    The `MolecularDynamics2D` constraint is instantiated with rotation disabled, so rotational DoFs do not affect pairwise contact.
+    The contact law uses only translational positions and velocities.
+    Rotational DoFs do not affect pairwise contact.
+
+!!! note "developer note"
+    Rotational inertia is stored on the particle.
+    The `MolecularDynamics2D` constraint is instantiated with rotation disabled.
 
 ## Syntax
 
@@ -74,9 +78,9 @@ element SphericalParticle2D (1) (2) (3) (4) (5) (6) (7) [8]
 
 ## References
 
-1. P. A. Cundall and O. D. L. Strack, "A discrete numerical model for granular assemblies", *Géotechnique*, 29(1):47--65, 1979, [10.1680/geot.1979.29.1.47](https://doi.org/10.1680/geot.1979.29.1.47).
-2. H. Hertz, "Über die Berührung fester elastischer Körper", *Journal für die reine und angewandte Mathematik*, 92:156--171, 1882.
-3. K. L. Johnson, *Contact Mechanics*, Cambridge University Press, 1985.
+1. [10.1680/geot.1979.29.1.47](https://doi.org/10.1680/geot.1979.29.1.47)
+2. Über die Berührung fester elastischer Körper
+3. [ISBN 978-0-521-34796-9](https://search.worldcat.org/search?q=bn:9780521347969)
 
 ## Example
 

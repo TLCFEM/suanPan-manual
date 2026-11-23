@@ -91,6 +91,6 @@ element Contact2D (1) (2) (3) [4]
 
 ## References
 
-1. K. L. Johnson, *Contact Mechanics*, Cambridge University Press, 1985.
-2. [10.1002/nme.2559](https://doi.org/10.1002/nme.2559) — a modified node-to-segment penalty algorithm that passes the contact patch test.
-3. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th edition, Butterworth-Heinemann, 2013.
+1. [ISBN 978-0-521-34796-9](https://search.worldcat.org/search?q=bn:9780521347969)
+2. [10.1002/nme.2559](https://doi.org/10.1002/nme.2559)
+3. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)

@@ -41,8 +41,7 @@ material Yeoh (1) (2...)
 4. The first half of double inputs is read as $$C_{i0}$$ and the second half as $$C_{i1}$$.
 
 !!! warning "implementation limitation"
-    The parser splits the coefficient list into two equal halves.
-    The deviatoric and volumetric series must therefore have the same number of terms.
+    The coefficient list is split into two equal halves, so the deviatoric and volumetric series must have the same number of terms.
 
 5. The coefficients are not converted to absolute values, so the sign of $C_{20}$ and $C_{30}$ is meaningful.
 6. The model takes the Green-Lagrange strain in Voigt notation and requires nonlinear geometry in the host element.
@@ -88,5 +87,5 @@ material Yeoh 1 20 30 40 2000 3000 4000
 
 ## References
 
-1. O. H. Yeoh, *Characterization of Elastic Properties of Carbon-Black-Filled Rubber Vulcanizates*, Rubber Chemistry and Technology, 63(5):792–805, 1990, [10.5254/1.3538289](https://doi.org/10.5254/1.3538289).
-2. O. H. Yeoh, *Some Forms of the Strain Energy Function for Rubber*, Rubber Chemistry and Technology, 66(5):754–771, 1993, [10.5254/1.3538343](https://doi.org/10.5254/1.3538343).
+1. [10.5254/1.3538289](https://doi.org/10.5254/1.3538289)
+2. [10.5254/1.3538343](https://doi.org/10.5254/1.3538343)

@@ -25,7 +25,7 @@ These containers are read by the companion integrator [`LeeElementalNewmark`](..
 The integrator defines a reference bell-shaped damping curve from a reference ratio and a peak frequency.
 The damping ratio actually applied to an element is the product of that reference ratio and $\zeta_e$, so different parts of a structure can be assigned different damping levels.
 
-!!! info "deviation from theory"
+!!! note "developer note"
     The modifier does not assemble a separate damping matrix.
     It overwrites the element mass and stiffness containers, which the companion integrator then interprets as damping contributions.
 

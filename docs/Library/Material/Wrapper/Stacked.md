@@ -47,12 +47,15 @@ Every listed tag must refer to a registered 3D material, and the wrapper reports
 The wrapper skips the update entirely when the strain increment is below the internal tolerance, which is harmless for rate-independent hosts but worth noting for rate-dependent ones.
 
 !!! warning "implementation limitation"
-    `Stacked::update_trial_status` returns immediately when the strain-increment norm is below `datum::eps`, so none of the constituents is re-evaluated and a rate-dependent host cannot evolve in that step.
+    A rate-dependent host cannot evolve in a step whose strain increment falls below the internal tolerance.
+
+!!! note "developer note"
+    `Stacked::update_trial_status` returns immediately when the strain-increment norm is below `datum::eps`, so none of the constituents is re-evaluated.
 
 No local equilibrium solve is performed since compatibility is enforced by giving all constituents the same strain; the model cannot represent load shedding caused by different strains.
 Use [Laminated](Laminated.md) when a 2D reduction is required, and [PlaneStress](PlaneStress.md) or [PlaneStrain](PlaneStrain.md) inside the stack for reduced constituents.
 
 ## References
 
-- R. Hill, Elastic properties of reinforced solids: some theoretical principles, *Journal of the Mechanics and Physics of Solids*, 11(5):357–372, 1963, doi:10.1016/0022-5096(63)90036-X.
-- R. M. Jones, *Mechanics of Composite Materials*, 2nd ed., Taylor & Francis, 1999.
+- [10.1016/0022-5096(63)90036-X](https://doi.org/10.1016/0022-5096(63)90036-X)
+- [ISBN 978-1-56032-712-7](https://search.worldcat.org/search?q=bn:9781560327127)

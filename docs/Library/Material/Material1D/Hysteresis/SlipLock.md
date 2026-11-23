@@ -62,4 +62,4 @@ materialTest1D 1 1E-4 200
 
 ## References
 
-- Menegotto, M. and Pinto, P. E. (1973), "Method of analysis for cyclically loaded RC plane frames including changes in geometry and non-elastic behavior of elements under combined normal force and bending", IABSE Symposium, Lisbon.
+- Method of analysis for cyclically loaded RC plane frames including changes in geometry

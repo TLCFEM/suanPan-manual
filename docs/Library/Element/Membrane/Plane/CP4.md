@@ -64,8 +64,11 @@ element CP4 (1) (2...5) (6) [7] [8] [9] [10]
 * The `CP4` element resembles CPS4 and CPE4 elements in ABAQUS.
 
 !!! info "deviation from theory"
-    The class documentation mentions CPS4, CPE4, CPS4R and CPE4R, but the element parser registers only the tokens `CP4` and `CP4R`.
+    Only `CP4` and `CP4R` are accepted element tokens; the names CPS4, CPE4, CPS4R and CPE4R are not registered and cannot be used in an `element` command.
     Plane stress or plane strain is selected by the material plane type, not by a separate element name.
+
+!!! note "developer note"
+    The class documentation mentions CPS4, CPE4, CPS4R and CPE4R, but the element parser registers only the tokens `CP4` and `CP4R`.
 
 * The full integration scheme uses 2-by-2 Gaussian scheme and the reduced integration uses a single integration point at the center of the element.
 * The reduced integration scheme also imports anti-hourglassing technique.
@@ -88,7 +91,7 @@ The code forms the hourglass vectors with the centre gradients divided by $\text
 The penalty argument is converted to its absolute value, so a negative entry has the same effect as a positive one.
 
 !!! warning "implementation limitation"
-    The parser default for the hourglass multiplier is unity and it is not scaled by the elastic modulus.
+    The default hourglass multiplier is unity and it is not scaled by the elastic modulus.
     For a material with a modulus of order GPa the default stabilisation is negligible, so reduced integration requires a multiplier scaled with the material stiffness and a reference area.
 
 ## Variants
@@ -98,7 +101,7 @@ The penalty argument is converted to its absolute value, so a negative entry has
 
 ## References
 
-1. T. Belytschko, W. K. Liu, J. S. Ong and J. M. Kennedy, *Hourglass control in linear and nonlinear problems*, Computer Methods in Applied Mechanics and Engineering 43(3), 251-276 (1984), [doi:10.1016/0045-7825(84)90067-7](https://doi.org/10.1016/0045-7825(84)90067-7).
-2. D. P. Flanagan and T. Belytschko, *A uniform strain hexahedron and quadrilateral with orthogonal hourglass control*, International Journal for Numerical Methods in Engineering 17(5), 679-706 (1981), [doi:10.1002/nme.1620170504](https://doi.org/10.1002/nme.1620170504).
-3. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover (2000), Chapters 3 and 4.
-4. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann (2013), Chapter 9.
+1. [10.1016/0045-7825(84)90067-7](https://doi.org/10.1016/0045-7825(84)90067-7)
+2. [10.1002/nme.1620170504](https://doi.org/10.1002/nme.1620170504)
+3. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
+4. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)

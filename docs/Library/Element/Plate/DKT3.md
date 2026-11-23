@@ -18,6 +18,8 @@ In the sign convention of the implementation the nodal rotations satisfy $\beta_
 
 !!! info "deviation from theory"
     The rotation signs follow the source transformation matrices and differ from texts that define the bending rotations with the opposite sign.
+
+!!! note "developer note"
     The DoF labels in the manual are $U_3,UR_1,UR_2$, while the internal constructor passes generic 2D DoF tags that are later interpreted by the element.
 
 The curvature vector is
@@ -85,8 +87,11 @@ element DKT3 (1) (2...4) (5) (6) [7]
 * Use a plane-stress two-dimensional material such as [`Elastic2D`](../../Material/Material2D/Elastic2D.md) with its plane-type flag set to zero, since the bending stiffness is synthesized from the in-plane constitutive matrix.
 
 !!! warning "implementation limitation"
-    The in-plane integration is fixed at the three edge midpoints and the thickness rule is the only configurable integration.
+    The thickness rule is the only configurable integration.
     The element has no transverse shear strain, so thick-plate behaviour cannot be represented.
+
+!!! note "developer note"
+    The in-plane integration is fixed at the three edge midpoints.
 
 * The formulation has no transverse shear strain, so it does not suffer from shear locking in the thin-plate limit, but it is not intended for thick plates where shear deformation is important.
 * For a shear-deformable quadrilateral plate use [Mindlin](Mindlin.md), and for the quadrilateral Kirchhoff plate use [DKT4](DKT4.md).
@@ -101,6 +106,6 @@ element DKT3 1 1 2 3 1 0.01 3
 
 ## References
 
-1. Batoz, J.-L., Bathe, K.-J. and Ho, L.-W. (1980), A study of three-node triangular plate bending elements, International Journal for Numerical Methods in Engineering 15(12), 1771--1812, [doi:10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205).
-2. Timoshenko, S. and Woinowsky-Krieger, S., Theory of Plates and Shells, 2nd edition, McGraw-Hill.
-3. Bathe, K.-J., Finite Element Procedures, Prentice Hall, 1996.
+1. [10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205)
+2. [ISBN 978-0-07-064779-4](https://search.worldcat.org/search?q=bn:9780070647794)
+3. [ISBN 978-0-9790049-5-7](https://search.worldcat.org/search?q=bn:9780979004957)

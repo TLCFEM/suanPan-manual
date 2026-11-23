@@ -57,4 +57,4 @@ Hardening parameters should be calibrated against the specific heat treatment an
 
 ## References
 
-1. Chaboche, J.-L. (1989), "Constitutive Equations for Cyclic Plasticity and Cyclic Viscoplasticity," International Journal of Plasticity, 5(3), 247--302, [doi:10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6).
+1. [10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6)

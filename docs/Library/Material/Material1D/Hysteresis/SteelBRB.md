@@ -8,8 +8,8 @@ It uses exponential type functions and thus resembles the [`RambergOsgood`](Ramb
 
 References are available:
 
-1. [https://doi.org/10.1016/j.jcsr.2011.07.017](https://doi.org/10.1016/j.jcsr.2011.07.017)
-2. [https://doi.org/10.1016/j.jcsr.2014.02.009](https://doi.org/10.1016/j.jcsr.2014.02.009)
+1. [10.1016/j.jcsr.2011.07.017](https://doi.org/10.1016/j.jcsr.2011.07.017)
+2. [10.1016/j.jcsr.2014.02.009](https://doi.org/10.1016/j.jcsr.2014.02.009)
 
 ## Syntax
 

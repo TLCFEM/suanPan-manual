@@ -42,14 +42,14 @@ element CP8 (1) (2...9) (10) [11] [12] [13]
 * The full integration scheme uses 3-by-3 Gauss scheme and the reduced integration uses a 2-by-2 scheme.
 * In the current source the full rule is the five-point Irons pattern, exact to degree five, while the reduced rule is $2\times2$ Gauss.
 
-!!! info "deviation from theory"
+!!! note "developer note"
     The original remark above states that full integration uses a 3-by-3 Gauss scheme.
     The source instead constructs a five-point Irons rule, which has the same polynomial degree of precision but only five sampling points.
 
 * The reduced-integration variant does not add an hourglass stiffness, so check for zero-energy modes in coarse meshes.
 
 !!! warning "implementation limitation"
-    Unlike [`CP4`](CP4.md), the reduced-integration option of `CP8` has no stabilisation matrix and no hourglass multiplier argument.
+    Unlike [`CP4`](CP4.md), the reduced-integration option of `CP8` has no hourglass stabilisation and no hourglass multiplier argument.
     Coarse meshes with reduced integration can therefore develop zero-energy modes that are not controlled by the element itself.
 
 * The characteristic length used by regularisation models is the square root of the area of the four corner nodes.
@@ -65,5 +65,5 @@ The plane stress or plane strain behaviour is set by the material's plane type, 
 
 ## References
 
-1. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann (2013), Chapter 8.
-2. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover (2000), Chapter 3.
+1. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)
+2. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)

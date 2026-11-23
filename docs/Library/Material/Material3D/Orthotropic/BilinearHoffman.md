@@ -14,7 +14,7 @@ The hardening function is $K(\bar\varepsilon_p)=1+H\bar\varepsilon_p$, where $H$
 For $H>0$ the yield surface grows linearly, $H=0$ gives perfect plasticity and $H<0$ gives linear softening.
 
 !!! warning "implementation limitation"
-    For negative `H` the code clamps the hardening function to zero once $\bar\varepsilon_p$ exceeds $-1/H$.
+    For negative `H` the hardening function is clamped to zero once $\bar\varepsilon_p$ exceeds $-1/H$.
     The surface cannot shrink below zero size, so the softening branch ends abruptly.
 
 ## Syntax
@@ -69,4 +69,4 @@ Use [`Rotation3D`](../../Wrapper/Rotation3D.md) to align the material axes with 
 
 ## References
 
-1. O. Hoffman, *The Brittle Strength of Orthotropic Materials*, Journal of Composite Materials, 1(2):200–206, 1967, [10.1177/002199836700100210](https://doi.org/10.1177/002199836700100210).
+1. [10.1177/002199836700100210](https://doi.org/10.1177/002199836700100210)

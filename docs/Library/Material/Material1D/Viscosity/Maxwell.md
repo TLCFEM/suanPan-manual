@@ -8,9 +8,7 @@ This material model does respond to both displacement and velocity.
 
 1. [10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795)
 
-2. Chang, T. L., and Lee, C.-L. (2022), "Numerical simulation of generalised Maxwell-type viscous dampers with an efficient iterative algorithm," Mechanical Systems and Signal Processing, 170, 108795, [doi:10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795).
-
-3. Christensen, R. M. (1982), Theory of Viscoelasticity: An Introduction, 2nd edition, Academic Press.
+2. [ISBN 978-0-12-174250-8](https://search.worldcat.org/search?q=bn:9780121742508)
 
 ## Syntax
 
@@ -51,7 +49,7 @@ The dashpot strain rate is integrated with a $\beta$-method whose local target i
 The scalar algorithm condenses the three equations to one unknown and is cheaper per iteration but less robust for strongly nonlinear dashpots.
 The stress reported by the material is the average of the spring and dashpot stresses, which coincide once the local iteration converges.
 
-!!! warning "implementation limitation"
+!!! note "developer note"
     The local Newton iteration stops after 20 steps with a tolerance of $5\times10^{-13}$ rather than solving the continuous Maxwell equation exactly.
     The spring and damper tangents are held at their trial values during each local iteration, so nonlinear constituents are treated with a linearised local solve.
     When `[5]` is positive, a failed local solve is silently reset to the last committed state for a limited number of steps instead of failing immediately.

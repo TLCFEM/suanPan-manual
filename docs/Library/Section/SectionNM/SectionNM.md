@@ -4,8 +4,8 @@ $$N$$-$$M$$ Interaction Abstract Section
 
 ## References
 
-1. [10.1061/JSENDH.STENG-12176](http://dx.doi.org/10.1061/JSENDH.STENG-12176)
-2. [10.1007/978-94-007-6573-3_3](http://dx.doi.org/10.1007/978-94-007-6573-3_3)
+1. [10.1061/JSENDH.STENG-12176](https://doi.org/10.1061/JSENDH.STENG-12176)
+2. [10.1007/978-94-007-6573-3_3](https://doi.org/10.1007/978-94-007-6573-3_3)
 3. [10.1002/nme.1620371506](https://doi.org/10.1002/nme.1620371506)
 
 Please note the formulation is based on the first reference, which is a revised version of the one shown in the last two references.

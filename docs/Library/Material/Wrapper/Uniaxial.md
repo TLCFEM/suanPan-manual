@@ -27,7 +27,10 @@ The implementation is the `StressWrapper` base class with `F1={0}`, so it shares
 With the default `[3]=1` only one Newton update is made, while larger values trigger local iterations until the constrained stress residual is small.
 
 !!! warning "implementation limitation"
-    With the default `[3]=1` the lateral strain correction is computed from the host state of the previous step and applied only once, so the five constrained stresses are not exactly zero after the update.
+    With the default `[3]=1` the five constrained stresses are not exactly zero after the update.
+
+!!! note "developer note"
+    The lateral strain correction is computed from the host state of the previous step and applied only once.
     With `[3]>1` the convergence test is relative to the first correction and the counter is tested before each evaluation, so at most `[3]-1` corrections are applied.
 
 The host must provide a nonsingular constrained tangent block, and nonlocal history variables are carried after the six strain entries.
@@ -53,5 +56,5 @@ Increase the optional iteration count or reduce the step size if a large strain 
 
 ## References
 
-- A. F. Bower, *Applied Mechanics of Solids*, CRC Press, 2009.
-- J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, 1998, doi:10.1007/b98904.
+- [ISBN 978-1-4398-0247-2](https://search.worldcat.org/search?q=bn:9781439802472)
+- [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

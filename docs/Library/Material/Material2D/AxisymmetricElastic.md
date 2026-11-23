@@ -12,8 +12,11 @@ $$
 The hoop strain $u_r/r$ is the term that distinguishes an axisymmetric solid from a plane-strain solid, and it must be supplied by the element strain-displacement matrix rather than by the material.
 
 !!! warning "implementation limitation"
-    The material has no knowledge of the radial coordinate and simply multiplies the fourth strain slot by the shear modulus.
+    The material does not compute the hoop strain $u_r/r$ itself and expects the element to supply it in the strain vector.
     Using it with an element that does not generate $u_r/r$ gives a plane-strain response instead of an axisymmetric one.
+
+!!! note "developer note"
+    The fourth strain slot is multiplied directly by the shear modulus.
 
 With the Lamé constants $G=E/[2(1+\nu)]$ and $\lambda=E\nu/[(1+\nu)(1-2\nu)]$, the material returns
 $$

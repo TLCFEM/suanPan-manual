@@ -61,6 +61,6 @@ Use [Parallel](Parallel.md) for iso-strain combinations and [Prestrain](Prestrai
 
 ## References
 
-- A. Reuss, Berechnung der Fließgrenze von Mischkristallen auf Grund der Plastizitätsbedingung für Einkristalle, *ZAMM*, 9(1):49–58, 1929, doi:10.1002/zamm.19290090104.
-- R. Hill, Elastic properties of reinforced solids: some theoretical principles, *Journal of the Mechanics and Physics of Solids*, 11(5):357–372, 1963, doi:10.1016/0022-5096(63)90036-X.
-- W. N. Findley, J. S. Lai and K. Onaran, *Creep and Relaxation of Nonlinear Viscoelastic Materials*, North-Holland, 1976.
+- [10.1002/zamm.19290090104](https://doi.org/10.1002/zamm.19290090104)
+- [10.1016/0022-5096(63)90036-X](https://doi.org/10.1016/0022-5096(63)90036-X)
+- [ISBN 978-0-444-60192-6](https://search.worldcat.org/search?q=bn:9780444601926)

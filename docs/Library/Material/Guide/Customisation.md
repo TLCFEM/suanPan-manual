@@ -16,8 +16,11 @@ The rheological models [`Kelvin`](../Material1D/Viscosity/Kelvin.md) and [`Maxwe
 Wrappers such as [`Parallel`](../Wrapper/Parallel.md), [`Sequential`](../Wrapper/Sequential.md) and [`Substepping`](../Wrapper/Substepping.md) modify how a material is embedded rather than adding a new constitutive law.
 
 !!! info "deviation from theory"
-    The `Sequential` wrapper solves for strain shares under a common stress using current trial stiffnesses, which is a static series assembly and not the rate-dependent Maxwell rheology.
-    The `Parallel` wrapper forwards strain rate to its constituents, so it can assemble viscous branches even though rate-independent composition is the usual use.
+    The `Sequential` wrapper performs a static series assembly under a common stress, not the rate-dependent Maxwell rheology.
+    The `Parallel` wrapper can assemble viscous branches because it forwards strain rate to its constituents, even though rate-independent composition is the usual use.
+
+!!! note "developer note"
+    The `Sequential` wrapper solves for the strain shares using current trial stiffnesses.
 
 ## Choosing a Model
 
@@ -68,4 +71,4 @@ The density reported by `Parallel` is the sum of the constituent densities, whic
 
 ## References
 
-1. Chang, T. L. (2023), Constitutive Modelling Cookbook, [online](https://github.com/TLCFEM/constitutive-modelling-cookbook).
+1. [Chang, T. L. (2023), Constitutive Modelling Cookbook, online](https://github.com/TLCFEM/constitutive-modelling-cookbook)

@@ -88,5 +88,5 @@ The final displacement of node 2 should be $$0.005$$ since both elements share t
 
 ## References
 
-- T. Mura, *Micromechanics of Defects in Solids*, 2nd ed., Martinus Nijhoff, 1987.
-- A. F. Bower, *Applied Mechanics of Solids*, CRC Press, 2009.
+- [ISBN 978-90-247-3343-9](https://search.worldcat.org/search?q=bn:9789024733439)
+- [ISBN 978-1-4398-0247-2](https://search.worldcat.org/search?q=bn:9781439802472)

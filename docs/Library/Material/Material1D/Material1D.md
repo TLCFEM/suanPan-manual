@@ -40,9 +40,11 @@ For section-based elements the material must be referenced by a one-dimensional 
 A scalar tangent stiffness is sufficient only for uniaxial kinematics, so the same material must not be assigned to a multi-dimensional continuum element.
 
 !!! warning "implementation limitation"
+    A one-dimensional material provides only a scalar tangent stiffness and cannot be used with a two- or three-dimensional continuum element.
+
+!!! note "developer note"
     The `Material1D` constructor fixes the material type to `MaterialType::D1` and calls `set_symmetric(true)`.
     The tangent stiffness is therefore stored and used as a symmetric scalar.
-    The class does not provide the tensor-valued stiffness required by a two- or three-dimensional continuum element.
 
 The history layout is model specific, so history variables should be interpreted only with the documentation of the chosen material.
 Wrapper models such as those in [`Degradation`](Degradation/Degradation.md) add their own history variables while forwarding the strain to a host material.

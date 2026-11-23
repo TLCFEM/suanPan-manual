@@ -39,7 +39,7 @@ The small-strain bulk modulus inherited from $E$ and $\nu$ is $K=E/[3(1-2\nu)]$.
 
 1. [10.1016/0045-7949(86)90199-9](https://doi.org/10.1016/0045-7949(86)90199-9)
 2. [10.1122/1.548937](https://doi.org/10.1122/1.548937)
-3. R. W. Ogden, *Non-linear Elastic Deformations*, Dover, 1997, Chapter 7.
+3. [ISBN 978-0-486-69648-5](https://search.worldcat.org/search?q=bn:9780486696485)
 
 ## Syntax
 
@@ -57,7 +57,7 @@ Both `(2)` and `(3)` are replaced by their absolute values, so only positive $E$
 The model targets compressible foam rubber with moderate Poisson's ratio, and values approaching $0.5$ make $\beta$ large and stiffen the volumetric response sharply.
 
 !!! warning "implementation limitation"
-    The constructor applies `fabs` to both inputs, so negative Poisson's ratios cannot be modelled.
+    Both inputs are converted to their absolute values, so negative Poisson's ratios cannot be modelled.
     A value of `nu` equal to `0.5` is not rejected and makes the exponent singular.
 
 The material takes the Green-Lagrange strain as input, so the nonlinear geometry switch must be enabled in the host element.

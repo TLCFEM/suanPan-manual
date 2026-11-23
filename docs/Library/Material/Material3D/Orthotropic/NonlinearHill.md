@@ -6,9 +6,8 @@ This is a wrapper of the [`NonlinearHoffman`](NonlinearHoffman.md) material mode
 The two share the same implementation; `NonlinearHill` simply assigns equal tensile and compressive strength in each principal direction.
 
 !!! warning "availability of the command token"
-    The C++ class `NonlinearHill` exists in `NonlinearOrthotropic.h`, but the current `MaterialParser.cpp` registers neither `NonlinearHill` nor `NonlinearHoffman`.
-    A `material NonlinearHill ...` command therefore cannot create this model in a build that uses the stock parser.
-    The formulas below describe the class-level behaviour and may require a custom module or a parser update to be used.
+    Neither `NonlinearHill` nor `NonlinearHoffman` is registered as a command token, so a `material NonlinearHill ...` command cannot create this model.
+    The formulas below describe the model behaviour and may require a custom module or a parser update to be used.
 
 ## Background
 
@@ -17,9 +16,9 @@ Setting $$\sigma_{ii}^t=\sigma_{ii}^c$$ for $$i=1,~2,~3$$ removes its linear ter
 `NonlinearHill` applies this reduction internally: it passes each of the three normal strengths as a paired tensile/compressive value to the Hoffman projection, followed by the three shear strengths.
 The nine strengths are thus passed as $\sigma_1,\sigma_1,\sigma_2,\sigma_2,\sigma_3,\sigma_3,\sigma_{12},\sigma_{23},\sigma_{13}$.
 
-!!! info "deviation from theory"
-    The implementation passes the paired strengths through the Hoffman projection instead of calling the dedicated Hill projection routine.
-    For equal tensile and compressive strengths the two quadratic forms coincide, so the numerical result is unchanged.
+!!! note "developer note"
+    For equal tensile and compressive strengths the Hoffman and Hill quadratic forms coincide.
+    The paired strengths are passed through the Hoffman projection rather than a dedicated Hill projection routine.
 
 ## Remarks
 

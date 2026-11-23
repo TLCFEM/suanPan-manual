@@ -7,8 +7,8 @@ Armstrong-Frederick Steel Model
 1. [10.1016/S0749-6419(01)00049-3](https://doi.org/10.1016/S0749-6419(01)00049-3)
 2. [10.1115/1.3264257](https://doi.org/10.1115/1.3264257)
 3. [10.1179/096034007X207589](https://doi.org/10.1179/096034007X207589)
-4. J. L. Chaboche, Constitutive equations for cyclic plasticity and cyclic viscoplasticity, *International Journal of Plasticity* 5 (1989) 247--301, [doi:10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6).
-5. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
+4. [10.1016/0749-6419(89)90015-6](https://doi.org/10.1016/0749-6419(89)90015-6)
+5. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)
 
 ## Theory
 
@@ -32,7 +32,7 @@ $$
 where $$\sigma_y$$ is the initial elastic limit (yielding stress), $$k_s$$ is the saturation stress, $$k_l$$ is the linear hardening modulus, $$m$$ is a constant that controls the speed of hardening, $$\mathrm{d}p=\sqrt{\dfrac{2}{3}\mathrm{d}\varepsilon^p:\mathrm{d}\varepsilon^p}$$ is the rate of accumulated plastic strain $$p$$.
 
 !!! warning "implementation limitation"
-    A negative isotropic radius is clamped to zero and its derivative is discarded during the local iteration.
+    A negative isotropic radius is clamped to zero and its derivative is discarded.
 
 ### Kinematic Hardening
 
@@ -55,7 +55,7 @@ This is purely for a slightly more tidy derivation and does not affect anything.
 
 !!! info "deviation from theory"
     The recovery term in the displayed rate equation is written with the total back stress $$\beta$$.
-    The implementation applies recovery separately to each component $$\beta^i$$ using its own $$b^i$$, which is the form used in the derivation document.
+    The model applies recovery separately to each component $$\beta^i$$ using its own $$b^i$$, which is the form used in the derivation document.
 
 ### Return Mapping
 

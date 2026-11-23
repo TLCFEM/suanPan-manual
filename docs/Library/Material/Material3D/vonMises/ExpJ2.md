@@ -33,7 +33,7 @@ The local iteration requires $$E+k'(p)\geqslant0$$, so strongly softening parame
     This backbone instead turns over and decays towards zero after its peak, so it is not a standard exponential hardening law.
 
 !!! warning "implementation limitation"
-    The inherited return mapping clamps a negative isotropic radius to zero and discards its derivative.
+    A negative isotropic radius is clamped to zero and its derivative is discarded.
     The softening branch is therefore truncated at zero stress rather than followed into negative yield radii.
 
 ## Remarks
@@ -48,8 +48,8 @@ Use a three-dimensional solid element such as `C3D8` with this material.
 
 ## References
 
-1. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
-2. J. Lubliner, J. Oliver, S. Oller and E. Onate, A plastic-damage model for concrete, *International Journal of Solids and Structures* 25 (1989) 299--326, [doi:10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4).
+1. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)
+2. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)
 ## Syntax
 
 ```text title="ExpJ2"

@@ -67,5 +67,5 @@ The stress and stiffness are finally rotated back to global axes by $\boldsymbol
 
 ## References
 
-1. Crisfield, M. A. and Wills, J. (1989), "Analysis of R/C Panels Using Different Concrete Models", Journal of Engineering Mechanics, 115(3), 578--597, [10.1061/(ASCE)0733-9399(1989)115:3(578)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:3(578)).
-2. Chen, W. F. and Han, D. J. (2007), "Plasticity for Structural Engineers", J. Ross Publishing, ISBN 978-1-932159-75-2, Chapter 7.
+1. [10.1061/(ASCE)0733-9399(1989)115:3(578)](https://doi.org/10.1061/(ASCE)0733-9399(1989)115:3(578))
+2. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)

@@ -26,7 +26,10 @@ $$
 where $\boldsymbol d$ collects the nodal damage values and $d$ is thereby limited to $[0,1]$.
 
 !!! info "deviation from theory"
-    The degradation is clamped by $\min\{1,\cdot\}$ with $\epsilon$ equal to the single-precision machine epsilon, so the residual stiffness at $d=1$ is essentially zero rather than the finite residual stiffness used to keep the tangent nonsingular in regularised formulations.
+    The degradation is clamped so that the residual stiffness at $d=1$ is essentially zero rather than the finite residual stiffness used to keep the tangent nonsingular in regularised formulations.
+
+!!! note "developer note"
+    The clamp uses $\min\{1,\cdot\}$ with $\epsilon$ equal to the single-precision machine epsilon.
 
 Irreversibility of crack growth is enforced with a history field that stores the maximum elastic energy reached at a material point.
 At each integration point the trial value is $\mathcal H^\mathrm{trial}=\frac12\boldsymbol\varepsilon:\boldsymbol\sigma$, updated as $\mathcal H=\max(\mathcal H_\mathrm{old},\mathcal H^\mathrm{trial})$.
@@ -72,4 +75,4 @@ For the tetrahedral version and its monolithic alias see [DC3D4](DC3D4.md).
 
 ## References
 
-1. C. Miehe, F. Welschinger and M. Hofacker, Thermodynamically consistent phase-field models of fracture: variational principles and multi-field FE implementations, *International Journal for Numerical Methods in Engineering* 83(10):1273-1311, 2010, [doi:10.1002/nme.2861](https://doi.org/10.1002/nme.2861).
+1. [10.1002/nme.2861](https://doi.org/10.1002/nme.2861)

@@ -22,7 +22,7 @@ stress.
 This is an abstract base class, and a derived class supplies the isotropic radius $$k(p)$$ and its derivative $$k'(p)$$ as functions of the accumulated plastic strain $$p$$.
 
 !!! warning "implementation limitation"
-    A negative radius from the derived class is clamped to zero and its derivative is discarded.
+    A negative radius is clamped to zero and its derivative is discarded.
 
 The elastic predictor gives the trial stress and the trial von Mises stress $$q^{tr}=\sqrt{3/2}\lVert\mathrm{dev}\,\boldsymbol\sigma^{tr}\rVert$$.
 With the multiplier normalisation $$\mathrm{d}\boldsymbol\varepsilon^p=\sqrt{3/2}\,\gamma\,\boldsymbol n$$ one has $$\mathrm{d}p=\gamma$$ and $$q=q^{tr}-3G\gamma$$ during radial return.
@@ -47,5 +47,5 @@ A vanishing strain increment leaves the history unchanged.
 
 ## References
 
-1. D. Peric, On a class of constitutive equations in viscoplasticity: formulation and computational issues, *International Journal for Numerical Methods in Engineering* 36 (1993) 1365--1393, [doi:10.1002/nme.1620360807](https://doi.org/10.1002/nme.1620360807).
-2. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
+1. [10.1002/nme.1620360807](https://doi.org/10.1002/nme.1620360807)
+2. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

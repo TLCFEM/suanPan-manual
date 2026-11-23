@@ -68,8 +68,10 @@ $$
 The parameter $$b_c$$ will be clamped to $$0\leq{}b_c\leq1$$.
 
 !!! warning "implementation limitation"
+    The parameters $b_t$ and $b_c$ are clamped to $[0,1]$.
+
+!!! note "developer note"
     The initial thresholds $r_t^0$ and $r_c^0$ are floored at machine epsilon.
-    The parameters $b_t$ and $b_c$ are clamped to $[0,1]$ by the constructor.
 
 View and edit parameters to see how they affect the damage evolution.
 

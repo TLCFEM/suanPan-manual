@@ -63,7 +63,11 @@ Use one of its derived elements instead: [`DKTS3`](DKTS3.md), [`S4`](S4.md) or [
 
 !!! warning "implementation limitation"
     There is no separate membrane material, plate material or section definition in these elements.
-    Layered or sandwich shells are only possible through the material's own through-thickness response, and strongly warped geometry is not checked because the planarity warning is commented out.
+    Layered or sandwich shells are only possible through the material's own through-thickness response.
+    Strongly warped geometry is not checked.
+
+!!! note "developer note"
+    The planarity warning is commented out in the source.
 
 * The drilling rotation `UR3` is supplied only by the membrane part, so an Allman- or GQ12-type membrane can leave a uniform drilling mode without stiffness; see [Allman](../Membrane/Drilling/Allman.md).
 * The local coordinates are projections of the global nodal coordinates onto the local plane, and the explicit non-planarity warning is commented out in the source, so a strongly warped element should be used with care.
@@ -73,7 +77,7 @@ Use one of its derived elements instead: [`DKTS3`](DKTS3.md), [`S4`](S4.md) or [
 
 ## References
 
-1. Bathe, K.-J., Finite Element Procedures, Prentice Hall, 1996.
-2. Zienkiewicz, O.C. and Taylor, R.L., The Finite Element Method, Volume 3: Fluid Dynamics and Solid Mechanics, Butterworth-Heinemann.
-3. Cook, R.D., Malkus, D.S. and Plesha, M.E., Concepts and Applications of Finite Element Analysis, 4th edition, Wiley, 2002.
-4. Hughes, T.J.R. and Brezzi, F. (1989), On drilling degrees of freedom, Computer Methods in Applied Mechanics and Engineering 72(1), 105--121, [doi:10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2).
+1. [ISBN 978-0-9790049-5-7](https://search.worldcat.org/search?q=bn:9780979004957)
+2. [ISBN 978-0-7506-5051-9](https://search.worldcat.org/search?q=bn:9780750650519)
+3. [ISBN 978-0-471-35605-9](https://search.worldcat.org/search?q=bn:9780471356059)
+4. [10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2)

@@ -14,7 +14,7 @@ where $$\epsilon$$ and $$\mu$$ are two material constants, $$\sigma_y$$ is the i
 
 !!! info "deviation from theory"
     This displayed equation is the Perzyna overstress law with the power applied to the overstress ratio minus unity.
-    The implementation in `NonlinearPeric.cpp` instead uses the Peric law with the power applied to the ratio before subtracting unity.
+    The implemented model instead uses the Peric law with the power applied to the ratio before subtracting unity.
 
 The yielding surface is identical to that of the von Mises model.
 
@@ -70,5 +70,5 @@ Use a three-dimensional solid element such as `C3D8` with this material.
 
 ## References
 
-1. D. Peric, On a class of constitutive equations in viscoplasticity: formulation and computational issues, *International Journal for Numerical Methods in Engineering* 36 (1993) 1365--1393, [doi:10.1002/nme.1620360807](https://doi.org/10.1002/nme.1620360807).
-2. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
+1. [10.1002/nme.1620360807](https://doi.org/10.1002/nme.1620360807)
+2. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

@@ -49,16 +49,23 @@ Below it the response is a straight line through the origin with slope $$\sigma_
 Data points must be supplied with strictly increasing strain magnitudes, otherwise the segment slopes are undefined.
 
 !!! warning "implementation limitation"
-    The constructor does not sort or validate the data points.
-    It computes each slope directly from the order in which the points are given, so unordered input silently produces the wrong backbone.
-    For the same reason a repeated strain value gives a division by zero when the slope is formed.
+    Data points are not sorted or validated by the model, so supply them with strictly increasing strain magnitudes.
+    Unordered input silently produces the wrong backbone.
+    A repeated strain value gives a division by zero when the slope is formed.
+
+!!! note "developer note"
+    The constructor computes each slope directly from the order in which the points are given.
+    It performs no sorting or validation of the data points.
 
 The strain and stress values are used as given, so their units define the units of the resulting modulus.
 The optional density is inferred from the parity of the argument count rather than from a fixed position.
 
 !!! warning "implementation limitation"
-    `new_multilinearelastic1d` treats the final number as the density only when the total count of numeric arguments is odd.
+    The final number is treated as the density only when the total count of numeric arguments is odd.
     An even count always means zero density, so omitting or adding a single number silently changes how the remaining values are paired.
+
+!!! note "developer note"
+    The density is identified by argument-count parity in `new_multilinearelastic1d`.
 
 A negative slope between two points is allowed and produces a softening segment, but it can lead to convergence problems in a Newton--Raphson analysis.
 The constant plateau beyond the last point has zero tangent stiffness and should be used with care in quasi-static analyses.

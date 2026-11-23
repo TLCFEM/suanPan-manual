@@ -32,13 +32,16 @@ The local stiffness is refreshed from the current trial tangent at every iterati
 The enhanced modes relieve shear locking and reduce sensitivity to element distortion compared with the bilinear [`CP4`](../Plane/CP4.md).
 
 !!! info "deviation from theory"
+    Unlike a fully nonlinear Hu-Washizu element, the enhancement basis does not follow the evolving material stiffness.
+
+!!! note "developer note"
     A fully nonlinear Hu-Washizu element would recompute the compatibility matrix from the current tangent at every iteration.
-    Here the condensation matrices are frozen at the initial elastic tangent, so the enhancement basis does not follow the evolving material stiffness.
+    Here the condensation matrices are frozen at the initial elastic tangent.
 
 ## References
 
-1. R. Piltner and R. L. Taylor, *A quadrilateral mixed finite element with two enhanced strain modes*, International Journal for Numerical Methods in Engineering 38(11), 1783-1808 (1995), [doi:10.1002/nme.1620381102](https://doi.org/10.1002/nme.1620381102).
-2. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer (1998), Chapter 9.
+1. [10.1002/nme.1620381102](https://doi.org/10.1002/nme.1620381102)
+2. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)
 
 ## Syntax
 

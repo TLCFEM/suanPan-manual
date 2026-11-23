@@ -49,5 +49,5 @@ Recorded quantities come from the individual layers in tag order, which makes it
 
 ## References
 
-- R. M. Jones, *Mechanics of Composite Materials*, 2nd ed., Taylor & Francis, 1999.
-- J. N. Reddy, *Mechanics of Laminated Composite Plates and Shells: Theory and Analysis*, 2nd ed., CRC Press, 2004.
+- [ISBN 978-1-56032-712-7](https://search.worldcat.org/search?q=bn:9781560327127)
+- [ISBN 978-0-8493-1592-3](https://search.worldcat.org/search?q=bn:9780849315923)

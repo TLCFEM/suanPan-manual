@@ -58,9 +58,9 @@ material BilinearCC (1) (2) (3) (4) (5) (6) (7) (8) [9]
 
 ## References
 
-1. Roscoe, K. H. and Burland, J. B. (1968), "On the Generalised Stress-Strain Behaviour of 'Wet' Clay", in "Engineering Plasticity", Cambridge University Press, 535--609.
-2. Schofield, A. N. and Wroth, C. P. (1968), "Critical State Soil Mechanics", McGraw-Hill, London.
-3. Chen, W. F. and Han, D. J. (2007), "Plasticity for Structural Engineers", J. Ross Publishing, ISBN 978-1-932159-75-2, Chapter 5.
+1. On the Generalised Stress-Strain Behaviour of 'Wet' Clay
+2. [ISBN 978-0-641-94048-4](https://search.worldcat.org/search?q=bn:9780641940484)
+3. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)
 
 ## Iso-error Map
 

@@ -66,5 +66,5 @@ element Contact3D (1) (2) (3) [4]
 
 ## References
 
-1. K. L. Johnson, *Contact Mechanics*, Cambridge University Press, 1985.
-2. [10.1016/j.cma.2009.06.022](https://doi.org/10.1016/j.cma.2009.06.022) — classical node-to-segment formulation for frictionless 3D contact.
+1. [ISBN 978-0-521-34796-9](https://search.worldcat.org/search?q=bn:9780521347969)
+2. [10.1016/j.cma.2009.06.022](https://doi.org/10.1016/j.cma.2009.06.022)

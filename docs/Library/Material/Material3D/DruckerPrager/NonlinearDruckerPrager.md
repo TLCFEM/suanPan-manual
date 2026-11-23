@@ -105,10 +105,14 @@ There is no independent tension-cutoff surface, so the apex of the cone is the o
 !!! info "deviation from theory"
     Classical plasticity often measures hardening against the equivalent plastic strain $\sqrt{2\Delta\boldsymbol\varepsilon^p:\Delta\boldsymbol\varepsilon^p/3}$.
     This implementation instead accumulates $\bar\varepsilon_p=\xi\gamma$, so the cohesion slope must be calibrated against this scaled internal variable.
+
+!!! note "developer note"
     The consistency slope is $G+K\eta_f\eta_y$, so the pressure coupling enters the plastic multiplier directly.
 
 !!! warning "implementation limitation"
     The cone has no compression cap, and no Rankine tension cutoff is available.
+
+!!! note "developer note"
     The apex-return branch handles the singular radial correction but does not add a tensile strength limit.
 
 The Drucker--Prager cone has a circular deviatoric section and therefore ignores the Lode angle.
@@ -130,6 +134,6 @@ For frictional materials $\phi$ and $c_0$ should come from triaxial or direct sh
 
 ## References
 
-1. Drucker, D. C. and Prager, W. (1952) Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in volume, Quarterly of Applied Mathematics, 10(2), 157--165.
-2. Chen, W. F. and Han, D. J. (2007) Plasticity for Structural Engineers, J. Ross Publishing, Chapter 6.
-3. Jiang, H. and Xie, Y. (2011) A note on the Mohr--Coulomb and Drucker--Prager strength criteria, Mechanics Research Communications, 38(4), 309--314, [10.1016/j.mechrescom.2011.04.001](https://doi.org/10.1016/j.mechrescom.2011.04.001).
+1. Mechanics of thermo-elastic-plastic materials with a thermoelastic-plastic change in
+2. [ISBN 978-1-932159-75-2](https://search.worldcat.org/search?q=bn:9781932159752)
+3. [10.1016/j.mechrescom.2011.04.001](https://doi.org/10.1016/j.mechrescom.2011.04.001)

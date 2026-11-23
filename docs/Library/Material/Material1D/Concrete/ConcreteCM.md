@@ -154,8 +154,8 @@ $$
 
 ## References
 
-1. Chang, G. A., and Mander, J. B. (1994), "Seismic Energy Based Fatigue Damage Analysis of Bridge Columns, Part I: Evaluation of Seismic Capacity," NCEER Report 94-0006, State University of New York at Buffalo.
+1. Seismic Energy Based Fatigue Damage Analysis of Bridge Columns, Part I: Evaluation of
 
-2. Mander, J. B., Priestley, M. J. N., and Park, R. (1988), "Theoretical Stress-Strain Model for Confined Concrete," Journal of Structural Engineering, 114(8), 1804--1826, [doi:10.1061/(ASCE)0733-9445(1988)114:8(1804)](https://doi.org/10.1061/(ASCE)0733-9445(1988)114:8(1804)).
+2. [10.1061/(ASCE)0733-9445(1988)114:8(1804)](https://doi.org/10.1061/(ASCE)0733-9445(1988)114:8(1804))
 
-3. Tsai, W. T. (1988), "Uniaxial Compressional Stress-Strain Relation of Concrete," Journal of Structural Engineering, 114(9), 2133--2136, [doi:10.1061/(ASCE)0733-9445(1988)114:9(2133)](https://doi.org/10.1061/(ASCE)0733-9445(1988)114:9(2133)).
+3. [10.1061/(ASCE)0733-9445(1988)114:9(2133)](https://doi.org/10.1061/(ASCE)0733-9445(1988)114:9(2133))

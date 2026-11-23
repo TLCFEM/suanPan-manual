@@ -77,4 +77,4 @@ Use a three-dimensional solid element such as `C3D8` with this material.
 
 ## References
 
-1. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, Section 3.6, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
+1. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

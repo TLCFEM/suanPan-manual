@@ -67,8 +67,10 @@ Because strain appears inside the exponential through the elastic offset $\sigma
 The area $g$ has units of energy per unit area, so it must be associated with a length measure when a mesh-objective softening response is required.
 
 !!! info "deviation from theory"
+    The model does not read the element characteristic length, so the energy parameters must be scaled by the analyst to obtain mesh objectivity.
+
+!!! note "developer note"
     The backbone is evaluated by a local Newton iteration because the strain appears through the elastic offset $\sigma/E$, rather than by direct evaluation of an explicit stress--strain formula.
-    The implementation does not read the element characteristic length, so the energy parameters must be scaled by the analyst to obtain mesh objectivity.
 
 If, as normally assumed, the elastic limit is $$80~\%$$ of the maximum strength, then
 
@@ -117,4 +119,4 @@ The objective energy formulation follows the Barcelona damage model of Lubliner 
 
 ## References
 
-1. Lubliner, J., Oliver, J., Oller, S., and Onate, E. (1989), "A Plastic-Damage Model for Concrete," International Journal of Solids and Structures, 25(3), 299--326, [doi:10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4).
+1. [10.1016/0020-7683(89)90050-4](https://doi.org/10.1016/0020-7683(89)90050-4)

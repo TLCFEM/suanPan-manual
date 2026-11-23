@@ -43,8 +43,8 @@ E&0\\
 $$
 
 !!! info "deviation from theory"
-    The two-by-two matrix above is not the matrix built by the source.
-    `ElasticOS::initialize` constructs a three-by-three diagonal matrix with entries $E$, $G$ and $G$, where $G=E/[2(1+\nu)]$.
+    The two-by-two matrix above is not the matrix used by the material.
+    The material uses a three-by-three diagonal matrix with entries $E$, $G$ and $G$, where $G=E/[2(1+\nu)]$.
 
 * The three strain entries are the axial strain and two engineering shear strains, and the material is used with open-section beam elements that expect this resultant layout.
 * The parser takes absolute values of both the elastic modulus and Poisson's ratio, so negative inputs cannot be used to change the sign of the stiffness.
@@ -53,4 +53,4 @@ $$
 
 ## References
 
-1. Hughes, T. J. R. (2000), "The Finite Element Method: Linear Static and Dynamic Finite Element Analysis", Dover Publications, Chapter 4.
+1. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)

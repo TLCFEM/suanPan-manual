@@ -27,6 +27,7 @@ As $\alpha\to\infty$ the constraint is enforced exactly, but a very large penalt
 !!! info "deviation from theory"
     The penalty form enforces the constraint only approximately.
     The residual of the weighted sum is generally nonzero and scales as $1/\alpha$.
+
 The element is purely algebraic, so it does not use nodal coordinates and the tied DoFs need not have the same type or belong to the same dimension.
 A geometric constraint that attaches a node to a line is provided by [`TranslationConnector`](TranslationConnector.md).
 

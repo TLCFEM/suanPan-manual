@@ -52,13 +52,16 @@ The `Caveat` above remains the conservative guidance for rate-independent hyster
 
 !!! info "caveat versus implemented behaviour"
     The original `Caveat` states that viscosity-related models must not be placed in this wrapper.
-    The current `Parallel` implementation does forward the strain rate to every host and sums the damping matrices, so rate-dependent hosts are supported when they expose a damping tangent.
+    Rate-dependent hosts are supported when they expose a damping tangent.
     Treat the caveat as conservative guidance for hysteretic rate-independent models rather than as a hard restriction of the code.
+
+!!! note "developer note"
+    The current `Parallel` implementation forwards the strain rate to every host and sums the damping matrices.
 
 The wrapper is natural for truss elements such as [T2D2](../../Element/Truss/T2D2.md), where the section area supplies the missing force weighting.
 
 ## References
 
-- W. Voigt, *Theoretische Studien über die Elastizitätsverhältnisse der Kristalle*, Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen 34, 1887.
-- R. Hill, Elastic properties of reinforced solids: some theoretical principles, *Journal of the Mechanics and Physics of Solids*, 11(5):357–372, 1963, doi:10.1016/0022-5096(63)90036-X.
-- R. M. Jones, *Mechanics of Composite Materials*, 2nd ed., Taylor & Francis, 1999.
+- Theoretische Studien über die Elastizitätsverhältnisse der Kristalle
+- [10.1016/0022-5096(63)90036-X](https://doi.org/10.1016/0022-5096(63)90036-X)
+- [ISBN 978-1-56032-712-7](https://search.worldcat.org/search?q=bn:9781560327127)

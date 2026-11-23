@@ -17,8 +17,10 @@ The assembly follows [ShellBase](ShellBase.md), with the membrane DoFs taken fro
 The membrane interpolation samples three mid-edge points and uses the Allman-type correction in which the mid-edge displacement depends on the difference of the drilling rotations at the adjacent corners, as derived on [Allman](../Membrane/Drilling/Allman.md).
 
 !!! info "deviation from theory"
-    The source `print()` routine describes the membrane as a CST formulation, but the interpolation contains the Allman drilling correction at the mid-edge points.
     The drilling stiffness is not supplied by a penalty term, so a uniform drilling rotation remains a zero-energy mode.
+
+!!! note "developer note"
+    The source `print()` routine describes the membrane as a CST formulation, but the interpolation contains the Allman drilling correction at the mid-edge points.
 
 The plate interpolation applies the discrete Kirchhoff constraint at the same three mid-edge points, so a single set of sampling points serves both actions.
 
@@ -49,8 +51,11 @@ element DKTS3 (1) (2...4) (5) (6) [7] [8]
 * The optional integration-point count is a Gauss rule through the thickness and is capped at twenty in the constructor.
 
 !!! warning "implementation limitation"
-    The membrane and plate integrations are fixed at the three mid-edge points, and only the through-thickness count is adjustable.
+    Only the through-thickness count is adjustable.
     The element is restricted to flat geometry with the local frame taken from the first three nodes.
+
+!!! note "developer note"
+    The membrane and plate integrations are fixed at the three mid-edge points.
 
 * The thickness is required and sets both the fibre coordinates and the layer weights.
 * Use a plane-stress two-dimensional material such as [`Elastic2D`](../../Material/Material2D/Elastic2D.md) so that the bending stiffness has the correct thin-plate coefficient.
@@ -67,6 +72,6 @@ The model can be downloaded.
 
 ## References
 
-1. Batoz, J.-L., Bathe, K.-J. and Ho, L.-W. (1980), A study of three-node triangular plate bending elements, International Journal for Numerical Methods in Engineering 15(12), 1771--1812, [doi:10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205).
-2. Allman, D.J. (1984), A compatible triangular element including vertex rotations for plane elasticity analysis, Computers \& Structures 19(1--2), 1--8, [doi:10.1016/0045-7949(84)90197-4](https://doi.org/10.1016/0045-7949(84)90197-4).
-3. Hughes, T.J.R. and Brezzi, F. (1989), On drilling degrees of freedom, Computer Methods in Applied Mechanics and Engineering 72(1), 105--121, [doi:10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2).
+1. [10.1002/nme.1620151205](https://doi.org/10.1002/nme.1620151205)
+2. [10.1016/0045-7949(84)90197-4](https://doi.org/10.1016/0045-7949(84)90197-4)
+3. [10.1016/0045-7825(89)90124-2](https://doi.org/10.1016/0045-7825(89)90124-2)

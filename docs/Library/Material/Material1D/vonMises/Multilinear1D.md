@@ -48,8 +48,10 @@ material MultilinearMises1D (1) (2) (3) ((4) (5)...)
 9. Smooth hardening data can be supplied to [`CustomMises1D`](CustomMises1D.md) if a differentiable expression is available.
 
 !!! warning "implementation limitation"
-    Using `Multilinear1D` as a material token does not select this model.
-    The parser forwards unknown tokens to the external-module hook, so the command fails at material creation.
+    Using `Multilinear1D` as a material token does not select this model, so the command fails at material creation.
+
+!!! note "developer note"
+    Unknown tokens are forwarded to the external-module hook.
 
 ## Usage
 
@@ -75,4 +77,4 @@ The above command defines the backbone using the following data.
 
 ## References
 
-1. J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, New York, 1998, Section 1.4.4, [doi:10.1007/b98904](https://doi.org/10.1007/b98904).
+1. [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)

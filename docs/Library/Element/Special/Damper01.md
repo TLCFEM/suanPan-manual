@@ -39,6 +39,7 @@ The element length does not enter these expressions, so $\epsilon$ is a displace
 !!! info "deviation from theory"
     A standard axial bar or dashpot converts the relative velocity into a strain rate by dividing by the member length.
     This element passes the raw projected velocity, so the material coefficient must be given as force per velocity rather than as a viscosity in stress per strain rate.
+
 The assembled resistance and damping matrix are
 
 $$
@@ -50,8 +51,10 @@ If the material also returns a tangent stiffness, the same rank-one projection i
 Since the damping matrix is built at element level, the element-level modifiers described on the [`Modifier`](../Modifier/Modifier.md) page can be used to inspect or replace it.
 
 !!! warning "implementation limitation"
-    The constructor sets `modify_viscous` to false.
     Element damping modifiers such as `LinearViscosity` and `ElementalLee` skip this element, so its damping must come from the assigned material.
+
+!!! note "developer note"
+    The constructor sets `modify_viscous` to false.
 
 ## Syntax
 

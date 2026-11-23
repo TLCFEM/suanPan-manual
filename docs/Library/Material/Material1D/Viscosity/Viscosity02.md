@@ -11,8 +11,6 @@ See also damper elements [`Damper01`](../../../Element/Special/Damper01.md) and 
 
 1. [10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795)
 
-2. Chang, T. L., and Lee, C.-L. (2022), "Numerical simulation of generalised Maxwell-type viscous dampers with an efficient iterative algorithm," Mechanical Systems and Signal Processing, 170, 108795, [doi:10.1016/j.ymssp.2021.108795](https://doi.org/10.1016/j.ymssp.2021.108795).
-
 ## Theory
 
 The quadrant damper is implemented.
@@ -39,7 +37,7 @@ Both steepness factors are converted to absolute values, and the default value o
 The exponent $\alpha$ and the cut-off $L$ act exactly as in [`Viscosity01`](Viscosity01.md), including the cubic regularisation near zero velocity.
 
 !!! info "deviation from theory"
-    The constructor takes absolute values of all four coefficients, so each asymptotic quadrant coefficient $\eta_i$ is non-negative.
+    All four coefficients are converted to absolute values, so each asymptotic quadrant coefficient $\eta_i$ is non-negative.
     The transition between quadrants is an arctangent interpolation rather than a sharp switch.
 
 ## Syntax

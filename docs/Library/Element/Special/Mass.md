@@ -43,8 +43,10 @@ Defining it as an element makes the mass matrix available during assembly, befor
 The element has no stiffness, so it does not contribute to a static analysis.
 
 !!! warning "implementation limitation"
+    The lumped mass modifiers `LumpedSimple` and `LumpedScale` skip these elements, so the entered magnitude is used unchanged.
+
+!!! note "developer note"
     `MassBase` sets `modify_mass` to false.
-    The lumped mass modifiers `LumpedSimple` and `LumpedScale` therefore skip these elements, and the entered magnitude is used unchanged.
 
 ## Syntax
 

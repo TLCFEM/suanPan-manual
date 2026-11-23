@@ -53,8 +53,10 @@ exit
 The elastic modulus `(2)` is stored as given, without conversion to an absolute value, so a positive input is required for a physically meaningful stiffness.
 
 !!! warning "implementation limitation"
+    A negative modulus input produces a negative stiffness and an unstable response.
+
+!!! note "developer note"
     Unlike [`BilinearElastic1D`](BilinearElastic1D.md), the constructor does not apply `fabs` to the modulus.
-    A negative input therefore produces a negative stiffness and an unstable response.
 
 The density `(3)` defaults to zero and is used only to assemble mass or damping related terms in dynamic or eigenvalue analyses.
 The implementation installs a constant stiffness, so a linear structure converges in a single Newton--Raphson iteration.
@@ -66,5 +68,5 @@ To combine a backbone with stiffness loss, wrap it with one of the models in [`D
 
 ## References
 
-1. Crisfield, M. A. (1991). *Non-linear Finite Element Analysis of Solids and Structures, Volume 1: Essentials*. Wiley.
-2. Zienkiewicz, O. C. and Taylor, R. L. (2000). *The Finite Element Method, Volume 1: The Basis*, 5th edition. Butterworth-Heinemann.
+1. [ISBN 0-471-92956-5](https://search.worldcat.org/search?q=bn:0471929565)
+2. [ISBN 978-0-7506-5049-6](https://search.worldcat.org/search?q=bn:9780750650496)

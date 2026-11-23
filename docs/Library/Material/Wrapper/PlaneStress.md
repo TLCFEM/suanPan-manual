@@ -55,8 +55,11 @@ With the default `[3]=1` the wrapper performs one Newton update using the host t
 Setting `[3]` greater than one activates local iterations that repeatedly evaluate the host, solve $\mathbf D_{OO}\Delta\mathbf e_O=-\mathbf s_O$ and stop when the correction drops below the tolerance or the residual is small.
 
 !!! warning "implementation limitation"
-    With the default `[3]=1` the correction is formed from the host stress and tangent of the previous step and applied only once, so the constrained stresses $\mathbf s_O$ are not exactly zero after the update.
+    With the default `[3]=1` the constrained stresses $\mathbf s_O$ are not exactly zero after the update.
     The reported in-plane stress is condensed with the newly evaluated host tangent, which does not remove that residual.
+
+!!! note "developer note"
+    The correction is formed from the host stress and tangent of the previous step and applied only once.
     With `[3]>1` the convergence test uses a tolerance relative to the first correction and the counter is tested before each evaluation, so at most `[3]-1` corrections are applied.
 
 The returned stiffness is recomputed by condensation from the host trial tangent, so it is the consistent plane stress tangent when the host tangent is consistent.
@@ -92,6 +95,6 @@ Near incompressibility makes $\mathbf D_{OO}$ poorly conditioned and local itera
 
 ## References
 
-- T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover Publications, 2000.
-- J. C. Simo and T. J. R. Hughes, *Computational Inelasticity*, Springer, 1998, doi:10.1007/b98904.
-- Dassault Systèmes, *Abaqus Theory Guide*, "Plane stress and plane strain" and "Solid continuum elements".
+- [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
+- [ISBN 978-0-387-97520-7](https://search.worldcat.org/search?q=bn:9780387975207)
+- [Plane stress and plane strain](https://search.worldcat.org/search?q=ti:Plane+stress+and+plane+strain)

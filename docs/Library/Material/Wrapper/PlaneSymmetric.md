@@ -19,8 +19,11 @@ No local iteration is performed, since all imposed components are prescribed rat
 
 !!! warning "imposed strains versus quoted stress symmetry"
     The Remarks below state the stress equalities $\sigma_{11}=\sigma_{33}$ with $\tau_{12}=\tau_{32}$ and $\sigma_{22}=\sigma_{33}$ with $\tau_{12}=\tau_{31}$.
-    The implementation in `PlaneStrain.cpp` actually imposes strain constraints, namely $\varepsilon_{33}=\varepsilon_{11}$ and $\gamma_{13}=\gamma_{12}$ for `PlaneSymmetric13`, and $\varepsilon_{33}=\varepsilon_{22}$ and $\gamma_{23}=\gamma_{12}$ for `PlaneSymmetric23`.
+    The wrapper actually imposes strain constraints, namely $\varepsilon_{33}=\varepsilon_{11}$ and $\gamma_{13}=\gamma_{12}$ for `PlaneSymmetric13`, and $\varepsilon_{33}=\varepsilon_{22}$ and $\gamma_{23}=\gamma_{12}$ for `PlaneSymmetric23`.
     Those stress equalities follow only for an isotropic host with the corresponding elastic symmetry, while an anisotropic host can violate them because of coupling terms in its tangent.
+
+!!! note "developer note"
+    The strain constraints are implemented in `PlaneStrain.cpp`.
 
 ## Syntax
 
@@ -43,5 +46,5 @@ Use [Axisymmetric](Axisymmetric.md) instead when the hoop strain arises from a r
 
 ## References
 
-- A. F. Bower, *Applied Mechanics of Solids*, CRC Press, 2009.
-- T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover Publications, 2000.
+- [ISBN 978-1-4398-0247-2](https://search.worldcat.org/search?q=bn:9781439802472)
+- [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)

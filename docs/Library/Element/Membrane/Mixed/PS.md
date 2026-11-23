@@ -37,14 +37,17 @@ Because the strain is recovered directly from the assumed stress through $\bolds
 The element therefore keeps the low cost of [`CP4`](../Plane/CP4.md) while avoiding shear locking.
 
 !!! info "deviation from theory"
+    Unlike a fully nonlinear assumed-stress formulation, the stress modes do not adapt to a changing material tangent.
+
+!!! note "developer note"
     A fully nonlinear assumed-stress formulation would rebuild the compatibility matrix $\boldsymbol H$ from the current tangent at every iteration.
-    Here the strain interpolation is calibrated once against the initial elastic stiffness, so the stress modes do not adapt to a changing material tangent.
+    Here the strain interpolation is calibrated once against the initial elastic stiffness.
 
 ## References
 
-1. [https://doi.org/10.1002/nme.1620200911](https://doi.org/10.1002/nme.1620200911)
-2. [https://doi.org/10.1002/nme.6066](https://doi.org/10.1002/nme.6066)
-3. T. J. R. Hughes, *The Finite Element Method: Linear Static and Dynamic Finite Element Analysis*, Dover (2000), Chapter 4.
+1. [10.1002/nme.1620200911](https://doi.org/10.1002/nme.1620200911)
+2. [10.1002/nme.6066](https://doi.org/10.1002/nme.6066)
+3. [ISBN 978-0-486-41181-1](https://search.worldcat.org/search?q=bn:9780486411811)
 
 ## Syntax
 

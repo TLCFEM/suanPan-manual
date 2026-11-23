@@ -22,8 +22,11 @@ The full derivation and the choice of penalty factor are discussed on the [`Embe
 
 !!! warning "implementation limitation"
     The natural coordinates and shape functions are fixed from the initial host geometry and are not updated during the analysis.
-    Initialization fails if the Newton inverse mapping does not converge within 20 iterations.
+    Initialization fails if the inverse mapping does not converge.
     No rotational DoFs are tied.
+
+!!! note "developer note"
+    The inverse mapping uses Newton iteration and is capped at 20 iterations.
 
 ## Syntax
 

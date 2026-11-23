@@ -26,8 +26,8 @@ A $2\times2$ Gauss rule in the parent domain is used, and the thickness is appli
 
 ## References
 
-1. J. M. M. C. Marques and D. R. J. Owen, *Infinite elements in quasi-static materially nonlinear problems*, Computers & Structures 18(4), 739-751 (1984), [doi:10.1016/0045-7949(84)90019-1](https://doi.org/10.1016/0045-7949(84)90019-1).
-2. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed., Butterworth-Heinemann (2013), Chapter 9.
+1. [10.1016/0045-7949(84)90019-1](https://doi.org/10.1016/0045-7949(84)90019-1)
+2. [ISBN 978-1-85617-633-0](https://search.worldcat.org/search?q=bn:9781856176330)
 
 ## Syntax
 
