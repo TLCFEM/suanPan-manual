@@ -7,6 +7,7 @@ var namespacesuanpan =
       [ "split", "df/d5d/namespacesuanpan_1_1expression.html#ab2b8e7e8a1c28d8d745c483a90d6d8d2", null ]
     ] ],
     [ "test", "d4/df5/namespacesuanpan_1_1test.html", "d4/df5/namespacesuanpan_1_1test" ],
+    [ "AsyncPrintGuard", "d0/d4b/classsuanpan_1_1_async_print_guard.html", "d0/d4b/classsuanpan_1_1_async_print_guard" ],
     [ "graph", "d6/d9c/namespacesuanpan.html#a6c0eabb3b36b85bd7f95efb3a89cb6ea", null ],
     [ "map", "d6/d9c/namespacesuanpan.html#a6e645d5b9c2e75d2f8675a823d917235", null ],
     [ "set", "d6/d9c/namespacesuanpan.html#aee346f59668de607c359a1a9017bebbb", null ],
@@ -22,8 +23,11 @@ var namespacesuanpan =
     [ "clamp", "d6/d9c/namespacesuanpan.html#aa850f4abc95a8176c8fe4b4f0d6aada8", null ],
     [ "clamp_unit", "d6/d9c/namespacesuanpan.html#afb02c541f89a6e2b382da70e71bb6c37", null ],
     [ "debug", "d6/d9c/namespacesuanpan.html#a6669c5d0bfd4ac0e93b6620520482ea9", null ],
+    [ "disable_async_print", "d6/d9c/namespacesuanpan.html#a0b59cadbfe88bfbd9be882fc61086ad0", null ],
+    [ "enable_async_print", "d6/d9c/namespacesuanpan.html#a6356c5d1770cb27cbc0542e0269ca499", null ],
     [ "error", "d6/d9c/namespacesuanpan.html#a6364aee09d05c5aea905aa0df10bf22a", null ],
     [ "fatal", "d6/d9c/namespacesuanpan.html#ae62c6ad4d8b58b85a2a8ccb803b4be17", null ],
+    [ "flush_print", "d6/d9c/namespacesuanpan.html#a7f1a1a8277aef2eb47a8db397a8af97e", null ],
     [ "for_all", "d6/d9c/namespacesuanpan.html#a3a65bdbe8b52af7a55f5c0cd13e28cd4", null ],
     [ "for_each", "d6/d9c/namespacesuanpan.html#ac03a05641f69234a448e27a70033ad8f", null ],
     [ "for_each", "d6/d9c/namespacesuanpan.html#adef8082401dbf9d86ce230ad2b9b618d", null ],
@@ -36,11 +40,13 @@ var namespacesuanpan =
     [ "info", "d6/d9c/namespacesuanpan.html#aae4b4726aae645483e4657aabbe0e498", null ],
     [ "info", "d6/d9c/namespacesuanpan.html#a66450dc71e4c6ff43bb0bd282a7699b5", null ],
     [ "info", "d6/d9c/namespacesuanpan.html#a482d9f2797254a31dc41567ce9dbf6da", null ],
+    [ "is_async_print_enabled", "d6/d9c/namespacesuanpan.html#aeab411e6d926406911e74761c0811d42", null ],
     [ "max_element", "d6/d9c/namespacesuanpan.html#ac160cee0ccc3a40e50ff1d8f128f3d70", null ],
     [ "mechanical", "d6/d9c/namespacesuanpan.html#abdef483d6815bc57f84f2041ae5dcd49", null ],
     [ "middle", "d6/d9c/namespacesuanpan.html#af4c7f6e64d7c9afac1b1945c93e522a3", null ],
     [ "none_of", "d6/d9c/namespacesuanpan.html#aab6773d5cc86dac33ff91a9084b5d6e3", null ],
     [ "pattern", "d6/d9c/namespacesuanpan.html#a51c99378e207900ff1acda630dda052c", null ],
+    [ "print_message", "d6/d9c/namespacesuanpan.html#a9223bb5e10c4d1cdfbdfe877ebb2737e", null ],
     [ "ramp", "d6/d9c/namespacesuanpan.html#a1428e3d6e84d33502de4078779b0def0", null ],
     [ "sign", "d6/d9c/namespacesuanpan.html#a7e29112eaf3944f91372ce334d63c3b8", null ],
     [ "to_lower", "d6/d9c/namespacesuanpan.html#a727bca7e2bc83736e299565cdf3c2374", null ],
@@ -59,6 +65,5 @@ var namespacesuanpan =
     [ "unique_copy", "d6/d9c/namespacesuanpan.html#a2544ed093c80c8e8c1602cef2eabe9b7", null ],
     [ "unique_copy", "d6/d9c/namespacesuanpan.html#aeefeb688b026828a0df2a8d64a5b7e15", null ],
     [ "unique_copy", "d6/d9c/namespacesuanpan.html#ac0c11a313cc00179e273ffe733488069", null ],
-    [ "warning", "d6/d9c/namespacesuanpan.html#a81628ba3831cd58f23415a0e3ab40fb1", null ],
-    [ "print_mutex", "d6/d9c/namespacesuanpan.html#ad04d83bc6e43404c6b7b20002c35e0b5", null ]
+    [ "warning", "d6/d9c/namespacesuanpan.html#a81628ba3831cd58f23415a0e3ab40fb1", null ]
 ];

@@ -106,10 +106,10 @@ $(function(){initNavTree('d8/d8f/suan_pan_8h.html','../../',''); });
 <p>Global configuration, platform detection and version macros.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;armadillo/arma&gt;</code><br />
 <code>#include &lt;filesystem&gt;</code><br />
 <code>#include &lt;fmt/color.h&gt;</code><br />
-<code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for suanPan.h:</div>
@@ -161,6 +161,7 @@ Functions</h2></td></tr>
 <tr class="memitem:gab4c068349513555af8f0cebe9326b70e" id="r_gab4c068349513555af8f0cebe9326b70e"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:gab4c068349513555af8f0cebe9326b70e template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#gab4c068349513555af8f0cebe9326b70e">reduce</a> (T &amp;&amp;object)</td></tr>
 <tr class="memitem:gadf7af4310553ab5974c9292a34680ce7" id="r_gadf7af4310553ab5974c9292a34680ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#gadf7af4310553ab5974c9292a34680ce7">barrier</a> ()</td></tr>
+<tr class="memitem:a9223bb5e10c4d1cdfbdfe877ebb2737e" id="r_a9223bb5e10c4d1cdfbdfe877ebb2737e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d46/group___utility.html#ga3a306a1c89377475df46cf72827a9baa">SUANPAN_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#a9223bb5e10c4d1cdfbdfe877ebb2737e">suanpan::print_message</a> (const std::string &amp;message, std::ostream &amp;stream)</td></tr>
 <tr class="memitem:a51c99378e207900ff1acda630dda052c" id="r_a51c99378e207900ff1acda630dda052c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#a51c99378e207900ff1acda630dda052c">suanpan::pattern</a> (const std::string_view header, const std::string_view file_path, const std::string_view <a class="el" href="../../d6/d9c/namespacesuanpan.html#a7509b04c98e321594a56d969e4e717d7">format</a>)</td></tr>
 <tr class="memitem:a6669c5d0bfd4ac0e93b6620520482ea9" id="r_a6669c5d0bfd4ac0e93b6620520482ea9"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
 <tr class="memitem:a6669c5d0bfd4ac0e93b6620520482ea9 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#a6669c5d0bfd4ac0e93b6620520482ea9">suanpan::debug</a> (const std::string_view file_name, const int line, const std::string_view format_str, const T &amp;... args)</td></tr>
@@ -208,7 +209,6 @@ Variables</h2></td></tr>
 <tr class="memitem:ga8e2dd370cee7f50cb22a2a79e9aa5264" id="r_ga8e2dd370cee7f50cb22a2a79e9aa5264"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#ga8e2dd370cee7f50cb22a2a79e9aa5264">SUANPAN_CFTL</a> = std::cout</td></tr>
 <tr class="memitem:ga1d68ec1a699253c96756f149d785ba0a" id="r_ga1d68ec1a699253c96756f149d785ba0a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#ga1d68ec1a699253c96756f149d785ba0a">comm_rank</a> {0}</td></tr>
 <tr class="memitem:ga61c734e16d6a5401bd30ac329d998ebe" id="r_ga61c734e16d6a5401bd30ac329d998ebe"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#ga61c734e16d6a5401bd30ac329d998ebe">comm_size</a> {1}</td></tr>
-<tr class="memitem:ad04d83bc6e43404c6b7b20002c35e0b5" id="r_ad04d83bc6e43404c6b7b20002c35e0b5"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#ad04d83bc6e43404c6b7b20002c35e0b5">suanpan::print_mutex</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Global configuration, platform detection and version macros. </p>

@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "suanpan::AsyncPrintGuard", "d0/d4b/classsuanpan_1_1_async_print_guard.html", null ],
     [ "BalloonBase", "df/deb/class_balloon_base.html", [
       [ "Balloon", "d2/d24/class_balloon.html", null ],
       [ "Balloon1D", "da/d2a/class_balloon1_d.html", null ]

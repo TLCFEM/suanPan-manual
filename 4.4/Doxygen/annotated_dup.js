@@ -20,7 +20,8 @@ var annotated_dup =
       [ "damping", "d1/d6c/namespacesuanpan_1_1damping.html", [
         [ "rayleigh", "d0/db7/structsuanpan_1_1damping_1_1rayleigh.html", null ],
         [ "elemental", "d1/da8/structsuanpan_1_1damping_1_1elemental.html", null ]
-      ] ]
+      ] ],
+      [ "AsyncPrintGuard", "d0/d4b/classsuanpan_1_1_async_print_guard.html", "d0/d4b/classsuanpan_1_1_async_print_guard" ]
     ] ],
     [ "tensor", "dd/d8c/namespacetensor.html", [
       [ "base", "d1/df0/namespacetensor_1_1base.html", [
