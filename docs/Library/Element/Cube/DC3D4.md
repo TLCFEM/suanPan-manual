@@ -11,8 +11,8 @@ Each node carries three translational DoFs and one damage DoF, so the element ha
 It follows the variational phase-field fracture model described in detail in [DC3D8](DC3D8.md), with the damage field interpolated by the same linear barycentric functions as the displacement field.
 
 The crack surface is regularised by the functional $\Gamma_l(d)=\int_\Omega\left[\dfrac{d^2}{2l}+\dfrac{l}{2}|\nabla d|^2\right]\mathrm d\Omega$, where $d\in[0,1]$ is the damage field and $l$ is the characteristic length.
-The elastic energy is degraded by $g(d)=\min\{1,(1-d)^2+\epsilon\}$, and the driving force is the history field $H$, the running maximum of $\frac12\boldsymbol\varepsilon:\boldsymbol\sigma$.
-The discrete damage block is $\boldsymbol K_{dd}=\int_\Omega\left[(2H+G_c/l)\boldsymbol N^{\mathrm T}\boldsymbol N+G_c l\,(\nabla\boldsymbol N)^{\mathrm T}\nabla\boldsymbol N\right]\mathrm d\Omega$, with $G_c$ the energy release rate.
+The elastic energy is degraded by $g(d)=\min\{1,(1-d)^2+\epsilon\}$, and the driving force is the history field $H$, the running maximum of $\frac12\mathbf\varepsilon:\mathbf\sigma$.
+The discrete damage block is $\mathbf K_{dd}=\int_\Omega\left[(2H+G_c/l)\mathbf N^{\mathrm T}\mathbf N+G_c l\,(\nabla\mathbf N)^{\mathrm T}\nabla\mathbf N\right]\mathrm d\Omega$, with $G_c$ the energy release rate.
 
 The tetrahedral element uses one integration point at the centroid, so all fields are constant over the element.
 If the characteristic-length argument is negative, the implementation sets $l=2\sqrt[3]{V}$ from the element volume $V$.
@@ -40,7 +40,7 @@ A negative characteristic length triggers the automatic value $2\sqrt[3]{V}$, so
 No tension-compression split is applied to the energy that drives damage in this implementation.
 
 !!! info "deviation from theory"
-    Unlike the standard Miehe formulation, the history field is driven by the full $\frac12\boldsymbol\varepsilon:\boldsymbol\sigma$ without a tensile-compressive split, so compressive straining can also grow damage.
+    Unlike the standard Miehe formulation, the history field is driven by the full $\frac12\mathbf\varepsilon:\mathbf\sigma$ without a tensile-compressive split, so compressive straining can also grow damage.
 
 ## Variants
 

@@ -29,10 +29,10 @@ The subloading surface always passes through the current stress point and has th
 For the von Mises based implementation the surface is
 
 $$
-f=\left\lVert\mathrm{dev}\,\boldsymbol\sigma-\boldsymbol\alpha\right\rVert-z\,y(p),
+f=\left\lVert\mathrm{dev}\,\mathbf\sigma-\mathbf\alpha\right\rVert-z\,y(p),
 $$
 
-in which $$y(p)$$ is the isotropic radius, $$\boldsymbol\alpha$$ is a normalised back stress and $$p$$ is the accumulated plastic strain.
+in which $$y(p)$$ is the isotropic radius, $$\mathbf\alpha$$ is a normalised back stress and $$p$$ is the accumulated plastic strain.
 Plastic flow can occur for any $$z<1$$, so there is no sharp elastic-to-plastic transition and the smooth return to $$z=1$$ recovers conventional J2 plasticity.
 
 The normal yield ratio evolves according to
@@ -62,7 +62,7 @@ with separate parameter sets for the two bounds.
     The isotropic and kinematic bounds are clamped to zero when their evaluated value becomes negative.
     The elastic core size is capped just below unity.
 
-The normalised back stress $$\boldsymbol\alpha$$ and the normalised elastic core $$\boldsymbol d$$ evolve with Armstrong-Frederick type rules, saturating towards the kinematic bound and towards the elastic core size $$z_e$$, respectively.
+The normalised back stress $$\mathbf\alpha$$ and the normalised elastic core $$\mathbf d$$ evolve with Armstrong-Frederick type rules, saturating towards the kinematic bound and towards the elastic core size $$z_e$$, respectively.
 The elastic core is a second internal tensor of Hashiguchi's extended model that improves the description of reverse loading.
 The return mapping solves two coupled residuals, one for the plastic multiplier and one for the yield ratio, using the consistent tangent derived from their linearisation.
 The [Balloon](Balloon.md) model extends this framework with a monotonic/cyclic split of the plastic strain and a memory of load reversals.

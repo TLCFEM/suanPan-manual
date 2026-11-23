@@ -17,7 +17,7 @@ The complete derivation is given in [1]; the implementation is also documented i
 
 ### Effective stress and yield surface
 
-The elastic response is computed from the effective stress $\bar{\boldsymbol\sigma}=\boldsymbol D_e:(\boldsymbol\varepsilon-\boldsymbol\varepsilon^p)$, and the nominal stress is obtained by the degradation rules given in the Examples section below.
+The elastic response is computed from the effective stress $\bar{\mathbf\sigma}=\mathbf D_e:(\mathbf\varepsilon-\mathbf\varepsilon^p)$, and the nominal stress is obtained by the degradation rules given in the Examples section below.
 The yield surface is written in Haigh--Westergaard coordinates, namely the volumetric stress $\sigma_V=I_1/3$, the deviatoric norm $\rho=\sqrt{2J_2}$ and the Lode angle $\theta$,
 
 $$

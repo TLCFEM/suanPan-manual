@@ -18,8 +18,8 @@ where $b$ is the right-hand side and $w_a$ is the weight of the $a$-th DoF.
 The penalty energy $\Pi=\tfrac12\alpha\big(\sum_a w_a u_a-b\big)^2$ gives the rank-one element stiffness and residual
 
 $$
-\boldsymbol K_e=\alpha\,\boldsymbol w\boldsymbol w^{\mathrm T},\qquad
-\boldsymbol R_e=\alpha\,\boldsymbol w\big(\boldsymbol w^{\mathrm T}\boldsymbol u-b\big).
+\mathbf K_e=\alpha\,\mathbf w\mathbf w^{\mathrm T},\qquad
+\mathbf R_e=\alpha\,\mathbf w\big(\mathbf w^{\mathrm T}\mathbf u-b\big).
 $$
 
 As $\alpha\to\infty$ the constraint is enforced exactly, but a very large penalty makes the global system ill conditioned.

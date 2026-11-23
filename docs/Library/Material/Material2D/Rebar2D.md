@@ -8,7 +8,7 @@ The `Rebar2D` model is a smeared reinforcement layer that adds the uniaxial resp
 Each family is described by a one-dimensional host material, so the steel can be elastic, elastoplastic or hysteretic without any change to the reinforcement formulation.
 If $\rho_x$ and $\rho_y$ are the reinforcement ratios, the added in-plane stress is
 $$
-\boldsymbol\sigma^{\mathrm{reb}}=\begin{bmatrix}\rho_x\sigma_{sx}(\varepsilon_{11})\\\rho_y\sigma_{sy}(\varepsilon_{22})\\0\end{bmatrix},\qquad
+\mathbf\sigma^{\mathrm{reb}}=\begin{bmatrix}\rho_x\sigma_{sx}(\varepsilon_{11})\\\rho_y\sigma_{sy}(\varepsilon_{22})\\0\end{bmatrix},\qquad
 \mathbf K^{\mathrm{reb}}=\begin{bmatrix}\rho_x E_{sx}^{t}&0&0\\0&\rho_y E_{sy}^{t}&0\\0&0&0\end{bmatrix},
 $$
 where $E_{sx}^{t}$ and $E_{sy}^{t}$ are the current tangent moduli of the two steel models.

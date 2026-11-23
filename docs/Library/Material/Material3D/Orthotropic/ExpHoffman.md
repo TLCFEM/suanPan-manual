@@ -10,10 +10,10 @@ The nine strength parameters are $\sigma_{11}^t,\sigma_{11}^c,\sigma_{22}^t,\sig
 The yield function is written in quadratic form as
 
 $$
-F(\boldsymbol\sigma,\bar\varepsilon_p)=\frac12\boldsymbol\sigma^\mathrm T\mathbf P\boldsymbol\sigma+\boldsymbol q^\mathrm T\boldsymbol\sigma-K^2(\bar\varepsilon_p),
+F(\mathbf\sigma,\bar\varepsilon_p)=\frac12\mathbf\sigma^\mathrm T\mathbf P\mathbf\sigma+\mathbf q^\mathrm T\mathbf\sigma-K^2(\bar\varepsilon_p),
 $$
 
-where $\boldsymbol\sigma=(\sigma_{11},\sigma_{22},\sigma_{33},\sigma_{12},\sigma_{23},\sigma_{13})^\mathrm T$.
+where $\mathbf\sigma=(\sigma_{11},\sigma_{22},\sigma_{33},\sigma_{12},\sigma_{23},\sigma_{13})^\mathrm T$.
 The matrix and vector are assembled directly from the nine strengths:
 
 $$
@@ -35,8 +35,8 @@ q_1=\frac{\sigma_{11}^c-\sigma_{11}^t}{\sigma_{11}^t\sigma_{11}^c},\quad q_2=\fr
 $$
 
 The linear terms $q_i$ are what allow different tensile and compressive strengths.
-The plastic flow is associative with $\Delta\boldsymbol\varepsilon_p=\Delta\gamma(\mathbf P\boldsymbol\sigma+\boldsymbol q)$.
-The equivalent plastic strain is accumulated as $\Delta\bar\varepsilon_p=\sqrt{2/3}\lVert\Delta\boldsymbol\varepsilon_p\rVert$.
+The plastic flow is associative with $\Delta\mathbf\varepsilon_p=\Delta\gamma(\mathbf P\mathbf\sigma+\mathbf q)$.
+The equivalent plastic strain is accumulated as $\Delta\bar\varepsilon_p=\sqrt{2/3}\lVert\Delta\mathbf\varepsilon_p\rVert$.
 The elastic predictor uses the orthotropic stiffness and the consistency condition is solved by Newton iteration with a bisection fallback.
 The history stores the equivalent plastic strain at location 0 and the six plastic strain components at locations 1 to 6.
 The same framework with a Tsai-Wu quadratic form is documented in [`ExpTsaiWu`](ExpTsaiWu.md).

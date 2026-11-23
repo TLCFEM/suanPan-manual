@@ -16,7 +16,7 @@ The transverse displacement and the two rotations $(w,\theta_x,\theta_y)$ are in
 
 The implementation therefore works with eight sampling points, the four corners plus four midpoints, using an eight-node serendipity interpolation for the transverse displacement and linear edge interpolation for the rotations.
 
-The curvature matrix has the same form $\boldsymbol\kappa=(\beta_{x,x},\,\beta_{y,y},\,\beta_{x,y}+\beta_{y,x})^{\mathsf T}$, and a fibre at thickness coordinate $z$ contributes $z^2\mathbf B^{\mathsf T}\mathbf D\mathbf B$ to the stiffness.
+The curvature matrix has the same form $\mathbf\kappa=(\beta_{x,x},\,\beta_{y,y},\,\beta_{x,y}+\beta_{y,x})^{\mathsf T}$, and a fibre at thickness coordinate $z$ contributes $z^2\mathbf B^{\mathsf T}\mathbf D\mathbf B$ to the stiffness.
 
 The in-plane integration uses 2-by-2 Gauss points, and the thickness integration uses the selected number of Gauss points with a default of three.
 

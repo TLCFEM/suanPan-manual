@@ -15,11 +15,11 @@ $$
 \varepsilon_{rr}=\frac{\partial u_r}{\partial r},\qquad \varepsilon_{zz}=\frac{\partial u_z}{\partial z},\qquad \varepsilon_{\theta\theta}=\frac{u_r}{r},\qquad \gamma_{rz}=\frac{\partial u_r}{\partial z}+\frac{\partial u_z}{\partial r}.
 $$
 The hoop strain $\varepsilon_{\theta\theta}$ is the essential difference from plane strain: a radial displacement changes the radius of the material circle and therefore its circumference.
-The strain vector is ordered as $\boldsymbol\varepsilon=[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]^\mathrm T$, and the material must return a $4\times4$ tangent matrix for the axisymmetric plane type.
+The strain vector is ordered as $\mathbf\varepsilon=[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]^\mathrm T$, and the material must return a $4\times4$ tangent matrix for the axisymmetric plane type.
 
-With the isoparametric interpolation $\boldsymbol x=\sum_aN_a\boldsymbol x_a$ and $\boldsymbol u=\sum_aN_a\boldsymbol u_a$, the strain-displacement matrix contains one extra row,
+With the isoparametric interpolation $\mathbf x=\sum_aN_a\mathbf x_a$ and $\mathbf u=\sum_aN_a\mathbf u_a$, the strain-displacement matrix contains one extra row,
 $$
-\boldsymbol B_a=\begin{bmatrix}
+\mathbf B_a=\begin{bmatrix}
 N_{a,r}&0\\
 0&N_{a,z}\\
 N_a/r&0\\
@@ -30,7 +30,7 @@ The volume element of the revolve is $\mathrm dV=2\pi r\,\mathrm dA=2\pi r\,J\,\
 The implementation evaluates $r_q$ by interpolating the four nodal radii with the quadratic monomial vector $[1,\xi,\eta,\xi\eta]$, which reproduces the exact bilinear geometry.
 The stiffness and resistance are
 $$
-\boldsymbol K^e=\sum_{q=1}^{4}2\pi r_qJ_qw_q\,\boldsymbol B_q^\mathrm T\boldsymbol D_q\boldsymbol B_q,\qquad \boldsymbol f^e=\sum_{q=1}^{4}2\pi r_qJ_qw_q\,\boldsymbol B_q^\mathrm T\boldsymbol\sigma_q.
+\mathbf K^e=\sum_{q=1}^{4}2\pi r_qJ_qw_q\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q,\qquad \mathbf f^e=\sum_{q=1}^{4}2\pi r_qJ_qw_q\,\mathbf B_q^\mathrm T\mathbf\sigma_q.
 $$
 The default quadrature is the full $2\times2$ Gauss rule, and no reduced-integration token is registered for [`CAX4`](CAX4.md) in the element parser.
 
@@ -38,7 +38,7 @@ Because the hoop strain contains $1/r$, the formulation is singular on the symme
 
 !!! warning "implementation limitation"
     The implementation does not special-case an element that crosses the axis of revolution.
-    A Gauss point at or very near zero radius produces an unbounded hoop-strain row in $\boldsymbol B$ and an ill-conditioned stiffness.
+    A Gauss point at or very near zero radius produces an unbounded hoop-strain row in $\mathbf B$ and an ill-conditioned stiffness.
 
 The linear triangle [`CAX3`](CAX3.md) evaluates all quantities at the element centroid radius, whereas [`CAX8`](CAX8.md) uses an 8-node quadratic interpolation and a higher-order rule.
 The plane-stress and plane-strain counterparts of the same interpolation are [`CP4`](../Plane/CP4.md) and [`CP8`](../Plane/CP8.md).

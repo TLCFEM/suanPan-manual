@@ -7,22 +7,22 @@ J2 Plasticity Model With Custom Hardening
 This model is an implementation of the [`NonlinearJ2`](NonlinearJ2.md) abstract model.
 The framework uses the von Mises yield criterion with an associated flow rule and a mixed isotropic-kinematic hardening rule.
 
-Let $$\boldsymbol s=\mathrm{dev}\,\boldsymbol\sigma$$ be the stress deviator and let $$\boldsymbol\beta$$ be the back stress.
+Let $$\mathbf s=\mathrm{dev}\,\mathbf\sigma$$ be the stress deviator and let $$\mathbf\beta$$ be the back stress.
 The yield function is
 
 $$
-F(\boldsymbol\sigma,p)=\sqrt{\dfrac{3}{2}(\boldsymbol s-\boldsymbol\beta):(\boldsymbol s-\boldsymbol\beta)}-k(p)=q-k(p),
+F(\mathbf\sigma,p)=\sqrt{\dfrac{3}{2}(\mathbf s-\mathbf\beta):(\mathbf s-\mathbf\beta)}-k(p)=q-k(p),
 $$
 
 where $$q=\sqrt{3J_2}$$ is the von Mises equivalent stress measured from the centre of the yield surface.
 The accumulated equivalent plastic strain is
 
 $$
-p=\int\sqrt{\dfrac{2}{3}\mathrm{d}\boldsymbol\varepsilon^p:\mathrm{d}\boldsymbol\varepsilon^p}.
+p=\int\sqrt{\dfrac{2}{3}\mathrm{d}\mathbf\varepsilon^p:\mathrm{d}\mathbf\varepsilon^p}.
 $$
 
 The isotropic expression supplies the yield radius $$k(p)$$.
-The kinematic expression supplies the magnitude $$h(p)=\lVert\boldsymbol\beta\rVert$$ of the back stress, which is always parallel to the cumulative deviatoric plastic strain.
+The kinematic expression supplies the magnitude $$h(p)=\lVert\mathbf\beta\rVert$$ of the back stress, which is always parallel to the cumulative deviatoric plastic strain.
 
 !!! warning "implementation limitation"
     A negative value returned by the isotropic expression is clamped to zero and its derivative is discarded.
@@ -34,24 +34,24 @@ The kinematic expression supplies the magnitude $$h(p)=\lVert\boldsymbol\beta\rV
 The associated flow rule gives
 
 $$
-\mathrm{d}\boldsymbol\varepsilon^p=\Delta\gamma\,\boldsymbol n,\qquad \boldsymbol n=\dfrac{\boldsymbol s-\boldsymbol\beta}{\lVert\boldsymbol s-\boldsymbol\beta\rVert},
+\mathrm{d}\mathbf\varepsilon^p=\Delta\gamma\,\mathbf n,\qquad \mathbf n=\dfrac{\mathbf s-\mathbf\beta}{\lVert\mathbf s-\mathbf\beta\rVert},
 $$
 
 so that $$\mathrm{d}p=\sqrt{2/3}\,\Delta\gamma$$ with the multiplier normalisation used by this implementation.
 
 !!! info "deviation from theory"
     The common textbook convention writes the plastic strain increment as the thermodynamic multiplier times $$\sqrt{3/2}$$ times the unit normal, so that the accumulated plastic strain equals that multiplier.
-    This implementation absorbs the factor $$\sqrt{2/3}$$ into the multiplier, giving $$\mathrm{d}\boldsymbol\varepsilon^p=\Delta\gamma\boldsymbol n$$ and $$\mathrm{d}p=\sqrt{2/3}\Delta\gamma$$.
+    This implementation absorbs the factor $$\sqrt{2/3}$$ into the multiplier, giving $$\mathrm{d}\mathbf\varepsilon^p=\Delta\gamma\mathbf n$$ and $$\mathrm{d}p=\sqrt{2/3}\Delta\gamma$$.
     The multiplier in this family must therefore not be compared directly with the multiplier used by ArmstrongFrederick or VAFCRP.
 
-The elastic predictor is $$\boldsymbol\sigma^{tr}=\boldsymbol\sigma_n+\boldsymbol C^e:(\boldsymbol\varepsilon-\boldsymbol\varepsilon_n)$$ with $$\boldsymbol C^e$$ the isotropic elasticity tensor.
-The trial shifted stress is $$\boldsymbol\xi=\mathrm{dev}\,\boldsymbol\sigma^{tr}-\boldsymbol\beta_n$$.
-The step is elastic when $$\lVert\boldsymbol\xi\rVert\leqslant\sqrt{2/3}\,k(p_n)$$.
+The elastic predictor is $$\mathbf\sigma^{tr}=\mathbf\sigma_n+\mathbf C^e:(\mathbf\varepsilon-\mathbf\varepsilon_n)$$ with $$\mathbf C^e$$ the isotropic elasticity tensor.
+The trial shifted stress is $$\mathbf\xi=\mathrm{dev}\,\mathbf\sigma^{tr}-\mathbf\beta_n$$.
+The step is elastic when $$\lVert\mathbf\xi\rVert\leqslant\sqrt{2/3}\,k(p_n)$$.
 
 Otherwise the discrete consistency condition is solved for the plastic multiplier $$\Delta\gamma\geqslant0$$,
 
 $$
-\Psi(\Delta\gamma)=\lVert\boldsymbol\xi\rVert-2G\Delta\gamma-\sqrt{\dfrac{2}{3}}\left[k\left(p_n+\sqrt{\dfrac{2}{3}}\Delta\gamma\right)+h\left(p_n+\sqrt{\dfrac{2}{3}}\Delta\gamma\right)-h(p_n)\right]=0,
+\Psi(\Delta\gamma)=\lVert\mathbf\xi\rVert-2G\Delta\gamma-\sqrt{\dfrac{2}{3}}\left[k\left(p_n+\sqrt{\dfrac{2}{3}}\Delta\gamma\right)+h\left(p_n+\sqrt{\dfrac{2}{3}}\Delta\gamma\right)-h(p_n)\right]=0,
 $$
 
 where $$G=E/[2(1+\nu)]$$ is the shear modulus.
@@ -64,17 +64,17 @@ $$
 The stresses and the history are updated by radial return,
 
 $$
-\boldsymbol\sigma=\boldsymbol\sigma^{tr}-2G\Delta\gamma\,\boldsymbol n,\qquad \boldsymbol\beta=\boldsymbol\beta_n+\sqrt{\dfrac{2}{3}}\left[h(p)-h(p_n)\right]\boldsymbol n,\qquad p=p_n+\sqrt{\dfrac{2}{3}}\Delta\gamma.
+\mathbf\sigma=\mathbf\sigma^{tr}-2G\Delta\gamma\,\mathbf n,\qquad \mathbf\beta=\mathbf\beta_n+\sqrt{\dfrac{2}{3}}\left[h(p)-h(p_n)\right]\mathbf n,\qquad p=p_n+\sqrt{\dfrac{2}{3}}\Delta\gamma.
 $$
 
 The consistent tangent is obtained by exact linearisation of the same residual.
-Writing $$D=2G+\dfrac{2}{3}[k'(p)+h'(p)]$$ and $$r=\lVert\boldsymbol\xi\rVert$$, the deviatoric part returned by the implementation is
+Writing $$D=2G+\dfrac{2}{3}[k'(p)+h'(p)]$$ and $$r=\lVert\mathbf\xi\rVert$$, the deviatoric part returned by the implementation is
 
 $$
-\boldsymbol C^{ep}=\boldsymbol C^e+\dfrac{4G^2}{r^2}\left(\dfrac{\Delta\gamma}{r}-\dfrac{1}{D}\right)\boldsymbol\xi\otimes\boldsymbol\xi-\dfrac{4G^2\Delta\gamma}{r}\boldsymbol I_\text{dev},
+\mathbf C^{ep}=\mathbf C^e+\dfrac{4G^2}{r^2}\left(\dfrac{\Delta\gamma}{r}-\dfrac{1}{D}\right)\mathbf\xi\otimes\mathbf\xi-\dfrac{4G^2\Delta\gamma}{r}\mathbf I_\text{dev},
 $$
 
-in which $$\boldsymbol I_\text{dev}$$ is the fourth-order deviatoric projector.
+in which $$\mathbf I_\text{dev}$$ is the fourth-order deviatoric projector.
 The iteration has a hard limit of twenty steps and an unsuccessful return mapping aborts the analysis.
 The stored history consists of the accumulated plastic strain in `initial_history(0)` and the six back-stress components in `initial_history(1-6)`.
 

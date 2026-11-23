@@ -11,7 +11,7 @@ Axisymmetric Quadratic Quadrilateral
 [`CAX8`](CAX8.md) is the eight-node quadratic quadrilateral of the axisymmetric family.
 The four corner nodes are ordered counter-clockwise from $(\xi,\eta)=(-1,-1)$, and nodes 5 to 8 are the midside nodes on the bottom, right, top and left edges.
 The isoparametric interpolation uses the serendipity shape functions also used by [`CP8`](../Plane/CP8.md), so curved meridian boundaries can be represented.
-The strain vector is $\boldsymbol\varepsilon=[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]^\mathrm T$, with the hoop strain $\varepsilon_{\theta\theta}=u_r/r$ evaluated at each integration point.
+The strain vector is $\mathbf\varepsilon=[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]^\mathrm T$, with the hoop strain $\varepsilon_{\theta\theta}=u_r/r$ evaluated at each integration point.
 The radius is interpolated with the eight-term quadratic monomial vector $[1,\xi,\eta,\xi^2,\xi\eta,\eta^2,\xi^2\eta,\xi\eta^2]$, and the quadrature weight is $2\pi r_qJ_qw_q$.
 The default rule is $3\times3$ Gauss; the parser currently constructs the element with reduced integration disabled.
 

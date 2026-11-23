@@ -10,10 +10,10 @@ It is the three-dimensional counterpart of [`Bilinear1D`](../../Material1D/vonMi
 The yield function is
 
 $$
-F=\sqrt{\dfrac{3}{2}(\boldsymbol s-\boldsymbol\beta):(\boldsymbol s-\boldsymbol\beta)}-\left(\sigma_y+H_\text{iso}p\right),
+F=\sqrt{\dfrac{3}{2}(\mathbf s-\mathbf\beta):(\mathbf s-\mathbf\beta)}-\left(\sigma_y+H_\text{iso}p\right),
 $$
 
-in which $$\boldsymbol s=\mathrm{dev}\,\boldsymbol\sigma$$, $$\boldsymbol\beta$$ is the back stress, and $$p$$ is the accumulated plastic strain.
+in which $$\mathbf s=\mathrm{dev}\,\mathbf\sigma$$, $$\mathbf\beta$$ is the back stress, and $$p$$ is the accumulated plastic strain.
 The input hardening ratio $$h$$ is converted to a plastic modulus $$E_p=Eh/(1-h)$$, which is then split as
 
 $$
@@ -27,13 +27,13 @@ Thus $$\beta=1$$ gives pure isotropic hardening and $$\beta=0$$ gives pure linea
     A negative hardening ratio therefore gives a truncated softening response rather than a negative yield radius.
 
 A radial return is used.
-With the trial shifted stress $$\boldsymbol\xi=\mathrm{dev}\,\boldsymbol\sigma^{tr}-\boldsymbol\beta_n$$ and $$G=E/[2(1+\nu)]$$, the multiplier is obtained in closed form from
+With the trial shifted stress $$\mathbf\xi=\mathrm{dev}\,\mathbf\sigma^{tr}-\mathbf\beta_n$$ and $$G=E/[2(1+\nu)]$$, the multiplier is obtained in closed form from
 
 $$
-\Delta\gamma=\dfrac{\lVert\boldsymbol\xi\rVert-\sqrt{2/3}\,(\sigma_y+H_\text{iso}p_n)}{2G+\dfrac{2}{3}\left(H_\text{iso}+H_\text{kin}\right)}.
+\Delta\gamma=\dfrac{\lVert\mathbf\xi\rVert-\sqrt{2/3}\,(\sigma_y+H_\text{iso}p_n)}{2G+\dfrac{2}{3}\left(H_\text{iso}+H_\text{kin}\right)}.
 $$
 
-The updates are $$\boldsymbol\sigma=\boldsymbol\sigma^{tr}-2G\Delta\gamma\,\boldsymbol n$$, $$\boldsymbol\beta=\boldsymbol\beta_n+\dfrac{2}{3}H_\text{kin}\Delta\gamma\,\boldsymbol n$$ and $$p=p_n+\sqrt{2/3}\Delta\gamma$$, with $$\boldsymbol n=\boldsymbol\xi/\lVert\boldsymbol\xi\rVert$$.
+The updates are $$\mathbf\sigma=\mathbf\sigma^{tr}-2G\Delta\gamma\,\mathbf n$$, $$\mathbf\beta=\mathbf\beta_n+\dfrac{2}{3}H_\text{kin}\Delta\gamma\,\mathbf n$$ and $$p=p_n+\sqrt{2/3}\Delta\gamma$$, with $$\mathbf n=\mathbf\xi/\lVert\mathbf\xi\rVert$$.
 
 !!! info "deviation from theory"
     The multiplier is normalised so that the plastic strain increment equals $$\Delta\gamma$$ times the unit normal.

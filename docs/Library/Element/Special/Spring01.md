@@ -8,25 +8,25 @@ Spring Using Displacement
 ## Background
 
 A zero-length spring connects the translations of two nodes with a force that depends only on their relative displacement, so it introduces no geometric length scale.
-Let $\boldsymbol c$ be the unit direction from node $i$ to node $j$, computed once from the initial coordinates.
+Let $\mathbf c$ be the unit direction from node $i$ to node $j$, computed once from the initial coordinates.
 The material is given the scalar relative displacement
 
 $$
-\Delta=\boldsymbol c\cdot(\boldsymbol u_j-\boldsymbol u_i),
+\Delta=\mathbf c\cdot(\mathbf u_j-\mathbf u_i),
 $$
 
 and returns a force $N$ together with the tangent stiffness $k=\mathrm dN/\mathrm d\Delta$.
 The element assembles the rank-one stiffness and the internal force
 
 $$
-\boldsymbol K_e=k\begin{bmatrix}\boldsymbol c\\-\boldsymbol c\end{bmatrix}
-\begin{bmatrix}\boldsymbol c&-\boldsymbol c\end{bmatrix}^{\mathrm T},
+\mathbf K_e=k\begin{bmatrix}\mathbf c\\-\mathbf c\end{bmatrix}
+\begin{bmatrix}\mathbf c&-\mathbf c\end{bmatrix}^{\mathrm T},
 \qquad
-\boldsymbol R_i=-N\boldsymbol c,\qquad \boldsymbol R_j=N\boldsymbol c .
+\mathbf R_i=-N\mathbf c,\qquad \mathbf R_j=N\mathbf c .
 $$
 
 Unlike [`Spring02`](Spring02.md), there is no division by the initial node separation, so the input is a displacement and the material must use a displacement--force law such as a linear or hysteretic spring.
-The direction $\boldsymbol c$ is fixed at initialisation and the formulation is infinitesimal.
+The direction $\mathbf c$ is fixed at initialisation and the formulation is infinitesimal.
 For finite deformation or rigid-body motion, use the truss elements `T2D2` and `T2D2S`, which update the axis and use a proper strain measure.
 
 !!! info "deviation from theory"

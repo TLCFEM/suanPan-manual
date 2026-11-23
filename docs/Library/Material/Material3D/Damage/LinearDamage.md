@@ -7,7 +7,7 @@ The `LinearDamage` model wraps a three-dimensional host material and degrades it
 ## Background
 
 Isotropic damage mechanics introduces a scalar variable that reduces the stiffness of a material while preserving the direction of the response.
-In the effective-stress formulation of Kachanov and Rabotnov, the intact stress $\bar{\boldsymbol\sigma}$ acts on the undamaged area, and the Cauchy stress is $\boldsymbol\sigma=(1-\omega)\bar{\boldsymbol\sigma}$ with $\omega$ the damage variable.
+In the effective-stress formulation of Kachanov and Rabotnov, the intact stress $\bar{\mathbf\sigma}$ acts on the undamaged area, and the Cauchy stress is $\mathbf\sigma=(1-\omega)\bar{\mathbf\sigma}$ with $\omega$ the damage variable.
 This implementation instead works with the survival factor $d=1-\omega$, so that $d=1$ denotes the intact state and a smaller value denotes degradation.
 The evolution of damage is driven by an equivalent strain, and irreversibility is enforced by storing the maximum value ever reached as a history variable.
 A linear evolution law between a start strain and an end strain is the simplest regularisation of experimental softening curves and needs only three parameters in addition to the host material.
@@ -46,7 +46,7 @@ $$
 
 The source uses the von Mises norm of the deviatoric strain as the damage-driving measure,
 $$
-\varepsilon_{eq}=\sqrt{\dfrac{2}{3}\,\mathbf e:\mathbf e},\qquad \mathbf e=\operatorname{dev}\boldsymbol\varepsilon,
+\varepsilon_{eq}=\sqrt{\dfrac{2}{3}\,\mathbf e:\mathbf e},\qquad \mathbf e=\operatorname{dev}\mathbf\varepsilon,
 $$
 with engineering shear entries weighted by the usual Voigt factors.
 The factor is then
@@ -59,12 +59,12 @@ d_e,&\varepsilon_{eq}\geq\varepsilon_e,
 $$
 where $\varepsilon_s$ and $\varepsilon_e$ are the start and end strains and $d_e$ is the end damage value.
 The stored history variable is $\kappa=\max\varepsilon_{eq}$, so the factor is evaluated at the current maximum and never increases back towards one during unloading.
-Inside the linear branch the derivative required by the tangent is $\partial d/\partial\boldsymbol\varepsilon=\mathrm{slope}\,\mathbf W\mathbf e/(1.5\,\varepsilon_{eq})$, where $\mathbf W$ contains the Voigt weights and $\mathrm{slope}=(1-d_e)/(\varepsilon_s-\varepsilon_e)$.
+Inside the linear branch the derivative required by the tangent is $\partial d/\partial\mathbf\varepsilon=\mathrm{slope}\,\mathbf W\mathbf e/(1.5\,\varepsilon_{eq})$, where $\mathbf W$ contains the Voigt weights and $\mathrm{slope}=(1-d_e)/(\varepsilon_s-\varepsilon_e)$.
 
 !!! warning "implementation limitation"
     The equivalent strain contains only the deviatoric part of the strain, so hydrostatic compression alone cannot initiate damage.
     Many quasi-brittle damage models use a positive-part or energy-based equivalent strain that is sensitive to tensile hydrostatic stress, which is not available here.
-    The outer product $\bar{\boldsymbol\sigma}\otimes\partial d/\partial\boldsymbol\varepsilon$ makes the consistent tangent non-symmetric.
+    The outer product $\bar{\mathbf\sigma}\otimes\partial d/\partial\mathbf\varepsilon$ makes the consistent tangent non-symmetric.
     The shipped example therefore uses `set symm_mat 0`, and using a symmetric solver assumption can prevent convergence.
 
 ## Remarks

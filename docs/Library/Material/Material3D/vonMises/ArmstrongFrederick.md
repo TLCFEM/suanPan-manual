@@ -59,21 +59,21 @@ This is purely for a slightly more tidy derivation and does not affect anything.
 
 ### Return Mapping
 
-With the multiplier normalisation $$\mathrm{d}\boldsymbol\varepsilon^p=\sqrt{3/2}\,\gamma\,\boldsymbol n$$ one has $$\mathrm{d}p=\gamma$$ and $$\mathrm{d}\boldsymbol\beta^i=a^i\gamma\boldsymbol n-b^i\gamma\boldsymbol\beta^i$$.
+With the multiplier normalisation $$\mathrm{d}\mathbf\varepsilon^p=\sqrt{3/2}\,\gamma\,\mathbf n$$ one has $$\mathrm{d}p=\gamma$$ and $$\mathrm{d}\mathbf\beta^i=a^i\gamma\mathbf n-b^i\gamma\mathbf\beta^i$$.
 The incremental update of each back stress is therefore available in closed form,
 
 $$
-\boldsymbol\beta^i=\dfrac{\boldsymbol\beta_n^i+a^i\gamma\,\boldsymbol n}{1+b^i\gamma},\qquad \boldsymbol n=\dfrac{\boldsymbol s^{tr}-\sum_i\boldsymbol\beta_n^i/(1+b^i\gamma)}{\left\lVert\boldsymbol s^{tr}-\sum_i\boldsymbol\beta_n^i/(1+b^i\gamma)\right\rVert}.
+\mathbf\beta^i=\dfrac{\mathbf\beta_n^i+a^i\gamma\,\mathbf n}{1+b^i\gamma},\qquad \mathbf n=\dfrac{\mathbf s^{tr}-\sum_i\mathbf\beta_n^i/(1+b^i\gamma)}{\left\lVert\mathbf s^{tr}-\sum_i\mathbf\beta_n^i/(1+b^i\gamma)\right\rVert}.
 $$
 
-The elastic predictor gives the trial deviatoric stress $$\boldsymbol s^{tr}$$, and the direction $$\boldsymbol n$$ is corrected iteratively together with the scalar multiplier.
+The elastic predictor gives the trial deviatoric stress $$\mathbf s^{tr}$$, and the direction $$\mathbf n$$ is corrected iteratively together with the scalar multiplier.
 The scalar residual solved by Newton's method is
 
 $$
-F=\sqrt{\dfrac{3}{2}}\left(\left\lVert\boldsymbol s^{tr}-\sum_i\dfrac{\boldsymbol\beta_n^i}{1+b^i\gamma}\right\rVert-\sqrt{6}G\gamma-\sum_i\dfrac{a^i\gamma}{1+b^i\gamma}\right)-\left[\sigma_y+k_l(p_n+\gamma)+k_s\left(1-e^{-m(p_n+\gamma)}\right)\right].
+F=\sqrt{\dfrac{3}{2}}\left(\left\lVert\mathbf s^{tr}-\sum_i\dfrac{\mathbf\beta_n^i}{1+b^i\gamma}\right\rVert-\sqrt{6}G\gamma-\sum_i\dfrac{a^i\gamma}{1+b^i\gamma}\right)-\left[\sigma_y+k_l(p_n+\gamma)+k_s\left(1-e^{-m(p_n+\gamma)}\right)\right].
 $$
 
-The stress is updated by radial return as $$\boldsymbol\sigma=\boldsymbol\sigma^{tr}-\sqrt{6}G\gamma\,\boldsymbol n$$.
+The stress is updated by radial return as $$\mathbf\sigma=\mathbf\sigma^{tr}-\sqrt{6}G\gamma\,\mathbf n$$.
 Because the Armstrong-Frederick rules are not associative, the consistent tangent is not symmetric and the user may need `set symm_mat 0` for non-symmetric solvers.
 The maximum back-stress magnitude contributed by one pair is $$\sqrt{3/2}\,a^i/b^i$$, which gives the saturation stress shown in the examples below.
 

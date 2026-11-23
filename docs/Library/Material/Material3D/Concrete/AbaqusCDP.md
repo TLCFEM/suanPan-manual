@@ -44,7 +44,7 @@ $$
 
 where $\psi$ is the dilation angle, $e$ is the eccentricity, $\bar p=-I_1/3$ is the compression-positive hydrostatic pressure and $q=\sqrt{3J_2}$.
 The eccentricity smooths the apex, which otherwise has a non-unique flow direction.
-The implementation instead uses the linear potential $G=\left\|\bar{\boldsymbol s}\right\|+\alpha_p I_1$ described on the [`CDP`](CDP.md) page, so the plastic potential has a corner at the hydrostatic axis but no additional parameter.
+The implementation instead uses the linear potential $G=\left\|\bar{\mathbf s}\right\|+\alpha_p I_1$ described on the [`CDP`](CDP.md) page, so the plastic potential has a corner at the hydrostatic axis but no additional parameter.
 The relation between the input dilatancy parameter and the dilation angle is $\alpha_p=\tan\psi$, so the default $\alpha_p=0.6$ corresponds roughly to $\psi=31\text{\textdegree}$.
 
 !!! warning "implementation limitation"
@@ -57,7 +57,7 @@ The relation between the input dilatancy parameter and the dilation angle is $\a
 The four tables are the tensile backbone, compressive backbone, tensile damage and compressive damage, all expressed against plastic strain rather than against the internal variable $\kappa$.
 In the parser, the area under each backbone is integrated by the trapezoidal rule to recover the normalised energies $g_t$ and $g_c$, and the plastic-strain axis is mapped to $\kappa$ by cumulative energy.
 The last table point is connected to complete damage at $\kappa=1$ by an exponential tail, so the tables should extend well into the softening branch.
-Damage degrades the stiffness through $\boldsymbol\sigma=[1-s(r)d_t][1-d_c]\bar{\boldsymbol\sigma}$, with the stress-state factor $s(r)=w+r(1-w)$ and a single recovery parameter $w$ given by argument (11).
+Damage degrades the stiffness through $\mathbf\sigma=[1-s(r)d_t][1-d_c]\bar{\mathbf\sigma}$, with the stress-state factor $s(r)=w+r(1-w)$ and a single recovery parameter $w$ given by argument (11).
 The default $w=0$ means no recovery of tensile stiffness when cracks close, matching the Abaqus default; other CDP variants default to $w=0.5$.
 Viscous regularisation, available in Abaqus/Standard through the viscosity parameter, is not implemented.
 

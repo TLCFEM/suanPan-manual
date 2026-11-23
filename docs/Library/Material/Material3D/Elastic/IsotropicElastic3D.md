@@ -20,24 +20,24 @@ material IsotropicElastic3D (1) (2) (3) [4]
 Stress and strain are related by
 
 $$
-\boldsymbol\sigma=2G\boldsymbol\varepsilon+\lambda\,\mathrm{tr}(\boldsymbol\varepsilon)\boldsymbol I,\qquad
+\mathbf\sigma=2G\mathbf\varepsilon+\lambda\,\mathrm{tr}(\mathbf\varepsilon)\mathbf I,\qquad
 G=\dfrac{E}{2(1+\nu)},\qquad
 \lambda=\dfrac{E\nu}{(1+\nu)(1-2\nu)}.
 $$
 
 Here $E$ is the Young's modulus, $\nu$ is Poisson's ratio, $G$ is the shear modulus, and $\lambda$ is the first Lamé constant.
 The second Lamé constant is $\mu=G$.
-Splitting the strain into a volumetric part and a deviatoric part, $\boldsymbol\varepsilon=\tfrac13\varepsilon_v\boldsymbol I+\boldsymbol\varepsilon_d$ with $\varepsilon_v=\mathrm{tr}(\boldsymbol\varepsilon)$ and $\mathrm{tr}(\boldsymbol\varepsilon_d)=0$, gives the equivalent form
+Splitting the strain into a volumetric part and a deviatoric part, $\mathbf\varepsilon=\tfrac13\varepsilon_v\mathbf I+\mathbf\varepsilon_d$ with $\varepsilon_v=\mathrm{tr}(\mathbf\varepsilon)$ and $\mathrm{tr}(\mathbf\varepsilon_d)=0$, gives the equivalent form
 
 $$
-\boldsymbol\sigma=K\varepsilon_v\boldsymbol I+2G\boldsymbol\varepsilon_d,\qquad
+\mathbf\sigma=K\varepsilon_v\mathbf I+2G\mathbf\varepsilon_d,\qquad
 K=\lambda+\dfrac23G=\dfrac{E}{3(1-2\nu)}.
 $$
 
 The strain energy density is
 
 $$
-W=\dfrac12K\varepsilon_v^2+G\boldsymbol\varepsilon_d:\boldsymbol\varepsilon_d.
+W=\dfrac12K\varepsilon_v^2+G\mathbf\varepsilon_d:\mathbf\varepsilon_d.
 $$
 
 Positive definiteness requires $G>0$ and $K>0$, which gives the thermodynamic bounds $-1<\nu<\tfrac12$.

@@ -32,7 +32,7 @@ The complete quadratic basis $\{1,x,y,xy,x^2,y^2\}$ is fitted through the three 
 Differentiating this field gives the three in-plane strains
 
 $$
-\boldsymbol\varepsilon=\begin{bmatrix}u_{,x}\\ v_{,y}\\ u_{,y}+v_{,x}\end{bmatrix}=\mathbf B\mathbf d ,
+\mathbf\varepsilon=\begin{bmatrix}u_{,x}\\ v_{,y}\\ u_{,y}+v_{,x}\end{bmatrix}=\mathbf B\mathbf d ,
 $$
 
 and the element stiffness is the usual $\mathbf K=\int_A\mathbf B^{\mathsf T}\mathbf D\mathbf B\,t\,dA$, where $\mathbf D$ is the two-dimensional material stiffness and $t$ the thickness.

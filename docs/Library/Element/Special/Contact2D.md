@@ -10,21 +10,21 @@
 The `Contact2D` element enforces frictionless unilateral contact between a slave node and the master line segments formed by consecutive nodes of a master group.
 It is implemented as a finite element so that both the contact force and its consistent tangent are assembled directly into the global residual and stiffness.
 
-Let $\boldsymbol r_1$ and $\boldsymbol r_2$ be the current positions of the two master nodes of one segment and $\boldsymbol r_3$ that of the slave node, each position being the sum of the original coordinate and the trial displacement.
-The segment axis is $\boldsymbol l=\boldsymbol r_2-\boldsymbol r_1$ with length $l=\lVert\boldsymbol l\rVert$.
+Let $\mathbf r_1$ and $\mathbf r_2$ be the current positions of the two master nodes of one segment and $\mathbf r_3$ that of the slave node, each position being the sum of the original coordinate and the trial displacement.
+The segment axis is $\mathbf l=\mathbf r_2-\mathbf r_1$ with length $l=\lVert\mathbf l\rVert$.
 The outward unit normal is obtained by rotating the normalised axis by $\pi/2$,
 
 $$
-\boldsymbol n=\boldsymbol T\dfrac{\boldsymbol l}{l},\qquad
-\boldsymbol T=\begin{bmatrix}0&-1\\1&0\end{bmatrix}.
+\mathbf n=\mathbf T\dfrac{\mathbf l}{l},\qquad
+\mathbf T=\begin{bmatrix}0&-1\\1&0\end{bmatrix}.
 $$
 
-Define $\boldsymbol s=\boldsymbol r_3-\boldsymbol r_1$.
+Define $\mathbf s=\mathbf r_3-\mathbf r_1$.
 Contact is active only when the penetration and the parametric coordinate satisfy
 
 $$
-u=\boldsymbol s\cdot\boldsymbol n\le 0,\qquad
-t=\dfrac{\boldsymbol s\cdot\boldsymbol l}{\boldsymbol l\cdot\boldsymbol l}\in[0,1].
+u=\mathbf s\cdot\mathbf n\le 0,\qquad
+t=\dfrac{\mathbf s\cdot\mathbf l}{\mathbf l\cdot\mathbf l}\in[0,1].
 $$
 
 The parameter $t$ is the closest-point projection of the slave node onto the segment, and the condition $0\le t\le 1$ excludes the extensions beyond the two end nodes.
@@ -37,26 +37,26 @@ The penalty method replaces the exact impenetrability constraint $u=0$ by a cont
 The resistance on the slave node is
 
 $$
-\boldsymbol F_3=\alpha\,u\,\boldsymbol n,
+\mathbf F_3=\alpha\,u\,\mathbf n,
 $$
 
 and the equal-and-opposite reactions on the master nodes follow from force and moment equilibrium,
 
 $$
-\boldsymbol F_2=-\alpha\,t\,u\,\boldsymbol n,\qquad
-\boldsymbol F_1=\alpha\,(t-1)\,u\,\boldsymbol n.
+\mathbf F_2=-\alpha\,t\,u\,\mathbf n,\qquad
+\mathbf F_1=\alpha\,(t-1)\,u\,\mathbf n.
 $$
 
 The distribution $(1-t):t$ is the linear interpolation of the contact force to the segment end nodes, which is the classical 2D node-to-segment weighting.
-The tangent stiffness is the consistent linearisation $\boldsymbol K_e=-\partial\boldsymbol F/\partial\boldsymbol r$ of the three nodal resistance vectors.
-Because $\boldsymbol n$ depends on the orientation of the segment, its derivative
+The tangent stiffness is the consistent linearisation $\mathbf K_e=-\partial\mathbf F/\partial\mathbf r$ of the three nodal resistance vectors.
+Because $\mathbf n$ depends on the orientation of the segment, its derivative
 
 $$
-\dfrac{\partial\boldsymbol n}{\partial\boldsymbol l}=\dfrac{1}{l}\left(\boldsymbol T-\boldsymbol n\otimes\dfrac{\boldsymbol l}{l}\right)
+\dfrac{\partial\mathbf n}{\partial\mathbf l}=\dfrac{1}{l}\left(\mathbf T-\mathbf n\otimes\dfrac{\mathbf l}{l}\right)
 $$
 
 is retained, so the tangent remains symmetric and quadratic convergence of the Newton iteration is preserved.
-A positive $\alpha$ gives a repulsive force opposite to $\boldsymbol n$ for $u<0$.
+A positive $\alpha$ gives a repulsive force opposite to $\mathbf n$ for $u<0$.
 The gap is not enforced exactly: the residual penetration is of order $1/\alpha$, so increasing $\alpha$ reduces penetration at the cost of conditioning.
 No tangential traction is included, so the contact is frictionless.
 

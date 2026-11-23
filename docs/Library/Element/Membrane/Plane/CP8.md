@@ -20,7 +20,7 @@ N_5=\tfrac12(1-\xi^2)(1-\eta),\quad N_6=\tfrac12(1+\xi)(1-\eta^2),\quad N_7=\tfr
 $$
 The nodes are ordered counter-clockwise from $(\xi,\eta)=(-1,-1)$, with midside nodes on the bottom, right, top and left edges.
 The quadratic interpolation allows curved edges and a strain field that varies linearly within each element.
-The strain is assembled as $\boldsymbol\varepsilon=\boldsymbol B\boldsymbol a$ with the same Voigt pattern as [`CP4`](CP4.md), and the stiffness is $\boldsymbol K^e=\sum_q t\,J_qw_q\,\boldsymbol B_q^\mathrm T\boldsymbol D_q\boldsymbol B_q$.
+The strain is assembled as $\mathbf\varepsilon=\mathbf B\mathbf a$ with the same Voigt pattern as [`CP4`](CP4.md), and the stiffness is $\mathbf K^e=\sum_q t\,J_qw_q\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$.
 In the source the full scheme is the five-point Irons rule, which is exact to polynomial degree five and therefore comparable in accuracy to the $3\times3$ Gauss rule mentioned in the remarks.
 Reduced integration uses $2\times2$ Gauss points.
 

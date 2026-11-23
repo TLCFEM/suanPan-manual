@@ -11,7 +11,7 @@ F=\sqrt{J_2}+\eta_y p-\xi c(\bar\varepsilon_p),\qquad
 \Phi=\sqrt{J_2}+\eta_f p,
 $$
 
-where $J_2=\frac12\boldsymbol s:\boldsymbol s$ is the second deviatoric invariant, $p=\frac13\mathrm{tr}\,\boldsymbol\sigma$ is the hydrostatic stress and $\bar\varepsilon_p=\xi\gamma$ is the accumulated plastic strain.
+where $J_2=\frac12\mathbf s:\mathbf s$ is the second deviatoric invariant, $p=\frac13\mathrm{tr}\,\mathbf\sigma$ is the hydrostatic stress and $\bar\varepsilon_p=\xi\gamma$ is the accumulated plastic strain.
 The cohesion follows the exponential law introduced for concrete by Lubliner et al.,
 
 $$

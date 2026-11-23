@@ -13,7 +13,7 @@ Patch of Hexahedron Elements
 `PatchCube` is the three-dimensional solid patch element of the isogeometric framework described in [Patch](Patch.md).
 It builds a B-spline or NURBS volume from three knot vectors and a rectangular grid of control nodes, whose size follows from the knot vectors.
 Each control node supplies three translational DoFs, and its fourth coordinate is interpreted as the NURBS weight.
-The displacement field is $\boldsymbol u=\sum_{ijk}R_{ijk}\boldsymbol u_{ijk}$ with the tensor-product rational basis defined in [Patch](Patch.md).
+The displacement field is $\mathbf u=\sum_{ijk}R_{ijk}\mathbf u_{ijk}$ with the tensor-product rational basis defined in [Patch](Patch.md).
 Strains are integrated with a $2\times2\times2$ Gauss rule over each knot span, and the tangent, mass and body force use the same basis.
 
 ## Syntax

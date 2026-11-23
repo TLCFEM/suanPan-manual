@@ -15,19 +15,19 @@ Mixed Four-Node Quadrilateral Element
 
 [`QE2`](QE2.md) is Piltner's four-node mixed quadrilateral with two enhanced strain modes.
 It is derived from a Hu-Washizu functional in which displacement, strain and stress are interpolated independently.
-The stress field uses seven modes assembled from the mapped polynomial vector $[0,\xi,\eta,\xi\eta]$ and the seven-term stress interpolation $\boldsymbol P$.
-The compatible strain is $\boldsymbol\varepsilon_c=\boldsymbol B\boldsymbol a$, and two enhanced strain modes $\boldsymbol\varepsilon_e=\boldsymbol B_I\boldsymbol\lambda$ are added, so $\boldsymbol\varepsilon=\boldsymbol B\boldsymbol a+\boldsymbol B_I\boldsymbol\lambda$.
-The independent strain parameters $\boldsymbol\alpha$ and stress parameters $\boldsymbol\beta$ are related through the compliance matrix $\boldsymbol A=\boldsymbol D^{-1}\boldsymbol P$.
+The stress field uses seven modes assembled from the mapped polynomial vector $[0,\xi,\eta,\xi\eta]$ and the seven-term stress interpolation $\mathbf P$.
+The compatible strain is $\mathbf\varepsilon_c=\mathbf B\mathbf a$, and two enhanced strain modes $\mathbf\varepsilon_e=\mathbf B_I\mathbf\lambda$ are added, so $\mathbf\varepsilon=\mathbf B\mathbf a+\mathbf B_I\mathbf\lambda$.
+The independent strain parameters $\mathbf\alpha$ and stress parameters $\mathbf\beta$ are related through the compliance matrix $\mathbf A=\mathbf D^{-1}\mathbf P$.
 The discrete equations contain the arrays
 $$
-\boldsymbol H=\sum_q\boldsymbol P_q^\mathrm T\boldsymbol A_qw_q,\quad \boldsymbol L=\sum_q\boldsymbol P_q^\mathrm T\boldsymbol B_qw_q,\quad \boldsymbol L_I=\sum_q\boldsymbol P_q^\mathrm T\boldsymbol B_{Iq}w_q.
+\mathbf H=\sum_q\mathbf P_q^\mathrm T\mathbf A_qw_q,\quad \mathbf L=\sum_q\mathbf P_q^\mathrm T\mathbf B_qw_q,\quad \mathbf L_I=\sum_q\mathbf P_q^\mathrm T\mathbf B_{Iq}w_q.
 $$
 The local unknowns are eliminated by static condensation.
-Since $\boldsymbol H$ is symmetric, the condensed stiffness assembled in the code is
+Since $\mathbf H$ is symmetric, the condensed stiffness assembled in the code is
 $$
-\boldsymbol K^e=\boldsymbol L^\mathrm T\boldsymbol H^{-1}\boldsymbol L-\left(\boldsymbol L_I^\mathrm T\boldsymbol H^{-1}\boldsymbol L\right)^\mathrm T\left(\boldsymbol L_I^\mathrm T\boldsymbol H^{-1}\boldsymbol L_I\right)^{-1}\left(\boldsymbol L_I^\mathrm T\boldsymbol H^{-1}\boldsymbol L\right).
+\mathbf K^e=\mathbf L^\mathrm T\mathbf H^{-1}\mathbf L-\left(\mathbf L_I^\mathrm T\mathbf H^{-1}\mathbf L\right)^\mathrm T\left(\mathbf L_I^\mathrm T\mathbf H^{-1}\mathbf L_I\right)^{-1}\left(\mathbf L_I^\mathrm T\mathbf H^{-1}\mathbf L\right).
 $$
-The condensation matrices $\boldsymbol L$, $\boldsymbol L_I$, $\boldsymbol H$ and their inverses are formed once at initialisation from the initial material tangent.
+The condensation matrices $\mathbf L$, $\mathbf L_I$, $\mathbf H$ and their inverses are formed once at initialisation from the initial material tangent.
 The local stiffness is refreshed from the current trial tangent at every iteration and the reduced matrices are recomputed from it, so the element remains usable with nonlinear materials.
 The enhanced modes relieve shear locking and reduce sensitivity to element distortion compared with the bilinear [`CP4`](../Plane/CP4.md).
 

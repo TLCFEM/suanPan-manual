@@ -30,7 +30,7 @@ material Concrete22 (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) [12]
 ## Theory
 
 Let $\theta$ be the crack angle stored in `trial_history(0)` and let $\mathbf T(\theta)$ be the corresponding transformation matrix.
-The trial strain is projected into these axes, $\hat{\boldsymbol\varepsilon}=\mathbf T\boldsymbol\varepsilon$, and the two normal components drive two independent uniaxial concrete models.
+The trial strain is projected into these axes, $\hat{\mathbf\varepsilon}=\mathbf T\mathbf\varepsilon$, and the two normal components drive two independent uniaxial concrete models.
 The source also records the largest tensile principal strain $\varepsilon_{t,\max}$ and the smallest compressive principal strain $\varepsilon_{c,\max}$ in `trial_history(1)` and `trial_history(2)`.
 The angle is updated from the current strain only while $\varepsilon_{t,\max}<\varepsilon_{cr}$ and $\varepsilon_{c,\max}>\varepsilon_{pk}$, where $\varepsilon_{cr}$ and $\varepsilon_{pk}$ are the tensile cracking and compressive peak strains.
 Once either cracking or crushing is detected the angle is frozen, which is the precise sense in which this model has fixed cracks.
@@ -51,7 +51,7 @@ with $\beta_s$ the shear retention factor.
     The shear retention factor is constant and the model has no crack-slip, aggregate-interlock or shear-dilatancy law.
     After the orientation is locked, continuing changes in the principal strain direction produce shear stress even though no new crack direction is created.
 
-The stress and stiffness are finally rotated back to global axes by $\boldsymbol\sigma=\mathbf T^{\mathrm T}\hat{\boldsymbol\sigma}$ and $\mathbf K=\mathbf T^{\mathrm T}\hat{\mathbf K}\mathbf T$.
+The stress and stiffness are finally rotated back to global axes by $\mathbf\sigma=\mathbf T^{\mathrm T}\hat{\mathbf\sigma}$ and $\mathbf K=\mathbf T^{\mathrm T}\hat{\mathbf K}\mathbf T$.
 
 ## Remarks
 

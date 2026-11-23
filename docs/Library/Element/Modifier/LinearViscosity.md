@@ -17,11 +17,11 @@ For each targeted element, the modifier builds a diagonal viscous matrix with $$
 It therefore provides element-level damping proportional to the strain rate.
 It is applied only in a dynamic analysis and only to elements that allow their viscous properties to be modified.
 
-For an element with $$n$$ DoFs and trial velocity $$\dot{\boldsymbol u}_e$$, the modifier sets
+For an element with $$n$$ DoFs and trial velocity $$\dot{\mathbf u}_e$$, the modifier sets
 
 $$
-\boldsymbol C_e=\mu\,\boldsymbol I_n,\qquad
-\boldsymbol f_{d,e}=\boldsymbol C_e\dot{\boldsymbol u}_e=\mu\,\dot{\boldsymbol u}_e .
+\mathbf C_e=\mu\,\mathbf I_n,\qquad
+\mathbf f_{d,e}=\mathbf C_e\dot{\mathbf u}_e=\mu\,\dot{\mathbf u}_e .
 $$
 
 This is the simplest member of the element-level damping framework described on the [`Modifier`](Modifier.md) page, where more general damping matrices are discussed.

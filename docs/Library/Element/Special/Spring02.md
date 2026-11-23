@@ -8,24 +8,24 @@ Spring Using Strain
 ## Background
 
 `Spring02` is the strain-based counterpart of [`Spring01`](Spring01.md).
-The initial node separation $L=\lVert\boldsymbol x_j-\boldsymbol x_i\rVert$ is computed at initialisation, and a separation below $10^{-10}$ is replaced by $L=1$ to avoid division by zero.
-With $\boldsymbol d=\boldsymbol x_j-\boldsymbol x_i$, the scaled direction $\boldsymbol b=\boldsymbol d/L^2$ gives the scalar input
+The initial node separation $L=\lVert\mathbf x_j-\mathbf x_i\rVert$ is computed at initialisation, and a separation below $10^{-10}$ is replaced by $L=1$ to avoid division by zero.
+With $\mathbf d=\mathbf x_j-\mathbf x_i$, the scaled direction $\mathbf b=\mathbf d/L^2$ gives the scalar input
 
 $$
-\epsilon=\boldsymbol b\cdot(\boldsymbol u_j-\boldsymbol u_i)
-=\dfrac{\boldsymbol d\cdot(\boldsymbol u_j-\boldsymbol u_i)}{L^2}=\dfrac{\Delta}{L},
+\epsilon=\mathbf b\cdot(\mathbf u_j-\mathbf u_i)
+=\dfrac{\mathbf d\cdot(\mathbf u_j-\mathbf u_i)}{L^2}=\dfrac{\Delta}{L},
 $$
 
 so the material receives the axial strain $\epsilon$ and returns a stress $\sigma$ and tangent stiffness $k$.
 The assembled stiffness and internal force are
 
 $$
-\boldsymbol K_e=\dfrac{k}{L^2}\boldsymbol c\,\boldsymbol c^{\mathrm T},
+\mathbf K_e=\dfrac{k}{L^2}\mathbf c\,\mathbf c^{\mathrm T},
 \qquad
-\boldsymbol R_j=\dfrac{\sigma}{L}\boldsymbol c,\qquad \boldsymbol R_i=-\boldsymbol R_j,
+\mathbf R_j=\dfrac{\sigma}{L}\mathbf c,\qquad \mathbf R_i=-\mathbf R_j,
 $$
 
-where $\boldsymbol c=\boldsymbol d/L$ is the initial unit direction.
+where $\mathbf c=\mathbf d/L$ is the initial unit direction.
 The derivation of the rank-one projection and the remarks on fixed geometry are given on the [`Spring01`](Spring01.md) page.
 
 !!! info "deviation from theory"

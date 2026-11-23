@@ -9,11 +9,11 @@ The material must be used with a nonlocal element such as `NonlocalC3D8`.
 
 ## Theory
 
-The driving energy is $$\tfrac12\boldsymbol\sigma^\ast:\mathbf E^{-1}:\boldsymbol\sigma^\ast-\text{maximum\_energy}$$, where $$\boldsymbol\sigma^\ast$$ is the deviatoric tensile part of the trial stress.
+The driving energy is $$\tfrac12\mathbf\sigma^\ast:\mathbf E^{-1}:\mathbf\sigma^\ast-\text{maximum\_energy}$$, where $$\mathbf\sigma^\ast$$ is the deviatoric tensile part of the trial stress.
 A scalar damage variable $$d=1-\bigl[1+(r(\sqrt{\Delta/e_\text{max}+1}-1))^2\bigr]^{-1}$$ evolves with the excessive energy $$\Delta$$ at evolution rate $$r$$, and the stress is scaled by $$1-d$$.
 The reference length sets the gradient length scale and the diffusion rate controls spatial coupling of the nonlocal field.
 
-The local driving measure is $\Phi=\tfrac12\boldsymbol\sigma^\ast:\mathbf D^{-1}:\boldsymbol\sigma^\ast-E_\max$, where $\mathbf D$ is the elastic stiffness and $\boldsymbol\sigma^\ast$ is the tensile part of the deviatoric trial stress obtained from a spectral split.
+The local driving measure is $\Phi=\tfrac12\mathbf\sigma^\ast:\mathbf D^{-1}:\mathbf\sigma^\ast-E_\max$, where $\mathbf D$ is the elastic stiffness and $\mathbf\sigma^\ast$ is the tensile part of the deviatoric trial stress obtained from a spectral split.
 The parser selects this `DEV_TENSILE` measure, while the `TOTAL` and `TENSILE` variants exist in the class but cannot be chosen from the command line.
 
 !!! warning "implementation limitation"

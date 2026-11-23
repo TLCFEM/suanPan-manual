@@ -18,17 +18,17 @@ Depending on the specific material model, additional output types may be availab
 
 ## Background
 
-A three-dimensional material receives the six-component Voigt vector $\boldsymbol\varepsilon=(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\gamma_{23},\gamma_{13},\gamma_{12})^{\mathrm T}$ and returns $\boldsymbol\sigma=(\sigma_{11},\sigma_{22},\sigma_{33},\tau_{23},\tau_{13},\tau_{12})^{\mathrm T}$.
+A three-dimensional material receives the six-component Voigt vector $\mathbf\varepsilon=(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\gamma_{23},\gamma_{13},\gamma_{12})^{\mathrm T}$ and returns $\mathbf\sigma=(\sigma_{11},\sigma_{22},\sigma_{33},\tau_{23},\tau_{13},\tau_{12})^{\mathrm T}$.
 The last three entries are engineering shear strains and stresses, with $\gamma_{ij}=2\varepsilon_{ij}$ for $i\neq j$, which makes the elasticity matrix symmetric.
-For isotropic linear elasticity $\boldsymbol\sigma=2G\boldsymbol\varepsilon+\lambda\,\mathrm{tr}(\boldsymbol\varepsilon)\boldsymbol I$ with $G=E/[2(1+\nu)]$ and $\lambda=E\nu/[(1+\nu)(1-2\nu)]$.
-Elastoplastic and damage models split the strain additively, $\boldsymbol\varepsilon=\boldsymbol\varepsilon^e+\boldsymbol\varepsilon^p$, and use a return-mapping algorithm to enforce the yield or damage condition at the end of each step.
+For isotropic linear elasticity $\mathbf\sigma=2G\mathbf\varepsilon+\lambda\,\mathrm{tr}(\mathbf\varepsilon)\mathbf I$ with $G=E/[2(1+\nu)]$ and $\lambda=E\nu/[(1+\nu)(1-2\nu)]$.
+Elastoplastic and damage models split the strain additively, $\mathbf\varepsilon=\mathbf\varepsilon^e+\mathbf\varepsilon^p$, and use a return-mapping algorithm to enforce the yield or damage condition at the end of each step.
 The algorithmic tangent returned by `trial_stiffness` must be the derivative of the converged stress update, otherwise the global Newton iteration loses its quadratic convergence.
 
 The derived recorder quantities are defined from the committed stress and strain.
 `SP` and `EP` are the eigenvalues of the stress and strain tensors, obtained by reshaping the Voigt vectors into symmetric second-order tensors.
-`EE` and `PE` are computed by solving $\boldsymbol\varepsilon^e=\mathbf D_0^{-1}\boldsymbol\sigma$ and $\boldsymbol\varepsilon^p=\boldsymbol\varepsilon-\boldsymbol\varepsilon^e$ with the initial elastic stiffness.
-`EEQ`, `EEEQ` and `PEEQ` are the von Mises norms $\sqrt{2/3\,\boldsymbol e:\boldsymbol e}$ of the total, elastic and plastic strain deviators.
-`HYDRO` is the mean stress $\sigma_{kk}/3$ and `MISES` is $\sqrt{3/2\,\boldsymbol s:\boldsymbol s}$ with $\boldsymbol s=\operatorname{dev}\boldsymbol\sigma$.
+`EE` and `PE` are computed by solving $\mathbf\varepsilon^e=\mathbf D_0^{-1}\mathbf\sigma$ and $\mathbf\varepsilon^p=\mathbf\varepsilon-\mathbf\varepsilon^e$ with the initial elastic stiffness.
+`EEQ`, `EEEQ` and `PEEQ` are the von Mises norms $\sqrt{2/3\,\mathbf e:\mathbf e}$ of the total, elastic and plastic strain deviators.
+`HYDRO` is the mean stress $\sigma_{kk}/3$ and `MISES` is $\sqrt{3/2\,\mathbf s:\mathbf s}$ with $\mathbf s=\operatorname{dev}\mathbf\sigma$.
 
 !!! warning "implementation limitation"
     The elastic and plastic strain outputs use the initial stiffness matrix, not the current elastic operator.

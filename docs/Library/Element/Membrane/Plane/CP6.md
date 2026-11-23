@@ -18,7 +18,7 @@ Nodes 1 to 3 are the vertices and nodes 4 to 6 are the midpoints of edges 1-2, 2
 The interpolation uses the complete quadratic monomial vector $[1,x,y,xy,x^2,y^2]$, so the displacement is quadratic and the strain varies linearly over the triangle.
 The implementation inverts the $6\times6$ matrix built from the six nodal coordinate vectors to obtain the shape functions and their derivatives directly in the global frame.
 Three integration points are placed at the three midside nodes with weights $A\,t/3$ each, which integrates the quadratic strain energy exactly.
-The stiffness is $\boldsymbol K^e=\sum_{q=1}^{3}\tfrac{1}{3}A\,t\,\boldsymbol B_q^\mathrm T\boldsymbol D_q\boldsymbol B_q$.
+The stiffness is $\mathbf K^e=\sum_{q=1}^{3}\tfrac{1}{3}A\,t\,\mathbf B_q^\mathrm T\mathbf D_q\mathbf B_q$.
 
 !!! info "deviation from theory"
     The same three-point rule is reused for the mass matrix.

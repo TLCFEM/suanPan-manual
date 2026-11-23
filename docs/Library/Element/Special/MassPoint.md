@@ -5,16 +5,16 @@ The `MassPoint` element is used to represent a mass point with translational mas
 ## Background
 
 `MassPoint2D` and `MassPoint3D` are convenience wrappers around the general [`Mass`](Mass.md) element that predefine the DoF set of a point mass.
-They contribute a constant diagonal mass matrix and no stiffness, so they only enter the inertia term $\boldsymbol M\ddot{\boldsymbol u}$ of a dynamic analysis.
+They contribute a constant diagonal mass matrix and no stiffness, so they only enter the inertia term $\mathbf M\ddot{\mathbf u}$ of a dynamic analysis.
 
 The translational magnitude $m$ is placed on all translation DoFs and the optional rotational magnitude $I$ is placed on all rotation DoFs, giving
 
 $$
-\boldsymbol M_e^{2D}=\operatorname{diag}(m,m,I),\qquad
-\boldsymbol M_e^{3D}=\operatorname{diag}(m,m,m,I,I,I).
+\mathbf M_e^{2D}=\operatorname{diag}(m,m,I),\qquad
+\mathbf M_e^{3D}=\operatorname{diag}(m,m,m,I,I,I).
 $$
 
-This corresponds to the lumped rigid-body inertia $T=\tfrac12 m\lVert\dot{\boldsymbol u}\rVert^2+\tfrac12 I\lVert\boldsymbol\omega\rVert^2$ with an isotropic inertia tensor.
+This corresponds to the lumped rigid-body inertia $T=\tfrac12 m\lVert\dot{\mathbf u}\rVert^2+\tfrac12 I\lVert\mathbf\omega\rVert^2$ with an isotropic inertia tensor.
 See [`Mass`](Mass.md) for the distinction between lumped and consistent mass matrices and for a more general DoF assignment.
 
 !!! warning "implementation limitation"

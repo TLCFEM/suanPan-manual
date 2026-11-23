@@ -15,11 +15,11 @@ Elemental Damping Using Lee's Formulation
 For each selected element it writes the scaled mass and stiffness matrices
 
 $$
-\zeta_e\,\boldsymbol M_e,\qquad
-\zeta_e\big(\boldsymbol K_e+\boldsymbol K_{g,e}\big),
+\zeta_e\,\mathbf M_e,\qquad
+\zeta_e\big(\mathbf K_e+\mathbf K_{g,e}\big),
 $$
 
-where $\zeta_e$ is the element damping multiplier, $\boldsymbol M_e$ the current mass matrix, $\boldsymbol K_e$ the current tangent stiffness and $\boldsymbol K_{g,e}$ the geometric stiffness when `nlgeom` is active and a geometric matrix exists.
+where $\zeta_e$ is the element damping multiplier, $\mathbf M_e$ the current mass matrix, $\mathbf K_e$ the current tangent stiffness and $\mathbf K_{g,e}$ the geometric stiffness when `nlgeom` is active and a geometric matrix exists.
 These containers are read by the companion integrator [`LeeElementalNewmark`](../../Integrator/Implicit/Newmark/LeeElementalNewmark.md) as the damping contributions of the Lee formulation.
 
 The integrator defines a reference bell-shaped damping curve from a reference ratio and a peak frequency.

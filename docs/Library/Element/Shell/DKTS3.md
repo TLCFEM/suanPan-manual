@@ -24,7 +24,7 @@ The membrane interpolation samples three mid-edge points and uses the Allman-typ
 
 The plate interpolation applies the discrete Kirchhoff constraint at the same three mid-edge points, so a single set of sampling points serves both actions.
 
-At a fibre of coordinate $z$ the strain is $\boldsymbol\varepsilon(z)=\mathbf B_m\mathbf d_m+z\,\mathbf B_p\mathbf d_p$, giving the membrane, bending and membrane--bending coupling blocks described on [ShellBase](ShellBase.md).
+At a fibre of coordinate $z$ the strain is $\mathbf\varepsilon(z)=\mathbf B_m\mathbf d_m+z\,\mathbf B_p\mathbf d_p$, giving the membrane, bending and membrane--bending coupling blocks described on [ShellBase](ShellBase.md).
 
 Gauss integration through the thickness uses the selected number of layers, with $z=\xi t/2$ by default for three points.
 

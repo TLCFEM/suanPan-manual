@@ -5,7 +5,7 @@
 ## Background
 
 The two-dimensional elasticity models are obtained by reducing the three-dimensional Hooke law under either plane stress or plane strain.
-With engineering shear strain $\gamma_{12}=2\varepsilon_{12}$, the 3D law is $\boldsymbol\sigma=2G\boldsymbol\varepsilon+\lambda\,\mathrm{tr}(\boldsymbol\varepsilon)\boldsymbol I$ with $G=E/[2(1+\nu)]$ and $\lambda=E\nu/[(1+\nu)(1-2\nu)]$.
+With engineering shear strain $\gamma_{12}=2\varepsilon_{12}$, the 3D law is $\mathbf\sigma=2G\mathbf\varepsilon+\lambda\,\mathrm{tr}(\mathbf\varepsilon)\mathbf I$ with $G=E/[2(1+\nu)]$ and $\lambda=E\nu/[(1+\nu)(1-2\nu)]$.
 
 Under plane stress, $\sigma_{33}=\tau_{23}=\tau_{13}=0$ and the out-of-plane strain $\varepsilon_{33}=-\nu(\sigma_{11}+\sigma_{22})/E$ is eliminated, giving the reduced stiffness
 $$

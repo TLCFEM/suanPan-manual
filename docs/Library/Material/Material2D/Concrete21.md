@@ -89,7 +89,7 @@ which is identical to the expression shown in [10.1061/(ASCE)0733-9399(1989)115:
 
 The source builds two instances of [`ConcreteTsai`](../Material1D/Concrete/ConcreteTsai.md) with identical parameters and drives them with the two principal strains of the current total strain vector.
 The crack orientation is recomputed from the current strain at every trial update, so the axes rotate with the strain field.
-The principal stresses are rotated back with the same transformation matrix, giving $\boldsymbol\sigma=\mathbf T^{\mathrm T}\hat{\boldsymbol\sigma}$ and $\mathbf K=\mathbf T^{\mathrm T}\hat{\mathbf K}\mathbf T$.
+The principal stresses are rotated back with the same transformation matrix, giving $\mathbf\sigma=\mathbf T^{\mathrm T}\hat{\mathbf\sigma}$ and $\mathbf K=\mathbf T^{\mathrm T}\hat{\mathbf K}\mathbf T$.
 The shear entry of $\hat{\mathbf K}$ is the secant $\tfrac12(\hat\sigma_1-\hat\sigma_2)/(\hat\varepsilon_1-\hat\varepsilon_2)$, with a fallback to the initial shear modulus $E/2$ when the two principal strains coincide or the expression is not finite.
 
 !!! warning "implementation limitation"

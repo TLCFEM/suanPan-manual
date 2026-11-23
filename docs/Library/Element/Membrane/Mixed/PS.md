@@ -17,30 +17,30 @@ Pian-Sumihara Quadrilateral Element
 It is based on a Hellinger-Reissner or complementary-energy functional in which the stress field and the displacement field are interpolated independently.
 The stress interpolation uses the five-parameter pattern
 $$
-\boldsymbol P=\begin{bmatrix}
+\mathbf P=\begin{bmatrix}
 1&0&0&T_{11}\eta&T_{12}\xi\\
 0&1&0&T_{21}\eta&T_{22}\xi\\
 0&0&1&T_{31}\eta&T_{32}\xi
 \end{bmatrix},
 $$
-where the first column of $\boldsymbol T$ is $[(\partial x/\partial\xi)^2,(\partial y/\partial\xi)^2,(\partial x/\partial\xi)(\partial y/\partial\xi)]^\mathrm T$ and the second column is the same expression with $\xi$ replaced by $\eta$.
+where the first column of $\mathbf T$ is $[(\partial x/\partial\xi)^2,(\partial y/\partial\xi)^2,(\partial x/\partial\xi)(\partial y/\partial\xi)]^\mathrm T$ and the second column is the same expression with $\xi$ replaced by $\eta$.
 The last two columns are therefore the natural-coordinate linear terms $\eta$ and $\xi$ mapped to physical strain components, which makes the element insensitive to distortion.
-With the strain interpolation $\boldsymbol\varepsilon=\boldsymbol B\boldsymbol a$ and the elastic compliance $\boldsymbol D^{-1}$, the compatibility and equilibrium matrices are
+With the strain interpolation $\mathbf\varepsilon=\mathbf B\mathbf a$ and the elastic compliance $\mathbf D^{-1}$, the compatibility and equilibrium matrices are
 $$
-\boldsymbol H=\sum_q\boldsymbol P_q^\mathrm T\boldsymbol D^{-1}\boldsymbol P_q\,w_q,\qquad \boldsymbol N=\sum_q\boldsymbol P_q^\mathrm T\boldsymbol B_q\,w_q.
+\mathbf H=\sum_q\mathbf P_q^\mathrm T\mathbf D^{-1}\mathbf P_q\,w_q,\qquad \mathbf N=\sum_q\mathbf P_q^\mathrm T\mathbf B_q\,w_q.
 $$
-The stress parameters follow from stationarity as $\boldsymbol\beta=\boldsymbol H^{-1}\boldsymbol N\boldsymbol a$, and the stiffness reduces to
+The stress parameters follow from stationarity as $\mathbf\beta=\mathbf H^{-1}\mathbf N\mathbf a$, and the stiffness reduces to
 $$
-\boldsymbol K^e=\boldsymbol N^\mathrm T\boldsymbol H^{-1}\boldsymbol N.
+\mathbf K^e=\mathbf N^\mathrm T\mathbf H^{-1}\mathbf N.
 $$
-Because the strain is recovered directly from the assumed stress through $\boldsymbol\varepsilon=\boldsymbol D^{-1}\boldsymbol P\boldsymbol\beta$, no local nonlinear solve is needed when the material is nonlinear.
+Because the strain is recovered directly from the assumed stress through $\mathbf\varepsilon=\mathbf D^{-1}\mathbf P\mathbf\beta$, no local nonlinear solve is needed when the material is nonlinear.
 The element therefore keeps the low cost of [`CP4`](../Plane/CP4.md) while avoiding shear locking.
 
 !!! info "deviation from theory"
     Unlike a fully nonlinear assumed-stress formulation, the stress modes do not adapt to a changing material tangent.
 
 !!! note "developer note"
-    A fully nonlinear assumed-stress formulation would rebuild the compatibility matrix $\boldsymbol H$ from the current tangent at every iteration.
+    A fully nonlinear assumed-stress formulation would rebuild the compatibility matrix $\mathbf H$ from the current tangent at every iteration.
     Here the strain interpolation is calibrated once against the initial elastic stiffness.
 
 ## References

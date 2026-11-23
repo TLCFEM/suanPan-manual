@@ -6,7 +6,7 @@ This hardening law is identical to the one documented in the ABAQUS manual (4.4.
 
 ## Background
 
-Critical state soil mechanics describes a saturated soil in terms of the effective stress $\boldsymbol\sigma'=\boldsymbol\sigma+u\boldsymbol I$, where $u$ is the pore pressure.
+Critical state soil mechanics describes a saturated soil in terms of the effective stress $\mathbf\sigma'=\mathbf\sigma+u\mathbf I$, where $u$ is the pore pressure.
 For isotropic compression the specific volume $v=1+e$ decreases linearly with $\ln p'$ along the virgin consolidation line $v=N-\lambda\ln p'$ and recovers along the swelling line $v=v_\kappa-\kappa\ln p'$, with $\lambda>\kappa>0$.
 Continued shearing drives the soil towards the critical state line $v=\Gamma-\lambda\ln p'$ and $q=Mp'$, where both the volume and the stress ratio become constant.
 The parameter $\Gamma$ is the specific volume on the critical state line at $p'=1$ unit of stress, $N$ is the corresponding intercept of the virgin consolidation line, and $M$ is the slope of the critical state line.

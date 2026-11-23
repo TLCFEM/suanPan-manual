@@ -10,9 +10,9 @@ Couple Stress Mixed Triangle/Quadrilateral
 
 The `CS` family is based on the consistent couple stress theory, in which the rotation is an independent kinematic field and the strain energy depends on both the symmetric strain and the curvature.
 Each node carries two translations and one drilling rotation $\omega$, so the displacement and rotation fields are interpolated independently.
-The conjugate stress measures are the usual Cauchy stress $\boldsymbol\sigma$ and a couple stress $\boldsymbol m$, with the equilibrium equation
+The conjugate stress measures are the usual Cauchy stress $\mathbf\sigma$ and a couple stress $\mathbf m$, with the equilibrium equation
 $$
-\nabla\cdot\boldsymbol\sigma+\boldsymbol b=\boldsymbol 0,\qquad \nabla\cdot\boldsymbol m+\boldsymbol\epsilon:\boldsymbol\sigma=\boldsymbol 0.
+\nabla\cdot\mathbf\sigma+\mathbf b=\mathbf 0,\qquad \nabla\cdot\mathbf m+\mathbf\epsilon:\mathbf\sigma=\mathbf 0.
 $$
 The six-field mixed variational principle used in the implementation introduces the displacement, rotation, strain, curvature, stress and couple stress as independent fields and removes the need for a local iteration.
 The characteristic length $l$ couples the curvature energy to the strain energy and sets the scale at which rotational effects become significant.

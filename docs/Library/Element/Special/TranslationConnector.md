@@ -44,14 +44,14 @@ The `TranslationConnector` will pull node $$k$$ to the (closest point of) line d
 
 The ratio $$c$$ is computed according to the initial positions and remains constant during the analysis.
 
-With the fixed ratio $c$, the target point on the line is $(1-c)\boldsymbol x_i+c\,\boldsymbol x_j$, and the penalty force on node $k$ is
+With the fixed ratio $c$, the target point on the line is $(1-c)\mathbf x_i+c\,\mathbf x_j$, and the penalty force on node $k$ is
 
 $$
-\boldsymbol R_k=\alpha\big[(1-c)\boldsymbol u_i+c\,\boldsymbol u_j-\boldsymbol u_k\big].
+\mathbf R_k=\alpha\big[(1-c)\mathbf u_i+c\,\mathbf u_j-\mathbf u_k\big].
 $$
 
-The reactions on nodes $i$ and $j$ are $-(1-c)\boldsymbol R_k$ and $-c\,\boldsymbol R_k$, so the three nodal forces are self-equilibrated.
-Writing $\boldsymbol B=[(1-c)\boldsymbol I,\ c\boldsymbol I,\ -\boldsymbol I]$, the initial tangent rows for nodes $i$, $j$ and $k$ are $-(1-c)\alpha\boldsymbol B$, $-c\alpha\boldsymbol B$ and $\alpha\boldsymbol B$, respectively.
+The reactions on nodes $i$ and $j$ are $-(1-c)\mathbf R_k$ and $-c\,\mathbf R_k$, so the three nodal forces are self-equilibrated.
+Writing $\mathbf B=[(1-c)\mathbf I,\ c\mathbf I,\ -\mathbf I]$, the initial tangent rows for nodes $i$, $j$ and $k$ are $-(1-c)\alpha\mathbf B$, $-c\alpha\mathbf B$ and $\alpha\mathbf B$, respectively.
 The tangent is assembled once from the initial geometry and has rank equal to the number of translational DoFs.
 
 !!! warning "implementation limitation"

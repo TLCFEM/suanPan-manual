@@ -76,8 +76,8 @@ virtual double compute_dk(double) const = 0;
 | `initial_history(0)`   | equivalent plastic strain |
 | `initial_history(1:7)` | plastic strain            |
 
-The plastic flow is associative with $\Delta\boldsymbol\varepsilon_p=\Delta\gamma\,\partial F/\partial\boldsymbol\sigma$.
-The equivalent plastic strain is accumulated as $\Delta\bar\varepsilon_p=\sqrt{2/3}\lVert\Delta\boldsymbol\varepsilon_p\rVert$.
+The plastic flow is associative with $\Delta\mathbf\varepsilon_p=\Delta\gamma\,\partial F/\partial\mathbf\sigma$.
+The equivalent plastic strain is accumulated as $\Delta\bar\varepsilon_p=\sqrt{2/3}\lVert\Delta\mathbf\varepsilon_p\rVert$.
 The elastic predictor uses the orthotropic stiffness and the consistency condition is solved by Newton iteration for the plastic multiplier and the stress.
 
 !!! note "developer note"

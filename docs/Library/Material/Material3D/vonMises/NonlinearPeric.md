@@ -24,8 +24,8 @@ This is an abstract base class, and a derived class supplies the isotropic radiu
 !!! warning "implementation limitation"
     A negative radius is clamped to zero and its derivative is discarded.
 
-The elastic predictor gives the trial stress and the trial von Mises stress $$q^{tr}=\sqrt{3/2}\lVert\mathrm{dev}\,\boldsymbol\sigma^{tr}\rVert$$.
-With the multiplier normalisation $$\mathrm{d}\boldsymbol\varepsilon^p=\sqrt{3/2}\,\gamma\,\boldsymbol n$$ one has $$\mathrm{d}p=\gamma$$ and $$q=q^{tr}-3G\gamma$$ during radial return.
+The elastic predictor gives the trial stress and the trial von Mises stress $$q^{tr}=\sqrt{3/2}\lVert\mathrm{dev}\,\mathbf\sigma^{tr}\rVert$$.
+With the multiplier normalisation $$\mathrm{d}\mathbf\varepsilon^p=\sqrt{3/2}\,\gamma\,\mathbf n$$ one has $$\mathrm{d}p=\gamma$$ and $$q=q^{tr}-3G\gamma$$ during radial return.
 The backward-Euler residual solved by the local Newton iteration is
 
 $$

@@ -49,22 +49,22 @@ Writing $\varepsilon_s=\varepsilon_p^2$ removes the square root from the derivat
     Because the potential depends only on $\varepsilon_s=\varepsilon_p^2$, the deviatoric response is even in $\varepsilon_p$.
     Tension-compression asymmetry in the deviatoric response cannot be represented by this framework.
 
-With $\boldsymbol I$ the identity and $\mathbf P_\mathrm{dev}$ the fourth-order deviatoric projector, the chain rule gives
+With $\mathbf I$ the identity and $\mathbf P_\mathrm{dev}$ the fourth-order deviatoric projector, the chain rule gives
 
 $$
-\boldsymbol\sigma=\dfrac{\partial W}{\partial\varepsilon_v}\boldsymbol I+\dfrac{\partial W}{\partial\varepsilon_s}\dfrac{\partial\varepsilon_s}{\partial\boldsymbol\varepsilon},
+\mathbf\sigma=\dfrac{\partial W}{\partial\varepsilon_v}\mathbf I+\dfrac{\partial W}{\partial\varepsilon_s}\dfrac{\partial\varepsilon_s}{\partial\mathbf\varepsilon},
 \qquad
-\dfrac{\partial\varepsilon_s}{\partial\boldsymbol\varepsilon}=\dfrac43\boldsymbol\varepsilon_d,
+\dfrac{\partial\varepsilon_s}{\partial\mathbf\varepsilon}=\dfrac43\mathbf\varepsilon_d,
 \qquad
-\dfrac{\partial^2\varepsilon_s}{\partial\boldsymbol\varepsilon\partial\boldsymbol\varepsilon}=\dfrac43\mathbf P_\mathrm{dev}.
+\dfrac{\partial^2\varepsilon_s}{\partial\mathbf\varepsilon\partial\mathbf\varepsilon}=\dfrac43\mathbf P_\mathrm{dev}.
 $$
 
 The consistent tangent is
 
 $$
-\mathbb D=\dfrac{\partial^2W}{\partial\varepsilon_v^2}\boldsymbol I\otimes\boldsymbol I
-+\dfrac{\partial^2W}{\partial\varepsilon_v\partial\varepsilon_s}\left(\boldsymbol I\otimes\dfrac{\partial\varepsilon_s}{\partial\boldsymbol\varepsilon}+\dfrac{\partial\varepsilon_s}{\partial\boldsymbol\varepsilon}\otimes\boldsymbol I\right)
-+\dfrac{\partial^2W}{\partial\varepsilon_s^2}\dfrac{\partial\varepsilon_s}{\partial\boldsymbol\varepsilon}\otimes\dfrac{\partial\varepsilon_s}{\partial\boldsymbol\varepsilon}
+\mathbb D=\dfrac{\partial^2W}{\partial\varepsilon_v^2}\mathbf I\otimes\mathbf I
++\dfrac{\partial^2W}{\partial\varepsilon_v\partial\varepsilon_s}\left(\mathbf I\otimes\dfrac{\partial\varepsilon_s}{\partial\mathbf\varepsilon}+\dfrac{\partial\varepsilon_s}{\partial\mathbf\varepsilon}\otimes\mathbf I\right)
++\dfrac{\partial^2W}{\partial\varepsilon_s^2}\dfrac{\partial\varepsilon_s}{\partial\mathbf\varepsilon}\otimes\dfrac{\partial\varepsilon_s}{\partial\mathbf\varepsilon}
 +\dfrac{\partial^2W}{\partial\varepsilon_s}\dfrac43\mathbf P_\mathrm{dev}.
 $$
 

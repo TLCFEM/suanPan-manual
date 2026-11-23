@@ -12,9 +12,9 @@ Linear Infinite Cube/Brick
 It has eight nodes, with nodes one through four on the near face and nodes five through eight on the far face in the $\zeta$ direction.
 The far face corresponds to $\zeta=1$, which the mapping sends to infinity.
 
-The implementation uses a mapping $\boldsymbol x=\sum_a M_a(\xi,\eta,\zeta)\boldsymbol x_a$ whose coefficient functions behave like $\zeta/(\zeta-1)$ as $\zeta\to1$.
+The implementation uses a mapping $\mathbf x=\sum_a M_a(\xi,\eta,\zeta)\mathbf x_a$ whose coefficient functions behave like $\zeta/(\zeta-1)$ as $\zeta\to1$.
 The displacement shape functions contain the factors $\zeta(\zeta-1)$ on the near face and $1-\zeta^2$ on the far face, so they remain finite near the mesh and decay towards infinity.
-Strain-displacement matrices are formed from the physical gradients $\nabla_{\boldsymbol x}N_a=\boldsymbol J^{-T}\nabla_{\boldsymbol\xi}N_a$, where $\boldsymbol J$ is built from the mapped geometry.
+Strain-displacement matrices are formed from the physical gradients $\nabla_{\mathbf x}N_a=\mathbf J^{-T}\nabla_{\mathbf\xi}N_a$, where $\mathbf J$ is built from the mapped geometry.
 
 The stiffness and body-force integrals use a $2\times2\times2$ Gauss rule in the parent domain.
 The element is intended for small-strain analysis and has no nonlinear-geometry switch.

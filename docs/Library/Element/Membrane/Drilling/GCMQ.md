@@ -16,7 +16,7 @@ The GCMQ family is a four-node drilling membrane derived from a modified Hu--Was
 
 The same drilling interpolation idea as [Allman](Allman.md) and [GQ12](GQ12.md) is used, but the discrete equations are built in a 12-parameter local stress space with the linear stress modes $\{1,x,y,xy\}$.
 
-Write the local stress as $\boldsymbol\sigma=\mathbf P\boldsymbol\alpha$, with $\boldsymbol\alpha$ the 12 stress parameters, and the local strain as $\boldsymbol\varepsilon=\mathbf P_\varepsilon\boldsymbol\beta$.
+Write the local stress as $\mathbf\sigma=\mathbf P\mathbf\alpha$, with $\mathbf\alpha$ the 12 stress parameters, and the local strain as $\mathbf\varepsilon=\mathbf P_\varepsilon\mathbf\beta$.
 
 The compatibility and equilibrium equations reduce to solving small systems with matrices $\mathbf H$, $\mathbf N$ and $\mathbf M$ assembled from the integration points, after which the element stiffness is condensed to the nodal DoFs.
 

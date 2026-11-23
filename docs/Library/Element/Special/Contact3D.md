@@ -11,11 +11,11 @@
 It enforces frictionless node-to-facet contact between slave nodes and the triangular facets formed from the master node group using the same penalty idea.
 The full derivation of the penalty method, the gap definition and the consistent tangent is given on the [`Contact2D`](Contact2D.md) page, so only the 3D-specific geometry is summarised here.
 
-Three consecutive master nodes $(\boldsymbol r_i,\boldsymbol r_j,\boldsymbol r_k)$ define one planar facet with outward unit normal $\boldsymbol n_f$ and area $A_f$.
-For a slave node at $\boldsymbol r_s$, the signed normal gap is
+Three consecutive master nodes $(\mathbf r_i,\mathbf r_j,\mathbf r_k)$ define one planar facet with outward unit normal $\mathbf n_f$ and area $A_f$.
+For a slave node at $\mathbf r_s$, the signed normal gap is
 
 $$
-g=\boldsymbol n_f\cdot(\boldsymbol r_s-\boldsymbol r_i)\le 0.
+g=\mathbf n_f\cdot(\mathbf r_s-\mathbf r_i)\le 0.
 $$
 
 The projection is accepted only when it falls inside the triangle, which the implementation tests with three edge-based quantities $h_i$, $h_j$ and $h_k$ formed from the edge normals.
@@ -24,13 +24,13 @@ The nodal weights are the barycentric coordinates $n_i=h_i/A_f$, $n_j=h_j/A_f$ a
 The penalty resistance is assembled as
 
 $$
-\boldsymbol F_s=\alpha\,g\,\boldsymbol n_f,\qquad
-\boldsymbol F_i=\alpha\,n_i\,g\,\boldsymbol n_f,\qquad
-\boldsymbol F_j=\alpha\,n_j\,g\,\boldsymbol n_f,\qquad
-\boldsymbol F_k=\alpha\,n_k\,g\,\boldsymbol n_f.
+\mathbf F_s=\alpha\,g\,\mathbf n_f,\qquad
+\mathbf F_i=\alpha\,n_i\,g\,\mathbf n_f,\qquad
+\mathbf F_j=\alpha\,n_j\,g\,\mathbf n_f,\qquad
+\mathbf F_k=\alpha\,n_k\,g\,\mathbf n_f.
 $$
 
-The consistent tangent contains the derivatives of $\boldsymbol n_f$ with respect to all three master nodes as well as the derivatives of the barycentric weights.
+The consistent tangent contains the derivatives of $\mathbf n_f$ with respect to all three master nodes as well as the derivatives of the barycentric weights.
 All facets and slave positions are updated from the current trial configuration before the contact check.
 
 !!! warning "implementation limitation"

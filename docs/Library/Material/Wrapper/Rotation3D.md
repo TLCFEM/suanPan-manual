@@ -8,23 +8,23 @@ Alters the inclination of the 3D host material model and is typically used with 
 
 An anisotropic material is defined by constitutive tensors whose components are referred to a local material frame $\{\mathbf e'_i\}$.
 If the host is evaluated in that local frame, a strain measured in the global frame must be rotated into it and the resulting stress rotated back.
-Let $\mathbf R$ be the proper orthogonal matrix generated from the Euler rotation vector described below, so that $\mathbf R=\exp([\boldsymbol\theta]_\times)$.
+Let $\mathbf R$ be the proper orthogonal matrix generated from the Euler rotation vector described below, so that $\mathbf R=\exp([\mathbf\theta]_\times)$.
 The strain tensor transformation applied by the wrapper is
 
 $$
-\boldsymbol\varepsilon'=\mathbf R\,\boldsymbol\varepsilon\,\mathbf R^{\mathrm T},
+\mathbf\varepsilon'=\mathbf R\,\mathbf\varepsilon\,\mathbf R^{\mathrm T},
 \qquad
-\boldsymbol\sigma=\mathbf R^{\mathrm T}\,\boldsymbol\sigma'\,\mathbf R,
+\mathbf\sigma=\mathbf R^{\mathrm T}\,\mathbf\sigma'\,\mathbf R,
 $$
 
 so that the local material axes are the rows of $\mathbf R$ and the stress–strain tangent transforms as $\mathbf D=\mathbf R^{\mathrm T}\,\mathbf D'\,\mathbf R$ when the fourth-order tensor is written with the appropriate index pairing.
 In the six-component Voigt convention used by suanPan the same operations are represented by a $6\times6$ matrix $\mathbf T$ built from products of the entries of $\mathbf R$.
 With $\mathbf e=(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\gamma_{12},\gamma_{23},\gamma_{13})$ and $\gamma_{ij}=2\varepsilon_{ij}$, the first block of $\mathbf T$ contains $R_{ij}^2$, the coupling block from normal to shear entries contains $R_{ij}R_{ik}$, and the shear block contains factors $2R_{ij}R_{ik}$ and sums $R_{ij}R_{lk}+R_{ik}R_{lj}$.
-Because engineering shear is used, $\mathbf T$ is not an orthogonal matrix, but it is constructed so that the work conjugation $\boldsymbol\sigma:\boldsymbol\varepsilon=\boldsymbol\sigma':\boldsymbol\varepsilon'$ holds when the stress is mapped back with $\mathbf T^{\mathrm T}$.
+Because engineering shear is used, $\mathbf T$ is not an orthogonal matrix, but it is constructed so that the work conjugation $\mathbf\sigma:\mathbf\varepsilon=\mathbf\sigma':\mathbf\varepsilon'$ holds when the stress is mapped back with $\mathbf T^{\mathrm T}$.
 
 !!! info "deviation from theory"
-    The textbook change of basis to axes rotated by $\boldsymbol\theta$ uses $\boldsymbol\varepsilon'=\mathbf R^{\mathrm T}\boldsymbol\varepsilon\mathbf R$ with the local axes in the columns of $\mathbf R$.
-    The suanPan implementation builds $\mathbf T$ from the entries $R_{ij}$, so it applies $\boldsymbol\varepsilon'=\mathbf R\boldsymbol\varepsilon\mathbf R^{\mathrm T}$, which is the passive rotation by $-\boldsymbol\theta$.
+    The textbook change of basis to axes rotated by $\mathbf\theta$ uses $\mathbf\varepsilon'=\mathbf R^{\mathrm T}\mathbf\varepsilon\mathbf R$ with the local axes in the columns of $\mathbf R$.
+    The suanPan implementation builds $\mathbf T$ from the entries $R_{ij}$, so it applies $\mathbf\varepsilon'=\mathbf R\mathbf\varepsilon\mathbf R^{\mathrm T}$, which is the passive rotation by $-\mathbf\theta$.
     For a rotation about the $x_3$ axis, `Rotation3D` with rotation vector $(0,0,\theta)$ therefore gives the same material response as `Rotation2D` with angle $-\theta$.
 
 The wrapper therefore applies

@@ -58,7 +58,7 @@ Please note in practical applications, this value is negative as soil is often i
 
 ### Return mapping and consistent tangent
 
-The elastic predictor is $\boldsymbol\sigma^{\mathrm{tr}}=\boldsymbol\sigma_n+\mathbf D^e\Delta\boldsymbol\varepsilon$, where $\mathbf D^e$ is the constant isotropic stiffness built from the elastic modulus and Poisson's ratio.
+The elastic predictor is $\mathbf\sigma^{\mathrm{tr}}=\mathbf\sigma_n+\mathbf D^e\Delta\mathbf\varepsilon$, where $\mathbf D^e$ is the constant isotropic stiffness built from the elastic modulus and Poisson's ratio.
 The two local unknowns of the backward-Euler update are the plastic multiplier $\gamma$ and the change of the volumetric plastic strain, $\alpha-\alpha_n$.
 The first residual enforces the yield condition at the end of the step and the second one enforces the flow rule for the volumetric component, $\alpha-\alpha_n=2\gamma(p-p_t+a)/b^2$.
 Since suanPan uses tension-positive stresses, a compressive mean stress is negative and the resulting increment of $\alpha$ is negative, consistent with soil compaction.
@@ -66,7 +66,7 @@ Since suanPan uses tension-positive stresses, a compressive mean stress is negat
 !!! info "deviation from theory"
     Soil mechanics normally takes compression as positive and defines the hardening variable from the compressive volumetric plastic strain.
     This implementation records the tension-positive logarithmic volumetric plastic strain, so $\alpha$ is negative for the compaction that grows the yield surface.
-The two residual equations are solved by Newton iteration with equilibration, and the stress is pulled back by $\boldsymbol\sigma=\boldsymbol\sigma^{\mathrm{tr}}-\gamma\,\partial G/\partial\boldsymbol\sigma$ at convergence.
+The two residual equations are solved by Newton iteration with equilibration, and the stress is pulled back by $\mathbf\sigma=\mathbf\sigma^{\mathrm{tr}}-\gamma\,\partial G/\partial\mathbf\sigma$ at convergence.
 The returned `trial_stiffness` is the consistent tangent obtained by linearising the converged local equations, not the elastic or the continuum elastoplastic stiffness.
 The state at critical has $p-p_t+a=0$ and $q=Ma$, where the associative flow rule gives zero plastic volumetric strain.
 The parameter $\beta$ gives a different ellipse radius on the compressive side of the critical state line, with $b=1$ when $p-p_t+a\geq0$ and $b=\beta$ otherwise, producing the two-arc surface used in the Abaqus critical-state model.

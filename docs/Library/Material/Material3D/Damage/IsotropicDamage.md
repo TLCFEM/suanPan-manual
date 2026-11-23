@@ -8,10 +8,10 @@ The `IsotropicDamage` model interacts with an associated 3D material model and c
 
 Continuum damage mechanics represents distributed microcracking by an internal variable that reduces the load-carrying capacity of a material.
 Kachanov introduced a scalar continuity $\psi$ with $\psi=1$ for the intact state and $\psi=0$ at failure, and Rabotnov introduced the damage variable $\omega=1-\psi$.
-The effective stress concept of Lemaitre and Chaboche postulates that the damaged material behaves like the intact material subjected to $\tilde{\boldsymbol\sigma}=\boldsymbol\sigma/(1-\omega)$.
-For an elastic host with fourth-order stiffness $\mathbf D_0$, the strain equivalence hypothesis gives the damaged response $\boldsymbol\sigma=(1-\omega)\mathbf D_0:\boldsymbol\varepsilon$ and the damage energy release rate $Y=-\partial\psi/\partial\omega=\tfrac12\boldsymbol\varepsilon:\mathbf D_0:\boldsymbol\varepsilon$.
+The effective stress concept of Lemaitre and Chaboche postulates that the damaged material behaves like the intact material subjected to $\tilde{\mathbf\sigma}=\mathbf\sigma/(1-\omega)$.
+For an elastic host with fourth-order stiffness $\mathbf D_0$, the strain equivalence hypothesis gives the damaged response $\mathbf\sigma=(1-\omega)\mathbf D_0:\mathbf\varepsilon$ and the damage energy release rate $Y=-\partial\psi/\partial\omega=\tfrac12\mathbf\varepsilon:\mathbf D_0:\mathbf\varepsilon$.
 Irreversibility is enforced by an internal variable $\kappa$ that stores the maximum equivalent strain ever reached, so that $\omega=g(\kappa)$ with $\dot\kappa\geq0$.
-For a general nonlinear host the damaged stress can be written as $\boldsymbol\sigma=\Omega\,\bar{\boldsymbol\sigma}(\boldsymbol\varepsilon)$ with the damage factor $\Omega=1-\omega$, and the consistent tangent becomes $\mathbf K=\Omega\bar{\mathbf K}+\bar{\boldsymbol\sigma}\otimes\partial\Omega/\partial\boldsymbol\varepsilon$.
+For a general nonlinear host the damaged stress can be written as $\mathbf\sigma=\Omega\,\bar{\mathbf\sigma}(\mathbf\varepsilon)$ with the damage factor $\Omega=1-\omega$, and the consistent tangent becomes $\mathbf K=\Omega\bar{\mathbf K}+\bar{\mathbf\sigma}\otimes\partial\Omega/\partial\mathbf\varepsilon$.
 Because the damage factor is a scalar, this class of models cannot distinguish cracks with different orientations and assumes that damage affects all directions equally.
 
 !!! warning "implementation limitation"

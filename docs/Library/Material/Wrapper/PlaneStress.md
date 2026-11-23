@@ -7,7 +7,7 @@ Wraps a 3D host material model into a 2D plane stress model that can be used wit
 ## Theory
 
 suanPan stores a symmetric second-order tensor in Voigt form, using $\mathbf e=(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\gamma_{12},\gamma_{23},\gamma_{13})$ for strain and $\mathbf s=(\sigma_{11},\sigma_{22},\sigma_{33},\tau_{12},\tau_{23},\tau_{13})$ for stress.
-The shear entries are engineering shears, $\gamma_{ij}=2\varepsilon_{ij}$ for $i\ne j$, so that the inner product $\mathbf s\cdot\mathbf e$ equals the tensor contraction $\boldsymbol\sigma:\boldsymbol\varepsilon$.
+The shear entries are engineering shears, $\gamma_{ij}=2\varepsilon_{ij}$ for $i\ne j$, so that the inner product $\mathbf s\cdot\mathbf e$ equals the tensor contraction $\mathbf\sigma:\mathbf\varepsilon$.
 A plane stress state models a thin body loaded in its own plane whose faces are traction free, so that $\sigma_{33}=\tau_{23}=\tau_{13}=0$.
 The out-of-plane strains $\varepsilon_{33}$, $\gamma_{23}$ and $\gamma_{13}$ are not prescribed by the kinematics, since they arise from Poisson coupling and from the constitutive law.
 

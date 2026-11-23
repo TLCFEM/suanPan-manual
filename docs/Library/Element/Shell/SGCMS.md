@@ -20,7 +20,7 @@ The membrane part uses a twelve-parameter local stress expansion and a five-poin
 
 The plate part imposes the Kirchhoff condition at the four edge midpoints and uses 2-by-2 Gauss points in the plane with three Gauss layers through the thickness.
 
-At a fibre of coordinate $z$ the strain is $\boldsymbol\varepsilon=\mathbf B_m\mathbf d_m+z\,\mathbf B_p\mathbf d_p$, which produces the coupled membrane--bending stiffness blocks described on [ShellBase](ShellBase.md).
+At a fibre of coordinate $z$ the strain is $\mathbf\varepsilon=\mathbf B_m\mathbf d_m+z\,\mathbf B_p\mathbf d_p$, which produces the coupled membrane--bending stiffness blocks described on [ShellBase](ShellBase.md).
 
 Unlike [S4](S4.md), no transverse shear strain is retained, so the plate is a thin-plate model that is free of shear locking.
 

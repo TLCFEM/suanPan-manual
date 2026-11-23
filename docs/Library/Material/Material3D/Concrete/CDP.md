@@ -39,11 +39,11 @@ The formulation follows Lubliner et al. [4] and the cyclic-loading modification 
 The total strain is split into elastic and plastic parts,
 
 $$
-\boldsymbol\varepsilon=\boldsymbol\varepsilon^e+\boldsymbol\varepsilon^p,\qquad
-\bar{\boldsymbol\sigma}=\boldsymbol D_0:\boldsymbol\varepsilon^e=\boldsymbol D_0:(\boldsymbol\varepsilon-\boldsymbol\varepsilon^p),
+\mathbf\varepsilon=\mathbf\varepsilon^e+\mathbf\varepsilon^p,\qquad
+\bar{\mathbf\sigma}=\mathbf D_0:\mathbf\varepsilon^e=\mathbf D_0:(\mathbf\varepsilon-\mathbf\varepsilon^p),
 $$
 
-where $\boldsymbol D_0$ is the initial isotropic elastic stiffness and $\bar{\boldsymbol\sigma}$ is the effective stress carried by the undamaged material.
+where $\mathbf D_0$ is the initial isotropic elastic stiffness and $\bar{\mathbf\sigma}$ is the effective stress carried by the undamaged material.
 The nominal stress is the effective stress degraded by the tensile and compressive damage indices $d_t$ and $d_c$.
 The implementation uses the Lee--Fenves crack-closing form detailed below, so that a reversal into compression can partially restore the stiffness lost by tensile cracking.
 
@@ -55,7 +55,7 @@ $$
 F=\alpha I_1+\sqrt{3J_2}-\left(1-\alpha\right)\bar\sigma_c+\beta\left\langle\bar\sigma_{\max}\right\rangle-\zeta\left\langle-\bar\sigma_{\max}\right\rangle,
 $$
 
-where $I_1=\mathrm{tr}\,\bar{\boldsymbol\sigma}$ is the first stress invariant, $\bar{\boldsymbol s}=\bar{\boldsymbol\sigma}-I_1\boldsymbol I/3$ is the deviatoric stress, $J_2=\frac12\bar{\boldsymbol s}:\bar{\boldsymbol s}$, and $\bar\sigma_{\max}$ is the algebraically largest principal value of $\bar{\boldsymbol\sigma}$.
+where $I_1=\mathrm{tr}\,\bar{\mathbf\sigma}$ is the first stress invariant, $\bar{\mathbf s}=\bar{\mathbf\sigma}-I_1\mathbf I/3$ is the deviatoric stress, $J_2=\frac12\bar{\mathbf s}:\bar{\mathbf s}$, and $\bar\sigma_{\max}$ is the algebraically largest principal value of $\bar{\mathbf\sigma}$.
 The Macaulay bracket is $\left\langle x\right\rangle=\max(0,x)$, so the $\beta$ term is active in tension and the $\zeta$ term in triaxial compression.
 Here $\bar\sigma_t$ and $\bar\sigma_c$ denote the positive effective tensile and compressive cohesion magnitudes, obtained from the uniaxial backbones divided by $1-d_t$ and $1-d_c$.
 
@@ -81,8 +81,8 @@ The first invariant is taken with the tension-positive convention used throughou
 Plastic flow is nonassociated and governed by a linear Drucker--Prager potential,
 
 $$
-G=\left\|\bar{\boldsymbol s}\right\|+\alpha_p I_1,\qquad
-\Delta\boldsymbol\varepsilon^p=\lambda\left(\dfrac{\bar{\boldsymbol s}}{\left\|\bar{\boldsymbol s}\right\|}+\alpha_p\boldsymbol I\right).
+G=\left\|\bar{\mathbf s}\right\|+\alpha_p I_1,\qquad
+\Delta\mathbf\varepsilon^p=\lambda\left(\dfrac{\bar{\mathbf s}}{\left\|\bar{\mathbf s}\right\|}+\alpha_p\mathbf I\right).
 $$
 
 The parameter $\alpha_p$ is the dilatancy parameter (12) and equals $\tan\psi$, where $\psi$ is the dilation angle measured in the pressure--shear plane.
@@ -126,7 +126,7 @@ The recovered tensile damage factor uses
 
 $$
 s(r)=s_0+r(1-s_0),\qquad
-\boldsymbol\sigma=\left[1-s(r)d_t\right]\left[1-d_c\right]\bar{\boldsymbol\sigma},
+\mathbf\sigma=\left[1-s(r)d_t\right]\left[1-d_c\right]\bar{\mathbf\sigma},
 $$
 
 where $s_0$ is the stiffness recovery factor (14).

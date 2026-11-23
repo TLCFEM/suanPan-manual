@@ -16,7 +16,7 @@ M_1=\frac{(1-\xi)\eta}{\eta-1},\quad M_2=\frac{(1+\xi)\eta}{\eta-1},\quad M_3=\f
 $$
 At $\eta=-1$ the functions reduce to the linear shape functions of the two finite nodes and $M_3=M_4=0$.
 As $\eta$ tends to $1$ the mapping sends the parent point to infinity, so the far field is represented without truncating the mesh.
-The strain-displacement matrix is formed from the derivatives of $M_a$ mapped by the inverse Jacobian, $\nabla N_a=\boldsymbol J^{-\mathrm T}\nabla_{\!\xi}M_a$.
+The strain-displacement matrix is formed from the derivatives of $M_a$ mapped by the inverse Jacobian, $\nabla N_a=\mathbf J^{-\mathrm T}\nabla_{\!\xi}M_a$.
 The stiffness integral over the semi-infinite domain is evaluated on the finite parent square, with the stretching toward infinity carried by the Jacobian determinant.
 A $2\times2$ Gauss rule in the parent domain is used, and the thickness is applied as in [`CP4`](CP4.md).
 

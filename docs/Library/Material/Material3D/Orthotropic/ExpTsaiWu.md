@@ -15,7 +15,7 @@ This model combines the orthotropic elasticity of [`OrthotropicElastic3D`](../El
 The yield function has the same quadratic structure as [`ExpHoffman`](ExpHoffman.md),
 
 $$
-F(\boldsymbol\sigma,\bar\varepsilon_p)=\frac12\boldsymbol\sigma^\mathrm T\mathbf P\boldsymbol\sigma+\boldsymbol q^\mathrm T\boldsymbol\sigma-K^2(\bar\varepsilon_p),
+F(\mathbf\sigma,\bar\varepsilon_p)=\frac12\mathbf\sigma^\mathrm T\mathbf P\mathbf\sigma+\mathbf q^\mathrm T\mathbf\sigma-K^2(\bar\varepsilon_p),
 $$
 
 but the interaction terms are defined by the Tsai-Wu tensor-polynomial theory.
@@ -27,7 +27,7 @@ $$
 
 The diagonal terms are $P_{11}=2T_1$, $P_{22}=2T_2$, $P_{33}=2T_3$ and $P_{ii}=2/(\sigma_{ij}^0)^2$ for the shear entries, and the linear terms are $q_i=(\sigma_{ii}^c-\sigma_{ii}^t)/(\sigma_{ii}^t\sigma_{ii}^c)$.
 The chosen interaction terms keep the yield ellipse closed, but the model does not distinguish individual failure modes.
-The plastic flow is associative, the equivalent plastic strain uses $\sqrt{2/3}\lVert\Delta\boldsymbol\varepsilon_p\rVert$, and the history layout matches [`ExpHoffman`](ExpHoffman.md).
+The plastic flow is associative, the equivalent plastic strain uses $\sqrt{2/3}\lVert\Delta\mathbf\varepsilon_p\rVert$, and the history layout matches [`ExpHoffman`](ExpHoffman.md).
 
 !!! info "deviation from theory"
     The implementation uses the Tsai interaction $F_{ij}=-\tfrac12\sqrt{F_{ii}F_{jj}}$ rather than requiring an independently measured biaxial strength.

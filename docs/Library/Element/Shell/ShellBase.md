@@ -18,7 +18,7 @@ The global ordering of the six nodal DoFs is $(U_1,U_2,U_3,UR_1,UR_2,UR_3)$, and
 For a node with local membrane vector $\mathbf d_m$ and plate vector $\mathbf d_p$, the strain at a fibre of thickness coordinate $z$ is
 
 $$
-\boldsymbol\varepsilon(z)=\mathbf B_m\mathbf d_m+z\,\mathbf B_p\mathbf d_p ,
+\mathbf\varepsilon(z)=\mathbf B_m\mathbf d_m+z\,\mathbf B_p\mathbf d_p ,
 $$
 
 with the in-plane strain vector $(u_{,x},v_{,y},u_{,y}+v_{,x})$ and the plate curvature used for $\mathbf B_p$.

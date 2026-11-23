@@ -24,7 +24,7 @@ $$
 k(p)=\sigma_y+H p,
 $$
 
-where $$p=\int\sqrt{\dfrac{2}{3}\mathrm{d}\boldsymbol\varepsilon^p:\mathrm{d}\boldsymbol\varepsilon^p}$$ is the accumulated plastic strain and $$H$$ is the input hardening modulus.
+where $$p=\int\sqrt{\dfrac{2}{3}\mathrm{d}\mathbf\varepsilon^p:\mathrm{d}\mathbf\varepsilon^p}$$ is the accumulated plastic strain and $$H$$ is the input hardening modulus.
 A negative modulus gives linear softening and the radius is clamped to zero once it would become negative.
 The accumulated plastic strain is the only history variable.
 
@@ -32,7 +32,7 @@ The accumulated plastic strain is the only history variable.
     The derivative of the radius is also set to zero when the radius is clamped.
     Softening therefore terminates abruptly instead of continuing with a negative yield radius.
 
-The elastic predictor is $$\boldsymbol\sigma^{tr}=\boldsymbol\sigma_n+\boldsymbol C^e:(\boldsymbol\varepsilon-\boldsymbol\varepsilon_n)$$ and the trial von Mises stress is $$q^{tr}=\sqrt{3/2}\,\lVert\mathrm{dev}\,\boldsymbol\sigma^{tr}\rVert$$.
+The elastic predictor is $$\mathbf\sigma^{tr}=\mathbf\sigma_n+\mathbf C^e:(\mathbf\varepsilon-\mathbf\varepsilon_n)$$ and the trial von Mises stress is $$q^{tr}=\sqrt{3/2}\,\lVert\mathrm{dev}\,\mathbf\sigma^{tr}\rVert$$.
 If $$q^{tr}\leqslant k(p_n)$$ the step is elastic.
 Otherwise the multiplier $$\gamma$$ is found from the implicit residual
 
@@ -41,7 +41,7 @@ $$
 $$
 
 which is the discrete form of the rate law shown above when the Peric overstress definition is used.
-The stress is returned by radial return, $$\boldsymbol\sigma=\boldsymbol\sigma^{tr}-3G\gamma\,\mathrm{dev}\,\boldsymbol\sigma^{tr}/\lVert\mathrm{dev}\,\boldsymbol\sigma^{tr}\rVert$$.
+The stress is returned by radial return, $$\mathbf\sigma=\mathbf\sigma^{tr}-3G\gamma\,\mathrm{dev}\,\mathbf\sigma^{tr}/\lVert\mathrm{dev}\,\mathbf\sigma^{tr}\rVert$$.
 The consistent tangent follows from linearisation of the same residual, and the analysis step time enters the viscosity through $$\Delta t$$.
 
 ## Syntax

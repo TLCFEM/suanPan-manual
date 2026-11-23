@@ -7,7 +7,7 @@ Axisymmetric Elastic Model
 Axisymmetric analysis applies when the geometry, loading and material are invariant under rotation about a fixed axis, so that all field quantities depend only on the radial coordinate $r$ and the axial coordinate $z$.
 The only non-zero displacement components are $u_r(r,z)$ and $u_z(r,z)$, and the element assembles the engineering strain vector
 $$
-\boldsymbol\varepsilon=\begin{bmatrix}\varepsilon_{rr}&\varepsilon_{\theta\theta}&\varepsilon_{zz}&\gamma_{rz}\end{bmatrix}^{\mathrm T}=\begin{bmatrix}\partial u_r/\partial r&u_r/r&\partial u_z/\partial z&\partial u_r/\partial z+\partial u_z/\partial r\end{bmatrix}^{\mathrm T}.
+\mathbf\varepsilon=\begin{bmatrix}\varepsilon_{rr}&\varepsilon_{\theta\theta}&\varepsilon_{zz}&\gamma_{rz}\end{bmatrix}^{\mathrm T}=\begin{bmatrix}\partial u_r/\partial r&u_r/r&\partial u_z/\partial z&\partial u_r/\partial z+\partial u_z/\partial r\end{bmatrix}^{\mathrm T}.
 $$
 The hoop strain $u_r/r$ is the term that distinguishes an axisymmetric solid from a plane-strain solid, and it must be supplied by the element strain-displacement matrix rather than by the material.
 
@@ -20,7 +20,7 @@ The hoop strain $u_r/r$ is the term that distinguishes an axisymmetric solid fro
 
 With the Lamé constants $G=E/[2(1+\nu)]$ and $\lambda=E\nu/[(1+\nu)(1-2\nu)]$, the material returns
 $$
-\boldsymbol\sigma=\begin{bmatrix}\sigma_{rr}\\\sigma_{\theta\theta}\\\sigma_{zz}\\\tau_{rz}\end{bmatrix}=\begin{bmatrix}\lambda+2G&\lambda&\lambda&0\\\lambda&\lambda+2G&\lambda&0\\\lambda&\lambda&\lambda+2G&0\\0&0&0&G\end{bmatrix}\boldsymbol\varepsilon.
+\mathbf\sigma=\begin{bmatrix}\sigma_{rr}\\\sigma_{\theta\theta}\\\sigma_{zz}\\\tau_{rz}\end{bmatrix}=\begin{bmatrix}\lambda+2G&\lambda&\lambda&0\\\lambda&\lambda+2G&\lambda&0\\\lambda&\lambda&\lambda+2G&0\\0&0&0&G\end{bmatrix}\mathbf\varepsilon.
 $$
 This matrix is the upper-left $4\times4$ block of the six-dimensional isotropic elasticity tensor, which is exactly what `tensor::isotropic_stiffness(elastic_modulus, poissons_ratio)(span(0,3), span(0,3))` extracts in the source.
 The shear entry is the engineering shear modulus $G$ because suanPan stores the engineering shear strain $\gamma_{rz}=2\varepsilon_{rz}$ in the fourth slot.

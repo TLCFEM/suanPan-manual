@@ -103,7 +103,7 @@ A separate apex-return branch is used when $\sqrt{J_2}$ is too small to complete
 There is no independent tension-cutoff surface, so the apex of the cone is the only tension limit.
 
 !!! info "deviation from theory"
-    Classical plasticity often measures hardening against the equivalent plastic strain $\sqrt{2\Delta\boldsymbol\varepsilon^p:\Delta\boldsymbol\varepsilon^p/3}$.
+    Classical plasticity often measures hardening against the equivalent plastic strain $\sqrt{2\Delta\mathbf\varepsilon^p:\Delta\mathbf\varepsilon^p/3}$.
     This implementation instead accumulates $\bar\varepsilon_p=\xi\gamma$, so the cohesion slope must be calibrated against this scaled internal variable.
 
 !!! note "developer note"

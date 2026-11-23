@@ -13,7 +13,7 @@ Patch of Quadrilateral Elements
 `PatchQuad` is the two-dimensional membrane patch element of the isogeometric framework described in [Patch](Patch.md).
 It builds a NURBS surface from two knot vectors and a rectangular grid of control nodes, each carrying two translational DoFs.
 The third coordinate of each control node is interpreted as the NURBS weight.
-The displacement field is $\boldsymbol u=\sum_{ij}R_{ij}\boldsymbol u_{ij}$, and the in-plane strain follows from the physical derivatives of the tensor-product basis.
+The displacement field is $\mathbf u=\sum_{ij}R_{ij}\mathbf u_{ij}$, and the in-plane strain follows from the physical derivatives of the tensor-product basis.
 Each knot span is integrated with a $2\times2$ Gauss rule, and the element stiffness, mass and body force are multiplied by the thickness.
 
 ## Syntax

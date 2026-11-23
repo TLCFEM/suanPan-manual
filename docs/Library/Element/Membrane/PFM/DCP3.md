@@ -15,15 +15,15 @@ Constant Strain Triangle With Crack Phase
 [`DCP3`](DCP3.md) implements a phase-field model of brittle fracture on the constant-strain triangle.
 The total potential energy contains a degraded bulk term and a crack-surface term,
 $$
-\Psi=\int_\Omega g(d)\,\psi(\boldsymbol\varepsilon)\,\mathrm d\Omega+G_c\int_\Omega\left[\frac{d^2}{2l}+\frac{l}{2}|\nabla d|^2\right]\mathrm d\Omega.
+\Psi=\int_\Omega g(d)\,\psi(\mathbf\varepsilon)\,\mathrm d\Omega+G_c\int_\Omega\left[\frac{d^2}{2l}+\frac{l}{2}|\nabla d|^2\right]\mathrm d\Omega.
 $$
-Here $d\in[0,1]$ is the damage field, $g(d)=(1-d)^2$ is the degradation function, $\psi=\tfrac12\boldsymbol\varepsilon^\mathrm T\boldsymbol\sigma$ is the strain energy density, $G_c$ is the fracture energy release rate and $l$ is the characteristic length.
-The second integral is the regularised crack length, and the two terms give the damage stiffness blocks $G_c\,l^{-1}\boldsymbol N^\mathrm T\boldsymbol N$ and $G_c\,l\,\boldsymbol B^\mathrm T\boldsymbol B$.
-Stationarity with respect to the displacement gives $\nabla\cdot[g(d)\boldsymbol\sigma]+\boldsymbol b=\boldsymbol 0$, and stationarity with respect to $d$ gives the Allen-Cahn-type equation $\frac{G_c}{l}d-G_c l\nabla^2d=2(1-d)\mathcal H$.
+Here $d\in[0,1]$ is the damage field, $g(d)=(1-d)^2$ is the degradation function, $\psi=\tfrac12\mathbf\varepsilon^\mathrm T\mathbf\sigma$ is the strain energy density, $G_c$ is the fracture energy release rate and $l$ is the characteristic length.
+The second integral is the regularised crack length, and the two terms give the damage stiffness blocks $G_c\,l^{-1}\mathbf N^\mathrm T\mathbf N$ and $G_c\,l\,\mathbf B^\mathrm T\mathbf B$.
+Stationarity with respect to the displacement gives $\nabla\cdot[g(d)\mathbf\sigma]+\mathbf b=\mathbf 0$, and stationarity with respect to $d$ gives the Allen-Cahn-type equation $\frac{G_c}{l}d-G_c l\nabla^2d=2(1-d)\mathcal H$.
 The history field $\mathcal H=\max_t\psi(t)$ enforces irreversibility of crack growth by keeping the maximum strain energy reached so far.
 
 !!! info "deviation from theory"
-    The implementation sets $\mathcal H$ from the total strain energy $\tfrac12\boldsymbol\varepsilon^\mathrm T\boldsymbol\sigma$.
+    The implementation sets $\mathcal H$ from the total strain energy $\tfrac12\mathbf\varepsilon^\mathrm T\mathbf\sigma$.
     It does not perform the tensile and compressive spectral split used in many phase-field fracture models, so compression can also drive damage.
 
 The displacement and damage fields use the same nodal interpolation, so each node carries `U1`, `U2` and `DAMAGE`.

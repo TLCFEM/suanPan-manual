@@ -11,11 +11,11 @@ The three referenced materials must be one-dimensional material models.
 The stiffness contribution of a single family is the product of its reinforcement ratio and the tangent stiffness of the underlying bar material,
 
 $$
-\boldsymbol D^i=\rho_i\,E_i^T\,\boldsymbol e_i\otimes\boldsymbol e_i,\qquad
-\boldsymbol\sigma=\sum_{i=x,y,z}\rho_i\,\sigma_i\,\boldsymbol e_i,
+\mathbf D^i=\rho_i\,E_i^T\,\mathbf e_i\otimes\mathbf e_i,\qquad
+\mathbf\sigma=\sum_{i=x,y,z}\rho_i\,\sigma_i\,\mathbf e_i,
 $$
 
-where $\rho_i$ is the reinforcement ratio, $\sigma_i$ and $E_i^T$ are the stress and tangent modulus returned by the $i$-th one-dimensional material, and $\boldsymbol e_i$ is the corresponding global axis.
+where $\rho_i$ is the reinforcement ratio, $\sigma_i$ and $E_i^T$ are the stress and tangent modulus returned by the $i$-th one-dimensional material, and $\mathbf e_i$ is the corresponding global axis.
 Only the three normal stress components are produced; the shear components of stress and stiffness remain zero.
 Each one-dimensional material receives the corresponding normal component of the strain vector as its trial strain, so uniaxial effects such as yielding, buckling or damage are inherited directly from the assigned materials.
 This is a smeared, perfectly bonded representation: no slip, dowel action or discrete crack interaction is modelled.

@@ -14,17 +14,17 @@ Constant Strain Triangle
 ## Background
 
 [`CP3`](CP3.md) is the three-node constant-strain triangle, abbreviated CST.
-The displacement is linear over the triangle, $\boldsymbol u=\sum_{a=1}^3N_a\boldsymbol u_a$, with area coordinates $N_a=A_a/A$.
-The coordinate matrix $\boldsymbol X$ has columns $[1,x_a,y_a]^\mathrm T$, so the area is $A=\tfrac12\det\boldsymbol X$ and the constant gradients are $\partial N_a/\partial x$ and $\partial N_a/\partial y$, the last two rows of $\boldsymbol X^{-1}$.
-The strain vector $\boldsymbol\varepsilon=\boldsymbol B\boldsymbol a$ is constant over the element, with
+The displacement is linear over the triangle, $\mathbf u=\sum_{a=1}^3N_a\mathbf u_a$, with area coordinates $N_a=A_a/A$.
+The coordinate matrix $\mathbf X$ has columns $[1,x_a,y_a]^\mathrm T$, so the area is $A=\tfrac12\det\mathbf X$ and the constant gradients are $\partial N_a/\partial x$ and $\partial N_a/\partial y$, the last two rows of $\mathbf X^{-1}$.
+The strain vector $\mathbf\varepsilon=\mathbf B\mathbf a$ is constant over the element, with
 $$
-\boldsymbol B=\begin{bmatrix}
+\mathbf B=\begin{bmatrix}
 N_{1,x}&0&N_{2,x}&0&N_{3,x}&0\\
 0&N_{1,y}&0&N_{2,y}&0&N_{3,y}\\
 N_{1,y}&N_{1,x}&N_{2,y}&N_{2,x}&N_{3,y}&N_{3,x}
 \end{bmatrix}.
 $$
-Because $\boldsymbol B$ and $\boldsymbol D$ are constant, the single-centre-point rule is exact for homogeneous material and $\boldsymbol K^e=A\,t\,\boldsymbol B^\mathrm T\boldsymbol D\boldsymbol B$.
+Because $\mathbf B$ and $\mathbf D$ are constant, the single-centre-point rule is exact for homogeneous material and $\mathbf K^e=A\,t\,\mathbf B^\mathrm T\mathbf D\mathbf B$.
 The same centroid rule is used for the consistent mass matrix and the body-force vector.
 The quadratic triangle [`CP6`](CP6.md) removes the constant-strain restriction by adding edge midnodes and a three-point rule.
 For axisymmetric problems the analogous constant-strain triangle is [`CAX3`](../Axisymmetric/CAX3.md).

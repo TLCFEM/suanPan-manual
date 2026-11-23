@@ -21,8 +21,8 @@ where $w_i$ is the weight attached to control point $i$ and $N_{i,p}$ is the cor
 In this implementation the weight is stored as the last coordinate of each control node, so setting all weights to one recovers a B-spline basis.
 
 In several dimensions the basis is the tensor product $R_{ijk}(\xi,\eta,\zeta)=R_i(\xi)R_j(\eta)R_k(\zeta)$.
-The isoparametric geometry and displacement fields are $\boldsymbol x=\sum_a R_a\boldsymbol x_a$ and $\boldsymbol u=\sum_a R_a\boldsymbol u_a$.
-The strain is $\boldsymbol\varepsilon=\boldsymbol B\boldsymbol u_e$ with $\boldsymbol B$ assembled from the physical derivatives $\partial R_a/\partial x_i$, which follow from the Jacobian $\boldsymbol J=\partial\boldsymbol x/\partial\boldsymbol\xi$.
+The isoparametric geometry and displacement fields are $\mathbf x=\sum_a R_a\mathbf x_a$ and $\mathbf u=\sum_a R_a\mathbf u_a$.
+The strain is $\mathbf\varepsilon=\mathbf B\mathbf u_e$ with $\mathbf B$ assembled from the physical derivatives $\partial R_a/\partial x_i$, which follow from the Jacobian $\mathbf J=\partial\mathbf x/\partial\mathbf\xi$.
 
 Each nonzero knot span between two distinct knots is treated as one integration cell.
 A $2\times2$ Gauss rule is used for surface patches and a $2\times2\times2$ rule for volume patches, with the sampling points mapped from $[-1,1]$ onto each span.

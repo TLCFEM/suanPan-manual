@@ -33,17 +33,17 @@ where $$n=\dfrac{\eta}{|\eta|}=\dfrac{s-\beta}{|s-\beta|}$$.
 
 ### Return Mapping
 
-The plastic multiplier uses the normalisation $$\mathrm{d}\boldsymbol\varepsilon^p=\sqrt{3/2}\,\gamma\,\boldsymbol n$$, so that $$\mathrm{d}p=\gamma$$ and the stress is returned by $$\boldsymbol\sigma=\boldsymbol\sigma^{tr}-\sqrt{6}G\gamma\,\boldsymbol n$$.
+The plastic multiplier uses the normalisation $$\mathrm{d}\mathbf\varepsilon^p=\sqrt{3/2}\,\gamma\,\mathbf n$$, so that $$\mathrm{d}p=\gamma$$ and the stress is returned by $$\mathbf\sigma=\mathbf\sigma^{tr}-\sqrt{6}G\gamma\,\mathbf n$$.
 Each Armstrong-Frederick back stress is updated in closed form,
 
 $$
-\boldsymbol\beta^i=\dfrac{\boldsymbol\beta_n^i+a^i\gamma\,\boldsymbol n}{1+b^i\gamma}.
+\mathbf\beta^i=\dfrac{\mathbf\beta_n^i+a^i\gamma\,\mathbf n}{1+b^i\gamma}.
 $$
 
 With $$\Delta t$$ the analysis step time, the discrete Peric residual solved by Newton's method is
 
 $$
-\left[\sqrt{\dfrac{3}{2}}\left(\left\lVert\boldsymbol s^{tr}-\sum_i\dfrac{\boldsymbol\beta_n^i}{1+b^i\gamma}\right\rVert-\sqrt{6}G\gamma-\sum_i\dfrac{a^i\gamma}{1+b^i\gamma}\right)\right]\left(\dfrac{\Delta t}{\Delta t+\mu\gamma}\right)^\epsilon-k(p_n+\gamma)=0.
+\left[\sqrt{\dfrac{3}{2}}\left(\left\lVert\mathbf s^{tr}-\sum_i\dfrac{\mathbf\beta_n^i}{1+b^i\gamma}\right\rVert-\sqrt{6}G\gamma-\sum_i\dfrac{a^i\gamma}{1+b^i\gamma}\right)\right]\left(\dfrac{\Delta t}{\Delta t+\mu\gamma}\right)^\epsilon-k(p_n+\gamma)=0.
 $$
 
 This is the implicit form of the rate law shown below, since it is equivalent to $$q=k\,(1+\mu\gamma/\Delta t)^\epsilon$$.

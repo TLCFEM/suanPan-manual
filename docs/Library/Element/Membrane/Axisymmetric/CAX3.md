@@ -9,7 +9,7 @@ Axisymmetric Linear Triangle
 ## Background
 
 [`CAX3`](CAX3.md) is the three-node constant-strain triangle of the axisymmetric family.
-Its nodal DoFs are the radial and axial displacements, and the strain vector is $\boldsymbol\varepsilon=[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]^\mathrm T$, with $\varepsilon_{\theta\theta}=u_r/r$ and $\gamma_{rz}=\partial u_r/\partial z+\partial u_z/\partial r$.
+Its nodal DoFs are the radial and axial displacements, and the strain vector is $\mathbf\varepsilon=[\varepsilon_{rr},\varepsilon_{zz},\varepsilon_{\theta\theta},\gamma_{rz}]^\mathrm T$, with $\varepsilon_{\theta\theta}=u_r/r$ and $\gamma_{rz}=\partial u_r/\partial z+\partial u_z/\partial r$.
 The triangle uses area coordinates so the in-plane derivatives $\partial N_a/\partial r$ and $\partial N_a/\partial z$ are constant, derived from the inverse of the $3\times3$ coordinate matrix.
 The hoop strain is evaluated at the element centroid radius $r_c=(r_1+r_2+r_3)/3$, so this element is one-point integrated.
 The integration weight is $2\pi r_c A$, with $A$ the area of the meridian triangle.
@@ -20,7 +20,7 @@ The integration weight is $2\pi r_c A$, with $A$ the area of the meridian triang
 
 The stiffness is
 $$
-\boldsymbol K^e=2\pi r_c A\,\boldsymbol B^\mathrm T\boldsymbol D\boldsymbol B.
+\mathbf K^e=2\pi r_c A\,\mathbf B^\mathrm T\mathbf D\mathbf B.
 $$
 The material must supply an axisymmetric tangent matrix, and the parent page [`CAX4`](CAX4.md) derives the full four-component formulation.
 

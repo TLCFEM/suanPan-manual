@@ -10,19 +10,19 @@ Mindlin Plate Element
 
 ## Background
 
-The Mindlin--Reissner plate theory relaxes the Kirchhoff condition by treating the section rotation $\boldsymbol\theta$ as an independent field.
+The Mindlin--Reissner plate theory relaxes the Kirchhoff condition by treating the section rotation $\mathbf\theta$ as an independent field.
 
-The transverse displacement $w$ and the two rotations have independent interpolations, and the transverse shear strain is the difference between the slope of $w$ and the section rotation, $\boldsymbol\gamma=\nabla w-\boldsymbol\theta$ up to the sign convention used for the two rotation components.
+The transverse displacement $w$ and the two rotations have independent interpolations, and the transverse shear strain is the difference between the slope of $w$ and the section rotation, $\mathbf\gamma=\nabla w-\mathbf\theta$ up to the sign convention used for the two rotation components.
 
 !!! info "deviation from theory"
-    The source assembles $\gamma_1=\partial w/\partial y-\theta_1$ and $\gamma_2=\partial w/\partial x+\theta_2$, so the shear components are swapped and signed differently from texts that write $\boldsymbol\gamma=\nabla w-\boldsymbol\theta$ with the same ordering.
+    The source assembles $\gamma_1=\partial w/\partial y-\theta_1$ and $\gamma_2=\partial w/\partial x+\theta_2$, so the shear components are swapped and signed differently from texts that write $\mathbf\gamma=\nabla w-\mathbf\theta$ with the same ordering.
     The rotation DoFs are local plate rotations and are not the global vector components implied by that compact notation.
 
-The curvature is $\boldsymbol\kappa=\nabla\boldsymbol\theta$ in the symmetric part, and the strain at a fibre of coordinate $z$ is $\boldsymbol\varepsilon(z)=\boldsymbol\kappa^{\rm sym}\,z$, while the shear strain is uniform through the thickness.
+The curvature is $\mathbf\kappa=\nabla\mathbf\theta$ in the symmetric part, and the strain at a fibre of coordinate $z$ is $\mathbf\varepsilon(z)=\mathbf\kappa^{\rm sym}\,z$, while the shear strain is uniform through the thickness.
 
 The internal energy therefore contains a bending part of order $t^3$ and a shear part of order $t$.
 
-As the thickness tends to zero, the shear energy enforces $\boldsymbol\gamma\approx 0$ pointwise, and a displacement element that interpolates $w$ and $\boldsymbol\theta$ with the same order becomes over-constrained and locks, giving a response that is far too stiff.
+As the thickness tends to zero, the shear energy enforces $\mathbf\gamma\approx 0$ pointwise, and a displacement element that interpolates $w$ and $\mathbf\theta$ with the same order becomes over-constrained and locks, giving a response that is far too stiff.
 
 The implementation avoids this shear locking by evaluating the shear contribution with a single reduced-integration point at the element centre.
 

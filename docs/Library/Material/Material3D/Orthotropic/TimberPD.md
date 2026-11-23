@@ -8,7 +8,7 @@ The model couples the bilinear Hoffman plasticity of [`BilinearHoffman`](Bilinea
 The trial stress is split into tensile and compressive parts by an eigen-decomposition of the stress tensor.
 Each part is filtered by a Hill-type equivalent measure built from the corresponding set of tensile or compressive strengths.
 The thresholds $r_t$ and $r_c$ are the largest equivalent stresses observed so far and are stored as history variables.
-The final stress is $(1-\omega_t)\boldsymbol\sigma_t+(1-\omega_c)\boldsymbol\sigma_c$, where $\boldsymbol\sigma_t$ and $\boldsymbol\sigma_c$ are the tensile and compressive parts.
+The final stress is $(1-\omega_t)\mathbf\sigma_t+(1-\omega_c)\mathbf\sigma_c$, where $\mathbf\sigma_t$ and $\mathbf\sigma_c$ are the tensile and compressive parts.
 
 !!! info "deviation from theory"
     The damage driving measures are Hill-type equivalent stresses of the split stress, not the Hoffman yield function used for the plastic backbone.

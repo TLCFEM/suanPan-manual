@@ -25,10 +25,10 @@ In the sign convention of the implementation the nodal rotations satisfy $\beta_
 The curvature vector is
 
 $$
-\boldsymbol\kappa=\begin{bmatrix}\beta_{x,x}\\ \beta_{y,y}\\ \beta_{x,y}+\beta_{y,x}\end{bmatrix},
+\mathbf\kappa=\begin{bmatrix}\beta_{x,x}\\ \beta_{y,y}\\ \beta_{x,y}+\beta_{y,x}\end{bmatrix},
 $$
 
-and the moment--curvature relation is $\mathbf M=\mathbf D_b\boldsymbol\kappa$, with the plane-stress bending stiffness
+and the moment--curvature relation is $\mathbf M=\mathbf D_b\mathbf\kappa$, with the plane-stress bending stiffness
 
 $$
 \mathbf D_b=\dfrac{Et^3}{12(1-\nu^2)}
@@ -45,7 +45,7 @@ The implementation obtains this matrix by numerical integration through the thic
     The bending stiffness is synthesized from the two-dimensional constitutive matrix, so the element relies on a plane-stress material to reproduce the standard $Et^3/[12(1-\nu^2)]$ coefficient.
     A plane-strain material would give a different bending stiffness.
 
-A fibre at local coordinate $z$ carries the strain $\boldsymbol\varepsilon(z)=z\boldsymbol\kappa$, so the stiffness contribution of a layer is $z^2\mathbf B^{\mathsf T}\mathbf D\mathbf B\,dV$.
+A fibre at local coordinate $z$ carries the strain $\mathbf\varepsilon(z)=z\mathbf\kappa$, so the stiffness contribution of a layer is $z^2\mathbf B^{\mathsf T}\mathbf D\mathbf B\,dV$.
 
 The discrete Kirchhoff condition is imposed only at the three edge midpoints instead of pointwise.
 

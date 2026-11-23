@@ -7,13 +7,13 @@ Point Mass
 
 ## Background
 
-In a dynamic analysis the inertia contribution to equilibrium is $\boldsymbol M\ddot{\boldsymbol u}$, where the element consistent mass matrix is
+In a dynamic analysis the inertia contribution to equilibrium is $\mathbf M\ddot{\mathbf u}$, where the element consistent mass matrix is
 
 $$
-\boldsymbol M_e^c=\int_{\Omega_e}\rho\,\boldsymbol N^{\mathrm T}\boldsymbol N\,\mathrm d\Omega_e .
+\mathbf M_e^c=\int_{\Omega_e}\rho\,\mathbf N^{\mathrm T}\mathbf N\,\mathrm d\Omega_e .
 $$
 
-It is built from the same displacement interpolation $\boldsymbol N$ as the stiffness, so it reproduces the kinetic energy of the interpolated field, but it couples neighbouring DoFs.
+It is built from the same displacement interpolation $\mathbf N$ as the stiffness, so it reproduces the kinetic energy of the interpolated field, but it couples neighbouring DoFs.
 A lumped mass matrix replaces it by a diagonal matrix whose row sums preserve the total mass,
 
 $$
@@ -27,7 +27,7 @@ The `Mass`, `Mass2D` and `Mass3D` elements are already lumped: each selected DoF
 For a rigid body the kinetic energy is
 
 $$
-T=\dfrac12 m\,\dot{\boldsymbol u}\cdot\dot{\boldsymbol u}+\dfrac12\boldsymbol\omega\cdot\boldsymbol I\,\boldsymbol\omega ,
+T=\dfrac12 m\,\dot{\mathbf u}\cdot\dot{\mathbf u}+\dfrac12\mathbf\omega\cdot\mathbf I\,\mathbf\omega ,
 $$
 
 so rotational inertia appears as additional diagonal entries on the rotation DoFs.

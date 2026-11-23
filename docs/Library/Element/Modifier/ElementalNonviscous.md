@@ -29,11 +29,11 @@ $$
 and advances the element history force by
 
 $$
-\boldsymbol f_{d,e}^{n+1}=\boldsymbol f_{d,e}^{n}\operatorname{diag}(s')
-+\big(\dot{\boldsymbol u}_e^{n}+\dot{\boldsymbol u}_e^{n+1}\big)\boldsymbol m'^{\mathrm T}.
+\mathbf f_{d,e}^{n+1}=\mathbf f_{d,e}^{n}\operatorname{diag}(s')
++\big(\dot{\mathbf u}_e^{n}+\dot{\mathbf u}_e^{n+1}\big)\mathbf m'^{\mathrm T}.
 $$
 
-A diagonal tangent $\operatorname{Re}\big(\sum_i m_i'\big)\boldsymbol I$ is added to the element damping matrix.
+A diagonal tangent $\operatorname{Re}\big(\sum_i m_i'\big)\mathbf I$ is added to the element damping matrix.
 Only matrix--vector products are needed, so the cost per step is low and no velocity history is stored.
 
 !!! warning "implementation limitation"
