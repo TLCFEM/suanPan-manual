@@ -23,9 +23,18 @@ materialTestByLoad3D (1) (2...7) (8) [9...]
 # (2...7) double, size of per stress increment
 # (8) int, number of steps along increment direction
 # [9...] int, optional numbers of steps for stress history
+
+materialTestByLoadWithBase3D (1) (2...7) (8...13) (14) [15...]
+# (1) int, unique tag of the material model to use
+# (2...7) double, base stress vector applied in a single increment before cycling
+# (8...13) double, size of per stress increment during cycling
+# (14) int, number of steps along increment direction
+# [15...] int, optional numbers of steps for stress history
 ```
 
 ## Remarks
 
 1. The Newton-Raphson method is implemented to solve the corresponding strain increments.
    Softening models should therefore not be tested in this way.
+2. The `WithBase` variant first applies the given base stress, then cycles with the specified stress increment.
+   It keeps the mean stress constant while the shear stress is cycled, as used in the [cyclic shear and shakedown example](../../Example/Geotechnical/cyclic-shear-and-shakedown-of-sand.md).

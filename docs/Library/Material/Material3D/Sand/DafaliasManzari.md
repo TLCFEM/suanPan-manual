@@ -24,7 +24,7 @@ The modifications can be summarised as follows.
 **Your collaboration would be much appreciated.**
 
 !!! note "worked example"
-    See [Liquefaction of Sand Under Cyclic Simple Shear](../../../../Example/Geotechnical/liquefaction-of-sand.md) for a calibrated single-element example, a parameter-by-parameter selection guide focused on liquefaction, and a study of the dilatancy constant $A_0$.
+    See [Cyclic Shear and Shakedown of Sand](../../../../Example/Geotechnical/cyclic-shear-and-shakedown-of-sand.md) for a calibrated single-element example, a parameter-by-parameter selection guide, and a study of shakedown versus ratcheting under cyclic shear.
 
 ## Syntax
 
