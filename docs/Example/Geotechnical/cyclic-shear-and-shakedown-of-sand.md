@@ -1,87 +1,102 @@
 # [★★★☆☆] Cyclic Shear and Shakedown of Sand
 
-When a sand deposit is subjected to repeated shearing — from machinery, waves or earthquakes — its response evolves during the first few cycles and then often settles into a stable pattern.
-Two limiting behaviours are distinguished.
+Many geotechnical structures are subjected to repeated rather than static loading: railway track beds, machine foundations, offshore wind turbine anchors, pavements and retaining structures under traffic.
+The governing design question is rarely the first cycle — it is whether deformation keeps accumulating over thousands or millions of cycles.
+Two regimes are distinguished.
 
-* **Shakedown:** after an initial transient, the stress–strain loops close and no further plastic strain accumulates.
-  The material has adapted to the cyclic load and responds either essentially elastically (elastic shakedown) or with a stable, closed hysteresis loop (plastic shakedown).
-* **Ratcheting:** each cycle adds a net plastic strain, so deformation accumulates progressively.
-  This occurs when a non-zero mean stress is superimposed on the cyclic component.
+* **Shakedown** — after an initial transient the stress–strain loops close, and each subsequent cycle retraces the same path with no additional plastic strain.
+  The soil has *adapted* to the load; the response is stable and serviceability is preserved.
+* **Ratcheting** — every cycle leaves a net plastic strain increment. Deformation grows with cycle count even though the load amplitude is constant, eventually leading to excessive settlement or tilt.
 
-The boundary between the two depends on the cyclic stress amplitude, the mean stress and the initial confinement.
-The [`DafaliasManzari`](../../Library/Material/Material3D/Sand/DafaliasManzari.md) bounding-surface model reproduces both regimes through its kinematic hardening, reversal memory and state-dependent dilatancy.
+Whether a given load causes shakedown or ratcheting depends on the cyclic amplitude, the mean stress, the initial density and the effective confinement.
+The [`DafaliasManzari`](../../Library/Material/Material3D/Sand/DafaliasManzari.md) model is well suited to this problem: its bounding surface and kinematic hardening with reversal memory reproduce the gradual adaptation of the fabric that produces stable loops.
 
-This example uses a single confined sand element under drained cyclic simple shear to demonstrate shakedown.
+This example presents a complete element-level assessment: calibrate a cyclic sand model, run repeated simple shear at a realistic confinement, read the shakedown signature from the stress–strain loops and the effective stress path, and interpret the result in terms of design decisions.
 The [model files](cyclic-shear-and-shakedown-of-sand.zip) are runnable with the standard `suanPan` executable.
 
-## Confined Cyclic Simple Shear
+## Engineering Context
 
-A sand element is first consolidated to a mean effective stress of $p'_0=130$ kPa.
-While that confinement is held constant, a symmetric shear stress
+A typical design workflow for a cyclically loaded sand layer is:
 
-$$
-\tau(t)=\tau_a\sin(\omega t)
-$$
+1. establish the in-situ effective stress state and relative density;
+2. determine the cyclic stress or strain amplitude imposed by the structure;
+3. test or model the soil under that amplitude for a representative number of cycles;
+4. decide whether the response shakes down (acceptable) or ratchets (unacceptable), and at what amplitude the transition occurs.
 
-is applied with zero mean, cycling between $-\tau_a$ and $+\tau_a$.
-Because the normal stresses are kept constant, the volume is free to change — the test is drained, as in a long-term foundation or offshore problem.
+Steps 3 and 4 are the purpose of this example.
+We model a sand element at $p'_0=130$ kPa — representative of a depth of roughly 7–10 m in a dry deposit — and apply three strain amplitudes spanning small-strain machinery vibration to a stronger earthquake-level excursion.
+The results show how to recognise shakedown and how the mobilised stress and dissipated energy scale with amplitude.
 
-The response is characterised by two quantities measured at the end of each cycle: the peak shear strain $\gamma_{\max}$ and the hysteresis area $\oint\tau\,d\gamma$ (the energy dissipated per cycle).
-Under shakedown both quantities become constant.
+## The Material Model
 
-The built-in [`materialTestByLoadWithBase3D`](../../Collection/Process/materialtestbyload.md) command applies exactly this load history to a material point: it first establishes the base stress state and then cycles the prescribed stress increment, solving for the corresponding strain at every step.
+The Dafalias–Manzari model is a bounding-surface plasticity formulation.
+The key ingredients for cyclic response are:
 
-## Parameter Selection
+* a small yield surface $F=|\mathbf s+p'\boldsymbol\alpha|+mp'$ whose centre $\boldsymbol\alpha$ (the back stress) translates with plastic shear;
+* a bounding surface $\alpha^b=\alpha^c\exp(-n^b\psi)$ that the back stress approaches, setting the mobilised stress;
+* an exponential hardening modulus that decays after load reversal, storing the memory of previous cycles in $\boldsymbol\alpha_{in}$;
+* a fabric tensor $\mathbf z$ that modifies dilatancy after reversal and shapes the loops.
 
-All 17 material arguments are required for `DafaliasManzari`; the trailing density is optional.
-The values below are the Toyoura sand set distributed with the source and used in the library unit tests.
+Here the dilatancy constant is set to $A_0=0$.
+This gives a *neutral* volumetric response: no excess pore pressure is generated, and the mean effective stress stays at its initial value while the deviatoric stress cycles.
+This corresponds to a sand at, or very close to, the critical state — a useful reference case that isolates the kinematic-hardening mechanism of shakedown from pore-pressure effects.
+The role of non-zero dilatancy in real dense and loose sands is discussed at the end.
+
+### Parameter Selection
+
+All 17 material arguments are required; the trailing density is optional.
 
 ```
-material DafaliasManzari 1 125 .05 1.25 .02 .9 .7 .01 7 .1 .9 1.1 -.3 3.5 4 600 -130 .2
+material DafaliasManzari 1 125 .05 1.25 .02 .9 .7 .01 7 .1 .9 1.1 0 3.5 4 600 -130 .01
 ```
 
-| # | Symbol | Value | Role in cyclic shear |
-|---|--------|-------|----------------------|
-| 2 | $G_0$ | 125 | Sets the small-strain stiffness scale; $G\propto\sqrt{|p'|}$. |
-| 3 | $\nu$ | 0.05 | Controls $K/G$ and thus the volumetric response. |
-| 4 | $\alpha^c$ | 1.25 | Critical stress ratio $M$; fixes the bounding and dilatancy surfaces. |
-| 5 | $\lambda_c$ | 0.02 | Slope of the critical state line, controlling state dependence. |
-| 6 | $e_0$ | 0.9 | Initial void ratio and CSL intercept. |
+| # | Symbol | Value | Why this value |
+|---|--------|-------|----------------|
+| 2 | $G_0$ | 125 | Small-strain stiffness scale; at $p'=130$ kPa it gives $G\approx36$ MPa, typical for a medium-dense Toyoura sand. |
+| 3 | $\nu$ | 0.05 | Poisson's ratio of the hyperelastic law. |
+| 4 | $\alpha^c$ | 1.25 | Critical stress ratio, $M$; sets the bounding surface and the ultimate strength $\tau_f\approx M p'/\sqrt3\approx75$ kPa. |
+| 5 | $\lambda_c$ | 0.02 | Slope of the critical state line. |
+| 6 | $e_0$ | 0.9 | Initial void ratio and CSL intercept; representative of Toyoura sand. |
 | 7 | $\xi$ | 0.7 | Curvature of the critical state line. |
-| 8 | $m$ | 0.01 | Size of the yield surface in stress-ratio space; a small value gives smooth loops. |
-| 9 | $h_0$ | 7 | Hardening constant; larger values give stiffer cyclic response and faster adaptation. |
-| 10 | $h_1$ | 0.1 | Decay of the hardening modulus on load reversal — controls the Bauschinger effect and loop shape. |
-| 11 | $c_h$ | 0.9 | Void-ratio dependence of the hardening rate. |
-| 12 | $n^b$ | 1.1 | Distance from the bounding surface. |
-| 13 | $A_0$ | $-0.3$ | Dilatancy constant; its sign decides contractive or dilative volumetric response. |
-| 14 | $n^d$ | 3.5 | State dependence of the dilatancy surface. |
-| 15 | $z_{max}$ | 4 | Limiting fabric magnitude; affects the loop shape after reversal. |
+| 8 | $m$ | 0.01 | Small yield surface; controls the elastic nucleus and the smoothness of the loops. |
+| 9 | $h_0$ | 7 | Hardening scale; together with $G_0$ it controls how fast $\boldsymbol\alpha$ approaches the bounding surface, i.e. how many cycles are needed to adapt. |
+| 10 | $h_1$ | 0.1 | Reversal-memory decay; governs the Bauschinger-type softening that closes the loops. |
+| 11 | $c_h$ | 0.9 | Void-ratio dependence of hardening. |
+| 12 | $n^b$ | 1.1 | Distance to the bounding surface. |
+| 13 | $A_0$ | 0 | Neutral dilatancy: constant $p'$ during shear, isolating the cyclic hardening response. |
+| 14 | $n^d$ | 3.5 | State dependence of the dilatancy surface (inactive here because $A_0=0$). |
+| 15 | $z_{max}$ | 4 | Limiting fabric magnitude; shapes the post-reversal response. |
 | 16 | $c_z$ | 600 | Fabric evolution rate. |
-| 17 | $p_{at}$ | $-130$ | Atmospheric pressure used for normalisation, entered negative (kPa). |
-| 18 | $G_r$ | 0.2 | Lower bound on $G$ at low effective stress. |
+| 17 | $p_{at}$ | $-130$ | Reference pressure, entered negative in this convention. |
+| 18 | $G_r$ | 0.01 | Lower bound on $G$ as a fraction of $G_0|p_{at}|$. |
 
-!!! info "parameters that govern shakedown"
-    The adaptation rate is controlled mainly by the hardening constants $h_0$, $h_1$ and $c_h$: they set how quickly the back stress $\boldsymbol\alpha$ approaches the bounding surface and how much memory of load reversal is retained.
-    The cyclic amplitude that can be sustained without accumulating strain is set by $\alpha^c$ (strength) and $m$ (elastic nucleus), with $A_0$, $n^d$ and the fabric parameters modifying it through the evolving state.
+!!! info "why $G_r=0.01$ rather than a larger value"
+    The floor shear modulus is $G_{\min}=G_rG_0|p_{at}|$.
+    With $G_r=0.01$ it is $162.5$ kPa, while the actual modulus at $p'=130$ kPa is about $36\,000$ kPa — over 200 times larger.
+    The floor therefore has no influence anywhere near the working stress range; it only becomes relevant when $p'$ falls below about $G_r^2|p_{at}|\approx0.013$ kPa.
+    A value such as $G_r=0.2$ would raise the floor to $3\,250$ kPa and make it active below $p'\approx5$ kPa — a range reached by loose sand during strong cyclic loading — so the model would overpredict stiffness there.
+    $G_r=0.01$ keeps the floor outside the engineering stress range.
 
 ## Model Setup
 
-Three analyses differ only in the amplitude of the applied shear stress.
-For $\tau_a=1$ kPa the command is
+A single element is consolidated isotropically to $p'_0\approx130$ kPa by imposing $\varepsilon_{11}=\varepsilon_{22}=\varepsilon_{33}=-1.5\times10^{-3}$, then subjected to 50 symmetric cycles of constant-volume simple shear:
 
 ```
-material DafaliasManzari 1 125 .05 1.25 .02 .9 .7 .01 7 .1 .9 1.1 -.3 3.5 4 600 -130 .2
-materialTestByLoadWithBase3D 1 -130 -130 -130 0 0 -1 0 0 0 0 0 .02 100 100 100 ...
+material DafaliasManzari 1 125 .05 1.25 .02 .9 .7 .01 7 .1 .9 1.1 0 3.5 4 600 -130 .01
+materialTestWithBase3D 1 -1.5E-3 -1.5E-3 -1.5E-3 0 0 0 0 0 0 0 0 1E-5 20 40 40 ...
 ```
 
-The first six numbers after the tag are the base stress,
-$\boldsymbol\sigma_0=(-130,-130,-130,0,0,-1)$ kPa, which establishes both the confinement and the starting point $\tau=-\tau_a$.
-The next six define the shear-stress increment;
-with 100 substeps per half cycle, an increment of $0.02$ kPa takes $\tau$ from $-1$ kPa to $+1$ kPa and back, giving $\tau_a=1$ kPa.
-The remaining numbers are the reversal counts: 100 substeps for the first half cycle followed by 100-substep blocks, giving 50 complete cycles in total.
+The twelve numbers after the tag are the six base strains and the six strain increments.
+The shear increment $\Delta\gamma_{13}$ is applied in 40 substeps per half cycle; the first block is 20 substeps, giving 50 complete cycles.
+Three amplitudes are compared:
 
-The other two models use increments of $0.06$ kPa and $0.16$ kPa with base shear stresses of $-3$ kPa and $-8$ kPa, corresponding to $\tau_a=3$ kPa and $\tau_a=8$ kPa.
-Each run writes its strain–stress history to `RESULT.txt`.
+| Model | $\Delta\gamma_{13}$ per substep | Strain amplitude $\gamma_a$ | Peak $\tau$ after adaptation |
+|:------|--------------------------------:|----------------------------:|-----------------------------:|
+| `cyclic-shear-1e-5` | $1\times10^{-5}$ | 0.001% | $\approx2.7$ kPa |
+| `cyclic-shear-3e-5` | $3\times10^{-5}$ | 0.003% | $\approx6.7$ kPa |
+| `cyclic-shear-1e-4` | $1\times10^{-4}$ | 0.01% | $\approx20$ kPa |
+
+Each run writes the strain–stress history to `RESULT.txt`.
 
 ## Results
 
@@ -89,42 +104,90 @@ Each run writes its strain–stress history to `RESULT.txt`.
 
 ![stress-strain loops](shakedown-loops.svg)
 
-At $\tau_a=1$ kPa the loop is very narrow and essentially unchanged from the second cycle onward — the response is practically elastic after the first excursion.
-At $\tau_a=3$ kPa and $\tau_a=8$ kPa the first cycle is noticeably wider than the subsequent ones; from cycle 2 the loops of every amplitude overlap, showing that the back stress has adapted and the material has shaken down into a stable cyclic state.
-The loop width grows with amplitude, reflecting the larger amount of plastic work dissipated per cycle.
+The first cycle is asymmetric: loading from the virgin state mobilises a different curve than the subsequent unloading.
+By cycle 2 the loops are already nearly closed, and by cycle 50 the curves for each amplitude are stable and symmetric about the origin.
+This is the defining signature of shakedown.
+The loop widens with amplitude — from a peak stress of 2.7 kPa at $\gamma_a=0.001\%$ to 20 kPa at $\gamma_a=0.01\%$ — reflecting the larger plastic work dissipated each cycle.
 
-### Peak Strain and Dissipation
+### Effective Stress Path
 
-![strain accumulation](shakedown-accumulation.svg)
+![effective stress path](shakedown-pq.svg)
 
-The peak shear strain and the hysteresis area stabilise within the first few cycles at all three amplitudes.
+The $p'$–$q$ path is a vertical segment at $p'=130$ kPa, traversed repeatedly from $q=0$ to $q=\sqrt3\,\tau$ and back.
+Two engineering conclusions follow directly.
 
-| $\tau_a$ | $\gamma_{\max}$ at cycle 1 | at cycle 50 | loop area at cycle 1 | at cycle 50 |
-|---------:|---------------------------:|------------:|---------------------:|------------:|
-| 1 kPa | 0.0033% | 0.0033% | $2\times10^{-5}$ | $2\times10^{-5}$ |
-| 3 kPa | 0.0229% | 0.0216% | $5.5\times10^{-4}$ | $5.0\times10^{-4}$ |
-| 8 kPa | 0.0699% | 0.0581% | $2.1\times10^{-3}$ | $1.7\times10^{-3}$ |
+1. **The sand remains confined throughout the loading.** Because $A_0=0$, shearing produces no volumetric plastic strain; there is no pore-pressure migration and no loss of effective stress. The classic dangerous mechanism — strength loss through pore-pressure buildup — is absent in this reference case.
+2. **The path is identical in the first and fiftieth cycles.** The material has not drifted in stress space. Combined with the closed loops in the $\gamma$–$\tau$ plot, this confirms that the response is stable rather than ratcheting.
 
-The small decrease of $\gamma_{\max}$ from cycle 1 to cycle 50 is the adaptation of the kinematic hardening: after the virgin loading the back stress reduces the stress increment available for further plastic flow.
-The stabilised hysteresis area scales strongly with amplitude, from $2\times10^{-5}$ kPa at 1 kPa to $1.7\times10^{-3}$ kPa at 8 kPa.
-This is the energy dissipated in each cycle and, in a real deposit, is the quantity that controls heating and degradation.
+A real loose sand with $A_0<0$ would instead generate positive pore pressure, and the path would migrate leftwards towards $p'=0$ as the number of cycles increased — the appropriate check for liquefaction, which is a different design question from shakedown.
 
-!!! note "what would cause ratcheting"
-    Under symmetric stress cycles ($-\tau_a$ to $+\tau_a$ with zero mean) the model shakes down at all three amplitudes.
-    Ratcheting appears when a non-zero mean shear stress is superimposed, because the hysteresis loop is then traversed asymmetrically and a net plastic strain is accumulated each cycle.
-    The same model reproduces that behaviour; a shakedown assessment of a real structure should therefore consider the mean stress as well as the amplitude.
+### Mobilised Stress and Energy Dissipation
+
+![adaptation](shakedown-accumulation.svg)
+
+| $\gamma_a$ | $\tau_{\max}$ cycle 1 | cycle 50 | loop area cycle 1 | cycle 50 |
+|-----------:|----------------------:|---------:|------------------:|---------:|
+| 0.001% | 2.665 kPa | 2.673 kPa | $4.6\times10^{-4}$ | $4.7\times10^{-4}$ |
+| 0.003% | 6.564 kPa | 6.654 kPa | $1.69\times10^{-3}$ | $1.70\times10^{-3}$ |
+| 0.01% | 19.284 kPa | 20.208 kPa | $1.20\times10^{-2}$ | $1.24\times10^{-2}$ |
+
+The peak stress rises slightly between the first and later cycles — the back stress is still approaching the bounding surface — and then levels off.
+The hysteresis area, which is the energy dissipated per unit volume per cycle, stabilises at a value that scales strongly with amplitude: a tenfold increase of $\gamma_a$ raises the dissipated energy by a factor of about 26.
+This quantity is directly relevant to heating, degradation and the damping used in dynamic analysis: a model that predicts the correct peak stress but the wrong loop area will underpredict cumulative effects.
+
+## Engineering Discussion
+
+### Reading a shakedown test
+
+Three diagnostics should be used together rather than relying on a single curve:
+
+* **loop closure** in the $\gamma$–$\tau$ plane — the qualitative signature;
+* **peak stress or strain versus cycle number** — should become horizontal;
+* **dissipated energy per cycle** — should stabilise, not grow or collapse to zero unexpectedly.
+
+If the loops keep shifting in the direction of accumulated strain, the soil is ratcheting even if the peak stress appears stable.
+In design this calls either for reducing the applied amplitude or for increasing the confinement — for example by drainage, reinforcement or a surcharge.
+
+### The role of confinement
+
+The size of the yield surface scales with $p'$: $F=|\mathbf s+p'\boldsymbol\alpha|+mp'$.
+Doubling the mean effective stress roughly doubles the stress range that can be sustained without accumulating strain.
+This is why the shakedown limit of a sand is not a fixed stress amplitude but a *ratio* $\tau_a/p'$, often expressed in practice as a cyclic stress ratio.
+The comparison should therefore always be made at the in-situ effective stress, not at an arbitrary laboratory pressure.
+
+### The role of initial state and dilatancy
+
+Setting $A_0=0$ isolates the kinematic hardening mechanism, but real sands are rarely neutral:
+
+* **Dense sand** ($A_0>0$) dilates during shear. Under undrained conditions this generates *negative* excess pore pressure, raising $p'$ and making the soil stiffer; the $p'$–$q$ path moves rightwards and the shakedown limit increases with cycling.
+* **Loose sand** ($A_0<0$) contracts. Positive pore pressure reduces $p'$; the path migrates leftwards, the strength falls, and the response may progress from shakedown to ratcheting and ultimately to flow. Here $A_0$, $n^d$ and the state parameter $\psi$ are as important as the hardening parameters.
+
+A practical assessment should therefore run the same amplitude sweep at the *actual* relative density, and inspect both the loops and the $p'$–$q$ path.
+The neutral case presented here is the reference against which those deviations can be measured.
+
+### From element response to a design decision
+
+The three amplitudes used here illustrate the workflow:
+
+* at $\gamma_a=0.001\%$ the loops close almost immediately and the dissipated energy is negligible — the soil responds essentially elastically and any structure founded on it would experience negligible cyclic settlement;
+* at $\gamma_a=0.003\%$ the loops are stable but with measurable hysteresis — acceptable for serviceability provided the accumulated strain during the first few cycles is tolerated;
+* at $\gamma_a=0.01\%$ the mobilised stress approaches 20 kPa and the dissipated energy is an order of magnitude larger — this is close to the range where transient pore pressure and strain accumulation must be checked before accepting the design.
+
+The transition from acceptable to unacceptable is found by repeating the analysis over a range of amplitudes and plotting the stabilised peak strain or loop width against amplitude.
+That curve is the element-level shakedown limit; it can be compared with the stress or strain imposed by the structure to decide whether mitigation is required.
 
 ## Remarks
 
-* Shakedown is a property of the *load path*: the same sand shakes down under symmetric cycles and ratchets when a mean stress is present.
-* Higher confinement increases the stress range that can be sustained without accumulating strain, because the size of the yield surface in stress-ratio space scales with $p'$.
-* The kinematic hardening rule in [`DafaliasManzari`](../../Library/Material/Material3D/Sand/DafaliasManzari.md) stores the back stress $\boldsymbol\alpha$ and the reversal memory $\boldsymbol\alpha_{in}$, which is what allows the model to reproduce loop closure after the first few cycles.
-* The void ratio follows the trace of the total strain, so the drained volumetric strain accumulated during cycling shifts the state parameter $\psi$ and gradually changes the dilatancy and bounding surfaces.
-* For a simpler bounding-surface sand model, use [`SimpleSand`](../../Library/Material/Material3D/Sand/SimpleSand.md); it does not include the fabric and reversal-memory effects that govern cyclic adaptation.
+* Shakedown is a property of the *load path*, not of the sand alone: the same material can shake down under one amplitude and ratchet under another. Design must consider the whole expected loading spectrum.
+* A non-zero mean shear stress promotes ratcheting even when the amplitude is small; symmetric cycles are the most favourable case.
+* The number of cycles needed to reach a stable loop is governed by $h_0$, $h_1$ and $c_h$. Higher hardening rates give faster adaptation but also higher mobilised stresses.
+* The void ratio follows the trace of the total strain, so any volumetric straining shifts the state parameter $\psi$ and gradually changes the dilatancy and bounding surfaces — this is how monotonic and cyclic response are linked in the model.
+* For a simplified sand model without fabric and reversal memory, see [`SimpleSand`](../../Library/Material/Material3D/Sand/SimpleSand.md); it cannot reproduce the loop closure that underpins shakedown.
 
 ## References
 
 1. [DafaliasManzari material documentation](../../Library/Material/Material3D/Sand/DafaliasManzari.md)
 2. Dafalias, Y. F. and Manzari, M. T., *A simple plasticity model for flow and liquefaction of sands*, Journal of Geotechnical and Geoenvironmental Engineering, 130(6), 622–636, 2004. [doi:10.1061/(ASCE)0733-9399(2004)130:6(622)](https://doi.org/10.1061/(ASCE)0733-9399(2004)130:6(622))
 3. Liu, H., et al., *Modelling the cyclic ratcheting of sands through memory-enhanced bounding surface plasticity*, Géotechnique, 69(9), 783–800, 2019. [doi:10.1680/jgeot.17.p.307](https://doi.org/10.1680/jgeot.17.p.307)
-4. The [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf) — chapter on the Dafalias–Manzari model.
+4. Werkmeister, S., *The permanent deformation behaviour of unbound granular materials under repeated loads*, PhD thesis, University of Kassel, 2003.
+5. The [Constitutive Modelling Cookbook](https://github.com/TLCFEM/constitutive-modelling-cookbook/releases/download/latest/COOKBOOK.pdf) — chapter on the Dafalias–Manzari model.
