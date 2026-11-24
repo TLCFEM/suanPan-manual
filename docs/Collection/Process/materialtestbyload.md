@@ -37,4 +37,4 @@ materialTestByLoadWithBase3D (1) (2...7) (8...13) (14) [15...]
 1. The Newton-Raphson method is implemented to solve the corresponding strain increments.
    Softening models should therefore not be tested in this way.
 2. The `WithBase` variant first applies the given base stress, then cycles with the specified stress increment.
-   It keeps the mean stress constant while the shear stress is cycled, as used in the [cyclic shear and shakedown example](../../Example/Geotechnical/cyclic-shear-and-shakedown-of-sand.md).
+   It keeps the mean stress constant while the shear stress is cycled, as used in the [ratcheting example](../../Example/Geotechnical/ratcheting-of-sand.md).

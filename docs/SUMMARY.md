@@ -37,7 +37,7 @@
     * [wave propagation](Example/Solid/wave-propagation.md)
 * Geotechnical
     * [triaxial compression of sand](Example/Geotechnical/triaxial-compression-of-sand.md)
-    * [cyclic shear and shakedown of sand](Example/Geotechnical/cyclic-shear-and-shakedown-of-sand.md)
+    * [ratcheting of sand under low confinement](Example/Geotechnical/ratcheting-of-sand.md)
     * [slope analysis](Example/Geotechnical/slope-analysis.md)
 * Structural
     * Statics

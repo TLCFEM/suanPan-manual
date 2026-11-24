@@ -24,7 +24,7 @@ The modifications can be summarised as follows.
 **Your collaboration would be much appreciated.**
 
 !!! note "worked example"
-    See [Cyclic Shear and Shakedown of Sand](../../../../Example/Geotechnical/cyclic-shear-and-shakedown-of-sand.md) for a calibrated single-element example, a parameter-by-parameter selection guide, and a study of shakedown versus ratcheting under cyclic shear.
+    See [Ratcheting of Sand Under Low Confinement](../../../../Example/Geotechnical/ratcheting-of-sand.md) for a calibrated single-element example, a parameter-by-parameter selection guide, and a study of cyclic ratcheting under low confinement.
 
 ## Syntax
 
