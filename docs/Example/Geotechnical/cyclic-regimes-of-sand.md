@@ -29,9 +29,9 @@ The small amplitude represents a vibration well within the elastic range, the in
 The Dafalias–Manzari model is a bounding-surface plasticity formulation with pressure- and void-ratio-dependent hyperelasticity.
 The relevant ingredients are:
 
-* the yield function $$F=\left|\mathbf s+p'\boldsymbol\alpha\right|+mp'$$ and the bounding surface $$\alpha^b=\alpha^c\exp(-n^b\psi)$$;
-* the dilatancy $$D=A_0\left(1+\left\langle\mathbf z:\mathbf n\right\rangle\right)\left(\alpha^d-m-\boldsymbol\alpha:\mathbf n\right)$$, which under constant volume controls the change of mean effective stress;
-* the kinematic hardening of $$\boldsymbol\alpha$$ and its reversal memory $$\boldsymbol\alpha_{in}$$, which control loop closure;
+* the yield function $$F=\left|\mathbf s+p'\mathbf\alpha\right|+mp'$$ and the bounding surface $$\alpha^b=\alpha^c\exp(-n^b\psi)$$;
+* the dilatancy $$D=A_0\left(1+\left\langle\mathbf z:\mathbf n\right\rangle\right)\left(\alpha^d-m-\mathbf\alpha:\mathbf n\right)$$, which under constant volume controls the change of mean effective stress;
+* the kinematic hardening of $$\mathbf\alpha$$ and its reversal memory $$\mathbf\alpha_{in}$$, which control loop closure;
 * the fabric tensor $$\mathbf z$$, which modifies dilatancy after load reversal.
 
 With $$G_r=0.002$$ the lower bound on the shear modulus is only $$32.5$$ kPa, negligible compared with the modulus at the working stress.
@@ -80,15 +80,22 @@ This isolates the amplitude as the control variable.
 
 ### Effective Stress Paths
 
+In a simple shear test the deviatoric stress tensor has a single non-zero component, $$\tau=\sigma_{13}$$.
+The usual scalar $$q=\sqrt{3J_2}=\sqrt3\,|\tau|$$ discards the sign and collapses every cycle into a half loop.
+A **signed deviatoric stress** $$q^{*}=\sqrt3\,\tau$$ retains the shear direction and shows the complete loop, including its excursion into extension.
+All stress paths below use $$q^{*}$$; the colour of each segment identifies the cycle number.
+
 ![effective stress paths](cyclic-regimes-pq.svg)
 
-The $$p'$$–$$q$$ paths reveal the three regimes directly.
+![effective stress paths at selected cycles](cyclic-regimes-pq-cycles.svg)
 
-* **Shakedown** ($$\gamma_a=0.004\%$$): the path is a single vertical line at $$p'=533$$ kPa. The imposed strain lies within the elastic nucleus of the yield surface, so no plastic volumetric strain develops and the effective stress never changes.
-* **Ratcheting** ($$\gamma_a=0.01\%$$): the path migrates steadily leftwards. Each cycle generates a small contractive plastic volumetric strain, which under constant volume reduces $$p'$$. The deviatoric stress also falls gradually as the soil softens.
-* **Liquefaction** ($$\gamma_a=0.02\%$$): the migration accelerates and the envelope of the path is strongly curved. As $$p'\to0$$ the shear modulus collapses with $$\sqrt{|p'|}$$ and the path turns towards the origin; the final cycles lie essentially at $$q=0$$.
+The signed paths reveal the three regimes directly.
 
-The curvature of the liquefaction envelope is the hallmark of the nonlinear response: the tangent stiffness changes continuously with the effective stress rather than being set by a constant floor.
+* **Shakedown** ($$\gamma_a=0.004\%$$): the path is a single vertical line at $$p'=533$$ kPa, retraced identically in every cycle. The imposed strain lies within the elastic nucleus of the yield surface, so no plastic volumetric strain develops and the effective stress never changes.
+* **Ratcheting** ($$\gamma_a=0.01\%$$): each cycle draws a full loop in the $$p'$$–$$q^{*}$$ plane, and the loops march steadily leftwards. Every cycle generates a small contractive plastic volumetric strain, which under constant volume reduces $$p'$$; the amplitude of $$q^{*}$$ also falls as the soil softens.
+* **Liquefaction** ($$\gamma_a=0.02\%$$): the migration accelerates and the envelope of the loops is strongly curved. As $$p'\to0$$ the shear modulus collapses with $$\sqrt{|p'|}$$ and the loops shrink towards the origin; by cycle 150 they lie essentially at $$q^{*}=0$$.
+
+The curvature of the liquefaction envelope and the shrinking of the loops are the hallmark of the nonlinear response: the tangent stiffness changes continuously with the effective stress rather than being set by a constant floor.
 
 ### Effective Stress Reduction
 
@@ -103,7 +110,11 @@ The curvature of the liquefaction envelope is the hallmark of the nonlinear resp
 
 In the shakedown case the ratio stays exactly at unity.
 Ratcheting reduces it roughly linearly with cycle number, while liquefaction shows an accelerating reduction that reaches zero within 150 cycles.
-The pore pressure ratio $$r_u=1-|p'|/|p'_0|$$ is simply one minus these values, so the liquefaction case reaches $$r_u=1$$.
+
+![pore-pressure generation](cyclic-regimes-ru.svg)
+
+The same information expressed as the excess pore pressure ratio $$r_u=1-|p'|/|p'_0|$$ is shown above.
+The liquefaction curve rises nonlinearly and approaches $$r_u=1$$, while ratcheting gives an approximately linear increase and shakedown stays at zero.
 
 ### Stress–Strain Loops
 
@@ -113,6 +124,21 @@ The loops complete the picture.
 Under shakedown all cycles retrace the same straight line — the response is elastic.
 Under ratcheting the loops widen and progressively lose stiffness; the peak stress falls from about $$4.8$$ kPa in cycle 1 to $$2.2$$ kPa in cycle 150.
 Under liquefaction the loops expand dramatically, the peak stress falls from $$6.8$$ kPa to nearly zero, and the response at cycle 150 is essentially flat: the sand has lost its strength.
+
+![strength degradation](cyclic-regimes-strength.svg)
+
+The evolution of the peak shear stress is summarised above.
+Shakedown retains a constant peak; ratcheting degrades gradually; liquefaction loses essentially all strength.
+
+![energy dissipation](cyclic-regimes-energy.svg)
+
+The hysteretic area $$\oint\tau\,d\gamma$$ is the energy dissipated per unit volume and cycle.
+It is zero for the elastic shakedown response, nearly constant for ratcheting, and rises and then falls as the liquefying sand first develops large loops and then loses its ability to transmit stress.
+
+![state evolution](cyclic-regimes-state.svg)
+
+Finally, the void ratio $$e=e_0+(1+e_0)\,\mathrm{tr}\,\mathbf\varepsilon$$ shows the state evolution.
+The shakedown case does not change volume; ratcheting shows a gradual contractive trend; liquefaction produces the largest change, and it is this shift in $$e$$ that moves the state parameter $$\psi$$ and drives the accelerating loss of effective stress.
 
 ## Engineering Discussion
 
