@@ -54,9 +54,7 @@ solver FEAST (1) (2) (3) [4]
 # [4] double, radius, default: centre
 ```
 
-The `QuadraticFEAST` solver uses the same command and arguments.
-
-It is registered as `new_feast<true>` and solves the quadratic eigenvalue problem by also assembling the damping matrix, whereas `FEAST` solves the standard linear generalized problem.
+`FEAST` solves the linear generalized eigenproblem.
 
 Currently, the `FEAST` solver can be applied to full, banded, symmetric banded and sparse storage.
 For asymmetric banded storage, use the `SPIKE` solver.

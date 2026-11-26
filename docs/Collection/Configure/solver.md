@@ -14,7 +14,7 @@ solver (1) (2) ...
 
 ## Remarks
 
-1. Available types are `Newton`, `modifiedNewton` (alias `mNewton`), `AICN`, `BFGS`, `LBFGS`, `FEAST`, `QuadraticFEAST`, `DisplacementControl` (alias `MPDC`), and `Ramm`.
+1. Available types are `Newton`, `modifiedNewton` (alias `mNewton`), `AICN`, `BFGS`, `LBFGS`, `FEAST`, `DisplacementControl` (alias `MPDC`), and `Ramm`.
 2. `AICN` accepts an optional length (default 1.0), and `LBFGS` an optional maximum history (default 20).
-3. `FEAST` and `QuadraticFEAST` require a number of frequencies and a centre, with an optional radius that defaults to the centre.
+3. `FEAST` requires a number of frequencies and a centre, with an optional radius that defaults to the centre.
 4. See [Newton](../../Library/Solver/Newton.md), [AICN](../../Library/Solver/AICN.md), [BFGS](../../Library/Solver/BFGS.md), [MPDC](../../Library/Solver/MPDC.md), and [Ramm](../../Library/Solver/Ramm.md).
