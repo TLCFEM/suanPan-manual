@@ -96,7 +96,7 @@ For some particular problems, such as particle collision, full storage is the on
 If the matrix is symmetric, a so-called packed format can be used to store it.
 Essentially, only the upper or lower triangle of the matrix is stored.
 The memory cost is half that of full storage, but the solving speed is no better.
-The `_spsv()` subroutine is used for matrix solving.
+The `_ppsv()` subroutine is used for matrix solving.
 This packed scheme is not recommended.
 
 #### Sparse Storage
@@ -123,7 +123,7 @@ set sub_system_solver (1)
 # (1) string, auxiliary system solver name
 ```
 
-Accepted values are `LAPACK`, `SPIKE`, `SUPERLU`, `LIS`, `MUMPS`, `CUDA`, `PARDISO` and `FGMRES`, subject to the libraries available in the build.
+Accepted values are `LAPACK`, `SPIKE`, `SUPERLU`, `LIS`, `MUMPS`, `CUDA`, `MAGMA`, `PARDISO` and `FGMRES`, subject to the libraries available in the build.
 
 #### Mixed Precision Algorithm
 
@@ -189,8 +189,9 @@ With `SP_ENABLE_MPI` **disabled**, all available settings are summarised in the 
 | full          | `set symm_mat false`  | `set band_mat false` | `LAPACK`       | yes             | (default) `d(s)gesv`           |
 |               |                       |                      | `CUDA`         | yes             | `cusolverDnD(S)gesv`           |
 | symm. banded  | `set symm_mat true`   | `set band_mat true`  | `LAPACK`       | yes             | (default) `d(s)pbsv`           |
-|               |                       |                      | `SPIKE`        | yes             | `d(s)spike_gbsv`               |
-| asymm. banded | `set symm_mat false`  | `set band_mat true`  | (not required) | yes             | `d(s)gbsv`                     |
+| asymm. banded | `set symm_mat false`  | `set band_mat true`  | `LAPACK`       | yes             | (default) `d(s)gbsv`           |
+|               |                       |                      | `SPIKE`        | yes             | `d(s)spike_gbtrf` + `d(s)spike_gbtrs` |
+|               |                       |                      | `CUDA`         | yes             | GPU SPIKE                      |
 | symm. packed  | `set symm_mat true`   | `set band_mat false` | (not required) | yes             | `d(s)ppsv`                     |
 | sparse        | `set sparse_mat true` |                      | `SuperLU`      | no              | (default) `d(s)gssv`           |
 |               |                       |                      | `CUDA`         | yes             | `cusolverSpD(S)csrlsvqr`       |

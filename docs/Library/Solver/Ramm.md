@@ -44,28 +44,25 @@ set symm_mat 0
 
 If positive definiteness is known to be guaranteed, symmetric storage can also be used.
 
-For general cases, the (sign of) determinant of the tangent stiffness is required to identify turning points.
-**Not all solvers support the computation of determinant.**
+Turning-point detection uses `sign_det()` of the tangent stiffness.
 
 ### Without MPI
 
-Only `LAPACK` based solvers can be used.
-Thus, one needs to use the following settings.
-Note that they are all default settings and thus do not need to be explicitly set.
-The point is **do not choose something else**.
+`LAPACK`, `SPIKE` and GPU SPIKE provide `sign_det()` with asymmetric banded storage.
+`CUDA` requires a GPU build.
 
 ```text
 set symm_mat 0
 set band_mat 1
 set sparse_mat 0
 set system_solver LAPACK
+# LAPACK (default), SPIKE or CUDA
 ```
 
 ### With MPI
 
-Only the `MUMPS` solver is able to compute the determinant.
-`ScaLAPACK` based solvers do not support inspection of factorization and thus cannot provide an efficient way of computing determinant.
-Thus, one needs to enable sparse storage and choose the `MUMPS` solver.
+`ArcLength` steps are rejected in distributed builds.
+A `Ramm` solver used in a static step needs sparse storage with `MUMPS`, the only distributed container implementing `sign_det()`.
 
 ```text
 set sparse_mat 1

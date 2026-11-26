@@ -58,8 +58,8 @@ The `QuadraticFEAST` solver uses the same command and arguments.
 
 It is registered as `new_feast<true>` and solves the quadratic eigenvalue problem by also assembling the damping matrix, whereas `FEAST` solves the standard linear generalized problem.
 
-Currently, the `FEAST` solver can be applied to full, banded and sparse storage.
-For banded storage, it is necessary to use the `SPIKE` solver.
+Currently, the `FEAST` solver can be applied to full, banded, symmetric banded and sparse storage.
+For asymmetric banded storage, use the `SPIKE` solver.
 
 ```
 set system_solver SPIKE
@@ -108,3 +108,19 @@ Eigenvalues:
 
 Finished in 0.005 seconds.
 ```
+
+## Storage and Solver Compatibility
+
+| storage | commands | `system_solver` &rarr; matrix solver |
+|---|---|---|
+| full | `set symm_mat false`<br>`set band_mat false`<br>`set sparse_mat false` | `LAPACK` (default) &rarr; `d(s)gesv`<br>`CUDA` &rarr; `cusolverDnD(S)gesv` |
+| symm. banded | `set symm_mat true`<br>`set band_mat true`<br>`set sparse_mat false` | `LAPACK` &rarr; `d(s)pbsv` |
+| asymm. banded | `set symm_mat false`<br>`set band_mat true`<br>`set sparse_mat false` | `LAPACK` (default) &rarr; `d(s)gbsv`<br>`SPIKE` &rarr; `d(s)spike_gbtrf` + `d(s)spike_gbtrs`<br>`CUDA` &rarr; GPU SPIKE |
+| symm. packed | `set symm_mat true`<br>`set band_mat false`<br>`set sparse_mat false` | `LAPACK` &rarr; `d(s)ppsv` |
+| sparse | `set sparse_mat true` | `SuperLU` (default) &rarr; `d(s)gssv`<br>`CUDA` &rarr; `cusolverSpD(S)csrlsvqr`<br>`PARDISO` &rarr; `pardiso`<br>`FGMRES` &rarr; `dfgmres`<br>`MAGMA` &rarr; `magma_d(s)_solver` |
+
+- Default solver: ARPACK. FEAST rejects symm. packed; asymmetric banded needs `SPIKE`; MPI FEAST needs sparse storage.
+- Unsupported names are replaced by `LAPACK` (dense) or `SuperLU` (sparse); `LIS`/`MUMPS` are MPI-only.
+- `CUDA`, `MAGMA`, `PARDISO` and `FGMRES` need build support; shipped binaries lack GPU support.
+- Symm. banded/packed need a positive definite matrix.
+- MPI: `pdgesv`/`pdpbsv`/`pdgbsv`/`pdposv` (dense), `cluster_sparse_solver`/`lis_solve`/`dmumps_c` (sparse).

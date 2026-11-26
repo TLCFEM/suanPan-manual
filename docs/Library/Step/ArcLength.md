@@ -52,4 +52,20 @@ set fixed_step_size (1)
 
 1. A [`Ramm`](../Solver/Ramm.md) solver with default parameters is automatically enabled if no valid `Ramm` solver is defined.
    Not all storage schemes are supported; please check `Ramm` documentation.
-2. Arc-length analysis is limited on both SMP and DMP, mainly due to the lack of determinant computation.
+2. Distributed computation is not supported.
+
+## Storage and Solver Compatibility
+
+| storage | commands | `system_solver` &rarr; matrix solver |
+|---|---|---|
+| full | `set symm_mat false`<br>`set band_mat false`<br>`set sparse_mat false` | `LAPACK` &rarr; `d(s)gesv` |
+| symm. banded | `set symm_mat true`<br>`set band_mat true`<br>`set sparse_mat false` | `LAPACK` &rarr; `d(s)pbsv` |
+| asymm. banded | `set symm_mat false`<br>`set band_mat true`<br>`set sparse_mat false` | `LAPACK` &rarr; `d(s)gbsv`<br>`SPIKE` &rarr; `d(s)spike_gbtrf` + `d(s)spike_gbtrs`<br>`CUDA` &rarr; GPU SPIKE |
+| symm. packed | `set symm_mat true`<br>`set band_mat false`<br>`set sparse_mat false` | `LAPACK` &rarr; `d(s)ppsv` |
+| sparse | `set sparse_mat true` | `SuperLU` &rarr; `d(s)gssv` |
+
+- `Ramm` is forced; it needs `sign_det()`.
+- `sign_det()` is implemented by dense LAPACK containers and banded SPIKE/CUDA containers, not by `SparseMatSuperLU`.
+- `CUDA` is reset to `LAPACK` outside banded storage; any sparse solver name is reset to `SuperLU`.
+- Symm. storage reports a positive determinant sign and needs a positive definite tangent.
+- Distributed builds are rejected by `ArcLength::initialize()`.
