@@ -5,6 +5,9 @@ var annotated_dup =
         [ "enum_range&lt; OutputType &gt;", "d6/d47/structmagic__enum_1_1customize_1_1enum__range_3_01_output_type_01_4.html", null ]
       ] ]
     ] ],
+    [ "spike_detail", "d4/d45/namespacespike__detail.html", [
+      [ "det_sign", "db/db3/structspike__detail_1_1det__sign.html", "db/db3/structspike__detail_1_1det__sign" ]
+    ] ],
     [ "suanpan", "d6/d9c/namespacesuanpan.html", [
       [ "detail", "d2/dce/namespacesuanpan_1_1detail.html", [
         [ "magma", "db/dab/namespacesuanpan_1_1detail_1_1magma.html", [
@@ -67,6 +70,8 @@ var annotated_dup =
     [ "BandMatCluster", "d5/d28/class_band_mat_cluster.html", "d5/d28/class_band_mat_cluster" ],
     [ "BandMatMAGMA", "de/d54/class_band_mat_m_a_g_m_a.html", "de/d54/class_band_mat_m_a_g_m_a" ],
     [ "BandMatSpike", "de/d71/class_band_mat_spike.html", "de/d71/class_band_mat_spike" ],
+    [ "BandMatSpikeBase", "d4/d03/class_band_mat_spike_base.html", "d4/d03/class_band_mat_spike_base" ],
+    [ "BandMatSpikeGPU", "dc/da8/class_band_mat_spike_g_p_u.html", "dc/da8/class_band_mat_spike_g_p_u" ],
     [ "BandSymmMat", "d6/d79/class_band_symm_mat.html", "d6/d79/class_band_symm_mat" ],
     [ "BandSymmMatCluster", "de/d25/class_band_symm_mat_cluster.html", "de/d25/class_band_symm_mat_cluster" ],
     [ "BatheExplicit", "d3/d9a/class_bathe_explicit.html", "d3/d9a/class_bathe_explicit" ],

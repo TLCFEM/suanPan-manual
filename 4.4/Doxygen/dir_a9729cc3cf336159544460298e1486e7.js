@@ -10,6 +10,8 @@ var dir_a9729cc3cf336159544460298e1486e7 =
     [ "TestDuncanSelig.cpp", "d7/d62/_test_duncan_selig_8cpp.html", "d7/d62/_test_duncan_selig_8cpp" ],
     [ "TestEigen.cpp", "d1/d50/_test_eigen_8cpp.html", "d1/d50/_test_eigen_8cpp" ],
     [ "TestExpression.cpp", "d1/d62/_test_expression_8cpp.html", "d1/d62/_test_expression_8cpp" ],
+    [ "TestFeast.cpp", "d9/d94/_test_feast_8cpp.html", "d9/d94/_test_feast_8cpp" ],
+    [ "TestFGMRES.cpp", "dd/da8/_test_f_g_m_r_e_s_8cpp.html", null ],
     [ "TestHomotopy.cpp", "d7/db9/_test_homotopy_8cpp.html", "d7/db9/_test_homotopy_8cpp" ],
     [ "TestIGAValidation.cpp", "db/da5/_test_i_g_a_validation_8cpp.html", "db/da5/_test_i_g_a_validation_8cpp" ],
     [ "TestIntegration.cpp", "de/de6/_test_integration_8cpp.html", "de/de6/_test_integration_8cpp" ],

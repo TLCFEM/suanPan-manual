@@ -1,7 +1,7 @@
 var searchData=
 [
   ['u_0',['u',['../da/dcb/struct_data_subloading1_d.html#aa0ea950addb3ab3d6b8ae65567275654',1,'DataSubloading1D::u'],['../d5/d0e/struct_data_subloading.html#a38ea21c0dfbc676eda17c3a21b8207a6',1,'DataSubloading::u']]],
-  ['u_5fband_1',['u_band',['../d5/d28/class_band_mat_cluster.html#aa3e0628c7309d215f743b166ef6bdb75',1,'BandMatCluster::u_band'],['../d9/dac/class_band_mat.html#a7d588e3e48d5331bb849e1921f40686d',1,'BandMat::u_band']]],
+  ['u_5fband_1',['u_band',['../d5/d28/class_band_mat_cluster.html#aa3e0628c7309d215f743b166ef6bdb75',1,'BandMatCluster::u_band'],['../d9/dac/class_band_mat.html#a7d588e3e48d5331bb849e1921f40686d',1,'BandMat::u_band'],['../d4/d03/class_band_mat_spike_base.html#a2d417145be8a2c1f8dbf6cda05e2d1ff',1,'BandMatSpikeBase::u_band']]],
   ['ua10_2',['UA10',['../de/d6d/class_g_e_r_k_n.html#ae5d5185bdf84eb24aeaaceb13990648f',1,'GERKN']]],
   ['ua20_3',['UA20',['../de/d6d/class_g_e_r_k_n.html#a3bccb404e8cac3470abb6cdee3c52cf1',1,'GERKN']]],
   ['ua21_4',['UA21',['../de/d6d/class_g_e_r_k_n.html#a0484a81b50f4e675f51f5b94cf29413b',1,'GERKN']]],

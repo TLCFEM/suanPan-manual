@@ -103,7 +103,7 @@ $(function(){initNavTree('d4/d1f/fgmres_8hpp.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>FGMRES iterative solver based on the MKL interface.  
+<p>Defensive C++ wrapper around the oneMKL reverse-communication FGMRES routines (dfgmres_init, dfgmres_check, dfgmres, dfgmres_get).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;mkl_rci.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/d8f/suan_pan_8h_source.html">suanPan.h</a>&gt;</code><br />
@@ -122,15 +122,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga312c40ad2c8acf61866b9011cfcb9b4e" id="r_ga312c40ad2c8acf61866b9011cfcb9b4e"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; <br />
+<tr class="memitem:ga3c3e9d169c2c29e5f729590caf994c71" id="r_ga3c3e9d169c2c29e5f729590caf994c71"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; <br />
 requires requires(const T&amp; a, const mat&amp; b) { { a * b } -&gt; std::same_as&lt;mat&gt;; a.n_rows; }</td></tr>
-<tr class="memitem:ga312c40ad2c8acf61866b9011cfcb9b4e template"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#ga312c40ad2c8acf61866b9011cfcb9b4e">fgmres_solve</a> (const T &amp;kernel, const vec &amp;diagonal, <a class="el" href="../../df/de6/classdouble.html">double</a> *left, <a class="el" href="../../df/de6/classdouble.html">double</a> *right, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance)</td></tr>
+<tr class="memitem:ga3c3e9d169c2c29e5f729590caf994c71 template"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d46/group___utility.html#ga3c3e9d169c2c29e5f729590caf994c71">fgmres_solve</a> (const T &amp;kernel, const vec &amp;diagonal, <a class="el" href="../../df/de6/classdouble.html">double</a> *left, <a class="el" href="../../df/de6/classdouble.html">double</a> *right, const <a class="el" href="../../df/de6/classdouble.html">double</a> tolerance, MKL_INT *itercount=nullptr)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>FGMRES iterative solver based on the MKL interface. </p>
+<div class="textblock"><p>Defensive C++ wrapper around the oneMKL reverse-communication FGMRES routines (dfgmres_init, dfgmres_check, dfgmres, dfgmres_get). </p>
+<p>oneMKL keeps the solver state in user-owned ipar/dpar/tmp arrays and asks the caller, via RCI_request, to perform the matrix-vector product (request 1) and to apply the inverse preconditioner (request 3). This wrapper owns those arrays, validates the setup, services both callbacks, retrieves the solution and maps every oneMKL status to a documented return code. The reverse communication loop is bounded so a bad request stream cannot spin forever.</p>
+<p>Reference: Developer Reference for Intel oneAPI Math Kernel Library for C, 2024.2, "dfgmres" and "FGMRES Interface Description".</p>
 <dl class="section author"><dt>Author</dt><dd>tlc </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>16/05/2025 </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.2.0 </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

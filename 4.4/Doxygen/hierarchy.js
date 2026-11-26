@@ -688,6 +688,7 @@ var hierarchy =
     [ "DataYLD0418P", "d2/d8e/struct_data_y_l_d0418_p.html", [
       [ "YLD0418P", "d2/d69/class_y_l_d0418_p.html", null ]
     ] ],
+    [ "spike_detail::det_sign&lt; T &gt;", "db/db3/structspike__detail_1_1det__sign.html", null ],
     [ "Distributed", "dd/d45/class_distributed.html", [
       [ "Element", "d5/d50/class_element.html", null ]
     ] ],
@@ -755,7 +756,10 @@ var hierarchy =
           [ "BandMatMAGMA< T >", "de/d54/class_band_mat_m_a_g_m_a.html", null ]
         ] ],
         [ "BandMatCluster< T >", "d5/d28/class_band_mat_cluster.html", null ],
-        [ "BandMatSpike< T >", "de/d71/class_band_mat_spike.html", null ],
+        [ "BandMatSpikeBase< T >", "d4/d03/class_band_mat_spike_base.html", [
+          [ "BandMatSpike< T >", "de/d71/class_band_mat_spike.html", null ],
+          [ "BandMatSpikeGPU< T >", "dc/da8/class_band_mat_spike_g_p_u.html", null ]
+        ] ],
         [ "BandSymmMat< T >", "d6/d79/class_band_symm_mat.html", null ],
         [ "BandSymmMatCluster< T >", "de/d25/class_band_symm_mat_cluster.html", null ],
         [ "FullMat< T >", "dd/df5/class_full_mat.html", [

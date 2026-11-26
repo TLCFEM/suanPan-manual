@@ -1,15 +1,13 @@
 var _band_mat_spike_8hpp =
 [
-    [ "dspike_gbsv_", "de/d8b/group___meta_mat.html#ga4edd88c91474cab4c09e4d717cbec6b2", null ],
+    [ "spike_detail::det_sign&lt; T &gt;", "db/db3/structspike__detail_1_1det__sign.html", "db/db3/structspike__detail_1_1det__sign" ],
+    [ "spike_detail::determinant_sign", "d4/d45/namespacespike__detail.html#a2ed6ba7c05b93b2d3f58e7ba2ace086f", null ],
     [ "dspike_gbtrf_", "de/d8b/group___meta_mat.html#ga22909f0b3bfb78606725c1e671528f73", null ],
     [ "dspike_gbtrs_", "de/d8b/group___meta_mat.html#ga5a83473564cadf13f720a1816b94120f", null ],
-    [ "dspike_tune_", "de/d8b/group___meta_mat.html#ga80b5be92261a9f45a34e5b9ba32f7b06", null ],
+    [ "spike_detail::interface_sign", "d4/d45/namespacespike__detail.html#a63fddcd7c3d7a55e0d9edcb4b4104c13", null ],
+    [ "spike_detail::partition_starts", "d4/d45/namespacespike__detail.html#af5ae05be537689e99ed2c0362f9f1567", null ],
     [ "spikeinit_", "de/d8b/group___meta_mat.html#ga4062b2b9ec51be97e15d1e406d0ccf85", null ],
-    [ "sspike_gbsv_", "de/d8b/group___meta_mat.html#gab2a6ada18fb16ed35947eb3c2ab96fe9", null ],
+    [ "spikerl_calc_size_partitions_", "de/d8b/group___meta_mat.html#ga2791d5c4696e1a57496cad921b642284", null ],
     [ "sspike_gbtrf_", "de/d8b/group___meta_mat.html#gac3a05ba1bc64b31a372fc0807c3ad612", null ],
-    [ "sspike_gbtrs_", "de/d8b/group___meta_mat.html#ga049bda8b7b45ddc4f3a85250c5b4a564", null ],
-    [ "sspike_tune_", "de/d8b/group___meta_mat.html#gaa0d4692005848a51b039d0ffbeb106ff", null ],
-    [ "BandMatSpike< T >::bin", "de/d8b/group___meta_mat.html#ga087680607baff9d917ee1279277b109c", null ],
-    [ "BandMatSpike< T >::DPROTO", "de/d8b/group___meta_mat.html#ga6f7fdafde28d272c631c6b11fb89dfa8", null ],
-    [ "BandMatSpike< T >::SPROTO", "de/d8b/group___meta_mat.html#ga93030459b43566ad17f5a8f86ed9c0e4", null ]
+    [ "sspike_gbtrs_", "de/d8b/group___meta_mat.html#ga049bda8b7b45ddc4f3a85250c5b4a564", null ]
 ];

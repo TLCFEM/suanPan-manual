@@ -112,65 +112,140 @@ $(function(){initNavTree('d4/d1f/fgmres_8hpp_source.html','../../',''); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef FGMRES_HPP</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define FGMRES_HPP</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;mkl_rci.h&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d8f/suan_pan_8h.html">suanPan.h</a>&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../da/d46/group___utility.html#ga312c40ad2c8acf61866b9011cfcb9b4e">   35</a></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">requires</span> <span class="keyword">requires</span>(<span class="keyword">const</span> T&amp; a, <span class="keyword">const</span> mat&amp; b) { { a * b } -&gt; std::same_as&lt;mat&gt;; a.n_rows; } <span class="keywordtype">int</span> <a class="code hl_function" href="../../da/d46/group___utility.html#ga312c40ad2c8acf61866b9011cfcb9b4e">fgmres_solve</a>(<span class="keyword">const</span> T&amp; kernel, <span class="keyword">const</span> vec&amp; diagonal, <span class="keywordtype">double</span>* left, <span class="keywordtype">double</span>* right, <span class="keyword">const</span> <span class="keywordtype">double</span> tolerance) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa">N</a> = <span class="keyword">static_cast&lt;</span>MKL_INT<span class="keyword">&gt;</span>(kernel.n_rows);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// ReSharper disable once CppRedundantCastExpression</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">const</span> <span class="keyword">auto</span> R = std::min(<span class="keyword">static_cast&lt;</span>MKL_INT<span class="keyword">&gt;</span>(150), <a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa">N</a>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::vector work((2 * R + 1) * <a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa">N</a> + R * (R + 9) / 2 + 1, 0.);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    MKL_INT ipar[128]{};</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">double</span> dpar[128]{};</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    MKL_INT <a class="code hl_function" href="../../d6/d9c/namespacesuanpan.html#a482d9f2797254a31dc41567ce9dbf6da">info</a>{};</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    dfgmres_init(&amp;<a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa">N</a>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, &amp;info, ipar, dpar, work.data());</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    ipar[8] = 1;  <span class="comment">// residual stopping test</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    ipar[9] = 0;  <span class="comment">// no user-defined stopping test</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    ipar[10] = 1; <span class="comment">// use preconditioner</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    ipar[11] = 1; <span class="comment">// automatic test</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    dpar[0] = tolerance;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        dfgmres(&amp;<a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa">N</a>, left, right, &amp;info, ipar, dpar, work.data());</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">if</span>(-1 == info || -10 == info || -11 == info || -12 == info) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Error code {} received.\n&quot;</span>, info);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span>(0 == info || 4 == info &amp;&amp; dpar[6] &lt;= dpar[0]) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            MKL_INT counter;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            dfgmres_get(&amp;<a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa">N</a>, left, right, &amp;info, ipar, dpar, work.data(), &amp;counter);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_define" href="../../da/d46/group___utility.html#ga25eeaeba608fccad92ecab15a5bdb909">suanpan_debug</a>(<span class="stringliteral">&quot;Converged in {} iterations.\n&quot;</span>, counter);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">const</span> vec xn(&amp;work[ipar[21] - 1], <a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa">N</a>);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="comment">// ReSharper disable once CppInitializedValueIsAlwaysRewritten</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment">// ReSharper disable once CppEntityAssignedButNoRead</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        vec yn(&amp;work[ipar[22] - 1], <a class="code hl_enumvalue" href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa">N</a>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="comment">// ReSharper disable once CppDFAUnusedValue</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span>(1 == info) yn = kernel * xn;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="comment">// ReSharper disable once CppDFAUnusedValue</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(3 == info) yn = xn / diagonal;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#ifndef FGMRES_HPP</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#define FGMRES_HPP</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;mkl_rci.h&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;<a class="code" href="../../d8/d8f/suan_pan_8h.html">suanPan.h</a>&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">requires</span> <span class="keyword">requires</span>(<span class="keyword">const</span> T&amp; a, <span class="keyword">const</span> mat&amp; b) { { a * b } -&gt; std::same_as&lt;mat&gt;; a.n_rows; }</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../da/d46/group___utility.html#ga3c3e9d169c2c29e5f729590caf994c71">   62</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="../../da/d46/group___utility.html#ga3c3e9d169c2c29e5f729590caf994c71">fgmres_solve</a>(<span class="keyword">const</span> T&amp; kernel, <span class="keyword">const</span> vec&amp; diagonal, <span class="keywordtype">double</span>* left, <span class="keywordtype">double</span>* right, <span class="keyword">const</span> <span class="keywordtype">double</span> tolerance, MKL_INT* itercount = <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">const</span> <span class="keyword">auto</span> n = <span class="keyword">static_cast&lt;</span>MKL_INT<span class="keyword">&gt;</span>(kernel.n_rows);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">const</span> <span class="keyword">auto</span> r = std::min(MKL_INT{150}, n);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">if</span>(n &lt;= 0 || <span class="keyword">nullptr</span> == left || <span class="keyword">nullptr</span> == right || !std::isfinite(tolerance) || tolerance &lt;= 0. || diagonal.n_elem != <span class="keyword">static_cast&lt;</span>uword<span class="keyword">&gt;</span>(n)) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Invalid arguments.\n&quot;</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> value : diagonal)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span>(0. == value || !std::isfinite(value)) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Preconditioner diagonal must be finite and nonzero.\n&quot;</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// oneMKL requires ((2*r + 1)*n + r*(r + 9)/2 + 1) double slots in tmp.</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    std::vector work(<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>((2 * r + 1) * n + r * (r + 9) / 2 + 1), 0.);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::array&lt;MKL_INT, 128&gt; ipar{};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::array&lt;double, 128&gt; dpar{};</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    MKL_INT info{};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// Pass x and b as well: a non-null initial guess makes the call well-defined.</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    dfgmres_init(&amp;n, left, right, &amp;info, ipar.data(), dpar.data(), work.data());</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span>(0 != info) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Initialization failed with code {}.\n&quot;</span>, info);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> -2;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    ipar[8] = 1;  <span class="comment">// residual stopping test</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    ipar[9] = 0;  <span class="comment">// no user-defined stopping test</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    ipar[10] = 1; <span class="comment">// use preconditioner</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    ipar[11] = 1; <span class="comment">// automatic zero-norm test</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    ipar[12] = 0; <span class="comment">// write the solution into x and keep b untouched</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    dpar[0] = tolerance;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">// Recommended after changing ipar/dpar; it also fixes ipar[15:20] if needed.</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    dfgmres_check(&amp;n, left, right, &amp;info, ipar.data(), dpar.data(), work.data());</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span>(0 != info) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="comment">// -1001/-1010/-1011 only report warnings or adjusted parameters.</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">if</span>(info &lt; -1011) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Parameter check failed with code {}.\n&quot;</span>, info);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">return</span> -3;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_define" href="../../da/d46/group___utility.html#ga25eeaeba608fccad92ecab15a5bdb909">suanpan_debug</a>(<span class="stringliteral">&quot;Parameter check reported code {}.\n&quot;</span>, info);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">const</span> <span class="keyword">auto</span> limit = std::max(MKL_INT{32}, 10 * ipar[4] + 32);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">auto</span> converged{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">auto</span> exhausted{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">for</span>(MKL_INT count = 0; count &lt; limit &amp;&amp; !converged &amp;&amp; !exhausted; ++count) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        dfgmres(&amp;n, left, right, &amp;info, ipar.data(), dpar.data(), work.data());</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">switch</span>(info) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            converged = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">case</span> 1:   <span class="comment">// y = A*x</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">case</span> 3: { <span class="comment">// y = M^-1*x</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">if</span>(ipar[21] &lt; 1 || ipar[22] &lt; 1 || <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ipar[21] + n - 1) &gt; work.size() || <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ipar[22] + n - 1) &gt; work.size()) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Invalid work offsets returned by oneMKL.\n&quot;</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                <span class="keywordflow">return</span> -4;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keyword">const</span> vec xn(&amp;work[ipar[21] - 1], <span class="keyword">static_cast&lt;</span>uword<span class="keyword">&gt;</span>(n), <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            vec yn(&amp;work[ipar[22] - 1], <span class="keyword">static_cast&lt;</span>uword<span class="keyword">&gt;</span>(n), <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">if</span>(1 == info) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                <span class="keyword">const</span> mat product = kernel * xn;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <span class="keywordflow">if</span>(product.n_rows != <span class="keyword">static_cast&lt;</span>uword<span class="keyword">&gt;</span>(n) || product.n_cols != 1) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Matrix-vector product has unexpected size.\n&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    <span class="keywordflow">return</span> -4;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                yn = product;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">else</span> yn = xn / diagonal;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">case</span> 2: <span class="comment">// user stopping test, normally disabled</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">if</span>(dpar[4] &lt;= dpar[3]) converged = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">case</span> 4: <span class="comment">// zero-norm check, compare with dpar[7], not the residual tolerance</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">if</span>(dpar[6] &lt;= dpar[7]) converged = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">case</span> -1: <span class="comment">// iteration limit reached before convergence</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            exhausted = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Solver returned error code {}.\n&quot;</span>, info);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordflow">return</span> -4;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">if</span>(!converged &amp;&amp; !exhausted) {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Exceeded {} reverse-communication requests.\n&quot;</span>, limit);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">return</span> -5;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    MKL_INT counter{};</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    dfgmres_get(&amp;n, left, right, &amp;info, ipar.data(), dpar.data(), work.data(), &amp;counter);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">if</span>(<span class="keyword">nullptr</span> != itercount) *itercount = counter;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">if</span>(0 != info) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Could not retrieve the solution (code {}).\n&quot;</span>, info);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">return</span> -6;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">for</span>(uword i = 0; i &lt; static_cast&lt;uword&gt;(n); ++i)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">if</span>(!std::isfinite(left[i])) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_define" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a>(<span class="stringliteral">&quot;Solution contains non-finite values.\n&quot;</span>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">return</span> -4;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">if</span>(!converged) {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <a class="code hl_define" href="../../da/d46/group___utility.html#ga25eeaeba608fccad92ecab15a5bdb909">suanpan_debug</a>(<span class="stringliteral">&quot;Stopped after {} iterations without convergence.\n&quot;</span>, counter);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">return</span> -7;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_define" href="../../da/d46/group___utility.html#ga25eeaeba608fccad92ecab15a5bdb909">suanpan_debug</a>(<span class="stringliteral">&quot;Converged in {} iterations.\n&quot;</span>, counter);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
 </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
-<div class="ttc" id="agroup___material_html_ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa"><div class="ttname"><a href="../../de/db5/group___material.html#ggab64cf36e331cfb4f1d2ebc9803ae725ca8d9c307cb7f3c4a32822a51922d1ceaa">PlaneType::N</a></div><div class="ttdeci">@ N</div><div class="ttdef"><b>Definition</b> Material.h:50</div></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span></div>
 <div class="ttc" id="agroup___utility_html_ga25eeaeba608fccad92ecab15a5bdb909"><div class="ttname"><a href="../../da/d46/group___utility.html#ga25eeaeba608fccad92ecab15a5bdb909">suanpan_debug</a></div><div class="ttdeci">#define suanpan_debug(...)</div><div class="ttdef"><b>Definition</b> suanPan.h:358</div></div>
-<div class="ttc" id="agroup___utility_html_ga312c40ad2c8acf61866b9011cfcb9b4e"><div class="ttname"><a href="../../da/d46/group___utility.html#ga312c40ad2c8acf61866b9011cfcb9b4e">fgmres_solve</a></div><div class="ttdeci">int fgmres_solve(const T &amp;kernel, const vec &amp;diagonal, double *left, double *right, const double tolerance)</div><div class="ttdef"><b>Definition</b> fgmres.hpp:35</div></div>
+<div class="ttc" id="agroup___utility_html_ga3c3e9d169c2c29e5f729590caf994c71"><div class="ttname"><a href="../../da/d46/group___utility.html#ga3c3e9d169c2c29e5f729590caf994c71">fgmres_solve</a></div><div class="ttdeci">int fgmres_solve(const T &amp;kernel, const vec &amp;diagonal, double *left, double *right, const double tolerance, MKL_INT *itercount=nullptr)</div><div class="ttdef"><b>Definition</b> fgmres.hpp:62</div></div>
 <div class="ttc" id="agroup___utility_html_gadd7f710d53ecd5c25e781b0f949a7c32"><div class="ttname"><a href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a></div><div class="ttdeci">#define suanpan_error(...)</div><div class="ttdef"><b>Definition</b> suanPan.h:360</div></div>
-<div class="ttc" id="anamespacesuanpan_html_a482d9f2797254a31dc41567ce9dbf6da"><div class="ttname"><a href="../../d6/d9c/namespacesuanpan.html#a482d9f2797254a31dc41567ce9dbf6da">suanpan::info</a></div><div class="ttdeci">void info(const std::string_view format_sv, const T &amp;... args)</div><div class="ttdef"><b>Definition</b> suanPan.h:310</div></div>
 <div class="ttc" id="asuan_pan_8h_html"><div class="ttname"><a href="../../d8/d8f/suan_pan_8h.html">suanPan.h</a></div><div class="ttdoc">Global configuration, platform detection and version macros.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -27,6 +27,7 @@ var namespaces_dup =
       [ "quadratic", "d9/da0/namespaceinterpolation.html#a122a07b4c77996c54f7062b8bcbee9c1", null ]
     ] ],
     [ "shape", "d3/d55/namespaceshape.html", "d3/d55/namespaceshape" ],
+    [ "spike_detail", "d4/d45/namespacespike__detail.html", "d4/d45/namespacespike__detail" ],
     [ "suanPan", "d3/d9f/namespacesuan_pan.html", [
       [ "pack", "d3/d9f/namespacesuan_pan.html#aa21fd50b984cd3fc1bc6609d1d0c7ca0", null ]
     ] ],

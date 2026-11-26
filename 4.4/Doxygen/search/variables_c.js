@@ -6,7 +6,7 @@ var searchData=
   ['m_5fdof_3',['m_dof',['../d2/daf/class_s_g_c_m_q.html#a639dc85659d4556af531c304530c39d1',1,'SGCMQ::m_dof'],['../d7/d11/class_shell_base.html#a3a732a307bb74487505ff8a8f84678cc',1,'ShellBase::m_dof']]],
   ['m_5fnode_4',['m_node',['../d2/daf/class_s_g_c_m_q.html#a2b3a9f55c7c13602937ef2fa60f47e8b',1,'SGCMQ']]],
   ['m_5fpara_5',['m_para',['../de/d87/class_u_d_newmark.html#ab85b54cad01d5d2295b644fb27b1da98',1,'UDNewmark']]],
-  ['m_5frows_6',['m_rows',['../d9/dac/class_band_mat.html#ad8b14a0d5192d2ea2ea5d8f44ac80870',1,'BandMat']]],
+  ['m_5frows_6',['m_rows',['../d9/dac/class_band_mat.html#ad8b14a0d5192d2ea2ea5d8f44ac80870',1,'BandMat::m_rows'],['../d4/d03/class_band_mat_spike_base.html#a0a6071a0570a27fe2983ec2f0ac0867d',1,'BandMatSpikeBase::m_rows']]],
   ['m_5fsize_7',['m_size',['../d2/daf/class_s_g_c_m_q.html#abd313c1a5bcedc7f1f4c1c7821707ceb',1,'SGCMQ']]],
   ['m_5ft_8',['m_t',['../d5/d19/struct_data_timber_p_d.html#a85d741adef6914a733d23510f62296fc',1,'DataTimberPD']]],
   ['magnitude_9',['magnitude',['../d0/d22/class_tabular.html#a35997906a5df5c5ad5cba7224233afcc',1,'Tabular::magnitude'],['../df/d07/class_load.html#aed6194132b482caaaabb923e0d1c2f4f',1,'Load::magnitude']]],

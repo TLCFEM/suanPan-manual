@@ -5,7 +5,7 @@ var searchData=
   ['l3_2',['L3',['../d8/da3/class_g_s_s_s_s.html#ac45de827e14b28261dce2c3a358701fb',1,'GSSSS']]],
   ['l4_3',['L4',['../d8/da3/class_g_s_s_s_s.html#aa864811a539e287f2bbfbac49c4dfefa',1,'GSSSS']]],
   ['l5_4',['L5',['../d8/da3/class_g_s_s_s_s.html#a5e101ea2ee4b6f56959305d59cea1588',1,'GSSSS']]],
-  ['l_5fband_5',['l_band',['../d5/d28/class_band_mat_cluster.html#a439100b2fc84d65ac08d328784b8d505',1,'BandMatCluster::l_band'],['../d9/dac/class_band_mat.html#ac2a34ca2eac9cd81df64217c514ba52b',1,'BandMat::l_band']]],
+  ['l_5fband_5',['l_band',['../d5/d28/class_band_mat_cluster.html#a439100b2fc84d65ac08d328784b8d505',1,'BandMatCluster::l_band'],['../d9/dac/class_band_mat.html#ac2a34ca2eac9cd81df64217c514ba52b',1,'BandMat::l_band'],['../d4/d03/class_band_mat_spike_base.html#aa448ab5599043f97107ee65d17ef3774',1,'BandMatSpikeBase::l_band']]],
   ['l_5fcol_6',['l_col',['../dc/d92/struct_mapping_d_o_f.html#a5316e361505c6ea97884da25434954ef',1,'MappingDOF']]],
   ['l_5frow_7',['l_row',['../dc/d92/struct_mapping_d_o_f.html#a440f3c654cb59cfde90d69ea586d7100',1,'MappingDOF']]],
   ['lagrangian_5fsize_8',['lagrangian_size',['../d8/d71/class_constraint.html#a303fdf224f77d0d14c4282e28d2c46c8',1,'Constraint']]],
