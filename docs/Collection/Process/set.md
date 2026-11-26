@@ -187,7 +187,7 @@ With `SP_ENABLE_MPI` **disabled**, all available settings are summarised in the 
 | storage       | configuration         | configuration        | system solver  | mixed precision | subroutine in external library |
 |---------------|-----------------------|----------------------|----------------|-----------------|--------------------------------|
 | full          | `set symm_mat false`  | `set band_mat false` | `LAPACK`       | yes             | (default) `d(s)gesv`           |
-|               |                       |                      | `CUDA`         | yes             | `cusolverDnD(S)gesv`           |
+|               |                       |                      | `CUDA`         | yes             | `cusolverDnD(S)getrf` + `cusolverDnD(S)getrs`           |
 | symm. banded  | `set symm_mat true`   | `set band_mat true`  | `LAPACK`       | yes             | (default) `d(s)pbsv`           |
 | asymm. banded | `set symm_mat false`  | `set band_mat true`  | `LAPACK`       | yes             | (default) `d(s)gbsv`           |
 |               |                       |                      | `SPIKE`        | yes             | `d(s)spike_gbtrf` + `d(s)spike_gbtrs` |

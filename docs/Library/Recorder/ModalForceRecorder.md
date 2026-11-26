@@ -2,7 +2,7 @@
 
 Extract Modal Elastic Forces from an Eigen Analysis
 
-Minimum version: v4.4
+Minimum version: v4.3.1
 
 The `ModalForce` recorder post-processes the results of a [`Frequency`](../Step/Frequency.md) step and writes the modal elastic forces.
 It is the force counterpart of the [`Modal`](ModalRecorder.md) recorder, which writes frequencies, mode shapes, participation factors and effective modal masses.

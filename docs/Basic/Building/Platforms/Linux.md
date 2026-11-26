@@ -114,7 +114,7 @@ See [this page](https://www.intel.com/content/www/us/en/develop/documentation/in
     -DSP_ENABLE_MKL=ON
     -DSP_ENABLE_SHARED_MKL=OFF
     -DSP_ENABLE_VTK=ON
-    -DVTK_PATH=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/
+    -DVTK_PATH=$CRAFT_PART_BUILD/lib/cmake/vtk-9.7/
     ```
 
 ## Fedora

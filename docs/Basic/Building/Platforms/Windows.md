@@ -20,7 +20,7 @@ There are two configurations:
 2.  `Release`: Fortran libraries are configured with Intel compilers.
     Use MKL for linear algebra.
     Multithreading enabled.
-    Visualisation enabled with VTK version 9.5.
+    Visualisation enabled with VTK version 9.6.
     HDF5 support enabled.
     CUDA enabled.
 

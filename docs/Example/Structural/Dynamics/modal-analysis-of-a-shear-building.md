@@ -1,6 +1,6 @@
 # [★★★☆☆] Modal Analysis of a Ten-Storey Shear Building
 
-Minimum version: v4.4
+Minimum version: v4.3.1
 
 The model files and the post-processing script can be downloaded as a [zip archive](modal-analysis-of-a-shear-building.zip).
 

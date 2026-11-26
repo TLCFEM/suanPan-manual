@@ -44,7 +44,8 @@ If CMake GUI is used to configure the project, the following options are availab
    For example, `VTK_PATH=/usr/local/opt/vtk/lib/cmake/vtk-9.1`.
 6. `SP_ENABLE_CUDA`: `CUDA` needs to be installed manually by the user.
    If enabled, `CUDA` based solvers will be available.
-   However, for dense matrix storage, only full matrix storage scheme is supported by `CUDA`.
+   With `CUDA`, full and asymmetric banded dense storage are available.
+   Full storage uses cuSOLVER LU and banded storage uses GPU SPIKE.
    Note full matrix storage scheme is not favourable for FEM.
    It can, however, be used for sparse matrix solving and mixed precision solving.
 7. `SP_ENABLE_MAGMA`: `MAGMA` needs to be installed manually by the user.
@@ -95,7 +96,7 @@ cmake -DCMAKE_INSTALL_PREFIX= \
       -DSP_ENABLE_MKL=ON \
       -DSP_ENABLE_SHARED_MKL=OFF \
       -DSP_ENABLE_VTK=ON \
-      -DVTK_PATH=$CRAFT_PART_BUILD/lib/cmake/vtk-9.4/
+      -DVTK_PATH=$CRAFT_PART_BUILD/lib/cmake/vtk-9.7/
 ```
 
 ## `aarch64` Architecture

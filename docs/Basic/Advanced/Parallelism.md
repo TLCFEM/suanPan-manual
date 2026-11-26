@@ -304,7 +304,8 @@ id.comm_fortran = MPI_Comm_c2f(comm_world.native_handle());   // share the world
 comm_world.allreduce(mpl::min<IT>(), error);                  // cross-rank error agreement
 ```
 
-For eigenproblems under `SUANPAN_DISTRIBUTED`, `Solver/Arnoldi.cpp:66-70` dispatches to the **parallel ARPACK** (`eig_psolve`, `Toolbox/arpack.cpp:229`), which uses the ScaLAPACK-style `pdsaupd_`/`pdseupd_` routines over the shared `comm_world`.
+For eigenproblems under `SUANPAN_DISTRIBUTED`, `Solver/Arnoldi.cpp` dispatches to the parallel ARPACK wrapper `eig_solve` in `Toolbox/eigen_parpack.cpp`.
+The wrapper uses `pdsaupd_`/`pdseupd_` over `MPI_COMM_WORLD`.
 
 Not every feature is distributed: `ArcLength.cpp:30-33` explicitly rejects distributed execution, while `Buckle.cpp:31-33` and `Frequency.cpp:31-33` warn that some backends may run independently per rank.
 
@@ -371,7 +372,7 @@ flowchart TB
 | Dense distributed solve | `Domain/MetaMat/Dense.Cluster/FullMatCluster.hpp:105-124` | `pgesv`/`pposv` + `bcast_from_root` |
 | Sparse distributed solve | `Domain/MetaMat/Sparse.Cluster/SparseMatClusterMUMPS.hpp` (and LIS/PARDISO) | MUMPS/LIS/PARDISO + `bcast_from_root` |
 | MUMPS integration | `Include/ezp/ezp/mumps.hpp:98-113` | shared `comm_world`, `comm_fortran` |
-| Parallel eigensolver | `Solver/Arnoldi.cpp:66-70`, `Toolbox/arpack.cpp:229` | `eig_psolve` (P-ARPACK) |
+| Parallel eigensolver | `Solver/Arnoldi.cpp`, `Toolbox/eigen_parpack.cpp` | `eig_solve` (P-ARPACK) |
 
 ### Problem-specific distributed guards
 | File | Behaviour |

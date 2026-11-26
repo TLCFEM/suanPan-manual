@@ -2,7 +2,7 @@
 
 Extract Modal Properties from an Eigen Analysis
 
-Minimum version: v4.4
+Minimum version: v4.3.1
 
 The `Modal` recorder post-processes the results of a [`Frequency`](../Step/Frequency.md) step and writes the modal properties that are commonly used in structural dynamics:
 
