@@ -16,6 +16,8 @@
 - `mkdocs serve` previews locally; `mkdocs build` builds `site/`.
 - `zensical.toml` mirrors `mkdocs.yml` for features supported by Zensical; `zensical build` uses it automatically.
 - `zensical build` builds `site/`, copies `.ipynb` files without executing them, and requires no `suanpan` binary.
+- Zensical uses the modern variant with a custom light/dark palette defined in `docs/zensical.css`.
+- `plugins/overwrite/post_build.py` applies the `overwrite_math` rewrites to Zensical output because Zensical does not run MkDocs plugins.
 - `mkdocs-jupyter` executes non-ignored `.ipynb` pages during an MkDocs build, so `suanpan` must be on `PATH`.
 - CI symlinks the downloaded `suanPan.sh` to `/usr/bin/suanpan` and checks `suanpan -v`.
 - `doxygen` and `graphviz` are required for Doxygen output; no test, lint, or typecheck suite exists.
@@ -35,5 +37,5 @@
 - `.github/workflows/dev.yml` covers pull requests and pushes to `dev`; `master.yml` covers pushes to `master`.
 - Both pin `SP_VERSION: '4.4'` and publish with `mike deploy` to `gh-pages`.
 - `dev.yml` skips deployment for commit messages containing `Bump`.
-- `.readthedocs.yaml` builds with `zensical build` and copies `site/` to `$READTHEDOCS_OUTPUT/html/`.
+- `.readthedocs.yaml` builds with `zensical build`, runs the post-build math rewrites, and copies `site/` to `$READTHEDOCS_OUTPUT/html/`.
 - Commit messages are short capitalized imperatives, e.g. `Update icons`.

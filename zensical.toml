@@ -6,8 +6,11 @@
 #
 # - mkdocs-jupyter  - Zensical does not execute or render notebooks; .ipynb
 #                     files are copied to the site unchanged.
-# - overwrite_math  - custom MkDocs plugin, not supported by Zensical.
 # - awesome-pages   - replaced by awesome-nav, which reads the same .pages files.
+#
+# The MkDocs `overwrite_math` plugin has no Zensical equivalent at build time;
+# `plugins/overwrite/post_build.py` applies the same corrections to the built
+# HTML and is run from the Read the Docs post_build step.
 
 [project]
 site_name = "suanPan manual"
@@ -16,7 +19,7 @@ site_url = "https://suanpan-manual.readthedocs.io/"
 copyright = "Copyright © 2017-2026 Theodore Chang"
 repo_url = "https://github.com/TLCFEM/suanPan"
 
-extra_css = ["color_scheme.css"]
+extra_css = ["zensical.css"]
 extra_javascript = [
   "javascripts/mathjax.js",
   "https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=es6",
@@ -24,8 +27,8 @@ extra_javascript = [
 ]
 
 [project.theme]
-name = "material"
-variant = "classic"
+name = "zensical"
+variant = "modern"
 features = ["navigation.tabs", "navigation.footer"]
 favicon = "suanPan.svg"
 logo = "suanPan.svg"
@@ -33,14 +36,16 @@ logo = "suanPan.svg"
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
-primary = "white"
-accent = "pink"
-toggle = { icon = "material/lightbulb-outline", name = "Turn off the lights" }
+primary = "custom"
+accent = "custom"
+toggle = { icon = "lucide/sun", name = "Switch to dark mode" }
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
-toggle = { icon = "material/lightbulb", name = "Turn on the lights" }
+primary = "custom"
+accent = "custom"
+toggle = { icon = "lucide/moon", name = "Switch to light mode" }
 
 [project.markdown_extensions]
 admonition = {}

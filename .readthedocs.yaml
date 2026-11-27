@@ -11,6 +11,8 @@ build:
       html:
         - zensical build
     post_build:
+      # Zensical does not run MkDocs plugins; apply the math overrides first.
+      - python plugins/overwrite/post_build.py site
       # Copy the built site into the directory Read the Docs publishes.
       - mkdir -p $READTHEDOCS_OUTPUT/html/
       - cp --recursive site/* $READTHEDOCS_OUTPUT/html/
