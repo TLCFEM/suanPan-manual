@@ -105,7 +105,13 @@ $(function(){initNavTree('d0/d94/async__print_8h.html','../../',''); });
 
 <p>Asynchronous screen printing support.  
 <a href="#details">More...</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;iosfwd&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for async_print.h:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d8/d1a/async__print_8h__incl.svg" width="222" height="116"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/dc2/async__print_8h__dep__incl.svg" width="100%" height="387"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
@@ -116,7 +122,6 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:suanpan_3A_3AAsyncPrintGuard" id="r_suanpan_3A_3AAsyncPrintGuard"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classsuanpan_1_1_async_print_guard.html">suanpan::AsyncPrintGuard</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII helper that enables asynchronous printing for a scope.  <a href="../../d0/d4b/classsuanpan_1_1_async_print_guard.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -125,18 +130,13 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6356c5d1770cb27cbc0542e0269ca499" id="r_a6356c5d1770cb27cbc0542e0269ca499"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#a6356c5d1770cb27cbc0542e0269ca499">suanpan::enable_async_print</a> ()</td></tr>
-<tr class="memdesc:a6356c5d1770cb27cbc0542e0269ca499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable asynchronous printing.  <br /></td></tr>
 <tr class="memitem:a0b59cadbfe88bfbd9be882fc61086ad0" id="r_a0b59cadbfe88bfbd9be882fc61086ad0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#a0b59cadbfe88bfbd9be882fc61086ad0">suanpan::disable_async_print</a> ()</td></tr>
-<tr class="memdesc:a0b59cadbfe88bfbd9be882fc61086ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable asynchronous printing.  <br /></td></tr>
-<tr class="memitem:a7f1a1a8277aef2eb47a8db397a8af97e" id="r_a7f1a1a8277aef2eb47a8db397a8af97e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#a7f1a1a8277aef2eb47a8db397a8af97e">suanpan::flush_print</a> ()</td></tr>
-<tr class="memdesc:a7f1a1a8277aef2eb47a8db397a8af97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block until all queued messages have been written.  <br /></td></tr>
+<tr class="memitem:a751119975f2896dbcb628ff97f6bb833" id="r_a751119975f2896dbcb628ff97f6bb833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#a751119975f2896dbcb628ff97f6bb833">suanpan::flush_print</a> (std::ostream &amp;stream)</td></tr>
 <tr class="memitem:aeab411e6d926406911e74761c0811d42" id="r_aeab411e6d926406911e74761c0811d42"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#aeab411e6d926406911e74761c0811d42">suanpan::is_async_print_enabled</a> ()</td></tr>
-<tr class="memdesc:aeab411e6d926406911e74761c0811d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether asynchronous printing is currently active.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Asynchronous screen printing support. </p>
-<p>Screen output is expensive. The suite of logging helpers declared in <a class="el" href="../../d8/d8f/suan_pan_8h.html" title="Global configuration, platform detection and version macros.">suanPan.h</a> formats a message on the calling thread and hands it to <a class="el" href="../../d6/d9c/namespacesuanpan.html#a9223bb5e10c4d1cdfbdfe877ebb2737e">suanpan::print_message()</a>. When asynchronous printing is enabled, the actual write is performed by a single dedicated worker thread instead of blocking the caller. The pool serialises enqueueing with its own mutex and has a single worker consuming a FIFO queue, so asynchronous writes need no additional locking and messages appear in submission order.</p>
-<p>Asynchronous printing is intended for non-interactive (batch) runs only. In CLI mode the prompt must be written before the next line is read, so printing stays synchronous there. Synchronous writes happen on the calling thread and are serialised by a local mutex so that concurrent callers cannot interleave their output.</p>
+<p>Printing is synchronous by default, which is required in CLI mode. While asynchronous printing is enabled, a single worker thread writes the queued messages. Enabling, disabling and flushing pause producers and drain the queue before the mode changes, so a write can never overlap a mode change.</p>
 <dl class="section author"><dt>Author</dt><dd>tlc </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>23/11/2026 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>

@@ -207,6 +207,33 @@ $(function(){initNavTree('d6/dcd/md__c_o_n_t_r_i_b_u_t_i_n_g.html','../../','');
 <li>Use the project logging macros (<span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga1b7bae14c4dfe910f55137b7de12fb46">suanpan_info</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga25eeaeba608fccad92ecab15a5bdb909">suanpan_debug</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga98b8fc049aeb3dc50098fc33bb498947">suanpan_warning</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#gadd7f710d53ecd5c25e781b0f949a7c32">suanpan_error</a></span>, <span class="tt"><a class="el" href="../../da/d46/group___utility.html#ga4246523945b56b1676f44e88d5b3abc6">suanpan_fatal</a></span>) instead of <span class="tt">std::cout</span> or <span class="tt">printf</span> in library code.</li>
 <li>Use the project's approximate comparison helpers for floating-point comparisons where appropriate.</li>
 </ul>
+<h2>Constants and <span class="tt">constexpr</span></h2>
+<p>Use <span class="tt">constexpr</span> for values known at compile time, and reserve plain <span class="tt">const</span> for runtime values and per-object instance state. Which specifiers to add depends on the scope:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Scope  </th><th class="markdownTableHeadNone">Preferred declaration  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="../../d4/daf/class_static.html" title="A Static class.">Static</a> data member of a class or struct  </td><td class="markdownTableBodyNone"><span class="tt">static constexpr</span>, initialised in the class; it is implicitly <span class="tt">inline</span> in C++20, so omit the out-of-line <span class="tt">.cpp</span> definition  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Shared namespace-scope constant in a header  </td><td class="markdownTableBodyNone"><span class="tt">inline constexpr</span>, so every translation unit refers to one entity with one address  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Private namespace-scope constant in a <span class="tt">.cpp</span> file  </td><td class="markdownTableBodyNone">plain <span class="tt">constexpr</span>; <span class="tt">static</span> is redundant because a namespace-scope <span class="tt">constexpr</span> already has internal linkage  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Small scalar local in a non-<span class="tt">constexpr</span> function  </td><td class="markdownTableBodyNone">plain <span class="tt">constexpr</span> for numbers, booleans and enums  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Local array, lookup table or larger aggregate  </td><td class="markdownTableBodyNone"><span class="tt">static constexpr</span>, so it is not materialised on the stack on every call  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Local in a <span class="tt">constexpr</span> or <span class="tt">consteval</span> function  </td><td class="markdownTableBodyNone">plain <span class="tt">constexpr</span> only; <span class="tt">static constexpr</span> is ill-formed there  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">constexpr</span> reference  </td><td class="markdownTableBodyNone"><span class="tt">inline constexpr</span> in a header, <span class="tt">constexpr</span> in a <span class="tt">.cpp</span> file, <span class="tt">static constexpr</span> in a class, always bound to an object with static storage duration  </td></tr>
+</table>
+<p>Additional rules:</p>
+<ol type="1">
+<li>Use <span class="tt">constexpr</span> only when the type is a literal type and the initialiser is a constant expression. Armadillo <span class="tt">mat</span>, <span class="tt">vec</span> and <span class="tt"><a class="el" href="../../dd/d59/classuvec.html">uvec</a></span>, as well as <span class="tt"><a class="el" href="../../d6/d2d/class_token_registry.html" title="An immutable registry of values keyed by command token.">TokenRegistry</a></span>, are not literal types; keep them as <span class="tt">static const</span> with an out-of-line definition (<span class="tt">inline static const</span> if they must be defined in a header).</li>
+<li>Standard library functions such as <span class="tt">std::sqrt</span> and <span class="tt">std::log</span> are not <span class="tt">constexpr</span> in C++20, so constants initialised with them must remain <span class="tt">const</span>.</li>
+<li>A non-<span class="tt">static</span> <span class="tt">const</span> data member such as <span class="tt">const <a class="el" href="../../df/de6/classdouble.html">double</a> length = 0.;</span> is per-object instance state, often written through <span class="tt">access::rw</span>. Do not convert it into a <span class="tt">static constexpr</span> class member.</li>
+<li>When a literal-type class member becomes <span class="tt">static constexpr</span>, delete its old out-of-line definition rather than keeping both declarations.</li>
+</ol>
 <h2>Headers and includes</h2>
 <ol type="1">
 <li>Keep the copyright and license header used by the file.</li>

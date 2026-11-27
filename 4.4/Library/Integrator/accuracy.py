@@ -2,6 +2,7 @@ import dataclasses
 import os
 import shutil
 import subprocess
+import sys
 from itertools import cycle
 
 import h5py
@@ -38,8 +39,7 @@ LS = get_line_style()
 def get_line_color():
     color_tuple = ["r", "g", "b"]
 
-    for v in cycle(color_tuple):
-        yield v
+    yield from cycle(color_tuple)
 
 
 LC = get_line_color()
@@ -187,6 +187,7 @@ def run(config):
 
         subprocess.run(
             ["suanpan", "-np", "-f", "tester.sp"],
+            check=False,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
@@ -285,7 +286,7 @@ def run(config):
 if __name__ == "__main__":
     if not shutil.which("suanpan"):
         print("suanpan command not found.")
-        exit(1)
+        sys.exit(1)
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 

@@ -103,29 +103,25 @@ $(function(){initNavTree('d0/d4b/classsuanpan_1_1_async_print_guard.html','../..
 </div><!--header-->
 <div class="contents">
 
-<p>RAII helper that enables asynchronous printing for a scope.  
- <a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../d0/d94/async__print_8h_source.html">async_print.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for suanpan::AsyncPrintGuard:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d34/classsuanpan_1_1_async_print_guard__coll__graph.svg" width="238" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d34/classsuanpan_1_1_async_print_guard__coll__graph.svg" width="238" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afea5c2cf558a101de97c1cd531969891" id="r_afea5c2cf558a101de97c1cd531969891"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afea5c2cf558a101de97c1cd531969891">AsyncPrintGuard</a> ()</td></tr>
 <tr class="memitem:aa0cf61b7a4bb3e7580b763d664c2d077" id="r_aa0cf61b7a4bb3e7580b763d664c2d077"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0cf61b7a4bb3e7580b763d664c2d077">AsyncPrintGuard</a> (const AsyncPrintGuard &amp;)=delete</td></tr>
+<tr class="memitem:a790da9e10a26c9db34450751a8bfdd2b" id="r_a790da9e10a26c9db34450751a8bfdd2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a790da9e10a26c9db34450751a8bfdd2b">AsyncPrintGuard</a> (AsyncPrintGuard &amp;&amp;)=delete</td></tr>
 <tr class="memitem:aac0052016686d9018a9eaae482a70615" id="r_aac0052016686d9018a9eaae482a70615"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#afea5c2cf558a101de97c1cd531969891">AsyncPrintGuard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac0052016686d9018a9eaae482a70615">operator=</a> (const <a class="el" href="#afea5c2cf558a101de97c1cd531969891">AsyncPrintGuard</a> &amp;)=delete</td></tr>
+<tr class="memitem:aecec430d245028af2eaf9407089661eb" id="r_aecec430d245028af2eaf9407089661eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#afea5c2cf558a101de97c1cd531969891">AsyncPrintGuard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecec430d245028af2eaf9407089661eb">operator=</a> (<a class="el" href="#afea5c2cf558a101de97c1cd531969891">AsyncPrintGuard</a> &amp;&amp;)=delete</td></tr>
 <tr class="memitem:a3117f519f227ffaac47ad92110fa4e87" id="r_a3117f519f227ffaac47ad92110fa4e87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3117f519f227ffaac47ad92110fa4e87">~AsyncPrintGuard</a> ()</td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>RAII helper that enables asynchronous printing for a scope. </p>
-<p>The destructor flushes pending output and restores synchronous printing, including when the scope is left via an exception. </p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afea5c2cf558a101de97c1cd531969891" name="afea5c2cf558a101de97c1cd531969891"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afea5c2cf558a101de97c1cd531969891">&#9670;&#160;</a></span>AsyncPrintGuard() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afea5c2cf558a101de97c1cd531969891">&#9670;&#160;</a></span>AsyncPrintGuard() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,13 +150,13 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d4b/classsuanpan_1_1_async_print_guard_afea5c2cf558a101de97c1cd531969891_icgraph.svg" width="534" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d4b/classsuanpan_1_1_async_print_guard_afea5c2cf558a101de97c1cd531969891_icgraph.svg" width="534" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
 <a id="aa0cf61b7a4bb3e7580b763d664c2d077" name="aa0cf61b7a4bb3e7580b763d664c2d077"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0cf61b7a4bb3e7580b763d664c2d077">&#9670;&#160;</a></span>AsyncPrintGuard() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0cf61b7a4bb3e7580b763d664c2d077">&#9670;&#160;</a></span>AsyncPrintGuard() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,6 +181,36 @@ Here is the caller graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d4b/classsuanpan_1_1_async_print_guard_aa0cf61b7a4bb3e7580b763d664c2d077_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a790da9e10a26c9db34450751a8bfdd2b" name="a790da9e10a26c9db34450751a8bfdd2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a790da9e10a26c9db34450751a8bfdd2b">&#9670;&#160;</a></span>AsyncPrintGuard() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">suanpan::AsyncPrintGuard::AsyncPrintGuard </td>
+          <td>(</td>
+          <td class="paramtype">AsyncPrintGuard &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d4b/classsuanpan_1_1_async_print_guard_a790da9e10a26c9db34450751a8bfdd2b_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -220,8 +246,38 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aecec430d245028af2eaf9407089661eb" name="aecec430d245028af2eaf9407089661eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecec430d245028af2eaf9407089661eb">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#afea5c2cf558a101de97c1cd531969891">AsyncPrintGuard</a> &amp; suanpan::AsyncPrintGuard::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#afea5c2cf558a101de97c1cd531969891">AsyncPrintGuard</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d4b/classsuanpan_1_1_async_print_guard_aecec430d245028af2eaf9407089661eb_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="aac0052016686d9018a9eaae482a70615" name="aac0052016686d9018a9eaae482a70615"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac0052016686d9018a9eaae482a70615">&#9670;&#160;</a></span>operator=()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0052016686d9018a9eaae482a70615">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

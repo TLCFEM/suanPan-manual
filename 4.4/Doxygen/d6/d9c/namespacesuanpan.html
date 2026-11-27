@@ -114,7 +114,6 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:AsyncPrintGuard" id="r_AsyncPrintGuard"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4b/classsuanpan_1_1_async_print_guard.html">AsyncPrintGuard</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII helper that enables asynchronous printing for a scope.  <a href="../../d0/d4b/classsuanpan_1_1_async_print_guard.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -169,17 +168,16 @@ requires requires(Container&amp; x) { x.begin(); x.end(); }</td></tr>
 <tr class="memitem:af65ff889c917db764400e6c72c11a0b7" id="r_af65ff889c917db764400e6c72c11a0b7"><td class="memTemplParams" colspan="2">template&lt;typename T1&gt; </td></tr>
 <tr class="memitem:af65ff889c917db764400e6c72c11a0b7 template"><td class="memItemLeft" align="right" valign="top">enable_if2&lt; is_arma_type&lt; T1 &gt;::value, typenameT1::pod_type &gt;::result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af65ff889c917db764400e6c72c11a0b7">inf_norm</a> (const T1 &amp;X)</td></tr>
 <tr class="memitem:a6356c5d1770cb27cbc0542e0269ca499" id="r_a6356c5d1770cb27cbc0542e0269ca499"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6356c5d1770cb27cbc0542e0269ca499">enable_async_print</a> ()</td></tr>
-<tr class="memdesc:a6356c5d1770cb27cbc0542e0269ca499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable asynchronous printing.  <br /></td></tr>
 <tr class="memitem:a0b59cadbfe88bfbd9be882fc61086ad0" id="r_a0b59cadbfe88bfbd9be882fc61086ad0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b59cadbfe88bfbd9be882fc61086ad0">disable_async_print</a> ()</td></tr>
-<tr class="memdesc:a0b59cadbfe88bfbd9be882fc61086ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable asynchronous printing.  <br /></td></tr>
-<tr class="memitem:a7f1a1a8277aef2eb47a8db397a8af97e" id="r_a7f1a1a8277aef2eb47a8db397a8af97e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f1a1a8277aef2eb47a8db397a8af97e">flush_print</a> ()</td></tr>
-<tr class="memdesc:a7f1a1a8277aef2eb47a8db397a8af97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block until all queued messages have been written.  <br /></td></tr>
+<tr class="memitem:a751119975f2896dbcb628ff97f6bb833" id="r_a751119975f2896dbcb628ff97f6bb833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a751119975f2896dbcb628ff97f6bb833">flush_print</a> (std::ostream &amp;stream)</td></tr>
 <tr class="memitem:aeab411e6d926406911e74761c0811d42" id="r_aeab411e6d926406911e74761c0811d42"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeab411e6d926406911e74761c0811d42">is_async_print_enabled</a> ()</td></tr>
-<tr class="memdesc:aeab411e6d926406911e74761c0811d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether asynchronous printing is currently active.  <br /></td></tr>
 <tr class="memitem:a1428e3d6e84d33502de4078779b0def0" id="r_a1428e3d6e84d33502de4078779b0def0"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a1428e3d6e84d33502de4078779b0def0 template"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1428e3d6e84d33502de4078779b0def0">ramp</a> (const T in)</td></tr>
 <tr class="memitem:af4c7f6e64d7c9afac1b1945c93e522a3" id="r_af4c7f6e64d7c9afac1b1945c93e522a3"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:af4c7f6e64d7c9afac1b1945c93e522a3 template"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4c7f6e64d7c9afac1b1945c93e522a3">middle</a> (const std::vector&lt; T &gt; &amp;container)</td></tr>
+<tr class="memitem:a173321dbc6ceb2903134f8d421668bce" id="r_a173321dbc6ceb2903134f8d421668bce"><td class="memTemplParams" colspan="2">template&lt;typename... F&gt; </td></tr>
+<tr class="memitem:a173321dbc6ceb2903134f8d421668bce template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a173321dbc6ceb2903134f8d421668bce">parallel_invoke</a> (F &amp;&amp;... func)</td></tr>
+<tr class="memdesc:a173321dbc6ceb2903134f8d421668bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a number of callables, in parallel when multi-threading is enabled.  <br /></td></tr>
 <tr class="memitem:adef8082401dbf9d86ce230ad2b9b618d" id="r_adef8082401dbf9d86ce230ad2b9b618d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../d5/d08/conceptsp__i.html">sp_i</a> IT, std::invocable&lt; IT &gt; F&gt; </td></tr>
 <tr class="memitem:adef8082401dbf9d86ce230ad2b9b618d template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adef8082401dbf9d86ce230ad2b9b618d">for_each</a> (const IT start, const IT <a class="el" href="../../d9/df2/group___domain.html#ga45bf90d3e5b89fc6c46f15cc58c1c60c">end</a>, F &amp;&amp;FN)</td></tr>
 <tr class="memitem:ac03a05641f69234a448e27a70033ad8f" id="r_ac03a05641f69234a448e27a70033ad8f"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../d5/d08/conceptsp__i.html">sp_i</a> IT, std::invocable&lt; IT &gt; F&gt; </td></tr>
@@ -643,13 +641,10 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Disable asynchronous printing. </p>
-<p>All messages queued so far are drained before this function returns. Any message submitted afterward is written synchronously again. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_a0b59cadbfe88bfbd9be882fc61086ad0_icgraph.svg" width="516" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_a0b59cadbfe88bfbd9be882fc61086ad0_icgraph.svg" width="516" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -668,13 +663,10 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Enable asynchronous printing. </p>
-<p>Subsequent messages are queued for the print worker. This function is idempotent; the mode flag is atomic and the print pool is constructed on first use in a thread-safe manner, so no extra synchronisation is needed. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_a6356c5d1770cb27cbc0542e0269ca499_icgraph.svg" width="100%" height="408"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_a6356c5d1770cb27cbc0542e0269ca499_icgraph.svg" width="100%" height="502"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -755,8 +747,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a7f1a1a8277aef2eb47a8db397a8af97e" name="a7f1a1a8277aef2eb47a8db397a8af97e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f1a1a8277aef2eb47a8db397a8af97e">&#9670;&#160;</a></span>flush_print()</h2>
+<a id="a751119975f2896dbcb628ff97f6bb833" name="a751119975f2896dbcb628ff97f6bb833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751119975f2896dbcb628ff97f6bb833">&#9670;&#160;</a></span>flush_print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -764,18 +756,15 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void suanpan::flush_print </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Block until all queued messages have been written. </p>
-<p>Asynchronous printing stays enabled. This is useful before swapping the stream buffer of the output stream. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_a7f1a1a8277aef2eb47a8db397a8af97e_icgraph.svg" width="363" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_a751119975f2896dbcb628ff97f6bb833_icgraph.svg" width="363" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1148,12 +1137,10 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check whether asynchronous printing is currently active. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_aeab411e6d926406911e74761c0811d42_icgraph.svg" width="390" height="58"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_aeab411e6d926406911e74761c0811d42_icgraph.svg" width="390" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1285,6 +1272,34 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a173321dbc6ceb2903134f8d421668bce" name="a173321dbc6ceb2903134f8d421668bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a173321dbc6ceb2903134f8d421668bce">&#9670;&#160;</a></span>parallel_invoke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... F&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void suanpan::parallel_invoke </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invoke a number of callables, in parallel when multi-threading is enabled. </p>
+<p>This mirrors the interface of <code class="param">tbb::parallel_invoke</code>. Without <code class="param">SUANPAN_MT</code> the callables are invoked sequentially in pack order. All callables must be independent as they may run concurrently.</p>
+<p>In distributed builds the callables are always invoked sequentially. They may issue MPI collectives, which have to be called in the same order on every rank; concurrent calls from several threads cannot guarantee that order even with MPI_THREAD_MULTIPLE. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_a173321dbc6ceb2903134f8d421668bce_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="a51c99378e207900ff1acda630dda052c" name="a51c99378e207900ff1acda630dda052c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51c99378e207900ff1acda630dda052c">&#9670;&#160;</a></span>pattern()</h2>
 
@@ -1350,7 +1365,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_a9223bb5e10c4d1cdfbdfe877ebb2737e_icgraph.svg" width="462" height="520"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d9c/namespacesuanpan_a9223bb5e10c4d1cdfbdfe877ebb2737e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

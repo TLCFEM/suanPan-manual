@@ -349,6 +349,7 @@ var group___integrator =
       [ "assemble_effective_matrix", "d6/d55/class_integrator.html#a0ddb0d70d92e880e5c7852617bf486c9", null ],
       [ "assemble_matrix", "d6/d55/class_integrator.html#aaadfbbb10da3655e82c7f337f69827c5", null ],
       [ "assemble_resistance", "d6/d55/class_integrator.html#a8fd4d0278e4092a2ec85d720d1ce2b15", null ],
+      [ "assemble_resistance_vectors", "d6/d55/class_integrator.html#a93d3b06d6def77ab9b34ece4044b5f25", null ],
       [ "clear_status", "d6/d55/class_integrator.html#aa6034c1850321c14e5bde93886385b8e", null ],
       [ "commit_status", "d6/d55/class_integrator.html#a6f58f962ec742224c1f6d54355961ffb", null ],
       [ "correct_trial_status", "d6/d55/class_integrator.html#aedb29a38aa1d5fbe0b9ad70c6bd23c9b", null ],

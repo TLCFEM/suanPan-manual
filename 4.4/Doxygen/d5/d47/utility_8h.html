@@ -106,6 +106,7 @@ $(function(){initNavTree('d5/d47/utility_8h.html','../../',''); });
 <p>General-purpose utility functions used across the project.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;concepts&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;set&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/d8f/suan_pan_8h_source.html">suanPan.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -116,7 +117,7 @@ Include dependency graph for utility.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d1a/utility_8h__dep__incl.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d1a/utility_8h__dep__incl.svg" width="100%" height="485"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="../../d5/d47/utility_8h_source.html">Go to the source code of this file.</a></p>
@@ -130,6 +131,9 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:af4c7f6e64d7c9afac1b1945c93e522a3" id="r_af4c7f6e64d7c9afac1b1945c93e522a3"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:af4c7f6e64d7c9afac1b1945c93e522a3 template"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#af4c7f6e64d7c9afac1b1945c93e522a3">suanpan::middle</a> (const std::vector&lt; T &gt; &amp;container)</td></tr>
+<tr class="memitem:a173321dbc6ceb2903134f8d421668bce" id="r_a173321dbc6ceb2903134f8d421668bce"><td class="memTemplParams" colspan="2">template&lt;typename... F&gt; </td></tr>
+<tr class="memitem:a173321dbc6ceb2903134f8d421668bce template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#a173321dbc6ceb2903134f8d421668bce">suanpan::parallel_invoke</a> (F &amp;&amp;... func)</td></tr>
+<tr class="memdesc:a173321dbc6ceb2903134f8d421668bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a number of callables, in parallel when multi-threading is enabled.  <br /></td></tr>
 <tr class="memitem:adef8082401dbf9d86ce230ad2b9b618d" id="r_adef8082401dbf9d86ce230ad2b9b618d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../d5/d08/conceptsp__i.html">sp_i</a> IT, std::invocable&lt; IT &gt; F&gt; </td></tr>
 <tr class="memitem:adef8082401dbf9d86ce230ad2b9b618d template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/namespacesuanpan.html#adef8082401dbf9d86ce230ad2b9b618d">suanpan::for_each</a> (const IT start, const IT <a class="el" href="../../d9/df2/group___domain.html#ga45bf90d3e5b89fc6c46f15cc58c1c60c">end</a>, F &amp;&amp;FN)</td></tr>
 <tr class="memitem:ac03a05641f69234a448e27a70033ad8f" id="r_ac03a05641f69234a448e27a70033ad8f"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../d5/d08/conceptsp__i.html">sp_i</a> IT, std::invocable&lt; IT &gt; F&gt; </td></tr>

@@ -39,6 +39,7 @@ var utility_8h =
     [ "suanpan::max_element", "d6/d9c/namespacesuanpan.html#ac160cee0ccc3a40e50ff1d8f128f3d70", null ],
     [ "suanpan::middle", "d6/d9c/namespacesuanpan.html#af4c7f6e64d7c9afac1b1945c93e522a3", null ],
     [ "suanpan::none_of", "d6/d9c/namespacesuanpan.html#aab6773d5cc86dac33ff91a9084b5d6e3", null ],
+    [ "suanpan::parallel_invoke", "d6/d9c/namespacesuanpan.html#a173321dbc6ceb2903134f8d421668bce", null ],
     [ "perturb", "da/d46/group___utility.html#gad47f05de995c9e01ebbd190b7499188f", null ],
     [ "suanpan::sign", "d6/d9c/namespacesuanpan.html#a7e29112eaf3944f91372ce334d63c3b8", null ],
     [ "suanpan::expression::split", "df/d5d/namespacesuanpan_1_1expression.html#ab2b8e7e8a1c28d8d745c483a90d6d8d2", null ],
