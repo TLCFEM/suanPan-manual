@@ -2,11 +2,13 @@
 
 Minimum version: v2.5
 
-In this example, we demonstrate how to use python to preprocess data by creating a frame structure. This example requires some Python familiarity. However, as we are developing a frame structure which contains mainly frame elements, the procedure is relatively straightforward.
+In this example, we demonstrate how to use Python to preprocess data by creating a frame structure.
+This example requires some Python familiarity.
+However, as we are developing a frame structure which contains mainly frame elements, the procedure is relatively straightforward.
 
 ## Objective
 
-We are going to create a three--storey frame as shown below.
+We are going to create a three-storey frame as shown below.
 
 ![three storey frame](three-storey-frame.svg)
 
@@ -298,7 +300,10 @@ with open("column.sp", "r") as f:
 
 ### Fibre Based Elements
 
-The similar procedure can be used to generate fibre based elements with slight modifications. Here we use [`F21`](../../../Library/Element/Beam/F21.md) element. It relies on sections, and designations can be directly used to create sections. In this example, we use [`US2D`](../../../Library/Section/Code/US.md) category.
+A similar procedure can be used to generate fibre-based elements with slight modifications.
+Here we use the [`F21`](../../../Library/Element/Beam/F21.md) element.
+It relies on sections, and designations can be directly used to create sections.
+In this example, we use the [`US2D`](../../../Library/Section/Code/US.md) category.
 
 
 ```python
@@ -344,7 +349,8 @@ with open("fibre_frame.sp", "r") as f:
 
 ### Generate Mass
 
-For simplicity, we only apply horizontal mass to each node, the procedure is similar to that of frame elements.
+For simplicity, we only apply horizontal mass to each node.
+The procedure is similar to that of frame elements.
 
 To keep code modular, we define a mass grid to store mass at each node.
 
@@ -433,7 +439,9 @@ main_file.write(f"fix 1 E 1 {' '.join(str(tag) for tag in node_grid[0, :])}\n")
 
 
 
-The ground motion shall be applied. The `ELNS` file contains one of the accelerograms of the 1940 El Centro Earthquake. It is normalised so that the maximum amplitude is unity, we assign a PGA of $$0.5g$$.
+The ground motion shall be applied.
+The `ELNS` file contains one of the accelerograms of the 1940 El Centro Earthquake.
+It is normalised so that the maximum amplitude is unity; we assign a PGA of $$0.5g$$.
 
 
 ```python
@@ -469,7 +477,7 @@ main_file.write(
 
 
 
-For illustration, we can also record element yield flag at both ends so that the corresponding plastic hinge distribution can be generated. The yield flag is **not** generally available in other elements.
+For illustration, we can also record the element yield flag at both ends so that the corresponding plastic hinge distribution can be generated. The yield flag is **not** generally available in other elements.
 
 
 ```python
@@ -488,7 +496,7 @@ main_file.write(
 
 
 
-We keep writing dynamic analysis step and the corresponding settings into the file.
+We keep writing the dynamic analysis step and the corresponding settings into the file.
 
 
 ```python
@@ -634,7 +642,8 @@ run_analysis()
 
 ## Roof Displacement History
 
-The result file will be generated and stored in `.h5` file. We can read the file and plot the results.
+The result file will be generated and stored in an `.h5` file.
+We can read the file and plot the results.
 
 
 ```python

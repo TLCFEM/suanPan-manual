@@ -1,11 +1,11 @@
 # Validation US Designation
 
-In this page, we validate the section properties of some US designations.
+On this page, we validate the section properties of some US designations.
 All W, S, M, WT, ST, MT, HP, HSS designations, which are compiled and well documented in the [AISC Shapes Database v16.0](https://www.aisc.org/publications/steel-construction-manual-resources/16th-ed-steel-construction-manual/aisc-shapes-database-v16.0/), are included.
 
 ## Some Utilities
 
-The spreadsheet is loaded directly via the url.
+The bundled spreadsheet is loaded directly.
 
 
 ```python
@@ -48,7 +48,7 @@ A few things to note:
 1. The material is assumed to be elastic with a unit elastic modulus.
 2. The default integration scheme is used for each designation.
 3. A unit displacement load is applied to axial, strong axis bending and weak axis bending.
-4. The `US3DC` category is used, it automatically recentre the section to its barycentre if it is not symmetric.
+4. The `US3DC` category is used; it automatically recentres the section to its barycentre if it is not symmetric.
 
 
 ```python
@@ -104,7 +104,7 @@ def run_analysis(designation: str):
             return [float(x) for x in result[i + 1].split()]
 ```
 
-The ratio between numerical result and the reference value given in the database is stored.
+The ratio between the numerical result and the reference value given in the database is stored.
 Ideally, this ratio shall be close to unity, meaning a good match.
 
 
@@ -221,14 +221,15 @@ Some very light M shapes cannot be well approximated.
 ## Strong Axis Bending
 
 Some very heavy T sections tend to have poor strong axis moment of inertia.
-In this shapes, the thickness of flange accounts for a significant portion of the overall depth.
+In these shapes, the thickness of the flange accounts for a significant portion of the overall depth.
 The normal stress in the flange presents gradient.
 In the meantime, there is only one layer of integration points along the thickness of flange, which is not accurate enough in this case.
 
 ## Weak Axis Bending
 
-The tapered shapes tend to have more material towards the center, as a result, the weak axis moment of inertia is smaller.
-It is modelled by a flat rectangle in numerical models, this overestimate the moment of inertia, mainly for S and ST shapes.
+The tapered shapes tend to have more material towards the centre.
+As a result, the weak axis moment of inertia is smaller.
+It is modelled by a flat rectangle in numerical models, which overestimates the moment of inertia, mainly for S and ST shapes.
 
 
 ```python

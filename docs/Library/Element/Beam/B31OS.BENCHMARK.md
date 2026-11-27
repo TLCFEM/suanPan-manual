@@ -8,7 +8,7 @@ For further references, please see [this](https://doi.org/10.1016/j.engstruct.20
 
 ![cantilever beam with angle section](https://raw.githubusercontent.com/TLCFEM/suanPan-manual/dev/docs/Library/Element/Beam/Angle.svg)
 
-The cantilever beam with the angle section under an axial load applied at the shear centre.
+The cantilever beam with the angle section is under an axial load applied at the shear centre.
 
 #### Remarks
 

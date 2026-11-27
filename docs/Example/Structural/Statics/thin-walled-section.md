@@ -4,9 +4,16 @@ In this example, we demonstrate how to create arbitrary sections and perform ana
 
 The relevant scripts can be [downloaded](thin-walled-section.zip).
 
-To represent conventional, bending moment only sections numerically, only geometry information, such as location and area, is required. This allows the usage of predefined basic shapes, such as rectangles, circles. And complex sections can be built up by using those basic shapes. However, such an approach is not practical for sections involving torsion and warping, as some important sectional properties can only be obtained by analysing the section as a whole. Hence, a general approach that only focuses on section discretisation is used. The discretisation refers to the division of the section into a number of fibres/cells. Those fibres are the smallest units that are used in numerical integration. The users shall provide the corresponding sectional properties.
+To represent conventional, bending-moment-only sections numerically, only geometry information, such as location and area, is required.
+This allows the usage of predefined basic shapes, such as rectangles and circles.
+Complex sections can be built up by using those basic shapes.
+However, such an approach is not practical for sections involving torsion and warping, as some important sectional properties can only be obtained by analysing the section as a whole.
+Hence, a general approach that only focuses on section discretisation is used.
+The discretisation refers to the division of the section into a number of fibres/cells.
+Those fibres are the smallest units that are used in numerical integration.
+The users shall provide the corresponding sectional properties.
 
-To obtain necessary sectional properties, a section analysis shall be performed. For arbitrary sections, often a general purpose FEA based method shall be used. [This](https://doi.org/10.1002/9780470172667) book provides a thorough discussion on relevant numerical methods.
+To obtain necessary sectional properties, a section analysis shall be performed. For arbitrary sections, a general-purpose FEA-based method shall often be used. [This](https://doi.org/10.1002/9780470172667) book provides a thorough discussion of the relevant numerical methods.
 
 The [`sectionproperties`](https://sectionproperties.readthedocs.io/en/latest/) library implements such a method. It can be used to prepare data to be used in `suanPan`.
 
@@ -48,8 +55,8 @@ $$
 \dfrac{\partial\omega}{\partial{}y},\qquad\dfrac{\partial\omega}{\partial{}z}.
 $$
 
-[Alemdar's thesis](http://hdl.handle.net/1853/22220), and some other derivatives, uses $$\gamma=2n\phi'$$ to approximate shear strain. This is only suitable for thin-walled open sections.
-Here we use general formulation instead for complex, universal, arbitrary sections.
+[Alemdar's thesis](http://hdl.handle.net/1853/22220) and some other derivations use $$\gamma=2n\phi'$$ to approximate shear strain. This is only suitable for thin-walled open sections.
+Here we use a general formulation instead for complex, universal, arbitrary sections.
 Interested readers can refer to, for example, [Pilkey's book](https://doi.org/10.1002/9780470172667), for more details.
 
 Two shear strains can be expressed as follows.
@@ -110,7 +117,7 @@ print(ele)
 
 ### Area
 
-The library has implemented basic utility functions to elements, such that basic properties for each element can be conveniently obtained.
+The library has implemented basic utility functions for elements, such that basic properties for each element can be conveniently obtained.
 
 
 ```python
@@ -185,7 +192,7 @@ Since for circular sections, there is no warping, the corresponding derivatives 
 
 ### A Universal Function
 
-It appears to be easy to obtain necessary properties for each element. Here we provide a universal function to generate the required data.
+It appears to be easy to obtain the necessary properties for each element. Here we provide a universal function to generate the required data.
 
 One shall adjust it accordingly for specific purposes.
 
@@ -226,7 +233,7 @@ class Cell3DOS:
             f" {self.py:+E}"
             f" {self.pz:+E}"
             # f" $mat_tag"
-            f" 1"  # here we just user 1 for brevity
+            f" 1"  # here we just use 1 for brevity
             f" {self.y:+E}"
             f" {self.z:+E}"
         )
@@ -267,7 +274,7 @@ to_file(to_cell3dos(geometry), "circular.sp")
 
 ### Validation
 
-Now it is possible to create a simple single element model to validate the data. Remember to change the material tag accordingly.
+Now it is possible to create a simple single-element model to validate the data. Remember to change the material tag accordingly.
 
 ```text
 node 1 0 0 0
@@ -491,7 +498,7 @@ with TemporaryDirectory() as directory:
 
 
 
-We shall see the initial stiffness is $$74.93$$, which is close to the torsional constant $$J$$.
+We shall see that the initial stiffness is $$74.93$$, which is close to the torsional constant $$J$$.
 Due to the existence of bi-moments, the torque is not linearly proportional to the rotation.
 If one records the `S` output, the St. Venant torsion would be $$GJ\phi'$$.
 
