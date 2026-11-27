@@ -30,7 +30,7 @@ from matplotlib import pyplot as plt
 from tqdm import tqdm
 
 
-class ErrorLine:
+class ErrorMap:
     def __init__(
         self,
         command: str,
@@ -43,8 +43,9 @@ class ErrorLine:
         tmp_dir: str = "tmp",
         contour_samples: int = 20,
         parallel: int = cpu_count(True),
+        dimension: int = 6,
     ):
-        """Initializes an ErrorLine instance with the specified parameters.
+        """Initializes an ErrorMap instance with the specified parameters.
         Args:
             command (str): The command string, typically containing the material name as the second word.
             ref_strain (float): The reference strain value.
@@ -55,6 +56,7 @@ class ErrorLine:
             tmp_dir (str, optional): The directory for temporary files. Defaults to "tmp".
             contour_samples (int, optional): The number of samples for contour calculation. Defaults to 20.
             parallel (int, optional): The number of parallel processes to use. Defaults to the number of CPU cores available.
+            dimension (int, optional): The dimension of the problem, either 3 or 6. Defaults to 6.
         Raises:
             FileNotFoundError: If the specified executable is not found in the system PATH.
             ValueError: If the temporary directory is not specified.
@@ -68,12 +70,16 @@ class ErrorLine:
         self.tmp_dir = tmp_dir
         self.contour_samples = contour_samples
         self.parallel = max(1, parallel)
+        self.dimension = dimension
 
         if which(self.executable) is None:
             raise FileNotFoundError(f"Executable '{self.executable}' not found.")
 
         if not self.tmp_dir:
             raise ValueError("Temporary directory must be specified.")
+
+        if self.dimension not in (3, 6):
+            raise ValueError("Dimension must be 3 or 6.")
 
         self._material_name = command.split()[1].lower()
         self._base: np.ndarray = None  # type: ignore
@@ -104,21 +110,30 @@ class ErrorLine:
                 f"{self.command}\nmaterialtestbystrainhistory 1 strain_history\nexit\n"
             )
 
-    def _generate_base(self, center: float, resolution: int):
-        return np.linspace(0, center * self.ref_strain, resolution + 1, endpoint=True)[
-            1:
-        ]
+    def _generate_base(self, center: tuple, resolution: int):
+        deformation = np.zeros((resolution, self.dimension))
+        for i, x in enumerate(center):
+            deformation[:, i] = np.linspace(
+                0, x * self.ref_strain, resolution + 1, endpoint=True
+            )[1:]
+        return deformation
 
-    def _generate_increment(self, dx: float):
-        return np.linspace(0, dx * self.ref_strain, self.resolution + 1, endpoint=True)[
-            1:
-        ]
+    def _generate_increment(self, dd: tuple[float, float], components: tuple[int, int]):
+        increment = np.zeros((self.resolution, self.dimension))
+        for c, d in zip(components, dd):
+            increment[:, c] = np.linspace(
+                0, d * self.ref_strain, self.resolution + 1, endpoint=True
+            )[1:]
+        return increment
 
     def _run_analysis(self, increment: np.ndarray):
-        if self._base is not None:
-            strain_history = np.concatenate((self._base, self._base[-1] + increment))
+        def _ensure_2d(_x):
+            return _x.reshape(1, -1) if len(_x.shape) == 1 else _x
+
+        if self._base is None:
+            strain_history = _ensure_2d(increment)
         else:
-            strain_history = increment
+            strain_history = np.vstack((self._base, self._base[-1, :] + increment))
 
         np.savetxt("strain_history", strain_history)
 
@@ -127,6 +142,7 @@ class ErrorLine:
 
         result = subprocess.run(
             [self.executable, "-f", "isomap.sp"],
+            check=False,
             capture_output=True,
             text=True,
             encoding="utf-8",
@@ -143,33 +159,33 @@ class ErrorLine:
         while not exists("RESULT.txt"):
             sleep(0.01)
 
-        return np.loadtxt("RESULT.txt")[-1]
+        return _ensure_2d(np.loadtxt("RESULT.txt"))[-1, :]
 
-    def _generate_figure(self, x: np.ndarray, y: np.ndarray, type: str):
-        fig = plt.figure(figsize=(7.5, 5))
-        plt.title(self._material_name.upper())
-        if type == "abs":
-            full_title = r"Error (unit: % of $\sigma_\text{ref}$)"
-        else:
-            full_title = "Relative Error (unit: %)"
-
-        plt.plot(x, y, label="linear scale", marker="o")
+    def _generate_figure(
+        self, x_grid: np.ndarray, y_grid: np.ndarray, grid: np.ndarray, type: str
+    ):
+        fig = plt.figure(figsize=(7.5, 7))
+        contour = plt.contourf(x_grid, y_grid, grid, levels=20, cmap="coolwarm")
+        plt.colorbar(contour, aspect=30, ax=fig.gca(), fraction=0.03)
+        contour = plt.contour(
+            x_grid, y_grid, grid, levels=20, colors="black", linewidths=0.2
+        )
+        plt.clabel(contour, inline=True, fontsize=8)
         plt.xlabel("$\\Delta{}\\varepsilon_x/\\varepsilon_{\\text{ref}}$")
-        plt.ylabel(full_title)
-        plt.legend(loc="center left")
-        plt.grid()
-
-        ax2 = plt.gca().twinx()
-        ax2.set_ylabel("Error Magnitude")
-        ax2.plot(x, np.abs(y), label="log scale", marker="x", color="orange")
-        ax2.set_yscale("log")
-        plt.legend(loc="center right")
-        plt.grid(linestyle="--")
-
+        plt.ylabel("$\\Delta{}\\varepsilon_y/\\varepsilon_{\\text{ref}}$")
+        if type == "abs":
+            full_title = f"{self._material_name.upper()} Absolute Error (unit: % of $\\sigma_\\text{{ref}}$)"
+        else:
+            full_title = f"{self._material_name.upper()} Relative Error (unit: %)"
+        plt.title(full_title)
         center_text = ""
         if self._base is not None:
-            center_text = f"center: ({self._base[-1]:.4e}), "
-
+            center = []
+            for x in self._base[-1, :]:
+                if x == 0:
+                    break
+                center.append(f"{x:.4e}")
+            center_text = f"center: ({', '.join(center)}), "
         fig.text(
             0,
             0,
@@ -178,9 +194,15 @@ class ErrorLine:
             va="bottom",
             ha="left",
         )
-        plt.tight_layout(pad=0.2)
-        plt.subplots_adjust(bottom=0.15)
+        plt.gca().set_aspect("equal", adjustable="box")
+        plt.tight_layout(pad=1.5)
         return fig
+
+    @staticmethod
+    def _norm(stress: np.ndarray):
+        stress = np.square(stress)
+        stress[3:] = 2 * stress[3:]
+        return np.sqrt(np.sum(stress))
 
     @contextmanager
     def _temporary_dir(self):
@@ -196,82 +218,90 @@ class ErrorLine:
         else:
             yield
 
-    def _run_all(self, dx, type: set):
+    def _run_all(self, dd: tuple[float, float], type: set, components: tuple[int, int]):
         with self._temporary_dir():
-            increment = self._generate_increment(dx)
+            increment = self._generate_increment(dd, components)
             reference = self._run_analysis(increment)
-            coarse = self._run_analysis(increment[-1:])
+            coarse = self._run_analysis(increment[-1, :])
             results: dict = {}
-            error = 100 * (coarse - reference)
+            error = 100 * self._norm(coarse - reference)
             for t in type:
                 match t:
                     case "abs":
                         results[t] = error / self.ref_stress
                     case "rel":
-                        results[t] = error / reference
+                        results[t] = error / self._norm(reference)
             return results
 
     def contour(
         self,
         title: str = "",
         *,
-        center: float | None,
+        center: tuple | None,
         size: int,
+        components: tuple[int, int] = (0, 1),
         type: Literal["abs", "rel"] | set[Literal["abs", "rel"]] = "abs",
     ):
         """
-        Generates and saves a 1D contour plot of error values over a specified region.
+        Generates and saves contour plots of error values over a specified 2D region.
 
-        This method computes error values along a 1D line centered at a given point, for one
-        or both error types (absolute and/or relative), and generates corresponding plots.
+        This method evaluates error values on a grid centred at a specified point, for the
+        selected components and error types (absolute and/or relative). It then produces and
+        saves contour plots in both PDF and SVG formats.
 
-        :param str title: Optional prefix for the output filenames. Defaults to an empty string.
-        :param float center: Center coordinate of the region to evaluate.
-        :param int size: Half-size of the region to plot. Determines the extent of the sampling region.
-        :param type: Type(s) of error to compute: "abs" (absolute error), "rel" (relative error),
-            or both. Can be a single string or a set of strings.
+        :param str title: Optional title used as the base for the output filenames.
+        :param tuple center: Center of the region in local coordinates. If provided,
+            the base state will be regenerated with this center.
+        :param int size: Half-size of the region in each direction. Determines the extent
+            of the grid over which errors are computed.
+        :param tuple[int, int] components: Indices of the components for which errors
+            will be computed. Defaults to (0, 1).
+        :param type: Type(s) of error to compute: absolute ("abs"), relative ("rel"), or both.
+            Can be a single string or a set of strings.
         :type type: Literal["abs", "rel"] or set[Literal["abs", "rel"]]
 
-        :raises RuntimeError: If a parallel execution error occurs during evaluation.
+        :raises RuntimeError: If there is a failure during the parallelized computation.
+            In that case, a message will be printed, and no plots will be generated.
 
         :returns: None
         """
-        if center is not None:
+        if center:
             self._base = self._generate_base(center, self.base_resolution)
 
         bound = self.contour_samples
-        region = (
-            np.array([x for x in range(-bound, bound + 1) if x != 0])
-            * size
-            / float(bound)
-        )
-        error_grid = np.zeros_like(region)
+        region = np.array(range(-bound, bound + 1)) * size / float(bound)
+        num_points = len(region)
+        error_grid = np.zeros((num_points, num_points))
 
         if isinstance(type, str):
             type = {type}
 
-        def _runner(_x, _dx):
-            return _x, self._run_all(_dx, type)
+        tasks: list = [None] * error_grid.size
+        for x in range(error_grid.size):
+            i, j = divmod(x, num_points)
+            tasks[x] = (i, j, region[i], region[j])
 
-        results: list = [None] * error_grid.size
+        def _runner(_i, _j, _dx, _dy):
+            return _i, _j, self._run_all((_dx, _dy), type, components)
+
+        results: dict = {}
         try:
-            for i, point in Parallel(  # type: ignore
+            for i, j, point in Parallel(  # type: ignore
                 n_jobs=self.parallel, return_as="generator_unordered"
-            )(
-                delayed(_runner)(x, dx)
-                for x, dx in enumerate(tqdm(region, desc="Contouring..."))
-            ):
-                results[i] = point
+            )(delayed(_runner)(*task) for task in tqdm(tasks, desc="Contouring...")):
+                results[(i, j)] = point
         except RuntimeError:
             print(
                 "\nError encountered. Check the temporary directory for strain history files."
             )
             return
 
+        ex_grid, ey_grid = np.meshgrid(region, region)
+
         for t in type:
-            for i, value in enumerate(results):
-                error_grid[i] = value[t]
-            fig = self._generate_figure(region, error_grid, t)
+            for (i, j), value in results.items():
+                error_grid[i, j] = value[t]
+            fig = self._generate_figure(ex_grid, ey_grid, error_grid, t)
             full_title = f"{title or self._material_name}.{t}.error"
             fig.savefig(f"{full_title}.pdf")
             fig.savefig(f"{full_title}.svg")

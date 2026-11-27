@@ -1,2 +1,2 @@
-from .ErrorLine import ErrorLine as ErrorLine
-from .ErrorMap import ErrorMap as ErrorMap
+from .error_line import ErrorLine as ErrorLine
+from .error_map import ErrorMap as ErrorMap

@@ -13,6 +13,7 @@ Requires:
 
 from __future__ import annotations
 
+import itertools
 from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 from typing import Protocol
@@ -53,7 +54,7 @@ def _equal_area_axis(
     edges = sorted({edge for lo, hi, _ in intervals for edge in (lo, hi)})
     half = total_area / 2
     area = 0.0
-    for lo, hi in zip(edges, edges[1:]):
+    for lo, hi in itertools.pairwise(edges):
         breadth = sum(w for a, b, w in intervals if a <= lo and b >= hi)
         if breadth > 0.0 and area + breadth * (hi - lo) >= half:
             return lo + (half - area) / breadth

@@ -28,110 +28,111 @@ from urllib.request import urlopen
 
 from setuptools import setup
 
-ROOT_FOLDER = Path(__file__).parent
+ROOT = Path(__file__).parent
+DOCS = ROOT / "docs"
+SOURCE_URL = "https://github.com/TLCFEM/suanPan/archive/refs/heads/dev.zip"
+COMMIT_URL = "https://api.github.com/repos/TLCFEM/suanPan/commits/dev"
+RELEASES_URL = "https://api.github.com/repos/TLCFEM/suanPan/releases"
+BINARY = {
+    "linux": "suanPan-linux-amd64-openblas-no-avx.tar.gz",
+    "windows": "suanPan-win-mkl-vtk.zip",
+    "darwin": "suanPan-macos-15-amd64-openblas-vtk-avx.tar.gz",
+}
 
 
-def prepare_doxygen(archive_path: Path):
-    if shutil.which("doxygen") is None:
-        return
-
-    # 2. generate doxygen documentation
-    url = "https://api.github.com/repos/TLCFEM/suanPan/commits/dev"
+def fetch_json(url: str) -> dict:
     with urlopen(url) as response:
-        (doxyfile := archive_path / "Doxyfile").write_text(
-            re.sub(
-                r"^PROJECT_NUMBER\s+=.*$",
-                f"PROJECT_NUMBER = {json.load(response)['sha'][:7]}",
-                doxyfile.read_text(),
-            )
-        )
+        return json.load(response)
 
-    subprocess.run(["doxygen"], cwd=archive_path, check=True)
 
-    shutil.copytree(archive_path / "Document/html", ROOT_FOLDER / "docs/Doxygen")
-    shutil.copytree(archive_path / "Resource", ROOT_FOLDER / "docs/Doxygen/Resource")
-    shutil.copy(
-        ROOT_FOLDER / "docs/favicon.ico",
-        ROOT_FOLDER / "docs/Doxygen/favicon.ico",
+def download(url: str, target: Path) -> None:
+    with urlopen(url) as response, target.open("wb") as file:
+        shutil.copyfileobj(response, file)
+
+
+def read_version(source: Path) -> str:
+    command = (source / "Toolbox/command.h").read_text()
+    return ".".join(
+        re.search(rf"constexpr auto SUANPAN_{part} = (\d);", command).group(1)
+        for part in ("MAJOR", "MINOR", "PATCH")
     )
 
 
-def prepare_binary():
-    if shutil.which("suanpan") is not None or shutil.which("sp") is not None:
+def prepare_source(directory: Path) -> Path:
+    archive = directory / "suanPan-dev.zip"
+    download(SOURCE_URL, archive)
+    with zipfile.ZipFile(archive) as file:
+        file.extractall(directory)
+    return directory / "suanPan-dev"
+
+
+def prepare_doxygen(source: Path) -> None:
+    if shutil.which("doxygen") is None:
         return
 
-    # skip arm64
+    doxyfile = source / "Doxyfile"
+    sha = fetch_json(COMMIT_URL)["sha"][:7]
+    doxyfile.write_text(
+        re.sub(
+            r"^PROJECT_NUMBER\s+=.*$",
+            f"PROJECT_NUMBER = {sha}",
+            doxyfile.read_text(),
+        )
+    )
+    subprocess.run(["doxygen"], cwd=source, check=True)
+
+    target = DOCS / "Doxygen"
+    shutil.copytree(source / "Document/html", target)
+    shutil.copytree(source / "Resource", target / "Resource")
+    shutil.copy(DOCS / "favicon.ico", target / "favicon.ico")
+
+
+def prepare_binary() -> None:
+    if shutil.which("suanpan") or shutil.which("sp"):
+        return
     if platform.machine().lower() in ("arm64", "aarch64", "arm"):
         return
 
     system = platform.system().lower()
-
-    # 3. download binary file
-    if system.startswith("linux"):
-        binary_file_name = "suanPan-linux-amd64-openblas-no-avx"
-        binary_file = f"{binary_file_name}.tar.gz"
-    elif system.startswith("windows"):
-        binary_file_name = "suanPan-win-mkl-vtk"
-        binary_file = f"{binary_file_name}.zip"
-    elif system.startswith("darwin"):
-        binary_file_name = "suanPan-macos-15-amd64-openblas-vtk-avx"
-        binary_file = f"{binary_file_name}.tar.gz"
-    else:
+    filename = next(
+        (name for prefix, name in BINARY.items() if system.startswith(prefix)),
+        None,
+    )
+    if filename is None:
         return
 
-    shutil.rmtree(binary_file_name, True)
-
-    with urlopen("https://api.github.com/repos/TLCFEM/suanPan/releases") as response:
-        releases = json.load(response)
-
-    latest_tag = next((r["tag_name"] for r in releases if r["assets"]), None)
-    url = f"https://github.com/TLCFEM/suanPan/releases/download/{latest_tag}/{binary_file}"
-
-    with TemporaryDirectory() as tmp_dir:
-        archive_path = Path(tmp_dir) / binary_file
-
-        with urlopen(url) as response, archive_path.open("wb") as archive:
-            shutil.copyfileobj(response, archive)
-
-        if binary_file.endswith(".tar.gz"):
-            target = tarfile.open(archive_path, "r:gz")
-        else:
-            target = zipfile.ZipFile(archive_path, "r")
-
-        with target as archive:
-            archive.extractall(binary_file_name)
+    name = filename.split(".", 1)[0]
+    shutil.rmtree(name, True)
+    tag = next(
+        release["tag_name"] for release in fetch_json(RELEASES_URL) if release["assets"]
+    )
+    with TemporaryDirectory() as directory:
+        archive = Path(directory) / filename
+        download(
+            f"https://github.com/TLCFEM/suanPan/releases/download/{tag}/{filename}",
+            archive,
+        )
+        with (
+            tarfile.open(archive, "r:gz")
+            if filename.endswith(".tar.gz")
+            else zipfile.ZipFile(archive)
+        ) as file:
+            file.extractall(name)
 
 
-def install(run_doxygen: bool):
-    # root directory
-    shutil.rmtree(ROOT_FOLDER / "docs/Doxygen", True)
-    shutil.rmtree(ROOT_FOLDER / "site", True)
-
-    # 1. download source code
-    with TemporaryDirectory() as tmp_dir:
-        archive_name = "suanPan-dev"
-        archive_zip = Path(tmp_dir) / f"{archive_name}.zip"
-        archive_path = Path(tmp_dir) / archive_name
-
-        url = "https://github.com/TLCFEM/suanPan/archive/refs/heads/dev.zip"
-        with urlopen(url) as response, archive_zip.open("wb") as archive:
-            shutil.copyfileobj(response, archive)
-        with zipfile.ZipFile(archive_zip, "r") as archive:
-            archive.extractall(tmp_dir)
-
-        version = (archive_path / "Toolbox/command.h").read_text()
-        major = re.search(r"constexpr auto SUANPAN_MAJOR = (\d);", version).group(1)
-        minor = re.search(r"constexpr auto SUANPAN_MINOR = (\d);", version).group(1)
-        patch = re.search(r"constexpr auto SUANPAN_PATCH = (\d);", version).group(1)
-
-        if run_doxygen:
-            prepare_doxygen(archive_path)
-
-    prepare_binary()
+def install() -> None:
+    shutil.rmtree(DOCS / "Doxygen", True)
+    shutil.rmtree(ROOT / "site", True)
+    with TemporaryDirectory() as directory:
+        source = prepare_source(Path(directory))
+        version = read_version(source)
+        if "egg_info" not in sys.argv:
+            prepare_doxygen(source)
+        prepare_binary()
 
     setup(
         name="suanPan-manual",
-        version=f"{major}.{minor}.{patch}",
+        version=version,
         description="suanPan-manual",
         author="Theodore Chang",
         author_email="tlcfem@gmail.com",
@@ -145,6 +146,5 @@ def install(run_doxygen: bool):
 
 
 if __name__ == "__main__":
-    os.chdir(ROOT_FOLDER)
-
-    install("egg_info" not in sys.argv)
+    os.chdir(ROOT)
+    install()
