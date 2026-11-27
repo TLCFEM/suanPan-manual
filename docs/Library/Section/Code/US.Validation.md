@@ -236,7 +236,7 @@ It is modelled by a flat rectangle in numerical models, which overestimates the 
 fig.savefig("US.pdf")
 ```
 
-The figures can be downloaded: [us](../US.pdf).
+The figures can be downloaded: [us](US.pdf).
 
 ## Automation Utilities
 
