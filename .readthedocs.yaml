@@ -10,6 +10,8 @@ build:
     - graphviz
     - pngquant
   jobs:
+    install:
+      - pip install .
     post_install:
       - npm install -g svgo
     build:
@@ -20,7 +22,3 @@ build:
       - python plugins/scripts/optimize_svg.py site
       - mkdir -p $READTHEDOCS_OUTPUT/html/
       - cp --recursive site/* $READTHEDOCS_OUTPUT/html/
-python:
-  install:
-    - method: pip
-      path: .
