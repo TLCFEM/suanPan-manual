@@ -4,21 +4,11 @@ In this example, we demonstrate how to create arbitrary sections and perform ana
 
 The relevant scripts can be [downloaded](thin-walled-section.zip).
 
-To represent conventional, bending-moment-only sections numerically, only geometry information, such as location and area, is required.
-This allows the usage of predefined basic shapes, such as rectangles and circles.
-Complex sections can be built up by using those basic shapes.
-However, such an approach is not practical for sections involving torsion and warping, as some important sectional properties can only be obtained by analysing the section as a whole.
-Hence, a general approach that only focuses on section discretisation is used.
-The discretisation refers to the division of the section into a number of fibres/cells.
-Those fibres are the smallest units that are used in numerical integration.
-The users shall provide the corresponding sectional properties.
+To represent conventional, bending moment only sections numerically, only geometry information, such as location and area, is required. This allows the usage of predefined basic shapes, such as rectangles, circles. And complex sections can be built up by using those basic shapes. However, such an approach is not practical for sections involving torsion and warping, as some important sectional properties can only be obtained by analysing the section as a whole. Hence, a general approach that only focuses on section discretisation is used. The discretisation refers to the division of the section into a number of fibres/cells. Those fibres are the smallest units that are used in numerical integration. The users shall provide the corresponding sectional properties.
 
-To obtain necessary sectional properties, a section analysis shall be performed.
-For arbitrary sections, a general-purpose FEA-based method shall often be used.
-[This](https://doi.org/10.1002/9780470172667) book provides a thorough discussion of the relevant numerical methods.
+To obtain necessary sectional properties, a section analysis shall be performed. For arbitrary sections, often a general purpose FEA based method shall be used. [This](https://doi.org/10.1002/9780470172667) book provides a thorough discussion on relevant numerical methods.
 
-The [`sectionproperties`](https://sectionproperties.readthedocs.io/en/latest/) library implements such a method.
-It can be used to prepare data to be used in `suanPan`.
+The [`sectionproperties`](https://sectionproperties.readthedocs.io/en/latest/) library implements such a method. It can be used to prepare data to be used in `suanPan`.
 
 ## Theory
 
@@ -30,7 +20,7 @@ The [`Cell3DOS`](../../../Library/Section/SectionOS/Cell3DOS.md) section has the
 section Cell3DOS (1) (2) (3) (4) (5) (6) [7] [8]
 # (1) int, unique section tag
 # (2) double, area
-# (3) double, sectional coordinate
+# (3) double, sectional coordiante
 # (4) double, py
 # (5) double, pz
 # (6) int, material tag
@@ -58,9 +48,8 @@ $$
 \dfrac{\partial\omega}{\partial{}y},\qquad\dfrac{\partial\omega}{\partial{}z}.
 $$
 
-[Alemdar's thesis](http://hdl.handle.net/1853/22220) and some other derivations use $$\gamma=2n\phi'$$ to approximate shear strain.
-This is only suitable for thin-walled open sections.
-Here we use a general formulation instead for complex, universal, arbitrary sections.
+[Alemdar's thesis](http://hdl.handle.net/1853/22220), and some other derivatives, uses $$\gamma=2n\phi'$$ to approximate shear strain. This is only suitable for thin-walled open sections.
+Here we use general formulation instead for complex, universal, arbitrary sections.
 Interested readers can refer to, for example, [Pilkey's book](https://doi.org/10.1002/9780470172667), for more details.
 
 Two shear strains can be expressed as follows.
@@ -72,8 +61,7 @@ $$
 
 ## A Simple Example
 
-We start with a simple circular example.
-Let's assume it is centred and has a diameter of $$10$$.
+We start with a simple circular example. Let's assume it is centred and has a diameter of $$10$$.
 
 We use built-in functionality to create such a geometry and assign a mesh size of $$0.1$$.
 
@@ -91,9 +79,9 @@ section.plot_mesh(title="Circular Section Mesh")
 ```
 
 
-    
+
 ![png](thin-walled-section_files/thin-walled-section_3_0.png)
-    
+
 
 
 
@@ -122,7 +110,7 @@ print(ele)
 
 ### Area
 
-The library has implemented basic utility functions for elements, such that basic properties for each element can be conveniently obtained.
+The library has implemented basic utility functions to elements, such that basic properties for each element can be conveniently obtained.
 
 
 ```python
@@ -131,15 +119,14 @@ print(ele.geometric_properties())
 ```
 
     (area, qx, qy, ixx, iyy, ixy, e, g, rho)
-    (0.04964864399827368, -0.10341172739101043, -0.2062980375936595, 0.21565931750893302, 0.8574163726167687, 0.4296612130739341, 1, 0.5, 1)
+    (np.float64(0.04964864399827368), np.float64(-0.10341172739101043), np.float64(-0.2062980375936595), np.float64(0.21565931750893302), np.float64(0.8574163726167687), np.float64(0.4296612130739341), 1, 0.5, 1)
 
 
 Alternatively, the area can also be computed as the determinant of the Jacobian matrix of the isoparametric mapping.
 
 ### Locations
 
-We assume the triangle element is small enough so that the centroid can represent the location of the element.
-The centroid can be obtained by averaging the coordinates of the first three nodes.
+We assume the triangle element is small enough so that the centroid can represent the location of the element. The centroid can be obtained by averaging the coordinates of the first three nodes.
 
 
 ```python
@@ -165,9 +152,9 @@ print(omega)
 print(f"sum(omega) = {omega.sum()}")
 ```
 
-    [ 4.71528948e-15 -2.57142549e-13 -4.07401342e-13 ...  2.29752507e-14
-     -2.35454358e-14  3.65875926e-14]
-    sum(omega) = 1.6155871338926322e-27
+    [ 1.67858221e-15 -2.60178384e-13 -4.10438922e-13 ...  1.99683128e-14
+     -2.65718517e-14  3.35569502e-14]
+    sum(omega) = -7.467539281770063e-12
 
 
 As we are using a circular section as the example, the warping function is zero everywhere.
@@ -190,22 +177,21 @@ print(f"warping function = {centre_omega}")
 print(f"derivatives = {centre_partial}")
 ```
 
-    warping function = 1.1776217629584232e-12
-    derivatives = [-2.11447839e-12 -1.18613467e-12]
+    warping function = 1.1746141861179589e-12
+    derivatives = [-2.11448768e-12 -1.18613941e-12]
 
 
 Since for circular sections, there is no warping, the corresponding derivatives are trivial.
 
 ### A Universal Function
 
-It appears to be easy to obtain the necessary properties for each element.
-Here we provide a universal function to generate the required data.
+It appears to be easy to obtain necessary properties for each element. Here we provide a universal function to generate the required data.
 
 One shall adjust it accordingly for specific purposes.
 
 
 ```python
-from numpy import ndarray, array
+from numpy import array, ndarray
 from sectionproperties.analysis.fea import Tri6
 
 
@@ -240,7 +226,7 @@ class Cell3DOS:
             f" {self.py:+E}"
             f" {self.pz:+E}"
             # f" $mat_tag"
-            f" 1"  # here we just use 1 for brevity
+            f" 1"  # here we just user 1 for brevity
             f" {self.y:+E}"
             f" {self.z:+E}"
         )
@@ -263,8 +249,7 @@ def to_cell3dos(geometry, *, no_warping: bool = False):
 
 def to_file(cells, file_name):
     with open(file_name, "w") as f:
-        for cell in cells:
-            f.write(cell.export() + "\n")
+        f.writelines(cell.export() + "\n" for cell in cells)
 
         f.write(f"section Fibre3DOS {1 + len(cells)} ")
         f.write(" ".join([str(cell.tag) for cell in cells]) + "\n")
@@ -277,13 +262,12 @@ Now it is possible to pass in a geometry, and call the export function to genera
 to_file(to_cell3dos(geometry), "circular.sp")
 ```
 
-!!! note
+!!! Note
     The above functionality has been added to the latest `sectionproperties` library, see [this](https://sectionproperties.readthedocs.io/en/latest/gen/sectionproperties.post.fibre.to_fibre_section.html) page.
 
 ### Validation
 
-Now it is possible to create a simple single-element model to validate the data.
-Remember to change the material tag accordingly.
+Now it is possible to create a simple single element model to validate the data. Remember to change the material tag accordingly.
 
 ```text
 node 1 0 0 0
@@ -324,8 +308,7 @@ This is about the numerical result $$977.5$$.
 
 ## W-Section Example
 
-In this example, we manually create a W section.
-It corresponds to the `W36X330` section.
+In this example, we manually create a W section. It corresponds to the `W36X330` section.
 
 
 ```python
@@ -390,12 +373,12 @@ print(
 ```
 
 
-    
+
 ![png](thin-walled-section_files/thin-walled-section_21_0.png)
-    
 
 
-    torsional constant = 76.38036877511132
+
+    torsional constant = 76.38036877510449
 
 
 ### Validation
@@ -472,15 +455,21 @@ Furthermore, one can plot the torque-rotation curve.
 
 ```python
 import h5py
+from tempfile import TemporaryDirectory
+from zipfile import ZipFile
 
-with h5py.File("R1-RF.h5", "r") as f:
-    data = f["/R1-RF/R1-RF2"]
-    print(data[:, [0, 4]])
-    plt.plot(data[:, 0] * 1e-2, data[:, 4])
-    plt.xlabel("rotation")
-    plt.ylabel("torque")
-    plt.tight_layout()
-    plt.show()
+with TemporaryDirectory() as directory:
+    with ZipFile("thin-walled-section.zip") as archive:
+        archive.extract("R1-RF.h5", directory)
+    with h5py.File(f"{directory}/R1-RF.h5", "r") as f:
+        data = f["/R1-RF/R1-RF2"]
+        print(data[:, [0, 4]])
+        plt.plot(data[:, 0] * 1e-2, data[:, 4])
+        plt.xlabel("rotation")
+        plt.ylabel("torque")
+        plt.tight_layout()
+        plt.show()
+
 ```
 
     [[0.         0.        ]
@@ -497,12 +486,12 @@ with h5py.File("R1-RF.h5", "r") as f:
 
 
 
-    
+
 ![png](thin-walled-section_files/thin-walled-section_23_1.png)
-    
 
 
-We shall see that the initial stiffness is $$74.93$$, which is close to the torsional constant $$J$$.
+
+We shall see the initial stiffness is $$74.93$$, which is close to the torsional constant $$J$$.
 Due to the existence of bi-moments, the torque is not linearly proportional to the rotation.
 If one records the `S` output, the St. Venant torsion would be $$GJ\phi'$$.
 
@@ -534,9 +523,9 @@ to_file(to_cell3dos(geometry), "flat.sp")
 ```
 
 
-    
+
 ![png](thin-walled-section_files/thin-walled-section_25_0.png)
-    
+
 
 
 Use the following model to apply an end twist.
@@ -565,32 +554,32 @@ Use the following script to plot the results.
 
 
 ```python
-with h5py.File("R1-RF4.h5", "r") as f:
-    data = f["/R1-RF4/R1-RF42"]
-    x = data[:, 0] * 1.4
-    plt.plot(x, data[:, 1] / 1000, label="B31OS")
-    ref = [z * 0.080 * 66.667 + 0.100 * 17.778 * z**3 for z in x]
-    plt.plot(x, ref, label="theoretical")
-    plt.legend()
-    plt.xlabel("rotation (rad)")
-    plt.ylabel("torque (kNm)")
-    plt.tight_layout(pad=0.2)
-    plt.show()
+with TemporaryDirectory() as directory:
+    with ZipFile("thin-walled-section.zip") as archive:
+        archive.extract("R1-RF4.h5", directory)
+    with h5py.File(f"{directory}/R1-RF4.h5", "r") as f:
+        data = f["/R1-RF4/R1-RF42"]
+        x = data[:, 0] * 1.4
+        plt.plot(x, data[:, 1] / 1000, label="B31OS")
+        ref = [z * 0.080 * 66.667 + 0.100 * 17.778 * z**3 for z in x]
+        plt.plot(x, ref, label="theoretical")
+        plt.legend()
+        plt.xlabel("rotation (rad)")
+        plt.ylabel("torque (kNm)")
+        plt.tight_layout(pad=0.2)
+        plt.show()
+
 ```
 
 
-    
+
 ![png](thin-walled-section_files/thin-walled-section_27_0.png)
-    
 
 
-The discretisation introduces some errors.
-With mesh refinement, the numerical result approaches the analytical solution.
+
+The discretisation introduces some errors. With mesh refinement, the numerical result approaches the analytical solution.
 
 ## Closing Remarks
 
-1. `Cell3DOS` is the basic building block.
-   `Fibre3DOS` collects all cells and defines the section.
-   `B31OS` is the corresponding element.
-2. Sectional integration is always about the origin of the local coordinate system.
-   Shifting of axis can be accounted for by directly defining the section in the shifted position.
+1. `Cell3DOS` is the basic building block. `Fibre3DOS` collects all cells and defines the section. `B31OS` is the corresponding element.
+2. Sectional integration is always about the origin of the local coordinate system. Shifting of axis can be accounted for by directly defining the section in the shifted position.

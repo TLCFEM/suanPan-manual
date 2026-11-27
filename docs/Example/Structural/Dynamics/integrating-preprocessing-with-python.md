@@ -2,9 +2,7 @@
 
 Minimum version: v2.5
 
-In this example, we demonstrate how to use Python to preprocess data by creating a frame structure.
-This example requires some Python familiarity.
-However, as we are developing a frame structure which contains mainly frame elements, the procedure is relatively straightforward.
+In this example, we demonstrate how to use python to preprocess data by creating a frame structure. This example requires some Python familiarity. However, as we are developing a frame structure which contains mainly frame elements, the procedure is relatively straightforward.
 
 ## Objective
 
@@ -29,26 +27,17 @@ section_table = pandas.read_excel(
 print(section_table.head())
 ```
 
-    Database v15.0
-      Type EDI_Std_Nomenclature AISC_Manual_Label T_F      W      A     d    ddet  \
-    0    W              W44X335           W44X335   F  335.0   98.5    44      44   
-    1    W              W44X290           W44X290   F  290.0   85.4  43.6  43.625   
-    2    W              W44X262           W44X262   F  262.0   77.2  43.3   43.25   
-    3    W              W44X230           W44X230   F  230.0   67.8  42.9  42.875   
-    4    W              W40X655           W40X655   T  655.0  193.0  43.6  43.625   
-    
-      Ht  h  ...   rts    ho   PA PA2   PB   PC   PD   T  WGi WGo  
-    0  –  –  ...  4.24  42.2  132   –  148  104  120  38  5.5   –  
-    1  –  –  ...   4.2    42  131   –  147  103  119  38  5.5   –  
-    2  –  –  ...  4.17  41.9  131   –  147  102  118  38  5.5   –  
-    3  –  –  ...  4.13  41.7  130   –  146  102  118  38  5.5   –  
-    4  –  –  ...  4.71  40.1  132   –  149  104  121  34  7.5   –  
-    
+      Type EDI_Std_Nomenclature AISC_Manual_Label T_F  ...   PD   T  WGi WGo
+    0    W              W44X335           W44X335   F  ...  120  38  5.5   –
+    1    W              W44X290           W44X290   F  ...  119  38  5.5   –
+    2    W              W44X262           W44X262   F  ...  118  38  5.5   –
+    3    W              W44X230           W44X230   F  ...  118  38  5.5   –
+    4    W              W40X655           W40X655   T  ...  121  34  7.5   –
+
     [5 rows x 84 columns]
 
 
-Section properties such as area and moment of inertia can be extracted from this table using section designations.
-It is possible to define such a function now.
+Section properties such as area and moment of inertia can be extracted from this table using section designations. It is possible to define such a function now.
 
 
 ```python
@@ -64,22 +53,19 @@ def from_table(designation: str):
     return a, sx, ix, zx
 ```
 
-Then we can use this function to extract section properties from the table.
-For example,
+Then we can use this function to extract section properties from the table. For example,
 
 
 ```python
 print(from_table("W44X230"))
 ```
 
-    (67.8, 971.0, 20800.0, 1100.0)
+    (np.float64(67.8), np.float64(971.0), np.float64(20800.0), np.float64(1100.0))
 
 
 ## Geometry of the Frame Structure
 
-For simplicity, we assume the frame structure has the same column/beam section for all the columns/beams on the same floor.
-Under such a condition, two lists of section designations can be provided so that elements can be created.
-Similarly, geometry information such as floor height, bay span, as well as floor mass, can be provided in the same way.
+For simplicity, we assume the frame structure has the same column/beam section for all the columns/beams on the same floor. Under such a condition, two lists of section designations can be provided so that elements can be created. Similarly, geometry information such as floor height, bay span, as well as floor mass, can be provided in the same way.
 
 For example, we can define several lists as follows.
 
@@ -112,8 +98,7 @@ del span, height
     [  0. 240. 480.] [  0. 120. 240. 360.]
 
 
-By using the above coordinates, we can create a grid of nodes.
-A simple `Node` class is defined to represent nodes.
+By using the above coordinates, we can create a grid of nodes. A simple `Node` class is defined to represent nodes.
 
 
 ```python
@@ -161,7 +146,7 @@ with open("node.sp", "r") as f:
     node 10 480.00 120.00
     node 11 480.00 240.00
     node 12 480.00 360.00
-    
+
 
 
 The `node_grid` can be used to generate elements.
@@ -266,7 +251,7 @@ with open("beam.sp", "r") as f:
     section NM2D3 3 5.8000e+02 4.2920e+04 1.0000e+00 7.0000e+00 1.15 0.01 0. 0. 0.1429 1. 0.
     element NMB21 5 4 8 3
     element NMB21 6 8 12 3
-    
+
 
 
 ### Generate Column Elements
@@ -307,39 +292,37 @@ with open("column.sp", "r") as f:
     element NMB21 13 3 4 6
     element NMB21 14 7 8 6
     element NMB21 15 11 12 6
-    
+
 
 
 ### Fibre Based Elements
 
-A similar procedure can be used to generate fibre-based elements with slight modifications.
-Here we use the [`F21`](../../../Library/Element/Beam/F21.md) element.
-It relies on sections, and designations can be directly used to create sections.
-In this example, we use the [`US2D`](../../../Library/Section/Code/US.md) category.
+The similar procedure can be used to generate fibre based elements with slight modifications. Here we use [`F21`](../../../Library/Element/Beam/F21.md) element. It relies on sections, and designations can be directly used to create sections. In this example, we use [`US2D`](../../../Library/Section/Code/US.md) category.
 
 
 ```python
 with open("fibre_frame.sp", "w") as f:
     f.write(f"material Bilinear1D 1 {e} {fy} {hardening}\n\n")
-    for v in section_pool.values():
-        f.write(f"section US2D {v.name} {v.tag} 1\n")
+    f.writelines(f"section US2D {v.name} {v.tag} 1\n" for v in section_pool.values())
     f.write("\n")
-    for v in element_pool.values():
-        f.write(f"element F21 {v.tag} {v.node_i.tag} {v.node_j.tag} {v.section.tag}\n")
+    f.writelines(
+        f"element F21 {v.tag} {v.node_i.tag} {v.node_j.tag} {v.section.tag}\n"
+        for v in element_pool.values()
+    )
 
 with open("fibre_frame.sp", "r") as f:
     print(f.read())
 ```
 
     material Bilinear1D 1 29 0.05 0.01
-    
+
     section US2D W21X68 1 1
     section US2D W21X68 2 1
     section US2D W21X68 3 1
     section US2D W14X193 4 1
     section US2D W14X159 5 1
     section US2D W14X159 6 1
-    
+
     element F21 1 2 6 1
     element F21 2 6 10 1
     element F21 3 3 7 2
@@ -355,13 +338,12 @@ with open("fibre_frame.sp", "r") as f:
     element F21 13 3 4 6
     element F21 14 7 8 6
     element F21 15 11 12 6
-    
+
 
 
 ### Generate Mass
 
-For simplicity, we only apply horizontal mass to each node.
-The procedure is similar to that of frame elements.
+For simplicity, we only apply horizontal mass to each node, the procedure is similar to that of frame elements.
 
 To keep code modular, we define a mass grid to store mass at each node.
 
@@ -420,22 +402,20 @@ with open("mass.sp", "r") as f:
     element Mass 22 4 2.0833e-04 1 2
     element Mass 23 8 4.1667e-04 1 2
     element Mass 24 12 2.0833e-04 1 2
-    
+
 
 
 ## Analysis Settings
 
-The basic geometry of the model is defined in `node.sp`, `beam.sp`, `column.sp` and `mass.sp`.
-We import those files in the main script.
+The basic geometry of the model is defined in `node.sp`, `beam.sp`, `column.sp` and `mass.sp`. We import those files in the main script.
 
 
 ```python
 file_list = ["node.sp", "beam.sp", "column.sp", "mass.sp"]
 
-main_file = open("three-storey-frame.sp", "w")
+main_file = open("three-storey-frame.sp", "w")  # noqa: SIM115
 
-for file in file_list:
-    main_file.write(f"file {file}\n")
+main_file.writelines(f"file {file}\n" for file in file_list)
 ```
 
 The boundary conditions can be assigned by simply fixing all bottom nodes.
@@ -443,23 +423,31 @@ The boundary conditions can be assigned by simply fixing all bottom nodes.
 
 ```python
 main_file.write(f"fix 1 E 1 {' '.join(str(tag) for tag in node_grid[0, :])}\n")
-
-pass
 ```
 
-The ground motion shall be applied.
-The `ELNS` file contains one of the accelerograms of the 1940 El Centro Earthquake.
-It is normalised so that the maximum amplitude is unity; we assign a PGA of $$0.5g$$.
+
+
+
+    16
+
+
+
+The ground motion shall be applied. The `ELNS` file contains one of the accelerograms of the 1940 El Centro Earthquake. It is normalised so that the maximum amplitude is unity, we assign a PGA of $$0.5g$$.
 
 
 ```python
 pga = 0.5
-main_file.write(f"\namplitude Tabular 1 ELNS\n")
+main_file.write("\namplitude Tabular 1 ELNS\n")
 # 1 g = 386.0885826772 in/s2
 main_file.write(f"\nacceleration 1 1 {386.0885826772 * pga:.5e} 1\n")
-
-pass
 ```
+
+
+
+
+    32
+
+
 
 For results, we can, for example, record the nodal displacement history.
 
@@ -468,29 +456,38 @@ For results, we can, for example, record the nodal displacement history.
 recorder_tag = 1
 main_file.write(
     f"\nhdf5recorder {recorder_tag} Node U "
-    + " ".join([str(tag) for tag in node_pool.keys()])
+    + " ".join([str(tag) for tag in node_pool])
     + "\n"
 )
-
-pass
 ```
 
-For illustration, we can also record the element yield flag at both ends so that the corresponding plastic hinge distribution can be generated.
-The yield flag is **not** generally available in other elements.
+
+
+
+    50
+
+
+
+For illustration, we can also record element yield flag at both ends so that the corresponding plastic hinge distribution can be generated. The yield flag is **not** generally available in other elements.
 
 
 ```python
 recorder_tag += 1
 main_file.write(
     f"\nhdf5recorder {recorder_tag} Element YF "
-    + " ".join([str(tag) for tag in element_pool.keys()])
+    + " ".join([str(tag) for tag in element_pool])
     + "\n"
 )
-
-pass
 ```
 
-We keep writing the dynamic analysis step and the corresponding settings into the file.
+
+
+
+    63
+
+
+
+We keep writing dynamic analysis step and the corresponding settings into the file.
 
 
 ```python
@@ -524,9 +521,14 @@ main_file.write(
     f"\nsave recorder {' '.join([str(tag + 1) for tag in range(recorder_tag)])}\n"
 )
 main_file.write("\nexit\n")
-
-pass
 ```
+
+
+
+
+    6
+
+
 
 Do not forget to close the main file.
 
@@ -543,23 +545,23 @@ with open("three-storey-frame.sp", "r") as f:
     file column.sp
     file mass.sp
     fix 1 E 1 1 5 9
-    
+
     amplitude Tabular 1 ELNS
-    
+
     acceleration 1 1 1.93044e+02 1
-    
+
     hdf5recorder 1 Node U 1 2 3 4 5 6 7 8 9 10 11 12
-    
+
     hdf5recorder 2 Element YF 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
-    
+
     step dynamic 1 4.000e+01
     set ini_step_size 1.00e-02
     set fixed_step_size true
     set sparse_mat true
     set system_solver SuperLU
-    
+
     converger AbsIncreDisp 1 1E-10 10 true
-    
+
     integrator LeeNewmarkFull 1 .25 .5 \
     -type0 2.66040e-02 1.87264e-01 \
     -type0 2.66170e-02 5.30209e+00 \
@@ -570,13 +572,13 @@ with open("three-storey-frame.sp", "r") as f:
     -type0 2.70050e-02 6.56300e-03 \
     -type0 2.66190e-02 3.51830e-02 \
     -type0 3.91040e-02 9.95802e+02
-    
+
     analyze
-    
+
     save recorder 1 2
-    
+
     exit
-    
+
 
 
 Finally, let's pack everything into an archive so that it can be [downloaded](three-storey-frame.zip).
@@ -603,7 +605,11 @@ The online documentation is not calling the executable, but it is possible to ru
 
 
 ```python
-from shutil import which
+from shutil import copy, which
+from tempfile import TemporaryDirectory
+
+analysis_dir = TemporaryDirectory()
+analysis_path = analysis_dir.name
 
 
 def run_analysis():
@@ -613,26 +619,32 @@ def run_analysis():
         exe_name = "suanpan"
 
     if which(exe_name):
+        for file in file_list:
+            copy(file, analysis_path)
+        cwd = os.getcwd()
+        os.chdir(analysis_path)
         os.system(f"{exe_name} -np -f three-storey-frame.sp")
+        os.chdir(cwd)
 
 
 run_analysis()
+
 ```
 
 ## Roof Displacement History
 
-The result file will be generated and stored in an `.h5` file.
-We can read the file and plot the results.
+The result file will be generated and stored in `.h5` file. We can read the file and plot the results.
 
 
 ```python
+import glob
+
 import h5py
 import matplotlib.pyplot as plt
-import glob
 
 
 def plot_result():
-    h5_file = glob.glob("*U.h5")
+    h5_file = glob.glob(os.path.join(analysis_path, "*U.h5"))
     if len(h5_file) == 0:
         return
 
@@ -648,12 +660,13 @@ def plot_result():
 
 
 plot_result()
+
 ```
 
 
-    
+
 ![png](integrating-preprocessing-with-python_files/integrating-preprocessing-with-python_42_0.png)
-    
+
 
 
 Clean up the files to end this example.
@@ -671,6 +684,8 @@ Let's create some TikZ commands to be used to plot plastic hinge distribution.
 
 
 ```python
+from pathlib import Path
+
 tikz: list = []
 
 # generate coordinates to represent nodal positions
@@ -694,10 +709,10 @@ for element in element_pool.values():
 
 hinge_label = "[fill=red,circle,draw,inner sep=0,minimum size=3mm]"
 
-h5_file = glob.glob("*YF.h5")
+h5_file = glob.glob(os.path.join(analysis_path, "*YF.h5"))
 if len(h5_file) > 0:
     with h5py.File(h5_file[0], "r") as h_file:
-        h5_prefix = h5_file[0].split(".")[0]
+        h5_prefix = Path(h5_file[0]).stem
         for g in h_file.values():
             for k, v in g.items():
                 element_tag = int(k.replace(h5_prefix, ""))
@@ -713,13 +728,16 @@ if len(h5_file) > 0:
                         f"\\node{hinge_label}at($(N{node_i})!.9!(N{node_j})$){{}};"
                     )
 
-with open(f"DIST.tex", "w") as f:
+with open(os.path.join(analysis_path, "DIST.tex"), "w") as f:
     f.write("\\begin{tikzpicture}[scale=2]\n")
     f.write("\n".join(tikz))
     f.write("\n\\end{tikzpicture}\n")
 
-with open(f"DIST.tex", "r") as f:
+with open(os.path.join(analysis_path, "DIST.tex"), "r") as f:
     print(f.read())
+
+analysis_dir.cleanup()
+
 ```
 
     \begin{tikzpicture}[scale=2]
@@ -765,5 +783,5 @@ with open(f"DIST.tex", "r") as f:
     \node[fill=red,circle,draw,inner sep=0,minimum size=3mm]at($(N5)!.1!(N6)$){};
     \node[fill=red,circle,draw,inner sep=0,minimum size=3mm]at($(N9)!.1!(N10)$){};
     \end{tikzpicture}
-    
+
 
