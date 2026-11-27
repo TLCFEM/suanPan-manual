@@ -461,9 +461,10 @@ Furthermore, one can plot the torque-rotation curve.
 
 
 ```python
-import h5py
 from tempfile import TemporaryDirectory
 from zipfile import ZipFile
+
+import h5py
 
 with TemporaryDirectory() as directory:
     with ZipFile("thin-walled-section.zip") as archive:

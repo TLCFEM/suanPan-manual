@@ -429,15 +429,9 @@ The boundary conditions can be assigned by simply fixing all bottom nodes.
 
 
 ```python
-main_file.write(f"fix 1 E 1 {' '.join(str(tag) for tag in node_grid[0, :])}\n")
+_ = main_file.write(f"fix 1 E 1 {' '.join(str(tag) for tag in node_grid[0, :])}\n")
+
 ```
-
-
-
-
-    16
-
-
 
 The ground motion shall be applied.
 The `ELNS` file contains one of the accelerograms of the 1940 El Centro Earthquake.
@@ -448,53 +442,35 @@ It is normalised so that the maximum amplitude is unity; we assign a PGA of $$0.
 pga = 0.5
 main_file.write("\namplitude Tabular 1 ELNS\n")
 # 1 g = 386.0885826772 in/s2
-main_file.write(f"\nacceleration 1 1 {386.0885826772 * pga:.5e} 1\n")
+_ = main_file.write(f"\nacceleration 1 1 {386.0885826772 * pga:.5e} 1\n")
+
 ```
-
-
-
-
-    32
-
-
 
 For results, we can, for example, record the nodal displacement history.
 
 
 ```python
 recorder_tag = 1
-main_file.write(
+_ = main_file.write(
     f"\nhdf5recorder {recorder_tag} Node U "
     + " ".join([str(tag) for tag in node_pool])
     + "\n"
 )
+
 ```
-
-
-
-
-    50
-
-
 
 For illustration, we can also record the element yield flag at both ends so that the corresponding plastic hinge distribution can be generated. The yield flag is **not** generally available in other elements.
 
 
 ```python
 recorder_tag += 1
-main_file.write(
+_ = main_file.write(
     f"\nhdf5recorder {recorder_tag} Element YF "
     + " ".join([str(tag) for tag in element_pool])
     + "\n"
 )
+
 ```
-
-
-
-
-    63
-
-
 
 We keep writing the dynamic analysis step and the corresponding settings into the file.
 
@@ -529,15 +505,9 @@ main_file.write("\nanalyze\n")
 main_file.write(
     f"\nsave recorder {' '.join([str(tag + 1) for tag in range(recorder_tag)])}\n"
 )
-main_file.write("\nexit\n")
+_ = main_file.write("\nexit\n")
+
 ```
-
-
-
-
-    6
-
-
 
 Do not forget to close the main file.
 

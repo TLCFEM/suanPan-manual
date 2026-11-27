@@ -195,19 +195,13 @@ acc = newmark(disp, dt)
 
 plot_freq(dt, waveform)
 plot_freq(dt, acc)
-plt.legend(["Original", "Trap -> Newmark"])
+_ = plt.legend(["Original", "Trap -> Newmark"])
+
 ```
 
 
 
-
-    <matplotlib.legend.Legend at 0x7f10a1427500>
-
-
-
-
-
-![png](process-ground-motion_files/process-ground-motion_11_1.png)
+![png](process-ground-motion_files/process-ground-motion_11_0.png)
 
 
 
@@ -230,19 +224,13 @@ def double_convert(_dt, _waveform):
 
 plot_freq(interp_dt, interp_waveform)
 plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
-plt.legend(["Original", "Trap -> Newmark"])
+_ = plt.legend(["Original", "Trap -> Newmark"])
+
 ```
 
 
 
-
-    <matplotlib.legend.Legend at 0x7f10a0fc67e0>
-
-
-
-
-
-![png](process-ground-motion_files/process-ground-motion_13_1.png)
+![png](process-ground-motion_files/process-ground-motion_13_0.png)
 
 
 
@@ -254,19 +242,13 @@ Let's choose a different upsampling rate.
 interp_dt, interp_waveform = upsample(2)
 plot_freq(interp_dt, interp_waveform)
 plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
-plt.legend(["Original", "Trap -> Newmark"])
+_ = plt.legend(["Original", "Trap -> Newmark"])
+
 ```
 
 
 
-
-    <matplotlib.legend.Legend at 0x7f10a0e14ad0>
-
-
-
-
-
-![png](process-ground-motion_files/process-ground-motion_15_1.png)
+![png](process-ground-motion_files/process-ground-motion_15_0.png)
 
 
 

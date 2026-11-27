@@ -56,6 +56,10 @@ The AISC v15 download URL returns 403. The notebooks must use the bundled
   `TemporaryDirectory` for models and result files.
 - `thin-walled-section.zip` bundles the validation H5 records; extract them
   into a temporary directory before reading them.
+- Suppress unwanted `execute_result` text with `_ = <call>` (for example
+  `_ = to_fibre_section(...)`, `_ = plt.legend(...)`, `_ = main_file.write(...)`).
+  A bare `pass` used to do this but triggers ruff warnings; a trailing semicolon
+  triggers E703. `ruff check` on all notebooks must pass.
 - Use `$$...$$` for all math, including inline expressions. Convert single
   dollar math in both notebook markdown cells and generated markdown.
 - Keep one sentence per line, state facts only, and proofread prose before
