@@ -137,7 +137,7 @@ exit"""
 
 ## Stiffness Degradation
 
-The function $u$ controls the evolution of the normal yield ratio $z$, it can decrease with the accumulation of plastic strain by assigning a negative saturation and a proper saturation rate.
+The function $$u$$ controls the evolution of the normal yield ratio $$z$$, it can decrease with the accumulation of plastic strain by assigning a negative saturation and a proper saturation rate.
 The following example compares the non-degrading and a degrading cases.
 
 
@@ -174,7 +174,7 @@ for rate in (0, 0.4):
 
 ## Basic Isotropic Hardening
 
-By controlling $f_m$, the isotropic hardening behaviour is similar to the conventional understanding.
+By controlling $$f_m$$, the isotropic hardening behaviour is similar to the conventional understanding.
 The following examples adopt a linear hardening base with an optional saturation component.
 Note that this type of exponential saturation (of isotropic hardening) is rarely useful as it saturates only once since plasticity accumulate is not reversible.
 
@@ -212,7 +212,7 @@ for rate in (0, 2):
 
 ## Basic Kinematic Hardening
 
-The similar bound for kinematic hardening is controlled by $a_m$.
+The similar bound for kinematic hardening is controlled by $$a_m$$.
 However, to activate kinematic hardening, at least one pair of `-na` AF-type rule is needed.
 
 **If rate is zero, it becomes a linear type rule.**
@@ -272,8 +272,8 @@ for saturation, rate in ((0, 0), (0.05, 0), (1, 5), (2, 5)):
 
 The back stress can saturate to a bound, this bound can evolve as well.
 
-Instead of using a combination of an AF rule and a linear rule for `-na`, one can allow $a_m$ to evolve.
-The following example adds an linear component to $a_m$.
+Instead of using a combination of an AF rule and a linear rule for `-na`, one can allow $$a_m$$ to evolve.
+The following example adds an linear component to $$a_m$$.
 
 
 ```python
@@ -351,7 +351,7 @@ for saturation, rate in (
 
 ## Isotropic Hardening Stagnation
 
-If $f_c$ is trivial, isotropic hardening will stagnate under cyclic loading.
+If $$f_c$$ is trivial, isotropic hardening will stagnate under cyclic loading.
 This stagnation is the direct result of stagnation of accumulation of monotonic plastic strain.
 This process is controlled by the memory size: the number of previous reverse points that are memorised.
 The following example show the comparisons among memorising 1, 2 and 5 most recent reverse points.
@@ -398,7 +398,7 @@ for memory in (1, 2, 5):
 
 Although the accumulation of monotonic plastic strain is halted, the corresponding information is not lost.
 Instead, the total increment of plastic strain is stored largely in the so called cyclic part during this cyclic phase.
-This part of plastic strain drives a separate bound controlled by $f_c$.
+This part of plastic strain drives a separate bound controlled by $$f_c$$.
 A non-trivial bound shall be accompanied by at least one pair of valid `-fc` rule.
 
 This mechanism can be used to simulate cyclic hardening/softening by defining a positive/negative evolving bound.
@@ -474,7 +474,7 @@ for rate in (1e-1, 5e-2):
 ## Cyclic Kinematic Hardening/Softening
 
 The counterpart of such a monotonic/cyclic split is also available for kinematic hardening.
-It is possible to define a non-trivial $a_c$ part with a valid `-ac` rule, and most likely, also with a valid `-na` rule.
+It is possible to define a non-trivial $$a_c$$ part with a valid `-ac` rule, and most likely, also with a valid `-na` rule.
 
 However, since kinematic hardening is likely cyclic anyway, such an evolution of bound does not have many practical implications apart from constraining the size of back stress being a constant portion of that of the yield surface (isotropic hardening).
 Nevertheless, it provides extra flexibility that may be useful for curve fitting.

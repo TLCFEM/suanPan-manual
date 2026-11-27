@@ -335,7 +335,7 @@ exit
 
 The original subloading surface model shows excessive plastic strain accumulation under cyclic loading.
 The extended version addresses such an issue with the assist of the elastic core.
-It is controlled by $z_e$ and $c_e$, the former controls the size, while the latter controls the rate.
+It is controlled by $$z_e$$ and $$c_e$$, the former controls the size, while the latter controls the rate.
 
 To illustrate, we choose a bilinear hardening model as the basis.
 

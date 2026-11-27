@@ -12,27 +12,28 @@ We are going to create a three--storey frame as shown below.
 
 ## Prerequisites
 
-We are going to find section properties from AISC table, which is available online.
+We are going to find section properties from the AISC table bundled with this manual.
+
 
 
 ```python
 import pandas
 
 section_table = pandas.read_excel(
-    "https://www.aisc.org/globalassets/aisc/manual/v15.0-shapes-database/aisc-shapes-database-v15.0.xlsx",
+    "../../../Library/Section/Code/aisc-shapes-database-v16.0.xlsx",
     sheet_name=1,
-    storage_options={"User-Agent": "Mozilla/5.0"},
     usecols="A:CF",
 )
 print(section_table.head())
+
 ```
 
       Type EDI_Std_Nomenclature AISC_Manual_Label T_F  ...   PD   T  WGi WGo
-    0    W              W44X335           W44X335   F  ...  120  38  5.5   –
-    1    W              W44X290           W44X290   F  ...  119  38  5.5   –
-    2    W              W44X262           W44X262   F  ...  118  38  5.5   –
-    3    W              W44X230           W44X230   F  ...  118  38  5.5   –
-    4    W              W40X655           W40X655   T  ...  121  34  7.5   –
+    0    W              W44X408           W44X408   T  ...  122  38  5.5   3
+    1    W              W44X368           W44X368   F  ...  121  38  5.5   3
+    2    W              W44X335           W44X335   F  ...  120  38  5.5   3
+    3    W              W44X290           W44X290   F  ...  119  38  5.5   3
+    4    W              W44X262           W44X262   F  ...  118  38  5.5   3
 
     [5 rows x 84 columns]
 
@@ -783,5 +784,3 @@ analysis_dir.cleanup()
     \node[fill=red,circle,draw,inner sep=0,minimum size=3mm]at($(N5)!.1!(N6)$){};
     \node[fill=red,circle,draw,inner sep=0,minimum size=3mm]at($(N9)!.1!(N10)$){};
     \end{tikzpicture}
-
-
