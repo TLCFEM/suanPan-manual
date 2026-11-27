@@ -17,7 +17,7 @@ build:
         - zensical build
     post_build:
       - python plugins/overwrite/post_build.py site
-      - svgo -rf site -o site --exclude inherit_graph.*
+      - python plugins/scripts/optimize_svg.py site
       - mkdir -p $READTHEDOCS_OUTPUT/html/
       - cp --recursive site/* $READTHEDOCS_OUTPUT/html/
 python:

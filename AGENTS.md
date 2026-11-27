@@ -19,6 +19,7 @@
 - Zensical uses the modern variant with a custom light/dark palette defined in `docs/zensical.css`.
 - `plugins/overwrite/post_build.py` applies the `overwrite_math` rewrites to Zensical output because Zensical does not run MkDocs plugins.
 - `mkdocs-jupyter` executes non-ignored `.ipynb` pages during an MkDocs build, so `suanpan` must be on `PATH`.
+- `plugins/scripts/optimize_svg.py` optimizes built SVGs in place by batching them across parallel `svgo` processes, skipping `inherit_graph.*` names; CI and Read the Docs call it instead of invoking `svgo` directly.
 - CI symlinks the downloaded `suanPan.sh` to `/usr/bin/suanpan` and checks `suanpan -v`.
 - `doxygen` and `graphviz` are required for Doxygen output; no test, lint, or typecheck suite exists.
 
