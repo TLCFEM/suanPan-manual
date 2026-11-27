@@ -47,7 +47,6 @@ def plot(title: str, curves: list[Curve]):
     plt.grid()
     plt.title(title)
     plt.show()
-
 ```
 
 ## Smooth Transition

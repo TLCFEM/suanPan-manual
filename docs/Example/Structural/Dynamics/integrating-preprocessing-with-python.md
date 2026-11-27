@@ -27,7 +27,6 @@ section_table = pandas.read_excel(
     usecols="A:CF",
 )
 print(section_table.head())
-
 ```
 
       Type EDI_Std_Nomenclature AISC_Manual_Label T_F  ...   PD   T  WGi WGo
@@ -430,7 +429,6 @@ The boundary conditions can be assigned by simply fixing all bottom nodes.
 
 ```python
 _ = main_file.write(f"fix 1 E 1 {' '.join(str(tag) for tag in node_grid[0, :])}\n")
-
 ```
 
 The ground motion shall be applied.
@@ -443,7 +441,6 @@ pga = 0.5
 main_file.write("\namplitude Tabular 1 ELNS\n")
 # 1 g = 386.0885826772 in/s2
 _ = main_file.write(f"\nacceleration 1 1 {386.0885826772 * pga:.5e} 1\n")
-
 ```
 
 For results, we can, for example, record the nodal displacement history.
@@ -456,7 +453,6 @@ _ = main_file.write(
     + " ".join([str(tag) for tag in node_pool])
     + "\n"
 )
-
 ```
 
 For illustration, we can also record the element yield flag at both ends so that the corresponding plastic hinge distribution can be generated. The yield flag is **not** generally available in other elements.
@@ -469,7 +465,6 @@ _ = main_file.write(
     + " ".join([str(tag) for tag in element_pool])
     + "\n"
 )
-
 ```
 
 We keep writing the dynamic analysis step and the corresponding settings into the file.
@@ -506,7 +501,6 @@ main_file.write(
     f"\nsave recorder {' '.join([str(tag + 1) for tag in range(recorder_tag)])}\n"
 )
 _ = main_file.write("\nexit\n")
-
 ```
 
 Do not forget to close the main file.
@@ -607,7 +601,6 @@ def run_analysis():
 
 
 run_analysis()
-
 ```
 
 ## Roof Displacement History
@@ -640,7 +633,6 @@ def plot_result():
 
 
 plot_result()
-
 ```
 
 
@@ -717,7 +709,6 @@ with open(os.path.join(analysis_path, "DIST.tex"), "r") as f:
     print(f.read())
 
 analysis_dir.cleanup()
-
 ```
 
     \begin{tikzpicture}[scale=2]

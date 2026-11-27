@@ -43,7 +43,6 @@ geom.create_mesh(mesh_sizes=2)
 geom.plot_geometry()
 
 _ = to_fibre_section(geom, save_to="angle.sp", material_mapping={"default": 1})
-
 ```
 
 
@@ -143,7 +142,6 @@ geom.create_mesh(mesh_sizes=0.05)
 geom.plot_geometry()
 
 _ = to_fibre_section(geom, save_to="flat.sp", material_mapping={"default": 1})
-
 ```
 
 
@@ -233,7 +231,6 @@ geom.create_mesh(mesh_sizes=2)
 geom.plot_geometry()
 
 _ = to_fibre_section(geom, save_to="flat2.sp", material_mapping={"default": 1})
-
 ```
 
 

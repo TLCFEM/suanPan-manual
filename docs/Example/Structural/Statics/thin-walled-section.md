@@ -477,7 +477,6 @@ with TemporaryDirectory() as directory:
         plt.ylabel("torque")
         plt.tight_layout()
         plt.show()
-
 ```
 
     [[0.         0.        ]
@@ -576,7 +575,6 @@ with TemporaryDirectory() as directory:
         plt.ylabel("torque (kNm)")
         plt.tight_layout(pad=0.2)
         plt.show()
-
 ```
 
 

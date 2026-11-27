@@ -196,7 +196,6 @@ acc = newmark(disp, dt)
 plot_freq(dt, waveform)
 plot_freq(dt, acc)
 _ = plt.legend(["Original", "Trap -> Newmark"])
-
 ```
 
 
@@ -225,7 +224,6 @@ def double_convert(_dt, _waveform):
 plot_freq(interp_dt, interp_waveform)
 plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
 _ = plt.legend(["Original", "Trap -> Newmark"])
-
 ```
 
 
@@ -243,7 +241,6 @@ interp_dt, interp_waveform = upsample(2)
 plot_freq(interp_dt, interp_waveform)
 plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
 _ = plt.legend(["Original", "Trap -> Newmark"])
-
 ```
 
 
