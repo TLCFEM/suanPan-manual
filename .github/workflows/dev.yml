@@ -46,8 +46,9 @@ jobs:
           git config --global user.email "tlcfem@gmail.com"
           git pull
           mike deploy ${{ env.SP_VERSION }}
+          cp plugins/scripts/optimize_svg.py "$RUNNER_TEMP/optimize_svg.py"
           git clean -fdx && git reset --hard && git checkout gh-pages
-          python plugins/scripts/optimize_svg.py ${{ env.SP_VERSION }}
+          python "$RUNNER_TEMP/optimize_svg.py" ${{ env.SP_VERSION }}
           git add -A
           git commit --amend --no-edit
           git push origin gh-pages
