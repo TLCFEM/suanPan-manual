@@ -227,6 +227,7 @@
     * [B21H](Library/Element/Beam/B21H.md)
     * [B31](Library/Element/Beam/B31.md)
     * [B31OS](Library/Element/Beam/B31OS.md)
+        * [B31OS benchmarks](Library/Element/Beam/B31OS.BENCHMARK.md)
     * [EB21](Library/Element/Beam/EB21.md)
     * [EB31OS](Library/Element/Beam/EB31OS.md)
     * [F21](Library/Element/Beam/F21.md)
@@ -522,8 +523,11 @@
 
 * Code
     * [EU](Library/Section/Code/EU.md)
+        * [EU validation](Library/Section/Code/EU.Validation.md)
     * [NZ](Library/Section/Code/NZ.md)
+        * [NZ validation](Library/Section/Code/NZ.Validation.md)
     * [US](Library/Section/Code/US.md)
+        * [US validation](Library/Section/Code/US.Validation.md)
 * Section1D
     * [Circle1D](Library/Section/Section1D/Circle1D.md)
     * [Fibre1D](Library/Section/Section1D/Fibre1D.md)

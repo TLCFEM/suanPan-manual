@@ -11,9 +11,12 @@ To make life easier, we first define some utility functions.
 
 ```python
 from dataclasses import dataclass
-from os import system
-from h5py import File
+from pathlib import Path
+from subprocess import run
+from tempfile import TemporaryDirectory
+
 import matplotlib.pyplot as plt
+from h5py import File
 
 
 @dataclass
@@ -24,13 +27,16 @@ class Curve:
 
 
 def execute(name: str, content: str):
-    with open("example.sp", "w") as f:
-        f.write(content)
-
-    system("suanpan -np -f example.sp")
-
-    with File("RESULT.h5") as f:
-        return Curve(name, f["dataset"][:, 0], f["dataset"][:, 1])
+    with TemporaryDirectory() as directory:
+        (Path(directory) / "example.sp").write_text(content)
+        run(
+            ["suanpan", "-np", "-f", "example.sp"],
+            cwd=directory,
+            check=False,
+            capture_output=True,
+        )
+        with File(Path(directory) / "RESULT.h5") as f:
+            return Curve(name, f["dataset"][:, 0], f["dataset"][:, 1])
 
 
 def plot(title: str, curves: list[Curve]):
@@ -142,9 +148,9 @@ exit
 ```
 
 
-    
+
 ![png](calibration-subloading_files/calibration-subloading_3_0.png)
-    
+
 
 
 ## Isotropic Hardening
@@ -233,16 +239,16 @@ exit
 ```
 
 
-    
+
 ![png](calibration-subloading_files/calibration-subloading_5_0.png)
-    
+
 
 
 ## Kinematic Hardening
 
 Similarly, kinematic hardening also saturates to $$a^i$$.
 In addition to that, since it is defined that the saturation itself is not a constant, it can itself be saturated again.
-We choose a $$a^i=100~\text{MPa}$$ with potentially another $$150~\text{MPa}$$ saturation, resulting in $$500~\text{MPa}$$ to $$650~\text{MPa}$$ in total, depending on the configuration.
+We choose an $$a^i=100~\text{MPa}$$ with potentially another $$150~\text{MPa}$$ saturation, resulting in $$500~\text{MPa}$$ to $$650~\text{MPa}$$ in total, depending on the configuration.
 
 
 ```python
@@ -319,9 +325,9 @@ exit
 ```
 
 
-    
+
 ![png](calibration-subloading_files/calibration-subloading_7_0.png)
-    
+
 
 
 ## Ratcheting
@@ -381,9 +387,9 @@ exit
 ```
 
 
-    
+
 ![png](calibration-subloading_files/calibration-subloading_9_0.png)
-    
+
 
 
 ## Test Data
@@ -413,9 +419,9 @@ exit
 ```
 
 
-    
+
 ![png](calibration-subloading_files/calibration-subloading_11_0.png)
-    
+
 
 
 
@@ -441,16 +447,16 @@ exit
 ```
 
 
-    
+
 ![png](calibration-subloading_files/calibration-subloading_12_0.png)
-    
+
 
 
 ## Caveats
 
 It is not recommended to define a large linear isotropic hardening.
 
-Since the loading phase always incurs accumulation of plasticity, stable one sided cycles will accumulate plasticity, which further results in larger yield surface if the linear isotropic hardening is present.
+Since the loading phase always incurs accumulation of plasticity, stable one-sided cycles will accumulate plasticity, which further results in larger yield surface if the linear isotropic hardening is present.
 
 The following shows an example with a small amount of linear isotropic hardening.
 
@@ -503,9 +509,9 @@ exit
 ```
 
 
-    
+
 ![png](calibration-subloading_files/calibration-subloading_14_0.png)
-    
+
 
 
 However, when a significant linear isotropic hardening is defined, the accumulated plasticity will yield significantly larger yield surface.
@@ -559,7 +565,5 @@ exit
 ```
 
 
-    
-![png](calibration-subloading_files/calibration-subloading_16_0.png)
-    
 
+![png](calibration-subloading_files/calibration-subloading_16_0.png)

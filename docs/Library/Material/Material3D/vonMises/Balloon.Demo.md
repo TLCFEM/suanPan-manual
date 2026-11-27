@@ -1,22 +1,13 @@
 # Balloon-v1 Model Demos
 
-In this page, we demonstrate the usage of the Balloon-v1 model.
-
-## Background
-
-The demos use [`Balloon1D`](../../Material1D/vonMises/Balloon1D.md), the uniaxial counterpart of the three-dimensional [`Balloon`](Balloon.md) model.
-The first five numbers after the elastic modulus are the split ratio and the load reversal memory size followed by the bound $$u$$ that scales the yield surface.
-The four-number groups supply the bounds for the isotropic monotonic part $$f_m$$, the isotropic cyclic part $$f_c$$, the kinematic monotonic part $$a_m$$ and the kinematic cyclic part $$a_c$$.
-Each group is ordered as initial value, linear coefficient, saturation value and saturation rate.
-The optional `-fc`, `-ac`, `-na` and `-nd` tokens add Armstrong-Frederick style components with a saturation target and a rate.
-A zero rate reduces the corresponding component to a linear evolution, as shown in the kinematic hardening demo.
-The memory size controls how many previous reverse points are retained and therefore when isotropic hardening stagnates under cyclic loading.
-The three-dimensional formulation and the full parameter definitions are given on the [`Balloon`](Balloon.md) page.
+On this page, we demonstrate the usage of the Balloon-v1 model.
 
 ## Utilities
 
 We need to run example analyses and extract and plot the generated results.
 This would require some utilities to be at hand.
+
+
 
 ```python
 import os
@@ -44,7 +35,7 @@ def run_model(model: str, print_result: bool = False):
     with open("example.sp", "w") as file:
         file.write(model)
     result = subprocess.run(
-        [SUANPAN_EXE, "-f", "example.sp"], capture_output=True, text=True
+        [SUANPAN_EXE, "-f", "example.sp"], check=False, capture_output=True, text=True
     )
     if print_result or "[ERROR]" in result.stdout:
         print(result.stdout)
@@ -169,10 +160,17 @@ for rate in (0, 0.4):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_3_0.png)
 
 
+
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_3_1.png)
+
+
 
 ## Basic Isotropic Hardening
 
@@ -200,10 +198,17 @@ for rate in (0, 2):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_5_0.png)
 
 
+
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_5_1.png)
+
+
 
 ## Basic Kinematic Hardening
 
@@ -216,7 +221,7 @@ The following example presents three cases:
 
 1. kinematic hardening deactivated,
 2. a linear kinematic hardening rule,
-3. an AF type exponential saturation rule.
+3. an AF-type exponential saturation rule.
 
 
 ```python
@@ -239,20 +244,33 @@ for saturation, rate in ((0, 0), (0.05, 0), (1, 5), (2, 5)):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_7_0.png)
+
+
+
 
 
 ![png](Balloon.Demo_files/Balloon.Demo_7_1.png)
 
 
+
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_7_2.png)
+
+
+
 
 
 ![png](Balloon.Demo_files/Balloon.Demo_7_3.png)
 
+
+
 ## Growing Kinematic Hardening Bound
 
-The back stress can saturate to a bound, this bound can evolve as well.
+The back stress can saturate to a bound, and this bound can evolve as well.
 
 Instead of using a combination of an AF rule and a linear rule for `-na`, one can allow $$a_m$$ to evolve.
 The following example adds a linear component to $$a_m$$.
@@ -278,10 +296,17 @@ for linear in (0, 2e-2):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_9_0.png)
 
 
+
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_9_1.png)
+
+
 
 ## Further Enhancement Bauschinger Effect
 
@@ -312,10 +337,17 @@ for saturation, rate in (
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_11_0.png)
 
 
+
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_11_1.png)
+
+
 
 ## Isotropic Hardening Stagnation
 
@@ -344,13 +376,23 @@ for memory in (1, 2, 5):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_13_0.png)
+
+
+
 
 
 ![png](Balloon.Demo_files/Balloon.Demo_13_1.png)
 
 
+
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_13_2.png)
+
+
 
 ## Cyclic Isotropic Hardening/Softening
 
@@ -382,10 +424,17 @@ for rate in (1e-1, 5e-2):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_15_0.png)
 
 
+
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_15_1.png)
+
+
 
 Because the bound itself is evolving with the development of plasticity, this cyclic hardening/softening can occur repeatedly under certain conditions.
 
@@ -410,10 +459,17 @@ for rate in (1e-1, 5e-2):
         gplot(np.loadtxt("R3-E1.txt")[:, 1], np.loadtxt("R2-S1.txt")[:, 1])
 ```
 
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_17_0.png)
 
 
+
+
+
 ![png](Balloon.Demo_files/Balloon.Demo_17_1.png)
+
+
 
 ## Cyclic Kinematic Hardening/Softening
 

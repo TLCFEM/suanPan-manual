@@ -82,9 +82,9 @@ plot_waveform(dt, waveform)
 ```
 
 
-    
+
 ![png](process-ground-motion_files/process-ground-motion_3_0.png)
-    
+
 
 
 Let's also check the frequency content of the ground motion.
@@ -111,9 +111,9 @@ plot_freq(dt, waveform)
 ```
 
 
-    
+
 ![png](process-ground-motion_files/process-ground-motion_5_0.png)
-    
+
 
 
 It appears that the provided ground motion has been filtered using a band-pass filter.
@@ -140,9 +140,9 @@ plot_freq(interp_dt, interp_waveform)
 ```
 
 
-    
+
 ![png](process-ground-motion_files/process-ground-motion_7_0.png)
-    
+
 
 
 From the graph, one shall see that the interpolated acceleration contains significantly large components beyond the original 100 Hz.
@@ -160,9 +160,9 @@ plot_waveform(dt, disp)
 ```
 
 
-    
+
 ![png](process-ground-motion_files/process-ground-motion_9_0.png)
-    
+
 
 
 What acceleration would such a displacement produce if the Newmark method is used?
@@ -195,14 +195,13 @@ acc = newmark(disp, dt)
 
 plot_freq(dt, waveform)
 plot_freq(dt, acc)
-plt.legend(["Original", "Trap -> Newmark"])
-pass
+_ = plt.legend(["Original", "Trap -> Newmark"])
 ```
 
 
-    
+
 ![png](process-ground-motion_files/process-ground-motion_11_0.png)
-    
+
 
 
 In the above, we use the Newmark method to compute the acceleration that corresponds to the integrated displacement.
@@ -224,14 +223,13 @@ def double_convert(_dt, _waveform):
 
 plot_freq(interp_dt, interp_waveform)
 plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
-plt.legend(["Original", "Trap -> Newmark"])
-pass
+_ = plt.legend(["Original", "Trap -> Newmark"])
 ```
 
 
-    
+
 ![png](process-ground-motion_files/process-ground-motion_13_0.png)
-    
+
 
 
 It seems the high frequency noise is significantly larger if the acceleration is integrated using an arbitrary integration method.
@@ -242,14 +240,13 @@ Let's choose a different upsampling rate.
 interp_dt, interp_waveform = upsample(2)
 plot_freq(interp_dt, interp_waveform)
 plot_freq(interp_dt, double_convert(interp_dt, interp_waveform))
-plt.legend(["Original", "Trap -> Newmark"])
-pass
+_ = plt.legend(["Original", "Trap -> Newmark"])
 ```
 
 
-    
+
 ![png](process-ground-motion_files/process-ground-motion_15_0.png)
-    
+
 
 
 From the figure, one can assert that, if the structure responds to 200 Hz signals, the response could be significant by choosing to integrate the acceleration using a method that is different from the one used in response history analysis (here, the Newmark method).
@@ -258,15 +255,12 @@ From the figure, one can assert that, if the structure responds to 200 Hz signal
 
 In the above example, we have demonstrated two things.
 
-1. As discussed in [10.1080/13632469.2024.2372814](https://doi.org/10.1080/13632469.2024.2372814), when ground motion is applied in the form of inertial force, linear interpolation of acceleration introduces high-frequency noise, the amplitude of which could be relatively large.
-   This would introduce spurious responses.
-2. When ground motion is applied in the form of support displacement, an inconsistent integration method used to integrate acceleration to displacement could introduce high-frequency noise as well, if the integration method is different from the one used in response history analysis.
-   This type of spurious response is not significant if the acceleration is not linearly interpolated.
+1.  As discussed in [10.1080/13632469.2024.2372814](https://doi.org/10.1080/13632469.2024.2372814), when ground motion is applied in the form of inertial force, linear interpolation of acceleration introduces high frequency noise, the amplitude of which could be relatively large. This would introduce spurious responses.
+2.  When ground motion is applied in the form of support displacement, an inconsistent integration method that is used to integrate acceleration to displacement could introduce high frequency noise as well, if the integration method is different from the one used in response history analysis. This type of spurious response is not significant if the acceleration is not linearly interpolated.
 
 In conclusion, analysts should be aware of two things.
 
-1. Linear interpolation is inadequate.
-   It should be avoided, or at least should not be used alone.
-2. When converting acceleration to displacement, or vice versa, the integration method should be consistent with the one used in response history analysis.
+1.  Linear interpolation is bad. It should be avoided, or at least should not be used alone.
+2.  When converting acceleration to displacement, or vice versa, the integration method shall be consistent with the one used in response history analysis.
 
 No matter what, the applied load, in the form of either inertial force or support displacement, shall be processed based on the time step size used in response history analysis.
